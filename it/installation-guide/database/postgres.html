@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setup database server &mdash; QGEP 0.5 documentation</title>
+  <title>Setup database server &mdash; QGEP 0.5 documentazione</title>
   
 
   
@@ -31,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
+    <link rel="top" title="QGEP 0.5 documentazione" href="../../index.html"/>
         <link rel="prev" title="QGEP Installation Guide" href="../index.html"/> 
 
   
@@ -130,9 +129,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-database-server">
-<h1>Setup database server<a class="headerlink" href="#setup-database-server" title="link permanente per questa intestazione">¶</a></h1>
+<h1>Setup database server<a class="headerlink" href="#setup-database-server" title="Link a questa intestazione">¶</a></h1>
 <div class="section" id="install-pgadminiii">
-<h2>Install pgAdminIII<a class="headerlink" href="#install-pgadminiii" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Install pgAdminIII<a class="headerlink" href="#install-pgadminiii" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li>Install PostgreSQL (&gt;=9.3)<ul>
 <li><a class="reference external" href="http://www.postgresql.org/download/windows">Windows download page</a></li>
@@ -143,7 +142,7 @@
 </ul>
 </div>
 <div class="section" id="configure-the-system-for-the-database">
-<h2>Configure the system for the database<a class="headerlink" href="#configure-the-system-for-the-database" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Configure the system for the database<a class="headerlink" href="#configure-the-system-for-the-database" title="Link a questa intestazione">¶</a></h2>
 <p>The project file uses a service configuration to be system independent. This service has first to be defined on your system. If you have the database on a seperate system, these instructions are for the system where QGIS is running.</p>
 <p>These instructions depend on your operating system.</p>
 <p><strong>Windows</strong></p>
@@ -151,10 +150,17 @@
 <p>Set the environment variable <cite>PGSYSCONFDIR</cite> to the path to <cite>PGSYSCONFDIR</cite>.</p>
 <p>Create a file <cite>pg_service.conf</cite> in <cite>PGSYSCONFDIR</cite>.
 You may have to adapt the variables for your setup.</p>
+<div class="code ini highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
+<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
+<span class="n">user</span><span class="o">=</span><span class="n">qgep</span>
+</pre></div>
+</div>
 <p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
 </div>
 <div class="section" id="setup-the-database">
-<h2>Setup the database<a class="headerlink" href="#setup-the-database" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Setup the database<a class="headerlink" href="#setup-the-database" title="Link a questa intestazione">¶</a></h2>
 <p>In pgAdminIII</p>
 <ul class="simple">
 <li>Connect to the database server</li>
@@ -165,8 +171,8 @@ You may have to adapt the variables for your setup.</p>
 </li>
 <li>Create a new schema (preferred name &#8220;qgep&#8221;, but you are free to choose)</li>
 <li>Open an SQL Window and create the extensions (if not yet done)<ul>
-<li><tt class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></tt></li>
+<li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
+<li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
 </li>
 <li>Download demo data<ul>
@@ -204,20 +210,20 @@ You may have to adapt the variables for your setup.</p>
 </ul>
 </li>
 <li>Open an SQL window and refresh the materialized views for network tracking<ul>
-<li><tt class="docutils literal"><span class="pre">REFRESH</span> <span class="pre">MATERIALIZED</span> <span class="pre">VIEW</span> <span class="pre">qgep.vw_network_node;</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">REFRESH</span> <span class="pre">MATERIALIZED</span> <span class="pre">VIEW</span> <span class="pre">qgep.vw_network_segment;</span></tt></li>
+<li><code class="docutils literal"><span class="pre">REFRESH</span> <span class="pre">MATERIALIZED</span> <span class="pre">VIEW</span> <span class="pre">qgep.vw_network_node;</span></code></li>
+<li><code class="docutils literal"><span class="pre">REFRESH</span> <span class="pre">MATERIALIZED</span> <span class="pre">VIEW</span> <span class="pre">qgep.vw_network_segment;</span></code></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="install-qgis">
-<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li>Minimum requirement 2.10</li>
 </ul>
 </div>
 <div class="section" id="install-qgep-plugin">
-<h2>Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li>Open QGIS</li>
 <li>Go to Plugins<ul>
@@ -241,7 +247,7 @@ You may have to adapt the variables for your setup.</p>
 </ul>
 </div>
 <div class="section" id="install-the-demo-project">
-<h2>Install the demo project<a class="headerlink" href="#install-the-demo-project" title="link permanente per questa intestazione">¶</a></h2>
+<h2>Install the demo project<a class="headerlink" href="#install-the-demo-project" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li>Download <a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/project_20140829.zip">http://qgis.vitu.ch/qgep_demodata/project_20140829.zip</a></li>
 <li>Extract the file</li>
