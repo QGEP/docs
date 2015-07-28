@@ -1,13 +1,7 @@
 language: python
 
-addons:
-  apt:
-    packages:
-      - python-sphinx
-      - python-pygments
-
 before_script:
-  - pip install sphinx
+  - pip install -r REQUIREMENTS.txt
   - openssl aes-256-cbc -K $encrypted_cd22de430b6c_key -iv $encrypted_cd22de430b6c_iv -in qgep_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
   - git config --global user.email "qgep@opengis.ch"
