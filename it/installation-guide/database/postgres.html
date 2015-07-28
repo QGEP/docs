@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database &mdash; QGEP 0.5 documentation</title>
+  <title>Setup database server &mdash; QGEP 0.5 documentation</title>
   
 
   
@@ -82,7 +82,15 @@
           
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Setup database server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-pgadminiii">Install pgAdminIII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-the-system-for-the-database">Configure the system for the database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-the-database">Setup the database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-qgis">Install QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-qgep-plugin">Install QGEP plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-demo-project">Install the demo project</a></li>
+</ul>
+</li>
 </ul>
 
           
@@ -107,7 +115,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Database</li>
+    <li>Setup database server</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -121,17 +129,125 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="database">
-<h1>Database<a class="headerlink" href="#database" title="link permanente per questa intestazione">¶</a></h1>
-<p>Setup the postgres database server</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>Install PostgreSQL (&gt;=9.3)</dt>
-<dd>Windows download page</dd>
-</dl>
-<p>Install PostGIS (&gt;=2.1)</p>
-<p>Install pgAdminIII</p>
-</div></blockquote>
+  <div class="section" id="setup-database-server">
+<h1>Setup database server<a class="headerlink" href="#setup-database-server" title="link permanente per questa intestazione">¶</a></h1>
+<div class="section" id="install-pgadminiii">
+<h2>Install pgAdminIII<a class="headerlink" href="#install-pgadminiii" title="link permanente per questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Install PostgreSQL (&gt;=9.3)<ul>
+<li><a class="reference external" href="http://www.postgresql.org/download/windows">Windows download page</a></li>
+</ul>
+</li>
+<li>Install PostGIS (&gt;=2.1)</li>
+<li>Install pgAdminIII</li>
+</ul>
+</div>
+<div class="section" id="configure-the-system-for-the-database">
+<h2>Configure the system for the database<a class="headerlink" href="#configure-the-system-for-the-database" title="link permanente per questa intestazione">¶</a></h2>
+<p>The project file uses a service configuration to be system independent. This service has first to be defined on your system. If you have the database on a seperate system, these instructions are for the system where QGIS is running.</p>
+<p>These instructions depend on your operating system.</p>
+<p><strong>Windows</strong></p>
+<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <cite>pgconfig</cite> in your home folder). This directory will be referred to as <cite>PGSYSCONFDIR</cite> in this guide.</p>
+<p>Set the environment variable <cite>PGSYSCONFDIR</cite> to the path to <cite>PGSYSCONFDIR</cite>.</p>
+<p>Create a file <cite>pg_service.conf</cite> in <cite>PGSYSCONFDIR</cite>.
+You may have to adapt the variables for your setup.</p>
+<p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+</div>
+<div class="section" id="setup-the-database">
+<h2>Setup the database<a class="headerlink" href="#setup-the-database" title="link permanente per questa intestazione">¶</a></h2>
+<p>In pgAdminIII</p>
+<ul class="simple">
+<li>Connect to the database server</li>
+<li>Create a new login role (preferred name &#8220;qgep&#8221;, but you are free to choose)</li>
+<li>Create a new database (preferred name &#8220;qgep&#8221;, but you are free to choose)<ul>
+<li>Change to this database</li>
+</ul>
+</li>
+<li>Create a new schema (preferred name &#8220;qgep&#8221;, but you are free to choose)</li>
+<li>Open an SQL Window and create the extensions (if not yet done)<ul>
+<li><a href="#id1"><span class="problematic" id="id2">:sql:`CREATE EXTENSION hstore;`</span></a></li>
+<li><a href="#id3"><span class="problematic" id="id4">:sql:`CREATE EXTENSION postgis;`</span></a></li>
+</ul>
+</li>
+<li>Download demo data<ul>
+<li><a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/qgep.backup">http://qgis.vitu.ch/qgep_demodata/qgep.backup</a></li>
+</ul>
+</li>
+<li>Right click the <cite>qgep</cite> schema<ul>
+<li>Click restore</li>
+<li>Load your download of backup_20140827.backup</li>
+<li>Restore Options #2: Activate &#8220;Clean before restore&#8221;</li>
+<li>Click &#8220;Restore&#8221;</li>
+<li>Click &#8220;Cancel&#8221;</li>
+</ul>
+</li>
+<li>Right click the database and click &#8220;Refresh&#8221;</li>
+<li>Update privileges for the database<ul>
+<li>Right click the <cite>qgep</cite> schema</li>
+<li>Click &#8220;Grant Wizard …&#8221;</li>
+<li>Selection, click &#8220;Check All&#8221;</li>
+<li>Privileges
+* Group &#8220;qgep&#8221;
+* Choose &#8220;ALL&#8221;
+* Click &#8220;Add/Change&#8221;
+* Click &#8220;OK&#8221;
+* Click &#8220;Done&#8221;</li>
+<li>Right click the <cite>qgep</cite> schema<ul>
+<li>Click &#8220;Properties …&#8221;</li>
+<li>Privileges
+* Role/Group &#8220;qgep&#8221;
+* Choose &#8220;ALL&#8221;
+* Click &#8220;Add/Change&#8221;
+* Click &#8220;OK&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Open an SQL window and refresh the materialized views for network tracking<ul>
+<li><a href="#id5"><span class="problematic" id="id6">:sql:`REFRESH MATERIALIZED VIEW qgep.vw_network_node`</span></a>;</li>
+<li><a href="#id7"><span class="problematic" id="id8">:sql:`REFRESH MATERIALIZED VIEW qgep.vw_network_segment`</span></a>;</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="install-qgis">
+<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="link permanente per questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Minimum requirement 2.10</li>
+</ul>
+</div>
+<div class="section" id="install-qgep-plugin">
+<h2>Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="link permanente per questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Open QGIS</li>
+<li>Go to Plugins<ul>
+<li>Manage and Install Plugins</li>
+<li>Settings<ul>
+<li>Add...<ul>
+<li>Name: QGEP</li>
+<li>URL: <cite>http://qgis.vitu.ch/plugins/plugins.xml</cite></li>
+</ul>
+</li>
+<li>Enable <cite>Show also experimental plugins</cite></li>
+</ul>
+</li>
+<li>All<ul>
+<li>Search <cite>QGEP</cite></li>
+<li>Click the checkbox next to it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="install-the-demo-project">
+<h2>Install the demo project<a class="headerlink" href="#install-the-demo-project" title="link permanente per questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Download <a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/project_20140829.zip">http://qgis.vitu.ch/qgep_demodata/project_20140829.zip</a></li>
+<li>Extract the file</li>
+<li>Open <cite>qgep_en.qgs</cite> with QGIS</li>
+</ul>
+</div>
 </div>
 
 
