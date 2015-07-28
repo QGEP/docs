@@ -7,3 +7,4 @@ addons:
 
 script:
   - ./scripts/build-docs.sh
+  - ./scripts/deploy-docs.sh
