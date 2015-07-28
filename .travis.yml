@@ -8,7 +8,9 @@ addons:
 before_script:
   - openssl aes-256-cbc -K $encrypted_cd22de430b6c_key -iv $encrypted_cd22de430b6c_iv -in qgep_rsa.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
+  - git config --global user.email "qgep@opengis.ch"
+  - git config --global user.name "QGEP"
 
 script:
   - ./scripts/build-docs.sh
-  - ./scripts/deploy-docs.sh
+  - sh -c 'if test "$TRAVIS_SECURE_ENV_VARS" = "true" -a "$TRAVIS_BRANCH" = "master"; then echo "publish website"; ./scripts/deploy-docs.sh build /tmp; fi'

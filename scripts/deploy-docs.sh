@@ -10,8 +10,9 @@ mkdir publish
 cd publish
 git clone git@github.com:QGEP/docs.git --branch gh-pages
 cd docs
-cp ../../build/* . -r
+git rm . -r
+cp ../../build/html/* . -r
 git add -A
-git commit -m "Automatic update from https://github.com/mapserver/docs/commit/${TRAVIS_COMMIT}"
+git commit -m "Automatic update from https://github.com/qgep/docs/commit/${TRAVIS_COMMIT}"
 git push
 popd
