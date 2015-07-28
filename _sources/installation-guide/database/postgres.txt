@@ -2,9 +2,6 @@
 Setup database server
 *********************
 
-.. role:: sql(code)
-   :language: sql
-
 ------------------
 Install pgAdminIII
 ------------------
@@ -62,9 +59,9 @@ In pgAdminIII
 
 * Open an SQL Window and create the extensions (if not yet done)
 
-  * :sql:`CREATE EXTENSION hstore;`
+  * ``CREATE EXTENSION hstore;``
 
-  * :sql:`CREATE EXTENSION postgis;`
+  * ``CREATE EXTENSION postgis;``
 
 * Download demo data
 
@@ -111,9 +108,9 @@ In pgAdminIII
 
 * Open an SQL window and refresh the materialized views for network tracking
 
-  * :sql:`REFRESH MATERIALIZED VIEW qgep.vw_network_node`;
+  * ``REFRESH MATERIALIZED VIEW qgep.vw_network_node;``
 
-  * :sql:`REFRESH MATERIALIZED VIEW qgep.vw_network_segment`;
+  * ``REFRESH MATERIALIZED VIEW qgep.vw_network_segment;``
 
 ------------
 Install QGIS
