@@ -3,8 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to QGEP's documentation!
-================================
+This is the QGEP documentation
+==============================
+
+QGEP is a wastewater management module for QGIS based on SIA 405 and developed
+closely to the QGIS application.
 
 Contents:
 
