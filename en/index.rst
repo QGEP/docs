@@ -11,6 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   installation-guide/index
+   installation-guide/database/postgres
 
 
 Indices and tables

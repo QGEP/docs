@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Matthias Kuhn
+# This file is distributed under the same license as the QGEP package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP 0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-28 15:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../en/installation-guide/database/postgres.rst:3
+# 9b23792efa19495cb8d225985430be33
+msgid "Database"
+msgstr ""
+
+#: ../../../en/installation-guide/database/postgres.rst:5
+# f5334a34d98f4fd38acf48ed89776979
+msgid "Setup the postgres database server"
+msgstr ""
+
+#: ../../../en/installation-guide/database/postgres.rst:10
+# 90f83d4cec8b4f38bb2f1705b410b11a
+msgid "Install PostgreSQL (>=9.3)"
+msgstr ""
+
+#: ../../../en/installation-guide/database/postgres.rst:10
+# 55d83aab07d4454796334754249d36d5
+msgid "Windows download page"
+msgstr ""
+
+#: ../../../en/installation-guide/database/postgres.rst:12
+# 852cfd78568b4bf983c8930370d312ec
+msgid "Install PostGIS (>=2.1)"
+msgstr ""
+
+#: ../../../en/installation-guide/database/postgres.rst:14
+# d53c9eea3c5444e285e6bb301f5f276e
+msgid "Install pgAdminIII"
+msgstr ""
+
+#: ../../../en/installation-guide/index.rst:3
+# 93121b799fb249fbbb5f3c0687466d64
+msgid "QGEP Installation Guide"
+msgstr ""
+
+#: ../../../en/installation-guide/index.rst:6
+# a2437fa6af7f4da0b8bd107258b24c15
+msgid "Test"
+msgstr ""
+

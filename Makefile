@@ -1,177 +1,293 @@
 # Makefile for Sphinx documentation
 #
+# $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/$$lang;
+#
 
 # You can set these variables from the command line.
+BUILDDIR     = build
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-PAPER         =
-BUILDDIR      = _build
-
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
+PAPER         = a4
+SHELL = /bin/bash
+TRANSLATIONS_STATIC  = en
+TRANSLATIONS_I18N  = de fr it
+LANGUAGES     = en $(TRANSLATIONS_STATIC) $(TRANSLATIONS_I18N)
+BUILD_LANGUAGES = $(TRANSLATIONS_I18N) $(TRANSLATIONS_STATIC)
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
-# the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -c . -A language=$$lang -D language=$$lang -A languages='$(LANGUAGES)'
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
+ALLSPHINXOPTSI18N = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -c . -a -A language=$$lang -D language=$$lang -A languages='$(LANGUAGES)'
+
+# Only for Gettext
+I18NSPHINXOPTS   = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -c . -A language=en -D language=en -A languages='en'
+
+.PHONY: help clean html web pickle htmlhelp latex changes linkcheck
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
-	@echo "  dirhtml    to make HTML files named index.html in directories"
-	@echo "  singlehtml to make a single large HTML file"
-	@echo "  pickle     to make pickle files"
-	@echo "  json       to make JSON files"
-	@echo "  htmlhelp   to make HTML files and a HTML help project"
-	@echo "  qthelp     to make HTML files and a qthelp project"
-	@echo "  devhelp    to make HTML files and a Devhelp project"
-	@echo "  epub       to make an epub"
-	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
-	@echo "  latexpdf   to make LaTeX files and run them through pdflatex"
-	@echo "  latexpdfja to make LaTeX files and run them through platex/dvipdfmx"
-	@echo "  text       to make text files"
-	@echo "  man        to make manual pages"
-	@echo "  texinfo    to make Texinfo files"
-	@echo "  info       to make Texinfo files and run them through makeinfo"
-	@echo "  gettext    to make PO message catalogs"
-	@echo "  changes    to make an overview of all changed/added/deprecated items"
-	@echo "  xml        to make Docutils-native XML files"
-	@echo "  pseudoxml  to make pseudoxml-XML files for display purposes"
-	@echo "  linkcheck  to check all external links for integrity"
-	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
+	@echo "  html      to make standalone HTML files"
+	@echo "  init      to preprocess translation directories"
+	@echo "  compile_messages    to compile po to mo files"
+	@echo "  generate_po_from_tmpl    to duplicate pot to po files for a language, e.g from translated\pot directory to translated\lang"
+	@echo "  pickle    to make pickle files"
+	@echo "  json      to make JSON files"
+	@echo "  htmlhelp  to make HTML files and a HTML help project"
+	@echo "  latex     to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
+	@echo "  all-pdf   to make PDF file"
+	@echo "  all-ps    to make PS file"
+	@echo "  changes   to make an overview over all changed/added/deprecated items"
+	@echo "  linkcheck to check all external links for integrity"
+	@echo "  gettext   to generate pot files from en rst files"
+	@echo "  gettext_copy   to duplicate pot files from gettext dir to translated\pot"
 
 clean:
-	rm -rf $(BUILDDIR)/*
+	-rm -rf $(BUILDDIR)/* init compile_messages
 
-html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+clean-repo: clean
+	@set -e; for lang in $(TRANSLATIONS_STATIC) ;\
+	do \
+		for file in `find $$lang -type f -a -regex '.*\.*$$' -a -not -regex '.*\.$$' -a -not -regex '.*\.svn.*' -printf "%p\n" ; cd ..;`; \
+		do \
+			echo "Working on "$$file ; \
+#			is file in git? \
+			if [ ! -d "$$file" -a -n "`git status --porcelain $$file`" ]; then  \
+				rm -f "$$file"; \
+#				is dir empty? \
+				ldir=`dirname "$$file" `; \
+				if [ ! -n "`ls -1 $$ldir`" ]; then \
+					echo "Removing empty dir "$$ldir; \
+					rm -rf "$$ldir"; \
+				fi \
+			fi \
+		done ; \
+	done
+	@echo "Clean-repo finished."
+
+init: en/*
+	@set -e; for lang in $(TRANSLATIONS_STATIC) ;\
+	do \
+		for file in `cd en; find . -type f -name '*.rst' ; cd ..;`; \
+		do \
+			if [ ! -f $$lang/$$file ]; then  \
+				mkdir -p `dirname "$$lang/$$file"`; \
+				(echo ".. meta::"; echo "  :ROBOTS: NOINDEX") | cat - "en/$$file" > "$$lang/$$file"; \
+			fi \
+		done; \
+		for file in `cd en; find . -type f ; cd ..;`; \
+		do \
+			if [ ! -f $$lang/$$file ]; then  \
+				mkdir -p `dirname "$$lang/$$file"`; \
+				cp -p "en/$$file" "$$lang/$$file"; \
+			fi \
+		done; \
+	done
+	@echo "Init finished. Other target can now be built.";\
+	touch init
+
+
+compile_messages: init translated/*/*.po
+	@set -e; for lang in $(TRANSLATIONS_I18N) ;\
+	do \
+		echo "Compiling messages for $$lang..."; \
+		for f in `find ./translated/$$lang -type f -name \*.po`; \
+		do \
+		bn=`basename $$f .po`; \
+		echo "Compiling messages for $$f"; \
+		msgfmt $$f -o ./translated/$$lang/LC_MESSAGES/$$bn.mo; \
+		done; \
+	done
+	@echo "Messages compiled. Now you can build updated version for html and pdf.";\
+	touch compile_messages
+
+generate_po_from_tmpl:
+	@for lang in $(TRANSLATIONS_I18N) ;\
+	do \
+		echo "Generate po files from pot files for $$lang..."; \
+		for f in `find ./translated/pot/ -name \*.pot -printf "%f\n"`; \
+		do \
+		echo "Copy pot files to po file for $$f"; \
+		cp ./translated/pot/$$f ./translated/$$lang/$${f%.*}.po; \
+		done; \
+	done
+	@echo "*.pot files copy to *.po files. Now you can start your translation.";\
+
+update_po_from_pot:
+	@for lang in $(TRANSLATIONS_I18N) ;\
+	do \
+		echo "Update po files from pot files for $$lang..."; \
+		for f in `find ./translated/pot/ -name \*.pot -printf "%f\n"`; \
+		do \
+			echo "update po files from pot file for $$f"; \
+			msgmerge ./translated/$$lang/$${f%.*}.po ./translated/pot/$$f -U -N; \
+		done; \
+	done
+	@echo "*.po files updated from *.pot files.";\
+
+html: compile_messages
+	@set -e; \
+	lang=en; \
+	mkdir -p $(BUILDDIR)/html $(BUILDDIR)/doctrees/$$lang; \
+	echo $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/html; \
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/html; \
+	for lang in $(BUILD_LANGUAGES); \
+	do \
+		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		if [[ "$(TRANSLATIONS_STATIC)" =~ "$$lang" ]]; then \
+		  mkdir -p $(BUILDDIR)/doctrees/$$lang; \
+			$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/html/$$lang; \
+		else \
+		  if [[ "$(TRANSLATIONS_I18N)" =~ "$$lang" ]]; then \
+				$(SPHINXBUILD) -b html $(ALLSPHINXOPTSI18N) en build/html/$$lang; \
+			fi \
+		fi \
+	done
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";
+
+gettext:
+		mkdir -p $(BUILDDIR)/gettext/en $(BUILDDIR)/doctrees/en; \
+		echo "$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) en $(BUILDDIR)/gettext/en";\
+		$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) en $(BUILDDIR)/gettext/en;\
+
+	@echo "Build finished. The pot files pages are in $(BUILDDIR)/gettext/en.";\
+
+gettext_copy:
+	    cp $(BUILDDIR)/gettext/en/*.pot translated/pot/; \
+
+	@echo "Build finished. The pot files pages are in $(BUILDDIR)/gettext/en.";\
+
+singlehtml: compile_messages
+	@set -e; for lang in en $(TRANSLATIONS_STATIC);\
+	do \
+		mkdir -p $(BUILDDIR)/singlehtml/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/singlehtml/$$lang;\
+	done
+	@set -e; for lang in $(TRANSLATIONI18N);\
+	do \
+		mkdir -p $(BUILDDIR)/singlehtml/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTSI18N) en $(BUILDDIR)/singlehtml/$$lang;\
+	done
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/singlehtml/<language>.";\
 
-dirhtml:
-	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
-	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
-
-singlehtml:
-	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
-	@echo
-	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
-
-pickle:
-	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $(BUILDDIR)/pickle
+pickle: compile_messages
+	@set -e; for lang in en $(TRANSLATIONS_STATIC);\
+	do \
+		mkdir -p $(BUILDDIR)/pickle/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/pickle/$$lang;\
+	done
+	@set -e; for lang in $(TRANSLATIONI18N);\
+	do \
+		mkdir -p $(BUILDDIR)/pickle/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTSI18N) en $(BUILDDIR)/pickle/$$lang;\
+	done
 	@echo
 	@echo "Build finished; now you can process the pickle files."
 
-json:
-	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) $(BUILDDIR)/json
+web: pickle
+
+json: compile_messages
+	@set -e; for lang in en $(TRANSLATIONS_STATIC);\
+	do \
+		mkdir -p $(BUILDDIR)/json/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/json/$$lang;\
+	done
+	@set -e; for lang in $(TRANSLATIONI18N);\
+	do \
+		mkdir -p $(BUILDDIR)/json/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b json $(ALLSPHINXOPTSI18N) en $(BUILDDIR)/json/$$lang;\
+	done
 	@echo
 	@echo "Build finished; now you can process the JSON files."
 
-htmlhelp:
-	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) $(BUILDDIR)/htmlhelp
+htmlhelp: compile_messages
+	@set -e; for lang in en $(TRANSLATIONS_STATIC);\
+	do \
+		mkdir -p $(BUILDDIR)/htmlhelp/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/htmlhelp/$$lang;\
+	done
 	@echo
 	@echo "Build finished; now you can run HTML Help Workshop with the" \
-	      ".hhp project file in $(BUILDDIR)/htmlhelp."
+	      ".hhp project file in $(BUILDDIR)/htmlhelp/<language>."
 
-qthelp:
-	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
+latex: compile_messages
+	@set -e; \
+		mkdir -p $(BUILDDIR)/latex/en $(BUILDDIR)/doctrees/en; \
+		$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) en $(BUILDDIR)/latex/en;
+	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/<language>."
+	@echo "Run \`make all-pdf' or \`make all-ps'"
+
+pdf: compile_messages
+	@set -e;\
+	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) en $(BUILDDIR)/pdf;\
+	for lang in $(TRANSLATIONS_STATIC);\
+	do \
+		mkdir -p $(BUILDDIR)/pdf/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/pdf/$$lang;\
+	done
+	@set -e; for lang in $(TRANSLATIONS_I18N);\
+	do \
+		mkdir -p $(BUILDDIR)/pdf/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTSI18N) en $(BUILDDIR)/pdf/$$lang;\
+	done
 	@echo
-	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
-	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/QGEP.qhcp"
-	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/QGEP.qhc"
+	@echo "Build finished; the PDF files are in $(BUILDDIR)/pdf/<language>."\
+	@echo "Run \`make pdf' "
 
-devhelp:
-	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
+epub: compile_messages
+	@set -e; for lang in en;\
+	do \
+		mkdir -p $(BUILDDIR)/epub/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/epub/$$lang;\
+	done
 	@echo
-	@echo "Build finished."
-	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/QGEP"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/QGEP"
-	@echo "# devhelp"
+	@echo "Build finished; the epub files are in $(BUILDDIR)/epub/<language>."\
+	@echo "Run \`make epub' "
 
-epub:
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
-	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
+all-pdf: latex
+	@set -e; \
+	make -C $(BUILDDIR)/latex/en all-pdf ;
 
-latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo
-	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
-	@echo "Run \`make' in that directory to run these through (pdf)latex" \
-	      "(use \`make latexpdf' here to do that automatically)."
-
-latexpdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/latex all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
-
-latexpdfja:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
-	@echo "Running LaTeX files through platex and dvipdfmx..."
-	$(MAKE) -C $(BUILDDIR)/latex all-pdf-ja
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
-
-text:
-	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text
-	@echo
-	@echo "Build finished. The text files are in $(BUILDDIR)/text."
-
-man:
-	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man
-	@echo
-	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
-
-texinfo:
-	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
-	@echo
-	@echo "Build finished. The Texinfo files are in $(BUILDDIR)/texinfo."
-	@echo "Run \`make' in that directory to run these through makeinfo" \
-	      "(use \`make info' here to do that automatically)."
-
-info:
-	$(SPHINXBUILD) -b texinfo $(ALLSPHINXOPTS) $(BUILDDIR)/texinfo
-	@echo "Running Texinfo files through makeinfo..."
-	make -C $(BUILDDIR)/texinfo info
-	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
-
-gettext:
-	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
-	@echo
-	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
+all-ps: latex
+	@set -e; for lang in $(LANGUAGES);\
+	do \
+		make -C $(BUILDDIR)/latex/$$lang all-ps ; \
+		if [ -d $(BUILDDIR)/html/$$lang ]; then \
+		mv -f $(BUILDDIR)/latex/$$lang/MapServer.pdf $(BUILDDIR)/html/$$lang ; \
+		fi \
+	done
 
 changes:
-	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/changes/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/changes/$$lang;\
+	done
 	@echo
-	@echo "The overview file is in $(BUILDDIR)/changes."
+	@echo "The overview file is in $(BUILDDIR)/changes/<language>."
 
 linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/linkcheck/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/linkcheck/$$lang;\
+	done
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
-	      "or in $(BUILDDIR)/linkcheck/output.txt."
+	      "or in $(BUILDDIR)/linkcheck/<language>/output.rst."
 
-doctest:
-	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
-	@echo "Testing of doctests in the sources finished, look at the " \
-	      "results in $(BUILDDIR)/doctest/output.txt."
-
-xml:
-	$(SPHINXBUILD) -b xml $(ALLSPHINXOPTS) $(BUILDDIR)/xml
+labels:
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/labels/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		$(SPHINXBUILD) -b labels $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/labels/$$lang;\
+		cp $(BUILDDIR)/labels/$$lang/labels.rst $$lang/include/labels.inc;\
+	done
 	@echo
-	@echo "Build finished. The XML files are in $(BUILDDIR)/xml."
+	@echo "Label generation complete; look for any errors in the above output " \
+	      "or in $(BUILDDIR)/labels/<language>/labels.rst."
 
-pseudoxml:
-	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
-	@echo
-	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+all: html all-pdf epub all-ps
