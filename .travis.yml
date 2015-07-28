@@ -5,6 +5,10 @@ addons:
     packages:
       - python-sphinx
 
+before_script:
+  - mkdir ~/.ssh
+  - openssl aes-256-cbc -K $encrypted_cd22de430b6c_key -iv $encrypted_cd22de430b6c_iv -in qgep_rsa.enc -out ~/.ssh/id_rsa -d
+
 script:
   - ./scripts/build-docs.sh
   - ./scripts/deploy-docs.sh
