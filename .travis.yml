@@ -1,0 +1,9 @@
+language: python
+
+addons:
+  apt:
+    packages:
+      - python-sphinx
+
+script:
+  - ./scripts/build-docs.sh
