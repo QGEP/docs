@@ -87,6 +87,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Setup workstation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#database-configuration">Database configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">All systems</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#install-qgis">Install QGIS</a></li>
@@ -149,7 +151,20 @@ server itself.</p>
 <h3>Windows<a class="headerlink" href="#windows" title="Link a questa intestazione">¶</a></h3>
 <p>Create a new directory where you want to store the configuration in. (E.g. a new folder <cite>pgconfig</cite> in your home folder). This directory will be referred to as <cite>PGSYSCONFDIR</cite> in this guide.</p>
 <p>Set the environment variable <cite>PGSYSCONFDIR</cite> to the path to <cite>PGSYSCONFDIR</cite>.</p>
-<p>Create a file <cite>pg_service.conf</cite> in <cite>PGSYSCONFDIR</cite>.
+<p>Inside this folder, there will be two files</p>
+<ul class="simple">
+<li><cite>pg_service.conf</cite></li>
+<li><cite>pgpass</cite> (If you do not want to enter the password for the db every time)</li>
+</ul>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Link a questa intestazione">¶</a></h3>
+<p>On linux you may put the files <cite>.pg_service.conf</cite> and <cite>.pgpass</cite> into your home
+folder (normally <cite>/home/[username]</cite>)</p>
+</div>
+<div class="section" id="all-systems">
+<h3>All systems<a class="headerlink" href="#all-systems" title="Link a questa intestazione">¶</a></h3>
+<p>Put the following content in the file <cite>pg_service.conf</cite> or <cite>.pg_service.conf</cite>.
 You may have to adapt the variables for your setup.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>

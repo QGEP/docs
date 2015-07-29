@@ -18,7 +18,21 @@ Create a new directory where you want to store the configuration in. (E.g. a new
 
 Set the environment variable `PGSYSCONFDIR` to the path to `PGSYSCONFDIR`.
 
-Create a file `pg_service.conf` in `PGSYSCONFDIR`.
+Inside this folder, there will be two files
+
+* `pg_service.conf`
+* `pgpass` (If you do not want to enter the password for the db every time)
+
+Linux
+~~~~~
+
+On linux you may put the files `.pg_service.conf` and `.pgpass` into your home
+folder (normally `/home/[username]`)
+
+All systems
+~~~~~~~~~~~
+
+Put the following content in the file `pg_service.conf` or `.pg_service.conf`.
 You may have to adapt the variables for your setup.
 
 .. code:: ini
