@@ -143,12 +143,12 @@ tool to access the database server.</p>
 <p>In pgAdminIII</p>
 <ul class="simple">
 <li>Connect to the database server</li>
-<li>Create a new login role (preferred name &#8220;qgep&#8221;, but you are free to choose)</li>
-<li>Create a new database (preferred name &#8220;qgep&#8221;, but you are free to choose)<ul>
+<li>Create a new login role (preferred name <cite>qgep</cite>, but you are free to choose)</li>
+<li>Create a new database (preferred name <cite>qgep</cite>, but you are free to choose)<ul>
 <li>Change to this database</li>
 </ul>
 </li>
-<li>Create a new schema (preferred name &#8220;qgep&#8221;, but you are free to choose)</li>
+<li>Create a new schema with the name <cite>qgep</cite></li>
 <li>Open an SQL Window and create the extensions (if not yet done)<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
@@ -160,20 +160,22 @@ tool to access the database server.</p>
 </li>
 <li>Right click the <cite>qgep</cite> schema<ul>
 <li>Click restore</li>
-<li>Load your download of backup_20140827.backup</li>
-<li>Restore Options #2: Activate &#8220;Clean before restore&#8221;</li>
-<li>Click &#8220;Restore&#8221;</li>
-<li>Click &#8220;Cancel&#8221;</li>
+<li>Load your download of qgep.backup</li>
+<li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
+<li>Click <cite>Restore</cite></li>
+<li>Click <cite>Cancel</cite></li>
 </ul>
 </li>
-<li>Right click the database and click &#8220;Refresh&#8221;</li>
+<li>Right click the database and click <cite>Refresh</cite></li>
 <li>Update privileges for the database<ul>
 <li>Right click the <cite>qgep</cite> schema</li>
-<li>Click &#8220;Grant Wizard …&#8221;</li>
-<li>Selection, click &#8220;Check All&#8221;</li>
-<li>Privileges
-* Group &#8220;qgep&#8221;
-* Choose &#8220;ALL&#8221;</li>
+<li>Click <cite>Grant Wizard …</cite></li>
+<li>Selection, click <cite>Check All</cite></li>
+<li>Privileges<ul>
+<li>Group <cite>qgep</cite></li>
+<li>Choose <cite>ALL</cite></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
