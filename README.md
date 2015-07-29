@@ -15,7 +15,7 @@ The final product can be found here:
 ## Process
 
 The documentation is written in English and managed in this git repository.
-The latest version of the documentation is automatically build (on [Travis
+The latest version of the documentation is automatically built (on [Travis
 CI](https://travis-ci.org/QGEP/docs)) and published on the links above.
 
 Translation is done via transifex.
