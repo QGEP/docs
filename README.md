@@ -29,7 +29,7 @@ Therefore we will be very happy if you can help us by
 
  * Documenting features (in English)
  * Improving the documentation (in English)
- * Translate it in your language
+ * Translate it to your language
 
 ### Documentation process
 
@@ -65,3 +65,7 @@ Once you receive the email you can head back to the transifex project page,
 click on your language again and then will have the possibility to choose a
 documentation chapter to translate. There is a `Translate` button after
 choosing a chapter.
+
+If your language is not yet available, we will happily add it for you. Just
+[open an issue](https://github.com/QGEP/docs/issues/new) and tell us which
+language you would like to translate it to.
