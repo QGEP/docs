@@ -8,6 +8,7 @@ before_script:
   - chmod 600 ~/.ssh/id_rsa
   - git config --global user.email "qgep@opengis.ch"
   - git config --global user.name "QGEP"
+  - git config --global push.default simple
 
 script:
   - ./scripts/build-docs.sh
