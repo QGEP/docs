@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-29 17:59+0200\n"
-"PO-Revision-Date: 2015-07-29 16:02+0000\n"
+"POT-Creation-Date: 2015-07-29 18:41+0200\n"
+"PO-Revision-Date: 2015-07-29 16:41+0000\n"
 "Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -18,34 +18,34 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# ce7b82f45dc8474aa1c6428f75653ebe
+# df990683e3c04cb697eae82683ce1e17
 #: ../../en/index.rst:2
 msgid "This is the QGEP documentation"
 msgstr "QGEP Dokumentation"
 
-# 3957143ae7b74d56a05e853bda0cdd48
+# 9b62d24ca235474f99902351996e1acb
 #: ../../en/index.rst:4
 msgid ""
 "QGEP is a wastewater management module for QGIS based on SIA 405 and "
 "developed closely to the QGIS application."
-msgstr ""
+msgstr "QGEP ist eine Fachschale für die Abwasserverwaltung gemäss SIA 405. Es ist in enger Zusammenarbeit mit QGIS entwickelt."
 
-# 13f379fc97694ed3afba4328464d0b84
+# 1db8d4075c4243e0a662bbf674a7c232
 #: ../../en/index.rst:8
 msgid "Contents:"
 msgstr "Inhalt:"
 
-# c96831231e2c40febc93aaa548f9419a
+# 51b5d7c53bd24624a450690bf2a6ab99
 #: ../../en/index.rst:17
 msgid "Indices and tables"
-msgstr ""
+msgstr "Verzeichnisse und Tabellen"
 
-# c788f0990b484f409800dadbce53b879
+# 312430a41797459099d5045c462da4c0
 #: ../../en/index.rst:19
 msgid ":ref:`genindex`"
-msgstr ""
+msgstr ":ref:`genindex`"
 
-# b81c9dffc0474fa190a01742c0776030
+# a53f37d2554c4885b867f0dc21c3dcbb
 #: ../../en/index.rst:20
 msgid ":ref:`search`"
-msgstr ""
+msgstr ":ref:`search`"

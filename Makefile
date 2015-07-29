@@ -87,6 +87,12 @@ init: en/*
 	@echo "Init finished. Other target can now be built.";\
 	touch init
 
+transifex_sync: gettext
+	@set -e;\
+	./scripts/create_transifex_resources.sh; \
+	tx push -s; \
+	tx pull
+	@echo "Transifex resources synchronized"
 
 compile_messages: init i18n/*/*.po
 	@set -e; for lang in $(TRANSLATIONS_I18N) ;\
@@ -102,30 +108,6 @@ compile_messages: init i18n/*/*.po
 	done
 	@echo "Messages compiled. Now you can build updated version for html and pdf.";\
 	touch compile_messages
-
-generate_po_from_tmpl:
-	@for lang in $(TRANSLATIONS_I18N) ;\
-	do \
-		echo "Generate po files from pot files for $$lang..."; \
-		for f in `find ./i18n/pot/ -name \*.pot -printf "%f\n"`; \
-		do \
-		echo "Copy pot files to po file for $$f"; \
-		cp ./i18n/pot/$$f ./i18n/$$lang/$${f%.*}.po; \
-		done; \
-	done
-	@echo "*.pot files copy to *.po files. Now you can start your translation.";\
-
-update_po_from_pot:
-	@for lang in $(TRANSLATIONS_I18N) ;\
-	do \
-		echo "Update po files from pot files for $$lang..."; \
-		for f in `find ./i18n/pot/ -name \*.pot -printf "%f\n"`; \
-		do \
-			echo "update po files from pot file for $$f"; \
-			msgmerge ./i18n/$$lang/$${f%.*}.po ./i18n/pot/$$f -U -N; \
-		done; \
-	done
-	@echo "*.po files updated from *.pot files.";\
 
 html: compile_messages
 	@set -e; \
