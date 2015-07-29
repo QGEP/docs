@@ -33,7 +33,7 @@ Therefore we will be very happy if you can help us by
 
 ### Documentation process
 
-Note: You will need a github account for this.
+*Note: You will need a [github account](https://github.com/) for this.*
 
 Navigate to https://github.com/QGEP/docs and click the `Fork` link on the top
 right. You now have your own copy of the documentation on which you can work
@@ -54,7 +54,7 @@ request](https://help.github.com/articles/using-pull-requests/).
 
 ### Translation process
 
-Note: You will need to have a transifex account for this.
+*Note: You will need to have a [transifex account](https://transifex.com/) for this.*
 
 Navigate to our [transifex
 project](https://www.transifex.com/organization/qgep/dashboard/qgep-documentation)
