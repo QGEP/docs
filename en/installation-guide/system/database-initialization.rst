@@ -13,13 +13,13 @@ In pgAdminIII
 
 * Connect to the database server
 
-* Create a new login role (preferred name "qgep", but you are free to choose)
+* Create a new login role (preferred name `qgep`, but you are free to choose)
 
-* Create a new database (preferred name "qgep", but you are free to choose)
+* Create a new database (preferred name `qgep`, but you are free to choose)
 
   * Change to this database
 
-* Create a new schema (preferred name "qgep", but you are free to choose)
+* Create a new schema with the name `qgep`
 
 * Open an SQL Window and create the extensions (if not yet done)
 
@@ -35,24 +35,26 @@ In pgAdminIII
 
   * Click restore
 
-  * Load your download of backup_20140827.backup
+  * Load your download of qgep.backup
 
-  * Restore Options #2: Activate "Clean before restore"
+  * Restore Options #2: Activate `Clean before restore`
 
-  * Click "Restore"
+  * Click `Restore`
 
-  * Click "Cancel"
+  * Click `Cancel`
 
-* Right click the database and click "Refresh"
+* Right click the database and click `Refresh`
 
 * Update privileges for the database
 
   * Right click the `qgep` schema
 
-  * Click "Grant Wizard …"
+  * Click `Grant Wizard …`
 
-  * Selection, click "Check All"
+  * Selection, click `Check All`
 
   * Privileges
-    * Group "qgep"
-    * Choose "ALL"
+
+    * Group `qgep`
+
+    * Choose `ALL`
