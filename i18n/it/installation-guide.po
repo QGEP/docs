@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Matthias Kuhn
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-29 17:59+0200\n"
+"PO-Revision-Date: 2015-07-29 16:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/qgep-documentation/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# 37cd9178a9f24eeaaaff552a8e940d57
+#: ../../en/installation-guide/index.rst:2
+msgid "QGEP Installation Guide"
+msgstr ""
+
+# b30a5bac7a28487789d0007ba3ee708c
+#: ../../en/installation-guide/index.rst:5
+msgid ""
+"This will guide you through the setup of required applications and services "
+"to get your system ready for running QGEP."
+msgstr ""
+
+# 07e5d7b6f60c4a7d9c77436cb23378a4
+#: ../../en/installation-guide/system/database-initialization.rst:2
+msgid "Database initialization"
+msgstr ""
+
+# ec9dce3400e64dfc9546762dbabc7da5
+#: ../../en/installation-guide/system/database-initialization.rst:4
+msgid "Install pgAdminIII"
+msgstr ""
+
+# 43b744add6c542cd98d5e53b1fe3c3d3
+#: ../../en/installation-guide/system/database-initialization.rst:6
+msgid ""
+"You will need a desktop to access the database server. PgAdminIII is a good "
+"tool to access the database server."
+msgstr ""
+
+# 701e8d7ef29e427c9b23968deafce09b
+#: ../../en/installation-guide/system/database-initialization.rst:10
+msgid "Process"
+msgstr ""
+
+# 0f72edad77cb43a29b5b0c38fd4d06bb
+#: ../../en/installation-guide/system/database-initialization.rst:12
+msgid "In pgAdminIII"
+msgstr ""
+
+# e0ad5cefa9bd4077923e84b73303763f
+#: ../../en/installation-guide/system/database-initialization.rst:14
+msgid "Connect to the database server"
+msgstr ""
+
+# efd53f48ac28432b8d438386080ac309
+#: ../../en/installation-guide/system/database-initialization.rst:16
+msgid ""
+"Create a new login role (preferred name `qgep`, but you are free to choose)"
+msgstr ""
+
+# 2575a960de68493ab5c8442e6a5db94a
+#: ../../en/installation-guide/system/database-initialization.rst:18
+msgid ""
+"Create a new database (preferred name `qgep`, but you are free to choose)"
+msgstr ""
+
+# f1fae0f571ee47118a4ba25546048788
+#: ../../en/installation-guide/system/database-initialization.rst:20
+msgid "Change to this database"
+msgstr ""
+
+# 03812168c1e1499ba9d3037a99569491
+#: ../../en/installation-guide/system/database-initialization.rst:22
+msgid "Create a new schema with the name `qgep`"
+msgstr ""
+
+# ae0d7480dcf24f9db4749c5a7a1cadb4
+#: ../../en/installation-guide/system/database-initialization.rst:24
+msgid "Open an SQL Window and create the extensions (if not yet done)"
+msgstr ""
+
+# a723c52fe4934a4594a904d99ca3eb8c
+#: ../../en/installation-guide/system/database-initialization.rst:26
+msgid "``CREATE EXTENSION hstore;``"
+msgstr ""
+
+# b5d28df4ba6d4bebb8cccb170673e0a6
+#: ../../en/installation-guide/system/database-initialization.rst:28
+msgid "``CREATE EXTENSION postgis;``"
+msgstr ""
+
+# e4984e9c23544aa8b5260ed3f80c79be
+#: ../../en/installation-guide/system/database-initialization.rst:30
+msgid "Download demo data"
+msgstr ""
+
+# 64e242e3d8c24d0583f1deea3e2f3bfa
+#: ../../en/installation-guide/system/database-initialization.rst:32
+msgid "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
+msgstr ""
+
+# 2a773ca8a69b4117924dd676362a2af8
+# af4a35db75b64e56b4d9e91bff0d41aa
+#: ../../en/installation-guide/system/database-initialization.rst:34
+#: ../../en/installation-guide/system/database-initialization.rst:50
+msgid "Right click the `qgep` schema"
+msgstr ""
+
+# aefe44c87ff147eabde05d7fa5a3db94
+#: ../../en/installation-guide/system/database-initialization.rst:36
+msgid "Click restore"
+msgstr ""
+
+# 68b911cf915547e88a41f2fcae27af25
+#: ../../en/installation-guide/system/database-initialization.rst:38
+msgid "Load your download of qgep.backup"
+msgstr ""
+
+# 24c326dd986b4195bc6d1c97c37dd8c9
+#: ../../en/installation-guide/system/database-initialization.rst:40
+msgid "Restore Options #2: Activate `Clean before restore`"
+msgstr ""
+
+# 17b09ef0f8b94f209ee88d937ec603ff
+#: ../../en/installation-guide/system/database-initialization.rst:42
+msgid "Click `Restore`"
+msgstr ""
+
+# 6ac8fd7f34df4914b5f9065c5789af77
+#: ../../en/installation-guide/system/database-initialization.rst:44
+msgid "Click `Cancel`"
+msgstr ""
+
+# b5e94d5d1d6541569fcd0234c78bb496
+#: ../../en/installation-guide/system/database-initialization.rst:46
+msgid "Right click the database and click `Refresh`"
+msgstr ""
+
+# 64c94af171174c9ba1d723cab282bb90
+#: ../../en/installation-guide/system/database-initialization.rst:48
+msgid "Update privileges for the database"
+msgstr ""
+
+# a06eb8b4fe164fa8bd39501057833228
+#: ../../en/installation-guide/system/database-initialization.rst:52
+msgid "Click `Grant Wizard …`"
+msgstr ""
+
+# b7b417fc17744115bcd5c47b72592781
+#: ../../en/installation-guide/system/database-initialization.rst:54
+msgid "Selection, click `Check All`"
+msgstr ""
+
+# 0d599e1144774362a8eacecdcc5f6aed
+#: ../../en/installation-guide/system/database-initialization.rst:56
+msgid "Privileges"
+msgstr ""
+
+# fda70665469a4d2db6fdb07cca7caf9e
+#: ../../en/installation-guide/system/database-initialization.rst:58
+msgid "Group `qgep`"
+msgstr ""
+
+# b44f4ea423484034bad9313df14a6896
+#: ../../en/installation-guide/system/database-initialization.rst:60
+msgid "Choose `ALL`"
+msgstr ""
+
+# 190462dbcd1240a496f811d553d4d3c0
+#: ../../en/installation-guide/system/server.rst:2
+msgid "Setup database server"
+msgstr ""
+
+# a5fbf5e903c54b0b9f07758b75f31f60
+#: ../../en/installation-guide/system/server.rst:4
+msgid ""
+"If you expect to access the data from several different workstations, you "
+"can install the database on a network accessible server. If it is just a "
+"single desktop you are working on, this can be installed on the same "
+"machine."
+msgstr ""
+
+# 7df02da7e6f0441faad5b584efda184e
+#: ../../en/installation-guide/system/server.rst:9
+msgid "Required Software"
+msgstr ""
+
+# 9363823492ff4e11ab7541608ae82480
+#: ../../en/installation-guide/system/server.rst:12
+msgid "Server installation"
+msgstr ""
+
+# badc4317c1a64efa8fa96709f9bfbd50
+#: ../../en/installation-guide/system/server.rst:14
+msgid "Install PostgreSQL (>=9.3)"
+msgstr ""
+
+# fa0369a296b447149f0d61c9450c4d73
+#: ../../en/installation-guide/system/server.rst:16
+msgid "`Windows download page <http://www.postgresql.org/download/windows>`_"
+msgstr ""
+
+# d48935c777a24cc9ae7c29063f368a28
+#: ../../en/installation-guide/system/server.rst:18
+msgid "Install PostGIS (>=2.1)"
+msgstr ""
+
+# 9b0f1e1bc384418dab7989e58ffd7428
+#: ../../en/installation-guide/system/workstation.rst:2
+msgid "Setup workstation"
+msgstr ""
+
+# c7c7b8f11d8742d6ba388d5151766e84
+#: ../../en/installation-guide/system/workstation.rst:5
+msgid "Database configuration"
+msgstr ""
+
+# c4a89e981f2d455f9a7066198f88cca9
+#: ../../en/installation-guide/system/workstation.rst:7
+msgid ""
+"To tell a workstation, where the database is (on the local system or on a "
+"network server) you will have to create some files initially on every device"
+" on which you will have QGIS/QGEP running. It is not required to do that on "
+"the server itself."
+msgstr ""
+
+# 5aab670daff146dea884d2167684543c
+#: ../../en/installation-guide/system/workstation.rst:12
+msgid "These instructions depend on your operating system."
+msgstr ""
+
+# f5ee62ec5e104e598143195a2b914916
+#: ../../en/installation-guide/system/workstation.rst:15
+msgid "Windows"
+msgstr ""
+
+# 7aaabd18f5044bffa0663d925233dd09
+#: ../../en/installation-guide/system/workstation.rst:17
+msgid ""
+"Create a new directory where you want to store the configuration in. (E.g. a"
+" new folder `pgconfig` in your home folder). This directory will be referred"
+" to as `PGSYSCONFDIR` in this guide."
+msgstr ""
+
+# 0049bd957671417c8dbe74e8173caca7
+#: ../../en/installation-guide/system/workstation.rst:19
+msgid ""
+"Set the environment variable `PGSYSCONFDIR` to the path to `PGSYSCONFDIR`."
+msgstr ""
+
+# 40c8122b9b3849b29a180d228865a52e
+#: ../../en/installation-guide/system/workstation.rst:21
+msgid ""
+"Create a file `pg_service.conf` in `PGSYSCONFDIR`. You may have to adapt the"
+" variables for your setup."
+msgstr ""
+
+# bd8423359c4b41a98cee11bf0197ba15
+#: ../../en/installation-guide/system/workstation.rst:32
+msgid ""
+"To save the password as well on the system you may use the file `pgpass "
+"<http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
+msgstr ""
+
+# 9d5a32ec31bb417386b088433c2c6ed6
+#: ../../en/installation-guide/system/workstation.rst:39
+msgid "Install QGIS"
+msgstr ""
+
+# 88f970362e474de59c09c4bb9825be72
+#: ../../en/installation-guide/system/workstation.rst:41
+msgid "Minimum requirement 2.10"
+msgstr ""
+
+# a4a07f493f5f45099dccf626c20156f0
+#: ../../en/installation-guide/system/workstation.rst:44
+msgid "Install QGEP plugin"
+msgstr ""
+
+# ee5ffa09426d4016a0c57e95d52ab719
+#: ../../en/installation-guide/system/workstation.rst:46
+msgid "Open QGIS"
+msgstr ""
+
+# c333b3313e7540d780d3b181c8359c28
+#: ../../en/installation-guide/system/workstation.rst:48
+msgid "Go to Plugins"
+msgstr ""
+
+# 4023b66ce82c47da8f52c0253b882b8c
+#: ../../en/installation-guide/system/workstation.rst:50
+msgid "Manage and Install Plugins"
+msgstr ""
+
+# 6a453f82e3da46cbbb8fe3c786d4bba4
+#: ../../en/installation-guide/system/workstation.rst:52
+msgid "Settings"
+msgstr ""
+
+# b4d5509e18404dcdb35cd3ca1ad771ec
+#: ../../en/installation-guide/system/workstation.rst:54
+msgid "Add..."
+msgstr ""
+
+# 173e72e36e85468499aefe04b931ae16
+#: ../../en/installation-guide/system/workstation.rst:56
+msgid "Name: QGEP"
+msgstr ""
+
+# f0c3aa42310545c3beff8e145d7e7e2d
+#: ../../en/installation-guide/system/workstation.rst:58
+msgid "URL: `http://qgis.vitu.ch/plugins/plugins.xml`"
+msgstr ""
+
+# 15382af8ae1d46f8a3448f6a2ec57372
+#: ../../en/installation-guide/system/workstation.rst:60
+msgid "Enable `Show also experimental plugins`"
+msgstr ""
+
+# 38605840c8dc4a4ba7cd62d4e9a23d92
+#: ../../en/installation-guide/system/workstation.rst:62
+msgid "All"
+msgstr ""
+
+# de72210ffca54fdeae050e11a45c0504
+#: ../../en/installation-guide/system/workstation.rst:64
+msgid "Search `QGEP`"
+msgstr ""
+
+# 36f7b019f5f3477fbd15e45adebe28d2
+#: ../../en/installation-guide/system/workstation.rst:66
+msgid "Click the checkbox next to it"
+msgstr ""
+
+# 266df6c0ace54deca813abf991a025a9
+#: ../../en/installation-guide/system/workstation.rst:69
+msgid "Install the demo project"
+msgstr ""
+
+# 952ae4e8f7074de79723ab8003d2c727
+#: ../../en/installation-guide/system/workstation.rst:71
+msgid "Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
+msgstr ""
+
+# bd4789655433413582521368b3a39c98
+#: ../../en/installation-guide/system/workstation.rst:73
+msgid "Extract the file"
+msgstr ""
+
+# 3af27531e8854b28bfda40cd5d0a580c
+#: ../../en/installation-guide/system/workstation.rst:75
+msgid "Open `qgep_en.qgs` with QGIS"
+msgstr ""
