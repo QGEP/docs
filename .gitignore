@@ -2,3 +2,4 @@ build
 compile_messages
 init
 *~
+*.mo

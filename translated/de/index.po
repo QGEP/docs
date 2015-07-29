@@ -24,7 +24,7 @@ msgstr ""
 #: ../../../en/index.rst:9
 # 03ff42a7faf14deca562422a37e16249
 msgid "Contents:"
-msgstr ""
+msgstr "Inhalt:"
 
 #: ../../../en/index.rst:19
 # 3d88171e2f6a4de6b37fa3b50b6d6142

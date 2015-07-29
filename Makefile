@@ -96,6 +96,7 @@ compile_messages: init translated/*/*.po
 		do \
 		bn=`basename $$f .po`; \
 		echo "Compiling messages for $$f"; \
+		mkdir -p ./translated/$$lang/LC_MESSAGES; \
 		msgfmt $$f -o ./translated/$$lang/LC_MESSAGES/$$bn.mo; \
 		done; \
 	done

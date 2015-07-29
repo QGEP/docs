@@ -256,3 +256,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# Path for sphinx to find *.mo files for translation
+locale_dirs = ['../translated']
