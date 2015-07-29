@@ -14,25 +14,25 @@ These instructions depend on your operating system.
 Windows
 ~~~~~~~
 
-Create a new directory where you want to store the configuration in. (E.g. a new folder `pgconfig` in your home folder). This directory will be referred to as `PGSYSCONFDIR` in this guide.
+Create a new directory where you want to store the configuration in. (E.g. a new folder :code:`pgconfig` in your home folder). This directory will be referred to as :code:`PGSYSCONFDIR` in this guide.
 
-Set the environment variable `PGSYSCONFDIR` to the path to `PGSYSCONFDIR`.
+Set the environment variable :code:`PGSYSCONFDIR` to the path to :code:`PGSYSCONFDIR`.
 
 Inside this folder, there will be two files
 
-* `pg_service.conf`
-* `pgpass` (If you do not want to enter the password for the db every time)
+* :code:`pg_service.conf`
+* :code:`pgpass` (If you do not want to enter the password for the db every time)
 
 Linux
 ~~~~~
 
-On linux you may put the files `.pg_service.conf` and `.pgpass` into your home
-folder (normally `/home/[username]`)
+On linux you may put the files :code:`.pg_service.conf` and :code:`.pgpass` into your home
+folder (normally :code:`/home/[username]`)
 
 All systems
 ~~~~~~~~~~~
 
-Put the following content in the file `pg_service.conf` or `.pg_service.conf`.
+Put the following content in the file :code:`pg_service.conf` or :code:`.pg_service.conf`.
 You may have to adapt the variables for your setup.
 
 .. code:: ini
@@ -72,7 +72,7 @@ Install QGEP plugin
 
       * Name: QGEP
 
-      * URL: `http://qgis.vitu.ch/plugins/plugins.xml`
+      * URL: :code:`http://qgis.vitu.ch/plugins/plugins.xml`
 
     * Enable `Show also experimental plugins`
 
@@ -90,5 +90,4 @@ Install the demo project
 * Extract the file
 
 * Open `qgep_en.qgs` with QGIS
-
 
