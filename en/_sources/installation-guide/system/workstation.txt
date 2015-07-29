@@ -49,6 +49,10 @@ To save the password as well on the system you may use the file `pgpass <http://
 
     localhost:5432:*:qgep:password
 
+.. note:: If you don't have the database on your local machine replace any
+   occurence of :code:`localhost` with the network address of your database
+   server.
+
 Install QGIS
 ------------
 
