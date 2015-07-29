@@ -40,6 +40,9 @@ Install QGIS
 
 * Minimum requirement 2.10
 
+  * We recommend using the latest master builds (called qgis-dev on Windows)
+    which often offer a better experience in combination with QGEP.
+
 Install QGEP plugin
 -------------------
 
