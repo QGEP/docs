@@ -7,6 +7,7 @@ source_lang = en
 trans.de = i18n/de/index.po
 trans.fr = i18n/fr/index.po
 trans.it = i18n/it/index.po
+trans.ro = i18n/ro/index.po
 type = PO
 
 [qgep-documentation.installation-guide]
@@ -15,5 +16,6 @@ source_lang = en
 trans.de = i18n/de/installation-guide.po
 trans.fr = i18n/fr/installation-guide.po
 trans.it = i18n/it/installation-guide.po
+trans.ro = i18n/ro/installation-guide.po
 type = PO
 

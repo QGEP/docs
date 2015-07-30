@@ -11,8 +11,8 @@
 # Sphinx documentation first
 #
 
-#LOCALES=`ls translated`
-LOCALES='de fr it'
+#LOCALES=`ls i18n`
+LOCALES='de fr it ro'
 
 # Exit on error
 set -e

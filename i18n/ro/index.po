@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Matthias Kuhn
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-30 10:45+0200\n"
+"PO-Revision-Date: 2015-07-30 08:45+0000\n"
+"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/qgep-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+# df990683e3c04cb697eae82683ce1e17
+#: ../../en/index.rst:2
+msgid "This is the QGEP documentation"
+msgstr ""
+
+# 9b62d24ca235474f99902351996e1acb
+#: ../../en/index.rst:4
+msgid ""
+"QGEP is a wastewater management module for QGIS based on SIA 405 and "
+"developed closely to the QGIS application."
+msgstr ""
+
+# 1db8d4075c4243e0a662bbf674a7c232
+#: ../../en/index.rst:8
+msgid "Contents:"
+msgstr ""
+
+# 51b5d7c53bd24624a450690bf2a6ab99
+#: ../../en/index.rst:17
+msgid "Indices and tables"
+msgstr ""
+
+# 312430a41797459099d5045c462da4c0
+#: ../../en/index.rst:19
+msgid ":ref:`genindex`"
+msgstr ""
+
+# a53f37d2554c4885b867f0dc21c3dcbb
+#: ../../en/index.rst:20
+msgid ":ref:`search`"
+msgstr ""
