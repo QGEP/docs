@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-29 21:34+0200\n"
-"PO-Revision-Date: 2015-07-29 19:34+0000\n"
+"POT-Creation-Date: 2015-07-30 09:44+0200\n"
+"PO-Revision-Date: 2015-07-30 07:44+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/qgep-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -247,15 +247,15 @@ msgstr ""
 #: ../../en/installation-guide/system/workstation.rst:17
 msgid ""
 "Create a new directory where you want to store the configuration in. (E.g. a"
-" new folder :code:`pgconfig` in your home folder). This directory will be "
-"referred to as :code:`PGSYSCONFDIR` in this guide."
+" new folder ``pgconfig`` in your home folder). This directory will be "
+"referred to as ``PGSYSCONFDIR`` in this guide."
 msgstr ""
 
 # c57ca15c177f43408389b0505e46cec1
 #: ../../en/installation-guide/system/workstation.rst:19
 msgid ""
-"Set the environment variable :code:`PGSYSCONFDIR` to the path to "
-":code:`PGSYSCONFDIR`."
+"Set the environment variable ``PGSYSCONFDIR`` to the path to "
+"``PGSYSCONFDIR``."
 msgstr ""
 
 # e927f48ecf1e4ff5a40e5cee2ea1f0d7
@@ -265,14 +265,13 @@ msgstr ""
 
 # 60b17923bdd048979c7836459dcf60bc
 #: ../../en/installation-guide/system/workstation.rst:23
-msgid ":code:`pg_service.conf`"
+msgid "``pg_service.conf``"
 msgstr ""
 
 # 2af78c8a10df449c9e0d6c543843e0be
 #: ../../en/installation-guide/system/workstation.rst:24
 msgid ""
-":code:`pgpass` (If you do not want to enter the password for the db every "
-"time)"
+"``pgpass`` (If you do not want to enter the password for the db every time)"
 msgstr ""
 
 # 85afcf321f584539977fd3e18b253973
@@ -283,8 +282,8 @@ msgstr ""
 # d8f0c37728ac43d4ac41125700447f42
 #: ../../en/installation-guide/system/workstation.rst:29
 msgid ""
-"On linux you may put the files :code:`.pg_service.conf` and :code:`.pgpass` "
-"into your home folder (normally :code:`/home/[username]`)"
+"On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into "
+"your home folder (normally ``/home/[username]``)"
 msgstr ""
 
 # 4e35cfe68ec9455ead3d01f5db64c301
@@ -295,9 +294,8 @@ msgstr ""
 # ce5b600babe44b108489c0557d1e45f8
 #: ../../en/installation-guide/system/workstation.rst:35
 msgid ""
-"Put the following content in the file :code:`pg_service.conf` or "
-":code:`.pg_service.conf`. You may have to adapt the variables for your "
-"setup."
+"Put the following content in the file ``pg_service.conf`` or "
+"``.pg_service.conf``. You may have to adapt the variables for your setup."
 msgstr ""
 
 # 45fe55b56b844f9db1c42f28d43acc07
@@ -311,7 +309,7 @@ msgstr ""
 #: ../../en/installation-guide/system/workstation.rst:52
 msgid ""
 "If you don't have the database on your local machine replace any occurence "
-"of :code:`localhost` with the network address of your database server."
+"of ``localhost`` with the network address of your database server."
 msgstr ""
 
 # 9d11a6686d464b6b9ab3dcc256580e26
@@ -368,7 +366,7 @@ msgstr ""
 
 # 3bec99ef691440ef9913eebf2c51682e
 #: ../../en/installation-guide/system/workstation.rst:79
-msgid "URL: :code:`http://qgis.vitu.ch/plugins/plugins.xml`"
+msgid "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 msgstr ""
 
 # 5521f5871029448eb10934bfd2c86c8d
