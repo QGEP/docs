@@ -14,25 +14,25 @@ These instructions depend on your operating system.
 Windows
 ~~~~~~~
 
-Create a new directory where you want to store the configuration in. (E.g. a new folder :code:`pgconfig` in your home folder). This directory will be referred to as :code:`PGSYSCONFDIR` in this guide.
+Create a new directory where you want to store the configuration in. (E.g. a new folder ``pgconfig`` in your home folder). This directory will be referred to as ``PGSYSCONFDIR`` in this guide.
 
-Set the environment variable :code:`PGSYSCONFDIR` to the path to :code:`PGSYSCONFDIR`.
+Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
 Inside this folder, there will be two files
 
-* :code:`pg_service.conf`
-* :code:`pgpass` (If you do not want to enter the password for the db every time)
+* ``pg_service.conf``
+* ``pgpass`` (If you do not want to enter the password for the db every time)
 
 Linux
 ~~~~~
 
-On linux you may put the files :code:`.pg_service.conf` and :code:`.pgpass` into your home
-folder (normally :code:`/home/[username]`)
+On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into your home
+folder (normally ``/home/[username]``)
 
 All systems
 ~~~~~~~~~~~
 
-Put the following content in the file :code:`pg_service.conf` or :code:`.pg_service.conf`.
+Put the following content in the file ``pg_service.conf`` or ``.pg_service.conf``.
 You may have to adapt the variables for your setup.
 
 .. code:: ini
@@ -50,7 +50,7 @@ To save the password as well on the system you may use the file `pgpass <http://
     localhost:5432:*:qgep:password
 
 .. note:: If you don't have the database on your local machine replace any
-   occurence of :code:`localhost` with the network address of your database
+   occurence of ``localhost`` with the network address of your database
    server.
 
 Install QGIS
@@ -76,7 +76,7 @@ Install QGEP plugin
 
       * Name: QGEP
 
-      * URL: :code:`http://qgis.vitu.ch/plugins/plugins.xml`
+      * URL: ``http://qgis.vitu.ch/plugins/plugins.xml``
 
     * Enable `Show also experimental plugins`
 

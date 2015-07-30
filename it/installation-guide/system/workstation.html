@@ -149,22 +149,22 @@ server itself.</p>
 <p>These instructions depend on your operating system.</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Link a questa intestazione">¶</a></h3>
-<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="code docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="code docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
-<p>Set the environment variable <code class="code docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="code docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
+<p>Set the environment variable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Inside this folder, there will be two files</p>
 <ul class="simple">
-<li><code class="code docutils literal"><span class="pre">pg_service.conf</span></code></li>
-<li><code class="code docutils literal"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</li>
+<li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
+<li><code class="docutils literal"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</li>
 </ul>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Link a questa intestazione">¶</a></h3>
-<p>On linux you may put the files <code class="code docutils literal"><span class="pre">.pg_service.conf</span></code> and <code class="code docutils literal"><span class="pre">.pgpass</span></code> into your home
-folder (normally <code class="code docutils literal"><span class="pre">/home/[username]</span></code>)</p>
+<p>On linux you may put the files <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> and <code class="docutils literal"><span class="pre">.pgpass</span></code> into your home
+folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>)</p>
 </div>
 <div class="section" id="all-systems">
 <h3>All systems<a class="headerlink" href="#all-systems" title="Link a questa intestazione">¶</a></h3>
-<p>Put the following content in the file <code class="code docutils literal"><span class="pre">pg_service.conf</span></code> or <code class="code docutils literal"><span class="pre">.pg_service.conf</span></code>.
+<p>Put the following content in the file <code class="docutils literal"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>.
 You may have to adapt the variables for your setup.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
@@ -180,7 +180,7 @@ You may have to adapt the variables for your setup.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
 <p class="last">If you don&#8217;t have the database on your local machine replace any
-occurence of <code class="code docutils literal"><span class="pre">localhost</span></code> with the network address of your database
+occurence of <code class="docutils literal"><span class="pre">localhost</span></code> with the network address of your database
 server.</p>
 </div>
 </div>
@@ -204,7 +204,7 @@ which often offer a better experience in combination with QGEP.</li>
 <li>Settings<ul>
 <li>Add...<ul>
 <li>Name: QGEP</li>
-<li>URL: <code class="code docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
+<li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
 </ul>
 </li>
 <li>Enable <cite>Show also experimental plugins</cite></li>
