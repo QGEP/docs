@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database initialization &mdash; QGEP 0.5 documentation</title>
+  <title>Inițializare bază de date &mdash; QGEP 0.5 documentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
-        <link rel="up" title="QGEP Installation Guide" href="../index.html"/>
-        <link rel="next" title="Setup workstation" href="workstation.html"/>
-        <link rel="prev" title="Setup database server" href="server.html"/> 
+        <link rel="up" title="Ghidul de instalare QGEP" href="../index.html"/>
+        <link rel="next" title="Setări stație de lucru" href="workstation.html"/>
+        <link rel="prev" title="Instalarea bazei de date" href="server.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,13 +82,13 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">Setup database server</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Database initialization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#process">Process</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Ghidul de instalare QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">Instalarea bazei de date</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Inițializare bază de date</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#process">Procedură</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">Setup workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">Setări stație de lucru</a></li>
 </ul>
 </li>
 </ul>
@@ -115,9 +115,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">QGEP Installation Guide</a> &raquo;</li>
+          <li><a href="../index.html">Ghidul de instalare QGEP</a> &raquo;</li>
       
-    <li>Database initialization</li>
+    <li>Inițializare bază de date</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -132,48 +132,66 @@
            <div itemprop="articleBody">
             
   <div class="section" id="database-initialization">
-<h1>Database initialization<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h1>
+<h1>Inițializare bază de date<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Install pgAdminIII</li>
+<li><p class="first">Instalare pgAdminIII</p>
+</li>
 </ul>
-<p>You will need a desktop to access the database server. PgAdminIII is a good
-tool to access the database server.</p>
+<p>Vei avea nevoie de un desktop pentru a accesa serverul de baze de date. PgAdminIII este o unealtă  bună pentru a accesa serverul de baze din desktop.</p>
 <div class="section" id="process">
-<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
-<p>In pgAdminIII</p>
+<h2>Procedură<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>În pgAdminIII</p>
 <ul class="simple">
-<li>Connect to the database server</li>
-<li>Create a new login role (preferred name <cite>qgep</cite>, but you are free to choose)</li>
-<li>Create a new database (preferred name <cite>qgep</cite>, but you are free to choose)<ul>
-<li>Change to this database</li>
+<li><p class="first">Conectează-te la baza de date.</p>
+</li>
+<li><p class="first">Creează un nou rol de login (este preferabil sa aibă numele <cite>qgep</cite>)</p>
+</li>
+<li><p class="first">Creează o nouă bază de date (este preferabil sa aibă numele <cite>qgep</cite>)</p>
+<ul>
+<li><p class="first">Conectează-te la această bază de date</p>
+</li>
 </ul>
 </li>
-<li>Create a new schema with the name <cite>qgep</cite></li>
-<li>Open an SQL Window and create the extensions (if not yet done)<ul>
+<li><p class="first">Creează o nouă schemă cu numele <cite>qgep</cite></p>
+</li>
+<li><p class="first">Deschide o fereastră SQL și creează extensiile (dacă nu ai făcut-o deja)</p>
+<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
 </li>
-<li>Download demo data<ul>
+<li><p class="first">Descarcă datele de demo</p>
+<ul>
 <li><a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/qgep.backup">http://qgis.vitu.ch/qgep_demodata/qgep.backup</a></li>
 </ul>
 </li>
-<li>Right click the <cite>qgep</cite> schema<ul>
-<li>Click restore</li>
-<li>Load your download of qgep.backup</li>
-<li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
+<li><p class="first">Click dreapta pe schema <cite>qgep</cite></p>
+<ul>
+<li><p class="first">Click pe restore</p>
+</li>
+<li><p class="first">Încarcă fișierul qgep.backup</p>
+</li>
+<li><p class="first">Restore Options #2: Activează <cite>Clean before restore</cite></p>
+</li>
 <li>Click <cite>Restore</cite></li>
 <li>Click <cite>Cancel</cite></li>
 </ul>
 </li>
-<li>Right click the database and click <cite>Refresh</cite></li>
-<li>Update privileges for the database<ul>
-<li>Right click the <cite>qgep</cite> schema</li>
+<li><p class="first">Click dreapta pe baza de date urmat de click pe <cite>Refresh</cite></p>
+</li>
+<li><p class="first">Actualizează privilegiile bazei de date</p>
+<ul>
+<li><p class="first">Click dreapta pe schema <cite>qgep</cite></p>
+</li>
 <li>Click <cite>Grant Wizard …</cite></li>
-<li>Selection, click <cite>Check All</cite></li>
-<li>Privileges<ul>
-<li>Group <cite>qgep</cite></li>
-<li>Choose <cite>ALL</cite></li>
+<li><p class="first">Selecție, Click <cite>Check All</cite></p>
+</li>
+<li><p class="first">Privilegii</p>
+<ul>
+<li><p class="first">Grupul <cite>qgep</cite></p>
+</li>
+<li><p class="first">Alege <cite>ALL</cite></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -189,10 +207,10 @@ tool to access the database server.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workstation.html" class="btn btn-neutral float-right" title="Setup workstation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workstation.html" class="btn btn-neutral float-right" title="Setări stație de lucru" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="server.html" class="btn btn-neutral" title="Setup database server" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="server.html" class="btn btn-neutral" title="Instalarea bazei de date" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

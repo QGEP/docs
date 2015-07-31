@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setup workstation &mdash; QGEP 0.5 documentation</title>
+  <title>Setări stație de lucru &mdash; QGEP 0.5 documentation</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
-        <link rel="up" title="QGEP Installation Guide" href="../index.html"/>
-        <link rel="prev" title="Database initialization" href="database-initialization.html"/> 
+        <link rel="up" title="Ghidul de instalare QGEP" href="../index.html"/>
+        <link rel="prev" title="Inițializare bază de date" href="database-initialization.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -81,19 +81,19 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">Setup database server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">Database initialization</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Setup workstation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#database-configuration">Database configuration</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Ghidul de instalare QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">Instalarea bazei de date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">Inițializare bază de date</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Setări stație de lucru</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">Configurare baza de date</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#all-systems">All systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">Toate sistemele</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#install-qgis">Install QGIS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">Install QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">Install the demo project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgis">Instalare QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">Instalare plugin QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">Instalează proiectul demo</a></li>
 </ul>
 </li>
 </ul>
@@ -122,9 +122,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">QGEP Installation Guide</a> &raquo;</li>
+          <li><a href="../index.html">Ghidul de instalare QGEP</a> &raquo;</li>
       
-    <li>Setup workstation</li>
+    <li>Setări stație de lucru</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -139,33 +139,29 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-workstation">
-<h1>Setup workstation<a class="headerlink" href="#setup-workstation" title="Permalink to this headline">¶</a></h1>
+<h1>Setări stație de lucru<a class="headerlink" href="#setup-workstation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="database-configuration">
-<h2>Database configuration<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
-<p>To tell a workstation, where the database is (on the local system or on a
-network server) you will have to create some files initially on every device on
-which you will have QGIS/QGEP running. It is not required to do that on the
-server itself.</p>
-<p>These instructions depend on your operating system.</p>
+<h2>Configurare baza de date<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Pentru a-i spune stației de lucru (de pe care lucrezi) unde este baza de date instalată, va trebui să creezi niște fișiere pe aceasta. Această operațiune este necesară pe fiecare stație de lucru/laptop etc. de pe care se va rula QGIS/QGEP. Operațiunea nu este necesară pe server.</p>
+<p>Aceste instrucțiuni depind de sistemul de operare.</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
-<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
-<p>Set the environment variable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
-<p>Inside this folder, there will be two files</p>
+<p>Creează un nou director acolo unde vrei să salvezi configurația. (De ex. un director <code class="docutils literal"><span class="pre">pgconfig</span></code> în directorul acasă). Acest director este descris în acest ghid de <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>Setează variabila de sistem <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> cu calea către <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>În acest director, vor fi două fișiere.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
-<li><code class="docutils literal"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">pgpass</span></code> (opțional, dacă nu vrei sa introduci parola de fiecare dată)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
-<p>On linux you may put the files <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> and <code class="docutils literal"><span class="pre">.pgpass</span></code> into your home
-folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>)</p>
+<p>În linux, fișierele  <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> și <code class="docutils literal"><span class="pre">.pgpass</span></code> se pot pune în folderul home (în mod normal <code class="docutils literal"><span class="pre">/home/[numeutilizator]</span></code>)</p>
 </div>
 <div class="section" id="all-systems">
-<h3>All systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
-<p>Put the following content in the file <code class="docutils literal"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>.
-You may have to adapt the variables for your setup.</p>
+<h3>Toate sistemele<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<p>Introdu următoarele variabile în <code class="docutils literal"><span class="pre">pg_service.conf</span></code> sau <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>. Variabilele introduse trebuie adaptate în funcție de topologia sistemului.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
@@ -173,46 +169,54 @@ You may have to adapt the variables for your setup.</p>
 <span class="n">user</span><span class="o">=</span><span class="n">qgep</span>
 </pre></div>
 </div>
-<p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+<p>Pentru a salva și parola în sistem se poate folosi fișierul <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre>localhost:5432:*:qgep:password
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you don&#8217;t have the database on your local machine replace any
-occurence of <code class="docutils literal"><span class="pre">localhost</span></code> with the network address of your database
-server.</p>
+<p class="last">Dacă baza de date nu e instalată pe stația de lucru locală atunci trebuie înlocuit <code class="docutils literal"><span class="pre">localhost</span></code> cu adresa de rețea a bazei de date, oriunde găsiți aceasta referință.</p>
 </div>
 </div>
 </div>
 <div class="section" id="install-qgis">
-<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
+<h2>Instalare QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Minimum requirement 2.10<ul>
-<li>We recommend using the latest master builds (called qgis-dev on Windows)
-which often offer a better experience in combination with QGEP.</li>
+<li><p class="first">Versiune minimă necesară 2.10</p>
+<ul>
+<li><p class="first">Este recomandat sa fie folosite cele mai noi versiuni de QGIS - master (numite qgis-dev în Windows) pentru a avea parte de o experienta mai buna folosind QGEP.</p>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="install-qgep-plugin">
-<h2>Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>Instalare plugin QGEP<a class="headerlink" href="#install-qgep-plugin" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Open QGIS</li>
-<li>Go to Plugins<ul>
+<li><p class="first">Deschide QGIS</p>
+</li>
+<li><p class="first">Deschide la Plugins</p>
+<ul>
 <li>Manage and Install Plugins</li>
-<li>Settings<ul>
-<li>Add...<ul>
-<li>Name: QGEP</li>
+<li><p class="first">Setări</p>
+<ul>
+<li><p class="first">Adaugă</p>
+<ul>
+<li><p class="first">Nume: QGEP</p>
+</li>
 <li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
 </ul>
 </li>
-<li>Enable <cite>Show also experimental plugins</cite></li>
+<li><p class="first">Activează <cite>Show also experimental plugins</cite> pentru a arăta și pluginurile experimentale.</p>
+</li>
 </ul>
 </li>
-<li>All<ul>
-<li>Search <cite>QGEP</cite></li>
-<li>Click the checkbox next to it</li>
+<li><p class="first">All - Toate</p>
+<ul>
+<li><p class="first">Caută  <cite>QGEP</cite></p>
+</li>
+<li><p class="first">Bifează căsuța de lîngă</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -220,11 +224,14 @@ which often offer a better experience in combination with QGEP.</li>
 </ul>
 </div>
 <div class="section" id="install-the-demo-project">
-<h2>Install the demo project<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
+<h2>Instalează proiectul demo<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Download <a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/project_20140829.zip">http://qgis.vitu.ch/qgep_demodata/project_20140829.zip</a></li>
-<li>Extract the file</li>
-<li>Open <cite>qgep_en.qgs</cite> with QGIS</li>
+<li><p class="first">Descarcă <a class="reference external" href="http://qgis.vitu.ch/qgep_demodata/project_20140829.zip">http://qgis.vitu.ch/qgep_demodata/project_20140829.zip</a></p>
+</li>
+<li><p class="first">Extrage fișierul</p>
+</li>
+<li><p class="first">Deschide <cite>qgep_en.qgs</cite> cu QGIS</p>
+</li>
 </ul>
 </div>
 </div>
@@ -237,7 +244,7 @@ which often offer a better experience in combination with QGEP.</li>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="database-initialization.html" class="btn btn-neutral" title="Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="database-initialization.html" class="btn btn-neutral" title="Inițializare bază de date" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
