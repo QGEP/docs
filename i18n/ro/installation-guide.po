@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 11:57+0200\n"
-"PO-Revision-Date: 2015-07-31 09:57+0000\n"
+"POT-Creation-Date: 2015-07-31 12:18+0200\n"
+"PO-Revision-Date: 2015-07-31 10:18+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -215,6 +215,30 @@ msgstr "`Pagina de descărcare pe Windows<http://www.postgresql.org/download/win
 msgid "Install PostGIS (>=2.1)"
 msgstr "Instalare PostGIS (>=2.1)"
 
+# 8ed3a5e08e784aeaa0d59f2fb56daa3c
+#: ../../en/installation-guide/system/server.rst:22
+msgid ""
+"In a single desktop environment (no network database server) you can setup "
+"your database to trust local connections."
+msgstr ""
+
+# a4d0a9d76d4c472f90104a73c4980752
+#: ../../en/installation-guide/system/server.rst:25
+msgid ""
+"This way, the database won't ask for a password if you're connecting from "
+"your local workstation while no password is written  anywhere. You even can "
+"do with no database password at all."
+msgstr ""
+
+# 70fdf71970644dc1b851f1574a2edf27
+#: ../../en/installation-guide/system/server.rst:29
+msgid ""
+"This can be done by editing the database access configuration file "
+"`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
+"conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
+"service reload is required to activate changes."
+msgstr ""
+
 # d570cd0a1b0f4d10b0d707c230540f07
 #: ../../en/installation-guide/system/workstation.rst:2
 msgid "Setup workstation"
@@ -313,111 +337,99 @@ msgid ""
 "of ``localhost`` with the network address of your database server."
 msgstr "Dacă baza de date nu e instalată pe stația de lucru locală atunci trebuie înlocuit ``localhost`` cu adresa de rețea a bazei de date, oriunde găsiți aceasta referință."
 
-# ef822cd0839b497a9e39a6d8601a2c5e
-#: ../../en/installation-guide/system/workstation.rst:58
-msgid ""
-"You can also setup your local database to trust local connections. This way,"
-" the database won't ask for a password if you're connecting from your local "
-"workstation while no password is written anywhere. You even can do with no "
-"database password at all. This can be done by editing the database access "
-"configuration file `pg_hba.conf <http://www.postgresql.org/docs/devel/static"
-"/auth-pg-hba-conf.html>`_ and set the auth-options from `md5` to `trust`. A "
-"database restart in needed to activate changes."
-msgstr ""
-
 # 9d11a6686d464b6b9ab3dcc256580e26
-#: ../../en/installation-guide/system/workstation.rst:65
+#: ../../en/installation-guide/system/workstation.rst:57
 msgid "Install QGIS"
 msgstr "Instalare QGIS"
 
 # dd0ae381acfc407b9a70b3927edc2f2c
-#: ../../en/installation-guide/system/workstation.rst:67
+#: ../../en/installation-guide/system/workstation.rst:59
 msgid "Minimum requirement 2.10"
 msgstr "Versiune minimă necesară 2.10"
 
 # 015dcd75455f4b52897d6556013bedf8
-#: ../../en/installation-guide/system/workstation.rst:69
+#: ../../en/installation-guide/system/workstation.rst:61
 msgid ""
 "We recommend using the latest master builds (called qgis-dev on Windows) "
 "which often offer a better experience in combination with QGEP."
 msgstr "Este recomandat sa fie folosite cele mai noi versiuni de QGIS - master (numite qgis-dev în Windows) pentru a avea parte de o experienta mai buna folosind QGEP."
 
 # ffea2725c3394f0a91ae293bf8cbbe19
-#: ../../en/installation-guide/system/workstation.rst:73
+#: ../../en/installation-guide/system/workstation.rst:65
 msgid "Install QGEP plugin"
 msgstr "Instalare plugin QGEP"
 
 # b297d95fa69143cb873d56784e639d8c
-#: ../../en/installation-guide/system/workstation.rst:75
+#: ../../en/installation-guide/system/workstation.rst:67
 msgid "Open QGIS"
 msgstr "Deschide QGIS"
 
 # 4f3d4c1b715946e79277df8f3a200336
-#: ../../en/installation-guide/system/workstation.rst:77
+#: ../../en/installation-guide/system/workstation.rst:69
 msgid "Go to Plugins"
 msgstr "Deschide la Plugins"
 
 # 1cb6f879e2ea416086f3ba3ab00289e7
-#: ../../en/installation-guide/system/workstation.rst:79
+#: ../../en/installation-guide/system/workstation.rst:71
 msgid "Manage and Install Plugins"
 msgstr "Manage and Install Plugins"
 
 # 2316c35d72524c13aebbe91f0b679219
-#: ../../en/installation-guide/system/workstation.rst:81
+#: ../../en/installation-guide/system/workstation.rst:73
 msgid "Settings"
 msgstr "Setări"
 
 # 59f92a5f9cd643cb9b58cac1269b5872
-#: ../../en/installation-guide/system/workstation.rst:83
+#: ../../en/installation-guide/system/workstation.rst:75
 msgid "Add..."
 msgstr "Adaugă"
 
 # 6837b2fbdd7445edb569b3e100807a3c
-#: ../../en/installation-guide/system/workstation.rst:85
+#: ../../en/installation-guide/system/workstation.rst:77
 msgid "Name: QGEP"
 msgstr "Nume: QGEP"
 
 # 3bec99ef691440ef9913eebf2c51682e
-#: ../../en/installation-guide/system/workstation.rst:87
+#: ../../en/installation-guide/system/workstation.rst:79
 msgid "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 msgstr "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 
 # 5521f5871029448eb10934bfd2c86c8d
-#: ../../en/installation-guide/system/workstation.rst:89
+#: ../../en/installation-guide/system/workstation.rst:81
 msgid "Enable `Show also experimental plugins`"
 msgstr "Activează `Show also experimental plugins` pentru a arăta și pluginurile experimentale."
 
 # 95d4af7c3e91411bb9593a1042c9f9e6
-#: ../../en/installation-guide/system/workstation.rst:91
+#: ../../en/installation-guide/system/workstation.rst:83
 msgid "All"
 msgstr "All - Toate"
 
 # 5d934f75ea2548c38b278142901a82cd
-#: ../../en/installation-guide/system/workstation.rst:93
+#: ../../en/installation-guide/system/workstation.rst:85
 msgid "Search `QGEP`"
 msgstr "Caută  `QGEP`"
 
 # d67227a1ee634d7796f830aef6392dcb
-#: ../../en/installation-guide/system/workstation.rst:95
+#: ../../en/installation-guide/system/workstation.rst:87
 msgid "Click the checkbox next to it"
 msgstr "Bifează căsuța de lîngă"
 
 # 61a380dcfe544ad59148020e222b5a38
-#: ../../en/installation-guide/system/workstation.rst:98
+#: ../../en/installation-guide/system/workstation.rst:90
 msgid "Install the demo project"
 msgstr "Instalează proiectul demo"
 
 # 1fced181b3684f1da0a3b17a07c6cad6
-#: ../../en/installation-guide/system/workstation.rst:100
+#: ../../en/installation-guide/system/workstation.rst:92
 msgid "Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
 msgstr "Descarcă http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
 
 # 1d700414ba3c4324a18330fcab8f16d6
-#: ../../en/installation-guide/system/workstation.rst:102
+#: ../../en/installation-guide/system/workstation.rst:94
 msgid "Extract the file"
 msgstr "Extrage fișierul"
 
 # 63c8a89b9c544a689f74b08b9342ff17
-#: ../../en/installation-guide/system/workstation.rst:104
+#: ../../en/installation-guide/system/workstation.rst:96
 msgid "Open `qgep_en.qgs` with QGIS"
 msgstr "Deschide `qgep_en.qgs` cu QGIS"
