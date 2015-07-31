@@ -153,15 +153,9 @@
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>In a single desktop environment (no network database server) you can setup
-your database to trust local connections.</p>
-<p>This way, the database won&#8217;t ask for a password if you&#8217;re connecting from your
-local workstation while no password is written  anywhere. You even can do
-with no database password at all.</p>
-<p class="last">This can be done by editing the database access configuration file
-<a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
-and set the auth-options from <code class="docutils literal"><span class="pre">md5</span></code> to <code class="docutils literal"><span class="pre">trust</span></code>. A database service reload
-is required to activate changes.</p>
+<p>Într-un sistem unitar de stație de lucru (cu baza de date instalată local pe stația de lucru) există posibilitatea de a configura baza de date ca sa nu mai necesite parolă pentru conexiunile locale.</p>
+<p>În acest fel, nu va fi necesară introducerea parolei și implicit salvarea acesteia oriunde în sistem. Se poate chiar utiliza baza de date fără a crea vreo parolă undeva.</p>
+<p class="last">Aceasta se poate prin editarea fișierului de acces al bazei de date <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a> și prin setarea opțiunilor de autentificare de la <code class="docutils literal"><span class="pre">md5</span></code> către <code class="docutils literal"><span class="pre">trust</span></code>. Pentru a activa schimbările efectuate în <cite>pg_hba.conf</cite>, este necesară restartarea bazei de date.</p>
 </div>
 </div>
 </div>
