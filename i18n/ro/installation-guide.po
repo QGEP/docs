@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 12:18+0200\n"
-"PO-Revision-Date: 2015-07-31 10:18+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-07-31 17:18+0200\n"
+"PO-Revision-Date: 2015-07-31 15:10+0000\n"
+"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -220,7 +220,7 @@ msgstr "Instalare PostGIS (>=2.1)"
 msgid ""
 "In a single desktop environment (no network database server) you can setup "
 "your database to trust local connections."
-msgstr ""
+msgstr "Într-un sistem unitar de stație de lucru (cu baza de date instalată local pe stația de lucru) există posibilitatea de a configura baza de date ca sa nu mai necesite parolă pentru conexiunile locale."
 
 # a4d0a9d76d4c472f90104a73c4980752
 #: ../../en/installation-guide/system/server.rst:25
@@ -228,7 +228,7 @@ msgid ""
 "This way, the database won't ask for a password if you're connecting from "
 "your local workstation while no password is written  anywhere. You even can "
 "do with no database password at all."
-msgstr ""
+msgstr "În acest fel, nu va fi necesară introducerea parolei și implicit salvarea acesteia oriunde în sistem. Se poate chiar utiliza baza de date fără a crea vreo parolă undeva."
 
 # 70fdf71970644dc1b851f1574a2edf27
 #: ../../en/installation-guide/system/server.rst:29
@@ -237,7 +237,7 @@ msgid ""
 "`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
 "conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
 "service reload is required to activate changes."
-msgstr ""
+msgstr "Aceasta se poate prin editarea fișierului de acces al bazei de date `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_ și prin setarea opțiunilor de autentificare de la ``md5`` către ``trust``. Pentru a activa schimbările efectuate în `pg_hba.conf`, este necesară restartarea bazei de date."
 
 # d570cd0a1b0f4d10b0d707c230540f07
 #: ../../en/installation-guide/system/workstation.rst:2
