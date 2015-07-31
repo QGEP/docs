@@ -53,14 +53,6 @@ To save the password as well on the system you may use the file `pgpass <http://
    occurence of ``localhost`` with the network address of your database
    server.
 
-.. note::
-
- You can also setup your local database to trust local connections.
- This way, the database won't ask for a password if you're connecting from your local workstation while no password is written 
- anywhere. You even can do with no database password at all.
- This can be done by editing the database access configuration file `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_
- and set the auth-options from `md5` to `trust`. A database restart in needed to activate changes.
-
 Install QGIS
 ------------
 

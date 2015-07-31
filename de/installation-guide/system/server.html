@@ -153,6 +153,18 @@ desktop you are working on, this can be installed on the same machine.</p>
 <li><p class="first">PostGIS (&gt;=2.1) installieren</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p>In a single desktop environment (no network database server) you can setup
+your database to trust local connections.</p>
+<p>This way, the database won&#8217;t ask for a password if you&#8217;re connecting from your
+local workstation while no password is written  anywhere. You even can do
+with no database password at all.</p>
+<p class="last">This can be done by editing the database access configuration file
+<a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
+and set the auth-options from <code class="docutils literal"><span class="pre">md5</span></code> to <code class="docutils literal"><span class="pre">trust</span></code>. A database service reload
+is required to activate changes.</p>
+</div>
 </div>
 </div>
 </div>
