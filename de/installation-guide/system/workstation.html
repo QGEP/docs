@@ -32,6 +32,7 @@
   
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="Leitfaden QGEP Installation" href="../index.html"/>
+        <link rel="next" title="pgAdmin" href="../../pgadmin/index.html"/>
         <link rel="prev" title="Initialisierung der Datenbank" href="database-initialization.html"/> 
 
   
@@ -98,6 +99,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pgadmin/index.html">pgAdmin</a></li>
 </ul>
 
           
@@ -170,11 +172,11 @@ You may have to adapt the variables for your setup.</p>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
 <span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
-<span class="n">user</span><span class="o">=</span><span class="n">qgep</span>
+<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
 </pre></div>
 </div>
 <p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
-<div class="code ini highlight-python"><div class="highlight"><pre>localhost:5432:*:qgep:password
+<div class="code ini highlight-python"><div class="highlight"><pre>localhost:5432:*:qgepuser:password
 </pre></div>
 </div>
 <div class="admonition note">
@@ -199,19 +201,28 @@ You may have to adapt the variables for your setup.</p>
 <ul class="simple">
 <li><p class="first">QGIS öffnen</p>
 </li>
-<li>Go to Plugins<ul>
+<li>Go to Plugins (position <em>1</em> in the image below)<ul>
 <li>Manage and Install Plugins</li>
-<li><p class="first">Einstellungen</p>
-<ul>
+<li>Settings (position <em>3</em>)<ul>
 <li><p class="first">Hinzufügen...</p>
 <ul>
 <li>Name: QGEP</li>
 <li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
 </ul>
 </li>
-<li>Enable <cite>Show also experimental plugins</cite></li>
+<li>Enable <cite>Show also experimental plugins</cite> (position <em>2</em>)</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<div class="figure" id="id1">
+<img alt="../../_images/001_addplugin.jpeg" src="../../_images/001_addplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Add the plugin repo</strong></span></p>
+</div>
+<p>Activate the plugin (see image below):</p>
+<blockquote>
+<div><ul class="simple">
 <li><p class="first">Alle</p>
 <ul>
 <li><p class="first"><cite>QGEP</cite> suchen</p>
@@ -221,8 +232,11 @@ You may have to adapt the variables for your setup.</p>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
+</div></blockquote>
+<div class="figure" id="id2">
+<img alt="../../_images/001_searchplugin.jpeg" src="../../_images/001_searchplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Add the QGEP plugin</strong></span></p>
+</div>
 </div>
 <div class="section" id="install-the-demo-project">
 <h2>Das Demo Projekt installieren<a class="headerlink" href="#install-the-demo-project" title="Link zu dieser Überschrift">¶</a></h2>
@@ -242,6 +256,8 @@ You may have to adapt the variables for your setup.</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../pgadmin/index.html" class="btn btn-neutral float-right" title="pgAdmin" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="database-initialization.html" class="btn btn-neutral" title="Initialisierung der Datenbank" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

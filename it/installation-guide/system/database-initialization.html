@@ -91,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="workstation.html">Setup workstation</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../pgadmin/index.html">pgAdmin</a></li>
 </ul>
 
           
@@ -133,23 +134,32 @@
             
   <div class="section" id="database-initialization">
 <h1>Database initialization<a class="headerlink" href="#database-initialization" title="Link a questa intestazione">¶</a></h1>
-<ul class="simple">
-<li>Install pgAdminIII</li>
-</ul>
-<p>You will need a desktop to access the database server. PgAdminIII is a good
-tool to access the database server.</p>
+<p>You can use <a class="reference internal" href="../../pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> to access and manage the database server.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../../pgadmin/install.html#install-pgadmin"><span>Install pgAdmin</span></a></p>
+</div>
 <div class="section" id="process">
 <h2>Process<a class="headerlink" href="#process" title="Link a questa intestazione">¶</a></h2>
 <p>In pgAdminIII</p>
 <ul class="simple">
 <li>Connect to the database server</li>
-<li>Create a new login role (preferred name <cite>qgep</cite>, but you are free to choose)</li>
-<li>Create a new database (preferred name <cite>qgep</cite>, but you are free to choose)<ul>
+<li>Create a new group role (preferably named <cite>qgep</cite>, but you are free to choose)</li>
+<li>Create a new login role (<cite>qgepuser</cite> for example) and make it a member of the <cite>qgep</cite> group</li>
+</ul>
+<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> window and type the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>CREATE GROUP qgep;
+CREATE ROLE qgepuser LOGIN;
+GRANT qgep TO qgepuser;
+</pre></div>
+</div>
+<ul class="simple">
+<li>Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
 <li>Change to this database</li>
 </ul>
 </li>
 <li>Create a new schema with the name <cite>qgep</cite></li>
-<li>Open an SQL Window and create the extensions (if not yet done)<ul>
+<li>Open an <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>

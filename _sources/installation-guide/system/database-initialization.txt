@@ -1,10 +1,11 @@
 Database initialization
 =======================
 
-* Install pgAdminIII
+You can use :ref:`pgAdmin` to access and manage the database server.
 
-You will need a desktop to access the database server. PgAdminIII is a good
-tool to access the database server.
+.. note::
+
+ By clicking the link you can learn how to :ref:`install pgAdmin`
 
 Process
 -------
@@ -13,15 +14,25 @@ In pgAdminIII
 
 * Connect to the database server
 
-* Create a new login role (preferred name `qgep`, but you are free to choose)
+* Create a new group role (preferably named `qgep`, but you are free to choose)
 
-* Create a new database (preferred name `qgep`, but you are free to choose)
+* Create a new login role (`qgepuser` for example) and make it a member of the `qgep` group
+
+You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` window and type the following:
+
+::
+
+ CREATE GROUP qgep;
+ CREATE ROLE qgepuser LOGIN;
+ GRANT qgep TO qgepuser;
+
+* Create a new database (preferably named `qgep`, but you are free to choose)
 
   * Change to this database
 
 * Create a new schema with the name `qgep`
 
-* Open an SQL Window and create the extensions (if not yet done)
+* Open an :ref:`SQL query` Window and create the extensions (if they're not created yet)
 
   * ``CREATE EXTENSION hstore;``
 

@@ -11,7 +11,7 @@ Contents:
    :maxdepth: 2
 
    installation-guide/index
-
+   pgadmin/index
 
 Indices and tables
 ==================
