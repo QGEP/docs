@@ -19,3 +19,12 @@ trans.it = i18n/it/installation-guide.po
 trans.ro = i18n/ro/installation-guide.po
 type = PO
 
+[qgep-documentation.pgadmin]
+source_file = i18n/pot/pgadmin.pot
+source_lang = en
+trans.de = i18n/de/pgadmin.po
+trans.fr = i18n/fr/pgadmin.po
+trans.it = i18n/it/pgadmin.po
+trans.ro = i18n/ro/pgadmin.po
+type = PO
+

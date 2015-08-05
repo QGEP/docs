@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 17:18+0200\n"
-"PO-Revision-Date: 2015-07-31 15:10+0000\n"
-"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/qgep-documentation/language/ro/)\n"
+"POT-Creation-Date: 2015-08-05 11:09+0200\n"
+"PO-Revision-Date: 2015-08-05 09:09+0000\n"
+"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,144 +35,159 @@ msgstr "Acesta te va ghida către instalarea componentelor şi serviciilor neces
 msgid "Database initialization"
 msgstr "Inițializare bază de date"
 
-# e6266577221f4a9b9c8371aeb86f7938
-#: ../../en/installation-guide/system/database-initialization.rst:4
-msgid "Install pgAdminIII"
-msgstr "Instalare pgAdminIII"
-
 # 88f2ef41c09946f68135c0162fff19b1
-#: ../../en/installation-guide/system/database-initialization.rst:6
-msgid ""
-"You will need a desktop to access the database server. PgAdminIII is a good "
-"tool to access the database server."
-msgstr "Vei avea nevoie de un desktop pentru a accesa serverul de baze de date. PgAdminIII este o unealtă  bună pentru a accesa serverul de baze din desktop."
+#: ../../en/installation-guide/system/database-initialization.rst:4
+msgid "You can use :ref:`pgAdmin` to access and manage the database server."
+msgstr ""
+
+# 5a72b1b12a4e4f6d8959820ad35a559e
+#: ../../en/installation-guide/system/database-initialization.rst:8
+msgid "By clicking the link you can learn how to :ref:`install pgAdmin`"
+msgstr ""
 
 # a49477f01cdd4636989f9e176170a279
-#: ../../en/installation-guide/system/database-initialization.rst:10
+#: ../../en/installation-guide/system/database-initialization.rst:11
 msgid "Process"
 msgstr "Procedură"
 
 # bf8f27764c294fdba92f22122d5317ec
-#: ../../en/installation-guide/system/database-initialization.rst:12
+#: ../../en/installation-guide/system/database-initialization.rst:13
 msgid "In pgAdminIII"
 msgstr "În pgAdminIII"
 
 # 7f7dc9cfd93b4ab7a244ab54d9c3bbec
-#: ../../en/installation-guide/system/database-initialization.rst:14
+#: ../../en/installation-guide/system/database-initialization.rst:15
 msgid "Connect to the database server"
 msgstr "Conectează-te la baza de date."
 
 # 282465352a084fa493d61447b039f86b
-#: ../../en/installation-guide/system/database-initialization.rst:16
+#: ../../en/installation-guide/system/database-initialization.rst:17
 msgid ""
-"Create a new login role (preferred name `qgep`, but you are free to choose)"
-msgstr "Creează un nou rol de login (este preferabil sa aibă numele `qgep`)"
+"Create a new group role (preferably named `qgep`, but you are free to "
+"choose)"
+msgstr ""
+
+# f4d0a16e19c04918a9cf76e7bfe1bfa8
+#: ../../en/installation-guide/system/database-initialization.rst:19
+msgid ""
+"Create a new login role (`qgepuser` for example) and make it a member of the"
+" `qgep` group"
+msgstr ""
+
+# 3198558a877d4f799529b4601051d834
+#: ../../en/installation-guide/system/database-initialization.rst:21
+msgid ""
+"You can do this graphically or by simply opening a pgAdminIII :ref:`SQL "
+"query` window and type the following:"
+msgstr ""
 
 # f8ebcfbbf47d495884364e841fd4c9f7
-#: ../../en/installation-guide/system/database-initialization.rst:18
+#: ../../en/installation-guide/system/database-initialization.rst:29
 msgid ""
-"Create a new database (preferred name `qgep`, but you are free to choose)"
-msgstr "Creează o nouă bază de date (este preferabil sa aibă numele `qgep`)"
+"Create a new database (preferably named `qgep`, but you are free to choose)"
+msgstr ""
 
 # 9f2aed28402d41189551b2a3345967db
-#: ../../en/installation-guide/system/database-initialization.rst:20
+#: ../../en/installation-guide/system/database-initialization.rst:31
 msgid "Change to this database"
 msgstr "Conectează-te la această bază de date"
 
 # 11beed166e60499eb7ec079b7a360cac
-#: ../../en/installation-guide/system/database-initialization.rst:22
+#: ../../en/installation-guide/system/database-initialization.rst:33
 msgid "Create a new schema with the name `qgep`"
 msgstr "Creează o nouă schemă cu numele `qgep`"
 
 # c3b57f18f1a9408baa3453d7ea067764
-#: ../../en/installation-guide/system/database-initialization.rst:24
-msgid "Open an SQL Window and create the extensions (if not yet done)"
-msgstr "Deschide o fereastră SQL și creează extensiile (dacă nu ai făcut-o deja)"
+#: ../../en/installation-guide/system/database-initialization.rst:35
+msgid ""
+"Open an :ref:`SQL query` Window and create the extensions (if they're not "
+"created yet)"
+msgstr ""
 
 # a3c3b864cfb04174b1ff15ea042c0f3a
-#: ../../en/installation-guide/system/database-initialization.rst:26
+#: ../../en/installation-guide/system/database-initialization.rst:37
 msgid "``CREATE EXTENSION hstore;``"
 msgstr "``CREATE EXTENSION hstore;``"
 
 # a004cc8bbda044f5832321014dd10ccb
-#: ../../en/installation-guide/system/database-initialization.rst:28
+#: ../../en/installation-guide/system/database-initialization.rst:39
 msgid "``CREATE EXTENSION postgis;``"
 msgstr "``CREATE EXTENSION postgis;``"
 
 # 9720551729fb4f4eb0ec357366e42cd1
-#: ../../en/installation-guide/system/database-initialization.rst:30
+#: ../../en/installation-guide/system/database-initialization.rst:41
 msgid "Download demo data"
 msgstr "Descarcă datele de demo"
 
 # ebb05df2a09541faab4e91400e9eaa03
-#: ../../en/installation-guide/system/database-initialization.rst:32
+#: ../../en/installation-guide/system/database-initialization.rst:43
 msgid "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
 msgstr "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
 
 # cb225cda34a746c58e7bbe49bbbf5847
-# 3dad16f0e63d4afbb44593112d5b1049
-#: ../../en/installation-guide/system/database-initialization.rst:34
-#: ../../en/installation-guide/system/database-initialization.rst:50
+# cb225cda34a746c58e7bbe49bbbf5847
+#: ../../en/installation-guide/system/database-initialization.rst:45
+#: ../../en/installation-guide/system/database-initialization.rst:61
 msgid "Right click the `qgep` schema"
 msgstr "Click dreapta pe schema `qgep`"
 
 # 23751f5e27474bd8b203ad1a42fa2b9d
-#: ../../en/installation-guide/system/database-initialization.rst:36
+#: ../../en/installation-guide/system/database-initialization.rst:47
 msgid "Click restore"
 msgstr "Click pe restore"
 
 # 54f6c578fd8446269e429a20d559d76b
-#: ../../en/installation-guide/system/database-initialization.rst:38
+#: ../../en/installation-guide/system/database-initialization.rst:49
 msgid "Load your download of qgep.backup"
 msgstr "Încarcă fișierul qgep.backup"
 
 # 885ffe2d969345189ff7ba003d9eb3ea
-#: ../../en/installation-guide/system/database-initialization.rst:40
+#: ../../en/installation-guide/system/database-initialization.rst:51
 msgid "Restore Options #2: Activate `Clean before restore`"
 msgstr "Restore Options #2: Activează `Clean before restore`"
 
 # e2cb6de3f0a447daa1420d8f170f4746
-#: ../../en/installation-guide/system/database-initialization.rst:42
+#: ../../en/installation-guide/system/database-initialization.rst:53
 msgid "Click `Restore`"
 msgstr "Click `Restore`"
 
 # dfef48c29ada4f578bbf3d667e5dc7c7
-#: ../../en/installation-guide/system/database-initialization.rst:44
+#: ../../en/installation-guide/system/database-initialization.rst:55
 msgid "Click `Cancel`"
 msgstr "Click `Cancel`"
 
 # 57f709a88c9f4c8d8994cdf7ce5bc82c
-#: ../../en/installation-guide/system/database-initialization.rst:46
+#: ../../en/installation-guide/system/database-initialization.rst:57
 msgid "Right click the database and click `Refresh`"
 msgstr "Click dreapta pe baza de date urmat de click pe `Refresh`"
 
 # 89d95b59c2084f13b09c3a8f8f4eed94
-#: ../../en/installation-guide/system/database-initialization.rst:48
+#: ../../en/installation-guide/system/database-initialization.rst:59
 msgid "Update privileges for the database"
 msgstr "Actualizează privilegiile bazei de date"
 
 # 5f760fd37d84467eb80d2ebbdcfc9210
-#: ../../en/installation-guide/system/database-initialization.rst:52
+#: ../../en/installation-guide/system/database-initialization.rst:63
 msgid "Click `Grant Wizard …`"
 msgstr "Click `Grant Wizard …`"
 
 # e4b6b2cef3cd4fedb4b46873c9435339
-#: ../../en/installation-guide/system/database-initialization.rst:54
+#: ../../en/installation-guide/system/database-initialization.rst:65
 msgid "Selection, click `Check All`"
 msgstr "Selecție, Click `Check All`"
 
 # e2881d34eb8542d39c35b53c3fa0a78b
-#: ../../en/installation-guide/system/database-initialization.rst:56
+#: ../../en/installation-guide/system/database-initialization.rst:67
 msgid "Privileges"
 msgstr "Privilegii"
 
 # 60dc28091bd54caa91f55bd8ef1f4896
-#: ../../en/installation-guide/system/database-initialization.rst:58
+#: ../../en/installation-guide/system/database-initialization.rst:69
 msgid "Group `qgep`"
 msgstr "Grupul `qgep`"
 
 # ce0c3e4f2a6a4652a5722dc163037253
-#: ../../en/installation-guide/system/database-initialization.rst:60
+#: ../../en/installation-guide/system/database-initialization.rst:71
 msgid "Choose `ALL`"
 msgstr "Alege `ALL`"
 
@@ -364,20 +379,20 @@ msgstr "Instalare plugin QGEP"
 msgid "Open QGIS"
 msgstr "Deschide QGIS"
 
-# 4f3d4c1b715946e79277df8f3a200336
+# 5071573ccf2242a18a6e077f588640b3
 #: ../../en/installation-guide/system/workstation.rst:69
-msgid "Go to Plugins"
-msgstr "Deschide la Plugins"
+msgid "Go to Plugins (position *1* in the image below)"
+msgstr ""
 
 # 1cb6f879e2ea416086f3ba3ab00289e7
 #: ../../en/installation-guide/system/workstation.rst:71
 msgid "Manage and Install Plugins"
 msgstr "Manage and Install Plugins"
 
-# 2316c35d72524c13aebbe91f0b679219
+# 658d47789aff4d908ad3b0bcd7f00736
 #: ../../en/installation-guide/system/workstation.rst:73
-msgid "Settings"
-msgstr "Setări"
+msgid "Settings (position *3*)"
+msgstr ""
 
 # 59f92a5f9cd643cb9b58cac1269b5872
 #: ../../en/installation-guide/system/workstation.rst:75
@@ -396,40 +411,55 @@ msgstr "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 
 # 5521f5871029448eb10934bfd2c86c8d
 #: ../../en/installation-guide/system/workstation.rst:81
-msgid "Enable `Show also experimental plugins`"
-msgstr "Activează `Show also experimental plugins` pentru a arăta și pluginurile experimentale."
+msgid "Enable `Show also experimental plugins` (position *2*)"
+msgstr ""
+
+# 76c44c02a53c47dea28d361ce790a883
+#: ../../en/installation-guide/system/workstation.rst:85
+msgid "**Add the plugin repo**"
+msgstr ""
+
+# 0075a3ab58bb418699df67d4a1360b79
+#: ../../en/installation-guide/system/workstation.rst:87
+msgid "Activate the plugin (see image below):"
+msgstr ""
 
 # 95d4af7c3e91411bb9593a1042c9f9e6
-#: ../../en/installation-guide/system/workstation.rst:83
+#: ../../en/installation-guide/system/workstation.rst:89
 msgid "All"
 msgstr "All - Toate"
 
 # 5d934f75ea2548c38b278142901a82cd
-#: ../../en/installation-guide/system/workstation.rst:85
+#: ../../en/installation-guide/system/workstation.rst:91
 msgid "Search `QGEP`"
 msgstr "Caută  `QGEP`"
 
 # d67227a1ee634d7796f830aef6392dcb
-#: ../../en/installation-guide/system/workstation.rst:87
+#: ../../en/installation-guide/system/workstation.rst:93
 msgid "Click the checkbox next to it"
 msgstr "Bifează căsuța de lîngă"
 
+# 3c54317b3fe9461183cd94fe79710c73
+#: ../../en/installation-guide/system/workstation.rst:97
+msgid "**Add the QGEP plugin**"
+msgstr ""
+
 # 61a380dcfe544ad59148020e222b5a38
-#: ../../en/installation-guide/system/workstation.rst:90
+#: ../../en/installation-guide/system/workstation.rst:100
 msgid "Install the demo project"
 msgstr "Instalează proiectul demo"
 
 # 1fced181b3684f1da0a3b17a07c6cad6
-#: ../../en/installation-guide/system/workstation.rst:92
+#: ../../en/installation-guide/system/workstation.rst:102
 msgid "Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
 msgstr "Descarcă http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
 
 # 1d700414ba3c4324a18330fcab8f16d6
-#: ../../en/installation-guide/system/workstation.rst:94
+#: ../../en/installation-guide/system/workstation.rst:104
 msgid "Extract the file"
 msgstr "Extrage fișierul"
 
 # 63c8a89b9c544a689f74b08b9342ff17
-#: ../../en/installation-guide/system/workstation.rst:96
+#: ../../en/installation-guide/system/workstation.rst:106
 msgid "Open `qgep_en.qgs` with QGIS"
 msgstr "Deschide `qgep_en.qgs` cu QGIS"

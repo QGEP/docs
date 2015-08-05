@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Matthias Kuhn
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-05 11:09+0200\n"
+"PO-Revision-Date: 2015-08-05 09:09+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+# 0abb76ae224846af84ce781b53211c81
+#: ../../en/pgadmin/index.rst:4
+msgid "pgAdmin"
+msgstr ""
+
+# 637c193a9b2f402aa71a2326887d2e45
+#: ../../en/pgadmin/index.rst:6
+msgid ""
+"PgAdminIII is a Desktop tool that permits to access and manage the database "
+"server. This chapter represents a guide on how to do basic PostgreSQL "
+"management using pgAdmin."
+msgstr ""
+
+# ae6d925396b54dde9b15d37cb35f6ccb
+#: ../../en/pgadmin/install.rst:4
+msgid "Install pgAdmin"
+msgstr ""
+
+# f14d05293228407c954c8cd5a7bf4a92
+#: ../../en/pgadmin/install.rst:7
+msgid "Windows"
+msgstr ""
+
+# 40c050b689034a69aa7211e07ab0080a
+#: ../../en/pgadmin/install.rst:9
+msgid ""
+"pgAdmin should be automatically installed if you used the EnterpriseDB "
+"installer."
+msgstr ""
+
+# 5e8de1ac456b4f918e17c3f7f392330f
+#: ../../en/pgadmin/install.rst:12
+msgid "Linux"
+msgstr ""
+
+# c14d13a4bd8949dd9a0d3c0420e2589d
+#: ../../en/pgadmin/install.rst:15
+msgid "Debian based distros"
+msgstr ""
+
+# e33a6aa5dc354d0083dd487b11f47f42
+#: ../../en/pgadmin/install.rst:17
+msgid ""
+"Depending if you're root or not you can install pgAdmin by running one of "
+"the following commands:"
+msgstr ""
+
+# df4272b92f3844b68f3e7c6e308a4701
+#: ../../en/pgadmin/install.rst:19
+msgid "``apt-get install pgadmin3``"
+msgstr ""
+
+# c7600c4647ad457f9961aff53141b9ac
+#: ../../en/pgadmin/install.rst:20
+msgid "``sudo apt-get install pgadmin3``"
+msgstr ""
+
+# 826e52e9666344c8b33048ba7b948edd
+#: ../../en/pgadmin/install.rst:23
+msgid "Fedora based distros"
+msgstr ""
+
+# 99b50339a8124251b0b7ebb9e3597277
+#: ../../en/pgadmin/install.rst:25
+msgid "``yum install pgadmin3``"
+msgstr ""
+
+# 815f16c9ddeb4731a7c7ee69db720cdb
+#: ../../en/pgadmin/install.rst:28
+msgid "Suse based distros"
+msgstr ""
+
+# 5c2489e1d5c74367acc1d60bbe2cefcd
+#: ../../en/pgadmin/install.rst:30
+msgid "``zypper install pgadmin3``"
+msgstr ""
+
+# 5535051ea6df4dc097b4b7a3a0f550e9
+#: ../../en/pgadmin/install.rst:34
+msgid ""
+"All the commands presented above should work when done as the *root* user If"
+" you're not root, you can add ``sudo `` in front of each command in order to"
+" get superuser privileges."
+msgstr ""
+
+# 964c3d64de5c4daca17092200e4b5a05
+#: ../../en/pgadmin/usage.rst:2
+msgid "Using Pgadmin"
+msgstr ""
+
+# a6159de8d3454d25a29cbc3542364b4b
+#: ../../en/pgadmin/usage.rst:7
+msgid "SQL query"
+msgstr ""
+
+# cfe4d55e6330442e9515378e1c9187f2
+#: ../../en/pgadmin/usage.rst:11
+msgid "**Running SQL commands in PgAdminIII**"
+msgstr ""
+
+# 2a87c7b475164ca7a26a2c118c3e6fb8
+#: ../../en/pgadmin/usage.rst:15
+msgid ""
+"Clicking the highlighted icon at location *1* opens the SQL Window. The SQL "
+"icon is active only when you're connected to a database."
+msgstr ""
+
+# 8986b1329d6e4e8b8663db5e4ea939a2
+#: ../../en/pgadmin/usage.rst:17
+msgid "Clicking the icon at *2* runs the written SQL commands."
+msgstr ""
