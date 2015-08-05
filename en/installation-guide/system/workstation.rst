@@ -66,11 +66,11 @@ Install QGEP plugin
 
 * Open QGIS
 
-* Go to Plugins
+* Go to Plugins (position *1* in the image below)
 
   * Manage and Install Plugins
 
-  * Settings
+  * Settings (position *3*)
 
     * Add...
 
@@ -78,13 +78,23 @@ Install QGEP plugin
 
       * URL: ``http://qgis.vitu.ch/plugins/plugins.xml``
 
-    * Enable `Show also experimental plugins`
+    * Enable `Show also experimental plugins` (position *2*)
+
+.. figure:: images/001_addplugin.jpeg
+
+   **Add the plugin repo**
+
+Activate the plugin (see image below):
 
   * All
 
     * Search `QGEP`
 
     * Click the checkbox next to it
+
+.. figure:: images/001_searchplugin.jpeg
+
+   **Add the QGEP plugin**
 
 Install the demo project
 ------------------------
