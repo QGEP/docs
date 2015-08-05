@@ -41,13 +41,13 @@ You may have to adapt the variables for your setup.
     host=localhost
     port=5432
     dbname=qgep
-    user=qgep
+    user=qgepuser
 
 To save the password as well on the system you may use the file `pgpass <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_.
 
 .. code:: ini
 
-    localhost:5432:*:qgep:password
+    localhost:5432:*:qgepuser:password
 
 .. note:: If you don't have the database on your local machine replace any
    occurence of ``localhost`` with the network address of your database
