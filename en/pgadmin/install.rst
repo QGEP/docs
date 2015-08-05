@@ -28,3 +28,10 @@ Suse based distros
 ^^^^^^^^^^^^^^^^^^
 
 ``zypper install pgadmin3``
+
+.. note::
+
+ All the commands presented above should work when done as the *root* user
+ If you're not root, you can add ``sudo `` in front of each command
+ in order to get superuser privileges.
+ 
