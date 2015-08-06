@@ -134,10 +134,10 @@
             
   <div class="section" id="database-initialization">
 <h1>Inițializare bază de date<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h1>
-<p>You can use <a class="reference internal" href="../../pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> to access and manage the database server.</p>
+<p>Se poate folosi <a class="reference internal" href="../../pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> pentru accesarea și managementul bazei de date.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../../pgadmin/install.html#install-pgadmin"><span>Install pgAdmin</span></a></p>
+<p class="last">Făcînd click pe link puteți parcurge ghidul de <a class="reference internal" href="../../pgadmin/install.html#install-pgadmin"><span>Instalare pgAdmin</span></a></p>
 </div>
 <div class="section" id="process">
 <h2>Procedură<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
@@ -145,24 +145,28 @@
 <ul class="simple">
 <li><p class="first">Conectează-te la baza de date.</p>
 </li>
-<li>Create a new group role (preferably named <cite>qgep</cite>, but you are free to choose)</li>
-<li>Create a new login role (<cite>qgepuser</cite> for example) and make it a member of the <cite>qgep</cite> group</li>
+<li><p class="first">Creează un nou rol de grup (de preferință numit <cite>qgep</cite>)</p>
+</li>
+<li><p class="first">Creează un nou rol de login, (de exemplu <cite>qgepuser</cite>), care să fie și membru al grupului <cite>qgep</cite></p>
+</li>
 </ul>
-<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> window and type the following:</p>
+<p>Aceasta sa poate face din GUI - grafic, sau prin simpla deschidere a unei ferestre <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>Interogare SQL</span></a> de pgAdmin și prin introducerea comenzilor:</p>
 <div class="highlight-python"><div class="highlight"><pre>CREATE GROUP qgep;
 CREATE ROLE qgepuser LOGIN;
 GRANT qgep TO qgepuser;
 </pre></div>
 </div>
 <ul class="simple">
-<li>Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
+<li><p class="first">Creează o nouă baza de date (de preferință numită <cite>qgep</cite>)</p>
+<ul>
 <li><p class="first">Conectează-te la această bază de date</p>
 </li>
 </ul>
 </li>
 <li><p class="first">Creează o nouă schemă cu numele <cite>qgep</cite></p>
 </li>
-<li>Open an <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
+<li><p class="first">Deschide o fereastră de <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>Interogare SQL</span></a> si creează extensiile (dacă nu au fost creeate anterior)</p>
+<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
