@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 11:12+0200\n"
-"PO-Revision-Date: 2015-08-05 09:12+0000\n"
+"POT-Creation-Date: 2015-08-06 16:22+0200\n"
+"PO-Revision-Date: 2015-08-06 14:22+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -54,52 +54,46 @@ msgstr ""
 
 # c14d13a4bd8949dd9a0d3c0420e2589d
 #: ../../en/pgadmin/install.rst:15
-msgid "Debian based distros"
+msgid "Debian/Ubuntu based distros"
 msgstr ""
 
 # e33a6aa5dc354d0083dd487b11f47f42
 #: ../../en/pgadmin/install.rst:17
-msgid ""
-"Depending if you're root or not you can install pgAdmin by running one of "
-"the following commands:"
-msgstr ""
-
-# df4272b92f3844b68f3e7c6e308a4701
-#: ../../en/pgadmin/install.rst:19
-msgid "``apt-get install pgadmin3``"
+msgid "You can install pgAdmin by running the following command:"
 msgstr ""
 
 # c7600c4647ad457f9961aff53141b9ac
-#: ../../en/pgadmin/install.rst:20
+#: ../../en/pgadmin/install.rst:19
 msgid "``sudo apt-get install pgadmin3``"
 msgstr ""
 
 # 826e52e9666344c8b33048ba7b948edd
-#: ../../en/pgadmin/install.rst:23
+#: ../../en/pgadmin/install.rst:22
 msgid "Fedora based distros"
 msgstr ""
 
 # 99b50339a8124251b0b7ebb9e3597277
-#: ../../en/pgadmin/install.rst:25
-msgid "``yum install pgadmin3``"
+#: ../../en/pgadmin/install.rst:24
+msgid "``sudo yum install pgadmin3``"
 msgstr ""
 
 # 815f16c9ddeb4731a7c7ee69db720cdb
-#: ../../en/pgadmin/install.rst:28
+#: ../../en/pgadmin/install.rst:27
 msgid "Suse based distros"
 msgstr ""
 
-# 5c2489e1d5c74367acc1d60bbe2cefcd
-#: ../../en/pgadmin/install.rst:30
-msgid "``zypper install pgadmin3``"
+# 8a0b84d05aee4a168d1d06fb774a8dec
+#: ../../en/pgadmin/install.rst:29
+msgid "``sudo zypper install pgadmin3``"
 msgstr ""
 
-# 5535051ea6df4dc097b4b7a3a0f550e9
-#: ../../en/pgadmin/install.rst:34
+# 469e18a4c6ae4438896495ed4fd18a86
+#: ../../en/pgadmin/install.rst:33
 msgid ""
-"All the commands presented above should work when done as the *root* user If"
-" you're not root, you can add ``sudo`` in front of each command in order to "
-"get superuser privileges."
+"All the commands presented above assume that you are logged in as a user "
+"with sudo (admin) privileges. On certain systems it may be required to use "
+"the command ``su`` to become the *root* user and then issue the above "
+"command without the ``sudo`` prefix."
 msgstr ""
 
 # 964c3d64de5c4daca17092200e4b5a05
