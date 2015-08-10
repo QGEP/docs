@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
+# Matthias Kuhn <matthias@opengis.ch>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 16:22+0200\n"
-"PO-Revision-Date: 2015-08-06 14:22+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-10 11:42+0200\n"
+"PO-Revision-Date: 2015-08-10 09:41+0000\n"
+"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 # 0abb76ae224846af84ce781b53211c81
 #: ../../en/pgadmin/index.rst:4
 msgid "pgAdmin"
-msgstr ""
+msgstr "pgAdmin"
 
 # 637c193a9b2f402aa71a2326887d2e45
 #: ../../en/pgadmin/index.rst:6
@@ -28,17 +29,17 @@ msgid ""
 "PgAdminIII is a Desktop tool that permits to access and manage the database "
 "server. This chapter represents a guide on how to do basic PostgreSQL "
 "management using pgAdmin."
-msgstr ""
+msgstr "PgAdminIII ist eine Desktopapplikation die es erlaubt auf den Datenbankserver zuzugreifen. Dieses Kapitel beinhaltet einen Leitfaden zum Thema PostgreSQL Datenmanagement mit pgAdmin."
 
 # ae6d925396b54dde9b15d37cb35f6ccb
 #: ../../en/pgadmin/install.rst:4
 msgid "Install pgAdmin"
-msgstr ""
+msgstr "Installation von pgAdmin"
 
 # f14d05293228407c954c8cd5a7bf4a92
 #: ../../en/pgadmin/install.rst:7
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 # 40c050b689034a69aa7211e07ab0080a
 #: ../../en/pgadmin/install.rst:9
