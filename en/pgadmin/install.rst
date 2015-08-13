@@ -12,7 +12,7 @@ Linux
 -----
 
 Debian/Ubuntu based distros
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can install pgAdmin by running the following command:
 
