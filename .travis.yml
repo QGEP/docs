@@ -12,11 +12,8 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - ./scripts/ci/before_script.sh
-  - git config --global user.email "qgep@opengis.ch"
-  - git config --global user.name "QGEP"
-  - git config --global push.default simple
+  - ./scripts/ci/setup_git.sh
 
 script:
   - ./scripts/build-docs.sh
-  - sh -c 'if test "$TRAVIS_SECURE_ENV_VARS" = "true" -a "$TRAVIS_BRANCH" = "master"; then echo "publish website"; ./scripts/deploy-docs.sh build /tmp; fi'
+  - ./scripts/ci/deploy-docs.sh
