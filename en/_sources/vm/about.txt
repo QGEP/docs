@@ -11,12 +11,11 @@ Installed software:
 Settings that are changed from a default software install:
 
 - ``pg_hba.conf`` has **trust** for local connections
-- QGIS is setup with `multithread rendering on <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_
-
+- QGIS is setup with `multithreaded rendering enabled <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_
 
 
 .. note::
- 
+
  The users ``web`` and ``root`` have the password ``qgis``
 
 .. note::
