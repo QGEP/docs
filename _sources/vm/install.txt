@@ -5,7 +5,9 @@ Download
 ^^^^^^^^
 Download the vm from `here <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_
 
-The size of the VM is around 2GB compressed and around 7GB uncompressed.
+.. note::
+
+  The size of the VM is around 2GB compressed and around 7GB uncompressed.
 
 Extract
 ^^^^^^^^
