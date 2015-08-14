@@ -138,9 +138,8 @@
             
   <div class="section" id="setup-database-server">
 <h1>Datenbankserver aufsetzen<a class="headerlink" href="#setup-database-server" title="Link zu dieser Überschrift">¶</a></h1>
-<p>If you expect to access the data from several different workstations, you can
-install the database on a network accessible server. If it is just a single
-desktop you are working on, this can be installed on the same machine.</p>
+<p>Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden.
+Dies im Gegensatz zu einer lokalen Einplatz-Installation</p>
 <div class="section" id="required-software">
 <h2>Benötigte Software<a class="headerlink" href="#required-software" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="server-installation">
@@ -157,11 +156,8 @@ desktop you are working on, this can be installed on the same machine.</p>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p>In a single desktop environment (no network database server) you can setup
-your database to trust local connections.</p>
-<p>This way, the database won&#8217;t ask for a password if you&#8217;re connecting from your
-local workstation while no password is written  anywhere. You even can do
-with no database password at all.</p>
+<p>Bei einer Einplatz-Installation können lokale Verbindungen verwendet werden.</p>
+<p>In diesem Fall wird überhaupt kein Passwort benötigt.</p>
 <p class="last">This can be done by editing the database access configuration file
 <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
 and set the auth-options from <code class="docutils literal"><span class="pre">md5</span></code> to <code class="docutils literal"><span class="pre">trust</span></code>. A database service reload

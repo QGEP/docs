@@ -135,33 +135,39 @@
             
   <div class="section" id="database-initialization">
 <h1>Initialisierung der Datenbank<a class="headerlink" href="#database-initialization" title="Link zu dieser Überschrift">¶</a></h1>
-<p>You can use <a class="reference internal" href="../../pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> to access and manage the database server.</p>
+<p>Für den die Konfiguration der Datenbank können sie pgAdmin verwenden.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../../pgadmin/install.html#install-pgadmin"><span>Installation von pgAdmin</span></a></p>
+<p class="last">Mit diesem Link können sie pgAdmin installieren</p>
 </div>
 <div class="section" id="process">
 <h2>Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In pgAdminIII</p>
 <ul class="simple">
-<li><p class="first">Verbinden Sie sich zum Datenkbankserver</p>
+<li><p class="first">Verbinden Sie sich mit dem Datenkbankserver</p>
 </li>
-<li>Create a new group role (preferably named <cite>qgep</cite>, but you are free to choose)</li>
-<li>Create a new login role (<cite>qgepuser</cite> for example) and make it a member of the <cite>qgep</cite> group</li>
+<li><p class="first">Erzeugen sie eine neue Gruppe von Rollen (Group Roles) mit Name &#8216;qgep&#8217;; sie können aber auch einen anderen Namen wählen</p>
+</li>
+<li><p class="first">Erzeugen sie eine neue Login Rolle (Login Roles) mit Name &#8216;qgepuser&#8217;; sie können aber auch einen anderen Namen wählen.</p>
+</li>
 </ul>
-<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> window and type the following:</p>
+<p>Sie können dies grafisch (?) tun oder im SQL-Fenster von pgAdminIII</p>
 <div class="highlight-python"><div class="highlight"><pre>CREATE GROUP qgep;
 CREATE ROLE qgepuser LOGIN;
 GRANT qgep TO qgepuser;
 </pre></div>
 </div>
 <ul class="simple">
-<li>Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
-<li>Change to this database</li>
+<li><p class="first">Erzeugen sie eine neue Datenbank mit Name &#8216;qgep&#8217;; sie können aber auch einen anderen Namen wählen.</p>
+<ul>
+<li><p class="first">Wechseln Sie in diese Datenbank</p>
+</li>
 </ul>
 </li>
-<li>Create a new schema with the name <cite>qgep</cite></li>
-<li>Open an <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
+<li><p class="first">Erzeugen sie ein neues Schema mit Name &#8216;qgep&#8217;.</p>
+</li>
+<li><p class="first">Oeffnen sie ein neues SQL-Fenster und erzeugen die zwei Extensions (wenn sie nicht schon existieren):</p>
+<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
@@ -173,22 +179,33 @@ GRANT qgep TO qgepuser;
 </li>
 <li><p class="first">Auf das Schema <cite>qgep</cite> rechtsklicken.</p>
 <ul>
-<li>Click restore</li>
-<li>Load your download of qgep.backup</li>
-<li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
-<li>Click <cite>Restore</cite></li>
-<li>Click <cite>Cancel</cite></li>
+<li><p class="first">Restore ... wählen</p>
+</li>
+<li><p class="first">Laden sie ihren Download von qgep.backup</p>
+</li>
+<li><p class="first">Restore Options #2: aktivieren sie <cite>Clean before restore</cite></p>
+</li>
+<li><p class="first">&#8216;Restore&#8217; wählen</p>
+</li>
+<li><p class="first">&#8216;Cancel&#8217; wählen</p>
+</li>
 </ul>
 </li>
-<li>Right click the database and click <cite>Refresh</cite></li>
+<li><p class="first">Recktsklick auf die Datenbank und &#8216;Refresh&#8217; wählen</p>
+</li>
 <li>Update privileges for the database<ul>
 <li><p class="first">Auf das Schema <cite>qgep</cite> rechtsklicken.</p>
 </li>
-<li>Click <cite>Grant Wizard …</cite></li>
-<li>Selection, click <cite>Check All</cite></li>
-<li>Privileges<ul>
-<li>Group <cite>qgep</cite></li>
-<li>Choose <cite>ALL</cite></li>
+<li><p class="first">Recktsklick auf das das Schema &#8216;qgep&#8217;; &#8216;Grant Wizard ...&#8217; wählen</p>
+</li>
+<li><p class="first">Menü &#8216;Selection&#8217;; &#8216;Check all&#8217; wählen</p>
+</li>
+<li><p class="first">Menü &#8216;Privileges&#8217;</p>
+<ul>
+<li><p class="first">Group &#8216;qgep&#8217; wählen</p>
+</li>
+<li><p class="first">&#8216;ALL&#8217; aktivieren</p>
+</li>
 </ul>
 </li>
 </ul>
