@@ -16,4 +16,6 @@ before_script:
 
 script:
   - ./scripts/build-docs.sh
+
+after_success:
   - ./scripts/ci/deploy-docs.sh
