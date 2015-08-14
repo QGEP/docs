@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 10:18+0200\n"
-"PO-Revision-Date: 2015-07-30 16:51+0000\n"
-"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/qgep-documentation/language/ro/)\n"
+"POT-Creation-Date: 2015-08-14 21:13+0200\n"
+"PO-Revision-Date: 2015-08-14 19:14+0000\n"
+"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,22 +31,28 @@ msgid ""
 "developed closely to the QGIS application."
 msgstr "QGEP este un modul de management pentru sistemul de canalizare bazat pe modelul de SIA 405 şi este dezvoltat pe platforma QGIS."
 
+# d54db3ab3b16467c931982d707375114
+#: ../../en/index.rst:7
+msgid ""
+"Any suggestions or recommendations regarding the docs or the VM are welcome."
+msgstr ""
+
 # 1db8d4075c4243e0a662bbf674a7c232
-#: ../../en/index.rst:8
+#: ../../en/index.rst:10
 msgid "Contents:"
 msgstr "Conţinut"
 
 # 51b5d7c53bd24624a450690bf2a6ab99
-#: ../../en/index.rst:17
+#: ../../en/index.rst:20
 msgid "Indices and tables"
 msgstr "Indecşi şi tabele"
 
-# 312430a41797459099d5045c462da4c0
-#: ../../en/index.rst:19
+# d4092778776049f98ab78f2de4905d68
+#: ../../en/index.rst:22
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-# a53f37d2554c4885b867f0dc21c3dcbb
-#: ../../en/index.rst:20
+# a1c64000c8304fa4b97fd64bcad53b29
+#: ../../en/index.rst:23
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

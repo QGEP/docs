@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Matthias Kuhn
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-14 21:13+0200\n"
+"PO-Revision-Date: 2015-08-14 19:14+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# 27cc15a67c484977b591b0e2a46ca8c5
+#: ../../en/vm/about.rst:2
+msgid "About"
+msgstr ""
+
+# 9ec4b72482bc4d6892f9982996d37da0
+#: ../../en/vm/about.rst:4
+msgid "The VM is based on Debian Jessie with Cinnamon Desktop."
+msgstr ""
+
+# d8e83dfeafa740bf9bc9c7a65b6efa15
+#: ../../en/vm/about.rst:6
+msgid "Installed software:"
+msgstr ""
+
+# 060795f871eb454db6f549020dd3844c
+#: ../../en/vm/about.rst:8
+msgid "PostgreSQL 9.4.4 with Postgis 2.1.7"
+msgstr ""
+
+# 8ecdb445fbfe4819b261bb1d4109836e
+#: ../../en/vm/about.rst:9
+msgid "QGIS Master 2.11"
+msgstr ""
+
+# 78d86811b42a4491bc3bf115ea525913
+#: ../../en/vm/about.rst:11
+msgid "Settings that are changed from a default software install:"
+msgstr ""
+
+# b20223f875de459ba1c90706ea75bfc1
+#: ../../en/vm/about.rst:13
+msgid "``pg_hba.conf`` has **trust** for local connections"
+msgstr ""
+
+# c4d9fac8d5574d98bb221063c0c47654
+#: ../../en/vm/about.rst:14
+msgid ""
+"QGIS is setup with `multithread rendering on "
+"<http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
+msgstr ""
+
+# 144bd56a59a24b33a788341fb9f31551
+#: ../../en/vm/about.rst:20
+msgid "The users ``web`` and ``root`` have the password ``qgis``"
+msgstr ""
+
+# b6455dc064ad4b2e82351491af6e28d9
+#: ../../en/vm/about.rst:24
+msgid "If you decide to use the VM in production, it is recommended to:"
+msgstr ""
+
+# dc5fbbeb2b414a75af66590f24d6f928
+#: ../../en/vm/about.rst:26
+msgid "change the passwords"
+msgstr ""
+
+# 7fdf584f4cb148a8bbbcdd0b05597791
+#: ../../en/vm/about.rst:27
+msgid "regenerate the ssh keys by running in a terminal"
+msgstr ""
+
+# 6b80c0af59d64899923301c388a2f28d
+#: ../../en/vm/about.rst:28
+msgid ""
+"``sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
+msgstr ""
+
+# bc6dea6dfe4c4776905b1cdb58b3160f
+#: ../../en/vm/index.rst:4
+msgid "VM"
+msgstr ""
+
+# 55bb6544ace54d6695d15f2fbbc983e8
+#: ../../en/vm/index.rst:6
+msgid ""
+"This represents a guide on how to download and install a virtual machine "
+"(VM) that has a working QGEP installation."
+msgstr ""
+
+# 05bed8121033444f9d39e53de9e21ac8
+#: ../../en/vm/install.rst:2
+msgid "Install"
+msgstr ""
+
+# 82f6d4f8500645b6abfa9adf5bb39a46
+#: ../../en/vm/install.rst:5
+msgid "Download"
+msgstr ""
+
+# b3016ca8777846f5b0893537c29595d7
+#: ../../en/vm/install.rst:6
+msgid ""
+"Download the vm from `here <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_"
+msgstr ""
+
+# 1015adbe4ab842a086c54570cfb1dbb8
+#: ../../en/vm/install.rst:8
+msgid ""
+"The size of the VM is around 2GB compressed and around 7GB uncompressed."
+msgstr ""
+
+# 454b538feda5405a837df826fcf3ed41
+#: ../../en/vm/install.rst:11
+msgid "Extract"
+msgstr ""
+
+# 8096929dcded4c7a843f7d692eb97d60
+#: ../../en/vm/install.rst:12
+msgid "The virtual disk is archived using XZ compression."
+msgstr ""
+
+# b167fce21ad14a90a3a738b669469e92
+#: ../../en/vm/install.rst:14
+msgid "To extract the archive:"
+msgstr ""
+
+# ea672f8d840f4e4c96b34b6a210f44f1
+#: ../../en/vm/install.rst:16
+msgid ""
+"**Windows:** you can use `7-Zip <http://7-zip.org/>`_ to extract the "
+"archive."
+msgstr ""
+
+# 49ef180f50c9421ab14d4b7eb096457e
+#: ../../en/vm/install.rst:17
+msgid ""
+"**Linux:** cd to the download directory and run ``xz -d "
+"qgisplatform.vdi.xz``"
+msgstr ""
+
+# caa168b196214efca19d56ca3dc4ef27
+#: ../../en/vm/install.rst:19
+msgid "You can run the VM as you would do with any VirtualBox VM."
+msgstr ""
+
+# cc78388590434acda365ca48d0f66172
+#: ../../en/vm/install.rst:21
+msgid ""
+"As the VM has Linux under it it is possible to also put the app on a USB "
+"stick (minimum 8GB) or a hard disk."
+msgstr ""

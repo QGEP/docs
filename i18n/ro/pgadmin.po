@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 16:22+0200\n"
-"PO-Revision-Date: 2015-08-06 14:22+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-14 21:13+0200\n"
+"PO-Revision-Date: 2015-08-11 06:50+0000\n"
+"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,12 +56,12 @@ msgstr "Linux"
 # c14d13a4bd8949dd9a0d3c0420e2589d
 #: ../../en/pgadmin/install.rst:15
 msgid "Debian/Ubuntu based distros"
-msgstr ""
+msgstr "Distro-uri bazate pe Debian/Ubuntu"
 
 # e33a6aa5dc354d0083dd487b11f47f42
 #: ../../en/pgadmin/install.rst:17
 msgid "You can install pgAdmin by running the following command:"
-msgstr ""
+msgstr "pgAdmin se poate instala folosind următoarea comandă:"
 
 # c7600c4647ad457f9961aff53141b9ac
 #: ../../en/pgadmin/install.rst:19
@@ -76,7 +76,7 @@ msgstr "Distro-uri bazate pe Fedora"
 # 99b50339a8124251b0b7ebb9e3597277
 #: ../../en/pgadmin/install.rst:24
 msgid "``sudo yum install pgadmin3``"
-msgstr ""
+msgstr "``sudo yum install pgadmin3``"
 
 # 815f16c9ddeb4731a7c7ee69db720cdb
 #: ../../en/pgadmin/install.rst:27
@@ -86,7 +86,7 @@ msgstr "Distro-uri bazate pe Suse"
 # 8a0b84d05aee4a168d1d06fb774a8dec
 #: ../../en/pgadmin/install.rst:29
 msgid "``sudo zypper install pgadmin3``"
-msgstr ""
+msgstr "``sudo zypper install pgadmin3``"
 
 # 469e18a4c6ae4438896495ed4fd18a86
 #: ../../en/pgadmin/install.rst:33
@@ -95,7 +95,7 @@ msgid ""
 "with sudo (admin) privileges. On certain systems it may be required to use "
 "the command ``su`` to become the *root* user and then issue the above "
 "command without the ``sudo`` prefix."
-msgstr ""
+msgstr "Toate comenzile prezentate mai sus presupun logarea în sistem ca user cu privilegii de sudo(admin). În funcție de configurarea sistemului, poate fi necesară logarea ca user *root* prin ``su`` și introducerea comenzilor prezentate mai sus fără prefixul sudo."
 
 # 964c3d64de5c4daca17092200e4b5a05
 #: ../../en/pgadmin/usage.rst:2

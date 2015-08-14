@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
+# Konradin Fischer <fischer8712@gmail.com>, 2015
 # Matthias Kuhn <matthias@opengis.ch>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 11:09+0200\n"
-"PO-Revision-Date: 2015-08-05 09:09+0000\n"
+"POT-Creation-Date: 2015-08-14 21:13+0200\n"
+"PO-Revision-Date: 2015-08-14 19:14+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -28,6 +29,13 @@ msgstr "Leitfaden QGEP Installation"
 msgid ""
 "This will guide you through the setup of required applications and services "
 "to get your system ready for running QGEP."
+msgstr "Dieser Leitfaden beschreibt die Installation und Vorbereitung ihres Systems um QGEP anzuwenden."
+
+# 656f9bb1ab854294a9a9f2d8a93e6442
+#: ../../en/installation-guide/index.rst:10
+msgid ""
+"You also have the option of downloading a :ref:`VM` that has a working QGEP "
+"demo."
 msgstr ""
 
 # 17fc0f81eb3d4bd3b9e9a0cbb4bfa59b
@@ -38,12 +46,12 @@ msgstr "Initialisierung der Datenbank"
 # 88f2ef41c09946f68135c0162fff19b1
 #: ../../en/installation-guide/system/database-initialization.rst:4
 msgid "You can use :ref:`pgAdmin` to access and manage the database server."
-msgstr ""
+msgstr "Für den die Konfiguration der Datenbank können sie pgAdmin verwenden."
 
 # 5a72b1b12a4e4f6d8959820ad35a559e
 #: ../../en/installation-guide/system/database-initialization.rst:8
 msgid "By clicking the link you can learn how to :ref:`install pgAdmin`"
-msgstr ""
+msgstr "Mit diesem Link können sie pgAdmin installieren"
 
 # a49477f01cdd4636989f9e176170a279
 #: ../../en/installation-guide/system/database-initialization.rst:11
@@ -58,51 +66,51 @@ msgstr "In pgAdminIII"
 # 7f7dc9cfd93b4ab7a244ab54d9c3bbec
 #: ../../en/installation-guide/system/database-initialization.rst:15
 msgid "Connect to the database server"
-msgstr "Verbinden Sie sich zum Datenkbankserver"
+msgstr "Verbinden Sie sich mit dem Datenkbankserver"
 
 # 282465352a084fa493d61447b039f86b
 #: ../../en/installation-guide/system/database-initialization.rst:17
 msgid ""
 "Create a new group role (preferably named `qgep`, but you are free to "
 "choose)"
-msgstr ""
+msgstr "Erzeugen sie eine neue Gruppe von Rollen (Group Roles) mit Name 'qgep'; sie können aber auch einen anderen Namen wählen"
 
 # f4d0a16e19c04918a9cf76e7bfe1bfa8
 #: ../../en/installation-guide/system/database-initialization.rst:19
 msgid ""
 "Create a new login role (`qgepuser` for example) and make it a member of the"
 " `qgep` group"
-msgstr ""
+msgstr "Erzeugen sie eine neue Login Rolle (Login Roles) mit Name 'qgepuser'; sie können aber auch einen anderen Namen wählen."
 
 # 3198558a877d4f799529b4601051d834
 #: ../../en/installation-guide/system/database-initialization.rst:21
 msgid ""
 "You can do this graphically or by simply opening a pgAdminIII :ref:`SQL "
 "query` window and type the following:"
-msgstr ""
+msgstr "Sie können dies grafisch (?) tun oder im SQL-Fenster von pgAdminIII"
 
 # f8ebcfbbf47d495884364e841fd4c9f7
 #: ../../en/installation-guide/system/database-initialization.rst:29
 msgid ""
 "Create a new database (preferably named `qgep`, but you are free to choose)"
-msgstr ""
+msgstr "Erzeugen sie eine neue Datenbank mit Name 'qgep'; sie können aber auch einen anderen Namen wählen."
 
 # 9f2aed28402d41189551b2a3345967db
 #: ../../en/installation-guide/system/database-initialization.rst:31
 msgid "Change to this database"
-msgstr ""
+msgstr "Wechseln Sie in diese Datenbank"
 
 # 11beed166e60499eb7ec079b7a360cac
 #: ../../en/installation-guide/system/database-initialization.rst:33
 msgid "Create a new schema with the name `qgep`"
-msgstr ""
+msgstr "Erzeugen sie ein neues Schema mit Name 'qgep'."
 
 # c3b57f18f1a9408baa3453d7ea067764
 #: ../../en/installation-guide/system/database-initialization.rst:35
 msgid ""
 "Open an :ref:`SQL query` Window and create the extensions (if they're not "
 "created yet)"
-msgstr ""
+msgstr "Oeffnen sie ein neues SQL-Fenster und erzeugen die zwei Extensions (wenn sie nicht schon existieren):"
 
 # a3c3b864cfb04174b1ff15ea042c0f3a
 #: ../../en/installation-guide/system/database-initialization.rst:37
@@ -134,32 +142,32 @@ msgstr "Auf das Schema `qgep` rechtsklicken."
 # 23751f5e27474bd8b203ad1a42fa2b9d
 #: ../../en/installation-guide/system/database-initialization.rst:47
 msgid "Click restore"
-msgstr ""
+msgstr "Restore ... wählen"
 
 # 54f6c578fd8446269e429a20d559d76b
 #: ../../en/installation-guide/system/database-initialization.rst:49
 msgid "Load your download of qgep.backup"
-msgstr ""
+msgstr "Laden sie ihren Download von qgep.backup"
 
 # 885ffe2d969345189ff7ba003d9eb3ea
 #: ../../en/installation-guide/system/database-initialization.rst:51
 msgid "Restore Options #2: Activate `Clean before restore`"
-msgstr ""
+msgstr "Restore Options #2: aktivieren sie `Clean before restore`"
 
 # e2cb6de3f0a447daa1420d8f170f4746
 #: ../../en/installation-guide/system/database-initialization.rst:53
 msgid "Click `Restore`"
-msgstr ""
+msgstr "'Restore' wählen"
 
 # dfef48c29ada4f578bbf3d667e5dc7c7
 #: ../../en/installation-guide/system/database-initialization.rst:55
 msgid "Click `Cancel`"
-msgstr ""
+msgstr "'Cancel' wählen"
 
 # 57f709a88c9f4c8d8994cdf7ce5bc82c
 #: ../../en/installation-guide/system/database-initialization.rst:57
 msgid "Right click the database and click `Refresh`"
-msgstr ""
+msgstr "Recktsklick auf die Datenbank und 'Refresh' wählen"
 
 # 89d95b59c2084f13b09c3a8f8f4eed94
 #: ../../en/installation-guide/system/database-initialization.rst:59
@@ -169,27 +177,27 @@ msgstr ""
 # 5f760fd37d84467eb80d2ebbdcfc9210
 #: ../../en/installation-guide/system/database-initialization.rst:63
 msgid "Click `Grant Wizard …`"
-msgstr ""
+msgstr "Recktsklick auf das das Schema 'qgep'; 'Grant Wizard ...' wählen"
 
 # e4b6b2cef3cd4fedb4b46873c9435339
 #: ../../en/installation-guide/system/database-initialization.rst:65
 msgid "Selection, click `Check All`"
-msgstr ""
+msgstr "Menü 'Selection'; 'Check all' wählen"
 
 # e2881d34eb8542d39c35b53c3fa0a78b
 #: ../../en/installation-guide/system/database-initialization.rst:67
 msgid "Privileges"
-msgstr ""
+msgstr "Menü 'Privileges'"
 
 # 60dc28091bd54caa91f55bd8ef1f4896
 #: ../../en/installation-guide/system/database-initialization.rst:69
 msgid "Group `qgep`"
-msgstr ""
+msgstr "Group 'qgep' wählen"
 
 # ce0c3e4f2a6a4652a5722dc163037253
 #: ../../en/installation-guide/system/database-initialization.rst:71
 msgid "Choose `ALL`"
-msgstr ""
+msgstr "'ALL' aktivieren"
 
 # 7dad9098ba1548a18671d2ad5569feed
 #: ../../en/installation-guide/system/server.rst:2
@@ -203,7 +211,7 @@ msgid ""
 "can install the database on a network accessible server. If it is just a "
 "single desktop you are working on, this can be installed on the same "
 "machine."
-msgstr ""
+msgstr "Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden.\nDies im Gegensatz zu einer lokalen Einplatz-Installation"
 
 # dc7c19a274724adcb9b3648240891145
 #: ../../en/installation-guide/system/server.rst:9
@@ -235,7 +243,7 @@ msgstr "PostGIS (>=2.1) installieren"
 msgid ""
 "In a single desktop environment (no network database server) you can setup "
 "your database to trust local connections."
-msgstr ""
+msgstr "Bei einer Einplatz-Installation können lokale Verbindungen verwendet werden."
 
 # a4d0a9d76d4c472f90104a73c4980752
 #: ../../en/installation-guide/system/server.rst:25
@@ -243,7 +251,7 @@ msgid ""
 "This way, the database won't ask for a password if you're connecting from "
 "your local workstation while no password is written  anywhere. You even can "
 "do with no database password at all."
-msgstr ""
+msgstr "In diesem Fall wird überhaupt kein Passwort benötigt."
 
 # 70fdf71970644dc1b851f1574a2edf27
 #: ../../en/installation-guide/system/server.rst:29

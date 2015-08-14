@@ -28,3 +28,12 @@ trans.it = i18n/it/pgadmin.po
 trans.ro = i18n/ro/pgadmin.po
 type = PO
 
+[qgep-documentation.vm]
+source_file = i18n/pot/vm.pot
+source_lang = en
+trans.de = i18n/de/vm.po
+trans.fr = i18n/fr/vm.po
+trans.it = i18n/it/vm.po
+trans.ro = i18n/ro/vm.po
+type = PO
+
