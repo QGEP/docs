@@ -133,15 +133,20 @@
 <h1>About<a class="headerlink" href="#about" title="Lien permanent vers ce titre">¶</a></h1>
 <p>The VM is based on Debian Jessie with Cinnamon Desktop.</p>
 <p>Installed software:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li>PostgreSQL 9.4.4 with Postgis 2.1.7</li>
 <li>QGIS Master 2.11</li>
 </ul>
+</div></blockquote>
 <p>Settings that are changed from a default software install:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <strong>trust</strong> for local connections</li>
 <li>QGIS is setup with <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering enabled</a></li>
+<li>QGIS is setup with <a class="reference external" href="http://www.opengis.ch/2015/07/29/postgres-expression-compiler">postgres server side expression compiler enabled</a></li>
 </ul>
+</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The users <code class="docutils literal"><span class="pre">web</span></code> and <code class="docutils literal"><span class="pre">root</span></code> have the password <code class="docutils literal"><span class="pre">qgis</span></code></p>
@@ -149,11 +154,12 @@
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>If you decide to use the VM in production, it is recommended to:</p>
-<ul class="simple">
+<blockquote class="last">
+<div><ul class="simple">
 <li>change the passwords</li>
-<li>regenerate the ssh keys by running in a terminal</li>
+<li>regenerate the ssh keys by running in a terminal <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">/etc/ssh/ssh_host_*</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">dpkg-reconfigure</span> <span class="pre">openssh-server</span></code></li>
 </ul>
-<p class="last"><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">/etc/ssh/ssh_host_*</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">dpkg-reconfigure</span> <span class="pre">openssh-server</span></code></p>
+</div></blockquote>
 </div>
 </div>
 
