@@ -20,4 +20,8 @@ To extract the archive:
 
 You can run the VM as you would do with any VirtualBox VM.
 
-As the VM has Linux under it it is possible to also put the app on a USB stick (minimum 8GB) or a hard disk.
+.. note::
+
+ As the VM is based on Linux it is fairly simple to convert the image to a raw disk
+ and put it on a USB stick (minimum 8GB) or a faster storage. This would enable you
+ to run the app without the virtualization penalty and enjoy the full speed of your hardware.
