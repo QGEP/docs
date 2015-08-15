@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 09:46+0200\n"
-"PO-Revision-Date: 2015-08-15 07:46+0000\n"
+"POT-Creation-Date: 2015-08-15 14:44+0200\n"
+"PO-Revision-Date: 2015-08-15 12:44+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Italian (http://www.transifex.com/qgep/qgep-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -125,9 +125,9 @@ msgstr ""
 msgid "Download demo data"
 msgstr ""
 
-# ebb05df2a09541faab4e91400e9eaa03
+# d26e62135bdf440484740f0998400c50
 #: ../../en/installation-guide/system/database-initialization.rst:43
-msgid "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
+msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
 msgstr ""
 
 # cb225cda34a746c58e7bbe49bbbf5847
@@ -457,7 +457,7 @@ msgstr ""
 
 # 1fced181b3684f1da0a3b17a07c6cad6
 #: ../../en/installation-guide/system/workstation.rst:102
-msgid "Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
+msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
 msgstr ""
 
 # 1d700414ba3c4324a18330fcab8f16d6
@@ -465,7 +465,12 @@ msgstr ""
 msgid "Extract the file"
 msgstr ""
 
-# 63c8a89b9c544a689f74b08b9342ff17
+# 57353e1a3dfd4d178a3808060c7eac31
 #: ../../en/installation-guide/system/workstation.rst:106
-msgid "Open `qgep_en.qgs` with QGIS"
+msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
+msgstr ""
+
+# 63c8a89b9c544a689f74b08b9342ff17
+#: ../../en/installation-guide/system/workstation.rst:108
+msgid "Open `project/qgep_en.qgs` with QGIS"
 msgstr ""

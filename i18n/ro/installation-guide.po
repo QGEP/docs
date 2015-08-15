@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 09:46+0200\n"
-"PO-Revision-Date: 2015-08-15 07:46+0000\n"
+"POT-Creation-Date: 2015-08-15 14:44+0200\n"
+"PO-Revision-Date: 2015-08-15 12:44+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Acesta te va ghida către instalarea componentelor şi serviciilor neces
 msgid ""
 "You also have the option of downloading a :ref:`Demo VM` that has a working "
 "QGEP demo."
-msgstr ""
+msgstr "Exista și opțiunea să folosiți o :ref:`Demo VM` care are deja instalat un demo de QGEP funcțional."
 
 # 17fc0f81eb3d4bd3b9e9a0cbb4bfa59b
 #: ../../en/installation-guide/system/database-initialization.rst:2
@@ -126,10 +126,10 @@ msgstr "``CREATE EXTENSION postgis;``"
 msgid "Download demo data"
 msgstr "Descarcă datele de demo"
 
-# ebb05df2a09541faab4e91400e9eaa03
+# d26e62135bdf440484740f0998400c50
 #: ../../en/installation-guide/system/database-initialization.rst:43
-msgid "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
-msgstr "http://qgis.vitu.ch/qgep_demodata/qgep.backup"
+msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
+msgstr ""
 
 # cb225cda34a746c58e7bbe49bbbf5847
 # cb225cda34a746c58e7bbe49bbbf5847
@@ -458,15 +458,20 @@ msgstr "Instalează proiectul demo"
 
 # 1fced181b3684f1da0a3b17a07c6cad6
 #: ../../en/installation-guide/system/workstation.rst:102
-msgid "Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
-msgstr "Descarcă http://qgis.vitu.ch/qgep_demodata/project_20140829.zip"
+msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
+msgstr ""
 
 # 1d700414ba3c4324a18330fcab8f16d6
 #: ../../en/installation-guide/system/workstation.rst:104
 msgid "Extract the file"
 msgstr "Extrage fișierul"
 
-# 63c8a89b9c544a689f74b08b9342ff17
+# 57353e1a3dfd4d178a3808060c7eac31
 #: ../../en/installation-guide/system/workstation.rst:106
-msgid "Open `qgep_en.qgs` with QGIS"
-msgstr "Deschide `qgep_en.qgs` cu QGIS"
+msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
+msgstr ""
+
+# 63c8a89b9c544a689f74b08b9342ff17
+#: ../../en/installation-guide/system/workstation.rst:108
+msgid "Open `project/qgep_en.qgs` with QGIS"
+msgstr ""

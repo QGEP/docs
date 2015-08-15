@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 09:46+0200\n"
-"PO-Revision-Date: 2015-08-15 07:46+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-15 14:44+0200\n"
+"PO-Revision-Date: 2015-08-15 11:49+0000\n"
+"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,126 +36,126 @@ msgstr "Software instalat:"
 # 060795f871eb454db6f549020dd3844c
 #: ../../en/vm/about.rst:8
 msgid "PostgreSQL 9.4.4 with Postgis 2.1.7"
-msgstr ""
+msgstr "PostgreSQL 9.4.4 cu Postgis 2.1.7"
 
 # 8ecdb445fbfe4819b261bb1d4109836e
 #: ../../en/vm/about.rst:9
 msgid "QGIS Master 2.11"
-msgstr ""
+msgstr "QGIS Master 2.11"
 
 # 78d86811b42a4491bc3bf115ea525913
 #: ../../en/vm/about.rst:11
 msgid "Settings that are changed from a default software install:"
-msgstr ""
+msgstr "Setări care sunt schimbate față de cele inițiale:"
 
 # b20223f875de459ba1c90706ea75bfc1
 #: ../../en/vm/about.rst:13
 msgid "``pg_hba.conf`` has **trust** for local connections"
-msgstr ""
+msgstr "``pg_hba.conf`` e setat cu **trust** pentru conexiunile locale"
 
 # c4d9fac8d5574d98bb221063c0c47654
 #: ../../en/vm/about.rst:14
 msgid ""
 "QGIS is setup with `multithreaded rendering enabled "
 "<http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
-msgstr ""
+msgstr "QGIS are activat `multithreaded rendering <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
 
 # c7f74aaf902740d58e6cc36ede275436
 #: ../../en/vm/about.rst:15
 msgid ""
 "QGIS is setup with `postgres server side expression compiler enabled "
 "<http://www.opengis.ch/2015/07/29/postgres-expression-compiler>`_"
-msgstr ""
+msgstr "QGIS are activată opțiunea de `postgres server side expression compiler <http://www.opengis.ch/2015/07/29/postgres-expression-compiler>`_"
 
 # 144bd56a59a24b33a788341fb9f31551
 #: ../../en/vm/about.rst:19
 msgid "The users ``web`` and ``root`` have the password ``qgis``"
-msgstr ""
+msgstr "Userii ``web`` și ``root`` au parola ``qgis``"
 
 # b6455dc064ad4b2e82351491af6e28d9
 #: ../../en/vm/about.rst:23
 msgid "If you decide to use the VM in production, it is recommended to:"
-msgstr ""
+msgstr "Dacă dorești să folosești VM-ul în producție, recomandăm:"
 
 # dc5fbbeb2b414a75af66590f24d6f928
 #: ../../en/vm/about.rst:25
 msgid "change the passwords"
-msgstr ""
+msgstr "schimbarea parolelor"
 
 # 2acf6661f63e40bf8b172cd52d9d1600
 #: ../../en/vm/about.rst:26
 msgid ""
 "regenerate the ssh keys by running in a terminal ``sudo rm "
 "/etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
-msgstr ""
+msgstr "regenerarea cheilor ssh prin deschiderea unui terminal și efectuarea comenzii ``sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
 
 # 16757255502a410f9fa8fd9b91aa6a08
 #: ../../en/vm/index.rst:4
 msgid "Demo Virtual Machine"
-msgstr ""
+msgstr "Mașină Virtuală de Demo"
 
 # 55bb6544ace54d6695d15f2fbbc983e8
 #: ../../en/vm/index.rst:6
 msgid ""
 "This represents a guide on how to download and install a virtual machine "
 "(VM) that has a working QGEP installation with a preinstalled demo dataset."
-msgstr ""
+msgstr "Acestă documentație reprezintă un ghid despre cum se descarca și instalează o mașină virtuală (VM) ce are aplicația QGEP instalată și pregătită cu un set de date demonstrative."
 
 # 05bed8121033444f9d39e53de9e21ac8
 #: ../../en/vm/install.rst:2
 msgid "Install"
-msgstr ""
+msgstr "Instalare"
 
 # 82f6d4f8500645b6abfa9adf5bb39a46
 #: ../../en/vm/install.rst:5
 msgid "Download"
-msgstr ""
+msgstr "Descărcare"
 
 # b3016ca8777846f5b0893537c29595d7
 #: ../../en/vm/install.rst:6
 msgid ""
 "Download the vm from `here <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_"
-msgstr ""
+msgstr "Descarcă VM-ul de `aici <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_"
 
 # 1015adbe4ab842a086c54570cfb1dbb8
 #: ../../en/vm/install.rst:10
 msgid ""
 "The size of the VM is around 2GB compressed and around 7GB uncompressed."
-msgstr ""
+msgstr "Mărimea VM-ului este de aproximativ 2GB comprimat și aproximativ 7GB dezarhivat."
 
 # 454b538feda5405a837df826fcf3ed41
 #: ../../en/vm/install.rst:13
 msgid "Extract"
-msgstr ""
+msgstr "Dezarhivare"
 
 # 8096929dcded4c7a843f7d692eb97d60
 #: ../../en/vm/install.rst:14
 msgid "The virtual disk is archived using XZ compression."
-msgstr ""
+msgstr "Discul virtual este arhivat folosind compresie **XZ**."
 
 # b167fce21ad14a90a3a738b669469e92
 #: ../../en/vm/install.rst:16
 msgid "To extract the archive:"
-msgstr ""
+msgstr "Pentru a dezarhiva:"
 
 # ea672f8d840f4e4c96b34b6a210f44f1
 #: ../../en/vm/install.rst:18
 msgid ""
 "**Windows:** you can use `7-Zip <http://7-zip.org/>`_ to extract the "
 "archive."
-msgstr ""
+msgstr "**Windows:** se poate folosi `7-Zip <http://7-zip.org/>`_ pentru a dezarhiva."
 
 # 49ef180f50c9421ab14d4b7eb096457e
 #: ../../en/vm/install.rst:19
 msgid ""
 "**Linux:** cd to the download directory and run ``xz -d "
 "qgisplatform.vdi.xz``"
-msgstr ""
+msgstr "**Linux:** în directorul unde s-a descarcat arhiva, se efectuează comanda ``xz -d qgisplatform.vdi.xz``"
 
 # caa168b196214efca19d56ca3dc4ef27
 #: ../../en/vm/install.rst:21
 msgid "You can run the VM as you would do with any VirtualBox VM."
-msgstr ""
+msgstr "VM-ul se poate instala la fel ca orice alta mașină virtuală VirtualBox."
 
 # 63ec6fe4909442029c2ed4065f16aeec
 #: ../../en/vm/install.rst:25
@@ -164,4 +164,4 @@ msgid ""
 "raw disk and put it on a USB stick (minimum 8GB) or a faster storage. This "
 "would enable you to run the app without the virtualization penalty and enjoy"
 " the full speed of your hardware."
-msgstr ""
+msgstr "Cum VM-ul este bazat pe Linux, convertirea lui către un disc de bază - raw și punerea lui pe un stick USB (minim 8GB) sau pe o unitate de stocare mai rapidă este relativ ușoară."
