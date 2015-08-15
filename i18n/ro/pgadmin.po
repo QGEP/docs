@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-14 21:13+0200\n"
-"PO-Revision-Date: 2015-08-11 06:50+0000\n"
+"POT-Creation-Date: 2015-08-15 09:45+0200\n"
+"PO-Revision-Date: 2015-08-15 05:04+0000\n"
 "Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgid ""
 "PgAdminIII is a Desktop tool that permits to access and manage the database "
 "server. This chapter represents a guide on how to do basic PostgreSQL "
 "management using pgAdmin."
-msgstr "pgAdminIII este o unealta Desktop care permite accesul si managementul bazei de date. Acest capitol reprezinta un ghid despre cum se face managementul baza al bazei de date PostgreSQL folosindu-se de pgadmin."
+msgstr "pgAdminIII este o unealtă Desktop care permite accesul și managementul bazei de date. Acest capitol reprezintă un ghid despre cum se efectuează un management simplu al bazei de date PostgreSQL folosindu-se pgAdmin."
 
 # ae6d925396b54dde9b15d37cb35f6ccb
 #: ../../en/pgadmin/install.rst:4
@@ -46,7 +46,7 @@ msgstr "Windows"
 msgid ""
 "pgAdmin should be automatically installed if you used the EnterpriseDB "
 "installer."
-msgstr "pgAdmin este instalat automat daca s-a folosit installer-ul de PostgreSQL de la EnterpriseDB. "
+msgstr "pgAdmin este instalat automat dacă s-a folosit installer-ul de PostgreSQL de la EnterpriseDB. "
 
 # 5e8de1ac456b4f918e17c3f7f392330f
 #: ../../en/pgadmin/install.rst:12
