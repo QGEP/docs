@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-14 21:13+0200\n"
-"PO-Revision-Date: 2015-08-14 19:14+0000\n"
+"POT-Creation-Date: 2015-08-15 09:46+0200\n"
+"PO-Revision-Date: 2015-08-15 07:46+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Italian (http://www.transifex.com/qgep/qgep-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -32,8 +32,8 @@ msgstr ""
 # 656f9bb1ab854294a9a9f2d8a93e6442
 #: ../../en/installation-guide/index.rst:10
 msgid ""
-"You also have the option of downloading a :ref:`VM` that has a working QGEP "
-"demo."
+"You also have the option of downloading a :ref:`Demo VM` that has a working "
+"QGEP demo."
 msgstr ""
 
 # 17fc0f81eb3d4bd3b9e9a0cbb4bfa59b
