@@ -99,9 +99,11 @@ Activate the plugin (see image below):
 Install the demo project
 ------------------------
 
-* Download http://qgis.vitu.ch/qgep_demodata/project_20140829.zip
+* Download https://github.com/QGEP/data/archive/demodata.zip
 
 * Extract the file
 
-* Open `qgep_en.qgs` with QGIS
+* Restore the file `qgep_demodata.backup` with pgAdminIII
+
+* Open `project/qgep_en.qgs` with QGIS
 

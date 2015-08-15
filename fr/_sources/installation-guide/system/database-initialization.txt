@@ -40,7 +40,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 
 * Download demo data
 
-  * http://qgis.vitu.ch/qgep_demodata/qgep.backup
+  * https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup
 
 * Right click the `qgep` schema
 
