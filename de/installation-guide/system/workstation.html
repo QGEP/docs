@@ -145,16 +145,13 @@
 <h1>Arbeitsplatzrechner Einrichten<a class="headerlink" href="#setup-workstation" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="database-configuration">
 <h2>Konfiguration der Datenbank<a class="headerlink" href="#database-configuration" title="Link zu dieser Überschrift">¶</a></h2>
-<p>To tell a workstation, where the database is (on the local system or on a
-network server) you will have to create some files initially on every device on
-which you will have QGIS/QGEP running. It is not required to do that on the
-server itself.</p>
+<p>Um einer Arbeitsstation zu sagen, wo die Datenbank steht (im lokalen System oder auf einem Netzwerkserver) müssen Sie zu Beginn auf jedem System auf dem QGIS/QGEP läuft einige Dateien erzeugen. Dies kann nicht auf dem Server selber gemacht werden.</p>
 <p>Diese Anweisungen sind abhängig vom Betriebssystem.</p>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
-<p>Set the environment variable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
-<p>Inside this folder, there will be two files</p>
+<p>Erstellen Sie ein neues Verzeichnis indem Sie die Konfigurationen ablegen möchten (z.B. ein neues Verzeichnis <code class="docutils literal"><span class="pre">pgconfig`</span> <span class="pre">in</span> <span class="pre">ihrem</span> <span class="pre">Stammverzeichnis).</span> <span class="pre">Diese</span> <span class="pre">Anleitung</span> <span class="pre">wird</span> <span class="pre">jeweils</span> <span class="pre">mit</span>&nbsp; <span class="pre">``PGSYSCONFDIR</span></code> darauf verweisen.</p>
+<p>Setzen Sie die Umgebungsvariable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> auf den Dateipfad von <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>In diesem Verzeichnis werden zwei Dateien sein</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
 <li><p class="first"><code class="docutils literal"><span class="pre">pgpass</span></code> (Um das Passwort nicht jedes Mal eingeben zu müssen)</p>
@@ -167,8 +164,7 @@ server itself.</p>
 </div>
 <div class="section" id="all-systems">
 <h3>Auf allen Systemen<a class="headerlink" href="#all-systems" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Put the following content in the file <code class="docutils literal"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>.
-You may have to adapt the variables for your setup.</p>
+<p>Schreiben Sie folgenden Text in die Datei <code class="docutils literal"><span class="pre">pg_service.conf</span></code> oder <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>. Allenfalls müssen Sie diesen für Ihre Installation adaptieren.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
@@ -176,7 +172,7 @@ You may have to adapt the variables for your setup.</p>
 <span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
 </pre></div>
 </div>
-<p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+<p>Um das Passwort auch auf dem System zu speichern können Sie die Datei <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a> benutzen.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre>localhost:5432:*:qgepuser:password
 </pre></div>
 </div>
@@ -202,16 +198,20 @@ You may have to adapt the variables for your setup.</p>
 <ul class="simple">
 <li><p class="first">QGIS öffnen</p>
 </li>
-<li>Go to Plugins (position <em>1</em> in the image below)<ul>
-<li>Manage and Install Plugins</li>
-<li>Settings (position <em>3</em>)<ul>
+<li><p class="first">Gehen Sie zu Plugins (Position <em>1</em> im nachstehenden Bild)</p>
+<ul>
+<li><p class="first">Plugins verwalten und installieren</p>
+</li>
+<li><p class="first">Einstellungen (Settings) (Position*3*)</p>
+<ul>
 <li><p class="first">Hinzufügen...</p>
 <ul>
 <li>Name: QGEP</li>
 <li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
 </ul>
 </li>
-<li>Enable <cite>Show also experimental plugins</cite> (position <em>2</em>)</li>
+<li><p class="first"><cite>Show also experimental plugins</cite> aktivieren (Position <em>2</em>)</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -219,9 +219,9 @@ You may have to adapt the variables for your setup.</p>
 </ul>
 <div class="figure" id="id1">
 <img alt="../../_images/001_addplugin.jpeg" src="../../_images/001_addplugin.jpeg" />
-<p class="caption"><span class="caption-text"><strong>Add the plugin repo</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>Zusatzprogramm Ablage (Plug-in repository) hinzufügen</strong></span></p>
 </div>
-<p>Activate the plugin (see image below):</p>
+<p>Plugin aktivieren (siehe untenstehendes Bild)</p>
 <blockquote>
 <div><ul class="simple">
 <li><p class="first">Alle</p>
@@ -236,7 +236,7 @@ You may have to adapt the variables for your setup.</p>
 </div></blockquote>
 <div class="figure" id="id2">
 <img alt="../../_images/001_searchplugin.jpeg" src="../../_images/001_searchplugin.jpeg" />
-<p class="caption"><span class="caption-text"><strong>Add the QGEP plugin</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>QGEP Zusatzprogramm hinzufügen</strong></span></p>
 </div>
 </div>
 <div class="section" id="install-the-demo-project">
@@ -245,8 +245,10 @@ You may have to adapt the variables for your setup.</p>
 <li>Download <a class="reference external" href="https://github.com/QGEP/data/archive/demodata.zip">https://github.com/QGEP/data/archive/demodata.zip</a></li>
 <li><p class="first">Die Datei entpacken</p>
 </li>
-<li>Restore the file <cite>qgep_demodata.backup</cite> with pgAdminIII</li>
-<li>Open <cite>project/qgep_en.qgs</cite> with QGIS</li>
+<li><p class="first">Wiederherstellen der Datei <cite>qgep_demodata.backup</cite>  mit pgAdminIII</p>
+</li>
+<li><p class="first">Öffnen Sie <cite>project/qgep_en.qgs</cite> mit QGIS</p>
+</li>
 </ul>
 </div>
 </div>
