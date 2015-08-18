@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
+# Konradin Fischer <fischer8712@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 09:46+0200\n"
-"PO-Revision-Date: 2015-08-15 07:46+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-18 18:41+0200\n"
+"PO-Revision-Date: 2015-08-17 08:57+0000\n"
+"Last-Translator: Konradin Fischer <fischer8712@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,22 +26,22 @@ msgstr ""
 # 9ec4b72482bc4d6892f9982996d37da0
 #: ../../en/vm/about.rst:4
 msgid "The VM is based on Debian Jessie with Cinnamon Desktop."
-msgstr ""
+msgstr "Die virtuelle Maschine (VM) basiert auf Debian 'Jessie' und dem 'Cinnamon' Desktop."
 
 # d8e83dfeafa740bf9bc9c7a65b6efa15
 #: ../../en/vm/about.rst:6
 msgid "Installed software:"
-msgstr ""
+msgstr "Benötigte Software:"
 
 # 060795f871eb454db6f549020dd3844c
 #: ../../en/vm/about.rst:8
 msgid "PostgreSQL 9.4.4 with Postgis 2.1.7"
-msgstr ""
+msgstr "PostgreSQL 9.4.4 mit Postgis 2.1.7"
 
 # 8ecdb445fbfe4819b261bb1d4109836e
 #: ../../en/vm/about.rst:9
 msgid "QGIS Master 2.11"
-msgstr ""
+msgstr "QGIS Master 2.11"
 
 # 78d86811b42a4491bc3bf115ea525913
 #: ../../en/vm/about.rst:11

@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Matthias Kuhn <matthias@opengis.ch>, 2015
+# Stefan Burckhardt <stefan.burckhardt@gmx.ch>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-10 11:42+0200\n"
-"PO-Revision-Date: 2015-08-10 09:41+0000\n"
-"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-18 18:41+0200\n"
+"PO-Revision-Date: 2015-08-15 20:07+0000\n"
+"Last-Translator: Stefan Burckhardt <stefan.burckhardt@gmx.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,47 +47,47 @@ msgstr "Windows"
 msgid ""
 "pgAdmin should be automatically installed if you used the EnterpriseDB "
 "installer."
-msgstr ""
+msgstr "pgAdmin sollte auatomatisch installiert werden wenn Sie den EnterpriseDB installer verwendet haben."
 
 # 5e8de1ac456b4f918e17c3f7f392330f
 #: ../../en/pgadmin/install.rst:12
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 # c14d13a4bd8949dd9a0d3c0420e2589d
 #: ../../en/pgadmin/install.rst:15
 msgid "Debian/Ubuntu based distros"
-msgstr ""
+msgstr "Debian/Ubuntu basierte Distributionen"
 
 # e33a6aa5dc354d0083dd487b11f47f42
 #: ../../en/pgadmin/install.rst:17
 msgid "You can install pgAdmin by running the following command:"
-msgstr ""
+msgstr "Sie können pgAdmin installieren durch Eingabe von folgendem Befehl:"
 
 # c7600c4647ad457f9961aff53141b9ac
 #: ../../en/pgadmin/install.rst:19
 msgid "``sudo apt-get install pgadmin3``"
-msgstr ""
+msgstr "``sudo apt-get install pgadmin3``"
 
 # 826e52e9666344c8b33048ba7b948edd
 #: ../../en/pgadmin/install.rst:22
 msgid "Fedora based distros"
-msgstr ""
+msgstr "Fedora basierte Distributionen"
 
 # 99b50339a8124251b0b7ebb9e3597277
 #: ../../en/pgadmin/install.rst:24
 msgid "``sudo yum install pgadmin3``"
-msgstr ""
+msgstr "``sudo yum install pgadmin3``"
 
 # 815f16c9ddeb4731a7c7ee69db720cdb
 #: ../../en/pgadmin/install.rst:27
 msgid "Suse based distros"
-msgstr ""
+msgstr "Suse basierte Distributionen"
 
 # 8a0b84d05aee4a168d1d06fb774a8dec
 #: ../../en/pgadmin/install.rst:29
 msgid "``sudo zypper install pgadmin3``"
-msgstr ""
+msgstr "``sudo zypper install pgadmin3``"
 
 # 469e18a4c6ae4438896495ed4fd18a86
 #: ../../en/pgadmin/install.rst:33
@@ -95,31 +96,31 @@ msgid ""
 "with sudo (admin) privileges. On certain systems it may be required to use "
 "the command ``su`` to become the *root* user and then issue the above "
 "command without the ``sudo`` prefix."
-msgstr ""
+msgstr "Die oben vorgestellten Befehle setzen voraus, dass Sie als Benutzer mit sudo (administrativ) Rechten eingeloggt sind. Auf gewissen Systemen kann es notwendig sein den Befehl ``su`` einzugeben um *root* Benutzer zu werden. Dann können Sie obige Befehle ohne das Präfix ``sudo`` ausführen."
 
 # 964c3d64de5c4daca17092200e4b5a05
 #: ../../en/pgadmin/usage.rst:2
 msgid "Using Pgadmin"
-msgstr ""
+msgstr "PgAdmi verwenden"
 
 # a6159de8d3454d25a29cbc3542364b4b
 #: ../../en/pgadmin/usage.rst:7
 msgid "SQL query"
-msgstr ""
+msgstr "SQL Abfrage"
 
 # cfe4d55e6330442e9515378e1c9187f2
 #: ../../en/pgadmin/usage.rst:11
 msgid "**Running SQL commands in PgAdminIII**"
-msgstr ""
+msgstr "**SQL Befehle in PgAdminIII ausführen**"
 
 # 2a87c7b475164ca7a26a2c118c3e6fb8
 #: ../../en/pgadmin/usage.rst:15
 msgid ""
 "Clicking the highlighted icon at location *1* opens the SQL Window. The SQL "
 "icon is active only when you're connected to a database."
-msgstr ""
+msgstr "Wenn Sie das markierte Symbol *1* anklicken öffnet dies das SQL Fenster. Das SQL Symbol ist nur aktiv, wenn Sie mit einer Datenbank verbunden sind. "
 
 # 8986b1329d6e4e8b8663db5e4ea939a2
 #: ../../en/pgadmin/usage.rst:17
 msgid "Clicking the icon at *2* runs the written SQL commands."
-msgstr ""
+msgstr "Ein Klick auf *2* führt den eingetippten SQL Befehl aus."

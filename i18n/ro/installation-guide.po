@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 14:44+0200\n"
-"PO-Revision-Date: 2015-08-15 12:44+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2015-08-18 18:41+0200\n"
+"PO-Revision-Date: 2015-08-15 12:51+0000\n"
+"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,7 +129,7 @@ msgstr "Descarcă datele de demo"
 # d26e62135bdf440484740f0998400c50
 #: ../../en/installation-guide/system/database-initialization.rst:43
 msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
-msgstr ""
+msgstr "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
 
 # cb225cda34a746c58e7bbe49bbbf5847
 # cb225cda34a746c58e7bbe49bbbf5847
@@ -459,7 +459,7 @@ msgstr "Instalează proiectul demo"
 # 1fced181b3684f1da0a3b17a07c6cad6
 #: ../../en/installation-guide/system/workstation.rst:102
 msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
-msgstr ""
+msgstr "Descarcă https://github.com/QGEP/data/archive/demodata.zip"
 
 # 1d700414ba3c4324a18330fcab8f16d6
 #: ../../en/installation-guide/system/workstation.rst:104
@@ -469,9 +469,9 @@ msgstr "Extrage fișierul"
 # 57353e1a3dfd4d178a3808060c7eac31
 #: ../../en/installation-guide/system/workstation.rst:106
 msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
-msgstr ""
+msgstr "Reîncarcă baza de date cu fișierul `qgep_demodata.backup` cu pgAdminIII"
 
 # 63c8a89b9c544a689f74b08b9342ff17
 #: ../../en/installation-guide/system/workstation.rst:108
 msgid "Open `project/qgep_en.qgs` with QGIS"
-msgstr ""
+msgstr "Deschide `project/qgep_en.qgs` cu QGIS"
