@@ -11,3 +11,4 @@ that has a working QGEP installation with a preinstalled demo dataset.
 
    about
    install
+   server

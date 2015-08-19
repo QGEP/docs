@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Demo Virtual Machine &mdash; QGEP 0.5 documentation</title>
+  <title>QGIS Server &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
 
   
-    <link rel="top" title="QGEP 0.5 documentation" href="../index.html"/>
-        <link rel="next" title="About" href="about.html"/>
-        <link rel="prev" title="Using Pgadmin" href="../pgadmin/usage.html"/> 
+    <link rel="top" title="QGEP 0.5 Dokumentation" href="../index.html"/>
+        <link rel="up" title="Demo Virtual Machine" href="index.html"/>
+        <link rel="prev" title="Install" href="install.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,12 +81,15 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pgadmin/index.html">pgAdmin</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Demo Virtual Machine</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Demo Virtual Machine</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server.html">QGIS Server</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">QGIS Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">Access the Web Services</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -113,11 +116,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>Demo Virtual Machine</li>
+          <li><a href="index.html">Demo Virtual Machine</a> &raquo;</li>
+      
+    <li>QGIS Server</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/vm/index.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/vm/server.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -127,23 +132,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="demo-virtual-machine">
-<span id="demo-vm"></span><h1>Demo Virtual Machine<a class="headerlink" href="#demo-virtual-machine" title="Permalink to this headline">¶</a></h1>
-<p>This represents a guide on how to download and install a virtual machine (VM)
-that has a working QGEP installation with a preinstalled demo dataset.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#download">Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#extract">Extract</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="server.html">QGIS Server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="server.html#access-the-web-services">Access the Web Services</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="qgis-server">
+<h1>QGIS Server<a class="headerlink" href="#qgis-server" title="Link zu dieser Überschrift">¶</a></h1>
+<p>The VM has working installations of
+<a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">QGIS Server</a>
+and <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
+<div class="section" id="access-the-web-services">
+<h2>Access the Web Services<a class="headerlink" href="#access-the-web-services" title="Link zu dieser Überschrift">¶</a></h2>
+<p>The Apache server is setup to respond to requests pointing to the <cite>http://qgisplatform.demo</cite>.
+Accessing the above link with the Internet Browser of the VM will take you to the starting
+page of QWC depicted in the above image.</p>
+<div class="figure" id="id2">
+<img alt="../_images/001_qwc.png" src="../_images/001_qwc.png" />
+<p class="caption"><span class="caption-text"><strong>QGIS Web client starting page</strong></span></p>
+</div>
+<p>If you want to access the web services outside the VM, you need to edit the <code class="docutils literal"><span class="pre">hosts</span></code> file on
+your machine and point <code class="docutils literal"><span class="pre">qgisplatform.demo</span></code> to the IP of the VM.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">If you&#8217;ve setup the VM with the network adapter in NAT mode only the VM host will
+be able to access the services. If you want all the devices on your LAN to do it,
+you need to setup the network adapter in bridge mode.</p>
+</div>
 </div>
 </div>
 
@@ -154,10 +164,8 @@ that has a working QGEP installation with a preinstalled demo dataset.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about.html" class="btn btn-neutral float-right" title="About" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../pgadmin/usage.html" class="btn btn-neutral" title="Using Pgadmin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="Install" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -197,6 +205,7 @@ that has a working QGEP installation with a preinstalled demo dataset.</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 
