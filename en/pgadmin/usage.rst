@@ -34,6 +34,6 @@ Database dump
 
 .. note::
 
-After running the process, the exit code 0 indicates that everything went ok
+ * After running the process, the exit code 0 indicates that everything went ok
 
 .. figure:: images/Screenshot-from-2015-01-22-102222.png
