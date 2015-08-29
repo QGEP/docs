@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-18 18:41+0200\n"
-"PO-Revision-Date: 2015-08-15 12:51+0000\n"
+"POT-Creation-Date: 2015-08-29 09:27+0200\n"
+"PO-Revision-Date: 2015-08-21 13:25+0000\n"
 "Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Acesta te va ghida către instalarea componentelor şi serviciilor neces
 msgid ""
 "You also have the option of downloading a :ref:`Demo VM` that has a working "
 "QGEP demo."
-msgstr "Exista și opțiunea să folosiți o :ref:`Demo VM` care are deja instalat un demo de QGEP funcțional."
+msgstr "Există și opțiunea să folosiți o :ref:`Demo VM` care are deja instalat un demo de QGEP funcțional."
 
 # 17fc0f81eb3d4bd3b9e9a0cbb4bfa59b
 #: ../../en/installation-guide/system/database-initialization.rst:2
@@ -259,7 +259,7 @@ msgid ""
 "`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
 "conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
 "service reload is required to activate changes."
-msgstr "Aceasta se poate prin editarea fișierului de acces al bazei de date `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_ și prin setarea opțiunilor de autentificare de la ``md5`` către ``trust``. Pentru a activa schimbările efectuate în `pg_hba.conf`, este necesară restartarea bazei de date."
+msgstr "Aceasta se poate prin editarea fișierului de acces al bazei de date `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_ și prin setarea opțiunilor de autentificare de la ``md5`` către ``trust``. Pentru a activa schimbările efectuate în `pg_hba.conf`, este necesară reîncărcarea sau repornirea bazei de date."
 
 # d570cd0a1b0f4d10b0d707c230540f07
 #: ../../en/installation-guide/system/workstation.rst:2
