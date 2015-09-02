@@ -182,14 +182,23 @@ htmlhelp_basename = 'QGEPdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
+# added by mkuhn: see https://travis-ci.org/QGEP/docs/builds/78364932#L3944
+ 'babel': r'\usepackage[german,romanian,english,french]{babel}',
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+ 'papersize': 'a4paper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    '''
 }
 
 # Grouping the document tree into LaTeX files. List of tuples

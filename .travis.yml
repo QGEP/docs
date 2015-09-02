@@ -1,5 +1,12 @@
 language: python
 
+addons:
+  apt:
+    packages:
+      - texlive-latex-recommended
+      - texlive-latex-extra
+      - texlive-fonts-recommended
+
 notifications:
   webhooks:
     urls:
@@ -8,8 +15,18 @@ notifications:
     on_failure: always  # options: [always|never|change] default: always
     on_start: false     # default: false
 
+before_install:
+  - mkdir -p $HOME/texlive && curl -L https://github.com/urdh/texlive-blob/releases/download/20150712/texlive.tar.xz | tar -JxC $HOME/texlive
+
 install:
+# Sphinx requirements
   - pip install -r requirements.txt
+# Latex requirements
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+  - tlmgr install combelow
+  - tlmgr install babel-french
+  - tlmgr install babel-german
+  - tlmgr install babel-romanian
 
 before_script:
   - ./scripts/ci/setup_git.sh
