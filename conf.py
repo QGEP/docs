@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QGEP'
-copyright = u'2015, Matthias Kuhn'
+copyright = u'2015, The QGEP Project/OPENGIS.ch'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -206,7 +206,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'QGEP.tex', u'QGEP Documentation',
-   u'Matthias Kuhn', 'manual'),
+   u'The QGEP Project/OPENGIS.ch', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -236,7 +236,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'qgep', u'QGEP Documentation',
-     [u'Matthias Kuhn'], 1)
+     [u'The QGEP Project/OPENGIS.ch'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -250,7 +250,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'QGEP', u'QGEP Documentation',
-   u'Matthias Kuhn', 'QGEP', 'One line description of project.',
+   u'The QGEP Project/OPENGIS.ch', 'QGEP', 'One line description of project.',
    'Miscellaneous'),
 ]
 
