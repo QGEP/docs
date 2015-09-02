@@ -227,20 +227,22 @@ epub: compile_messages
 	@echo "Run \`make epub' "
 
 all-pdf: latex
-	@set -e; for lang in $(LANGUAGES);\
+	@set -e; \
+	for lang in $(LANGUAGES); \
 	do \
 	  make -C $(BUILDDIR)/latex/$$lang all-pdf ; \
 		if [ -d $(BUILDDIR)/html/$$lang ]; then \
-		mv -f $(BUILDDIR)/latex/$$lang/QGEP.pdf $(BUILDDIR)/html/$$lang ; \
+			cp -f $(BUILDDIR)/latex/$$lang/QGEP.pdf $(BUILDDIR)/html/$$lang ; \
 		fi \
-	done
+	done; \
+	if [ -d $(BUILDDIR)/html/$$lang ]; then \
+		cp -f $(BUILDDIR)/latex/en/QGEP.pdf $(BUILDDIR)/html; \
+	fi; \
 
 all-ps: latex
 	@set -e; for lang in $(LANGUAGES);\
 	do \
 		make -C $(BUILDDIR)/latex/$$lang all-ps ; \
-		if [ -d $(BUILDDIR)/html/$$lang ]; then \
-		fi \
 	done
 
 changes:
