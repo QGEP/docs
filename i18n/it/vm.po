@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-15 09:46+0200\n"
-"PO-Revision-Date: 2015-08-15 07:46+0000\n"
+"POT-Creation-Date: 2015-09-02 19:11+0200\n"
+"PO-Revision-Date: 2015-09-02 17:11+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Italian (http://www.transifex.com/qgep/qgep-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -163,4 +163,52 @@ msgid ""
 "raw disk and put it on a USB stick (minimum 8GB) or a faster storage. This "
 "would enable you to run the app without the virtualization penalty and enjoy"
 " the full speed of your hardware."
+msgstr ""
+
+# 7adefa0f09fa41afbcc2335a145ac5b8
+#: ../../en/vm/server.rst:2
+msgid "QGIS Server"
+msgstr ""
+
+# fa010cd6db114348924713f8046a6549
+#: ../../en/vm/server.rst:4
+msgid ""
+"The VM has working installations of `QGIS Server "
+"<https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html>`_"
+" and `QGIS Web Client (QWC). <https://github.com/qgis/QGIS-Web-Client>`_"
+msgstr ""
+
+# 6dc8d835703f4883abbea8a2920cc310
+#: ../../en/vm/server.rst:9
+msgid "Access the Web Services"
+msgstr ""
+
+# 940ce6590d514ad1847a042ec8de66fd
+#: ../../en/vm/server.rst:11
+msgid ""
+"The Apache server is setup to respond to requests pointing to the "
+"`http://qgisplatform.demo`. Accessing the above link with the Internet "
+"Browser of the VM will take you to the starting page of QWC depicted in the "
+"above image."
+msgstr ""
+
+# ecad6283a5cc4642b56f31b0f7a93c75
+#: ../../en/vm/server.rst:17
+msgid "**QGIS Web client starting page**"
+msgstr ""
+
+# eba3b72ebee8439e9814790404582ff8
+#: ../../en/vm/server.rst:19
+msgid ""
+"If you want to access the web services outside the VM, you need to edit the "
+"``hosts`` file on your machine and point ``qgisplatform.demo`` to the IP of "
+"the VM."
+msgstr ""
+
+# 52583b4000154846b91c7234a44a72d4
+#: ../../en/vm/server.rst:24
+msgid ""
+"If you've setup the VM with the network adapter in NAT mode only the VM host"
+" will be able to access the services. If you want all the devices on your "
+"LAN to do it, you need to setup the network adapter in bridge mode."
 msgstr ""

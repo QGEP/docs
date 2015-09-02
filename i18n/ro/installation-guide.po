@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-29 09:27+0200\n"
-"PO-Revision-Date: 2015-08-21 13:25+0000\n"
-"Last-Translator: Barascu Tudor <tudorbarascu@yahoo.com>\n"
+"POT-Creation-Date: 2015-09-02 19:11+0200\n"
+"PO-Revision-Date: 2015-09-02 17:11+0000\n"
+"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -321,157 +321,165 @@ msgid ""
 "``pgpass`` (If you do not want to enter the password for the db every time)"
 msgstr "``pgpass`` (opțional, dacă nu vrei sa introduci parola de fiecare dată)"
 
+# f7fb72062db1466e8e4fece0ea124545
+#: ../../en/installation-guide/system/workstation.rst:28
+msgid ""
+"On Windows, you need to save ``pg_service.conf`` in Unix format in order to "
+"work. One way to do it is to open it with `Notepad++ <https://notepad-plus-"
+"plus.org/>`_ and ``Edit --> EOL Conversion --> UNIX Format --> File save`` ."
+msgstr ""
+
 # 85afcf321f584539977fd3e18b253973
-#: ../../en/installation-guide/system/workstation.rst:27
+#: ../../en/installation-guide/system/workstation.rst:34
 msgid "Linux"
 msgstr "Linux"
 
 # d8f0c37728ac43d4ac41125700447f42
-#: ../../en/installation-guide/system/workstation.rst:29
+#: ../../en/installation-guide/system/workstation.rst:36
 msgid ""
 "On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into "
 "your home folder (normally ``/home/[username]``)"
 msgstr "În linux, fișierele  ``.pg_service.conf`` și ``.pgpass`` se pot pune în folderul home (în mod normal ``/home/[numeutilizator]``)"
 
 # 4e35cfe68ec9455ead3d01f5db64c301
-#: ../../en/installation-guide/system/workstation.rst:33
+#: ../../en/installation-guide/system/workstation.rst:40
 msgid "All systems"
 msgstr "Toate sistemele"
 
 # ce5b600babe44b108489c0557d1e45f8
-#: ../../en/installation-guide/system/workstation.rst:35
+#: ../../en/installation-guide/system/workstation.rst:42
 msgid ""
 "Put the following content in the file ``pg_service.conf`` or "
 "``.pg_service.conf``. You may have to adapt the variables for your setup."
 msgstr "Introdu următoarele variabile în ``pg_service.conf`` sau ``.pg_service.conf``. Variabilele introduse trebuie adaptate în funcție de topologia sistemului."
 
 # 45fe55b56b844f9db1c42f28d43acc07
-#: ../../en/installation-guide/system/workstation.rst:46
+#: ../../en/installation-guide/system/workstation.rst:53
 msgid ""
 "To save the password as well on the system you may use the file `pgpass "
 "<http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
 msgstr "Pentru a salva și parola în sistem se poate folosi fișierul `pgpass <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
 
 # cacac779460c4b5bba203032b9f43bba
-#: ../../en/installation-guide/system/workstation.rst:52
+#: ../../en/installation-guide/system/workstation.rst:59
 msgid ""
 "If you don't have the database on your local machine replace any occurence "
 "of ``localhost`` with the network address of your database server."
 msgstr "Dacă baza de date nu e instalată pe stația de lucru locală atunci trebuie înlocuit ``localhost`` cu adresa de rețea a bazei de date, oriunde găsiți aceasta referință."
 
 # 9d11a6686d464b6b9ab3dcc256580e26
-#: ../../en/installation-guide/system/workstation.rst:57
+#: ../../en/installation-guide/system/workstation.rst:64
 msgid "Install QGIS"
 msgstr "Instalare QGIS"
 
 # dd0ae381acfc407b9a70b3927edc2f2c
-#: ../../en/installation-guide/system/workstation.rst:59
+#: ../../en/installation-guide/system/workstation.rst:66
 msgid "Minimum requirement 2.10"
 msgstr "Versiune minimă necesară 2.10"
 
 # 015dcd75455f4b52897d6556013bedf8
-#: ../../en/installation-guide/system/workstation.rst:61
+#: ../../en/installation-guide/system/workstation.rst:68
 msgid ""
 "We recommend using the latest master builds (called qgis-dev on Windows) "
 "which often offer a better experience in combination with QGEP."
 msgstr "Este recomandat sa fie folosite cele mai noi versiuni de QGIS - master (numite qgis-dev în Windows) pentru a avea parte de o experienta mai buna folosind QGEP."
 
 # ffea2725c3394f0a91ae293bf8cbbe19
-#: ../../en/installation-guide/system/workstation.rst:65
+#: ../../en/installation-guide/system/workstation.rst:72
 msgid "Install QGEP plugin"
 msgstr "Instalare plugin QGEP"
 
 # b297d95fa69143cb873d56784e639d8c
-#: ../../en/installation-guide/system/workstation.rst:67
+#: ../../en/installation-guide/system/workstation.rst:74
 msgid "Open QGIS"
 msgstr "Deschide QGIS"
 
 # 5071573ccf2242a18a6e077f588640b3
-#: ../../en/installation-guide/system/workstation.rst:69
+#: ../../en/installation-guide/system/workstation.rst:76
 msgid "Go to Plugins (position *1* in the image below)"
 msgstr "Du-te la Pluginuri (poziția *1* în imaginea de dedesubt)"
 
 # 1cb6f879e2ea416086f3ba3ab00289e7
-#: ../../en/installation-guide/system/workstation.rst:71
+#: ../../en/installation-guide/system/workstation.rst:78
 msgid "Manage and Install Plugins"
 msgstr "Manage and Install Plugins"
 
 # 658d47789aff4d908ad3b0bcd7f00736
-#: ../../en/installation-guide/system/workstation.rst:73
+#: ../../en/installation-guide/system/workstation.rst:80
 msgid "Settings (position *3*)"
 msgstr "Setări (poziția *3*)"
 
 # 59f92a5f9cd643cb9b58cac1269b5872
-#: ../../en/installation-guide/system/workstation.rst:75
+#: ../../en/installation-guide/system/workstation.rst:82
 msgid "Add..."
 msgstr "Adaugă"
 
 # 6837b2fbdd7445edb569b3e100807a3c
-#: ../../en/installation-guide/system/workstation.rst:77
+#: ../../en/installation-guide/system/workstation.rst:84
 msgid "Name: QGEP"
 msgstr "Nume: QGEP"
 
 # 3bec99ef691440ef9913eebf2c51682e
-#: ../../en/installation-guide/system/workstation.rst:79
+#: ../../en/installation-guide/system/workstation.rst:86
 msgid "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 msgstr "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
 
 # 5521f5871029448eb10934bfd2c86c8d
-#: ../../en/installation-guide/system/workstation.rst:81
+#: ../../en/installation-guide/system/workstation.rst:88
 msgid "Enable `Show also experimental plugins` (position *2*)"
 msgstr "Permite `Afișare pluginuri experimentale` (poziția *2*)"
 
 # 76c44c02a53c47dea28d361ce790a883
-#: ../../en/installation-guide/system/workstation.rst:85
+#: ../../en/installation-guide/system/workstation.rst:92
 msgid "**Add the plugin repo**"
 msgstr "**Adaugă repository-ul de plugin**"
 
 # 0075a3ab58bb418699df67d4a1360b79
-#: ../../en/installation-guide/system/workstation.rst:87
+#: ../../en/installation-guide/system/workstation.rst:94
 msgid "Activate the plugin (see image below):"
 msgstr "Activează pluginul (a se vedea imaginea de mai jos)"
 
 # 95d4af7c3e91411bb9593a1042c9f9e6
-#: ../../en/installation-guide/system/workstation.rst:89
+#: ../../en/installation-guide/system/workstation.rst:96
 msgid "All"
 msgstr "All - Toate"
 
 # 5d934f75ea2548c38b278142901a82cd
-#: ../../en/installation-guide/system/workstation.rst:91
+#: ../../en/installation-guide/system/workstation.rst:98
 msgid "Search `QGEP`"
 msgstr "Caută  `QGEP`"
 
 # d67227a1ee634d7796f830aef6392dcb
-#: ../../en/installation-guide/system/workstation.rst:93
+#: ../../en/installation-guide/system/workstation.rst:100
 msgid "Click the checkbox next to it"
 msgstr "Bifează căsuța de lîngă"
 
 # 3c54317b3fe9461183cd94fe79710c73
-#: ../../en/installation-guide/system/workstation.rst:97
+#: ../../en/installation-guide/system/workstation.rst:104
 msgid "**Add the QGEP plugin**"
 msgstr "**Adaugă pluginul QGEP**"
 
 # 61a380dcfe544ad59148020e222b5a38
-#: ../../en/installation-guide/system/workstation.rst:100
+#: ../../en/installation-guide/system/workstation.rst:107
 msgid "Install the demo project"
 msgstr "Instalează proiectul demo"
 
 # 1fced181b3684f1da0a3b17a07c6cad6
-#: ../../en/installation-guide/system/workstation.rst:102
+#: ../../en/installation-guide/system/workstation.rst:109
 msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
 msgstr "Descarcă https://github.com/QGEP/data/archive/demodata.zip"
 
 # 1d700414ba3c4324a18330fcab8f16d6
-#: ../../en/installation-guide/system/workstation.rst:104
+#: ../../en/installation-guide/system/workstation.rst:111
 msgid "Extract the file"
 msgstr "Extrage fișierul"
 
 # 57353e1a3dfd4d178a3808060c7eac31
-#: ../../en/installation-guide/system/workstation.rst:106
+#: ../../en/installation-guide/system/workstation.rst:113
 msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
 msgstr "Reîncarcă baza de date cu fișierul `qgep_demodata.backup` cu pgAdminIII"
 
 # 63c8a89b9c544a689f74b08b9342ff17
-#: ../../en/installation-guide/system/workstation.rst:108
+#: ../../en/installation-guide/system/workstation.rst:115
 msgid "Open `project/qgep_en.qgs` with QGIS"
 msgstr "Deschide `project/qgep_en.qgs` cu QGIS"
