@@ -4,7 +4,13 @@ This is the QGEP documentation
 QGEP is a wastewater management module for QGIS based on SIA 405 and developed
 closely to the QGIS application.
 
-Any suggestions or recommendations regarding the docs or the VM are welcome.
+This document can also be downloaded as a single PDF document: `QGEP.pdf <./QGEP.pdf>`__ |image|.
+
+.. |image| image:: ../_static/pdf.png
+   :height: 15
+   :width: 15
+   :alt: PDF icon
+   :target: QGEP.pdf
 
 Contents:
 =========
