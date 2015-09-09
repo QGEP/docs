@@ -183,7 +183,7 @@ htmlhelp_basename = 'QGEPdoc'
 
 latex_elements = {
 # added by mkuhn: see https://travis-ci.org/QGEP/docs/builds/78364932#L3944
- 'babel': r'\usepackage[german,romanian,english,french]{babel}',
+# 'babel': r'\usepackage[german,romanian,english,french]{babel}',
 # The paper size ('letterpaper' or 'a4paper').
  'papersize': 'a4paper',
 
@@ -198,6 +198,11 @@ latex_elements = {
     \\newunicodechar{ș}{\\cb{s}}
     \\newunicodechar{Ț}{\\cb{T}}
     \\newunicodechar{ț}{\\cb{t}}
+    % old babel-italian does not have setactivedoublequote,
+    % avoid "undefined control sequence" error
+    \\providecommand{\\setactivedoublequote}{}
+    % switch new babel-italian to the old behavior
+    \\setactivedoublequote
     '''
 }
 
