@@ -21,6 +21,7 @@ Contents
    installation-guide/index
    pgadmin/index
    vm/index
+   user-guide/index
 
 Indices and tables
 ==================
