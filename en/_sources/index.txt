@@ -12,8 +12,8 @@ This document can also be downloaded as a single PDF document: `QGEP.pdf <./QGEP
    :alt: PDF icon
    :target: QGEP.pdf
 
-Contents:
-=========
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
