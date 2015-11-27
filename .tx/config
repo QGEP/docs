@@ -37,3 +37,12 @@ trans.it = i18n/it/vm.po
 trans.ro = i18n/ro/vm.po
 type = PO
 
+[qgep-documentation.user-guide]
+source_file = i18n/pot/user-guide.pot
+source_lang = en
+trans.de = i18n/de/user-guide.po
+trans.fr = i18n/fr/user-guide.po
+trans.it = i18n/it/user-guide.po
+trans.ro = i18n/ro/user-guide.po
+type = PO
+

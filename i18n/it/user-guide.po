@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The QGEP Project/OPENGIS.ch
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-27 11:07+0100\n"
+"PO-Revision-Date: 2015-11-27 10:08+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian (http://www.transifex.com/qgep/qgep-documentation/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# 2e06d95c279447358f45247d37e6813b
+#: ../../en/user-guide/index.rst:2
+msgid "QGEP User Guide"
+msgstr ""
+
+# 6ab597bd24e9468cacf5094e3a025735
+#: ../../en/user-guide/index.rst:5
+msgid "Digitizing Wastewater Structures"
+msgstr ""
+
+# d95c0af55235485e9206a164824b6071
+#: ../../en/user-guide/index.rst:8
+msgid "Deleting Wastewater Structures"
+msgstr ""
+
+# 7c076c9f07f54bfa860aa5d76f970050
+#: ../../en/user-guide/index.rst:11
+msgid "Deleting Geometry"
+msgstr ""
+
+# 7fdba0e942674c6b963a15f1477b3cd3
+#: ../../en/user-guide/index.rst:14
+msgid "Deleting the structure"
+msgstr ""
