@@ -10,25 +10,9 @@ This represents a guide on how to collect data in QGEP (digitizing), edit existi
    length-profile/index
    network-following/index
    plan-plotting/index
-   data-export/index
-   data-import/index
+
    
-   dataentry
-   digitizingwastewaterstructures
-   digitizingchannels
-   deletingobjects
-   
-Digitizing Wastewater Structures
---------------------------------
 
-Deleting Wastewater Structures
-------------------------------
-
-Deleting Geometry
-^^^^^^^^^^^^^^^^^
-
-Deleting the structure
-^^^^^^^^^^^^^^^^^^^^^^
 
 Indices and tables
 ==================

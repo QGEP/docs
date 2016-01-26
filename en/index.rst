@@ -21,6 +21,8 @@ Contents
    pgadmin/index
    vm/index
    user-guide/index
+   data-export/index
+   data-import/index
 
 Indices and tables
 ==================

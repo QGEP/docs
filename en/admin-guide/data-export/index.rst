@@ -24,4 +24,4 @@ Link:
 add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
 
 Add some screen shots 
-.. figure:: images/001_addplugin.jpeg
+.. figure:: images/muster.png
