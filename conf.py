@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QGEP'
-copyright = u'2015, Matthias Kuhn'
+copyright = u'2015, The QGEP Project/OPENGIS.ch'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -182,14 +182,28 @@ htmlhelp_basename = 'QGEPdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
+# added by mkuhn: see https://travis-ci.org/QGEP/docs/builds/78364932#L3944
+# 'babel': r'\usepackage[german,romanian,english,french]{babel}',
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+ 'papersize': 'a4paper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    % old babel-italian does not have setactivedoublequote,
+    % avoid "undefined control sequence" error
+    \\providecommand{\\setactivedoublequote}{}
+    % switch new babel-italian to the old behavior
+    \\setactivedoublequote
+    '''
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -197,7 +211,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'QGEP.tex', u'QGEP Documentation',
-   u'Matthias Kuhn', 'manual'),
+   u'The QGEP Project/OPENGIS.ch', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -227,7 +241,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'qgep', u'QGEP Documentation',
-     [u'Matthias Kuhn'], 1)
+     [u'The QGEP Project/OPENGIS.ch'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -241,7 +255,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'QGEP', u'QGEP Documentation',
-   u'Matthias Kuhn', 'QGEP', 'One line description of project.',
+   u'The QGEP Project/OPENGIS.ch', 'QGEP', 'One line description of project.',
    'Miscellaneous'),
 ]
 

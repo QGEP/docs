@@ -191,9 +191,11 @@ htmlhelp: compile_messages
 	      ".hhp project file in $(BUILDDIR)/htmlhelp/<language>."
 
 latex: compile_messages
-	@set -e; \
-		mkdir -p $(BUILDDIR)/latex/en $(BUILDDIR)/doctrees/en; \
-		$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) en $(BUILDDIR)/latex/en;
+	@set -e; for lang in $(LANGUAGES);\
+	do \
+	  mkdir -p $(BUILDDIR)/latex/$$lang $(BUILDDIR)/doctrees/$$lang; \
+    $(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) en $(BUILDDIR)/latex/$$lang; \
+	done
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/<language>."
 	@echo "Run \`make all-pdf' or \`make all-ps'"
 
@@ -226,15 +228,21 @@ epub: compile_messages
 
 all-pdf: latex
 	@set -e; \
-	make -C $(BUILDDIR)/latex/en all-pdf ;
+	for lang in $(LANGUAGES); \
+	do \
+	  make -C $(BUILDDIR)/latex/$$lang all-pdf ; \
+		if [ -d $(BUILDDIR)/html/$$lang ]; then \
+			cp -f $(BUILDDIR)/latex/$$lang/QGEP.pdf $(BUILDDIR)/html/$$lang ; \
+		fi \
+	done; \
+	if [ -d $(BUILDDIR)/html/$$lang ]; then \
+		cp -f $(BUILDDIR)/latex/en/QGEP.pdf $(BUILDDIR)/html; \
+	fi; \
 
 all-ps: latex
 	@set -e; for lang in $(LANGUAGES);\
 	do \
 		make -C $(BUILDDIR)/latex/$$lang all-ps ; \
-		if [ -d $(BUILDDIR)/html/$$lang ]; then \
-		mv -f $(BUILDDIR)/latex/$$lang/MapServer.pdf $(BUILDDIR)/html/$$lang ; \
-		fi \
 	done
 
 changes:

@@ -23,6 +23,13 @@ Inside this folder, there will be two files
 * ``pg_service.conf``
 * ``pgpass`` (If you do not want to enter the password for the db every time)
 
+.. attention::
+
+ On Windows, you need to save ``pg_service.conf`` in Unix format in order to work.
+ One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
+ and ``Edit --> EOL Conversion --> UNIX Format --> File save`` .
+  
+
 Linux
 ~~~~~
 

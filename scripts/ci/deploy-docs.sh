@@ -7,7 +7,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../..
 
 if test "$TRAVIS_SECURE_ENV_VARS" = "true" -a "$TRAVIS_BRANCH" = "master";
 then
-  echo "publish website";
+  echo "Publish docs to https://qgep.github.io/docs";
 
   pushd ${DIR}
   mkdir publish
@@ -21,4 +21,6 @@ then
   git commit -m "Automatic update from https://github.com/qgep/docs/commit/${TRAVIS_COMMIT}"
   git push
   popd
+else
+  echo "Not publishing: Not the latest master version."
 fi
