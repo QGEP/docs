@@ -7,6 +7,12 @@ This represents a guide on how to do plan plotting in QGEP.
 
 TO DO: Explain how it works
 
+General
+-------
+
+* Titelblatt und Legende
+* Rahmenpläne erstellen / verwalten / drucken
+
 Titel
 ------------------------------
 
