@@ -1,8 +1,7 @@
 This is the QGEP documentation
 ==============================
 
-QGEP is a wastewater management module for QGIS based on SIA 405 and developed
-closely to the QGIS application.
+QGEP is a wastewater management module for QGIS based on SIA 405 (Leitungskataster) and VSA-DSS (GEP) and developed closely to the QGIS application.
 
 This document can also be downloaded as a single PDF document: `QGEP.pdf <./QGEP.pdf>`__ |image|.
 
