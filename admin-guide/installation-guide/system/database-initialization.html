@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Database initialization &mdash; QGEP 0.5 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.5 documentation" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.5
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user-guide/index.html">QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user-guide/index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Database initialization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/admin-guide/installation-guide/system/database-initialization.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="database-initialization">
+<h1>Database initialization<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h1>
+<p>You can use <a class="reference internal" href="../../pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> to access and manage the database server.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../../pgadmin/install.html#install-pgadmin"><span>Install pgAdmin</span></a></p>
+</div>
+<div class="section" id="process">
+<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>In pgAdminIII</p>
+<ul class="simple">
+<li>Connect to the database server</li>
+<li>Create a new group role (preferably named <cite>qgep</cite>, but you are free to choose)</li>
+<li>Create a new login role (<cite>qgepuser</cite> for example) and make it a member of the <cite>qgep</cite> group</li>
+</ul>
+<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> window and type the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>CREATE GROUP qgep;
+CREATE ROLE qgepuser LOGIN;
+GRANT qgep TO qgepuser;
+</pre></div>
+</div>
+<ul class="simple">
+<li>Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
+<li>Change to this database</li>
+</ul>
+</li>
+<li>Create a new schema with the name <cite>qgep</cite></li>
+<li>Open an <a class="reference internal" href="../../pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
+<li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
+<li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
+</ul>
+</li>
+<li>Download demo data<ul>
+<li><a class="reference external" href="https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup">https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup</a></li>
+</ul>
+</li>
+<li>Right click the <cite>qgep</cite> schema<ul>
+<li>Click restore</li>
+<li>Load your download of qgep.backup</li>
+<li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
+<li>Click <cite>Restore</cite></li>
+<li>Click <cite>Cancel</cite></li>
+</ul>
+</li>
+<li>Right click the database and click <cite>Refresh</cite></li>
+<li>Update privileges for the database<ul>
+<li>Right click the <cite>qgep</cite> schema</li>
+<li>Click <cite>Grant Wizard …</cite></li>
+<li>Selection, click <cite>Check All</cite></li>
+<li>Privileges<ul>
+<li>Group <cite>qgep</cite></li>
+<li>Choose <cite>ALL</cite></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, The QGEP Project/OPENGIS.ch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,14 +1,21 @@
 QGEP User Guide
 ===============
+This represents a guide on how to collect data in QGEP (digitizing), edit existing data and use various tools like length profile, network following and plan plotting.
 
-Digitizing Wastewater Structures
---------------------------------
+.. toctree::
+   :maxdepth: 2
 
-Deleting Wastewater Structures
-------------------------------
+   digitizing/index
+   editing/index
+   length-profile/index
+   network-following/index
+   plan-plotting/index
 
-Deleting Geometry
-^^^^^^^^^^^^^^^^^
+   
 
-Deleting the structure
-^^^^^^^^^^^^^^^^^^^^^^
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
