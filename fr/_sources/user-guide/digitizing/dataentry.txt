@@ -13,6 +13,9 @@ There are basically two ways:
 
 Data entry in QGEP needs some understanding of the underlaying data model VSA-DSS, but is supported with some great data collecting wizards and forms that link the different tables correctly together.
 
+General
+-------
+Allgemein: Reihenfolge (Schacht - Kanal, Erfassungsgrundsätze)
 
 Link:
 add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_

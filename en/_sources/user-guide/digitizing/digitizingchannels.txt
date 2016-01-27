@@ -5,6 +5,14 @@ QGEP has a wizard to correctly build channels and connect them to the manholes /
 
 TO DO: Explain how it works
 
+General
+-------
+
+* Kanal/Haltung (Digitalisierrichtung, Schnappen)
+* Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten
+
+* evtl. Verknüpfungen erfassen
+
 Titel
 ------------------------------
 
