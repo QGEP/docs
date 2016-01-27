@@ -5,6 +5,18 @@ QGEP has a wizard to correctly collect manholes and special structures.
 
 TO DO: Explain how it works
 
+General
+-------
+Allgemein: Abwasserbauwerk-Bauwerksteil-Abwassernetzelement
+Allgemein: Wizard und Eingabemaske mit wichtigsten Feldern / Subtabellen
+Bezeichnung: Default, Unique, ...
+Schacht (Deckel) und Abwasserknoten beim Normschacht / beim Spezialbauwerk
+
+Digitalisierwerkzeuge
+Abwasserbauwerk Geometrie für Spezialbauwerke
+evtl. weitere Verknüpfungen erstellen
+
+
 Titel
 ------------------------------
 
