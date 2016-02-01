@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 11:07+0100\n"
-"PO-Revision-Date: 2015-11-27 10:07+0000\n"
+"POT-Creation-Date: 2016-02-01 09:47+0100\n"
+"PO-Revision-Date: 2016-02-01 08:47+0000\n"
 "Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -27,33 +27,34 @@ msgstr "Aceasta este documentaţia QGEP"
 # 9b62d24ca235474f99902351996e1acb
 #: ../../en/index.rst:4
 msgid ""
-"QGEP is a wastewater management module for QGIS based on SIA 405 and "
-"developed closely to the QGIS application."
-msgstr "QGEP este un modul de management pentru sistemul de canalizare bazat pe modelul de SIA 405 şi este dezvoltat pe platforma QGIS."
+"QGEP is a wastewater management module for QGIS based on SIA 405 "
+"(Leitungskataster) and VSA-DSS (GEP) and developed closely to the QGIS "
+"application."
+msgstr ""
 
 # f3edd999131144cbad7b738e73d2a432
-#: ../../en/index.rst:7
+#: ../../en/index.rst:6
 msgid ""
 "This document can also be downloaded as a single PDF document: `QGEP.pdf "
 "<./QGEP.pdf>`__ |image|."
 msgstr "Această documentație poate fi descărcată în format PDF: `QGEP.pdf <./QGEP.pdf>`__ |image|."
 
 # 1db8d4075c4243e0a662bbf674a7c232
-#: ../../en/index.rst:16
+#: ../../en/index.rst:15
 msgid "Contents"
 msgstr ""
 
 # 51b5d7c53bd24624a450690bf2a6ab99
-#: ../../en/index.rst:27
+#: ../../en/index.rst:28
 msgid "Indices and tables"
 msgstr "Indecşi şi tabele"
 
 # d4092778776049f98ab78f2de4905d68
-#: ../../en/index.rst:29
+#: ../../en/index.rst:30
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
 # a1c64000c8304fa4b97fd64bcad53b29
-#: ../../en/index.rst:30
+#: ../../en/index.rst:31
 msgid ":ref:`search`"
 msgstr ":ref:`search`"

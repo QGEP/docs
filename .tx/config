@@ -46,3 +46,12 @@ trans.it = i18n/it/user-guide.po
 trans.ro = i18n/ro/user-guide.po
 type = PO
 
+[qgep-documentation.admin-guide]
+source_file = i18n/pot/admin-guide.pot
+source_lang = en
+trans.de = i18n/de/admin-guide.po
+trans.fr = i18n/fr/admin-guide.po
+trans.it = i18n/it/admin-guide.po
+trans.ro = i18n/ro/admin-guide.po
+type = PO
+
