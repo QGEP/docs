@@ -18,9 +18,9 @@ Contents
    :maxdepth: 2
 
    installation-guide/index
+   user-guide/index
    pgadmin/index
    vm/index
-   user-guide/index
    data-export/index
    data-import/index
 
