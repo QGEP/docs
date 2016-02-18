@@ -1,5 +1,3 @@
-.. _QGEP User Guide:
-
 Plan plotting
 =============
 
@@ -13,7 +11,7 @@ General
 * Titelblatt und Legende
 * Rahmenpläne erstellen / verwalten / drucken
 
-Titel
+Title
 ------------------------------
 
 Subtitle

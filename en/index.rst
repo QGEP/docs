@@ -16,13 +16,12 @@ Contents
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    installation-guide/index
    user-guide/index
-   pgadmin/index
-   vm/index
-   data-export/index
-   data-import/index
+   admin-guide/index
+
 
 Indices and tables
 ==================

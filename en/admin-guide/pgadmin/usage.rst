@@ -19,7 +19,7 @@ SQL query
 .. _Database dump:
 
 Database dump
----------
+-------------
 
 .. note::
  * Open pgAdminIII and connect to the database
