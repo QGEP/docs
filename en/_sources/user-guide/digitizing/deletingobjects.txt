@@ -3,7 +3,7 @@ Deleting objects
 
 TO DO: Explain how it works
 
-Titel
+Title
 ------------------------------
 
 Subtitle

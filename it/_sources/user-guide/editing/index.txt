@@ -1,7 +1,5 @@
-.. _QGEP User Guide:
-
 Editing of existing data
-=======================
+========================
 
 This represents a guide on how to edit existing data in QGEP.
 
@@ -17,11 +15,11 @@ General
 * Kanäle unterteilen
 
 
-Titel
-------------------------------
+Title
+-----
 
 Subtitle
-^^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 * List
 

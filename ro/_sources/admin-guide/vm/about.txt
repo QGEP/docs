@@ -24,3 +24,4 @@ Settings that are changed from a default software install:
 
   - change the passwords
   - regenerate the ssh keys by running in a terminal ``sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``
+

@@ -1,7 +1,5 @@
-.. _QGEP User Guide:
-
 Digitizing in QGEP
-====================
+==================
 
 This represents a guide on how to correctly collect and digitize data of sewer networks including building the topology.
 

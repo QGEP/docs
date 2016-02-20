@@ -13,7 +13,7 @@ General
 
 * evtl. Verknüpfungen erfassen
 
-Titel
+Title
 ------------------------------
 
 Subtitle

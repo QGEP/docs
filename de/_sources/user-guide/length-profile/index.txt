@@ -1,17 +1,15 @@
-.. _QGEP User Guide:
-
 Length profiles
-====================
+===============
 
-This represents a guide on how to choose a section and display a lenght profile.
+This represents a guide on how to choose a section and display a length profile.
 
 TO DO: Explain how it works
 
-Titel
-------------------------------
+Title
+-----
 
 Subtitle
-^^^^^^^^^^^^^^^^^
+^^^^^^^^
 
 * List
 

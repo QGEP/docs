@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3. Setări stație de lucru &mdash; QGEP 0.5 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.5 documentation" href="../index.html"/>
+        <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
+        <link rel="next" title="2. QGEP User Guide" href="../user-guide/index.html"/>
+        <link rel="prev" title="1.2. Database initialization" href="database-initialization.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.5
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Setup database server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Setări stație de lucru</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.3.1. Configurare baza de date</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">1.3.1.1. Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">1.3.1.2. Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">1.3.1.3. Toate sistemele</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgis">1.3.2. Instalare QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">1.3.3. Instalare plugin QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">1.3.4. Instalează proiectul demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
+      
+    <li>1.3. Setări stație de lucru</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/installation-guide/workstation.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setup-workstation">
+<h1>1.3. Setări stație de lucru<a class="headerlink" href="#setup-workstation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="database-configuration">
+<h2>1.3.1. Configurare baza de date<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Pentru a-i spune stației de lucru (de pe care lucrezi) unde este baza de date instalată, va trebui să creezi niște fișiere pe aceasta. Această operațiune este necesară pe fiecare stație de lucru/laptop etc. de pe care se va rula QGIS/QGEP. Operațiunea nu este necesară pe server.</p>
+<p>Aceste instrucțiuni depind de sistemul de operare.</p>
+<div class="section" id="windows">
+<h3>1.3.1.1. Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Creează un nou director acolo unde vrei să salvezi configurația. (De ex. un director <code class="docutils literal"><span class="pre">pgconfig</span></code> în directorul acasă). Acest director este descris în acest ghid de <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>Setează variabila de sistem <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> cu calea către <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>În acest director, vor fi două fișiere.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">pgpass</span></code> (opțional, dacă nu vrei sa introduci parola de fiecare dată)</p>
+</li>
+</ul>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Pe Windows, fișierul <code class="docutils literal"><span class="pre">pg_service.conf`</span></code> trebuie salvat în format Unix pentru ca totul să funcționeze corect. O modalitate de a face aceasta este să se deschidă cu <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> și să se urmeze pașii <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h3>1.3.1.2. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>În linux, fișierele  <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> și <code class="docutils literal"><span class="pre">.pgpass</span></code> se pot pune în folderul home (în mod normal <code class="docutils literal"><span class="pre">/home/[numeutilizator]</span></code>)</p>
+</div>
+<div class="section" id="all-systems">
+<h3>1.3.1.3. Toate sistemele<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<p>Introdu următoarele variabile în <code class="docutils literal"><span class="pre">pg_service.conf</span></code> sau <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>. Variabilele introduse trebuie adaptate în funcție de topologia sistemului.</p>
+<div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
+<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
+<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
+</pre></div>
+</div>
+<p>Pentru a salva și parola în sistem se poate folosi fișierul <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+<div class="code ini highlight-python"><div class="highlight"><pre><span></span>localhost:5432:*:qgepuser:password
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Dacă baza de date nu e instalată pe stația de lucru locală atunci trebuie înlocuit <code class="docutils literal"><span class="pre">localhost</span></code> cu adresa de rețea a bazei de date, oriunde găsiți aceasta referință.</p>
+</div>
+</div>
+</div>
+<div class="section" id="install-qgis">
+<h2>1.3.2. Instalare QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Versiune minimă necesară 2.10</p>
+<ul>
+<li><p class="first">Este recomandat sa fie folosite cele mai noi versiuni de QGIS - master (numite qgis-dev în Windows) pentru a avea parte de o experienta mai buna folosind QGEP.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="install-qgep-plugin">
+<h2>1.3.3. Instalare plugin QGEP<a class="headerlink" href="#install-qgep-plugin" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Deschide QGIS</p>
+</li>
+<li><p class="first">Du-te la Pluginuri (poziția <em>1</em> în imaginea de dedesubt)</p>
+<ul>
+<li>Manage and Install Plugins</li>
+<li><p class="first">Setări (poziția <em>3</em>)</p>
+<ul>
+<li><p class="first">Adaugă</p>
+<ul>
+<li><p class="first">Nume: QGEP</p>
+</li>
+<li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
+</ul>
+</li>
+<li><p class="first">Permite <cite>Afișare pluginuri experimentale</cite> (poziția <em>2</em>)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="figure" id="id1">
+<img alt="../_images/001_addplugin.jpeg" src="../_images/001_addplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Adaugă repository-ul de plugin</strong></span></p>
+</div>
+<p>Activează pluginul (a se vedea imaginea de mai jos)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">All - Toate</p>
+<ul>
+<li><p class="first">Caută  <cite>QGEP</cite></p>
+</li>
+<li><p class="first">Bifează căsuța de lîngă</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<div class="figure" id="id2">
+<img alt="../_images/001_searchplugin.jpeg" src="../_images/001_searchplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Adaugă pluginul QGEP</strong></span></p>
+</div>
+</div>
+<div class="section" id="install-the-demo-project">
+<h2>1.3.4. Instalează proiectul demo<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Descarcă <a class="reference external" href="https://github.com/QGEP/data/archive/demodata.zip">https://github.com/QGEP/data/archive/demodata.zip</a></p>
+</li>
+<li><p class="first">Extrage fișierul</p>
+</li>
+<li><p class="first">Reîncarcă baza de date cu fișierul <cite>qgep_demodata.backup</cite> cu pgAdminIII</p>
+</li>
+<li><p class="first">Deschide <cite>project/qgep_en.qgs</cite> cu QGIS</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="2. QGEP User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="database-initialization.html" class="btn btn-neutral" title="1.2. Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

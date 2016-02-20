@@ -21,6 +21,6 @@ Link:
 add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
 
 .. figure:: images/muster.png
-...
+
 
 (take more from GEPView-Howto 1.2. Chapter 3)

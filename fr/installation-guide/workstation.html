@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3. Configuration du poste de travail &mdash; documentation QGEP 0.5</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation QGEP 0.5" href="../index.html"/>
+        <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
+        <link rel="next" title="2. QGEP User Guide" href="../user-guide/index.html"/>
+        <link rel="prev" title="1.2. Database initialization" href="database-initialization.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.5
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Setup database server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Configuration du poste de travail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.3.1. Configuration de la base de données</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">1.3.1.1. Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">1.3.1.2. Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">1.3.1.3. Tous les systèmes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgis">1.3.2. Installer QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">1.3.3. Installer le plugin QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">1.3.4. Installation du projet de démo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
+      
+    <li>1.3. Configuration du poste de travail</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/installation-guide/workstation.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setup-workstation">
+<h1>1.3. Configuration du poste de travail<a class="headerlink" href="#setup-workstation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="database-configuration">
+<h2>1.3.1. Configuration de la base de données<a class="headerlink" href="#database-configuration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>To tell a workstation, where the database is (on the local system or on a
+network server) you will have to create some files initially on every device on
+which you will have QGIS/QGEP running. It is not required to do that on the
+server itself.</p>
+<p>Ces étapes dépendent de votre système d&#8217;exploitation.</p>
+<div class="section" id="windows">
+<h3>1.3.1.1. Windows<a class="headerlink" href="#windows" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Créer un nouveau dossier où vous souhaitez enregister la configuration. Par exemple <code class="docutils literal"><span class="pre">pgconfig</span></code> dans vos documents. Ce dossier sera connu sous le nom de <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> dans ce guide.</p>
+<p>Configurer la variable d&#8217;environnement <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> pour pointer sur le chemin de <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code></p>
+<p>Dans ce dossier, vous trouverez deux fichiers</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">pgpass</span></code> (si vous ne souhaitez pas entre le mot de passe à chaque connexion)</p>
+</li>
+</ul>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">On Windows, you need to save <code class="docutils literal"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
+One way to do it is to open it with <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>
+and <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h3>1.3.1.2. Linux<a class="headerlink" href="#linux" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Sous Linux, vous pourrez placer les fichiers <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> et <code class="docutils literal"><span class="pre">.pgpass</span></code> sous le dossier home (habituellement <code class="docutils literal"><span class="pre">/home/[username]</span></code>)</p>
+</div>
+<div class="section" id="all-systems">
+<h3>1.3.1.3. Tous les systèmes<a class="headerlink" href="#all-systems" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Placer les lignes suivantes dans le fichier <code class="docutils literal"><span class="pre">pg_service.conf</span></code> ou <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>. Vous devrez peut-être apporter des modifications selon votre configuration.</p>
+<div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
+<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
+<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
+</pre></div>
+</div>
+<p>Pour enregistrer le mot de passe sur votre système, vous pouvez utiliser le fichier <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+<div class="code ini highlight-python"><div class="highlight"><pre><span></span>localhost:5432:*:qgepuser:password
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si la base de données n&#8217;est pas sur votre poste local, remplacer toutes les occurences de <code class="docutils literal"><span class="pre">localhost</span></code> par l&#8217;adresse réseau du serveur de base de données.</p>
+</div>
+</div>
+</div>
+<div class="section" id="install-qgis">
+<h2>1.3.2. Installer QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Version minimum requise: 2.10</p>
+<ul>
+<li><p class="first">Nous vous recommandons l&#8217;utilisation des versions de développements de QGIS (appelées qgis-dev sous Windows). Elles offriront une meilleure expérience utilisateur avec QGEP.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="install-qgep-plugin">
+<h2>1.3.3. Installer le plugin QGEP<a class="headerlink" href="#install-qgep-plugin" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Ouvrir QGIS</p>
+</li>
+<li>Go to Plugins (position <em>1</em> in the image below)<ul>
+<li>Manage and Install Plugins</li>
+<li>Settings (position <em>3</em>)<ul>
+<li><p class="first">Ajouter...</p>
+<ul>
+<li><p class="first">Nom: QGEP</p>
+</li>
+<li>URL: <code class="docutils literal"><span class="pre">http://qgis.vitu.ch/plugins/plugins.xml</span></code></li>
+</ul>
+</li>
+<li>Enable <cite>Show also experimental plugins</cite> (position <em>2</em>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="figure" id="id1">
+<img alt="../_images/001_addplugin.jpeg" src="../_images/001_addplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Add the plugin repo</strong></span></p>
+</div>
+<p>Activate the plugin (see image below):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">Tous</p>
+<ul>
+<li><p class="first">Chercher <cite>QGEP</cite></p>
+</li>
+<li><p class="first">Cocher la case à côté</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<div class="figure" id="id2">
+<img alt="../_images/001_searchplugin.jpeg" src="../_images/001_searchplugin.jpeg" />
+<p class="caption"><span class="caption-text"><strong>Add the QGEP plugin</strong></span></p>
+</div>
+</div>
+<div class="section" id="install-the-demo-project">
+<h2>1.3.4. Installation du projet de démo<a class="headerlink" href="#install-the-demo-project" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Download <a class="reference external" href="https://github.com/QGEP/data/archive/demodata.zip">https://github.com/QGEP/data/archive/demodata.zip</a></li>
+<li><p class="first">Extraire le ficher</p>
+</li>
+<li>Restore the file <cite>qgep_demodata.backup</cite> with pgAdminIII</li>
+<li>Open <cite>project/qgep_en.qgs</cite> with QGIS</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="2. QGEP User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="database-initialization.html" class="btn btn-neutral" title="1.2. Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

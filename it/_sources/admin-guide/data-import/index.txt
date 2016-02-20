@@ -1,5 +1,3 @@
-.. _Admin Guide:
-
 Data import
 ====================
 
@@ -14,7 +12,7 @@ This represents a guide on how to import data into QGEP.
 
 TO DO: Explain how it works
 
-Titel
+Title
 ------------------------------
 
 Subtitle
