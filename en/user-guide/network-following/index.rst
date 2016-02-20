@@ -1,5 +1,3 @@
-.. _QGEP User Guide:
-
 Network following tools
 =======================
 

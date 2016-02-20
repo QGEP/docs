@@ -1,5 +1,3 @@
-.. _Admin Guide:
-
 Data export
 ===========
 
@@ -14,7 +12,7 @@ TO DO: Explain how it works
 * other
 
 
-Titel
+Title
 ------------------------------
 
 Subtitle

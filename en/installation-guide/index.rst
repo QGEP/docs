@@ -11,8 +11,9 @@ get your system ready for running QGEP.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+   :numbered:
 
-   system/server
-   system/database-initialization
-   system/workstation
+   server
+   database-initialization
+   workstation
