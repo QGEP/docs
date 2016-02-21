@@ -44,7 +44,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 
 * Right click the `qgep` schema
 
-  * Click restore
+  * Click `Restore`
 
   * Load your download of qgep.backup
 
