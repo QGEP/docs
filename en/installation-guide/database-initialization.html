@@ -170,7 +170,7 @@ GRANT qgep TO qgepuser;
 </ul>
 </li>
 <li>Right click the <cite>qgep</cite> schema<ul>
-<li>Click restore</li>
+<li>Click <cite>Restore</cite></li>
 <li>Load your download of qgep.backup</li>
 <li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
 <li>Click <cite>Restore</cite></li>
@@ -180,6 +180,8 @@ GRANT qgep TO qgepuser;
 <li>Right click the database and click <cite>Refresh</cite></li>
 <li>Update privileges for the database<ul>
 <li>Right click the <cite>qgep</cite> schema</li>
+<li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.
+You can also do this as a query: <code class="docutils literal"><span class="pre">GRANT</span> <span class="pre">USAGE</span> <span class="pre">ON</span> <span class="pre">SCHEMA</span> <span class="pre">qgep</span> <span class="pre">TO</span> <span class="pre">GROUP</span> <span class="pre">qgep;</span></code></li>
 <li>Click <cite>Grant Wizard …</cite></li>
 <li>Selection, click <cite>Check All</cite></li>
 <li>Privileges<ul>

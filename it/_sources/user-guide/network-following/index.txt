@@ -5,7 +5,7 @@ This represents a guide on how to use the network following tools in QGEP.
 
 TO DO: Explain how it works
 
-Titel
+Title
 ------------------------------
 
 Subtitle

@@ -44,7 +44,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 
 * Right click the `qgep` schema
 
-  * Click restore
+  * Click `Restore`
 
   * Load your download of qgep.backup
 
@@ -59,6 +59,9 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 * Update privileges for the database
 
   * Right click the `qgep` schema
+
+  * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
+    You can also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``
 
   * Click `Grant Wizard …`
 
