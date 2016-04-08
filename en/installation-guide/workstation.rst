@@ -83,7 +83,8 @@ Install QGEP plugin
 
       * Name: QGEP
 
-      * URL: ``http://qgis.vitu.ch/plugins/plugins.xml``
+      * URL:
+        ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``
 
     * Enable `Show also experimental plugins` (position *2*)
 
