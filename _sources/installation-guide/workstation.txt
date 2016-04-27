@@ -63,10 +63,12 @@ To save the password as well on the system you may use the file `pgpass <http://
 Install QGIS
 ------------
 
-* Minimum requirement 2.10
+* Minimum requirement 2.14
 
-  * We recommend using the latest master builds (called qgis-dev on Windows)
-    which often offer a better experience in combination with QGEP.
+* We recommend using the latest master builds (called qgis-dev on Windows)
+  which often offer a better experience in combination with QGEP.
+  For Windows installation, download the `OSGeo4W Installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_
+  choose *advanced installation* and install qgis-dev.
 
 Install QGEP plugin
 -------------------
