@@ -7,9 +7,9 @@ Demo project
 -------
 * Make sure you have imported the demo project with pgAdminIII (:ref:`database-initialization`)
 * Open the demoproject with Menu Project/Open
-.. figure:: images/qgep_demoproject_selection_qgep_en.qgs.jpg
+.. figure:: images/qgep_demoproject_selection_qgep_en_qgs.jpg
 * Login to the database
-.. figure:: images/qgep_demoproject_selection_qgep_en.qgs.jpg
+.. figure:: images/qgep_demoproject_login.jpg
 * You should now have the demoproject loaded
 .. figure:: images/qgep_demoproject_overview.jpg
 * The project consists of different layers. Depending on your task what to edit or add you choose the layer.
