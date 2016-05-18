@@ -71,7 +71,7 @@ Changing attributes of point elements (manholes / special structures)
  * The tab "covers" allows you to add additional covers. 
  * In "Structure parts" you can add also further parts such as acces aids, backflow prevention, dryweather flume etc.
  
- .. figure:: images/vw_qgep_cover_structure_parts.jpg
+ .. figure:: images/form_vw_qgep_cover_structure_parts.jpg
  
  * In "Wastewater nodes parts" you can edit or add all attributes of this class or add a second element
 
