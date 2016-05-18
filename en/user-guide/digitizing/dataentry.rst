@@ -20,8 +20,11 @@ Allgemein: Reihenfolge (Schacht - Kanal, Erfassungsgrundsätze)
 
 
 * To start with data entry select the button
+
 .. figure:: images/button_data_entry_wizard_selected.jpg
+
 * On the left side bottom the following window appears "QGEP Digitizing"
+
 .. figure:: images/wizard_data_entry.jpg
 
 

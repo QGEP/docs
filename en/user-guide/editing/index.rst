@@ -7,11 +7,17 @@ Demo project
 -------
 * Make sure you have imported the demo project with pgAdminIII (:ref:`database-initialization`)
 * Open the demoproject with Menu Project/Open
+
 .. figure:: images/qgep_demoproject_selection_qgep_en_qgs.jpg
+
 * Login to the database
+
 .. figure:: images/qgep_demoproject_login.jpg
+
 * You should now have the demoproject loaded
+
 .. figure:: images/qgep_demoproject_overview.jpg
+
 * The project consists of different layers. Depending on your task what to edit or add you choose the layer.
 
 Layers
@@ -53,15 +59,22 @@ Changing attributes of point elements (manholes / special structures)
 
  * To change an attribut first select the vw_qgep_cover layer and switch to the edit mode
  * Then click on the info button and choose the element you want to edit by double-clicking
+ 
  .. figure:: images/qgep_info_button.jpg
+ 
  * The form of the vw_qgep_cover will open
+ 
  .. figure:: images/form_vw_qgep_cover.jpg
+ 
  * On the first tab you can change the most common attributes
  * To change attributes of related tables such as the cover select that tab. Depending on the kind of wastewater structure you can edit additional attributs in the respective tab (special structure, manhole). 
  * The tab "covers" allows you to add additional covers. 
  * In "Structure parts" you can add also further parts such as acces aids, backflow prevention, dryweather flume etc.
+ 
  .. figure:: images/vw_qgep_cover_structure_parts.jpg
-  * In "Wastewater nodes parts" you can edit or add all attributes of this class or add a second element
+ 
+ * In "Wastewater nodes parts" you can edit or add all attributes of this class or add a second element
+
  .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
 
 Changing attributes of linear elements (channels)
@@ -72,6 +85,7 @@ Changing attributes of linear elements (channels)
  * The form of the vw_qgep_reach will open
  * On the first tab you can change the most common attributes
  * To change attributes of related tables such as reaches select that tab. 
+
  TO DO: add image
  
 * TO DO:
