@@ -1,39 +1,60 @@
 Digitizing Waste water structures 
 =================================
 
-QGEP has a wizard to correctly collect manholes and special structures.
-
-TO DO: Explain how it works
-
 General
 -------
-Allgemein: Abwasserbauwerk-Bauwerksteil-Abwassernetzelement
-Allgemein: Wizard und Eingabemaske mit wichtigsten Feldern / Subtabellen
-Bezeichnung: Default, Unique, ...
-Schacht (Deckel) und Abwasserknoten beim Normschacht / beim Spezialbauwerk
+QGEP has a wizard to correctly collect manholes and special structures.
 
-Digitalisierwerkzeuge
-Abwasserbauwerk Geometrie für Spezialbauwerke
-evtl. weitere Verknüpfungen erstellen
+Select the "wizard" button, then click "start data entry" and choose "wastewater structure" in the pull down menu.
 
+.. figure:: images/wizard_data_entry.jpg
 
-Title
+.. figure:: images/wizard_wastewater_structure.jpg
+
+Digitizing
+-------
+Now the cursor changes to the digitizing symbol and you can select the location of the new point element.
+
+.. figure:: images/wizard_data_entry_with_new_cursor.jpg
+
+Then the vw_gep_cover form opens and you can start adding data in the General tab:
+
+.. figure:: images/wizard_wastewater_structure_manhole_form_ws_type.jpg
+
+Select the type you want [discharge_point, infiltration_installation, manhole, special_structure]
+
+Then add the identifier (this is the attribute that will be displayed on the map).
+
+For manholes and special structures you then choose also the function [either in manhole_function or special structure_function] (will be automatically displayed or hidden in the future depending on ws_type)
+
+.. figure:: images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg
+
+Add other attributes on this General Tab. Now you can click OK.
+
+.. figure:: images/wizard_wastewater_structure_manhole_form_data_ok.jpg
+
+Save the information of this layer by stopping the data entry wizard
+
+.. figure:: images/stop_data_entry.jpg
+
+You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
+If you do not select the edit mode, you can just look add the existing data.
+
+.. figure:: images/manhole_info_manhole.jpg
+
+For detailed information about editing see the next chapter
+
+Further attributes and classes
 ------------------------------
 
-Subtitle
-^^^^^^^^^^^^^^^^^
+When a point object is digitized a series of steps take place in the background in the QGIS database:
+a) an new object in the class wastewater structure is added
+b) a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked
+c) a new cover object is added and linked to the waste water structure
+d) a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes
+e) When you add additional 
 
-* List
 
-  * Subpoint
-  
-Link:
-add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
 
-Add some screen shots 
-
-.. figure:: images/muster.png
-
-...
 
 (take more from GEPView-Howto 1.2. Chapter 4.1)

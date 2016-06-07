@@ -86,15 +86,14 @@ Changing attributes of linear elements (channels)
  * On the first tab you can change the most common attributes
  * To change attributes of related tables such as reaches select that tab. 
 
- TO DO: add image
+..TO DO: add image
  
-* TO DO:
-* Changing relations (Verknüpfungen ändern)
-* Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))
-* Split channels into different reaches (Kanäle unterteilen)
+..* TO DO:
+  * Changing relations (Verknüpfungen ändern)
+  * Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))
+  * Split channels into different reaches (Kanäle unterteilen)
   
   
-Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:
-add `link <http://dss.vsa.ch>`_
+`Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS: <http://dss.vsa.ch>`_
 
 
