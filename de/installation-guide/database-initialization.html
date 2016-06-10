@@ -154,56 +154,30 @@ CREATE ROLE qgepuser LOGIN;
 GRANT qgep TO qgepuser;
 </pre></div>
 </div>
-<ul>
-<li><p class="first">Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)</p>
 <ul class="simple">
+<li>Create a new database (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
 <li>Change to this database</li>
 </ul>
 </li>
-<li><p class="first">Create a new schema with the name <cite>qgep</cite></p>
-</li>
-<li><p class="first">Open an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)</p>
-<ul class="simple">
+<li>Create a new schema with the name <cite>qgep</cite></li>
+<li>Open an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
 </li>
-<li><p class="first">Download demo data</p>
-<ul class="simple">
+<li>Download demo data<ul>
 <li><a class="reference external" href="https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup">https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup</a></li>
 </ul>
 </li>
-<li><p class="first">Right click the <cite>qgep</cite> schema</p>
-<ul class="simple">
+<li>Right click the <cite>qgep</cite> schema<ul>
 <li>Click <cite>Restore</cite></li>
 <li>Load your download of qgep.backup</li>
-</ul>
-<div class="figure">
-<img alt="../_images/qgep_restore.jpg" src="../_images/qgep_restore.jpg" />
-</div>
-<ul class="simple">
 <li>Restore Options #2: Activate <cite>Clean before restore</cite></li>
-</ul>
-<div class="figure">
-<img alt="../_images/qgep_restore_options2.jpg" src="../_images/qgep_restore_options2.jpg" />
-</div>
-<ul class="simple">
 <li>Click <cite>Restore</cite></li>
-</ul>
-<div class="figure">
-<img alt="../_images/qgep_restore_messages.jpg" src="../_images/qgep_restore_messages.jpg" />
-</div>
-<ul class="simple">
 <li>Click <cite>Cancel</cite></li>
 </ul>
 </li>
-<li><p class="first">Right click the database and click <cite>Refresh</cite></p>
-</li>
-</ul>
-<div class="figure">
-<img alt="../_images/pgadmin_qgep_refresh.jpg" src="../_images/pgadmin_qgep_refresh.jpg" />
-</div>
-<ul class="simple">
+<li>Right click the database and click <cite>Refresh</cite></li>
 <li>Update privileges for the database<ul>
 <li>Right click the <cite>qgep</cite> schema</li>
 <li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.

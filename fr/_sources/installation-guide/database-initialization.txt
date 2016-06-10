@@ -48,21 +48,13 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 
   * Load your download of qgep.backup
 
-  .. figure:: images/qgep_restore.jpg
-
   * Restore Options #2: Activate `Clean before restore`
 
-  .. figure:: images/qgep_restore_options2.jpg
-
   * Click `Restore`
-
-  .. figure:: images/qgep_restore_messages.jpg
 
   * Click `Cancel`
 
 * Right click the database and click `Refresh`
-
-.. figure:: images/pgadmin_qgep_refresh.jpg
 
 * Update privileges for the database
 

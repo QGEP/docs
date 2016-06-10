@@ -16,21 +16,11 @@ Data entry in QGEP needs some understanding of the underlaying data model VSA-DS
 General
 -------
 Allgemein: Reihenfolge (Schacht - Kanal, Erfassungsgrundsätze)
-(take more from GEPView-Howto 1.2. Chapter 3)
-
-
-* To start with data entry select the button
-
-.. figure:: images/button_data_entry_wizard_selected.jpg
-
-* On the left side bottom the following window appears "QGEP Digitizing"
-
-.. figure:: images/wizard_data_entry.jpg
-
 
 Link:
 add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
 
+.. figure:: images/muster.png
 
 
-
+(take more from GEPView-Howto 1.2. Chapter 3)
