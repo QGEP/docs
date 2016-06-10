@@ -88,7 +88,8 @@
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.1.1. Data entry</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.1.2. Digitizing Waste water structures</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.1.2.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#title">2.1.2.2. Title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing">2.1.2.2. Digitizing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.1.2.3. Further attributes and classes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.3. Digitizing Waste channels</a></li>
@@ -146,37 +147,57 @@
             
   <div class="section" id="digitizing-waste-water-structures">
 <h1>2.1.2. Digitizing Waste water structures<a class="headerlink" href="#digitizing-waste-water-structures" title="Link a questa intestazione">¶</a></h1>
-<p>QGEP has a wizard to correctly collect manholes and special structures.</p>
-<p>TO DO: Explain how it works</p>
 <div class="section" id="general">
 <h2>2.1.2.1. General<a class="headerlink" href="#general" title="Link a questa intestazione">¶</a></h2>
-<p>Allgemein: Abwasserbauwerk-Bauwerksteil-Abwassernetzelement
-Allgemein: Wizard und Eingabemaske mit wichtigsten Feldern / Subtabellen
-Bezeichnung: Default, Unique, ...
-Schacht (Deckel) und Abwasserknoten beim Normschacht / beim Spezialbauwerk</p>
-<p>Digitalisierwerkzeuge
-Abwasserbauwerk Geometrie für Spezialbauwerke
-evtl. weitere Verknüpfungen erstellen</p>
-</div>
-<div class="section" id="title">
-<h2>2.1.2.2. Title<a class="headerlink" href="#title" title="Link a questa intestazione">¶</a></h2>
-<div class="section" id="subtitle">
-<h3>2.1.2.2.1. Subtitle<a class="headerlink" href="#subtitle" title="Link a questa intestazione">¶</a></h3>
-<ul class="simple">
-<li>List<ul>
-<li>Subpoint</li>
-</ul>
-</li>
-</ul>
-<p>Link:
-add <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">link</a></p>
-<p>Add some screen shots</p>
+<p>QGEP has a wizard to correctly collect manholes and special structures.</p>
+<p>Select the &#8220;wizard&#8221; button, then click &#8220;start data entry&#8221; and choose &#8220;wastewater structure&#8221; in the pull down menu.</p>
 <div class="figure">
-<img alt="../../_images/muster2.png" src="../../_images/muster2.png" />
+<img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
-<p>...</p>
-<p>(take more from GEPView-Howto 1.2. Chapter 4.1)</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure.jpg" src="../../_images/wizard_wastewater_structure.jpg" />
 </div>
+</div>
+<div class="section" id="digitizing">
+<h2>2.1.2.2. Digitizing<a class="headerlink" href="#digitizing" title="Link a questa intestazione">¶</a></h2>
+<p>Now the cursor changes to the digitizing symbol and you can select the location of the new point element.</p>
+<div class="figure">
+<img alt="../../_images/wizard_data_entry_with_new_cursor.jpg" src="../../_images/wizard_data_entry_with_new_cursor.jpg" />
+</div>
+<p>Then the vw_gep_cover form opens and you can start adding data in the General tab:</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" />
+</div>
+<p>Select the type you want [discharge_point, infiltration_installation, manhole, special_structure]</p>
+<p>Then add the identifier (this is the attribute that will be displayed on the map).</p>
+<p>For manholes and special structures you then choose also the function [either in manhole_function or special structure_function] (will be automatically displayed or hidden in the future depending on ws_type)</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" />
+</div>
+<p>Add other attributes on this General Tab. Now you can click OK.</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" />
+</div>
+<p>Save the information of this layer by stopping the data entry wizard</p>
+<div class="figure">
+<img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
+</div>
+<p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
+If you do not select the edit mode, you can just look add the existing data.</p>
+<div class="figure">
+<img alt="../../_images/manhole_info_manhole.jpg" src="../../_images/manhole_info_manhole.jpg" />
+</div>
+<p>For detailed information about editing see the edit chapter.</p>
+</div>
+<div class="section" id="further-attributes-and-classes">
+<h2>2.1.2.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link a questa intestazione">¶</a></h2>
+<p>When a point object is digitized a series of steps take place in the background in the QGIS database:
+a) an new object in the class wastewater structure is added
+b) a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked
+c) a new cover object is added and linked to the waste water structure
+d) a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes
+e) When you add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) the QGEP automatically generates the objects in the needed tables and subtables and sets the foreign keys to the waste water structure.</p>
+<p>..(take more from GEPView-Howto 1.2. Chapter 4.1)</p>
 </div>
 </div>
 

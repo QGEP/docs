@@ -1,23 +1,28 @@
 Length profiles
 ===============
-
 This represents a guide on how to choose a section and display a length profile.
 
-TO DO: Explain how it works
+QGEP has a unique function to display lenght profiles. Choose the lengt profile button to start.
 
-Title
------
+.. figure:: images/profile_button_selected.jpg
 
-Subtitle
-^^^^^^^^
+The lenth profile window opens
 
-* List
+.. figure:: images/profile_lenght_profile_empty.jpg
 
-  * Subpoint
-  
-Link:
-add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+Select the vw_qgep_cover layer to select a start point.
 
-Add some screen shots 
+.. figure:: images/profile_selection_start.jpg
 
-.. figure:: images/muster.png
+Then select a next manhole - it is not needed to be the direct next one. The tool automatically selects the manholes in between. You can repeat this several times. If there is no continuity you will get a warning. Right click to finish your selection.
+
+.. figure:: images/profile_selection.jpg
+
+In the profile window you now have the length profile. You can see detail info about manholes. When hovering, you can see with a green highlighting the manhole you currently touch.
+
+.. figure:: images/profile_connected_manhole.jpg
+
+The same is also implemented for reaches
+
+.. figure:: images/profile_connected_reach.jpg
+

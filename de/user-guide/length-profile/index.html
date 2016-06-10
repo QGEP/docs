@@ -86,13 +86,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Digitizing in QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.2. Editing of existing data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.3. Length profiles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#title">2.3.1. Title</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#subtitle">2.3.1.1. Subtitle</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.3. Length profiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.4. Network following tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.5. Plan plotting</a></li>
 </ul>
@@ -141,24 +135,29 @@
   <div class="section" id="length-profiles">
 <h1>2.3. Length profiles<a class="headerlink" href="#length-profiles" title="Link zu dieser Überschrift">¶</a></h1>
 <p>This represents a guide on how to choose a section and display a length profile.</p>
-<p>TO DO: Explain how it works</p>
-<div class="section" id="title">
-<h2>2.3.1. Title<a class="headerlink" href="#title" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="subtitle">
-<h3>2.3.1.1. Subtitle<a class="headerlink" href="#subtitle" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>List<ul>
-<li>Subpoint</li>
-</ul>
-</li>
-</ul>
-<p>Link:
-add <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">link</a></p>
-<p>Add some screen shots</p>
+<p>QGEP has a unique function to display lenght profiles. Choose the lengt profile button to start.</p>
 <div class="figure">
-<img alt="../../_images/muster4.png" src="../../_images/muster4.png" />
+<img alt="../../_images/profile_button_selected.jpg" src="../../_images/profile_button_selected.jpg" />
 </div>
+<p>The lenth profile window opens</p>
+<div class="figure">
+<img alt="../../_images/profile_lenght_profile_empty.jpg" src="../../_images/profile_lenght_profile_empty.jpg" />
 </div>
+<p>Select the vw_qgep_cover layer to select a start point.</p>
+<div class="figure">
+<img alt="../../_images/profile_selection_start.jpg" src="../../_images/profile_selection_start.jpg" />
+</div>
+<p>Then select a next manhole - it is not needed to be the direct next one. The tool automatically selects the manholes in between. You can repeat this several times. If there is no continuity you will get a warning. Right click to finish your selection.</p>
+<div class="figure">
+<img alt="../../_images/profile_selection.jpg" src="../../_images/profile_selection.jpg" />
+</div>
+<p>In the profile window you now have the length profile. You can see detail info about manholes. When hovering, you can see with a green highlighting the manhole you currently touch.</p>
+<div class="figure">
+<img alt="../../_images/profile_connected_manhole.jpg" src="../../_images/profile_connected_manhole.jpg" />
+</div>
+<p>The same is also implemented for reaches</p>
+<div class="figure">
+<img alt="../../_images/profile_connected_reach.jpg" src="../../_images/profile_connected_reach.jpg" />
 </div>
 </div>
 
