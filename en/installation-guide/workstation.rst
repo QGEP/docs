@@ -65,8 +65,8 @@ Install QGIS
 
 * Minimum requirement 2.14
 
-* We recommend using the latest master builds (called qgis-dev on Windows)
-  which often offer a better experience in combination with QGEP.
+* We recommend using the latest master build (called qgis-dev on Windows)
+  which often offers a better experience in combination with QGEP.
   For Windows installation, download the `OSGeo4W Installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_
   choose *advanced installation* and install qgis-dev.
 
@@ -75,11 +75,11 @@ Install QGEP plugin
 
 * Open QGIS
 
-* Go to Plugins (position *1* in the image below)
+* Go to Plugins
 
   * Manage and Install Plugins
 
-  * Settings (position *3*)
+  * Settings
 
     * Add...
 
@@ -88,13 +88,9 @@ Install QGEP plugin
       * URL:
         ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``
 
-    * Enable `Show also experimental plugins` (position *2*)
+    * Enable `Show also experimental plugins`
 
-.. figure:: images/001_addplugin.jpeg
-
-   **Add the plugin repo**
-
-Activate the plugin (see image below):
+  * Activate the plugin (see image below):
 
   * All
 
