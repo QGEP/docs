@@ -1,7 +1,6 @@
-.. editing-data::
-
 Editing of existing data
 ========================
+.._editing-data:
 
 This represents a guide on how to edit existing data in QGEP.
 

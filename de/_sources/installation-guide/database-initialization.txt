@@ -1,7 +1,7 @@
-.. database-initialization::
-
 Database initialization
 =======================
+
+.._database-initialization:
 
 You can use :ref:`pgAdmin` to access and manage the database server.
 
