@@ -15,7 +15,8 @@ Important: Start digitizing in the direction of the flow - starting with the fro
 ..There is no tool yet to change the flow direction (topology), so try to make it right from the beginning.
 
 Digitizing
--------
+----------
+
 When digitizing the cursor will automatically snap to the nearest cover or reach. When clicking a line starts to draw. 
 
 .. figure:: images/wizard_data_entry_reach_with_new_cursor.jpg
@@ -46,7 +47,7 @@ If you do not select the edit mode, you can just look add the existing data.
 
 .. figure:: images/manhole_info_reach.jpg
 
-For detailed information about editing see the edit chapter.
+For detailed information about editing see the edit chapter (:ref:`editing-data`).
 
 Further attributes and classes
 ------------------------------
@@ -63,19 +64,7 @@ d) a new reach object is generated in wastewater network elements and its subcla
 
 
 
-* Kanal/Haltung (Digitalisierrichtung, Schnappen)
-* Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten
-
-* evtl. Verknüpfungen erfassen
-
-
-Link:
-add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
-
-Add some screen shots 
-
-.. figure:: images/muster.png
-
-...
-
-(take more from GEPView-Howto 1.2. Chapter 4.2)
+..* Kanal/Haltung (Digitalisierrichtung, Schnappen)
+..* Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten
+..* evtl. Verknüpfungen erfassen
+..(take more from GEPView-Howto 1.2. Chapter 4.2)

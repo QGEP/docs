@@ -13,7 +13,8 @@ Select the "wizard" button, then click "start data entry" and choose "wastewater
 .. figure:: images/wizard_wastewater_structure.jpg
 
 Digitizing
--------
+----------
+
 Now the cursor changes to the digitizing symbol and you can select the location of the new point element.
 
 .. figure:: images/wizard_data_entry_with_new_cursor.jpg
@@ -43,7 +44,7 @@ If you do not select the edit mode, you can just look add the existing data.
 
 .. figure:: images/manhole_info_manhole.jpg
 
-For detailed information about editing see the edit chapter.
+For detailed information about editing see the edit chapter (:ref:`editing-data`).
 
 Further attributes and classes
 ------------------------------
