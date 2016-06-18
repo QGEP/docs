@@ -3,6 +3,7 @@ Digitizing Waste water structures
 
 General
 -------
+
 QGEP has a wizard to correctly collect manholes and special structures.
 
 Select the "wizard" button, then click "start data entry" and choose "wastewater structure" in the pull down menu.
@@ -52,7 +53,7 @@ a) an new object in the class wastewater structure is added
 b) a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked
 c) a new cover object is added and linked to the waste water structure
 d) a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes
-e) When you add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) the QGEP automatically generates the objects in the needed tables and subtables and sets the foreign keys to the waste water structure.
+e) When you add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) then QGEP automatically generates the objects in the needed tables and subtables and sets the foreign keys to the waste water structure.
 
 
 ..(take more from GEPView-Howto 1.2. Chapter 4.1)
