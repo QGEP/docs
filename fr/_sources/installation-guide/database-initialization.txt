@@ -1,3 +1,5 @@
+.. database-initialization::
+
 Database initialization
 =======================
 

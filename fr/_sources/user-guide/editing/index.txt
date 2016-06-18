@@ -1,10 +1,13 @@
+.. editing-data::
+
 Editing of existing data
 ========================
 
 This represents a guide on how to edit existing data in QGEP.
 
 Demo project
--------
+------------
+
 * Make sure you have imported the demo project with pgAdminIII (:ref:`database-initialization`)
 * Open the demoproject with Menu Project/Open
 
@@ -21,41 +24,41 @@ Demo project
 * The project consists of different layers. Depending on your task what to edit or add you choose the layer.
 
 Layers
------
+------
+
 * QGEP has different predefined layers:
 
 Layer vw_qgep_cover
-^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * The layer vw_qgep_cover allows to edit all point elements. This are the wastewater structures such as manholes, special structures, discharge points and infiltration installation (not supported yet are wwtp_structures, which is also a wastewater structure), but not the channels.
 
 .. figure:: images/layer_vw_qgep_cover.jpg
 
 Layer vw_qgep_reach
-^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 * The layer vw_qgep_reach allows to edit all linear elements of the wastewater (channels).
 
 Layer Waste water structures
-^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * TO DO Add description
 
 Layer Value lists
-^^^^^^^^
+^^^^^^^^^^^^^^^^^
 * TO DO Add description
 
 Layer Hydraulic
-^^^^^^^^
+^^^^^^^^^^^^^^^
 * TO DO Add description
 
 Layer Topology
-^^^^^^^^
+^^^^^^^^^^^^^^
 * TO DO Add description
 
 
-
 Changing attributes of point elements (manholes / special structures)
------
+---------------------------------------------------------------------
 
  * To change an attribut first select the vw_qgep_cover layer and switch to the edit mode
  * Then click on the info button and choose the element you want to edit by double-clicking
@@ -78,7 +81,7 @@ Changing attributes of point elements (manholes / special structures)
  .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
 
 Changing attributes of linear elements (channels)
------
+-------------------------------------------------
 
  * To change an attribut first select the vw_qgep_reach layer and switch to the edit mode 
  * Then click on the info button and choose the element you want to edit by double-clicking a channel
@@ -95,5 +98,4 @@ Changing attributes of linear elements (channels)
   
   
 `Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS: <http://dss.vsa.ch>`_
-
 

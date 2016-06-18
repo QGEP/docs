@@ -89,7 +89,8 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.1.2. Digitizing Waste water structures</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.1.3. Digitizing Waste channels</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.1.3.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#title">2.1.3.2. Title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing">2.1.3.2. Digitizing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.1.3.3. Further attributes and classes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.1.4. Deleting objects</a></li>
@@ -146,35 +147,67 @@
             
   <div class="section" id="digitizing-waste-channels">
 <h1>2.1.3. Digitizing Waste channels<a class="headerlink" href="#digitizing-waste-channels" title="Permalink to this headline">¶</a></h1>
-<p>QGEP has a wizard to correctly build channels and connect them to the manholes / special structures and build up the topology for waste water nodes and reaches.</p>
-<p>TO DO: Explain how it works</p>
 <div class="section" id="general">
 <h2>2.1.3.1. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Kanal/Haltung (Digitalisierrichtung, Schnappen)</li>
-<li>Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten</li>
-<li>evtl. Verknüpfungen erfassen</li>
-</ul>
-</div>
-<div class="section" id="title">
-<h2>2.1.3.2. Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="subtitle">
-<h3>2.1.3.2.1. Subtitle<a class="headerlink" href="#subtitle" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>List<ul>
-<li>Subpoint</li>
-</ul>
-</li>
-</ul>
-<p>Link:
-add <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">link</a></p>
-<p>Add some screen shots</p>
+<p>QGEP has a wizard to correctly build channels and connect them to the manholes / special structures and build up the topology for waste water nodes and reaches.</p>
 <div class="figure">
-<img alt="../../_images/muster2.png" src="../../_images/muster2.png" />
+<img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
-<p>...</p>
-<p>(take more from GEPView-Howto 1.2. Chapter 4.2)</p>
+<div class="figure">
+<img alt="../../_images/wizard_data_entry_reach.jpg" src="../../_images/wizard_data_entry_reach.jpg" />
 </div>
+<p>Important: Start digitizing in the direction of the flow - starting with the from node and finishing with the to node / manhole.</p>
+<p>..There is no tool yet to change the flow direction (topology), so try to make it right from the beginning.</p>
+</div>
+<div class="section" id="digitizing">
+<h2>2.1.3.2. Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this headline">¶</a></h2>
+<p>When digitizing the cursor will automatically snap to the nearest cover or reach. When clicking a line starts to draw.</p>
+<div class="figure">
+<img alt="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" />
+</div>
+<p>With further left clicks anywhere you can define intermeditiary points of the reach progression. Or you directly select another manhole to draw a straight channel.</p>
+<div class="figure">
+<img alt="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" />
+</div>
+<p>With right click you finish digitizing and the reach form will appear.</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_reach_form.jpg" src="../../_images/wizard_wastewater_structure_reach_form.jpg" />
+</div>
+<p>Add the attributes on the general tab. For the profile type you will get a list of defined profiles. To edit those do so in the table pipe_profile.</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_reach_form_profiles.jpg" src="../../_images/wizard_wastewater_structure_reach_form_profiles.jpg" />
+</div>
+<p>When finished, then click the OK button.</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_reach_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_reach_form_data_ok.jpg" />
+</div>
+<p>Save the information of this layer by stopping the data entry wizard</p>
+<div class="figure">
+<img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
+</div>
+<p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
+If you do not select the edit mode, you can just look add the existing data.</p>
+<div class="figure">
+<img alt="../../_images/manhole_info_reach.jpg" src="../../_images/manhole_info_reach.jpg" />
+</div>
+<p>For detailed information about editing see the edit chapter (<span class="xref std std-ref">editing-data</span>).</p>
+</div>
+<div class="section" id="further-attributes-and-classes">
+<h2>2.1.3.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Permalink to this headline">¶</a></h2>
+<p>When a line object is digitized a series of steps take place in the background in the QGIS database:
+a) an new object in the class wastewater structure is added
+b) a new object in the subclass channel is added and linked
+c) two new reach point objects are added and linked to the reach (rp_from, rp_to_node)</p>
+<div class="figure">
+<img alt="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" src="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" />
+</div>
+<ol class="loweralpha simple" start="4">
+<li>a new reach object is generated in wastewater network elements and its subclass wastewater nodes</li>
+</ol>
+<p>..* Kanal/Haltung (Digitalisierrichtung, Schnappen)
+..* Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten
+..* evtl. Verknüpfungen erfassen
+..(take more from GEPView-Howto 1.2. Chapter 4.2)</p>
 </div>
 </div>
 
