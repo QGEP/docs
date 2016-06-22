@@ -3,21 +3,30 @@ Network following tools
 
 This represents a guide on how to use the network following tools in QGEP.
 
-TO DO: Explain how it works
 
-Title
-------------------------------
+Downstream
+----------
 
-Subtitle
-^^^^^^^^^^^^^^^^^
+To start downstream network following select the QGEP button "downstream"
 
-* List
+.. figure:: images/downstream_button_selected.jpg
 
-  * Subpoint
-  
-Link:
-add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+After a few seconds all downstream reaches will be highlighted and you can see, where the water is going to. 
 
-Add some screen shots 
+.. figure:: images/downstream_result.jpg
 
-.. figure:: images/muster.png
+Use this to check whether the topology of your network is correct. Or to find out, where you could intervene in case of an accident.
+
+
+Upstream
+--------
+
+To start upstream network following select the QGEP button "upstream". Then select the manhole.
+
+.. figure:: images/upstream_start_selection.jpg
+
+After a few seconds all upstream reaches will be highlighted and you can see, where the water is coming from. 
+
+.. figure:: images/upstream_result.jpg
+
+Use this to check whether the topology of your network is correct.
