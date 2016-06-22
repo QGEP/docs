@@ -45,9 +45,10 @@ Save the information of this layer by stopping the data entry wizard
 You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
 If you do not select the edit mode, you can just look add the existing data.
 
-.. figure:: images/manhole_info_reach.jpg
+.. figure:: images/reach_info_reach.jpg
 
 For detailed information about editing see the edit chapter (:ref:`editing-data`).
+
 
 Further attributes and classes
 ------------------------------

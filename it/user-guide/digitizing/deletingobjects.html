@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.4. Deleting objects &mdash; QGEP 0.5 documentazione</title>
+  <title>2.1.6. Deleting objects &mdash; QGEP 0.5 documentazione</title>
   
 
   
@@ -33,7 +33,7 @@
     <link rel="top" title="QGEP 0.5 documentazione" href="../../index.html"/>
         <link rel="up" title="2.1. Digitizing in QGEP" href="index.html"/>
         <link rel="next" title="2.2. Demo project" href="../editing/index.html"/>
-        <link rel="prev" title="2.1.3. Digitizing Waste channels" href="digitizingchannels.html"/> 
+        <link rel="prev" title="2.1.5. Digitizing Waste channels" href="digitizingchannels.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -87,9 +87,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Digitizing in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.1.1. Data entry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.1.2. Digitizing Waste water structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.3. Digitizing Waste channels</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.4. Deleting objects</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#title">2.1.4.1. Title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitizing detailed geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Digitizing Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.5. Digitizing Waste channels</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.6. Deleting objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#delete-reaches">2.1.6.1. Delete Reaches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-waste-water-structures">2.1.6.2. Delete Manholes and other Waste water Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-covers">2.1.6.3. Delete Covers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-structure-parts">2.1.6.4. Delete Structure parts</a></li>
 </ul>
 </li>
 </ul>
@@ -98,9 +103,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#layers">2.3. Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-point-elements-manholes-special-structures">2.4. Changing attributes of point elements (manholes / special structures)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-linear-elements-channels">2.5. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.6. Length profiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.7. Network following tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.8. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-hydraulic-elements">2.6. Changing attributes of hydraulic elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.7. Length profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.8. Network following tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.9. Plan plotting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
@@ -132,7 +138,7 @@
       
           <li><a href="index.html">2.1. Digitizing in QGEP</a> &raquo;</li>
       
-    <li>2.1.4. Deleting objects</li>
+    <li>2.1.6. Deleting objects</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -147,13 +153,69 @@
            <div itemprop="articleBody">
             
   <div class="section" id="deleting-objects">
-<h1>2.1.4. Deleting objects<a class="headerlink" href="#deleting-objects" title="Link a questa intestazione">¶</a></h1>
-<p>..TO DO: Explain how it works</p>
-<div class="section" id="title">
-<h2>2.1.4.1. Title<a class="headerlink" href="#title" title="Link a questa intestazione">¶</a></h2>
-<div class="section" id="subtitle">
-<h3>2.1.4.1.1. Subtitle<a class="headerlink" href="#subtitle" title="Link a questa intestazione">¶</a></h3>
+<h1>2.1.6. Deleting objects<a class="headerlink" href="#deleting-objects" title="Link a questa intestazione">¶</a></h1>
+<p>You can delete point or line objects through the vw_qgep layers (cover / reach) with all associated objects. Or you can pick a specific object and only delete that one (e.g. cover)</p>
+<div class="section" id="delete-reaches">
+<h2>2.1.6.1. Delete Reaches<a class="headerlink" href="#delete-reaches" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Selecct vw_qgep_reach and change to edit mode</li>
+<li>Select the reach(es) you want to delete. You can click on an object or draw an area</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
 </div>
+<ul class="simple">
+<li>Use Menu / Delete Selected to delete.</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
+</div>
+<ul class="simple">
+<li>Deselect the edit mode and confirm changes to layer. All changes will be saved to database.</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
+</div>
+</div>
+<div class="section" id="delete-manholes-and-other-waste-water-structures">
+<h2>2.1.6.2. Delete Manholes and other Waste water Structures<a class="headerlink" href="#delete-manholes-and-other-waste-water-structures" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Selecct vw_qgep_cover and change to edit mode</li>
+<li>Select the objects (manholes, special structures etc) you want to delete</li>
+<li>Use Menu / Delete Selected to delete.</li>
+<li>Deselect the edit mode and confirm changes to layer. All changes will be saved to database.</li>
+</ul>
+</div>
+<div class="section" id="delete-covers">
+<h2>2.1.6.3. Delete Covers<a class="headerlink" href="#delete-covers" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Selecct vw_qgep_cover and change to edit mode</li>
+<li>Select the object (manholes, special structures etc) you want to delete the cover</li>
+<li>Use the info tool to open the form</li>
+<li>Switch to the covers tab</li>
+<li>Select the cover(s) you want to delete</li>
+<li>Click the read x to delete the covers</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/delete_covers.jpg" src="../../_images/delete_covers.jpg" />
+</div>
+<ul class="simple">
+<li>Click save on the form</li>
+<li>Deselect the edit mode and confirm changes to layer. All changes will be saved to database.</li>
+</ul>
+</div>
+<div class="section" id="delete-structure-parts">
+<h2>2.1.6.4. Delete Structure parts<a class="headerlink" href="#delete-structure-parts" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Selecct vw_qgep_cover and change to edit mode</li>
+<li>Select the object (manholes, special structures etc) you want to delete the cover</li>
+<li>Use the info tool to open the form</li>
+<li>Switch to the structure parts tab</li>
+<li>Select the structure part you want to delete</li>
+<li>Click the read x to delete the covers</li>
+<li>Click save on the form</li>
+<li>Deselect the edit mode and confirm changes to layer. All changes will be saved to database.</li>
+</ul>
 </div>
 </div>
 
@@ -167,7 +229,7 @@
         <a href="../editing/index.html" class="btn btn-neutral float-right" title="2.2. Demo project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingchannels.html" class="btn btn-neutral" title="2.1.3. Digitizing Waste channels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingchannels.html" class="btn btn-neutral" title="2.1.5. Digitizing Waste channels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

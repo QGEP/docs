@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.3. Digitizing Waste channels &mdash; QGEP 0.5 Dokumentation</title>
+  <title>2.1.5. Digitizing Waste channels &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.1. Digitizing in QGEP" href="index.html"/>
-        <link rel="next" title="2.1.4. Deleting objects" href="deletingobjects.html"/>
-        <link rel="prev" title="2.1.2. Digitizing Waste water structures" href="digitizingwastewaterstructures.html"/> 
+        <link rel="next" title="2.1.6. Deleting objects" href="deletingobjects.html"/>
+        <link rel="prev" title="2.1.4. Digitizing Drainage Channel" href="digitizingdrainagechannel.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -87,22 +87,25 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Digitizing in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.1.1. Data entry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.1.2. Digitizing Waste water structures</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.3. Digitizing Waste channels</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">2.1.3.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitizing">2.1.3.2. Digitizing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.1.3.3. Further attributes and classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitizing detailed geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Digitizing Drainage Channel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.5. Digitizing Waste channels</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">2.1.5.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing">2.1.5.2. Digitizing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.1.5.3. Further attributes and classes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.1.4. Deleting objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.1.6. Deleting objects</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.2. Demo project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#layers">2.3. Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-point-elements-manholes-special-structures">2.4. Changing attributes of point elements (manholes / special structures)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-linear-elements-channels">2.5. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.6. Length profiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.7. Network following tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.8. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-hydraulic-elements">2.6. Changing attributes of hydraulic elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.7. Length profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.8. Network following tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.9. Plan plotting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
@@ -134,7 +137,7 @@
       
           <li><a href="index.html">2.1. Digitizing in QGEP</a> &raquo;</li>
       
-    <li>2.1.3. Digitizing Waste channels</li>
+    <li>2.1.5. Digitizing Waste channels</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -149,9 +152,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-waste-channels">
-<h1>2.1.3. Digitizing Waste channels<a class="headerlink" href="#digitizing-waste-channels" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>2.1.5. Digitizing Waste channels<a class="headerlink" href="#digitizing-waste-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
-<h2>2.1.3.1. General<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.1.5.1. General<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGEP has a wizard to correctly build channels and connect them to the manholes / special structures and build up the topology for waste water nodes and reaches.</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
@@ -163,7 +166,7 @@
 <p>..There is no tool yet to change the flow direction (topology), so try to make it right from the beginning.</p>
 </div>
 <div class="section" id="digitizing">
-<h2>2.1.3.2. Digitizing<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.1.5.2. Digitizing<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <p>When digitizing the cursor will automatically snap to the nearest cover or reach. When clicking a line starts to draw.</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" />
@@ -191,12 +194,12 @@
 <p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
 If you do not select the edit mode, you can just look add the existing data.</p>
 <div class="figure">
-<img alt="../../_images/manhole_info_reach.jpg" src="../../_images/manhole_info_reach.jpg" />
+<img alt="../../_images/reach_info_reach.jpg" src="../../_images/reach_info_reach.jpg" />
 </div>
 <p>For detailed information about editing see the edit chapter (<span class="xref std std-ref">editing-data</span>).</p>
 </div>
 <div class="section" id="further-attributes-and-classes">
-<h2>2.1.3.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.1.5.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>When a line object is digitized a series of steps take place in the background in the QGIS database:
 a) an new object in the class wastewater structure is added
 b) a new object in the subclass channel is added and linked
@@ -221,10 +224,10 @@ c) two new reach point objects are added and linked to the reach (rp_from, rp_to
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.1.4. Deleting objects" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.1.6. Deleting objects" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingwastewaterstructures.html" class="btn btn-neutral" title="2.1.2. Digitizing Waste water structures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.1.4. Digitizing Drainage Channel" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

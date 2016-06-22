@@ -38,29 +38,30 @@ Layer vw_qgep_cover
 Layer vw_qgep_reach
 ^^^^^^^^^^^^^^^^^^^
 
-* The layer vw_qgep_reach allows to edit all linear elements of the wastewater (channels).
+* The layer vw_qgep_reach allows to edit all linear elements of the wastewater network (reaches / channels).
 
 Layer Waste water structures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* TO DO Add description
+* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events (re_ table) and the organisation table (where owners, dataowners, etc. are stored)
 
 Layer Value lists
 ^^^^^^^^^^^^^^^^^
-* TO DO Add description
+* Here you can see various value lists that are related to the sewer network classes.
 
 Layer Hydraulic
 ^^^^^^^^^^^^^^^
-* TO DO Add description
+* This layer allows to select and edit waste water nodes. Select the layer, then choose the info tool and double click on a node.
 
 Layer Topology
 ^^^^^^^^^^^^^^
-* TO DO Add description
+* Here you can find all needed information about the topology of the network
 
 
 Changing attributes of point elements (manholes / special structures)
 ---------------------------------------------------------------------
 
  * To change an attribut first select the vw_qgep_cover layer and switch to the edit mode
+ * Or start the QGEP Wizard and click on Start Data entry
  * Then click on the info button and choose the element you want to edit by double-clicking
  
  .. figure:: images/qgep_info_button.jpg
@@ -79,6 +80,7 @@ Changing attributes of point elements (manholes / special structures)
  * In "Wastewater nodes parts" you can edit or add all attributes of this class or add a second element
 
  .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
+ 
 
 Changing attributes of linear elements (channels)
 -------------------------------------------------
@@ -86,11 +88,30 @@ Changing attributes of linear elements (channels)
  * To change an attribut first select the vw_qgep_reach layer and switch to the edit mode 
  * Then click on the info button and choose the element you want to edit by double-clicking a channel
  * The form of the vw_qgep_reach will open
- * On the first tab you can change the most common attributes
- * To change attributes of related tables such as reaches select that tab. 
-
-..TO DO: add image
  
+  .. figure:: images/form_vw_qgep_reach.jpg
+ 
+ * On the first tab you can change the most common attributes
+ * To change attributes of related tables e.g. such as reach points select that tab. 
+ 
+  .. figure:: images/form_vw_qgep_reach_reachpoints.jpg
+ 
+
+Changing attributes of hydraulic elements
+-----------------------------------------
+
+* If you right click on an element, you get a selection of all existing objects
+
+ .. figure:: images/qgep_info_button_rightclick.jpg
+ 
+ * You then can select the object you want and you will get the respective form to see the details.
+ 
+ 
+ Saving changes
+ --------------
+ 
+  * Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.
+  
 ..* TO DO:
   * Changing relations (Verknüpfungen ändern)
   * Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.7. Network following tools &mdash; QGEP 0.5 documentazione</title>
+  <title>2.8. Network following tools &mdash; QGEP 0.5 documentazione</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="QGEP 0.5 documentazione" href="../../index.html"/>
         <link rel="up" title="2. QGEP User Guide" href="../index.html"/>
-        <link rel="next" title="2.8. Plan plotting" href="../plan-plotting/index.html"/>
-        <link rel="prev" title="2.6. Length profiles" href="../length-profile/index.html"/> 
+        <link rel="next" title="2.9. Plan plotting" href="../plan-plotting/index.html"/>
+        <link rel="prev" title="2.7. Length profiles" href="../length-profile/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -89,15 +89,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#layers">2.3. Layers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-point-elements-manholes-special-structures">2.4. Changing attributes of point elements (manholes / special structures)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-linear-elements-channels">2.5. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.6. Length profiles</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.7. Network following tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#title">2.7.1. Title</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#subtitle">2.7.1.1. Subtitle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html#changing-attributes-of-hydraulic-elements">2.6. Changing attributes of hydraulic elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.7. Length profiles</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">2.8. Network following tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downstream">2.8.1. Downstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upstream">2.8.2. Upstream</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.8. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.9. Plan plotting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
@@ -127,7 +126,7 @@
       
           <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
       
-    <li>2.7. Network following tools</li>
+    <li>2.8. Network following tools</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -142,26 +141,31 @@
            <div itemprop="articleBody">
             
   <div class="section" id="network-following-tools">
-<h1>2.7. Network following tools<a class="headerlink" href="#network-following-tools" title="Link a questa intestazione">¶</a></h1>
+<h1>2.8. Network following tools<a class="headerlink" href="#network-following-tools" title="Link a questa intestazione">¶</a></h1>
 <p>This represents a guide on how to use the network following tools in QGEP.</p>
-<p>TO DO: Explain how it works</p>
-<div class="section" id="title">
-<h2>2.7.1. Title<a class="headerlink" href="#title" title="Link a questa intestazione">¶</a></h2>
-<div class="section" id="subtitle">
-<h3>2.7.1.1. Subtitle<a class="headerlink" href="#subtitle" title="Link a questa intestazione">¶</a></h3>
-<ul class="simple">
-<li>List<ul>
-<li>Subpoint</li>
-</ul>
-</li>
-</ul>
-<p>Link:
-add <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">link</a></p>
-<p>Add some screen shots</p>
+<div class="section" id="downstream">
+<h2>2.8.1. Downstream<a class="headerlink" href="#downstream" title="Link a questa intestazione">¶</a></h2>
+<p>To start downstream network following select the QGEP button &#8220;downstream&#8221;</p>
 <div class="figure">
-<img alt="../../_images/muster2.png" src="../../_images/muster2.png" />
+<img alt="../../_images/downstream_button_selected.jpg" src="../../_images/downstream_button_selected.jpg" />
 </div>
+<p>After a few seconds all downstream reaches will be highlighted and you can see, where the water is going to.</p>
+<div class="figure">
+<img alt="../../_images/downstream_result.jpg" src="../../_images/downstream_result.jpg" />
 </div>
+<p>Use this to check whether the topology of your network is correct. Or to find out, where you could intervene in case of an accident.</p>
+</div>
+<div class="section" id="upstream">
+<h2>2.8.2. Upstream<a class="headerlink" href="#upstream" title="Link a questa intestazione">¶</a></h2>
+<p>To start upstream network following select the QGEP button &#8220;upstream&#8221;. Then select the manhole.</p>
+<div class="figure">
+<img alt="../../_images/upstream_start_selection.jpg" src="../../_images/upstream_start_selection.jpg" />
+</div>
+<p>After a few seconds all upstream reaches will be highlighted and you can see, where the water is coming from.</p>
+<div class="figure">
+<img alt="../../_images/upstream_result.jpg" src="../../_images/upstream_result.jpg" />
+</div>
+<p>Use this to check whether the topology of your network is correct.</p>
 </div>
 </div>
 
@@ -172,10 +176,10 @@ add <a class="reference external" href="http://www.postgresql.org/docs/current/s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../plan-plotting/index.html" class="btn btn-neutral float-right" title="2.8. Plan plotting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../plan-plotting/index.html" class="btn btn-neutral float-right" title="2.9. Plan plotting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../length-profile/index.html" class="btn btn-neutral" title="2.6. Length profiles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../length-profile/index.html" class="btn btn-neutral" title="2.7. Length profiles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

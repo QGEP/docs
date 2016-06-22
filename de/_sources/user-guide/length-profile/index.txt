@@ -2,6 +2,9 @@ Length profiles
 ===============
 This represents a guide on how to choose a section and display a length profile.
 
+General
+-------
+
 QGEP has a unique function to display lenght profiles. Choose the lengt profile button to start.
 
 .. figure:: images/profile_button_selected.jpg
@@ -26,3 +29,7 @@ The same is also implemented for reaches
 
 .. figure:: images/profile_connected_reach.jpg
 
+Printing
+---------
+
+Select the print button to send the profile to your selected printer. If you have installed a pdf Printer you can save it as Adobe pdf File.
