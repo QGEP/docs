@@ -44,7 +44,7 @@ Layer vw_qgep_reach
 Layer Waste water structures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events (re_ table) and the organisation table (where owners, dataowners, etc. are stored)
+* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events and the organisation table (where owners, dataowners, etc. are stored)
 
 Layer Value lists
 ^^^^^^^^^^^^^^^^^

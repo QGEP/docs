@@ -1,7 +1,7 @@
 Using Pgadmin
 ==============
 
-.. _SQL query:
+.. _SQL-query:
 
 SQL query
 ---------
