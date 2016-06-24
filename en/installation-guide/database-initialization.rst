@@ -1,4 +1,5 @@
-.._database-initialization:
+.. _database-initialization:
+
 Database initialization
 =======================
 

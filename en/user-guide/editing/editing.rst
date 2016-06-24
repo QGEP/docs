@@ -1,4 +1,5 @@
-.._editing-data:
+.. _editing-data:
+
 Editing of existing data
 ========================
 
@@ -42,18 +43,22 @@ Layer vw_qgep_reach
 
 Layer Waste water structures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events (re_ table) and the organisation table (where owners, dataowners, etc. are stored)
 
 Layer Value lists
 ^^^^^^^^^^^^^^^^^
+
 * Here you can see various value lists that are related to the sewer network classes.
 
 Layer Hydraulic
 ^^^^^^^^^^^^^^^
+
 * This layer allows to select and edit waste water nodes. Select the layer, then choose the info tool and double click on a node.
 
 Layer Topology
 ^^^^^^^^^^^^^^
+
 * Here you can find all needed information about the topology of the network
 
 
@@ -107,10 +112,10 @@ Changing attributes of hydraulic elements
  * You then can select the object you want and you will get the respective form to see the details.
  
  
- Saving changes
- --------------
+Saving changes
+--------------
  
-  * Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.
+* Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.
   
 ..* TO DO:
   * Changing relations (Verknüpfungen ändern)
