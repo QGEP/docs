@@ -1,4 +1,4 @@
-.. _install pgAdmin:
+.. _install-pgAdmin:
 
 Install pgAdmin
 ===============

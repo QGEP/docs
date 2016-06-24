@@ -1,4 +1,5 @@
-..maintenance-events:
+.. _maintenance-events:
+
 Adding or Editing of Maintenance Events
 =========================================
 
@@ -12,7 +13,7 @@ General
 
 
 Adding (for single events that just belong to one structure)
---------------------------
+-------------------------------------------------------------
 
 * Enable the edit mode
 * With the 'Identify Features Tool' you can select Manholes or Reaches, depending which layer you selected (vw_qgep_cover or vw_qgep_reach).

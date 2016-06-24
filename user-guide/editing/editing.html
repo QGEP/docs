@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.1. Demo project &mdash; QGEP 0.5 documentation</title>
+  <title>2.2.1. Editing of existing data &mdash; QGEP 0.5 documentation</title>
   
 
   
@@ -32,7 +32,7 @@
   
     <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
         <link rel="up" title="2.2. Editing in QGEP" href="index.html"/>
-        <link rel="next" title="2.2.6. General" href="moving.html"/>
+        <link rel="next" title="2.2.2. General" href="moving.html"/>
         <link rel="prev" title="2.2. Editing in QGEP" href="index.html"/> 
 
   
@@ -86,27 +86,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Digitizing in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.1. Demo project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#layers">2.2.2. Layers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#layer-vw-qgep-cover">2.2.2.1. Layer vw_qgep_cover</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layer-vw-qgep-reach">2.2.2.2. Layer vw_qgep_reach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layer-waste-water-structures">2.2.2.3. Layer Waste water structures</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layer-value-lists">2.2.2.4. Layer Value lists</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layer-hydraulic">2.2.2.5. Layer Hydraulic</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layer-topology">2.2.2.6. Layer Topology</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.1. Editing of existing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demo-project">2.2.1.1. Demo project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layers">2.2.1.2. Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.2.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.2.1.4. Changing attributes of linear elements (channels)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.2.1.5. Changing attributes of hydraulic elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.2.1.6. Saving changes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.2.3. Changing attributes of point elements (manholes / special structures)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.2.4. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.2.5. Changing attributes of hydraulic elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.6. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html#moving">2.2.7. Moving</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.8. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#adding-for-single-events-that-just-belong-to-one-structure">2.2.9. Adding (for single events that just belong to one structure)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#adding-for-many-events-that-can-belong-to-many-structures">2.2.10. Adding (for many events that can belong to many structures)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#editing">2.2.11. Editing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.12. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.13. Connecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.2. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html#moving">2.2.3. Moving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.4. Adding or Editing of Maintenance Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.5. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.6. Connecting</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.3. Length profiles</a></li>
@@ -143,7 +136,7 @@
       
           <li><a href="index.html">2.2. Editing in QGEP</a> &raquo;</li>
       
-    <li>2.2.1. Demo project</li>
+    <li>2.2.1. Editing of existing data</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -157,14 +150,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>.._editing-data:
-Editing of existing data
-========================</p>
+  <div class="section" id="editing-of-existing-data">
+<span id="editing-data"></span><h1>2.2.1. Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Permalink to this headline">¶</a></h1>
 <p>This represents a guide on how to edit existing data in QGEP.</p>
 <div class="section" id="demo-project">
-<h1>2.2.1. Demo project<a class="headerlink" href="#demo-project" title="Permalink to this headline">¶</a></h1>
+<h2>2.2.1.1. Demo project<a class="headerlink" href="#demo-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Make sure you have imported the demo project with pgAdminIII (<span class="xref std std-ref">database-initialization</span>)</li>
+<li>Make sure you have imported the demo project with pgAdminIII (<a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a>)</li>
 <li>Open the demoproject with Menu Project/Open</li>
 </ul>
 <div class="figure">
@@ -187,12 +179,12 @@ Editing of existing data
 </ul>
 </div>
 <div class="section" id="layers">
-<h1>2.2.2. Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h1>
+<h2>2.2.1.2. Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>QGEP has different predefined layers:</li>
 </ul>
 <div class="section" id="layer-vw-qgep-cover">
-<h2>2.2.2.1. Layer vw_qgep_cover<a class="headerlink" href="#layer-vw-qgep-cover" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.1. Layer vw_qgep_cover<a class="headerlink" href="#layer-vw-qgep-cover" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The layer vw_qgep_cover allows to edit all point elements. This are the wastewater structures such as manholes, special structures, discharge points and infiltration installation (not supported yet are wwtp_structures, which is also a wastewater structure), but not the channels.</li>
 </ul>
@@ -201,38 +193,38 @@ Editing of existing data
 </div>
 </div>
 <div class="section" id="layer-vw-qgep-reach">
-<h2>2.2.2.2. Layer vw_qgep_reach<a class="headerlink" href="#layer-vw-qgep-reach" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.2. Layer vw_qgep_reach<a class="headerlink" href="#layer-vw-qgep-reach" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>The layer vw_qgep_reach allows to edit all linear elements of the wastewater network (reaches / channels).</li>
 </ul>
 </div>
 <div class="section" id="layer-waste-water-structures">
-<h2>2.2.2.3. Layer Waste water structures<a class="headerlink" href="#layer-waste-water-structures" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.3. Layer Waste water structures<a class="headerlink" href="#layer-waste-water-structures" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events (<a href="#id1"><span class="problematic" id="id2">re_</span></a> table) and the organisation table (where owners, dataowners, etc. are stored)</li>
+<li>This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events and the organisation table (where owners, dataowners, etc. are stored)</li>
 </ul>
 </div>
 <div class="section" id="layer-value-lists">
-<h2>2.2.2.4. Layer Value lists<a class="headerlink" href="#layer-value-lists" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.4. Layer Value lists<a class="headerlink" href="#layer-value-lists" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Here you can see various value lists that are related to the sewer network classes.</li>
 </ul>
 </div>
 <div class="section" id="layer-hydraulic">
-<h2>2.2.2.5. Layer Hydraulic<a class="headerlink" href="#layer-hydraulic" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.5. Layer Hydraulic<a class="headerlink" href="#layer-hydraulic" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>This layer allows to select and edit waste water nodes. Select the layer, then choose the info tool and double click on a node.</li>
 </ul>
 </div>
 <div class="section" id="layer-topology">
-<h2>2.2.2.6. Layer Topology<a class="headerlink" href="#layer-topology" title="Permalink to this headline">¶</a></h2>
+<h3>2.2.1.2.6. Layer Topology<a class="headerlink" href="#layer-topology" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Here you can find all needed information about the topology of the network</li>
 </ul>
 </div>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h1>2.2.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Permalink to this headline">¶</a></h1>
+<h2>2.2.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribut first select the vw_qgep_cover layer and switch to the edit mode</li>
@@ -266,7 +258,7 @@ Editing of existing data
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h1>2.2.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Permalink to this headline">¶</a></h1>
+<h2>2.2.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribut first select the vw_qgep_reach layer and switch to the edit mode</li>
@@ -290,7 +282,7 @@ Editing of existing data
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-hydraulic-elements">
-<h1>2.2.5. Changing attributes of hydraulic elements<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Permalink to this headline">¶</a></h1>
+<h2>2.2.1.5. Changing attributes of hydraulic elements<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>If you right click on an element, you get a selection of all existing objects</li>
 </ul>
@@ -301,12 +293,13 @@ Editing of existing data
 <ul class="simple">
 <li>You then can select the object you want and you will get the respective form to see the details.</li>
 </ul>
-<blockquote>
-<div><ul class="simple">
+</div></blockquote>
+</div>
+<div class="section" id="saving-changes">
+<h2>2.2.1.6. Saving changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
 <li>Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.</li>
 </ul>
-</div></blockquote>
-</div></blockquote>
 <dl class="docutils">
 <dt>..* TO DO:</dt>
 <dd><ul class="first last simple">
@@ -318,6 +311,7 @@ Editing of existing data
 </dl>
 <p><a class="reference external" href="http://dss.vsa.ch">Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:</a></p>
 </div>
+</div>
 
 
            </div>
@@ -326,7 +320,7 @@ Editing of existing data
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="moving.html" class="btn btn-neutral float-right" title="2.2.6. General" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="moving.html" class="btn btn-neutral float-right" title="2.2.2. General" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="2.2. Editing in QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

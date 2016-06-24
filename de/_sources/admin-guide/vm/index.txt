@@ -1,4 +1,4 @@
-.. _Demo VM:
+.. _Demo-VM:
 
 Demo Virtual Machine
 ====================

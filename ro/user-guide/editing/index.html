@@ -32,8 +32,8 @@
   
     <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
         <link rel="up" title="2. QGEP User Guide" href="../index.html"/>
-        <link rel="next" title="2.2.1. Demo project" href="editing.html"/>
-        <link rel="prev" title="2.1.6. Deleting objects" href="../digitizing/deletingobjects.html"/> 
+        <link rel="next" title="2.2.1. Editing of existing data" href="editing.html"/>
+        <link rel="prev" title="2.1.7. Digitizing Catchment Areas" href="../digitizing/digitizingcatchments.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -86,19 +86,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Digitizing in QGEP</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">2.2. Editing in QGEP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="editing.html">2.2.1. Demo project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html#layers">2.2.2. Layers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html#changing-attributes-of-point-elements-manholes-special-structures">2.2.3. Changing attributes of point elements (manholes / special structures)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html#changing-attributes-of-linear-elements-channels">2.2.4. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="editing.html#changing-attributes-of-hydraulic-elements">2.2.5. Changing attributes of hydraulic elements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.6. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html#moving">2.2.7. Moving</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.8. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#adding-for-single-events-that-just-belong-to-one-structure">2.2.9. Adding (for single events that just belong to one structure)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#adding-for-many-events-that-can-belong-to-many-structures">2.2.10. Adding (for many events that can belong to many structures)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html#editing">2.2.11. Editing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.12. General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.13. Connecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">2.2.1. Editing of existing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.2. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html#moving">2.2.3. Moving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.4. Adding or Editing of Maintenance Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.5. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.6. Connecting</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.3. Length profiles</a></li>
@@ -152,27 +145,26 @@
 <p>This represents a guide on how to add and edit data in QGEP.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="editing.html">2.2.1. Demo project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="editing.html#layers">2.2.2. Layers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-vw-qgep-cover">2.2.2.1. Layer vw_qgep_cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-vw-qgep-reach">2.2.2.2. Layer vw_qgep_reach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-waste-water-structures">2.2.2.3. Layer Waste water structures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-value-lists">2.2.2.4. Layer Value lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-hydraulic">2.2.2.5. Layer Hydraulic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="editing.html#layer-topology">2.2.2.6. Layer Topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing.html">2.2.1. Editing of existing data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#demo-project">2.2.1.1. Demo project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#layers">2.2.1.2. Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#changing-attributes-of-point-elements-manholes-special-structures">2.2.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#changing-attributes-of-linear-elements-channels">2.2.1.4. Changing attributes of linear elements (channels)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#changing-attributes-of-hydraulic-elements">2.2.1.5. Changing attributes of hydraulic elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing.html#saving-changes">2.2.1.6. Saving changes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="editing.html#changing-attributes-of-point-elements-manholes-special-structures">2.2.3. Changing attributes of point elements (manholes / special structures)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="editing.html#changing-attributes-of-linear-elements-channels">2.2.4. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="editing.html#changing-attributes-of-hydraulic-elements">2.2.5. Changing attributes of hydraulic elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moving.html">2.2.6. General</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moving.html#moving">2.2.7. Moving</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maintenance_events.html">2.2.8. General</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maintenance_events.html#adding-for-single-events-that-just-belong-to-one-structure">2.2.9. Adding (for single events that just belong to one structure)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maintenance_events.html#adding-for-many-events-that-can-belong-to-many-structures">2.2.10. Adding (for many events that can belong to many structures)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maintenance_events.html#editing">2.2.11. Editing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.12. General</a></li>
-<li class="toctree-l1"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.13. Connecting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moving.html">2.2.2. General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moving.html#moving">2.2.3. Moving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance_events.html">2.2.4. Adding or Editing of Maintenance Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="maintenance_events.html#general">2.2.4.1. General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintenance_events.html#adding-for-single-events-that-just-belong-to-one-structure">2.2.4.2. Adding (for single events that just belong to one structure)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintenance_events.html#adding-for-many-events-that-can-belong-to-many-structures">2.2.4.3. Adding (for many events that can belong to many structures)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintenance_events.html#editing">2.2.4.4. Editing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.5. General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect_wastewater_network_elements.html#connecting">2.2.6. Connecting</a></li>
 </ul>
 </div>
 </div>
@@ -184,10 +176,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="editing.html" class="btn btn-neutral float-right" title="2.2.1. Demo project" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="editing.html" class="btn btn-neutral float-right" title="2.2.1. Editing of existing data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../digitizing/deletingobjects.html" class="btn btn-neutral" title="2.1.6. Deleting objects" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../digitizing/digitizingcatchments.html" class="btn btn-neutral" title="2.1.7. Digitizing Catchment Areas" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

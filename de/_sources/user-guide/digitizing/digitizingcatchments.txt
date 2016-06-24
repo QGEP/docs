@@ -1,12 +1,12 @@
 Digitizing Catchment Areas
-=========================
+===========================
 
 General
 -------
 
 Catchments can be digitzed with QGIS standard tools.
 
-.. figure:: images/qgis_standard_tool.jpg
+.. figure:: images/qgis_standard_tools.jpg
 
 They should not overlap. So enable the 'Advanced digitizing toolbar' in the View/Toolbars Menu
 
