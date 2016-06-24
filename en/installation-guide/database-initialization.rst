@@ -7,7 +7,7 @@ You can use :ref:`pgAdmin` to access and manage the database server.
 
 .. note::
 
- By clicking the link you can learn how to :ref:`install pgAdmin`
+ By clicking the link you can learn how to :ref:`install-pgAdmin`
 
 Process
 -------
@@ -20,7 +20,7 @@ In pgAdminIII
 
 * Create a new login role (`qgepuser` for example) and make it a member of the `qgep` group
 
-You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` window and type the following:
+You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` window and type the following:
 
 ::
 
