@@ -34,7 +34,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
 
 * Create a new schema with the name `qgep`
 
-* Open an :ref:`SQL query` Window and create the extensions (if they're not created yet)
+* Open an :ref:`SQL-query` Window and create the extensions (if they're not created yet)
 
   * ``CREATE EXTENSION hstore;``
 
