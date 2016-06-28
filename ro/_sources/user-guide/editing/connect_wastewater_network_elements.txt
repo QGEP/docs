@@ -1,4 +1,5 @@
-.._connect-wastewater-network-elements:
+.. _connect-wastewater-network-elements:
+
 Connect Wastewater Network Elements
 ===============================================
 

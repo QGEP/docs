@@ -3,7 +3,6 @@
 Editing of existing data
 ========================
 
-
 This represents a guide on how to edit existing data in QGEP.
 
 Demo project
@@ -13,6 +12,7 @@ Demo project
 * Open the demoproject with Menu Project/Open
 
 .. figure:: images/qgep_demoproject_selection_qgep_en_qgs.jpg
+   :scale: 50 %
 
 * Login to the database
 

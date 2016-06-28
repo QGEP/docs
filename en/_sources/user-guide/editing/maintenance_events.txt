@@ -32,7 +32,7 @@ Adding (for single events that just belong to one structure)
 Adding (for many events that can belong to many structures)
 -----------------------------------------------------------
 
-..* to do
+* to do
 
 
 Editing

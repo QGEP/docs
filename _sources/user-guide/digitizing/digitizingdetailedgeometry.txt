@@ -5,6 +5,7 @@ General
 -------------------------
 
 You can add a detailed geometry to waste water structures. This is recommended in the following cases:
+
 * For special structures and infiltration points, because they are not normed structures like manholes, where you can definie dimension1 and 2 to describe the extension.
 * For infiltration installations where dimension1 and 2 are not enough to describe the geometry
 * Important: Detailed geometry is usually not used for manholes or channels!
