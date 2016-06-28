@@ -35,7 +35,7 @@ Delete Covers
 * Use the info tool to open the form
 * Switch to the covers tab 
 * Select the cover(s) you want to delete
-* Click the read x to delete the covers
+* Click the red x button to delete the covers
 
 .. figure:: images/delete_covers.jpg
 
