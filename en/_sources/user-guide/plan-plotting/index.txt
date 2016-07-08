@@ -7,10 +7,11 @@ This represents a guide on how to do plan plotting in QGEP.
 General
 -------
 
-* You can definne a title page and legends
-* You can define, maintain and print Rahmenpläne
+* You can define a title page and legends
+* You can define, maintain and do serial plotting ("Rahmenpläne")
 
-Title and Layout
-------------------------------
+For further instructions see `QGIS manual Creating Detailed Maps with the Atlas Tool <http://docs.qgis.org/2.8/de/docs/training_manual/forestry/forest_maps.html>`_ 
 
-* Add documentation
+.. figure:: images/20160708_152923.jpg
+
+.. figure:: images/20160708_153008.jpg
