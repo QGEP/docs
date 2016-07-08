@@ -59,6 +59,8 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
   * Click `Restore`
 
   .. figure:: images/qgep_restore_messages.jpg
+  
+  * Check whether in Message window last line is Exit Code 0
 
   * Click `Cancel`
 
