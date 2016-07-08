@@ -1,7 +1,7 @@
 Admin Guide
 ===========
 
-This represents a guide on how to collect data in QGEP (digitizing), edit existing data and use various tools like length profile, network following and plan plotting.
+This represents a guide on how to administrate the database, install a Virtual machine, import and export data
 
 .. toctree::
    :maxdepth: 2
