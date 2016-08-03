@@ -2,7 +2,7 @@ About
 =====
 
 This represents a guide on how to download and install a virtual machine (VM) that has a
-working QGEP installation with a preinstalled demo dataset.
+working QGEP installation with a demo dataset. The VM also has a working demo of the `QWAT water project <https://github.com/qwat/QWAT>`_ .
 
 The VM is based on Debian Testing with Cinnamon Desktop.
 

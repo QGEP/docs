@@ -25,3 +25,13 @@ You can run the VM as you would do with any VirtualBox VM.
  As the VM is based on Linux it is fairly simple to convert the image to a raw disk
  and put it on a USB stick (minimum 16GB) or a faster storage. This would enable you
  to run the app without the virtualization penalty and enjoy the full speed of your hardware.
+
+Run QGEP
+^^^^^^^^
+
+After logging in with ``qgis`` user and the same password, by  clicking the QGIS icon located in the bottom bar
+you will get the following image:
+
+.. figure:: images/vm_demo.jpg
+
+Clicking the **qgep_en** project and following the :ref:`user-guide` should get you started.
