@@ -1,22 +1,28 @@
 About
 =====
 
-The VM is based on Debian Jessie with Cinnamon Desktop.
+This represents a guide on how to download and install a virtual machine (VM) that has a
+working QGEP installation with a preinstalled demo dataset.
+
+The VM is based on Debian Testing with Cinnamon Desktop.
+
+Debian Testing was chosen in order to have GDAL 2.x and also benefit from latest linux kernel so that latest hardware
+won't be a problem for the case where the VM is used outside virtualization (e.g use the virtual disk as basis to create 
+a non-virtualized usb-stick to be used for demo purposes).
 
 Installed software:
 
- - PostgreSQL 9.4.4 with Postgis 2.1.7
- - QGIS Master 2.11
+ - PostgreSQL 9.5.2 with Postgis 2.3
+ - QGIS 2.16
 
 Settings that are changed from a default software install:
 
  - ``pg_hba.conf`` has **trust** for local connections
  - QGIS is setup with `multithreaded rendering enabled <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_
- - QGIS is setup with `postgres server side expression compiler enabled <http://www.opengis.ch/2015/07/29/postgres-expression-compiler>`_
 
 .. note::
 
- The users ``web`` and ``root`` have the password ``qgis``
+ The users ``qgis`` and ``root`` have the password ``qgis``
 
 .. note::
 
@@ -24,4 +30,9 @@ Settings that are changed from a default software install:
 
   - change the passwords
   - regenerate the ssh keys by running in a terminal ``sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``
+
+.. note::
+
+ QGIS has been build from source as Debian developpers have dropped QtWebKit python support in the packages.
+ After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benefit again from the QGIS repo packages.
 
