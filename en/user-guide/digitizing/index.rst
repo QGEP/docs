@@ -8,5 +8,8 @@ This represents a guide on how to correctly collect and digitize data of sewer n
 
    dataentry
    digitizingwastewaterstructures
+   digitizingdetailedgeometry
+   digitizingdrainagechannel
    digitizingchannels
    deletingobjects
+   digitizingcatchments

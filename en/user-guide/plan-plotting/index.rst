@@ -3,27 +3,15 @@ Plan plotting
 
 This represents a guide on how to do plan plotting in QGEP.
 
-TO DO: Explain how it works
 
 General
 -------
 
-* Titelblatt und Legende
-* Rahmenpläne erstellen / verwalten / drucken
+* You can define a title page and legends
+* You can define, maintain and do serial plotting ("Rahmenpläne")
 
-Title
-------------------------------
+For further instructions see `QGIS manual Creating Detailed Maps with the Atlas Tool <http://docs.qgis.org/2.8/de/docs/training_manual/forestry/forest_maps.html>`_ 
 
-Subtitle
-^^^^^^^^^^^^^^^^^
+.. figure:: images/20160708_152923.jpg
 
-* List
-
-  * Subpoint
-  
-Link:
-add `link <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
-
-Add some screen shots 
-
-.. figure:: images/muster.png
+.. figure:: images/20160708_153008.jpg

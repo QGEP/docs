@@ -1,3 +1,5 @@
+.. _database-initialization:
+
 Database initialization
 =======================
 
@@ -5,7 +7,7 @@ You can use :ref:`pgAdmin` to access and manage the database server.
 
 .. note::
 
- By clicking the link you can learn how to :ref:`install pgAdmin`
+ By clicking the link you can learn how to :ref:`install-pgAdmin`
 
 Process
 -------
@@ -18,7 +20,7 @@ In pgAdminIII
 
 * Create a new login role (`qgepuser` for example) and make it a member of the `qgep` group
 
-You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` window and type the following:
+You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` window and type the following:
 
 ::
 
@@ -32,7 +34,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
 
 * Create a new schema with the name `qgep`
 
-* Open an :ref:`SQL query` Window and create the extensions (if they're not created yet)
+* Open an :ref:`SQL-query` Window and create the extensions (if they're not created yet)
 
   * ``CREATE EXTENSION hstore;``
 
@@ -57,6 +59,8 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL query` w
   * Click `Restore`
 
   .. figure:: images/qgep_restore_messages.jpg
+  
+  * Check whether in Message window last line is Exit Code 0
 
   * Click `Cancel`
 
