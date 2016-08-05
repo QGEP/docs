@@ -15,7 +15,7 @@ Server installation
 
   * `Windows download page <http://www.postgresql.org/download/windows>`_
 
-* Install PostGIS (>=2.1)
+* Install PostGIS (>=2.3)
 
 .. note::
 

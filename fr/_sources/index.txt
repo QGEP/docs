@@ -21,7 +21,7 @@ Contents
    installation-guide/index
    user-guide/index
    admin-guide/index
-
+   vm/index
 
 Indices and tables
 ==================

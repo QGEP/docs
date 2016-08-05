@@ -101,6 +101,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
 </ul>
 
           
@@ -198,6 +199,16 @@ choose <em>advanced installation</em> and install qgis-dev.</li>
 </div>
 <div class="section" id="install-qgep-plugin">
 <h2>1.3.3. Installation des QGEP Plugins<a class="headerlink" href="#install-qgep-plugin" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Plugin requirements:</p>
+<ul class="simple">
+<li>networkx</li>
+<li>Qt 4 PostgreSQL database driver</li>
+</ul>
+<p>You can install them on debian based systems with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo pip install networkx
+sudo apt-get install libqt4-sql-psql
+</pre></div>
+</div>
 <ul class="simple">
 <li><p class="first">QGIS öffnen</p>
 </li>
