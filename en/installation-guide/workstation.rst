@@ -73,6 +73,16 @@ Install QGIS
 Install QGEP plugin
 -------------------
 
+Plugin requirements:
+
+- networkx
+- Qt 4 PostgreSQL database driver
+
+You can install them on debian based systems with::
+
+ sudo pip install networkx
+ sudo apt-get install libqt4-sql-psql
+
 * Open QGIS
 
 * Go to Plugins

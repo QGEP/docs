@@ -1,6 +1,9 @@
 QGIS Server
 ===========
 
+You can download a VM with an older QGEP setup that also
+has QGIS Server installed from http://docs.qtibia.ro/qgisplatform.vdi.xz .
+
 The VM has working installations of
 `QGIS Server <https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html>`_
 and `QGIS Web Client (QWC). <https://github.com/qgis/QGIS-Web-Client>`_
