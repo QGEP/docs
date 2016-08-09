@@ -6,7 +6,7 @@ Using Pgadmin
 SQL query
 ---------
 
-``.. figure:: images/001_roles.jpeg``
+.. figure:: images/001_roles.jpeg
 
    **Running SQL commands in PgAdminIII**
 
