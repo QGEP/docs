@@ -6,7 +6,7 @@ Using Pgadmin
 SQL query
 ---------
 
-``.. figure:: images/001_roles.jpeg``
+ .. figure:: images/001_roles.jpeg
 
    **Running SQL commands in PgAdminIII**
 
@@ -38,4 +38,4 @@ Database dump
 
  * After running the process, the exit code 0 indicates that everything went ok
 
-``.. figure:: images/Screenshot-from-2015-01-22-102222.png``
+ .. figure:: images/Screenshot-from-2015-01-22-102222.png
