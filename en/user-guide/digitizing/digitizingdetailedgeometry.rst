@@ -2,23 +2,27 @@ Digitizing detailed geometry
 ============================
 
 General
--------------------------
+-------
 
-You can add a detailed geometry to waste water structures. This is recommended in the following cases:
+You can add a detailed geometry to waste water structures.
 
-* For special structures and infiltration points, because they are not normed structures like manholes, where you can definie dimension1 and 2 to describe the extension.
-* For infiltration installations where dimension1 and 2 are not enough to describe the geometry
-* Important: Detailed geometry is usually not used for manholes or channels!
+This is recommended for:
+
+* Special structures and infiltration points, because they are not normed structures like manholes,
+  where you can define **dimension1** and **dimension2** to describe the extension.
+* Infiltration installations where **dimension1** and **2** are not enough to describe the geometry
+
+.. attention:: Detailed geometry is usually not used for manholes or channels!
 
 
 
 Digitizing tool
--------------------------
+---------------
 
-* Select the vw_qgep_cover layer
+* Select the **vw_qgep_cover** layer
 * Select the object where you want to add a detailed geometry with the info tool
-* Right click the object and select the vw_qgep_cover layer
-* Choose "Digitize"
+* Right click the object and select the **vw_qgep_cover** layer
+* Choose **Digitize**
 
 .. figure:: images/digitizing_detailedgeometry1.jpg
 
