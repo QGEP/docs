@@ -6,11 +6,7 @@ Using Pgadmin
 SQL query
 ---------
 
-<<<<<<< HEAD
- .. figure:: images/001_roles.jpeg
-=======
 .. figure:: images/001_roles.jpeg
->>>>>>> refs/remotes/origin/master
 
    **Running SQL commands in PgAdminIII**
 
@@ -30,8 +26,6 @@ Database dump
  * Right click the Schema that you want to backup (in the tree structure below "Schemas")
  * Enter the filename where the dump should be stored
  * Check the following options
-
-::
 
  .. figure:: images/Screenshot-from-2015-01-22-102152.png
  .. figure:: images/Screenshot-from-2015-01-22-102155.png
