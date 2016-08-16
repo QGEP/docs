@@ -15,4 +15,4 @@ General
 Moving
 -----------
 
-* See `this video tutorial to see the details and compare: <https://vimeo.com/162978741>`_
+* See `this video tutorial to see the details and compare. <https://vimeo.com/162978741>`_

@@ -155,8 +155,9 @@
 <div class="section" id="demo-project">
 <h2>2.2.1.1. Demo project<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Make sure you have imported the demo project with pgAdminIII (<a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a>)</li>
-<li>Open the demoproject with Menu Project/Open</li>
+<li>Make sure you have imported the demo project with pgAdminIII (see the <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a> chapter)</li>
+<li>Open the demoproject by going to the main menu and press <strong>Project</strong> &#8211;&gt; <strong>Open</strong>  or by pressing <code class="docutils literal"><span class="pre">CTRL</span></code>
++ <code class="docutils literal"><span class="pre">O</span></code> at the same time.</li>
 </ul>
 <div class="figure">
 <a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" /></a>
@@ -185,7 +186,9 @@
 <div class="section" id="layer-vw-qgep-cover">
 <h3>2.2.1.2.1. Layer vw_qgep_cover<a class="headerlink" href="#layer-vw-qgep-cover" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>The layer vw_qgep_cover allows to edit all point elements. This are the wastewater structures such as manholes, special structures, discharge points and infiltration installation (not supported yet are wwtp_structures, which is also a wastewater structure), but not the channels.</li>
+<li>The <strong>vw_qgep_cover</strong> layer allows to edit all point elements. This are the wastewater structures such as manholes,
+special structures, discharge points and infiltration installation (<strong>wwtp_structures</strong>, which is also a wastewater
+structure, are not supported yet).</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/layer_vw_qgep_cover.jpg" src="../../_images/layer_vw_qgep_cover.jpg" />
@@ -194,13 +197,15 @@
 <div class="section" id="layer-vw-qgep-reach">
 <h3>2.2.1.2.2. Layer vw_qgep_reach<a class="headerlink" href="#layer-vw-qgep-reach" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>The layer vw_qgep_reach allows to edit all linear elements of the wastewater network (reaches / channels).</li>
+<li>The <strong>vw_qgep_reach</strong> layer allows to edit all linear elements of the wastewater network (<strong>reaches</strong> / <strong>channels</strong>).</li>
 </ul>
 </div>
 <div class="section" id="layer-waste-water-structures">
 <h3>2.2.1.2.3. Layer Waste water structures<a class="headerlink" href="#layer-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events and the organisation table (where owners, dataowners, etc. are stored)</li>
+<li>This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance
+events, the relation table between waste water structures and maintenance events and the organisation table (where <strong>owners</strong>,
+<strong>dataowners</strong>, etc. are stored)</li>
 </ul>
 </div>
 <div class="section" id="layer-value-lists">
@@ -212,13 +217,13 @@
 <div class="section" id="layer-hydraulic">
 <h3>2.2.1.2.5. Layer Hydraulic<a class="headerlink" href="#layer-hydraulic" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>This layer allows to select and edit waste water nodes. Select the layer, then choose the info tool and double click on a node.</li>
+<li>This layer allows to select and edit waste water nodes. Select the layer, then choose the <strong>Identify Features</strong> tool and double click on a node.</li>
 </ul>
 </div>
 <div class="section" id="layer-topology">
 <h3>2.2.1.2.6. Layer Topology<a class="headerlink" href="#layer-topology" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Here you can find all needed information about the topology of the network</li>
+<li>Here you can find all needed information about the topology of the network.</li>
 </ul>
 </div>
 </div>
@@ -226,30 +231,31 @@
 <h2>2.2.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribut first select the vw_qgep_cover layer and switch to the edit mode</li>
-<li>Or start the QGEP Wizard and click on Start Data entry</li>
-<li>Then click on the info button and choose the element you want to edit by double-clicking</li>
+<li>To change an attribute you first need to select the <strong>vw_qgep_cover</strong> layer and switch to the edit mode.</li>
+<li>Or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</li>
+<li>Then click on the <strong>Identify features</strong> button and choose the element you want to edit by double-clicking.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/qgep_info_button.jpg" src="../../_images/qgep_info_button.jpg" />
 </div>
 <ul class="simple">
-<li>The form of the vw_qgep_cover will open</li>
+<li>The <strong>vw_qgep_cover</strong> form will open.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover.jpg" src="../../_images/form_vw_qgep_cover.jpg" />
 </div>
 <ul class="simple">
 <li>On the first tab you can change the most common attributes</li>
-<li>To change attributes of related tables such as the cover select that tab. Depending on the kind of wastewater structure you can edit additional attributs in the respective tab (special structure, manhole).</li>
-<li>The tab &#8220;covers&#8221; allows you to add additional covers.</li>
-<li>In &#8220;Structure parts&#8221; you can add also further parts such as acces aids, backflow prevention, dryweather flume etc.</li>
+<li>To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
+kind of wastewater structure you can edit additional attributes in the respective tab (<strong>special structure</strong>, <strong>manhole</strong>).</li>
+<li>The <strong>covers</strong> tab allows you to add additional covers.</li>
+<li>In <strong>Structure parts</strong> you can add also further parts such as <strong>acces aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_structure_parts.jpg" src="../../_images/form_vw_qgep_cover_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li>In &#8220;Wastewater nodes parts&#8221; you can edit or add all attributes of this class or add a second element</li>
+<li>In <strong>Wastewater nodes parts</strong> you can edit or add all attributes of this class or add a second element.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" src="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" />
@@ -260,9 +266,9 @@
 <h2>2.2.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribut first select the vw_qgep_reach layer and switch to the edit mode</li>
-<li>Then click on the info button and choose the element you want to edit by double-clicking a channel</li>
-<li>The form of the vw_qgep_reach will open</li>
+<li>To change an attribute you first need to select the <strong>vw_qgep_cover</strong> layer and switch to the edit mode.</li>
+<li>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a channel.</li>
+<li>The <strong>vw_qgep_reach</strong> form will open.</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -270,8 +276,8 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>On the first tab you can change the most common attributes</li>
-<li>To change attributes of related tables e.g. such as reach points select that tab.</li>
+<li>On the first tab you can change the most common attributes.</li>
+<li>To change attributes of related tables (e.g. <strong>reach points</strong>) select the correspondent tab.</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -283,31 +289,30 @@
 <div class="section" id="changing-attributes-of-hydraulic-elements">
 <h2>2.2.1.5. Changing attributes of hydraulic elements<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>If you right click on an element, you get a selection of all existing objects</li>
+<li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects.</li>
 </ul>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/qgep_info_button_rightclick.jpg" src="../../_images/qgep_info_button_rightclick.jpg" />
 </div>
 <ul class="simple">
-<li>You then can select the object you want and you will get the respective form to see the details.</li>
+<li>You can select then the object you want. This will get you to the correspondent form to see the details.</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="saving-changes">
 <h2>2.2.1.6. Saving changes<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.</li>
+<li>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</li>
 </ul>
-<dl class="docutils">
-<dt>..* TO DO:</dt>
-<dd><ul class="first last simple">
+<p>..* TO DO:</p>
+<blockquote>
+<div><ul class="simple">
 <li>Changing relations (Verknüpfungen ändern)</li>
 <li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
 <li>Split channels into different reaches (Kanäle unterteilen)</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p><a class="reference external" href="http://dss.vsa.ch">Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:</a></p>
 </div>
 </div>
