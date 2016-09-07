@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, The QGEP Project/OPENGIS.ch
+# Copyright (C) 2016, The QGEP Project/OPENGIS.ch
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-01 09:47+0100\n"
-"PO-Revision-Date: 2016-02-01 08:47+0000\n"
-"Last-Translator: OPENGIS.ch <info@opengis.ch>\n"
+"POT-Creation-Date: 2016-09-07 12:14+0200\n"
+"PO-Revision-Date: 2016-09-07 10:12+0000\n"
+"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgep/qgep-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,18 +18,221 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-# d570cd0a1b0f4d10b0d707c230540f07
-#: ../../en/installation-guide/system/workstation.rst:2
+#: ../../en/installation-guide/database-initialization.rst:4
+msgid "Database initialization"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:6
+msgid "You can use :ref:`pgAdmin` to access and manage the database server."
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:10
+msgid "By clicking the link you can learn how to :ref:`install-pgAdmin`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:13
+msgid "Process"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:15
+msgid "In pgAdminIII"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:17
+msgid "Connect to the database server"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:19
+msgid ""
+"Create a new group role (preferably named `qgep`, but you are free to "
+"choose)"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:21
+msgid ""
+"Create a new login role (`qgepuser` for example) and make it a member of the"
+" `qgep` group"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:23
+msgid ""
+"You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-"
+"query` window and type the following:"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:31
+msgid ""
+"Create a new database (preferably named `qgep`, but you are free to choose)"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:33
+msgid "Change to this database"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:35
+msgid "Create a new schema with the name `qgep`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:37
+msgid ""
+"Open an :ref:`SQL-query` Window and create the extensions (if they're not "
+"created yet)"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:39
+msgid "``CREATE EXTENSION hstore;``"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:41
+msgid "``CREATE EXTENSION postgis;``"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:43
+msgid "Download demo data"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:45
+msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:47
+#: ../../en/installation-guide/database-initialization.rst:73
+msgid "Right click the `qgep` schema"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:49
+#: ../../en/installation-guide/database-initialization.rst:59
+msgid "Click `Restore`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:51
+msgid "Load your download of qgep.backup"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:55
+msgid "Restore Options #2: Activate `Clean before restore`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:63
+msgid "Check whether in Message window last line is Exit Code 0"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:65
+msgid "Click `Cancel`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:67
+msgid "Right click the database and click `Refresh`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:71
+msgid "Update privileges for the database"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:75
+msgid ""
+"Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``. You can "
+"also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:78
+msgid "Click `Grant Wizard …`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:80
+msgid "Selection, click `Check All`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:82
+msgid "Privileges"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:84
+msgid "Group `qgep`"
+msgstr ""
+
+#: ../../en/installation-guide/database-initialization.rst:86
+msgid "Choose `ALL`"
+msgstr ""
+
+#: ../../en/installation-guide/index.rst:2
+msgid "QGEP Installation Guide"
+msgstr ""
+
+#: ../../en/installation-guide/index.rst:5
+msgid ""
+"This will guide you through the setup of required applications and services "
+"to get your system ready for running QGEP."
+msgstr ""
+
+#: ../../en/installation-guide/index.rst:10
+msgid ""
+"You also have the option of downloading a :ref:`Demo-VM` that has a working "
+"QGEP demo."
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:2
+msgid "Setup database server"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:4
+msgid ""
+"If you expect to access the data from several different workstations, you "
+"can install the database on a network accessible server. If it is just a "
+"single desktop you are working on, this can be installed on the same "
+"machine."
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:9
+msgid "Required Software"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:12
+msgid "Server installation"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:14
+msgid "Install PostgreSQL (>=9.3)"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:16
+msgid "`Windows download page <http://www.postgresql.org/download/windows>`_"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:18
+msgid "Install PostGIS (>=2.3)"
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:22
+msgid ""
+"In a single desktop environment (no network database server) you can setup "
+"your database to trust local connections."
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:25
+msgid ""
+"This way, the database won't ask for a password if you're connecting from "
+"your local workstation while no password is written  anywhere. You even can "
+"do with no database password at all."
+msgstr ""
+
+#: ../../en/installation-guide/server.rst:29
+msgid ""
+"This can be done by editing the database access configuration file "
+"`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
+"conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
+"service reload is required to activate changes."
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:2
 msgid "Setup workstation"
 msgstr "Setări stație de lucru"
 
-# d447cb56c9ec4bb1abf5b2b84d628c47
-#: ../../en/installation-guide/system/workstation.rst:5
+#: ../../en/installation-guide/workstation.rst:5
 msgid "Database configuration"
 msgstr "Configurare baza de date"
 
-# 16ebae43f13242b789484c7259a1791b
-#: ../../en/installation-guide/system/workstation.rst:7
+#: ../../en/installation-guide/workstation.rst:7
 msgid ""
 "To tell a workstation, where the database is (on the local system or on a "
 "network server) you will have to create some files initially on every device"
@@ -37,206 +240,186 @@ msgid ""
 "the server itself."
 msgstr "Pentru a-i spune stației de lucru (de pe care lucrezi) unde este baza de date instalată, va trebui să creezi niște fișiere pe aceasta. Această operațiune este necesară pe fiecare stație de lucru/laptop etc. de pe care se va rula QGIS/QGEP. Operațiunea nu este necesară pe server."
 
-# 251cccf3eb754d09ace4cda844f501c9
-#: ../../en/installation-guide/system/workstation.rst:12
+#: ../../en/installation-guide/workstation.rst:12
 msgid "These instructions depend on your operating system."
 msgstr "Aceste instrucțiuni depind de sistemul de operare."
 
-# e57b8c09221e48ecb8b44e385e0987de
-#: ../../en/installation-guide/system/workstation.rst:15
+#: ../../en/installation-guide/workstation.rst:15
 msgid "Windows"
 msgstr "Windows"
 
-# 667145e2e61b4a37ae46c16e2066e50e
-#: ../../en/installation-guide/system/workstation.rst:17
+#: ../../en/installation-guide/workstation.rst:17
 msgid ""
 "Create a new directory where you want to store the configuration in. (E.g. a"
 " new folder ``pgconfig`` in your home folder). This directory will be "
 "referred to as ``PGSYSCONFDIR`` in this guide."
 msgstr "Creează un nou director acolo unde vrei să salvezi configurația. (De ex. un director ``pgconfig`` în directorul acasă). Acest director este descris în acest ghid de ``PGSYSCONFDIR``."
 
-# c57ca15c177f43408389b0505e46cec1
-#: ../../en/installation-guide/system/workstation.rst:19
+#: ../../en/installation-guide/workstation.rst:19
 msgid ""
 "Set the environment variable ``PGSYSCONFDIR`` to the path to "
 "``PGSYSCONFDIR``."
 msgstr "Setează variabila de sistem ``PGSYSCONFDIR`` cu calea către ``PGSYSCONFDIR``."
 
-# e927f48ecf1e4ff5a40e5cee2ea1f0d7
-#: ../../en/installation-guide/system/workstation.rst:21
+#: ../../en/installation-guide/workstation.rst:21
 msgid "Inside this folder, there will be two files"
 msgstr "În acest director, vor fi două fișiere."
 
-# 60b17923bdd048979c7836459dcf60bc
-#: ../../en/installation-guide/system/workstation.rst:23
+#: ../../en/installation-guide/workstation.rst:23
 msgid "``pg_service.conf``"
 msgstr "``pg_service.conf``"
 
-# 2af78c8a10df449c9e0d6c543843e0be
-#: ../../en/installation-guide/system/workstation.rst:24
+#: ../../en/installation-guide/workstation.rst:24
 msgid ""
 "``pgpass`` (If you do not want to enter the password for the db every time)"
 msgstr "``pgpass`` (opțional, dacă nu vrei sa introduci parola de fiecare dată)"
 
-# f7fb72062db1466e8e4fece0ea124545
-#: ../../en/installation-guide/system/workstation.rst:28
+#: ../../en/installation-guide/workstation.rst:28
 msgid ""
 "On Windows, you need to save ``pg_service.conf`` in Unix format in order to "
 "work. One way to do it is to open it with `Notepad++ <https://notepad-plus-"
 "plus.org/>`_ and ``Edit --> EOL Conversion --> UNIX Format --> File save`` ."
 msgstr "Pe Windows, fișierul ``pg_service.conf``` trebuie salvat în format Unix pentru ca totul să funcționeze corect. O modalitate de a face aceasta este să se deschidă cu `Notepad++ <https://notepad-plus-plus.org/>`_ și să se urmeze pașii ``Edit --> EOL Conversion --> UNIX Format --> File save`` ."
 
-# 85afcf321f584539977fd3e18b253973
-#: ../../en/installation-guide/system/workstation.rst:34
+#: ../../en/installation-guide/workstation.rst:34
 msgid "Linux"
 msgstr "Linux"
 
-# d8f0c37728ac43d4ac41125700447f42
-#: ../../en/installation-guide/system/workstation.rst:36
+#: ../../en/installation-guide/workstation.rst:36
 msgid ""
 "On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into "
 "your home folder (normally ``/home/[username]``)"
 msgstr "În linux, fișierele  ``.pg_service.conf`` și ``.pgpass`` se pot pune în folderul home (în mod normal ``/home/[numeutilizator]``)"
 
-# 4e35cfe68ec9455ead3d01f5db64c301
-#: ../../en/installation-guide/system/workstation.rst:40
+#: ../../en/installation-guide/workstation.rst:40
 msgid "All systems"
 msgstr "Toate sistemele"
 
-# ce5b600babe44b108489c0557d1e45f8
-#: ../../en/installation-guide/system/workstation.rst:42
+#: ../../en/installation-guide/workstation.rst:42
 msgid ""
 "Put the following content in the file ``pg_service.conf`` or "
 "``.pg_service.conf``. You may have to adapt the variables for your setup."
 msgstr "Introdu următoarele variabile în ``pg_service.conf`` sau ``.pg_service.conf``. Variabilele introduse trebuie adaptate în funcție de topologia sistemului."
 
-# 45fe55b56b844f9db1c42f28d43acc07
-#: ../../en/installation-guide/system/workstation.rst:53
+#: ../../en/installation-guide/workstation.rst:53
 msgid ""
 "To save the password as well on the system you may use the file `pgpass "
 "<http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
 msgstr "Pentru a salva și parola în sistem se poate folosi fișierul `pgpass <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
 
-# cacac779460c4b5bba203032b9f43bba
-#: ../../en/installation-guide/system/workstation.rst:59
+#: ../../en/installation-guide/workstation.rst:59
 msgid ""
 "If you don't have the database on your local machine replace any occurence "
 "of ``localhost`` with the network address of your database server."
 msgstr "Dacă baza de date nu e instalată pe stația de lucru locală atunci trebuie înlocuit ``localhost`` cu adresa de rețea a bazei de date, oriunde găsiți aceasta referință."
 
-# 9d11a6686d464b6b9ab3dcc256580e26
-#: ../../en/installation-guide/system/workstation.rst:64
+#: ../../en/installation-guide/workstation.rst:64
 msgid "Install QGIS"
 msgstr "Instalare QGIS"
 
-# dd0ae381acfc407b9a70b3927edc2f2c
-#: ../../en/installation-guide/system/workstation.rst:66
-msgid "Minimum requirement 2.10"
-msgstr "Versiune minimă necesară 2.10"
+#: ../../en/installation-guide/workstation.rst:66
+msgid "Minimum requirement 2.14"
+msgstr ""
 
-# 015dcd75455f4b52897d6556013bedf8
-#: ../../en/installation-guide/system/workstation.rst:68
+#: ../../en/installation-guide/workstation.rst:68
 msgid ""
-"We recommend using the latest master builds (called qgis-dev on Windows) "
-"which often offer a better experience in combination with QGEP."
-msgstr "Este recomandat sa fie folosite cele mai noi versiuni de QGIS - master (numite qgis-dev în Windows) pentru a avea parte de o experienta mai buna folosind QGEP."
+"We recommend using the latest master build (called qgis-dev on Windows) "
+"which often offers a better experience in combination with QGEP. For Windows"
+" installation, download the `OSGeo4W Installer "
+"<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ choose "
+"*advanced installation* and install qgis-dev."
+msgstr ""
 
-# ffea2725c3394f0a91ae293bf8cbbe19
-#: ../../en/installation-guide/system/workstation.rst:72
+#: ../../en/installation-guide/workstation.rst:74
 msgid "Install QGEP plugin"
 msgstr "Instalare plugin QGEP"
 
-# b297d95fa69143cb873d56784e639d8c
-#: ../../en/installation-guide/system/workstation.rst:74
+#: ../../en/installation-guide/workstation.rst:76
+msgid "Plugin requirements:"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:78
+msgid "networkx"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:79
+msgid "Qt 4 PostgreSQL database driver"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:81
+msgid "You can install them on debian based systems with::"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:86
 msgid "Open QGIS"
 msgstr "Deschide QGIS"
 
-# 5071573ccf2242a18a6e077f588640b3
-#: ../../en/installation-guide/system/workstation.rst:76
-msgid "Go to Plugins (position *1* in the image below)"
-msgstr "Du-te la Pluginuri (poziția *1* în imaginea de dedesubt)"
+#: ../../en/installation-guide/workstation.rst:88
+msgid "Go to Plugins"
+msgstr ""
 
-# 1cb6f879e2ea416086f3ba3ab00289e7
-#: ../../en/installation-guide/system/workstation.rst:78
+#: ../../en/installation-guide/workstation.rst:90
 msgid "Manage and Install Plugins"
 msgstr "Manage and Install Plugins"
 
-# 658d47789aff4d908ad3b0bcd7f00736
-#: ../../en/installation-guide/system/workstation.rst:80
-msgid "Settings (position *3*)"
-msgstr "Setări (poziția *3*)"
+#: ../../en/installation-guide/workstation.rst:92
+msgid "Settings"
+msgstr ""
 
-# 59f92a5f9cd643cb9b58cac1269b5872
-#: ../../en/installation-guide/system/workstation.rst:82
+#: ../../en/installation-guide/workstation.rst:94
 msgid "Add..."
 msgstr "Adaugă"
 
-# 6837b2fbdd7445edb569b3e100807a3c
-#: ../../en/installation-guide/system/workstation.rst:84
+#: ../../en/installation-guide/workstation.rst:96
 msgid "Name: QGEP"
 msgstr "Nume: QGEP"
 
-# 3bec99ef691440ef9913eebf2c51682e
-#: ../../en/installation-guide/system/workstation.rst:86
-msgid "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
-msgstr "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
+#: ../../en/installation-guide/workstation.rst:98
+msgid ""
+"URL: "
+"``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``"
+msgstr ""
 
-# 5521f5871029448eb10934bfd2c86c8d
-#: ../../en/installation-guide/system/workstation.rst:88
-msgid "Enable `Show also experimental plugins` (position *2*)"
-msgstr "Permite `Afișare pluginuri experimentale` (poziția *2*)"
+#: ../../en/installation-guide/workstation.rst:101
+msgid "Enable `Show also experimental plugins`"
+msgstr ""
 
-# 76c44c02a53c47dea28d361ce790a883
-#: ../../en/installation-guide/system/workstation.rst:92
-msgid "**Add the plugin repo**"
-msgstr "**Adaugă repository-ul de plugin**"
-
-# 0075a3ab58bb418699df67d4a1360b79
-#: ../../en/installation-guide/system/workstation.rst:94
+#: ../../en/installation-guide/workstation.rst:103
 msgid "Activate the plugin (see image below):"
 msgstr "Activează pluginul (a se vedea imaginea de mai jos)"
 
-# 95d4af7c3e91411bb9593a1042c9f9e6
-#: ../../en/installation-guide/system/workstation.rst:96
+#: ../../en/installation-guide/workstation.rst:105
 msgid "All"
 msgstr "All - Toate"
 
-# 5d934f75ea2548c38b278142901a82cd
-#: ../../en/installation-guide/system/workstation.rst:98
+#: ../../en/installation-guide/workstation.rst:107
 msgid "Search `QGEP`"
 msgstr "Caută  `QGEP`"
 
-# d67227a1ee634d7796f830aef6392dcb
-#: ../../en/installation-guide/system/workstation.rst:100
+#: ../../en/installation-guide/workstation.rst:109
 msgid "Click the checkbox next to it"
 msgstr "Bifează căsuța de lîngă"
 
-# 3c54317b3fe9461183cd94fe79710c73
-#: ../../en/installation-guide/system/workstation.rst:104
+#: ../../en/installation-guide/workstation.rst:113
 msgid "**Add the QGEP plugin**"
 msgstr "**Adaugă pluginul QGEP**"
 
-# 61a380dcfe544ad59148020e222b5a38
-#: ../../en/installation-guide/system/workstation.rst:107
+#: ../../en/installation-guide/workstation.rst:116
 msgid "Install the demo project"
 msgstr "Instalează proiectul demo"
 
-# 1fced181b3684f1da0a3b17a07c6cad6
-#: ../../en/installation-guide/system/workstation.rst:109
+#: ../../en/installation-guide/workstation.rst:118
 msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
 msgstr "Descarcă https://github.com/QGEP/data/archive/demodata.zip"
 
-# 1d700414ba3c4324a18330fcab8f16d6
-#: ../../en/installation-guide/system/workstation.rst:111
+#: ../../en/installation-guide/workstation.rst:120
 msgid "Extract the file"
 msgstr "Extrage fișierul"
 
-# 57353e1a3dfd4d178a3808060c7eac31
-#: ../../en/installation-guide/system/workstation.rst:113
+#: ../../en/installation-guide/workstation.rst:122
 msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
 msgstr "Reîncarcă baza de date cu fișierul `qgep_demodata.backup` cu pgAdminIII"
 
-# 63c8a89b9c544a689f74b08b9342ff17
-#: ../../en/installation-guide/system/workstation.rst:115
+#: ../../en/installation-guide/workstation.rst:124
 msgid "Open `project/qgep_en.qgs` with QGIS"
 msgstr "Deschide `project/qgep_en.qgs` cu QGIS"

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, The QGEP Project/OPENGIS.ch
+# Copyright (C) 2016, The QGEP Project/OPENGIS.ch
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-01 09:47+0100\n"
-"PO-Revision-Date: 2016-02-01 08:47+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2016-09-07 12:14+0200\n"
+"PO-Revision-Date: 2016-09-07 10:15+0000\n"
+"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
 "Language-Team: Italian (http://www.transifex.com/qgep/qgep-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,585 +17,86 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# 94192b3ac35844fe8bcc6f8c118ccf58
-#: ../../en/admin-guide/data-export/index.rst:4
+#: ../../en/admin-guide/data-export/index.rst:2
 msgid "Data export"
 msgstr ""
 
-# 84e19c439bb24adebad8271e65c322ff
-#: ../../en/admin-guide/data-export/index.rst:6
+#: ../../en/admin-guide/data-export/index.rst:4
 msgid "This represents a guide on how to export data from QGEP."
 msgstr ""
 
-# 62c006a3a5314a07bf154411cfe362fa
-# 4d57fb7dd6ea47f1aaf872794f0b791f
-#: ../../en/admin-guide/data-export/index.rst:8
-#: ../../en/admin-guide/data-import/index.rst:15
-msgid "TO DO: Explain how it works"
+#: ../../en/admin-guide/data-export/index.rst:7
+msgid "Export formats"
 msgstr ""
 
-# 9611b9a530b04a9086520e4641515099
-# b51c3a95e2d1479d9a2d60eae51fefdd
-#: ../../en/admin-guide/data-export/index.rst:10
-#: ../../en/admin-guide/data-import/index.rst:8
-msgid "INTERLIS"
-msgstr ""
-
-# daf41a68704d4c49ab3e75aa0ae0fbd3
-# ed6f0c8d01dc4b1693e209b621482618
-#: ../../en/admin-guide/data-export/index.rst:11
+#: ../../en/admin-guide/data-export/index.rst:9
 #: ../../en/admin-guide/data-import/index.rst:9
-msgid "dxf"
+msgid "INTERLIS (in progress)"
 msgstr ""
 
-# 52d12f2c69a94708aa95bcb9968016e7
-# efab02e3671a475f833a9e25707accc9
-#: ../../en/admin-guide/data-export/index.rst:12
+#: ../../en/admin-guide/data-export/index.rst:10
 #: ../../en/admin-guide/data-import/index.rst:10
+msgid "dxf (in progress)"
+msgstr ""
+
+#: ../../en/admin-guide/data-export/index.rst:11
+#: ../../en/admin-guide/data-import/index.rst:11
 msgid "Shape"
 msgstr ""
 
-# df5db34eb02244c9a5ba4830a1fb297c
-# 5a6608ed2c2e446aae0b7b6e31f5969e
-#: ../../en/admin-guide/data-export/index.rst:13
+#: ../../en/admin-guide/data-export/index.rst:12
 #: ../../en/admin-guide/data-import/index.rst:12
 msgid "MOUSE / MikeUrban"
 msgstr ""
 
-# b1dd6f6a3d6848758d958acaf9e13f0d
-# 961bfff16bca46fa809aae27d526866c
-#: ../../en/admin-guide/data-export/index.rst:14
+#: ../../en/admin-guide/data-export/index.rst:13
 #: ../../en/admin-guide/data-import/index.rst:13
 msgid "other"
 msgstr ""
 
-# ec8f98cc590043e695ff55f6abd23806
-# 99192bbc1a99421684c4435cabf87176
-#: ../../en/admin-guide/data-export/index.rst:18
-#: ../../en/admin-guide/data-import/index.rst:18
-msgid "Titel"
+#: ../../en/admin-guide/data-export/index.rst:17
+#: ../../en/admin-guide/data-import/index.rst:17
+msgid "INTERLIS"
 msgstr ""
 
-# 4215ee740f054e0aaf5d8b200e2aa50c
-# 4bd0fc2de14646d897fc19a673626f3d
-#: ../../en/admin-guide/data-export/index.rst:21
-#: ../../en/admin-guide/data-import/index.rst:21
-msgid "Subtitle"
-msgstr ""
-
-# ff8eefe9c73a4e9886a93d02e0671ef7
-# a0c7cd5433ac4109a1f59d4037420e78
-#: ../../en/admin-guide/data-export/index.rst:24
-#: ../../en/admin-guide/data-import/index.rst:24
-msgid "List"
-msgstr ""
-
-# 72b07b4f4fb9467da8b45b3ff57acea9
-# 52bbf1c210bd4adc8bb6fc0d8c51be42
-#: ../../en/admin-guide/data-export/index.rst:26
-#: ../../en/admin-guide/data-import/index.rst:26
-msgid "Subpoint"
-msgstr ""
-
-# e90defc88341474fbe591604d767f723
-# c902a2407d0f4e98abec17c7f23a5806
-#: ../../en/admin-guide/data-export/index.rst:28
-#: ../../en/admin-guide/data-import/index.rst:28
+#: ../../en/admin-guide/data-export/index.rst:19
 msgid ""
-"Link: add `link <http://www.postgresql.org/docs/current/static/libpq-"
-"pgpass.html>`_"
+"INTERLIS Export can be done using the ili2pg tool. For further information "
+"contact the developer team."
 msgstr ""
 
-# b01dfdf4ad7c4d9687740f7a6dfdae66
-# 25b75cdf30014fd9bf4ac93c36d2815c
-#: ../../en/admin-guide/data-export/index.rst:31
-#: ../../en/admin-guide/data-import/index.rst:31
-msgid "Add some screen shots"
-msgstr ""
-
-# 8849a9adadab4923aa9f57521cee6f6b
-#: ../../en/admin-guide/data-import/index.rst:4
+#: ../../en/admin-guide/data-import/index.rst:2
 msgid "Data import"
 msgstr ""
 
-# 39be7e905672456d8ddd820537628d90
-#: ../../en/admin-guide/data-import/index.rst:6
-msgid "This represents a guide on how to import data into QGEP."
+#: ../../en/admin-guide/data-import/index.rst:4
+msgid "This represents a guide on how to import data from QGEP."
 msgstr ""
 
-# 38a95820151149b4a9973dfca28e332e
-#: ../../en/admin-guide/data-import/index.rst:11
-msgid "Text"
+#: ../../en/admin-guide/data-import/index.rst:7
+msgid "Import formats"
 msgstr ""
 
-# 733662d52be64a56a517eb4b576e341b
-#: ../../en/admin-guide/installation-guide/index.rst:2
-msgid "QGEP Installation Guide"
-msgstr ""
-
-# abfd53f66a27492cbce5977016020b1f
-#: ../../en/admin-guide/installation-guide/index.rst:5
+#: ../../en/admin-guide/data-import/index.rst:19
 msgid ""
-"This will guide you through the setup of required applications and services "
-"to get your system ready for running QGEP."
+"INTERLIS Import can be done using the ili2pg tool. For further information "
+"contact the developer team."
 msgstr ""
 
-# 501e7b611b6d402e99d69fc00578623f
-#: ../../en/admin-guide/installation-guide/index.rst:10
+#: ../../en/admin-guide/index.rst:2
+msgid "Admin Guide"
+msgstr ""
+
+#: ../../en/admin-guide/index.rst:4
 msgid ""
-"You also have the option of downloading a :ref:`Demo VM` that has a working "
-"QGEP demo."
+"This represents a guide on how to administrate the database, install a "
+"Virtual machine, import and export data"
 msgstr ""
 
-# 201a2596bc524ae2b56d23e13ea89b2e
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:2
-msgid "Database initialization"
-msgstr ""
-
-# 89289b095c824b4790bb065c0dc0d16a
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:4
-msgid "You can use :ref:`pgAdmin` to access and manage the database server."
-msgstr ""
-
-# 5ff54ae48bee477383c275b868c905cf
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:8
-msgid "By clicking the link you can learn how to :ref:`install pgAdmin`"
-msgstr ""
-
-# a7066120a255477eaa1164590686d3a5
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:11
-msgid "Process"
-msgstr ""
-
-# f54f77fc09564f7b8fe8fc3e4987a7ca
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:13
-msgid "In pgAdminIII"
-msgstr ""
-
-# 5fe403a7ddf84cd3a04312b5596312fb
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:15
-msgid "Connect to the database server"
-msgstr ""
-
-# 34d0079d6c074761b2ee00bff85a323c
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:17
-msgid ""
-"Create a new group role (preferably named `qgep`, but you are free to "
-"choose)"
-msgstr ""
-
-# 21795f693e5242189c9666ea47175184
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:19
-msgid ""
-"Create a new login role (`qgepuser` for example) and make it a member of the"
-" `qgep` group"
-msgstr ""
-
-# 5ffa6166d5564ff388e390cb14ceb031
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:21
-msgid ""
-"You can do this graphically or by simply opening a pgAdminIII :ref:`SQL "
-"query` window and type the following:"
-msgstr ""
-
-# c2ff7a26d2c64c37b0740ca7f25db32d
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:29
-msgid ""
-"Create a new database (preferably named `qgep`, but you are free to choose)"
-msgstr ""
-
-# 08d6cc7874974b35901dc6fc309ea87f
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:31
-msgid "Change to this database"
-msgstr ""
-
-# 62c6ea5c74bd42c0a9304285538f73b4
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:33
-msgid "Create a new schema with the name `qgep`"
-msgstr ""
-
-# d0ebbe55391b411dbd0c5b5971605bbb
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:35
-msgid ""
-"Open an :ref:`SQL query` Window and create the extensions (if they're not "
-"created yet)"
-msgstr ""
-
-# f66bac7f35f541f0bbf43a09ebac16d8
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:37
-msgid "``CREATE EXTENSION hstore;``"
-msgstr ""
-
-# 7950979b6b3b433ea921bba5a95f4360
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:39
-msgid "``CREATE EXTENSION postgis;``"
-msgstr ""
-
-# 34405db005144f74b1e99e506fbb79f7
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:41
-msgid "Download demo data"
-msgstr ""
-
-# 0682a2cea31549709064337d6c66ec86
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:43
-msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
-msgstr ""
-
-# fd54a548b1cd42ac9b555ec7c04d520d
-# b1c8ec27a22048b5af51af592bc728bc
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:45
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:61
-msgid "Right click the `qgep` schema"
-msgstr ""
-
-# 8a2af098a9754618b70d403fe03279e0
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:47
-msgid "Click restore"
-msgstr ""
-
-# fee81eeb66474df39e9f3dd7d84c1b77
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:49
-msgid "Load your download of qgep.backup"
-msgstr ""
-
-# 16e3937d5e014d0192b7be23c8c1fea0
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:51
-msgid "Restore Options #2: Activate `Clean before restore`"
-msgstr ""
-
-# e458c1aaab79442e853850f9184bc598
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:53
-msgid "Click `Restore`"
-msgstr ""
-
-# c99a3ca50c0f44dc9a2f6ac0ec940b25
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:55
-msgid "Click `Cancel`"
-msgstr ""
-
-# b2c1036a252b40c6813b9e0fab7cb53a
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:57
-msgid "Right click the database and click `Refresh`"
-msgstr ""
-
-# e8d38b22a4664edb91290da000eafafe
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:59
-msgid "Update privileges for the database"
-msgstr ""
-
-# 9b37b51034aa46f1bf06eb8a077bb856
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:63
-msgid "Click `Grant Wizard …`"
-msgstr ""
-
-# 16b6a4f625954bb8b908cdd3283a4871
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:65
-msgid "Selection, click `Check All`"
-msgstr ""
-
-# 3f72434ece724ce0873aeb11cc6cc3af
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:67
-msgid "Privileges"
-msgstr ""
-
-# 4a07b167ef3343108e9844fce9590605
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:69
-msgid "Group `qgep`"
-msgstr ""
-
-# 30c795141fa643f09a6a5bfb0909d921
-#: ../../en/admin-guide/installation-guide/system/database-initialization.rst:71
-msgid "Choose `ALL`"
-msgstr ""
-
-# 4f81bd35463a410596e9d306b2acba31
-#: ../../en/admin-guide/installation-guide/system/server.rst:2
-msgid "Setup database server"
-msgstr ""
-
-# f9db3bdde6bf440c9848c56ac323c8b9
-#: ../../en/admin-guide/installation-guide/system/server.rst:4
-msgid ""
-"If you expect to access the data from several different workstations, you "
-"can install the database on a network accessible server. If it is just a "
-"single desktop you are working on, this can be installed on the same "
-"machine."
-msgstr ""
-
-# 2c87edcd7c2e42238a91c8ad54330aac
-#: ../../en/admin-guide/installation-guide/system/server.rst:9
-msgid "Required Software"
-msgstr ""
-
-# 87d7694ef4864a42bff01ee06afe3ebe
-#: ../../en/admin-guide/installation-guide/system/server.rst:12
-msgid "Server installation"
-msgstr ""
-
-# 8f896e6b0899409a978ba3e982983111
-#: ../../en/admin-guide/installation-guide/system/server.rst:14
-msgid "Install PostgreSQL (>=9.3)"
-msgstr ""
-
-# 10b03d95faf247329e588f8c90f26b98
-#: ../../en/admin-guide/installation-guide/system/server.rst:16
-msgid "`Windows download page <http://www.postgresql.org/download/windows>`_"
-msgstr ""
-
-# 692a61f1ae144b16824686c721e87630
-#: ../../en/admin-guide/installation-guide/system/server.rst:18
-msgid "Install PostGIS (>=2.1)"
-msgstr ""
-
-# 91a9d5f3ef154f8cbc34a71198ca6fd5
-#: ../../en/admin-guide/installation-guide/system/server.rst:22
-msgid ""
-"In a single desktop environment (no network database server) you can setup "
-"your database to trust local connections."
-msgstr ""
-
-# 632f76b7cb524fcd889cadb2da4fc845
-#: ../../en/admin-guide/installation-guide/system/server.rst:25
-msgid ""
-"This way, the database won't ask for a password if you're connecting from "
-"your local workstation while no password is written  anywhere. You even can "
-"do with no database password at all."
-msgstr ""
-
-# 1734e37d92a64b43b6209672d44bae74
-#: ../../en/admin-guide/installation-guide/system/server.rst:29
-msgid ""
-"This can be done by editing the database access configuration file "
-"`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
-"conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
-"service reload is required to activate changes."
-msgstr ""
-
-# 2aa09c5cbe724ee0bae003ceee6d8395
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:2
-msgid "Setup workstation"
-msgstr ""
-
-# 2db0e5936e774e3298acab47596ba483
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:5
-msgid "Database configuration"
-msgstr ""
-
-# 7b2b53cea13f4603acda48c15f80047e
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:7
-msgid ""
-"To tell a workstation, where the database is (on the local system or on a "
-"network server) you will have to create some files initially on every device"
-" on which you will have QGIS/QGEP running. It is not required to do that on "
-"the server itself."
-msgstr ""
-
-# 89441268d3c04d93b74857ee80401cc9
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:12
-msgid "These instructions depend on your operating system."
-msgstr ""
-
-# ccf8eb77920b44dda147f1fb0bd9c18b
-# 4c9f3c2528574cbb9be5c1ac73a1b972
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:15
-#: ../../en/admin-guide/pgadmin/install.rst:7
-msgid "Windows"
-msgstr ""
-
-# 4a777ee0e3d44b38a976b6051f00bf98
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:17
-msgid ""
-"Create a new directory where you want to store the configuration in. (E.g. a"
-" new folder ``pgconfig`` in your home folder). This directory will be "
-"referred to as ``PGSYSCONFDIR`` in this guide."
-msgstr ""
-
-# b05d8c82e1d94f33b7884bae5f8c7a1c
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:19
-msgid ""
-"Set the environment variable ``PGSYSCONFDIR`` to the path to "
-"``PGSYSCONFDIR``."
-msgstr ""
-
-# a566463b9f6d4a4ca8da4684592e326a
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:21
-msgid "Inside this folder, there will be two files"
-msgstr ""
-
-# 668a67cc2446415aab7c1ccc61c9cfb6
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:23
-msgid "``pg_service.conf``"
-msgstr ""
-
-# 503d8dddd2fc42619882451816a71b1c
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:24
-msgid ""
-"``pgpass`` (If you do not want to enter the password for the db every time)"
-msgstr ""
-
-# 54689a09b6fc4c2ea8906ebc0b72ff5b
-# 6f2e4a22f59d47498bd03ededc25c5ce
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:27
-#: ../../en/admin-guide/pgadmin/install.rst:12
-msgid "Linux"
-msgstr ""
-
-# 4addcce707984d4fa63710c20477cf6a
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:29
-msgid ""
-"On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into "
-"your home folder (normally ``/home/[username]``)"
-msgstr ""
-
-# 30c865e6003f4e06b75f7d613c24575f
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:33
-msgid "All systems"
-msgstr ""
-
-# 35c05e8d933d4836bf6f2661a54a2ab0
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:35
-msgid ""
-"Put the following content in the file ``pg_service.conf`` or "
-"``.pg_service.conf``. You may have to adapt the variables for your setup."
-msgstr ""
-
-# 5ed39df5450d48719022bc0f39f64a8c
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:46
-msgid ""
-"To save the password as well on the system you may use the file `pgpass "
-"<http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
-msgstr ""
-
-# d4e955f7648347708772f38a2750d738
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:52
-msgid ""
-"If you don't have the database on your local machine replace any occurence "
-"of ``localhost`` with the network address of your database server."
-msgstr ""
-
-# d86e2d6457244a9aaad2bd075483622c
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:57
-msgid "Install QGIS"
-msgstr ""
-
-# 4b1eede4f7564e5ba1735de92ae52297
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:59
-msgid "Minimum requirement 2.10"
-msgstr ""
-
-# 1b09f7c1894e41438de1e62e53c6eccb
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:61
-msgid ""
-"We recommend using the latest master builds (called qgis-dev on Windows) "
-"which often offer a better experience in combination with QGEP."
-msgstr ""
-
-# 637f5f23586d452cb8c7827f63244ebc
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:65
-msgid "Install QGEP plugin"
-msgstr ""
-
-# b4e7749e41ec413698bf4fefd05655bb
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:67
-msgid "Open QGIS"
-msgstr ""
-
-# 3af50100483f4e66918e8859346c5e9d
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:69
-msgid "Go to Plugins (position *1* in the image below)"
-msgstr ""
-
-# b04e81e9409344fbb79c3f73408f14e2
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:71
-msgid "Manage and Install Plugins"
-msgstr ""
-
-# b9176f41983f488f9e594be7be4476cf
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:73
-msgid "Settings (position *3*)"
-msgstr ""
-
-# eaeb68ca37724c9c83970515ad9efe82
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:75
-msgid "Add..."
-msgstr ""
-
-# 7131bdb3923b41979bc7eafdc3077155
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:77
-msgid "Name: QGEP"
-msgstr ""
-
-# d968d6df65924c8696369c07e5afedb0
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:79
-msgid "URL: ``http://qgis.vitu.ch/plugins/plugins.xml``"
-msgstr ""
-
-# 981e55a7026646b4b2f217bdf18bae16
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:81
-msgid "Enable `Show also experimental plugins` (position *2*)"
-msgstr ""
-
-# fcdcff5815c54d1e9c185fa6ba2b1619
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:85
-msgid "**Add the plugin repo**"
-msgstr ""
-
-# a7b65be273bc4273a7a2acf86297b2a5
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:87
-msgid "Activate the plugin (see image below):"
-msgstr ""
-
-# 818164caa3ad416ab923cf0429ff0146
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:89
-msgid "All"
-msgstr ""
-
-# 207b124ea21949a28c078e5821f84292
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:91
-msgid "Search `QGEP`"
-msgstr ""
-
-# de4f637d6a5841aa8972c9e2c0d33d74
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:93
-msgid "Click the checkbox next to it"
-msgstr ""
-
-# a849262cb81c4c9bb8dedf2479f18011
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:97
-msgid "**Add the QGEP plugin**"
-msgstr ""
-
-# 1425d7f86d0f4c85b1d1fa99241b9487
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:100
-msgid "Install the demo project"
-msgstr ""
-
-# 7f295382617349f7b6ce13adb37c6b8d
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:102
-msgid "Download https://github.com/QGEP/data/archive/demodata.zip"
-msgstr ""
-
-# 0f2e483f239244d5b3f3f7e608c518ec
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:104
-msgid "Extract the file"
-msgstr ""
-
-# 77dae2e861bb4b39ac1c139dbdce7db2
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:106
-msgid "Restore the file `qgep_demodata.backup` with pgAdminIII"
-msgstr ""
-
-# 48301b049f8a40a8bff12614ef6e6b66
-#: ../../en/admin-guide/installation-guide/system/workstation.rst:108
-msgid "Open `project/qgep_en.qgs` with QGIS"
-msgstr ""
-
-# 385dd5ea3e2d4e2abc2fd14c97a3d81e
 #: ../../en/admin-guide/pgadmin/index.rst:4
 msgid "pgAdmin"
 msgstr ""
 
-# 9ae4462fcbed45a899861173d666ff30
 #: ../../en/admin-guide/pgadmin/index.rst:6
 msgid ""
 "PgAdminIII is a Desktop tool that permits to access and manage the database "
@@ -603,54 +104,52 @@ msgid ""
 "management using pgAdmin."
 msgstr ""
 
-# 2e46985048394844a8c4eb10f312fc94
 #: ../../en/admin-guide/pgadmin/install.rst:4
 msgid "Install pgAdmin"
 msgstr ""
 
-# 9e9900157bb14a178bbe6f5f56e0f09e
+#: ../../en/admin-guide/pgadmin/install.rst:7
+msgid "Windows"
+msgstr ""
+
 #: ../../en/admin-guide/pgadmin/install.rst:9
 msgid ""
 "pgAdmin should be automatically installed if you used the EnterpriseDB "
 "installer."
 msgstr ""
 
-# c7ba8f9b22884b3fa2f91d72d1bd1c42
+#: ../../en/admin-guide/pgadmin/install.rst:12
+msgid "Linux"
+msgstr ""
+
 #: ../../en/admin-guide/pgadmin/install.rst:15
 msgid "Debian/Ubuntu based distros"
 msgstr ""
 
-# e4195fc189a64d019e8cbddf3835bb34
 #: ../../en/admin-guide/pgadmin/install.rst:17
 msgid "You can install pgAdmin by running the following command:"
 msgstr ""
 
-# 23e8a688df9844fcab59953d1ff19397
 #: ../../en/admin-guide/pgadmin/install.rst:19
 msgid "``sudo apt-get install pgadmin3``"
 msgstr ""
 
-# 64a71b6c37644065ac29f4b6d2821296
 #: ../../en/admin-guide/pgadmin/install.rst:22
 msgid "Fedora based distros"
 msgstr ""
 
-# fa762d43f579455ba26872206a34e9c3
 #: ../../en/admin-guide/pgadmin/install.rst:24
 msgid "``sudo yum install pgadmin3``"
 msgstr ""
 
-# b52f6ef2c3394608b4d2abb9a890dc08
 #: ../../en/admin-guide/pgadmin/install.rst:27
 msgid "Suse based distros"
 msgstr ""
 
-# c91e38fa8e5f44e09aa72b53c5d50de9
 #: ../../en/admin-guide/pgadmin/install.rst:29
 msgid "``sudo zypper install pgadmin3``"
 msgstr ""
 
-# 7b11ac614215454fa7fcea0231c24870
 #: ../../en/admin-guide/pgadmin/install.rst:33
 msgid ""
 "All the commands presented above assume that you are logged in as a user "
@@ -659,258 +158,51 @@ msgid ""
 "command without the ``sudo`` prefix."
 msgstr ""
 
-# 3cd3d847822b4c119cfe3545d1687530
 #: ../../en/admin-guide/pgadmin/usage.rst:2
 msgid "Using Pgadmin"
 msgstr ""
 
-# b83ed1243f724e7db86253c0289ad4af
 #: ../../en/admin-guide/pgadmin/usage.rst:7
 msgid "SQL query"
 msgstr ""
 
-# a57d29abcf5f4e9193fdee21e6c7d895
 #: ../../en/admin-guide/pgadmin/usage.rst:11
 msgid "**Running SQL commands in PgAdminIII**"
 msgstr ""
 
-# f99620a8c9f4416fad4104bb0b651c65
 #: ../../en/admin-guide/pgadmin/usage.rst:15
 msgid ""
 "Clicking the highlighted icon at location *1* opens the SQL Window. The SQL "
 "icon is active only when you're connected to a database."
 msgstr ""
 
-# 8751b2d0ccc14a12a686d518fff265fa
 #: ../../en/admin-guide/pgadmin/usage.rst:17
 msgid "Clicking the icon at *2* runs the written SQL commands."
 msgstr ""
 
-# 17cf946f08b44db788fcb330bbdd29df
 #: ../../en/admin-guide/pgadmin/usage.rst:22
 msgid "Database dump"
 msgstr ""
 
-# 22da967ff113411881781c0fa84a008a
 #: ../../en/admin-guide/pgadmin/usage.rst:25
 msgid "Open pgAdminIII and connect to the database"
 msgstr ""
 
-# 1c38110ce59d462e83219c43041f723b
 #: ../../en/admin-guide/pgadmin/usage.rst:26
 msgid ""
 "Right click the Schema that you want to backup (in the tree structure below "
 "\"Schemas\")"
 msgstr ""
 
-# 49c96064c632436a9828866b3609de65
 #: ../../en/admin-guide/pgadmin/usage.rst:27
 msgid "Enter the filename where the dump should be stored"
 msgstr ""
 
-# 7e5eaf3d399d4eb0b2e08ba66d0bda44
 #: ../../en/admin-guide/pgadmin/usage.rst:28
 msgid "Check the following options"
 msgstr ""
 
-# 7504ad5af2794c4491804b4e6f77f243
 #: ../../en/admin-guide/pgadmin/usage.rst:37
 msgid ""
 "After running the process, the exit code 0 indicates that everything went ok"
-msgstr ""
-
-# 0ad34c5b957e49d1b6e9862b7c4c3263
-#: ../../en/admin-guide/vm/about.rst:2
-msgid "About"
-msgstr ""
-
-# 5c6b2aeef361498995c35d6044b50bf9
-#: ../../en/admin-guide/vm/about.rst:4
-msgid "The VM is based on Debian Jessie with Cinnamon Desktop."
-msgstr ""
-
-# 0c5fb9eab5244fc1b718818b845fee40
-#: ../../en/admin-guide/vm/about.rst:6
-msgid "Installed software:"
-msgstr ""
-
-# 99760f03cd2040cc82eaa4e069afc271
-#: ../../en/admin-guide/vm/about.rst:8
-msgid "PostgreSQL 9.4.4 with Postgis 2.1.7"
-msgstr ""
-
-# 741bd93db4874bcb801db88aa6d13dff
-#: ../../en/admin-guide/vm/about.rst:9
-msgid "QGIS Master 2.11"
-msgstr ""
-
-# 71d0e436beab4a53abc8a5dde0658a0c
-#: ../../en/admin-guide/vm/about.rst:11
-msgid "Settings that are changed from a default software install:"
-msgstr ""
-
-# 12af8a84b7c3445dbb4008917318cd20
-#: ../../en/admin-guide/vm/about.rst:13
-msgid "``pg_hba.conf`` has **trust** for local connections"
-msgstr ""
-
-# f151dd5c4ecf40299536e424199c76a7
-#: ../../en/admin-guide/vm/about.rst:14
-msgid ""
-"QGIS is setup with `multithreaded rendering enabled "
-"<http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
-msgstr ""
-
-# 4a7de358d05c40e4812d1669ea471594
-#: ../../en/admin-guide/vm/about.rst:15
-msgid ""
-"QGIS is setup with `postgres server side expression compiler enabled "
-"<http://www.opengis.ch/2015/07/29/postgres-expression-compiler>`_"
-msgstr ""
-
-# 9e12ae1a61ea46ae857b9048b49a79fe
-#: ../../en/admin-guide/vm/about.rst:19
-msgid "The users ``web`` and ``root`` have the password ``qgis``"
-msgstr ""
-
-# 0da548676fef4aa58bfabea5c64bd274
-#: ../../en/admin-guide/vm/about.rst:23
-msgid "If you decide to use the VM in production, it is recommended to:"
-msgstr ""
-
-# a0847cded5f0456bac1db919355930f5
-#: ../../en/admin-guide/vm/about.rst:25
-msgid "change the passwords"
-msgstr ""
-
-# 78af56771bfc474ab69a6c645c5d8c9d
-#: ../../en/admin-guide/vm/about.rst:26
-msgid ""
-"regenerate the ssh keys by running in a terminal ``sudo rm "
-"/etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
-msgstr ""
-
-# e9e65c6914244164afac066769150c34
-#: ../../en/admin-guide/vm/index.rst:4
-msgid "Demo Virtual Machine"
-msgstr ""
-
-# d060a3190a3344568718256d29aaeace
-#: ../../en/admin-guide/vm/index.rst:6
-msgid ""
-"This represents a guide on how to download and install a virtual machine "
-"(VM) that has a working QGEP installation with a preinstalled demo dataset."
-msgstr ""
-
-# 1c542061e9234b7eb13e42991f08eeb9
-#: ../../en/admin-guide/vm/install.rst:2
-msgid "Install"
-msgstr ""
-
-# 772c421b5817480f8cf5d7f2412ef2f9
-#: ../../en/admin-guide/vm/install.rst:5
-msgid "Download"
-msgstr ""
-
-# 89971b1388944baaa1905f2b1717eefa
-#: ../../en/admin-guide/vm/install.rst:6
-msgid ""
-"Download the vm from `here <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_"
-msgstr ""
-
-# d5f6c915b6b94bb384cb467acb3b609a
-#: ../../en/admin-guide/vm/install.rst:10
-msgid ""
-"The size of the VM is around 2GB compressed and around 7GB uncompressed."
-msgstr ""
-
-# caeb587054d34c0ba499c06da7cf4076
-#: ../../en/admin-guide/vm/install.rst:13
-msgid "Extract"
-msgstr ""
-
-# 0753f9ef461947f7aeb11bb042a0c9b4
-#: ../../en/admin-guide/vm/install.rst:14
-msgid "The virtual disk is archived using XZ compression."
-msgstr ""
-
-# 61fc91df24dd4afb88fd2cf83ae74651
-#: ../../en/admin-guide/vm/install.rst:16
-msgid "To extract the archive:"
-msgstr ""
-
-# a9ffcd5664eb465b92783d201e6815d1
-#: ../../en/admin-guide/vm/install.rst:18
-msgid ""
-"**Windows:** you can use `7-Zip <http://7-zip.org/>`_ to extract the "
-"archive."
-msgstr ""
-
-# 5f7f339d77c341aba1b1c9c0a5e099da
-#: ../../en/admin-guide/vm/install.rst:19
-msgid ""
-"**Linux:** cd to the download directory and run ``xz -d "
-"qgisplatform.vdi.xz``"
-msgstr ""
-
-# a10f22f6ad9e4ac3affb2fd822fff078
-#: ../../en/admin-guide/vm/install.rst:21
-msgid "You can run the VM as you would do with any VirtualBox VM."
-msgstr ""
-
-# 43fee9f1df05435c9dc2a8a559dbe728
-#: ../../en/admin-guide/vm/install.rst:25
-msgid ""
-"As the VM is based on Linux it is fairly simple to convert the image to a "
-"raw disk and put it on a USB stick (minimum 8GB) or a faster storage. This "
-"would enable you to run the app without the virtualization penalty and enjoy"
-" the full speed of your hardware."
-msgstr ""
-
-# 0cb62a0a5dfe4791b67a70f3e9e14e21
-#: ../../en/admin-guide/vm/server.rst:2
-msgid "QGIS Server"
-msgstr ""
-
-# d98408cdf6ef4d568c7314d17f0ea08d
-#: ../../en/admin-guide/vm/server.rst:4
-msgid ""
-"The VM has working installations of `QGIS Server "
-"<https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html>`_"
-" and `QGIS Web Client (QWC). <https://github.com/qgis/QGIS-Web-Client>`_"
-msgstr ""
-
-# dc583a0e5a564f04bd06fd267df55633
-#: ../../en/admin-guide/vm/server.rst:9
-msgid "Access the Web Services"
-msgstr ""
-
-# 1233a92cdd0a4adc802c09046f8345d9
-#: ../../en/admin-guide/vm/server.rst:11
-msgid ""
-"The Apache server is setup to respond to requests pointing to the "
-"`http://qgisplatform.demo`. Accessing the above link with the Internet "
-"Browser of the VM will take you to the starting page of QWC depicted in the "
-"above image."
-msgstr ""
-
-# a76fffbf2e0d42ada630ee7c6dafcb92
-#: ../../en/admin-guide/vm/server.rst:17
-msgid "**QGIS Web client starting page**"
-msgstr ""
-
-# 502f8e35b83947739d8a4388ebd8b077
-#: ../../en/admin-guide/vm/server.rst:19
-msgid ""
-"If you want to access the web services outside the VM, you need to edit the "
-"``hosts`` file on your machine and point ``qgisplatform.demo`` to the IP of "
-"the VM."
-msgstr ""
-
-# 78ff523f60d14239b0c5032c9eeb15fb
-#: ../../en/admin-guide/vm/server.rst:24
-msgid ""
-"If you've setup the VM with the network adapter in NAT mode only the VM host"
-" will be able to access the services. If you want all the devices on your "
-"LAN to do it, you need to setup the network adapter in bridge mode."
 msgstr ""

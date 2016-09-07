@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015, The QGEP Project/OPENGIS.ch
+# Copyright (C) 2016, The QGEP Project/OPENGIS.ch
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
 # Konradin Fischer <fischer8712@gmail.com>, 2015
-# Stefan Burckhardt <stefan.burckhardt@gmx.ch>, 2015
+# Stefan <stefan.burckhardt@gmx.ch>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 11:07+0100\n"
-"PO-Revision-Date: 2015-11-27 14:08+0000\n"
-"Last-Translator: Stefan Burckhardt <stefan.burckhardt@gmx.ch>\n"
+"POT-Creation-Date: 2016-09-07 12:14+0200\n"
+"PO-Revision-Date: 2016-09-07 10:15+0000\n"
+"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,174 +19,180 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# 27cc15a67c484977b591b0e2a46ca8c5
 #: ../../en/vm/about.rst:2
 msgid "About"
 msgstr ""
 
-# 9ec4b72482bc4d6892f9982996d37da0
 #: ../../en/vm/about.rst:4
-msgid "The VM is based on Debian Jessie with Cinnamon Desktop."
-msgstr "Die virtuelle Maschine (VM) basiert auf Debian 'Jessie' und dem 'Cinnamon' Desktop."
+msgid ""
+"This represents a guide on how to download and install a virtual machine "
+"(VM) that has a working QGEP installation with a demo dataset. The VM also "
+"has a working demo of the `QWAT water project "
+"<https://github.com/qwat/QWAT>`_ ."
+msgstr ""
 
-# d8e83dfeafa740bf9bc9c7a65b6efa15
-#: ../../en/vm/about.rst:6
+#: ../../en/vm/about.rst:7
+msgid "The VM is based on Debian Testing with Cinnamon Desktop."
+msgstr ""
+
+#: ../../en/vm/about.rst:9
+msgid ""
+"Debian Testing was chosen in order to have GDAL 2.x and also benefit from "
+"latest linux kernel so that latest hardware won't be a problem for the case "
+"where the VM is used outside virtualization (e.g use the virtual disk as "
+"basis to create a non-virtualized usb-stick to be used for demo purposes)."
+msgstr ""
+
+#: ../../en/vm/about.rst:13
 msgid "Installed software:"
 msgstr "Benötigte Software:"
 
-# 060795f871eb454db6f549020dd3844c
-#: ../../en/vm/about.rst:8
-msgid "PostgreSQL 9.4.4 with Postgis 2.1.7"
-msgstr "PostgreSQL 9.4.4 mit Postgis 2.1.7"
+#: ../../en/vm/about.rst:15
+msgid "PostgreSQL 9.5.2 with Postgis 2.3"
+msgstr ""
 
-# 8ecdb445fbfe4819b261bb1d4109836e
-#: ../../en/vm/about.rst:9
-msgid "QGIS Master 2.11"
-msgstr "QGIS Master 2.11"
+#: ../../en/vm/about.rst:16
+msgid "QGIS 2.16"
+msgstr ""
 
-# 78d86811b42a4491bc3bf115ea525913
-#: ../../en/vm/about.rst:11
+#: ../../en/vm/about.rst:18
 msgid "Settings that are changed from a default software install:"
 msgstr ""
 
-# b20223f875de459ba1c90706ea75bfc1
-#: ../../en/vm/about.rst:13
+#: ../../en/vm/about.rst:20
 msgid "``pg_hba.conf`` has **trust** for local connections"
 msgstr ""
 
-# c4d9fac8d5574d98bb221063c0c47654
-#: ../../en/vm/about.rst:14
+#: ../../en/vm/about.rst:21
 msgid ""
 "QGIS is setup with `multithreaded rendering enabled "
 "<http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
 msgstr ""
 
-# c7f74aaf902740d58e6cc36ede275436
-#: ../../en/vm/about.rst:15
-msgid ""
-"QGIS is setup with `postgres server side expression compiler enabled "
-"<http://www.opengis.ch/2015/07/29/postgres-expression-compiler>`_"
+#: ../../en/vm/about.rst:25
+msgid "The users ``qgis`` and ``root`` have the password ``qgis``"
 msgstr ""
 
-# 144bd56a59a24b33a788341fb9f31551
-#: ../../en/vm/about.rst:19
-msgid "The users ``web`` and ``root`` have the password ``qgis``"
-msgstr ""
-
-# b6455dc064ad4b2e82351491af6e28d9
-#: ../../en/vm/about.rst:23
+#: ../../en/vm/about.rst:29
 msgid "If you decide to use the VM in production, it is recommended to:"
 msgstr ""
 
-# dc5fbbeb2b414a75af66590f24d6f928
-#: ../../en/vm/about.rst:25
+#: ../../en/vm/about.rst:31
 msgid "change the passwords"
 msgstr "ändern Sie die Passwörter"
 
-# 2acf6661f63e40bf8b172cd52d9d1600
-#: ../../en/vm/about.rst:26
+#: ../../en/vm/about.rst:32
 msgid ""
 "regenerate the ssh keys by running in a terminal ``sudo rm "
 "/etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
 msgstr ""
 
-# 16757255502a410f9fa8fd9b91aa6a08
+#: ../../en/vm/about.rst:36
+msgid ""
+"QGIS has been build from source as Debian developpers have dropped QtWebKit "
+"python support in the packages. After the QGIS ecosystem will remove its "
+"QtWebKit dependencies the VM will benefit again from the QGIS repo packages."
+msgstr ""
+
 #: ../../en/vm/index.rst:4
 msgid "Demo Virtual Machine"
 msgstr ""
 
-# 55bb6544ace54d6695d15f2fbbc983e8
 #: ../../en/vm/index.rst:6
 msgid ""
 "This represents a guide on how to download and install a virtual machine "
 "(VM) that has a working QGEP installation with a preinstalled demo dataset."
 msgstr ""
 
-# 05bed8121033444f9d39e53de9e21ac8
 #: ../../en/vm/install.rst:2
 msgid "Install"
 msgstr "Installation"
 
-# 82f6d4f8500645b6abfa9adf5bb39a46
 #: ../../en/vm/install.rst:5
 msgid "Download"
 msgstr "Herunterladen"
 
-# b3016ca8777846f5b0893537c29595d7
 #: ../../en/vm/install.rst:6
-msgid ""
-"Download the vm from `here <http://docs.qtibia.ro/qgisplatform.vdi.xz>`_"
+msgid "Download the vm from `here <http://docs.qtibia.ro/qgis.vdi.xz>`_"
 msgstr ""
 
-# 1015adbe4ab842a086c54570cfb1dbb8
 #: ../../en/vm/install.rst:10
 msgid ""
-"The size of the VM is around 2GB compressed and around 7GB uncompressed."
+"The size of the VM is around 4GB compressed and up to 15GB uncompressed."
 msgstr ""
 
-# 454b538feda5405a837df826fcf3ed41
 #: ../../en/vm/install.rst:13
 msgid "Extract"
 msgstr ""
 
-# 8096929dcded4c7a843f7d692eb97d60
 #: ../../en/vm/install.rst:14
 msgid "The virtual disk is archived using XZ compression."
 msgstr ""
 
-# b167fce21ad14a90a3a738b669469e92
 #: ../../en/vm/install.rst:16
 msgid "To extract the archive:"
 msgstr ""
 
-# ea672f8d840f4e4c96b34b6a210f44f1
 #: ../../en/vm/install.rst:18
 msgid ""
 "**Windows:** you can use `7-Zip <http://7-zip.org/>`_ to extract the "
 "archive."
 msgstr ""
 
-# 49ef180f50c9421ab14d4b7eb096457e
 #: ../../en/vm/install.rst:19
-msgid ""
-"**Linux:** cd to the download directory and run ``xz -d "
-"qgisplatform.vdi.xz``"
+msgid "**Linux:** cd to the download directory and run ``xz -d qgis.vdi.xz``"
 msgstr ""
 
-# caa168b196214efca19d56ca3dc4ef27
 #: ../../en/vm/install.rst:21
 msgid "You can run the VM as you would do with any VirtualBox VM."
 msgstr ""
 
-# 63ec6fe4909442029c2ed4065f16aeec
 #: ../../en/vm/install.rst:25
 msgid ""
 "As the VM is based on Linux it is fairly simple to convert the image to a "
-"raw disk and put it on a USB stick (minimum 8GB) or a faster storage. This "
+"raw disk and put it on a USB stick (minimum 16GB) or a faster storage. This "
 "would enable you to run the app without the virtualization penalty and enjoy"
 " the full speed of your hardware."
 msgstr ""
 
-# 7adefa0f09fa41afbcc2335a145ac5b8
+#: ../../en/vm/install.rst:30
+msgid "Run QGEP"
+msgstr ""
+
+#: ../../en/vm/install.rst:32
+msgid ""
+"After logging in with ``qgis`` user and the same password, by  clicking the "
+"QGIS icon located in the bottom bar you will get the following image:"
+msgstr ""
+
+#: ../../en/vm/install.rst:37
+msgid ""
+"Clicking the **qgep_en** project and following the :ref:`user-guide` should "
+"get you started."
+msgstr ""
+
 #: ../../en/vm/server.rst:2
 msgid "QGIS Server"
 msgstr ""
 
-# fa010cd6db114348924713f8046a6549
 #: ../../en/vm/server.rst:4
+msgid ""
+"You can download a VM with an older QGEP setup that also has QGIS Server "
+"installed from http://docs.qtibia.ro/qgisplatform.vdi.xz ."
+msgstr ""
+
+#: ../../en/vm/server.rst:7
 msgid ""
 "The VM has working installations of `QGIS Server "
 "<https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html>`_"
 " and `QGIS Web Client (QWC). <https://github.com/qgis/QGIS-Web-Client>`_"
 msgstr ""
 
-# 6dc8d835703f4883abbea8a2920cc310
-#: ../../en/vm/server.rst:9
+#: ../../en/vm/server.rst:12
 msgid "Access the Web Services"
 msgstr ""
 
-# 940ce6590d514ad1847a042ec8de66fd
-#: ../../en/vm/server.rst:11
+#: ../../en/vm/server.rst:14
 msgid ""
 "The Apache server is setup to respond to requests pointing to the "
 "`http://qgisplatform.demo`. Accessing the above link with the Internet "
@@ -194,21 +200,18 @@ msgid ""
 "above image."
 msgstr ""
 
-# ecad6283a5cc4642b56f31b0f7a93c75
-#: ../../en/vm/server.rst:17
+#: ../../en/vm/server.rst:20
 msgid "**QGIS Web client starting page**"
 msgstr ""
 
-# eba3b72ebee8439e9814790404582ff8
-#: ../../en/vm/server.rst:19
+#: ../../en/vm/server.rst:22
 msgid ""
 "If you want to access the web services outside the VM, you need to edit the "
 "``hosts`` file on your machine and point ``qgisplatform.demo`` to the IP of "
 "the VM."
 msgstr ""
 
-# 52583b4000154846b91c7234a44a72d4
-#: ../../en/vm/server.rst:24
+#: ../../en/vm/server.rst:27
 msgid ""
 "If you've setup the VM with the network adapter in NAT mode only the VM host"
 " will be able to access the services. If you want all the devices on your "
