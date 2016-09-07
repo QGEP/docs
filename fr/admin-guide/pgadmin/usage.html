@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1.2. Using Pgadmin &mdash; documentation QGEP 0.5</title>
+  <title>3.1.2. Utiliser pgAdmin &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="3.1. pgAdmin" href="index.html"/>
-        <link rel="next" title="3.2. Data import" href="../data-import/index.html"/>
-        <link rel="prev" title="3.1.1. Install pgAdmin" href="install.html"/> 
+        <link rel="next" title="3.2. Import de données" href="../data-import/index.html"/>
+        <link rel="prev" title="3.1.1. Installer pgAdmin" href="install.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -86,19 +86,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. QGEP User Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Admin Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3.1. pgAdmin</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install.html">3.1.1. Install pgAdmin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">3.1.2. Using Pgadmin</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sql-query">3.1.2.1. SQL query</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#database-dump">3.1.2.2. Database dump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html">3.1.1. Installer pgAdmin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">3.1.2. Utiliser pgAdmin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sql-query">3.1.2.1. Requêtes SQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-dump">3.1.2.2. &#8220;Dump&#8221; de la base de données</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">3.2. Data import</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">3.3. Data export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">3.2. Import de données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">3.3. Export de données</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -127,7 +127,7 @@
       
           <li><a href="index.html">3.1. pgAdmin</a> &raquo;</li>
       
-    <li>3.1.2. Using Pgadmin</li>
+    <li>3.1.2. Utiliser pgAdmin</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -142,31 +142,36 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-pgadmin">
-<h1>3.1.2. Using Pgadmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>3.1.2. Utiliser pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="sql-query">
-<span id="id1"></span><h2>3.1.2.1. SQL query<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="id1"></span><h2>3.1.2.1. Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="figure" id="id3">
 <img alt="../../_images/001_roles.jpeg" src="../../_images/001_roles.jpeg" />
-<p class="caption"><span class="caption-text"><strong>Running SQL commands in PgAdminIII</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>Exécuter des commandes SQL dans PgAdmin III</strong></span></p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="last simple">
-<li>Clicking the highlighted icon at location <em>1</em> opens the SQL Window.
-The SQL icon is active only when you&#8217;re connected to a database.</li>
-<li>Clicking the icon at <em>2</em> runs the written SQL commands.</li>
+<li><p class="first">En cliquant sur l’icône mis en évidence par le point 1 vous pouvez ouvrir une requête SQL. L&#8217;icône SQL n&#8217;est actif que lorsque vous êtes connecté à une base de données.</p>
+</li>
+<li><p class="first">En cliquant sur l’icône mis en évidence par le point <em>2</em> permet de lancer la requête SQL.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="database-dump">
-<span id="id2"></span><h2>3.1.2.2. Database dump<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="id2"></span><h2>3.1.2.2. &#8220;Dump&#8221; de la base de données<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="simple">
-<li>Open pgAdminIII and connect to the database</li>
-<li>Right click the Schema that you want to backup (in the tree structure below &#8220;Schemas&#8221;)</li>
-<li>Enter the filename where the dump should be stored</li>
-<li>Check the following options</li>
+<li><p class="first">Ouvrir pgAdmin III et se connecter à la base de données</p>
+</li>
+<li><p class="first">Faire un clic droit sur le schéma (dans l&#8217;arborescence sous &#8220;Schemas&#8221;) que l&#8217;on veut sauvegarder</p>
+</li>
+<li><p class="first">Entrer l&#8217;endroit ou le fichier devra être sauvegardé</p>
+</li>
+<li><p class="first">Cocher les options suivantes</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/Screenshot-from-2015-01-22-102152.png" src="../../_images/Screenshot-from-2015-01-22-102152.png" />
@@ -184,7 +189,8 @@ The SQL icon is active only when you&#8217;re connected to a database.</li>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="simple">
-<li>After running the process, the exit code 0 indicates that everything went ok</li>
+<li><p class="first">Après avoir fait tourner le processus de sauvegarde, le code de sortie devrait indiquer 0 si tout s&#8217;est bien passé</p>
+</li>
 </ul>
 <div class="last figure">
 <img alt="../../_images/Screenshot-from-2015-01-22-102222.png" src="../../_images/Screenshot-from-2015-01-22-102222.png" />
@@ -200,10 +206,10 @@ The SQL icon is active only when you&#8217;re connected to a database.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-import/index.html" class="btn btn-neutral float-right" title="3.2. Data import" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../data-import/index.html" class="btn btn-neutral float-right" title="3.2. Import de données" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="3.1.1. Install pgAdmin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="3.1.1. Installer pgAdmin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

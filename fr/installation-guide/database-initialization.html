@@ -93,7 +93,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -139,7 +139,7 @@
 <p>You can use <a class="reference internal" href="../admin-guide/pgadmin/index.html#pgadmin"><span>pgAdmin</span></a> to access and manage the database server.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../admin-guide/pgadmin/install.html#install-pgadmin"><span>Install pgAdmin</span></a></p>
+<p class="last">By clicking the link you can learn how to <a class="reference internal" href="../admin-guide/pgadmin/install.html#install-pgadmin"><span>Installer pgAdmin</span></a></p>
 </div>
 <div class="section" id="process">
 <h2>1.2.1. Process<a class="headerlink" href="#process" title="Lien permanent vers ce titre">¶</a></h2>
@@ -149,7 +149,7 @@
 <li>Create a new group role (preferably named <cite>qgep</cite>, but you are free to choose)</li>
 <li>Create a new login role (<cite>qgepuser</cite> for example) and make it a member of the <cite>qgep</cite> group</li>
 </ul>
-<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL query</span></a> window and type the following:</p>
+<p>You can do this graphically or by simply opening a pgAdminIII <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>Requêtes SQL</span></a> window and type the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>CREATE GROUP qgep;
 CREATE ROLE qgepuser LOGIN;
 GRANT qgep TO qgepuser;
@@ -163,7 +163,7 @@ GRANT qgep TO qgepuser;
 </li>
 <li><p class="first">Create a new schema with the name <cite>qgep</cite></p>
 </li>
-<li><p class="first">Open an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)</p>
+<li><p class="first">Open an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>Requêtes SQL</span></a> Window and create the extensions (if they&#8217;re not created yet)</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
