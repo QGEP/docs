@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
+# Allgemein Fischer <arbon@fischering.ch>, 2016
 # Konradin Fischer <fischer8712@gmail.com>, 2015
 # Matthias Kuhn <matthias@opengis.ch>, 2015
 # Stefan <stefan.burckhardt@gmx.ch>, 2015
@@ -10,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 12:14+0200\n"
-"PO-Revision-Date: 2016-09-07 10:12+0000\n"
-"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
+"POT-Creation-Date: 2016-10-19 11:42+0200\n"
+"PO-Revision-Date: 2016-09-16 08:55+0000\n"
+"Last-Translator: Allgemein Fischer <arbon@fischering.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,160 +23,160 @@ msgstr ""
 
 #: ../../en/installation-guide/database-initialization.rst:4
 msgid "Database initialization"
-msgstr ""
+msgstr "Initialisierung der Datenbank"
 
 #: ../../en/installation-guide/database-initialization.rst:6
 msgid "You can use :ref:`pgAdmin` to access and manage the database server."
-msgstr ""
+msgstr "Für die Konfiguration der Datenbank können sie pgAdmin verwenden."
 
 #: ../../en/installation-guide/database-initialization.rst:10
 msgid "By clicking the link you can learn how to :ref:`install-pgAdmin`"
-msgstr ""
+msgstr "Mit diesem Link können sie lernen wie man :ref:`install-pgAdmin` benutzt."
 
 #: ../../en/installation-guide/database-initialization.rst:13
 msgid "Process"
-msgstr ""
+msgstr "Vorgehen"
 
 #: ../../en/installation-guide/database-initialization.rst:15
 msgid "In pgAdminIII"
-msgstr ""
+msgstr "in pgAdminIII"
 
 #: ../../en/installation-guide/database-initialization.rst:17
 msgid "Connect to the database server"
-msgstr ""
+msgstr "Verbinden Sie sich mit dem Datenkbankserver"
 
 #: ../../en/installation-guide/database-initialization.rst:19
 msgid ""
 "Create a new group role (preferably named `qgep`, but you are free to "
 "choose)"
-msgstr ""
+msgstr "Erzeugen sie eine neue Gruppenrolle (vorzugsweise mit dem Namen 'qgep'; sie können aber auch einen anderen Namen wählen)"
 
 #: ../../en/installation-guide/database-initialization.rst:21
 msgid ""
 "Create a new login role (`qgepuser` for example) and make it a member of the"
 " `qgep` group"
-msgstr ""
+msgstr "Erzeugen sie eine neue Login Rolle (Login Roles) mit Name 'qgepuser'; sie können aber auch einen anderen Namen wählen."
 
 #: ../../en/installation-guide/database-initialization.rst:23
 msgid ""
 "You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-"
 "query` window and type the following:"
-msgstr ""
+msgstr "Sie können dies grafisch tun oder Sie öffnen ein SQL-Fenster in pgAdminIII und tippen folgenden Text ein:"
 
 #: ../../en/installation-guide/database-initialization.rst:31
 msgid ""
 "Create a new database (preferably named `qgep`, but you are free to choose)"
-msgstr ""
+msgstr "Erzeugen sie eine neue Datenbank (vorzugsweise mit Name 'qgep'; sie können aber auch einen anderen Namen wählen)"
 
 #: ../../en/installation-guide/database-initialization.rst:33
 msgid "Change to this database"
-msgstr ""
+msgstr "Wechseln Sie in diese Datenbank"
 
 #: ../../en/installation-guide/database-initialization.rst:35
 msgid "Create a new schema with the name `qgep`"
-msgstr ""
+msgstr "Erzeugen sie ein neues Schema mit Name 'qgep'."
 
 #: ../../en/installation-guide/database-initialization.rst:37
 msgid ""
 "Open an :ref:`SQL-query` Window and create the extensions (if they're not "
 "created yet)"
-msgstr ""
+msgstr "Öffnen sie ein neues SQL-Fenster und erzeugen Sie die folgenden Extensions (wenn sie nicht schon existieren):"
 
 #: ../../en/installation-guide/database-initialization.rst:39
 msgid "``CREATE EXTENSION hstore;``"
-msgstr ""
+msgstr "``CREATE EXTENSION hstore;``"
 
 #: ../../en/installation-guide/database-initialization.rst:41
 msgid "``CREATE EXTENSION postgis;``"
-msgstr ""
+msgstr "``CREATE EXTENSION postgis;``"
 
 #: ../../en/installation-guide/database-initialization.rst:43
 msgid "Download demo data"
-msgstr ""
+msgstr "Den Demodatensatz herunterladen"
 
 #: ../../en/installation-guide/database-initialization.rst:45
 msgid "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
-msgstr ""
+msgstr "https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup"
 
 #: ../../en/installation-guide/database-initialization.rst:47
 #: ../../en/installation-guide/database-initialization.rst:73
 msgid "Right click the `qgep` schema"
-msgstr ""
+msgstr "Auf das Schema `qgep` rechtsklicken."
 
 #: ../../en/installation-guide/database-initialization.rst:49
 #: ../../en/installation-guide/database-initialization.rst:59
 msgid "Click `Restore`"
-msgstr ""
+msgstr "'Restore' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:51
 msgid "Load your download of qgep.backup"
-msgstr ""
+msgstr "Laden sie ihren Download von qgep.backup"
 
 #: ../../en/installation-guide/database-initialization.rst:55
 msgid "Restore Options #2: Activate `Clean before restore`"
-msgstr ""
+msgstr "Restore Options #2: aktivieren sie `Clean before restore`"
 
 #: ../../en/installation-guide/database-initialization.rst:63
 msgid "Check whether in Message window last line is Exit Code 0"
-msgstr ""
+msgstr "Überprüfen Sie ob die letzte Linie im Nachrichtenfenster : Exit Code 0 \nist"
 
 #: ../../en/installation-guide/database-initialization.rst:65
 msgid "Click `Cancel`"
-msgstr ""
+msgstr "'Cancel' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:67
 msgid "Right click the database and click `Refresh`"
-msgstr ""
+msgstr "Recktsklick auf die Datenbank und 'Refresh' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:71
 msgid "Update privileges for the database"
-msgstr ""
+msgstr "Datenbank Zugriffsrechte aktualisieren"
 
 #: ../../en/installation-guide/database-initialization.rst:75
 msgid ""
 "Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``. You can "
 "also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``"
-msgstr ""
+msgstr "Eigenschaften -> Sonderrechte Tab >  bewilligen Sie \"USAGE\" zur Gruppe \"qgep\". Sie können dies auch un der query tun: \"GRANT USAGE ON SCHMEA qgep TO GROUP qgep;\""
 
 #: ../../en/installation-guide/database-initialization.rst:78
 msgid "Click `Grant Wizard …`"
-msgstr ""
+msgstr "Recktsklick auf das das Schema 'qgep'; 'Grant Wizard ...' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:80
 msgid "Selection, click `Check All`"
-msgstr ""
+msgstr "Menü 'Selection'; 'Check all' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:82
 msgid "Privileges"
-msgstr ""
+msgstr "Menü 'Privileges'"
 
 #: ../../en/installation-guide/database-initialization.rst:84
 msgid "Group `qgep`"
-msgstr ""
+msgstr "Group 'qgep' wählen"
 
 #: ../../en/installation-guide/database-initialization.rst:86
 msgid "Choose `ALL`"
-msgstr ""
+msgstr "'ALL' aktivieren"
 
 #: ../../en/installation-guide/index.rst:2
 msgid "QGEP Installation Guide"
-msgstr ""
+msgstr "Leitfaden QGEP Installation"
 
 #: ../../en/installation-guide/index.rst:5
 msgid ""
 "This will guide you through the setup of required applications and services "
 "to get your system ready for running QGEP."
-msgstr ""
+msgstr "Dieser Leitfaden beschreibt die Installation und Vorbereitung ihres Systems um QGEP anzuwenden."
 
 #: ../../en/installation-guide/index.rst:10
 msgid ""
 "You also have the option of downloading a :ref:`Demo-VM` that has a working "
 "QGEP demo."
-msgstr ""
+msgstr "Sie können dies a :ref:`Demo VM` auch herunterladen inkl. QGEP Demo"
 
 #: ../../en/installation-guide/server.rst:2
 msgid "Setup database server"
-msgstr ""
+msgstr "Datenbankserver aufsetzen"
 
 #: ../../en/installation-guide/server.rst:4
 msgid ""
@@ -183,40 +184,40 @@ msgid ""
 "can install the database on a network accessible server. If it is just a "
 "single desktop you are working on, this can be installed on the same "
 "machine."
-msgstr ""
+msgstr "Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden. Dies im Gegensatz zu einer lokalen Einplatz-Installation"
 
 #: ../../en/installation-guide/server.rst:9
 msgid "Required Software"
-msgstr ""
+msgstr "Benötigte Software"
 
 #: ../../en/installation-guide/server.rst:12
 msgid "Server installation"
-msgstr ""
+msgstr "Server installation"
 
 #: ../../en/installation-guide/server.rst:14
 msgid "Install PostgreSQL (>=9.3)"
-msgstr ""
+msgstr "PostgreSQL (>=9.3) installieren"
 
 #: ../../en/installation-guide/server.rst:16
 msgid "`Windows download page <http://www.postgresql.org/download/windows>`_"
-msgstr ""
+msgstr "`Für Windows herunterladen <http://www.postgresql.org/download/windows>`_"
 
 #: ../../en/installation-guide/server.rst:18
 msgid "Install PostGIS (>=2.3)"
-msgstr ""
+msgstr "PostGIS (>=2.3) installieren"
 
 #: ../../en/installation-guide/server.rst:22
 msgid ""
 "In a single desktop environment (no network database server) you can setup "
 "your database to trust local connections."
-msgstr ""
+msgstr "Bei einer Einzelplatzinstallation (ohne Datenbank im Netzwerk) kann man die Datenbank so aufsetzen, dass sie lokalen Verbindungen vertraut."
 
 #: ../../en/installation-guide/server.rst:25
 msgid ""
 "This way, the database won't ask for a password if you're connecting from "
 "your local workstation while no password is written  anywhere. You even can "
 "do with no database password at all."
-msgstr ""
+msgstr "In diesem Fall wird überhaupt kein Passwort benötigt."
 
 #: ../../en/installation-guide/server.rst:29
 msgid ""
@@ -224,7 +225,7 @@ msgid ""
 "`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
 "conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
 "service reload is required to activate changes."
-msgstr ""
+msgstr "Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_ und setzen Sie die auth-options von``md5`` auf ``trust``. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden."
 
 #: ../../en/installation-guide/workstation.rst:2
 msgid "Setup workstation"
@@ -321,7 +322,7 @@ msgstr "QGIS installieren"
 
 #: ../../en/installation-guide/workstation.rst:66
 msgid "Minimum requirement 2.14"
-msgstr ""
+msgstr "Minimal benötigte Version: 2.14"
 
 #: ../../en/installation-guide/workstation.rst:68
 msgid ""
@@ -330,7 +331,7 @@ msgid ""
 " installation, download the `OSGeo4W Installer "
 "<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ choose "
 "*advanced installation* and install qgis-dev."
-msgstr ""
+msgstr "Wir empfehlen die Verwendung der aktuellsten master builds (unter Windows sind diese als `qgis-dev` verfügbar). Diese offerieren oft die beste Integration in Kombination mit QGEP. Für die Windows Installation, laden sie den `OSGeo4W Installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ runter und wählen SIe *advanced Installation* und installieren Sie qgep-dev."
 
 #: ../../en/installation-guide/workstation.rst:74
 msgid "Install QGEP plugin"
@@ -338,19 +339,19 @@ msgstr "Installation des QGEP Plugins"
 
 #: ../../en/installation-guide/workstation.rst:76
 msgid "Plugin requirements:"
-msgstr ""
+msgstr "Plugin Voraussetzungen "
 
 #: ../../en/installation-guide/workstation.rst:78
 msgid "networkx"
-msgstr ""
+msgstr "Netzwerkx"
 
 #: ../../en/installation-guide/workstation.rst:79
 msgid "Qt 4 PostgreSQL database driver"
-msgstr ""
+msgstr "Gt 4 PostgreSQL Datenbanktreiber"
 
 #: ../../en/installation-guide/workstation.rst:81
 msgid "You can install them on debian based systems with::"
-msgstr ""
+msgstr "Installieren auf debian basierten Sytemen:"
 
 #: ../../en/installation-guide/workstation.rst:86
 msgid "Open QGIS"
@@ -358,7 +359,7 @@ msgstr "QGIS öffnen"
 
 #: ../../en/installation-guide/workstation.rst:88
 msgid "Go to Plugins"
-msgstr ""
+msgstr "Gehen sie zu Plugins"
 
 #: ../../en/installation-guide/workstation.rst:90
 msgid "Manage and Install Plugins"
@@ -366,7 +367,7 @@ msgstr "Plugins verwalten und installieren"
 
 #: ../../en/installation-guide/workstation.rst:92
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: ../../en/installation-guide/workstation.rst:94
 msgid "Add..."
@@ -380,11 +381,11 @@ msgstr "Name: QGEP"
 msgid ""
 "URL: "
 "``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``"
-msgstr ""
+msgstr "URL: ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``"
 
 #: ../../en/installation-guide/workstation.rst:101
 msgid "Enable `Show also experimental plugins`"
-msgstr ""
+msgstr "`Show also experimental plugins` aktivieren"
 
 #: ../../en/installation-guide/workstation.rst:103
 msgid "Activate the plugin (see image below):"

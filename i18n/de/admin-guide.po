@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGEP package.
 # 
 # Translators:
+# Allgemein Fischer <arbon@fischering.ch>, 2016
 # Georg Weickelt <georg.weickelt@web.de>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGEP Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-07 12:14+0200\n"
-"PO-Revision-Date: 2016-09-07 10:15+0000\n"
-"Last-Translator: Matthias Kuhn <matthias@opengis.ch>\n"
+"POT-Creation-Date: 2016-10-19 11:42+0200\n"
+"PO-Revision-Date: 2016-09-16 08:30+0000\n"
+"Last-Translator: Allgemein Fischer <arbon@fischering.ch>\n"
 "Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,27 +29,27 @@ msgstr "Eine Anleitung zum Export von Daten aus QGEP."
 
 #: ../../en/admin-guide/data-export/index.rst:7
 msgid "Export formats"
-msgstr ""
+msgstr "Exportierformate"
 
 #: ../../en/admin-guide/data-export/index.rst:9
 #: ../../en/admin-guide/data-import/index.rst:9
 msgid "INTERLIS (in progress)"
-msgstr ""
+msgstr "INTERLIS (in Bearbeitung)"
 
 #: ../../en/admin-guide/data-export/index.rst:10
 #: ../../en/admin-guide/data-import/index.rst:10
 msgid "dxf (in progress)"
-msgstr ""
+msgstr "dxf (In Bearbeitung)"
 
 #: ../../en/admin-guide/data-export/index.rst:11
 #: ../../en/admin-guide/data-import/index.rst:11
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: ../../en/admin-guide/data-export/index.rst:12
 #: ../../en/admin-guide/data-import/index.rst:12
 msgid "MOUSE / MikeUrban"
-msgstr ""
+msgstr "Maus / MikeUrban"
 
 #: ../../en/admin-guide/data-export/index.rst:13
 #: ../../en/admin-guide/data-import/index.rst:13
@@ -58,56 +59,56 @@ msgstr "andere"
 #: ../../en/admin-guide/data-export/index.rst:17
 #: ../../en/admin-guide/data-import/index.rst:17
 msgid "INTERLIS"
-msgstr ""
+msgstr "INTERLIS"
 
 #: ../../en/admin-guide/data-export/index.rst:19
 msgid ""
 "INTERLIS Export can be done using the ili2pg tool. For further information "
 "contact the developer team."
-msgstr ""
+msgstr "Der INTERLIS Export kann mit dem ili2pg Wekzeug ausgeführt werden. Für weitere Informationen, kontaktieren Sie das Entwicklungsteam."
 
 #: ../../en/admin-guide/data-import/index.rst:2
 msgid "Data import"
-msgstr ""
+msgstr "Datenimport"
 
 #: ../../en/admin-guide/data-import/index.rst:4
 msgid "This represents a guide on how to import data from QGEP."
-msgstr ""
+msgstr "Eine Anleitung zum Import von Daten aus QGEP"
 
 #: ../../en/admin-guide/data-import/index.rst:7
 msgid "Import formats"
-msgstr ""
+msgstr "Importierformate"
 
 #: ../../en/admin-guide/data-import/index.rst:19
 msgid ""
 "INTERLIS Import can be done using the ili2pg tool. For further information "
 "contact the developer team."
-msgstr ""
+msgstr "Der INTERLIS Import kann mit dem ili2pg Wekzeug ausgeführt werden. Für weitere Informationen, kontaktieren Sie das Entwicklungsteam"
 
 #: ../../en/admin-guide/index.rst:2
 msgid "Admin Guide"
-msgstr ""
+msgstr "Administratorhandbuch "
 
 #: ../../en/admin-guide/index.rst:4
 msgid ""
 "This represents a guide on how to administrate the database, install a "
 "Virtual machine, import and export data"
-msgstr ""
+msgstr "Eine Anleitung zur Administration der Datenbank, zum Installieren einer virtuellen Maschine und zum Import und Export von Dateien"
 
 #: ../../en/admin-guide/pgadmin/index.rst:4
 msgid "pgAdmin"
-msgstr ""
+msgstr "pgAdmin"
 
 #: ../../en/admin-guide/pgadmin/index.rst:6
 msgid ""
 "PgAdminIII is a Desktop tool that permits to access and manage the database "
 "server. This chapter represents a guide on how to do basic PostgreSQL "
 "management using pgAdmin."
-msgstr ""
+msgstr "PgAdminIII ist eine Desktopapplikation die es erlaubt auf den Datenbankserver zuzugreifen. Dieses Kapitel beinhaltet einen Leitfaden zum Thema PostgreSQL Datenmanagement mit pgAdmin."
 
 #: ../../en/admin-guide/pgadmin/install.rst:4
 msgid "Install pgAdmin"
-msgstr ""
+msgstr "Installation von pgAdmin"
 
 #: ../../en/admin-guide/pgadmin/install.rst:7
 msgid "Windows"
@@ -117,7 +118,7 @@ msgstr "Windows"
 msgid ""
 "pgAdmin should be automatically installed if you used the EnterpriseDB "
 "installer."
-msgstr ""
+msgstr "pgAdmin sollte automatisch installiert werden wenn Sie den EnterpriseDB installer verwendet haben."
 
 #: ../../en/admin-guide/pgadmin/install.rst:12
 msgid "Linux"
@@ -125,31 +126,31 @@ msgstr "Linux"
 
 #: ../../en/admin-guide/pgadmin/install.rst:15
 msgid "Debian/Ubuntu based distros"
-msgstr ""
+msgstr "Debian/Ubuntu basierte Distributionen"
 
 #: ../../en/admin-guide/pgadmin/install.rst:17
 msgid "You can install pgAdmin by running the following command:"
-msgstr ""
+msgstr "Sie können pgAdmin installieren durch Eingabe von folgendem Befehl:"
 
 #: ../../en/admin-guide/pgadmin/install.rst:19
 msgid "``sudo apt-get install pgadmin3``"
-msgstr ""
+msgstr "``sudo apt-get install pgadmin3``"
 
 #: ../../en/admin-guide/pgadmin/install.rst:22
 msgid "Fedora based distros"
-msgstr ""
+msgstr "Fedora basierte Distributionen"
 
 #: ../../en/admin-guide/pgadmin/install.rst:24
 msgid "``sudo yum install pgadmin3``"
-msgstr ""
+msgstr "sudo yum install pgadmin3``"
 
 #: ../../en/admin-guide/pgadmin/install.rst:27
 msgid "Suse based distros"
-msgstr ""
+msgstr "Suse basierte Distributionen"
 
 #: ../../en/admin-guide/pgadmin/install.rst:29
 msgid "``sudo zypper install pgadmin3``"
-msgstr ""
+msgstr "``sudo zypper install pgadmin3``"
 
 #: ../../en/admin-guide/pgadmin/install.rst:33
 msgid ""
@@ -157,53 +158,53 @@ msgid ""
 "with sudo (admin) privileges. On certain systems it may be required to use "
 "the command ``su`` to become the *root* user and then issue the above "
 "command without the ``sudo`` prefix."
-msgstr ""
+msgstr "Die oben vorgestellten Befehle setzen voraus, dass Sie als Benutzer mit sudo (administrativ) Rechten eingeloggt sind. Auf gewissen Systemen kann es notwendig sein den Befehl ``su`` einzugeben um *root* Benutzer zu werden. Dann können Sie obige Befehle ohne das Präfix ``sudo`` ausführen."
 
 #: ../../en/admin-guide/pgadmin/usage.rst:2
 msgid "Using Pgadmin"
-msgstr ""
+msgstr "PgAdmin verwenden"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:7
 msgid "SQL query"
-msgstr ""
+msgstr "SQL Abfrage"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:11
 msgid "**Running SQL commands in PgAdminIII**"
-msgstr ""
+msgstr "**SQL Befehle in PgAdminIII ausführen**"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:15
 msgid ""
 "Clicking the highlighted icon at location *1* opens the SQL Window. The SQL "
 "icon is active only when you're connected to a database."
-msgstr ""
+msgstr "Wenn Sie das markierte Symbol *1* anklicken öffnet dies das SQL Fenster. Das SQL Symbol ist nur aktiv, wenn Sie mit einer Datenbank verbunden sind."
 
 #: ../../en/admin-guide/pgadmin/usage.rst:17
 msgid "Clicking the icon at *2* runs the written SQL commands."
-msgstr ""
+msgstr "Ein Klick auf *2* führt den eingetippten SQL Befehl aus."
 
 #: ../../en/admin-guide/pgadmin/usage.rst:22
 msgid "Database dump"
-msgstr ""
+msgstr "Datenbank Speicherauszug"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:25
 msgid "Open pgAdminIII and connect to the database"
-msgstr ""
+msgstr "Öffnen Sie pgAdminIII und verbinden Sie sich mit der Datenbank"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:26
 msgid ""
 "Right click the Schema that you want to backup (in the tree structure below "
 "\"Schemas\")"
-msgstr ""
+msgstr "Rechtsklicken Sie das Schema, welches Sie sichern wollen (in der Baumstruktur unter \"Schemas\")"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:27
 msgid "Enter the filename where the dump should be stored"
-msgstr ""
+msgstr "Geben Sie den Orndernamen ein, unter welchem der Speicherauszug abgespeichert werden soll"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:28
 msgid "Check the following options"
-msgstr ""
+msgstr "Überprüfen Sie die folgenden Optionen"
 
 #: ../../en/admin-guide/pgadmin/usage.rst:37
 msgid ""
 "After running the process, the exit code 0 indicates that everything went ok"
-msgstr ""
+msgstr "Nachdem Sie der Prozess abgeschlossen ist, zeigt der Ausgangscode 0, dass alles gut gegangen ist"
