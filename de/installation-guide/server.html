@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1. Setup database server &mdash; QGEP 0.5 Dokumentation</title>
+  <title>1.1. Datenbankserver aufsetzen &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../index.html"/>
-        <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
-        <link rel="next" title="1.2. Database initialization" href="database-initialization.html"/>
-        <link rel="prev" title="1. QGEP Installation Guide" href="index.html"/> 
+        <link rel="up" title="1. Leitfaden QGEP Installation" href="index.html"/>
+        <link rel="next" title="1.2. Initialisierung der Datenbank" href="database-initialization.html"/>
+        <link rel="prev" title="1. Leitfaden QGEP Installation" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,21 +82,21 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">1.1. Setup database server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#required-software">1.1.1. Required Software</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Leitfaden QGEP Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.1. Datenbankserver aufsetzen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#required-software">1.1.1. Benötigte Software</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#server-installation">1.1.1.1. Server installation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Initialisierung der Datenbank</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workstation.html">1.3. Arbeitsplatzrechner Einrichten</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 </ul>
 
           
@@ -121,9 +121,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
+          <li><a href="index.html">1. Leitfaden QGEP Installation</a> &raquo;</li>
       
-    <li>1.1. Setup database server</li>
+    <li>1.1. Datenbankserver aufsetzen</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -138,32 +138,27 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-database-server">
-<h1>1.1. Setup database server<a class="headerlink" href="#setup-database-server" title="Link zu dieser Überschrift">¶</a></h1>
-<p>If you expect to access the data from several different workstations, you can
-install the database on a network accessible server. If it is just a single
-desktop you are working on, this can be installed on the same machine.</p>
+<h1>1.1. Datenbankserver aufsetzen<a class="headerlink" href="#setup-database-server" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden. Dies im Gegensatz zu einer lokalen Einplatz-Installation</p>
 <div class="section" id="required-software">
-<h2>1.1.1. Required Software<a class="headerlink" href="#required-software" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>1.1.1. Benötigte Software<a class="headerlink" href="#required-software" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="server-installation">
 <h3>1.1.1.1. Server installation<a class="headerlink" href="#server-installation" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li>Install PostgreSQL (&gt;=9.3)<ul>
-<li><a class="reference external" href="http://www.postgresql.org/download/windows">Windows download page</a></li>
+<li><p class="first">PostgreSQL (&gt;=9.3) installieren</p>
+<ul>
+<li><p class="first"><a class="reference external" href="http://www.postgresql.org/download/windows">Für Windows herunterladen</a></p>
+</li>
 </ul>
 </li>
-<li>Install PostGIS (&gt;=2.3)</li>
+<li><p class="first">PostGIS (&gt;=2.3) installieren</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p>In a single desktop environment (no network database server) you can setup
-your database to trust local connections.</p>
-<p>This way, the database won&#8217;t ask for a password if you&#8217;re connecting from your
-local workstation while no password is written  anywhere. You even can do
-with no database password at all.</p>
-<p class="last">This can be done by editing the database access configuration file
-<a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
-and set the auth-options from <code class="docutils literal"><span class="pre">md5</span></code> to <code class="docutils literal"><span class="pre">trust</span></code>. A database service reload
-is required to activate changes.</p>
+<p>Bei einer Einzelplatzinstallation (ohne Datenbank im Netzwerk) kann man die Datenbank so aufsetzen, dass sie lokalen Verbindungen vertraut.</p>
+<p>In diesem Fall wird überhaupt kein Passwort benötigt.</p>
+<p class="last">Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a> und setzen Sie die auth-options von``md5`` auf <code class="docutils literal"><span class="pre">trust</span></code>. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden.</p>
 </div>
 </div>
 </div>
@@ -176,10 +171,10 @@ is required to activate changes.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="database-initialization.html" class="btn btn-neutral float-right" title="1.2. Database initialization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="database-initialization.html" class="btn btn-neutral float-right" title="1.2. Initialisierung der Datenbank" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="1. QGEP Installation Guide" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="1. Leitfaden QGEP Installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

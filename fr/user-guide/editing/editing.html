@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.1. Editing of existing data &mdash; documentation QGEP 0.5</title>
+  <title>2.2.1. Modification de données existantes &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
-        <link rel="up" title="2.2. Editing in QGEP" href="index.html"/>
+        <link rel="up" title="2.2. Édition dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.2. Moving Covers with Reaches and Wastewater Nodes" href="moving.html"/>
-        <link rel="prev" title="2.2. Editing in QGEP" href="index.html"/> 
+        <link rel="prev" title="2.2. Édition dans QGEP" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -84,20 +84,20 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Digitizing in QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.1. Editing of existing data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#demo-project">2.2.1.1. Demo project</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layers">2.2.1.2. Layers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.2.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.2.1.4. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.2.1.5. Changing attributes of hydraulic elements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.2.1.6. Saving changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Numérisation dans QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Édition dans QGEP</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.1. Modification de données existantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demo-project">2.2.1.1. Projet Demo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layers">2.2.1.2. Couches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.2.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.2.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.2.1.5. Modification des attributs des éléments hydrauliques</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.2.1.6. Sauvez les modifications</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.2. Moving Covers with Reaches and Wastewater Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.3. Adding or Editing of Maintenance Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.4. Connect Wastewater Network Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.2.3. Ajout et Édition d&#8217;Événements de maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.4. Connexion des éléments du réseau</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.3. Length profiles</a></li>
@@ -133,9 +133,9 @@
       
           <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Editing in QGEP</a> &raquo;</li>
+          <li><a href="index.html">2.2. Édition dans QGEP</a> &raquo;</li>
       
-    <li>2.2.1. Editing of existing data</li>
+    <li>2.2.1. Modification de données existantes</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -150,112 +150,127 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-of-existing-data">
-<span id="editing-data"></span><h1>2.2.1. Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Lien permanent vers ce titre">¶</a></h1>
-<p>This represents a guide on how to edit existing data in QGEP.</p>
+<span id="editing-data"></span><h1>2.2.1. Modification de données existantes<a class="headerlink" href="#editing-of-existing-data" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Voici un guide pour la modification de données existantes dans QGEP.</p>
 <div class="section" id="demo-project">
-<h2>2.2.1.1. Demo project<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.1. Projet Demo<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Make sure you have imported the demo project with pgAdminIII (see the <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a> chapter)</li>
-<li>Open the demoproject by going to the main menu and press <strong>Project</strong> &#8211;&gt; <strong>Open</strong>  or by pressing <code class="docutils literal"><span class="pre">CTRL</span></code>
-+ <code class="docutils literal"><span class="pre">O</span></code> at the same time.</li>
+<li><p class="first">Assurez-vous d&#8217;avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a>)</p>
+</li>
+<li><p class="first">Ouvrez le projet demo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> &#8211;&gt; <strong>Ouvrir</strong> ou tout simplement en pressant sur les touches &#8220;CTRL&#8221; + &#8220;O&#8221; simultanément.</p>
+</li>
 </ul>
 <div class="figure">
 <a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" /></a>
 </div>
 <ul class="simple">
-<li>Login to the database</li>
+<li><p class="first">Identifiez-vous à la base de données</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/qgep_demoproject_login.jpg" src="../../_images/qgep_demoproject_login.jpg" />
 </div>
 <ul class="simple">
-<li>You should now have the demoproject loaded</li>
+<li><p class="first">Vous devriez maintenant avoir le projet démo chargé</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/qgep_demoproject_overview.jpg" src="../../_images/qgep_demoproject_overview.jpg" />
 </div>
 <ul class="simple">
-<li>The project consists of different layers. Depending on your task what to edit or add you choose the layer.</li>
+<li><p class="first">Le projet consiste en différentes couches. Choisissez les couches à éditer selon votre tâche.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="layers">
-<h2>2.2.1.2. Layers<a class="headerlink" href="#layers" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.2. Couches<a class="headerlink" href="#layers" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>QGEP has different predefined layers:</li>
+<li><p class="first">QGEP possède différentes couches prédéfinies:</p>
+</li>
 </ul>
 <div class="section" id="layer-vw-qgep-cover">
-<h3>2.2.1.2.1. Layer vw_qgep_cover<a class="headerlink" href="#layer-vw-qgep-cover" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.1. Couche vw_qgep_wastewater_structure<a class="headerlink" href="#layer-vw-qgep-cover" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>The <strong>vw_qgep_cover</strong> layer allows to edit all point elements. This are the wastewater structures such as manholes,
-special structures, discharge points and infiltration installation (<strong>wwtp_structures</strong>, which is also a wastewater
-structure, are not supported yet).</li>
+<li><p class="first">La vue <strong>vw_qgep_wastewater_structure</strong> permet d&#8217;éditer les éléments de type point. Ce sont les structures d&#8217;assainissement tels que les chambres, les structures spéciales, les installations d&#8217;infiltration et les exutoires (<strong>wwtp_structures</strong>, qui est aussi une structure d&#8217;assainissement, n&#8217;est pas encore supporté).</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/layer_vw_qgep_cover.jpg" src="../../_images/layer_vw_qgep_cover.jpg" />
 </div>
 </div>
 <div class="section" id="layer-vw-qgep-reach">
-<h3>2.2.1.2.2. Layer vw_qgep_reach<a class="headerlink" href="#layer-vw-qgep-reach" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.2. Couche vw_qgep_reach<a class="headerlink" href="#layer-vw-qgep-reach" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>The <strong>vw_qgep_reach</strong> layer allows to edit all linear elements of the wastewater network (<strong>reaches</strong> / <strong>channels</strong>).</li>
+<li><p class="first">La vue <em>vw_qgep_reach*</em> permet d&#8217;éditer les éléments de type ligne du réseau d&#8217;assainissement (<strong>conduites</strong> / <strong>channels</strong>).</p>
+</li>
 </ul>
 </div>
 <div class="section" id="layer-waste-water-structures">
-<h3>2.2.1.2.3. Layer Waste water structures<a class="headerlink" href="#layer-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.3. Couche Waste water structures<a class="headerlink" href="#layer-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance
-events, the relation table between waste water structures and maintenance events and the organisation table (where <strong>owners</strong>,
-<strong>dataowners</strong>, etc. are stored)</li>
+<li><p class="first">Cette couche contient différentes sous-couches en relation avec les structures d&#8217;assainissement. Elle contient aussi les liens avec les événements de maintenances et la table organisationnelle (ou sont stockés <strong>propriétaire</strong>, <strong>propriétaire des données</strong>, etc.)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="layer-value-lists">
-<h3>2.2.1.2.4. Layer Value lists<a class="headerlink" href="#layer-value-lists" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.4. Couche liste de valeurs<a class="headerlink" href="#layer-value-lists" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Here you can see various value lists that are related to the sewer network classes.</li>
+<li><p class="first">ici vous trouverez différentes liste de valeurs en relation avec les classes du réseau d&#8217;assainissement.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="layer-hydraulic">
-<h3>2.2.1.2.5. Layer Hydraulic<a class="headerlink" href="#layer-hydraulic" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.5. Couche hydraulique<a class="headerlink" href="#layer-hydraulic" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>This layer allows to select and edit waste water nodes. Select the layer, then choose the <strong>Identify Features</strong> tool and double click on a node.</li>
+<li><p class="first">Cette couche permets de sélectionner et éditer les nœuds du réseau. Sélectionnez la couche et utilisez l&#8217;outil <strong>Identifier une entité</strong> pour cliquer sur un nœud et faire apparaître ses informations.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="layer-topology">
-<h3>2.2.1.2.6. Layer Topology<a class="headerlink" href="#layer-topology" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.2.1.2.6. Couche Topologie<a class="headerlink" href="#layer-topology" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>Here you can find all needed information about the topology of the network.</li>
+<li><p class="first">Ici vous pouvez trouver toutes les informations relatives à la topologie du réseau.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>2.2.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_cover</strong> layer and switch to the edit mode.</li>
-<li>Or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</li>
-<li>Then click on the <strong>Identify features</strong> button and choose the element you want to edit by double-clicking.</li>
+<li><p class="first">Pour changer les attributs, commencez par sélectionner la couche <strong>vw_qgep_wastewater_structure</strong> et passez en mode d&#8217;édition.</p>
+</li>
+<li><p class="first">Ou alors utilisez l&#8217;outil d&#8217;assistance <strong>QGEP Wizard</strong> et cliqez sur <em>Start Data Entry*</em>.</p>
+</li>
+<li><p class="first">Ensuite utilisez l&#8217;outils <strong>Identifier une entité</strong> et double-cliquez sur l&#8217;élément que vous voulez modifier.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/qgep_info_button.jpg" src="../../_images/qgep_info_button.jpg" />
 </div>
 <ul class="simple">
-<li>The <strong>vw_qgep_cover</strong> form will open.</li>
+<li><p class="first">Le formulaire <strong>vw_qgep_wastewater_structure</strong> s&#8217;ouvre.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover.jpg" src="../../_images/form_vw_qgep_cover.jpg" />
 </div>
 <ul class="simple">
-<li>On the first tab you can change the most common attributes</li>
-<li>To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
-kind of wastewater structure you can edit additional attributes in the respective tab (<strong>special structure</strong>, <strong>manhole</strong>).</li>
-<li>The <strong>covers</strong> tab allows you to add additional covers.</li>
-<li>In <strong>Structure parts</strong> you can add also further parts such as <strong>acces aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</li>
+<li><p class="first">Dans le premier onglet, vous pouvez changer les attributs les plus communs</p>
+</li>
+<li><p class="first">Pour modifier les attributs de tables liées aux structures d&#8217;assainissement (e.g. les couvercles), sélectionnez l&#8217;onglet correspondant. Des attributs additionnels peuvent être édités selon le type de structures (<strong>structure spéciale</strong>, <strong>chambre</strong>).</p>
+</li>
+<li><p class="first">L&#8217;onglet <strong>couvercles</strong> permets aussi d&#8217;ajouter des couvercles additionnels.</p>
+</li>
+<li><p class="first">Dans l&#8217;onglet <strong>Parties structurelles</strong>, vous pouvez ajouter des éléments tels que des <strong>chemins d&#8217;accès aux ouvrages</strong>, des <strong>protections contre le refoulement</strong>, des <strong>cunettes de débit de temps sec</strong>, etc...</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_structure_parts.jpg" src="../../_images/form_vw_qgep_cover_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li>In <strong>Wastewater nodes parts</strong> you can edit or add all attributes of this class or add a second element.</li>
+<li><p class="first">Dans l&#8217;onglet <strong>Wastewater nodes parts</strong>, vous pouvez éditer ou ajouter tous les attributs de cette classe ou ajouter un second élément.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" src="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" />
@@ -263,12 +278,15 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h2>2.2.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_cover</strong> layer and switch to the edit mode.</li>
-<li>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a channel.</li>
-<li>The <strong>vw_qgep_reach</strong> form will open.</li>
+<li><p class="first">Pour changer les attributs, commencez par sélectionner la couche <strong>vw_qgep_wastewater_structure</strong> et passez en mode d&#8217;édition.</p>
+</li>
+<li><p class="first">Ensuite utilisez l&#8217;outils <strong>Identifier une entité</strong> et double-cliquez sur l&#8217;élément que vous voulez modifier.</p>
+</li>
+<li><p class="first">Le formulaire de la couche <strong>vw_qgep_reach</strong> s&#8217;ouvre.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -276,8 +294,10 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>On the first tab you can change the most common attributes.</li>
-<li>To change attributes of related tables (e.g. <strong>reach points</strong>) select the correspondent tab.</li>
+<li><p class="first">Dans le premier onglet vous pouvez changer les attributs les plus communs.</p>
+</li>
+<li><p class="first">Pour modifier les attributs des tables en relation (e.g. <strong>point de conduites</strong>), sélectionnez l&#8217;onglet correspondant.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -287,23 +307,26 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-hydraulic-elements">
-<h2>2.2.1.5. Changing attributes of hydraulic elements<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.5. Modification des attributs des éléments hydrauliques<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects.</li>
+<li><p class="first">En faisant un clique droit sur un élément avec l&#8217;outil <strong>Identifier une entité</strong> permets d&#8217;afficher la sélection de tous les objets existants.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/qgep_info_button_rightclick.jpg" src="../../_images/qgep_info_button_rightclick.jpg" />
 </div>
 <ul class="simple">
-<li>You can select then the object you want. This will get you to the correspondent form to see the details.</li>
+<li><p class="first">Vous pouvez sélectionner l&#8217;objet que vous voulez. Cela va ouvrir le formulaire correspondants ou vous pourrez consulter les informations lié à l&#8217;objet.</p>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="saving-changes">
-<h2>2.2.1.6. Saving changes<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.1.6. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</li>
+<li><p class="first">Cliquez sur <strong>sauvez</strong> et ensuite désactivez le mode d&#8217;édition ou tout simplement cliquez sur <strong>Stop data entry</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP, le <strong>wizard</strong>.</p>
+</li>
 </ul>
 <p>..* TO DO:</p>
 <blockquote>
@@ -327,7 +350,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
         <a href="moving.html" class="btn btn-neutral float-right" title="2.2.2. Moving Covers with Reaches and Wastewater Nodes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="2.2. Editing in QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="2.2. Édition dans QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

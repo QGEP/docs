@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.1. About &mdash; QGEP 0.5 Dokumentation</title>
+  <title>4.1. Um &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../index.html"/>
-        <link rel="up" title="4. Demo Virtual Machine" href="index.html"/>
+        <link rel="up" title="4. Demo virtuelle Maschine" href="index.html"/>
         <link rel="next" title="4.2. Installation" href="install.html"/>
-        <link rel="prev" title="4. Demo Virtual Machine" href="index.html"/> 
+        <link rel="prev" title="4. Demo virtuelle Maschine" href="index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,11 +82,11 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Demo Virtual Machine</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">4.1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Demo virtuelle Maschine</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">4.1. Um</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">4.2. Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="server.html">4.3. QGIS Server</a></li>
 </ul>
@@ -115,9 +115,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">4. Demo Virtual Machine</a> &raquo;</li>
+          <li><a href="index.html">4. Demo virtuelle Maschine</a> &raquo;</li>
       
-    <li>4.1. About</li>
+    <li>4.1. Um</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -132,46 +132,47 @@
            <div itemprop="articleBody">
             
   <div class="section" id="about">
-<h1>4.1. About<a class="headerlink" href="#about" title="Link zu dieser Überschrift">¶</a></h1>
-<p>This represents a guide on how to download and install a virtual machine (VM) that has a
-working QGEP installation with a demo dataset. The VM also has a working demo of the <a class="reference external" href="https://github.com/qwat/QWAT">QWAT water project</a> .</p>
-<p>The VM is based on Debian Testing with Cinnamon Desktop.</p>
-<p>Debian Testing was chosen in order to have GDAL 2.x and also benefit from latest linux kernel so that latest hardware
-won&#8217;t be a problem for the case where the VM is used outside virtualization (e.g use the virtual disk as basis to create
-a non-virtualized usb-stick to be used for demo purposes).</p>
+<h1>4.1. Um<a class="headerlink" href="#about" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Eine Anleitung zum Herunterladen und Installieren einer virtuellen Maschine (VM) welche eine funktionierende QGEP Installation mit einem Demo Datensatz besitzt. Die VM besitzt auch eine funktionierende Demo des <a class="reference external" href="https://github.com/qwat/QWAT">QWAT water project</a> .</p>
+<p>Die VM basiert auf Debian Test mit dem &#8216;Cinnamon&#8217; Desktop.</p>
+<p>Debian Testing wurde ausgesucht um über GDAL 2.x zu verfügen und auch vom aktuellsten Linux Betriebssystem zu profitieren, damit die aktuellste Hardware kein Problem darstellt, für den Fall dass die VM ausserhalb der Virtualisierung verwendet wird (z.B Benützung der Virtuellen Diskette als Basis zur Erstellung eines nicht virtualisierten USB-Stick welcher für Demonstrationzwecke verwendet wird).</p>
 <p>Benötigte Software:</p>
 <blockquote>
 <div><ul class="simple">
-<li>PostgreSQL 9.5.2 with Postgis 2.3</li>
+<li><p class="first">PostgreSQL 9.5.2 mit Postgis 2.3</p>
+</li>
 <li>QGIS 2.16</li>
 </ul>
 </div></blockquote>
-<p>Settings that are changed from a default software install:</p>
+<p>Einstellungen welche bei einer Standard Softwareinstallation geändert werden:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <strong>trust</strong> for local connections</li>
-<li>QGIS is setup with <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering enabled</a></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> besitzt <strong>trust</strong> für lokale Verbindungen</p>
+</li>
+<li><p class="first">QGIS ist Aufgebaut mit <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering enabled</a></p>
+</li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The users <code class="docutils literal"><span class="pre">qgis</span></code> and <code class="docutils literal"><span class="pre">root</span></code> have the password <code class="docutils literal"><span class="pre">qgis</span></code></p>
+<p class="last">Der Benutzer <code class="docutils literal"><span class="pre">qgis</span></code> und <code class="docutils literal"><span class="pre">root</span></code> besitzen das Password &#8220;gqis</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p>If you decide to use the VM in production, it is recommended to:</p>
+<p>Wenn Sie isch entscheiden die VM in der produktion zu verwenden, dann ist es Empfohlen für:</p>
 <blockquote class="last">
 <div><ul class="simple">
 <li><p class="first">ändern Sie die Passwörter</p>
 </li>
-<li>regenerate the ssh keys by running in a terminal <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">/etc/ssh/ssh_host_*</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">dpkg-reconfigure</span> <span class="pre">openssh-server</span></code></li>
+<li><p class="first">Regenerierung der ssh Tasten indem Sie es im Terminal <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">/etc/ssh/ssh_host_*</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">dpkg-reconfigure</span> <span class="pre">openssh-server</span></code>
+laufen lassen</p>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">QGIS has been build from source as Debian developpers have dropped QtWebKit python support in the packages.
-After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benefit again from the QGIS repo packages.</p>
+<p class="last">QGIS wurde aus Source erstellt, als Debian Entwickler das QtWebKit python Support fallen gelassen haben. Nachdem das QGIS ecosystem seine QtWebKit Abhängigkeiten entfernt, profitiert die VM wieder von den QGIS repo Packeten.</p>
 </div>
 </div>
 
@@ -185,7 +186,7 @@ After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benef
         <a href="install.html" class="btn btn-neutral float-right" title="4.2. Installation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="4. Demo Virtual Machine" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="4. Demo virtuelle Maschine" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

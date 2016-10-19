@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.3. Adding or Editing of Maintenance Events &mdash; documentation QGEP 0.5</title>
+  <title>2.2.3. Ajout et Édition d’Événements de maintenance &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
-        <link rel="up" title="2.2. Editing in QGEP" href="index.html"/>
-        <link rel="next" title="2.2.4. Connect Wastewater Network Elements" href="connect_wastewater_network_elements.html"/>
+        <link rel="up" title="2.2. Édition dans QGEP" href="index.html"/>
+        <link rel="next" title="2.2.4. Connexion des éléments du réseau" href="connect_wastewater_network_elements.html"/>
         <link rel="prev" title="2.2.2. Moving Covers with Reaches and Wastewater Nodes" href="moving.html"/> 
 
   
@@ -84,18 +84,18 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Digitizing in QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="editing.html">2.2.1. Editing of existing data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.1. Numérisation dans QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Édition dans QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing.html">2.2.1. Modification de données existantes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.2.2. Moving Covers with Reaches and Wastewater Nodes</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.3. Adding or Editing of Maintenance Events</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">2.2.3.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-for-single-events-that-just-belong-to-one-structure">2.2.3.2. Adding (for single events that just belong to one structure)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.3. Ajout et Édition d&#8217;Événements de maintenance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">2.2.3.1. Général</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-for-single-events-that-just-belong-to-one-structure">2.2.3.2. Ajoutez (pour les événements simples cela correspond à seulement une structure)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-for-many-events-that-can-belong-to-many-structures">2.2.3.3. Adding (for many events that can belong to many structures)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editing">2.2.3.4. Editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing">2.2.3.4. Édition</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.4. Connect Wastewater Network Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.2.4. Connexion des éléments du réseau</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.3. Length profiles</a></li>
@@ -131,9 +131,9 @@
       
           <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Editing in QGEP</a> &raquo;</li>
+          <li><a href="index.html">2.2. Édition dans QGEP</a> &raquo;</li>
       
-    <li>2.2.3. Adding or Editing of Maintenance Events</li>
+    <li>2.2.3. Ajout et Édition d&#8217;Événements de maintenance</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -148,19 +148,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="adding-or-editing-of-maintenance-events">
-<span id="maintenance-events"></span><h1>2.2.3. Adding or Editing of Maintenance Events<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Lien permanent vers ce titre">¶</a></h1>
-<p>This represents a guide on how to add or edit maintenance event data in QGEP.</p>
+<span id="maintenance-events"></span><h1>2.2.3. Ajout et Édition d&#8217;Événements de maintenance<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Voici un guide pour l&#8217;édition et l&#8217;ajout de données relatives aux événements de maintenance dans QGEP.</p>
 <div class="section" id="general">
-<h2>2.2.3.1. General<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.3.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Maintenance events can be connected to one structure or to many.
-Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<strong>re_maintenance_event_wastewater_structure</strong>)</li>
+<li><p class="first">Les événements de maintenance peuvent être connectés à une ou plusieurs structures. Pour cela, QGEP utilise une table intermédiaire RE_table afin de generé la relation n:m (<strong>re_maintenance_event_wastewater_structure</strong>)</p>
+</li>
 </ul>
 </div>
 <div class="section" id="adding-for-single-events-that-just-belong-to-one-structure">
-<h2>2.2.3.2. Adding (for single events that just belong to one structure)<a class="headerlink" href="#adding-for-single-events-that-just-belong-to-one-structure" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.3.2. Ajoutez (pour les événements simples cela correspond à seulement une structure)<a class="headerlink" href="#adding-for-single-events-that-just-belong-to-one-structure" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Enable the edit mode.</li>
+<li><p class="first">Activez le mode d&#8217;édition.</p>
+</li>
 <li>With the <strong>Identify Features</strong> tool you can select <strong>manholes</strong> or <strong>reaches</strong> by selecting their corresponding layer (<strong>vw_qgep_cover</strong> or <strong>vw_qgep_reach</strong>).</li>
 <li>The respective form will open. Change to the <strong>Maintenance Event</strong> tab.</li>
 <li>Create a new maintenance event.</li>
@@ -189,7 +190,7 @@ Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<str
 </ul>
 </div>
 <div class="section" id="editing">
-<h2>2.2.3.4. Editing<a class="headerlink" href="#editing" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.3.4. Édition<a class="headerlink" href="#editing" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>Do as described in adding - but just edit existing maintenance events.</li>
@@ -205,7 +206,7 @@ Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<str
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="connect_wastewater_network_elements.html" class="btn btn-neutral float-right" title="2.2.4. Connect Wastewater Network Elements" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="connect_wastewater_network_elements.html" class="btn btn-neutral float-right" title="2.2.4. Connexion des éléments du réseau" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="moving.html" class="btn btn-neutral" title="2.2.2. Moving Covers with Reaches and Wastewater Nodes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

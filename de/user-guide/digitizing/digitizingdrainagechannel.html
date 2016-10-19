@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.4. Digitizing Drainage Channel &mdash; QGEP 0.5 Dokumentation</title>
+  <title>2.1.4. Entwässerungskanal digitalisieren &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.1. Digitalisieren in QGEP" href="index.html"/>
-        <link rel="next" title="2.1.5. Digitizing Channels" href="digitizingchannels.html"/>
-        <link rel="prev" title="2.1.3. Digitizing detailed geometry" href="digitizingdetailedgeometry.html"/> 
+        <link rel="next" title="2.1.5. Kanäle Digitalisieren" href="digitizingchannels.html"/>
+        <link rel="prev" title="2.1.3. Digitalisieren detaillierter Geometrie" href="digitizingdetailedgeometry.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,30 +82,30 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Digitalisieren in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.1.1. Datenerfassung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.1.2. Abwasserbauwerke digitalisieren</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitizing detailed geometry</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.4. Digitizing Drainage Channel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitalisieren detaillierter Geometrie</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.4. Entwässerungskanal digitalisieren</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.1.4.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">2.1.4.2. Digitizing tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">2.1.4.2. Digitalisierungswerkzeug</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.5. Digitizing Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.5. Kanäle Digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.1.6. Objekte löschen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.1.7. Digitizing Catchment Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.1.7. Digitalisierung des Einzugsgebietes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.2. Editing in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.2. Bearbeiten in QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.3. Längsschnitte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.4. Werkzeuge zur Netzwerkverfolgung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.5. Plandruck</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo virtuelle Maschine</a></li>
 </ul>
 
           
@@ -134,7 +134,7 @@
       
           <li><a href="index.html">2.1. Digitalisieren in QGEP</a> &raquo;</li>
       
-    <li>2.1.4. Digitizing Drainage Channel</li>
+    <li>2.1.4. Entwässerungskanal digitalisieren</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -149,20 +149,26 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-drainage-channel">
-<h1>2.1.4. Digitizing Drainage Channel<a class="headerlink" href="#digitizing-drainage-channel" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>2.1.4. Entwässerungskanal digitalisieren<a class="headerlink" href="#digitizing-drainage-channel" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
 <h2>2.1.4.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>You can add a polygon to a manhole with function drainage channel.</p>
+<p>Sie können ein Polygon zu einem Kanalschacht mit der Funktion Abwasserkanal hinzufügen</p>
 </div>
 <div class="section" id="digitizing-tool">
-<h2>2.1.4.2. Digitizing tool<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.1.4.2. Digitalisierungswerkzeug<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Select the <strong>vw_qgep_cover</strong> layer</li>
-<li>Use the <strong>Identify features</strong> tool on the object to which you want to add a drainage channel geometry</li>
-<li>Right click the object and select the <strong>vw_qgep_cover</strong> layer</li>
-<li>Choose <strong>Digitize Drainage Channel</strong></li>
-<li>You can now start digitizing the area polygon.</li>
-<li>Right click to stop.</li>
+<li><p class="first">Wählen Sie die <strong>vw_qgep_cover</strong> Ebene</p>
+</li>
+<li><p class="first">Benutzen sie das <strong>Identify features</strong> Werkzeug auf dem Objekt welchem Sie eine Entwässerungskanal Geometrie hinzufügen wollen</p>
+</li>
+<li><p class="first">Drücken Sie Rechtsklick auf das Objekt und wählen Sie die <strong>vw_qgep_cover</strong> Ebene</p>
+</li>
+<li><p class="first">Wählen Sie <strong>Digitize Drainage Channel</strong></p>
+</li>
+<li><p class="first">Sie können nun mit der Digitalisierung des Polygonbereichs beginnen</p>
+</li>
+<li><p class="first">Drücken Sie Rechtsklick um zu stoppen</p>
+</li>
 </ul>
 </div>
 </div>
@@ -174,10 +180,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="digitizingchannels.html" class="btn btn-neutral float-right" title="2.1.5. Digitizing Channels" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="digitizingchannels.html" class="btn btn-neutral float-right" title="2.1.5. Kanäle Digitalisieren" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingdetailedgeometry.html" class="btn btn-neutral" title="2.1.3. Digitizing detailed geometry" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdetailedgeometry.html" class="btn btn-neutral" title="2.1.3. Digitalisieren detaillierter Geometrie" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
