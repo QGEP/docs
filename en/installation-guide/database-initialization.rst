@@ -40,6 +40,13 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
 
   * ``CREATE EXTENSION postgis;``
 
+.. _restore-demomodel:
+
+Restore demo datamodel
+^^^^^^^^^^^^^^^^^^^^^^
+
+Restore the latest data model that also includes demo data:
+
 * Download demo data
 
   * https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup
@@ -84,3 +91,42 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
     * Group `qgep`
 
     * Choose `ALL`
+
+Empty data model
+^^^^^^^^^^^^^^^^
+
+You also have the option to restore the latest empty data model (no demo data).
+
+* Download the data model by going to https://github.com/QGEP/datamodel/releases
+  and by downloading the latest `template_db.dump`.
+
+* In order to restore you can follow the steps from :ref:`restore-demomodel`,
+  using the template data model instead of the demo data one.
+
+Generate the data model
+^^^^^^^^^^^^^^^^^^^^^^^
+
+You can also generate the data model under Linux.
+
+* Download the data model::
+
+   git clone https://github.com/QGEP/datamodel
+   cd datamodel && git submodule init && git submodule update
+
+* Setup the ``pg_service.conf`` file and add the ``pg_qgep`` service
+  as in the :ref:`pg_service-linux` section.
+
+* Create the database::
+
+   psql -U postgres -c 'CREATE DATABASE qgep;'
+
+* Run the generation script::
+
+   ./scripts/dbsetup.sh
+
+If you want to use a different SRID you need to use the ``-s`` option.
+For instance, run ``./scripts/dbsetup.sh -s 2056`` for the **2056** SRID.
+
+If you already have a data model and you want to force the regeneration
+of the model you can also use the ``-f`` option: ``./scripts/db_setup.sh -f``.
+
