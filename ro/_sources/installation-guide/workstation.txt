@@ -11,8 +11,8 @@ server itself.
 
 These instructions depend on your operating system.
 
-Windows
-~~~~~~~
+Windows pg_service
+^^^^^^^^^^^^^^^^^^
 
 Create a new directory where you want to store the configuration in. (E.g. a new folder ``pgconfig`` in your home folder). This directory will be referred to as ``PGSYSCONFDIR`` in this guide.
 
@@ -29,15 +29,16 @@ Inside this folder, there will be two files
  One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
  and ``Edit --> EOL Conversion --> UNIX Format --> File save`` .
   
+.. _pg_service-linux:
 
-Linux
-~~~~~
+Linux pg_service
+^^^^^^^^^^^^^^^^
 
-On linux you may put the files ``.pg_service.conf`` and ``.pgpass`` into your home
-folder (normally ``/home/[username]``)
+On *nix systems (linux/macOS etc.) you may put the files ``.pg_service.conf``
+and ``.pgpass`` into your home folder (normally ``/home/[username]``).
 
 All systems
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 Put the following content in the file ``pg_service.conf`` or ``.pg_service.conf``.
 You may have to adapt the variables for your setup.

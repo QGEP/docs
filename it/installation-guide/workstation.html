@@ -87,8 +87,8 @@
 <li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Setup workstation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.3.1. Database configuration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#windows">1.3.1.1. Windows</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linux">1.3.1.2. Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">1.3.1.1. Windows pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-pg-service">1.3.1.2. Linux pg_service</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#all-systems">1.3.1.3. All systems</a></li>
 </ul>
 </li>
@@ -151,8 +151,8 @@ network server) you will have to create some files initially on every device on
 which you will have QGIS/QGEP running. It is not required to do that on the
 server itself.</p>
 <p>These instructions depend on your operating system.</p>
-<div class="section" id="windows">
-<h3>1.3.1.1. Windows<a class="headerlink" href="#windows" title="Link a questa intestazione">¶</a></h3>
+<div class="section" id="windows-pg-service">
+<h3>1.3.1.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Link a questa intestazione">¶</a></h3>
 <p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
 <p>Set the environment variable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Inside this folder, there will be two files</p>
@@ -167,10 +167,10 @@ One way to do it is to open it with <a class="reference external" href="https://
 and <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
 </div>
 </div>
-<div class="section" id="linux">
-<h3>1.3.1.2. Linux<a class="headerlink" href="#linux" title="Link a questa intestazione">¶</a></h3>
-<p>On linux you may put the files <code class="docutils literal"><span class="pre">.pg_service.conf</span></code> and <code class="docutils literal"><span class="pre">.pgpass</span></code> into your home
-folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>)</p>
+<div class="section" id="linux-pg-service">
+<span id="pg-service-linux"></span><h3>1.3.1.2. Linux pg_service<a class="headerlink" href="#linux-pg-service" title="Link a questa intestazione">¶</a></h3>
+<p>On <a href="#id1"><span class="problematic" id="id2">*</span></a>nix systems (linux/macOS etc.) you may put the files <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>
+and <code class="docutils literal"><span class="pre">.pgpass</span></code> into your home folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>).</p>
 </div>
 <div class="section" id="all-systems">
 <h3>1.3.1.3. All systems<a class="headerlink" href="#all-systems" title="Link a questa intestazione">¶</a></h3>
@@ -240,7 +240,7 @@ sudo apt-get install libqt4-sql-psql
 </ul>
 </li>
 </ul>
-<div class="figure" id="id1">
+<div class="figure" id="id3">
 <img alt="../_images/001_searchplugin.jpeg" src="../_images/001_searchplugin.jpeg" />
 <p class="caption"><span class="caption-text"><strong>Add the QGEP plugin</strong></span></p>
 </div>
