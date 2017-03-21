@@ -26,7 +26,7 @@ On the left side bottom the **QGEP Digitizing** window appears:
 
 .. figure:: images/wizard_data_entry.jpg
 
-Click **Start Data entry** to enter the edit mode.
+Click **Start Data entry** to enter the edit mode. 
 
 
 
