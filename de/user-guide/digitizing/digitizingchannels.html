@@ -154,7 +154,8 @@
 <h1>2.1.5. Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
 <h2>2.1.5.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>QGEP hat einen Assistenten um Kanäle korrekt zu erfassen und diese mit Schächten und Sonderbauwerken zu verbinden sowie die Lage für Abwasserknoten und Einzugsflächen zu erfassen.</p>
+<p>Disable the Reuse last entered attribute values option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
+<p>QGEP has a wizard to correctly build channels and connect them to wastewater structures respectively to wastewater nodes or other reaches (building up the topology for waste water nodes and reaches).</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
@@ -163,7 +164,8 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">Starten Sie die Digitalisierung in die Richtung des Flusses indem sie mit dem <strong>from manhole node</strong> starten und mit dem <strong>to manhole node</strong> aufhören.</p>
+<p class="last">Start digitizing in the direction of the flow by starting with the
+<strong>from manhole node</strong> and finishing with the <strong>to manhole node</strong>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
@@ -187,8 +189,7 @@
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sie können das Digitalisieren der Linie mir einem Rechts Klick beenden. Dies lässt das Haltungsformular erscheinen.</p>
-</li>
+<li>You can finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form.jpg" src="../../_images/wizard_wastewater_structure_reach_form.jpg" />
@@ -219,8 +220,7 @@
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und Sie dann mit dem Info Kursor auf das Objekt drücken welches Sie bearbeiten möchten.</p>
-</li>
+<li>You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.</li>
 <li><p class="first">Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die Existierenden Daten anschauen.</p>
 </li>
 </ul>
@@ -236,27 +236,22 @@
 <h2>2.1.5.3. Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn ein Linienobjekt digitalisiert wird, finden eine Serie von Schritten im Hintergrund der QGIS Datenbank statt</p>
 <ul class="simple">
-<li><p class="first">Ein neues Objekt wird in der Abwasser Struktur hinzugefügt (&#8220;od_wastewater_structure&#8221;)</p>
-</li>
+<li>an new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</li>
 <li><p class="first">Ein neues Objekt wird hinzugefügt und verknüpft in der <strong>channel</strong> Unterklasse (&#8220;od_channel&#8221;)</p>
 </li>
-<li><p class="first">zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft in die Haltung (<strong>rp_from</strong>, <strong>rp_to_node</strong>)</p>
-</li>
+<li>two new reach point objects are added and linked to the reach (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" src="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">ein neues Haltungsobkjekt wird in die <strong>wastewater network elements</strong> Klasse (&#8220;od_wastewater_networkelement&#8221;) und desse Unterklasse <strong>wastewater nodes</strong> (&#8220;od_wastewater_node**) generiert.</p>
-</li>
+<li>a new reach object is generated in the <strong>wastewater network elements</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_networkelement</span></code>)
+and its subclass <strong>reach</strong> (<code class="docutils literal"><span class="pre">od_reach</span></code>)</li>
 </ul>
 </div>
 <div class="section" id="to-do-documentation">
 <h2>2.1.5.4. Vorgehen - Dokumentation<a class="headerlink" href="#to-do-documentation" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Kanal/Haltung (Digitalisierrichtung, Schnappen)</li>
-<li>Weitere verknüpfte: Eigentümer, Rohrprofil, Hydraulische Geometrie, Hydraulische Einbauten</li>
-<li>evtl. Verknüpfungen erfassen</li>
 <li><p class="first">Entnehmen Sie mehr dem GEPView-Howto 1.2. Chapter 4.2)</p>
 </li>
 </ul>
