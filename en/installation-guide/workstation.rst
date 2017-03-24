@@ -124,7 +124,7 @@ Install the demo project
 
 * Open `project/qgep_en.qgs` with QGIS
 
-Working with more then one database
+Working with more than one database
 -----------------------------------
 
 * Create a new database in pgAdmin III with a new name, e.g. communityA
@@ -133,8 +133,9 @@ Working with more then one database
 
 * Go further on as descript in 1.2 Database initialization
 
-* Change the ``pg_service.conf`` - file.. 
+* Change the ``pg_service.conf`` - file 
 .. code:: ini
+
   [pg_qgep]    
   host=localhost    
   port=5432    
@@ -146,4 +147,4 @@ Working with more then one database
   dbname=communityA      
   user=qgepuser
   
-* Search and replace in the copy of qgep_en.qgs all 'pg_qgep' with 'pg_communityA'
+* Search and replace in the copy of ''qgep_en.qgs'' all 'pg_qgep' with 'pg_communityA'
