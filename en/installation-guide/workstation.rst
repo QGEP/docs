@@ -147,4 +147,4 @@ Working with more than one database
   dbname=communityA      
   user=qgepuser
   
-* Search and replace in the copy of ''qgep_en.qgs'' all 'pg_qgep' with 'pg_communityA'
+* Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with 'pg_communityA'
