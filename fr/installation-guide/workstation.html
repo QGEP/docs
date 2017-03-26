@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.5" href="../index.html"/>
-        <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
-        <link rel="next" title="2. QGEP User Guide" href="../user-guide/index.html"/>
-        <link rel="prev" title="1.2. Database initialization" href="database-initialization.html"/> 
+        <link rel="up" title="1. Guide d’installation de QGEP" href="index.html"/>
+        <link rel="next" title="2. Guide d’utilisateur de QGEP" href="../user-guide/index.html"/>
+        <link rel="prev" title="1.2. Initialisation de la base de données" href="database-initialization.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,9 +82,9 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Setup database server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Guide d&#8217;installation de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Configuration du serveur de base de données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Initialisation de la base de données</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Configuration du poste de travail</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.3.1. Configuration de la base de données</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">1.3.1.1. Windows pg_service</a></li>
@@ -99,8 +99,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
@@ -126,7 +126,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
+          <li><a href="index.html">1. Guide d&#8217;installation de QGEP</a> &raquo;</li>
       
     <li>1.3. Configuration du poste de travail</li>
       <li class="wy-breadcrumbs-aside">
@@ -191,21 +191,20 @@ and <code class="docutils literal"><span class="pre">.pgpass</span></code> into 
 <div class="section" id="install-qgis">
 <h2>1.3.2. Installer QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Minimum requirement 2.14</li>
-<li>We recommend using the latest master build (called qgis-dev on Windows)
-which often offers a better experience in combination with QGEP.
-For Windows installation, download the <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a>
-choose <em>advanced installation</em> and install qgis-dev.</li>
+<li><p class="first">Version minimum requise: 2.14</p>
+</li>
+<li><p class="first">Nous vous recommandons l&#8217;utilisation des versions de développements de QGIS (appelées qgis-dev sous Windows). Elles offriront une meilleure expérience utilisateur avec QGEP. Pour une installation sur Windows, télécharger l&#8217;installeur <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a>  , choisir <em>installation avancée</em> et installer qgis-dev.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="install-qgep-plugin">
 <h2>1.3.3. Installer le plugin QGEP<a class="headerlink" href="#install-qgep-plugin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Plugin requirements:</p>
+<p>Exigences du plugin;</p>
 <ul class="simple">
 <li>networkx</li>
 <li>Qt 4 PostgreSQL database driver</li>
 </ul>
-<p>You can install them on debian based systems with:</p>
+<p>Vous pouvez les installer sur un système Debian avec:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>sudo pip install networkx
 sudo apt-get install libqt4-sql-psql
 </pre></div>
@@ -213,10 +212,12 @@ sudo apt-get install libqt4-sql-psql
 <ul class="simple">
 <li><p class="first">Ouvrir QGIS</p>
 </li>
-<li>Go to Plugins<ul>
+<li><p class="first">Se rendre dans l&#8217;onglet Plugins</p>
+<ul>
 <li><p class="first">Installer/Gérer les extensions</p>
 </li>
-<li>Settings<ul>
+<li><p class="first">Paramètres</p>
+<ul>
 <li><p class="first">Ajouter...</p>
 <ul>
 <li><p class="first">Nom: QGEP</p>
@@ -225,7 +226,8 @@ sudo apt-get install libqt4-sql-psql
 <code class="docutils literal"><span class="pre">https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml</span></code></li>
 </ul>
 </li>
-<li>Enable <cite>Show also experimental plugins</cite></li>
+<li><p class="first">Activer l&#8217;onglet  <cite>Afficher les extensions expérimentales</cite></p>
+</li>
 </ul>
 </li>
 <li><p class="first">Activer le plugin (voir l&#8217;image ci-dessous):</p>
@@ -268,10 +270,10 @@ sudo apt-get install libqt4-sql-psql
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="2. QGEP User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="2. Guide d’utilisateur de QGEP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="database-initialization.html" class="btn btn-neutral" title="1.2. Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="database-initialization.html" class="btn btn-neutral" title="1.2. Initialisation de la base de données" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
