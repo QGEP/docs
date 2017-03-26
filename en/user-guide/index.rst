@@ -8,6 +8,7 @@ This represents a guide on how to collect data in QGEP (digitizing), edit existi
 .. toctree::
    :maxdepth: 2
 
+   layerexplanantion/index
    digitizing/index
    editing/index
    length-profile/index
