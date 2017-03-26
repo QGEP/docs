@@ -33,6 +33,7 @@ install:
 
 before_script:
   - ./scripts/ci/setup_git.sh
+  - ./scripts/ci/transifex_push.sh
 
 script:
   - ./scripts/build-docs.sh
