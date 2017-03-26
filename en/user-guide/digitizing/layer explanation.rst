@@ -30,4 +30,10 @@ These value lists are defined in the VSA-datamodel. Do not change.
 
 * Hydraulic / vw_wastewater_node:
 You use this layer only, if you want to change the situation of just one selected ww_node (and not the hole wastewater structure) or if you want to add a new ww_node to an existing wastewater structure. (you can add an additional ww_node also in the wastewater nodes-tab of the vw_qgep_wastewater_structure, but this node has no situation...).
-This layer must be expanded in the future with the related tables (overflow-tables,
+This layer must be expanded in the future with related tables (e.g. overflow-tables...)
+
+* Topology:
+These two layers are used by the qgep-extension for the profil and the network-following. Do not change or use otherwise.
+
+* Catchment:
+Main Layer to digitize and edit the catchment_areas.
