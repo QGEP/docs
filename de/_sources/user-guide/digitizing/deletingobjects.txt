@@ -1,7 +1,7 @@
 Deleting objects
 ================
 
-You can delete point or line objects (with all associated objects) through the **vw_qgep_(cover/reach)** layers.
+You can delete point or line objects (with all associated objects) through the **vw_qgep_(wastewater_structure/reach)** layers.
 You can also pick and delete only a specific object (e.g. cover).
 
 Delete Reaches
@@ -31,7 +31,7 @@ Delete Reaches
 Delete Manholes and other Waste water Structures
 ------------------------------------------------
 
-* Select **vw_qgep_cover** and change to edit mode
+* Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the objects (**manholes**, **special structures** etc.) you want to delete
 * Use **Edit** --> **Delete Selected** to delete. 
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.
@@ -39,7 +39,7 @@ Delete Manholes and other Waste water Structures
 Delete Covers
 -------------
 
-* Select **vw_qgep_cover** and change to edit mode
+* Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) to which you want the cover deleted
 * Use the **Identify Features** tool to open the form
 * Switch to the covers tab 
@@ -54,7 +54,7 @@ Delete Covers
 Delete Structure parts
 ----------------------
 
-* Select **vw_qgep_cover** and change to edit mode
+* Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) you want to delete the cover
 * Use the **Identify Features** tool to open the form
 * Switch to the structure parts tab
