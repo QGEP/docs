@@ -1,5 +1,7 @@
 Layers in QGEP
-This represents a guide on how to correctly collect and digitize data of sewer networks including building the topology.
+==============
+
+A short explanation for each predefined layer.
 
 .. toctree::
    :maxdepth: 2
