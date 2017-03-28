@@ -33,7 +33,7 @@
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.1. Digitalisieren in QGEP" href="index.html"/>
         <link rel="next" title="2.1.6. Objekte löschen" href="deletingobjects.html"/>
-        <link rel="prev" title="2.1.4. Entwässerungskanal digitalisieren" href="digitizingdrainagechannel.html"/> 
+        <link rel="prev" title="2.1.4. Entwässerungsrinnen digitalisieren" href="digitizingdrainagechannel.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -88,7 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.1.1. Datenerfassung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.1.2. Abwasserbauwerke digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitalisieren detaillierter Geometrie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Entwässerungskanal digitalisieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Entwässerungsrinnen digitalisieren</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.1.5. Kanäle Digitalisieren</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.1.5.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.1.5.2. Digitalisieren</a></li>
@@ -154,8 +154,8 @@
 <h1>2.1.5. Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
 <h2>2.1.5.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Disable the Reuse last entered attribute values option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
-<p>QGEP has a wizard to correctly build channels and connect them to wastewater structures respectively to wastewater nodes or other reaches (building up the topology for waste water nodes and reaches).</p>
+<p>Die Option <strong>Letzte Attributwerteingabe wiederholen</strong> (Einstellungen -&gt; Optionen -&gt; Digitalisierung) deaktivieren, weil der zweite neue Datensatz nicht mehr gesichert werden kann. Dieser Bug wird spätestens mit QGIS 3.0 behoben sein.</p>
+<p>QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen).</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
@@ -164,8 +164,7 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">Start digitizing in the direction of the flow by starting with the
-<strong>from manhole node</strong> and finishing with the <strong>to manhole node</strong>.</p>
+<p class="last">Starten Sie die Digitalisierung von Haltungen/Kanälen immer in Fliessrichtung des Kanales, indem sie mit dem <strong>from manhole node</strong> starten und mit dem <strong>to manhole node</strong> aufhören.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
@@ -189,7 +188,8 @@
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" />
 </div>
 <ul class="simple">
-<li>You can finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear.</li>
+<li><p class="first">Sie können das Digitalisieren der Linie mit einem Rechts Klick beenden. Es erscheint das Haltungsformular.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form.jpg" src="../../_images/wizard_wastewater_structure_reach_form.jpg" />
@@ -220,7 +220,8 @@
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
 <ul class="simple">
-<li>You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.</li>
+<li><p class="first">Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Kursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p>
+</li>
 <li><p class="first">Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p>
 </li>
 </ul>
@@ -236,17 +237,19 @@
 <h2>2.1.5.3. Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn ein Linienobjekt digitalisiert wird, finden eine Serie von Schritten im Hintergrund der QGIS Datenbank statt</p>
 <ul class="simple">
-<li>an new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</li>
+<li><p class="first">Ein neues Objekt wird in der Abwasserbauwerk-Tabelle hinzugefügt (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</p>
+</li>
 <li><p class="first">Ein neues Objekt wird hinzugefügt und verknüpft in der <strong>channel</strong> Unterklasse (&#8220;od_channel&#8221;)</p>
 </li>
-<li>two new reach point objects are added and linked to the reach (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</li>
+<li><p class="first">zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" src="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" />
 </div>
 <ul class="simple">
-<li>a new reach object is generated in the <strong>wastewater network elements</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_networkelement</span></code>)
-and its subclass <strong>reach</strong> (<code class="docutils literal"><span class="pre">od_reach</span></code>)</li>
+<li><p class="first">ein neues Haltungsobjekt wird in der <strong>Abwassernetzelement</strong> Tabelle (&#8220;od_wastewater_networkelement&#8221;) und dessen Unterklasse <strong>Haltung</strong> (&#8220;od_reach**) generiert.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="to-do-documentation">
@@ -268,7 +271,7 @@ and its subclass <strong>reach</strong> (<code class="docutils literal"><span cl
         <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.1.6. Objekte löschen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.1.4. Entwässerungskanal digitalisieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.1.4. Entwässerungsrinnen digitalisieren" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -93,7 +93,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.1.3. Digitalisieren detaillierter Geometrie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Entwässerungskanal digitalisieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.1.4. Entwässerungsrinnen digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.1.5. Kanäle Digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.1.6. Objekte löschen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.1.7. Digitalisierung der Einzugsgebiete</a></li>
@@ -153,7 +153,7 @@
 <h1>2.1.2. Abwasserbauwerke digitalisieren<a class="headerlink" href="#digitizing-waste-water-structures" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
 <h2>2.1.2.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Disable the <strong>Reuse last entered attribute values</strong> option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
+<p>Die Option <strong>Letzte Attributwerteingabe wiederholen</strong> (Einstellungen -&gt; Optionen -&gt; Digitalisierung) deaktivieren, weil der zweite neue Datensatz nicht mehr gesichert werden kann. Dieser Bug wird spätestens mit QGIS 3.0 behoben sein.</p>
 <p>QGEP hat einen Assistenten, um Schächte und Sonderbauwerke zu erfassen.</p>
 <p>Wählen Sie den <strong>Wizard</strong> Knopf und dann klicken Sie auf <strong>Start Data Entry</strong> und wählen dann <strong>Wastewater Structure</strong> im herunterzieh Menu</p>
 <div class="figure">
@@ -169,32 +169,27 @@
 <div class="figure">
 <img alt="../../_images/wizard_data_entry_with_new_cursor.jpg" src="../../_images/wizard_data_entry_with_new_cursor.jpg" />
 </div>
-<p>Then the <strong>vw_qgep_wastewater_structure</strong> form opens and you can start adding data in the <strong>General</strong> tab:</p>
+<p>Es öffnet das <strong>vw_gep_wastewater_structure</strong> Formular und Sie können beginnen, Daten in den <strong>General</strong> Tab einzutragen:</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" />
 </div>
-<p>Select the ws_type you want (preselected is &#8216;manhole&#8217;):</p>
+<p>Wähle den Abwasserbauwerk-Typ (vorgewählt ist &#8216;Normschacht&#8217;):</p>
 <ul class="simple">
-<li><p class="first">entlastungs_punkt</p>
+<li><p class="first">Einleitstelle</p>
 </li>
 <li><p class="first">Versickerungsanlage</p>
 </li>
-<li><p class="first">Kanalschacht</p>
+<li><p class="first">Normschacht</p>
 </li>
 <li><p class="first">Spezialbauwerk</p>
 </li>
 </ul>
-<p>Then add the identifier (this is the attribute that will be displayed on the map).
-As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
-<p>Für Kanalschächte und Sonderbauwerke wählen Sie dann die Funktion (in <strong>manhole_function</strong> or in <strong>special structure_function</strong>). Es wird dann automatisch angezeigt oder in Zukunft versteckt, abhängig vom <strong>ws_type</strong>)</p>
+<p>Fügen Sie dann die Bauwerks-Bezeichnung hinzu (dies ist die Bezeichnung, welche auf den Plänen angezeigt werden wird). Die Bezeichnungen von Deckel und Abwasserknoten werden als Voreinstellung gleich wie die Bauwerksbezeichnung gesetzt.</p>
+<p>Für Kanalschächte und Sonderbauwerke wählen Sie dann die Funktion (in <strong>manhole_function</strong> oder in <strong>special structure_function</strong>). Es wird dann automatisch angezeigt oder in Zukunft versteckt, abhängig vom <strong>ws_type</strong>)</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" />
 </div>
-<p>Add other attributes in the <strong>General</strong> tab.
-You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node)
-You can not add new records in the tab Covers, Structure Parts, Wastewater Nodes and Maintenance, because you have to save first the Wastewater Structure-Record to the database before you can add aditional records.
-You can not use <strong>Aktionen</strong> for the same reason. First safe the record.
-Now you can click OK.</p>
+<p>Fügen Sie weitere Attributwerte im <strong>General**Tab hinzu. Sie können auch Attributwerte in anderen Tabs hinzufügen (Deckel, Abwasserbauwerk, Normschacht, Abwasserknoten). In den Tabs Deckels, Bauwerkteile, Abwasserknotens und Erhaltungsereignisse können keine neuen Datensätze hinzugefügt werden, weil zuerst der Abwasserbauwerk-Datensatz in der Datenbank gesichert werden muss. Sie können auch die **Aktionen</strong> aus dem gleichen Grund noch nicht benutzen. Zuerst den Datensatz sichern. Jetzt bitte OK klicken.</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" />
 </div>
@@ -202,7 +197,7 @@ Now you can click OK.</p>
 <div class="figure">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
-<p>Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und Sie dann mit dem Info Kursor auf das Objekt drücken welches Sie bearbeiten möchten. Wenn Sie denn  Bearbeitungsmodus nicht auswählen können Sie lediglich die existierenden Daten anschauen.</p>
+<p>Sie können Ihr Punktobjekt bearbeiten, indem Sie den Bearbeitungsmodus auswählen und Sie dann mit dem Info Tool auf das Objekt klicken, welches Sie bearbeiten möchten. Wenn Sie den  Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p>
 <div class="figure">
 <img alt="../../_images/manhole_info_manhole.jpg" src="../../_images/manhole_info_manhole.jpg" />
 </div>
@@ -210,14 +205,18 @@ Now you can click OK.</p>
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2>2.1.2.3. Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>When a point object is digitized a series of steps take place in the background in the QGIS database:</p>
+<p>Wenn ein Punktobjekt digitalisiert wird, findet eine Reihe von Schritten im Hintergrund der QGIS Datenbank statt:</p>
 <ol class="loweralpha simple">
-<li>an new object in the class wastewater structure is added</li>
-<li>a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked</li>
-<li>a new cover object is added and linked to the waste water structure</li>
-<li>a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes</li>
+<li><p class="first">ein neues Objekt Abwasserbauwerk wird hinzugefügt</p>
+</li>
+<li><p class="first">ein neues Objekt der entsprechenden Unterklasse [Normschacht, Spezialbauwerk, Versickerungsanlage, Einleitstelle] wird hinzugefügt und verknüpft</p>
+</li>
+<li><p class="first">ein neuer Deckel-Bauwerksteil wird hinzugefügt und mit der Abwasserbauwerk verknüpft</p>
+</li>
+<li><p class="first">ein neuer Abwasserknoten wird in den Abwassernetzelementen und dessen Unterklasse Abwasserknoten erstellt</p>
+</li>
 </ol>
-<p>To add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Bearbeiten von bestehenden Daten</span></a> chapter).</p>
+<p>Wenn Sie zusätzliche Objekte wie Bauwerkteile ( Einstiegshilfe, Bankett, Rückstauklappen usw.) hinzufügen wollen, dann müssen sie zuerst den Datensatz sichern und danach das Abwasserbauwerk editieren (vgl. das Kapitel <a class="reference internal" href="../editing/editing.html#editing-data"><span>Bearbeiten von bestehenden Daten</span></a> ).</p>
 <p>...(Entnehmend SIe mehr dem GEPView-Howto 1.2 Chapter 4.1)</p>
 </div>
 </div>
