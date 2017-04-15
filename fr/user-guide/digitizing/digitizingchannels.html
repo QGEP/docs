@@ -94,7 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Général</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Autres classes et attributs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#to-do-documentation">2.2.5.4. TO DO Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#to-do-documentation">2.2.5.4. Documentation QGEP</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
@@ -156,7 +156,7 @@
 <div class="section" id="general">
 <h2>2.2.5.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Disable the Reuse last entered attribute values option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
-<p>QGEP has a wizard to correctly build channels and connect them to wastewater structures respectively to wastewater nodes or other reaches (building up the topology for waste water nodes and reaches).</p>
+<p>QGEP propose un outil pour construire les canalisations et les connecter aux chambres/structures spéciales (tout en créant la topologie pour les nœuds de réseau et les conduites).</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
@@ -165,8 +165,7 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">Start digitizing in the direction of the flow by starting with the
-<strong>from manhole node</strong> and finishing with the <strong>to manhole node</strong>.</p>
+<p class="last">Commencer la digitalisation dans le sens de l&#8217;écoulement en commençant avec le <strong>from manhole node</strong> et en finissant par le <strong>to manhole node</strong>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -190,7 +189,8 @@
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2.jpg" />
 </div>
 <ul class="simple">
-<li>You can finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear.</li>
+<li><p class="first">Faire un clic droit pour terminer la numérisation. Ceci va faire apparaître le formulaire <strong>vw_qep_reach</strong>.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form.jpg" src="../../_images/wizard_wastewater_structure_reach_form.jpg" />
@@ -237,10 +237,12 @@
 <h2>2.2.5.3. Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Lorsqu&#8217;un objet de type ligne est créé, une série d&#8217;étapes prend place en arrière-plan de la base de données QGIS:</p>
 <ul class="simple">
-<li>an new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</li>
+<li><p class="first">Un nouvel objet est ajouté dans la classe <strong>wastewater structure</strong> (<a href="#id1"><span class="problematic" id="id2">``</span></a>od_wastewater_`structure`)</p>
+</li>
 <li><p class="first">Un nouvel objet est ajouté et lié dans la sous-classe <strong>channel</strong> (<code class="docutils literal"><span class="pre">od_channel</span></code>)</p>
 </li>
-<li>two new reach point objects are added and linked to the reach (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</li>
+<li><p class="first">Deux objets de type <strong>reach point</strong> sont ajoutés et liés à la conduite (<code class="docutils literal"><span class="pre">rp_from_node</span></code>, <code class="docutils literal"><span class="pre">rp_to_node</span></code>)</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" src="../../_images/wizard_wastewater_structure_reach_form_reach_points.jpg" />
@@ -251,7 +253,7 @@ and its subclass <strong>reach</strong> (<code class="docutils literal"><span cl
 </ul>
 </div>
 <div class="section" id="to-do-documentation">
-<h2>2.2.5.4. TO DO Documentation<a class="headerlink" href="#to-do-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.5.4. Documentation QGEP<a class="headerlink" href="#to-do-documentation" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>take more from GEPView-Howto 1.2. Chapter 4.2)</li>
 </ul>
