@@ -6,7 +6,11 @@ Using Pgadmin
 SQL query
 ---------
 
+<<<<<<< HEAD
+ .. figure:: images/001_roles.jpeg
+=======
 .. figure:: images/001_roles.jpeg
+>>>>>>> refs/remotes/origin/master
 
    **Running SQL commands in PgAdminIII**
 
