@@ -111,7 +111,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/admin-guide/data-import/interlis.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/admin-guide/data-import/interlisimport.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -206,17 +206,23 @@
 </div>
 </div></blockquote>
 <p>set t_key_object to latest sequence of project so that tid (integer) is correct</p>
-<p>&gt;&gt; SELECT vsa_dss_2015_2_d_304.key_object_seq;</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">key_object_seq</span><span class="p">;</span>
+</pre></div>
+</div>
 <p>Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table organisation</p>
-<p>&gt;&gt; SELECT vsa_dss_2015_2_d.meta_organisation(&#8216;VSA&#8217;, &#8216;ch080qwzOG000098&#8217;);
-&gt;&gt; SELECT vsa_dss_2015_2_d.meta_organisation(&#8216;SBU&#8217;, &#8216;ch080qwzOG000099&#8217;);</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;VSA&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000098&#39;</span><span class="p">);</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
 <p>Add your own or modify if needed</p>
 <p>This generates data in table organization (privat) for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
 select meta_organisation_bezeichnung_obj_id.sql as template:
 &gt;&gt;&gt; SELECT vsa_dss_2015_2_d_304.meta_organisation(&#8216;VSA&#8217;, &#8216;ch080qwzOG000098&#8217;);</p>
 <p>You have to select the identifier of existing dataowners e.g. VSA and define a relating OBJ_ID for it e.g. &#8216;ch080qwzOG000098</p>
-<p>If you test this with the transferdataset from VSA replace also SBU:
-SELECT vsa_dss_2015_2_d_304.meta_organisation(&#8216;SBU&#8217;, &#8216;ch080qwzOG000099&#8217;);</p>
+<p>If you test this with the transferdataset from VSA replace also SBU:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="run-the-import-queries-for-your-datamodel">
 <h3>Run the import queries for your datamodel<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Link zu dieser Überschrift">¶</a></h3>

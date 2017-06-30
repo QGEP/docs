@@ -6,14 +6,8 @@ This represents a guide on how to export data from QGEP.
 Export formats
 ------------------------------
 
-* INTERLIS (in progress)
+INTERLIS :ref:`_export-interlis`
 * dxf (in progress)
 * Shape
-* MOUSE / MikeUrban 
+* MOUSE / MikeUrban (please connect with the developer team if you are interested in this)
 * other
-
-
-INTERLIS
-^^^^^^^^^^^^^^^^^
-
-INTERLIS Export can be done using the ili2pg tool. For further information contact the developer team.
