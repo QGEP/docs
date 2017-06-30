@@ -49,7 +49,7 @@ You need to have the necessary model files (ili) in the same folder as the xtf.
 - *Units.ili*
 - *Base.ili*
 - *SIA405_Base.ili*
-- *VSA_DSS_2015_2_d_20170602.ili*  (for Version 2015) –> corrected version relations 
+- *VSA_DSS_2015_2_d_20170602.ili*   (for Version 2015) –> corrected version relations 
 
 (!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef -- {0..*} statt 0..1 (Fehlerkorrektur))
@@ -60,7 +60,7 @@ You need to have the necessary model files (ili) in the same folder as the xtf.
 Add additional functions
 ------------------------
 
-We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema
+We then need a series of function for the schema transformation form the created ili2pg schema to the ``qgep`` schema
 
 - *01_vsa_dss_2015_2_d_304_tid_generate.sql* : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 - *02_vsa_dss_2015_2_d_304_tid_lookup.sql* : Function to look up tid – used in 060
@@ -134,11 +134,13 @@ psql -U postgres -d vsa_dss_2015_2_d_304 -f 02_vsa_dss_2015_2_d_304_tid_lookup.s
 pause
 
 Specify the path variable to postgresSQL on your system
--U sets the user 
--d sets the dbname
--f sets the filenam
+
+``-u`` sets the user 
+``-d`` sets the dbname
+``-f`` sets the filenam
 
 For more details see https://www.postgresql.org/docs/9.2/static/app-psql.html
+
 
 Open issues
 ---------------
@@ -154,7 +156,7 @@ Open issues
 Possible problems
 -------------------
 
-* qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –> check whether ok in empty schema qgep.
+* qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –> check whether ok in empty schema ``qgep``.
 
 * Need to use ``ST_Force3D`` for geometries – because qgep model is now with 3D coordinates
 
