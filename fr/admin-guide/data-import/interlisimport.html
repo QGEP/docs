@@ -143,7 +143,12 @@
 <h2>Step by step<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="tool">
 <h3>Tool<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">Download the latest version of ili2pg</a></p>
+<p>Download the latest version of <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
+<blockquote>
+<div><div class="figure">
+<img alt="../../_images/eisenhut.jpg" src="../../_images/eisenhut.jpg" />
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="generate-ili2pg-schema-with-data-model">
 <h3>Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
@@ -158,13 +163,19 @@
 &gt;&gt;&gt; &#8211;importTid &#8211;sqlEnableNull &#8211;createEnumTabs &#8211;createFk  &#8211;noSmartMapping</p>
 <p>You need to have the necessary model files (ili) in the same folder as the xtf.</p>
 <ul class="simple">
-<li>Units.ili</li>
-<li>Base.ili</li>
+<li><em>Units.ili</em></li>
+<li><em>Base.ili</em></li>
+</ul>
+<ul class="simple">
 <li>SIA405_Base.ili</li>
 <li>VSA_DSS_2015_2_d_20170602.ili (for Version 2015) –&gt; corrected version relations</li>
 </ul>
 <p>(!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef &#8211; {0..*} statt 0..1 (Fehlerkorrektur))</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the INTERLIS model is German, then the ili2pg schema will have German table names. If the model is French, then the will be in French.</p>
+</div>
 </div>
 <div class="section" id="add-additional-functions">
 <h3>Add additional functions<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
@@ -184,20 +195,20 @@
 <h3>Add additional view<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
 <p>This view is needed for the import queries and has to be added to the ili2pg schema beforehand</p>
 <ul class="simple">
-<li>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</li>
+<li><em>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</em></li>
 </ul>
 </div>
 <div class="section" id="add-two-other-functions">
 <h3>Add two other functions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>053_create_key_object_seq.sql : key_objects_seq function copies the latest seq value into table t_key_object</li>
-<li>054_create_function_meta_organisation.sql : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</li>
+<li><em>053_create_key_object_seq.sql</em> : key_objects_seq function copies the latest seq value into table t_key_object</li>
+<li><em>054_create_function_meta_organisation.sql</em> : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</li>
 </ul>
 </div>
 <div class="section" id="modify-metadata-and-organisation-data">
 <h3>Modify Metadata and Organisation data<a class="headerlink" href="#modify-metadata-and-organisation-data" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>055_select meta_organisation_bezeichnung_obj_id.sql</li>
+<li><em>055_select meta_organisation_bezeichnung_obj_id.sql</em></li>
 </ul>
 <p>Run this function before importing data from ili2pg to qgep schema, else you will have problems importing fk_dataowner / fk_provider fields if they are not with a valid obj_id but some form of identifier (e.g. with the Transferdatensatz_VSA_DSS.xtf)</p>
 <blockquote>
@@ -205,19 +216,21 @@
 <img alt="admin-guide/data-import/images/set_key_object_seq.png" src="admin-guide/data-import/images/set_key_object_seq.png" />
 </div>
 </div></blockquote>
-<p>set t_key_object to latest sequence of project so that tid (integer) is correct</p>
+<p>Set t_key_object to latest sequence of project so that tid (integer) is correct:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">key_object_seq</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table organisation</p>
+<p>Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table <strong>organisation</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;VSA&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000098&#39;</span><span class="p">);</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Add your own or modify if needed</p>
-<p>This generates data in table organization (privat) for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
-select meta_organisation_bezeichnung_obj_id.sql as template:
-&gt;&gt;&gt; SELECT vsa_dss_2015_2_d_304.meta_organisation(&#8216;VSA&#8217;, &#8216;ch080qwzOG000098&#8217;);</p>
+<p>Add your own or modify if needed.</p>
+<p>This generates data in table <strong>organization (privat)</strong> for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
+select meta_organisation_bezeichnung_obj_id.sql as template:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;VSA&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000098&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
 <p>You have to select the identifier of existing dataowners e.g. VSA and define a relating OBJ_ID for it e.g. &#8216;ch080qwzOG000098</p>
 <p>If you test this with the transferdataset from VSA replace also SBU:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
@@ -227,9 +240,9 @@ select meta_organisation_bezeichnung_obj_id.sql as template:
 <div class="section" id="run-the-import-queries-for-your-datamodel">
 <h3>Run the import queries for your datamodel<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>060_sia405_interlisimport.sql for SIA405 2015 import</li>
-<li>060_dss_interlisimport.sql for VSA-DSS 2015 Import</li>
-<li>060_dss_2008_xxx.sql (Version 2008, adapted from Urs Kaufmann)</li>
+<li><em>060_sia405_interlisimport.sql</em> for SIA405 2015 import</li>
+<li><em>060_dss_interlisimport.sql</em> for VSA-DSS 2015 Import</li>
+<li><em>060_dss_2008_xxx.sql</em> (Version 2008, adapted from Urs Kaufmann)</li>
 </ul>
 </div>
 <div class="section" id="open-issues">
@@ -242,14 +255,14 @@ select meta_organisation_bezeichnung_obj_id.sql as template:
 <img alt="../../_images/textref.jpg" src="../../_images/textref.jpg" />
 </div>
 <ul class="simple">
-<li>If data is exported from DABASE or other systems it may be that the reach. has double point or that is going from wastewater_node to wastewater_node instead of reach_point to reach_point. Looking for a solution to automatically check after import and &#8220;clean&#8221; linestring.</li>
+<li>If data is exported from DABASE or other systems it may be that the <strong>reach</strong>.trace has double point or that is going from <strong>wastewater_node</strong> to <strong>wastewater_node</strong> instead of <strong>reach_point</strong> to <strong>reach_point</strong>. Looking for a solution to automatically check after import and &#8220;clean&#8221; linestring.</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="possible-problems">
 <h3>Possible problems<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref – check whether ok in empty schema qgep.</li>
+<li>qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –&gt; check whether ok in empty schema qgep.</li>
 <li>Need to use ST_Force3D for geometries – because qgep model is now with 3D coordinates</li>
 <li>If identifier in table is not unique there will be an error on the import of the table:</li>
 </ul>
@@ -262,7 +275,7 @@ Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ e
 </pre></div>
 </div>
 <ul class="simple">
-<li>Change identifier V1.100 to V1.100.2 in class abwasserbauwerk for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.</li>
+<li>Change identifier V1.100 to V1.100.2 in class <strong>abwasserbauwerk</strong> for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.</li>
 </ul>
 </div>
 </div>

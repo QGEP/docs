@@ -92,29 +92,29 @@ and some metatables for ili2pg:
 Add more functions and modify ili2pg schema
 --------------------------------------------
 
-* 042_vsa_dss_2015_2_d_304_insert_t_ili2db_attrname_metadata.sql
-* 043_vsa_dss_2015_2_d_304_t_ili2db_attrname_add_column_owner_for_ili2pg301.sql: Only needed if column does not exist yet (old ili2pg versions)
+- *042_vsa_dss_2015_2_d_304_insert_t_ili2db_attrname_metadata.sql*
+- *043_vsa_dss_2015_2_d_304_t_ili2db_attrname_add_column_owner_for_ili2pg301.sql* : Only needed if column does not exist yet (old ili2pg versions)
 
  .. figure:: images/43.png
 
-* 044_vsa_dss_2015_2_d_304_t_ili2db_classname_VSA_DSS_2015_2.sql: insert VSA-DSS Model 2015 model classes
-* 045_vsa_dss_2015_2_d_304_t_ili2db_model_VSA_DSS_2015_2.ili_metadata.sql: insert VSA-DSS Model 2015 in metatable
-* 046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql to create t_key_object if table does not exist.
+- *044_vsa_dss_2015_2_d_304_t_ili2db_classname_VSA_DSS_2015_2.sql* : insert VSA-DSS Model 2015 model classes
+- *045_vsa_dss_2015_2_d_304_t_ili2db_model_VSA_DSS_2015_2.ili_metadata.sql* : insert VSA-DSS Model 2015 in metatable
+- *046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql* to create t_key_object if table does not exist.
 
-* 047_vsa_dss_2015_2_d_340_t_ili2db_inheritance_create.sql
-* 048_vsa_dss_2015_2_d_340_t_ili2db_trafo_metadata.sql
+- *047_vsa_dss_2015_2_d_340_t_ili2db_inheritance_create.sql*
+- *048_vsa_dss_2015_2_d_340_t_ili2db_trafo_metadata.sql*
 
 
 Run the export queries for your datamodel
 ----------------------------------------------
 
-* 051_vsa_dss_2015_2_d_304_interlisexport2.sql for VSA-DSS 2015 export
-* kf_0511_geoAbwBW_li2cu.sql: change from compoundcurve to linestring (ändert Geometrie type in Export schema (curve))
-* 052a_vsa_dss_2015_2_d_304_interlisexport2.sql: second part of data export
+- *051_vsa_dss_2015_2_d_304_interlisexport2.sql* for VSA-DSS 2015 export
+- *kf_0511_geoAbwBW_li2cu.sql* : change from compoundcurve to linestring (ändert Geometrie type in Export schema (curve))
+- *052a_vsa_dss_2015_2_d_304_interlisexport2.sql* : second part of data export
 
 For SIA 405 Abwasser export 
 
-* 051_sia_2015_2_d_304_interlisexport2.sql for SIA405 2015 export
+- *051_sia_2015_2_d_304_interlisexport2.sql* for SIA405 2015 export
 * etc.
 
 But then the ili2pg schema needs to be created with SIA405 Abwasser model structure.
@@ -133,23 +133,22 @@ Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2015)
 
 Braucht folgende Modelldateien (lizenpflichtig, VSA oder sia Lizenz notwendig – kann durch Kauf der Norm SIA405 2016 oder VSA-DSS CD erworben werden):
 
-* units.ili
-* base.ili
-* sia405_base.ili
-* SIA405_Abwasser_2015_2_d.ili
+- *units.ili*
+- *base.ili*
+- *sia405_base.ili*
+- *SIA405_Abwasser_2015_2_d.ili*
 
 Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2014)
 
 >>> java -jar ili2pg.jar --trace --export --log export_arbon_small_sia405abwasser_2014_2_d.log --models SIA405_Abwasser --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword ab3.xtf
 
-Needed models: units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili
+Needed models: *units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili*
 
 
 Fachprüfung mit VSA Checker (online)
 -----------------------------------------
 
-https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ -> Link zu Login bei infogrips
-
+https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ -> Link to login at infogrips
 
 
 
