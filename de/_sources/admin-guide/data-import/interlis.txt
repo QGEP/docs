@@ -1,4 +1,6 @@
-Data import INTERLIS
+.. _import-interlis:
+
+Import INTERLIS Data
 ====================
 
 This represents a guide on how to import data to QGEP from INTERLIS 2 Transfer Format (xtf).
@@ -127,7 +129,7 @@ FEHLER: doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_
 SQL state: 23505
 Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.
 
-* Changed V1.100 to V1.100.2 in class abwasserbauwerk for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.
+* Change identifier V1.100 to V1.100.2 in class abwasserbauwerk for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.
  
  
 
