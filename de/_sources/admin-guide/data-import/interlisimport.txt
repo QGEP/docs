@@ -46,8 +46,8 @@ You need to have the necessary model files (ili) in the same folder as the xtf.
 
 - *Units.ili*
 - *Base.ili*
-* SIA405_Base.ili
-* VSA_DSS_2015_2_d_20170602.ili (for Version 2015) –> corrected version relations 
+- *SIA405_Base.ili*
+- *VSA_DSS_2015_2_d_20170602.ili*  (for Version 2015) –> corrected version relations 
 
 (!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef -- {0..*} statt 0..1 (Fehlerkorrektur))
@@ -60,10 +60,10 @@ Add additional functions
 
 We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema
 
-* 01_vsa_dss_2015_2_d_304_tid_generate.sql : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
-* 02_vsa_dss_2015_2_d_304_tid_lookup.sql: Function to look up tid – used in 060
+- *01_vsa_dss_2015_2_d_304_tid_generate.sql* : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
+- *02_vsa_dss_2015_2_d_304_tid_lookup.sql* : Function to look up tid – used in 060
  
-* 046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql to create t_key_object if table does not exist.
+- *046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql*  to create t_key_object if table does not exist.
 
  .. figure:: images/functions.png
 
@@ -115,10 +115,29 @@ If you test this with the transferdataset from VSA replace also SBU:
 Run the import queries for your datamodel
 ----------------------------------------------
 
-- *060_sia405_interlisimport.sql* for SIA405 2015 import
-- *060_dss_interlisimport.sql* for VSA-DSS 2015 Import
-- *060_dss_2008_xxx.sql* (Version 2008, adapted from Urs Kaufmann)
+- *060_sia405_interlisimport.sql*  for SIA405 2015 import
+- *060_dss_interlisimport.sql*  for VSA-DSS 2015 Import
+- *060_dss_2008_xxx.sql* for Version 2008
 
+
+
+Create a batch job
+-------------------
+
+You can also run all the SQL queries in one batch job, here an example:
+
+>>> rem bat and sql in the same directory
+set PATH=%PATH%;C:\Program Files\PostgreSQL\9.4\bin
+psql -U postgres -d vsa_dss_2015_2_d_304 -f 01_vsa_dss_2015_2_d_304_tid_generate.sql
+psql -U postgres -d vsa_dss_2015_2_d_304 -f 02_vsa_dss_2015_2_d_304_tid_lookup.sql
+pause
+
+Specify the path variable to postgresSQL on your system
+-U sets the user 
+-d sets the dbname
+-f sets the filenam
+
+For more details see https://www.postgresql.org/docs/9.2/static/app-psql.html
 
 Open issues
 ---------------

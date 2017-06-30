@@ -22,7 +22,9 @@ Step by step
 
 Tool
 --------
-`Download the latest version of ili2pg <http://eisenhutinformatik.ch/interlis/ili2pg>`_
+Download the latest version of `ili2pg <http://eisenhutinformatik.ch/interlis/ili2pg>`_
+
+ .. figure:: images/eisenhut.jpg
 
 Generate ili2pg schema with data model
 --------------------------------------
