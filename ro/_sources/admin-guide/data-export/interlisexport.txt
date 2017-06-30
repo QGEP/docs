@@ -53,83 +53,116 @@ Add additional functions
 
 We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema
 
+* 00_vsa_dss_2015_2_d_304_schema_generate.sql: Creates ili2pg empty export schema
 * 01_vsa_dss_2015_2_d_304_tid_generate.sql : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 * 02_vsa_dss_2015_2_d_304_tid_lookup.sql: Function to look up tid – used in 060
- 
-* 046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql to create t_key_object if table does not exist.
+* 021_vsa_dss_2015_2_d_304_create_seq_ili2td.sql:
+
 
  .. figure:: images/functions.png
 
-Add additional view
+Create model tables in export schema
 -----------------------
 
-This view is needed for the import queries and has to be added to the ili2pg schema beforehand
+* 03_vsa_dss_2015_2_d_304_schema.sql (version 2015)
 
-* 050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql
+This SQL statement creates the vsa_dss tabellen tables and all related model tables
 
-Add two other functions
-------------------------
+- sia405_baseclass
+- sia405_symbolpos
+- sia405_textpos
 
-* 053_create_key_object_seq.sql : key_objects_seq function copies the latest seq value into table t_key_object
-* 054_create_function_meta_organisation.sql : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify
+and some metatables for ili2pg:
 
-Modify Metadata and Organisation data
--------------------------------------
+- t_ili2db_attrname: iliname - sqlname
+- t_ili2db_basket
+- t_ili2db_classname: iliname - sqlname
+- t_ili2db_dataset
+- t_ili2db_import
+- t_ili2db_import_basket
+- t_ili2db_import_object
+- t_ili2db_inheritance
+- t_ili2db_model	bezeichnungen
+- t_ili2db_settings
+- t_ili2_db_trafo	neu ab ili2pg 3xx -> Daten abfüllen TO DO
+- t_ili2_db_seq	neu ab ili2pg 3xx -> fehlt in 03 – neu 021_erzeugen und Daten abfüllen TO DO
+- t_key_object	missing in script 03 -> create with 046 and add data
 
-* 055_select meta_organisation_bezeichnung_obj_id.sql
 
-Run this function before importing data from ili2pg to qgep schema, else you will have problems importing fk_dataowner / fk_provider fields if they are not with a valid obj_id but some form of identifier (e.g. with the Transferdatensatz_VSA_DSS.xtf)
+Add more functions and modify ili2pg schema
+--------------------------------------------
 
- .. figure:: images/set_key_object_seq.png
+* 042_vsa_dss_2015_2_d_304_insert_t_ili2db_attrname_metadata.sql
+* 043_vsa_dss_2015_2_d_304_t_ili2db_attrname_add_column_owner_for_ili2pg301.sql: Only needed if column does not exist yet (old ili2pg versions)
 
-set t_key_object to latest sequence of project so that tid (integer) is correct
->>>SELECT vsa_dss_2015_2_d_304.key_object_seq;
+ .. figure:: images/43.png
 
-Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table organisation
+* 044_vsa_dss_2015_2_d_304_t_ili2db_classname_VSA_DSS_2015_2.sql: insert VSA-DSS Model 2015 model classes
+* 045_vsa_dss_2015_2_d_304_t_ili2db_model_VSA_DSS_2015_2.ili_metadata.sql: insert VSA-DSS Model 2015 in metatable
+* 046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql to create t_key_object if table does not exist.
 
->>SELECT vsa_dss_2015_2_d.meta_organisation('VSA', 'ch080qwzOG000098');
->>SELECT vsa_dss_2015_2_d.meta_organisation('SBU', 'ch080qwzOG000099');
+* 047_vsa_dss_2015_2_d_340_t_ili2db_inheritance_create.sql
+* 048_vsa_dss_2015_2_d_340_t_ili2db_trafo_metadata.sql
 
-Add your own or modify if needed
 
-This generates data in table organization (privat) for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
-select meta_organisation_bezeichnung_obj_id.sql as template:
->>>SELECT vsa_dss_2015_2_d_304.meta_organisation('VSA', 'ch080qwzOG000098');
-
-You have to select the identifier of existing dataowners e.g. VSA and define a relating OBJ_ID for it e.g. 'ch080qwzOG000098
-
-If you test this with the transferdataset from VSA replace also SBU:
-SELECT vsa_dss_2015_2_d_304.meta_organisation('SBU', 'ch080qwzOG000099');
-
-Run the import queries for your datamodel
+Run the export queries for your datamodel
 ----------------------------------------------
 
-* 060_sia405_interlisimport.sql for SIA405 2015 import
-* 060_dss_interlisimport.sql for VSA-DSS 2015 Import
-* 060_dss_2008_xxx.sql (Version 2008, adapted from Urs Kaufmann)
+* 051_vsa_dss_2015_2_d_304_interlisexport2.sql for VSA-DSS 2015 export
+* kf_0511_geoAbwBW_li2cu.sql: change from compoundcurve to linestring (ändert Geometrie type in Export schema (curve))
+* 052a_vsa_dss_2015_2_d_304_interlisexport2.sql: second part of data export
+
+For SIA 405 Abwasser export 
+
+* 051_sia_2015_2_d_304_interlisexport2.sql for SIA405 2015 export
+* etc.
+
+But then the ili2pg schema needs to be created with SIA405 Abwasser model structure.
+
+
+Export data from ili2pg schema to INTERLIS
+---------------------------------------------
+
+Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2015)
+
+>>> java -jar ili2pg.jar --trace --export --log export_arbon_small_sia405abwasser_2015_2_d.log --models SIA405_Abwasser_2015 --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword ab3.xtf
+
+* --models <tag> bestimmt den Modellnamen – die zugehörigen Modelldateien müssen alle im gleichen Verzeichnis sein.
+* --log <tag> kann frei gewählt werden – sinnvoll strukturiert zu benennen export_ & namedatensatz_ & modellversion(ili namen).log
+* Adapt dbdatabase, dbschema, dbusr and dbpwd
+
+Braucht folgende Modelldateien (lizenpflichtig, VSA oder sia Lizenz notwendig – kann durch Kauf der Norm SIA405 2016 oder VSA-DSS CD erworben werden):
+
+* units.ili
+* base.ili
+* sia405_base.ili
+* SIA405_Abwasser_2015_2_d.ili
+
+Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2014)
+
+>>> java -jar ili2pg.jar --trace --export --log export_arbon_small_sia405abwasser_2014_2_d.log --models SIA405_Abwasser --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword ab3.xtf
+
+Needed models: units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili
+
+
+Fachprüfung mit VSA Checker (online)
+-----------------------------------------
+
+https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ -> Link zu Login bei infogrips
+
+
 
 
 Open issues
 ---------------
-* More than one Text class per element not supported yet – needs CASE WHEN for vali / hali (to do if needed)
-
- .. figure:: images/textref.jpg
+* ..
 
  
 Possible problems
 -------------------
-* qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref – check whether ok in empty schema qgep.
-* Need to use ST_Force3D for geometries – because qgep model is now with 3D coordinates
+* compoundcurve to linestring needed
+* 2D -> 3D coordinates
 
-* If identifier in table is not unique there will be an error on the import of the table:
->>>FEHLER:  doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“
-DETAIL:  Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.
-********** Error **********
-FEHLER: doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“
-SQL state: 23505
-Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.
-
-* Change identifier V1.100 to V1.100.2 in class abwasserbauwerk for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.
  
  
 
