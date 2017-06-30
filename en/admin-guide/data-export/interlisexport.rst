@@ -41,14 +41,14 @@ Adapt for your environment if necessary.
 
 .. attention:: Very important to have these parameters: 
 
->>>--importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping
+>>> --importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping
 
 You need to have the necessary model files (ili) in the same folder as the xtf.
 
-* Units.ili
-* Base.ili
-* SIA405_Base.ili
-* VSA_DSS_2015_2_d_20170602.ili (for Version 2015) –> corrected version relations 
+- *Units.ili*
+- *Base.ili*
+- *SIA405_Base.ili*
+- *VSA_DSS_2015_2_d_20170602.ili* for Version 2015 –> corrected version relations 
 
 (!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef -- {0..*} statt 0..1 (Fehlerkorrektur))
@@ -68,7 +68,7 @@ We then need a series of function for the schema transformation form the created
  .. figure:: images/functions.png
 
 Create model tables in export schema
------------------------
+-----------------------------------------
 
 - *03_vsa_dss_2015_2_d_304_schema.sql*   (version 2015)
 
@@ -114,8 +114,10 @@ Add more functions and modify ili2pg schema
 Run the export queries for your datamodel
 ----------------------------------------------
 
+For VSA-DSS export
+
 - *051_vsa_dss_2015_2_d_304_interlisexport2.sql* for VSA-DSS 2015 export
-- *kf_0511_geoAbwBW_li2cu.sql* : change from compoundcurve to linestring (ändert Geometrie type in Export schema (curve))
+- *kf_0511_geoAbwBW_li2cu.sql* : change from compoundcurve to linestring (ändert Geometrie type in export schema (curve))
 - *052a_vsa_dss_2015_2_d_304_interlisexport2.sql* : second part of data export
 
 For SIA 405 Abwasser export 
@@ -129,24 +131,24 @@ But then the ili2pg schema needs to be created with SIA405 Abwasser model struct
 Export data from ili2pg schema to INTERLIS
 ---------------------------------------------
 
-Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2015)
+The following call exports the data into INTERLIS2 sia405abwasser (Version 2015)
 
->>> java -jar ili2pg.jar --trace --export --log export_arbon_small_sia405abwasser_2015_2_d.log --models SIA405_Abwasser_2015 --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword ab3.xtf
+>>> java -jar ili2pg.jar --trace --export --log export_sia405abwasser_2015_2_d.log --models SIA405_Abwasser_2015 --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword export.xtf
 
-* --models <tag> bestimmt den Modellnamen – die zugehörigen Modelldateien müssen alle im gleichen Verzeichnis sein.
-* --log <tag> kann frei gewählt werden – sinnvoll strukturiert zu benennen export_ & namedatensatz_ & modellversion(ili namen).log
+* --models <tag> sets the model name. The model files have to be in the same folder.
+* --log <tag> can be set as wanted – it makes sense to name it in a structured way *export_ & name of dataset_ & modellversion(ili name).log*
 * Adapt dbdatabase, dbschema, dbusr and dbpwd
 
-Braucht folgende Modelldateien (lizenpflichtig, VSA oder sia Lizenz notwendig – kann durch Kauf der Norm SIA405 2016 oder VSA-DSS CD erworben werden):
+This needs the following model files / Braucht folgende Modelldateien (licence for use neede from VSA or sia – you can get it by **purchasing** `Norm SIA405 <http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_ or `VSA-DSS CD <https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/datenstruktur-siedlungsentwaesserung/interliscd/>`_):
 
 - *units.ili*
 - *base.ili*
 - *sia405_base.ili*
 - *SIA405_Abwasser_2015_2_d.ili*
 
-Nachfolgender Aufruf exportiert nach INTERLIS2 sia405abwasser (Version 2014)
+The following call exports the data into INTERLIS2 sia405abwasser (Version 2014)
 
->>> java -jar ili2pg.jar --trace --export --log export_arbon_small_sia405abwasser_2014_2_d.log --models SIA405_Abwasser --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword ab3.xtf
+>>> java -jar ili2pg.jar --trace --export --log export_sia405abwasser_2014_2_d.log --models SIA405_Abwasser --dbhost localhost --dbport 5432 --dbdatabase qgep --dbschema sia405abwasser --dbusr postgres --dbpwd yourpassword export.xtf
 
 Needed models: *units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili*
 
