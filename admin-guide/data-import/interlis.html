@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data import INTERLIS &mdash; QGEP 0.5 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.5
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo Virtual Machine</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Data import INTERLIS</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/admin-guide/data-import/interlis.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-import-interlis">
+<h1>Data import INTERLIS<a class="headerlink" href="#data-import-interlis" title="Permalink to this headline">¶</a></h1>
+<p>This represents a guide on how to import data to QGEP from INTERLIS 2 Transfer Format (xtf).</p>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>INTERLIS Import can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:
+* Translation Englisch – German / French (Classes / Attributes)
+* Conversion of value list to / from numeric values (Integer)
+* Restructuring of data from relational to object oriented modelling
+* Conversion of foreign keys TID (integer) to OID (16 characters) again</p>
+<blockquote>
+<div><div class="figure">
+<img alt="admin-guide/data-import/images/interlisimport.jpg" src="admin-guide/data-import/images/interlisimport.jpg" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="step-by-step">
+<h2>Step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tool">
+<h3>Tool<a class="headerlink" href="#tool" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">Download the latest version of ili2pg</a></p>
+</div>
+<div class="section" id="generate-ili2pg-schema-with-data-model">
+<h3>Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Permalink to this headline">¶</a></h3>
+<p>You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model</p>
+<p>This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it&#8217;s corresponding models.</p>
+<p>We create a batch file for the import with ili2pg to create an ili2pg schema (named <em>vsa_dss_2015_2_d</em>) in postgres importdaten_VSA_DSS_2015_2_d_381.bat
+(Adapt for your environment if necessary)</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">createEnumTxtCol</span> <span class="o">--</span><span class="kn">import</span> <span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">vsa_dss_2015_2_d</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">sjib</span>  <span class="o">--</span><span class="n">log</span> <span class="n">importdaten_VSA_DSS_2015_2_d_361</span><span class="o">.</span><span class="n">log</span> <span class="n">transferdatensatz2015_d_mod</span><span class="o">.</span><span class="n">xtf</span>
+</pre></div>
+</div>
+<p>Very important to have these parameters:
+&gt;&gt;&gt;&#8211;importTid &#8211;sqlEnableNull &#8211;createEnumTabs &#8211;createFk  &#8211;noSmartMapping</p>
+<p>You need to have the necessary model files (ili) in the same folder as the xtf.
+* Units.ili
+* Base.ili
+* SIA405_Base.ili
+* VSA_DSS_2015_2_d_20170602.ili (for Version 2015) –&gt; corrected version relations
+(!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
+!! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef &#8211; {0..*} statt 0..1 (Fehlerkorrektur))</p>
+</div>
+<div class="section" id="add-additional-functions">
+<h3>Add additional functions<a class="headerlink" href="#add-additional-functions" title="Permalink to this headline">¶</a></h3>
+<p>We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema</p>
+<ul class="simple">
+<li>01_vsa_dss_2015_2_d_304_tid_generate.sql : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
+<li>02_vsa_dss_2015_2_d_304_tid_lookup.sql: Function to look up tid – used in 060</li>
+<li>046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql to create t_key_object if table does not exist.</li>
+</ul>
+<blockquote>
+<div><div class="figure">
+<img alt="../../_images/functions.png" src="../../_images/functions.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="add-additional-view">
+<h3>Add additional view<a class="headerlink" href="#add-additional-view" title="Permalink to this headline">¶</a></h3>
+<p>This view is needed for the import queries and has to be added to the ili2pg schema beforehand</p>
+<ul class="simple">
+<li>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</li>
+</ul>
+</div>
+<div class="section" id="add-two-other-functions">
+<h3>Add two other functions<a class="headerlink" href="#add-two-other-functions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>053_create_key_object_seq.sql : key_objects_seq function copies the latest seq value into table t_key_object</li>
+<li>054_create_function_meta_organisation.sql : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</li>
+</ul>
+</div>
+<div class="section" id="modify-metadata-and-organisation-data">
+<h3>Modify Metadata and Organisation data<a class="headerlink" href="#modify-metadata-and-organisation-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>055_select meta_organisation_bezeichnung_obj_id.sql</li>
+</ul>
+<p>Run this function before importing data from ili2pg to qgep schema, else you will have problems importing fk_dataowner / fk_provider fields if they are not with a valid obj_id but some form of identifier (e.g. with the Transferdatensatz_VSA_DSS.xtf)</p>
+<blockquote>
+<div><div class="figure">
+<img alt="admin-guide/data-import/images/set_key_object_seq.png" src="admin-guide/data-import/images/set_key_object_seq.png" />
+</div>
+</div></blockquote>
+<p>set t_key_object to latest sequence of project so that tid (integer) is correct
+&gt;&gt;&gt;SELECT vsa_dss_2015_2_d_304.key_object_seq;</p>
+<p>Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table organisation</p>
+<p>&gt;&gt;SELECT vsa_dss_2015_2_d.meta_organisation(&#8216;VSA&#8217;, &#8216;ch080qwzOG000098&#8217;);
+&gt;&gt;SELECT vsa_dss_2015_2_d.meta_organisation(&#8216;SBU&#8217;, &#8216;ch080qwzOG000099&#8217;);</p>
+<p>Add your own or modify if needed</p>
+<p>This generates data in table organization (privat) for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
+select meta_organisation_bezeichnung_obj_id.sql as template:
+&gt;&gt;&gt;SELECT vsa_dss_2015_2_d_304.meta_organisation(&#8216;VSA&#8217;, &#8216;ch080qwzOG000098&#8217;);</p>
+<p>You have to select the identifier of existing dataowners e.g. VSA and define a relating OBJ_ID for it e.g. &#8216;ch080qwzOG000098</p>
+<p>If you test this with the transferdataset from VSA replace also SBU:
+SELECT vsa_dss_2015_2_d_304.meta_organisation(&#8216;SBU&#8217;, &#8216;ch080qwzOG000099&#8217;);</p>
+</div>
+<div class="section" id="run-the-import-queries-for-your-datamodel">
+<h3>Run the import queries for your datamodel<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>060_sia405_interlisimport.sql for SIA405 2015 import</li>
+<li>060_dss_interlisimport.sql for VSA-DSS 2015 Import</li>
+<li>060_dss_2008_xxx.sql (Version 2008, adapted from Urs Kaufmann)</li>
+</ul>
+</div>
+<div class="section" id="open-issues">
+<h3>Open issues<a class="headerlink" href="#open-issues" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>More than one Text class per element not supported yet – needs CASE WHEN for vali / hali (to do if needed)</li>
+</ul>
+<blockquote>
+<div><div class="figure">
+<img alt="../../_images/textref.jpg" src="../../_images/textref.jpg" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="possible-problems">
+<h3>Possible problems<a class="headerlink" href="#possible-problems" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref – check whether ok in empty schema qgep.</li>
+<li>Need to use ST_Force3D for geometries – because qgep model is now with 3D coordinates</li>
+<li>If identifier in table is not unique there will be an error on the import of the table:</li>
+</ul>
+<p>&gt;&gt;&gt;FEHLER:  doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“
+DETAIL:  Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.
+<strong>******</strong> Error <strong>******</strong>
+FEHLER: doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“
+SQL state: 23505
+Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.</p>
+<ul class="simple">
+<li>Changed V1.100 to V1.100.2 in class abwasserbauwerk for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.5',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

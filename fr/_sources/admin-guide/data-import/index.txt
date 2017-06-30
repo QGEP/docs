@@ -1,12 +1,12 @@
 Data import
 ===========
 
-This represents a guide on how to import data from QGEP.
+This represents a guide on how to import data to QGEP.
 
 Import formats
 ------------------------------
 
-* INTERLIS (in progress)
+* INTERLIS (in progress) data-import/index
 * dxf (in progress)
 * Shape
 * MOUSE / MikeUrban 
