@@ -104,8 +104,13 @@ Add more functions and modify ili2pg schema
  .. figure:: images/43.png
 
 - *044_vsa_dss_2015_2_d_304_t_ili2db_classname_VSA_DSS_2015_2.sql* : insert VSA-DSS Model 2015 model classes
+
+ .. figure:: images/44.png
+ 
 - *045_vsa_dss_2015_2_d_304_t_ili2db_model_VSA_DSS_2015_2.ili_metadata.sql* : insert VSA-DSS Model 2015 in metatable
 - *046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql* to create t_key_object if table does not exist.
+
+ .. figure:: images/45.png
 
 - *047_vsa_dss_2015_2_d_340_t_ili2db_inheritance_create.sql*
 - *048_vsa_dss_2015_2_d_340_t_ili2db_trafo_metadata.sql*
