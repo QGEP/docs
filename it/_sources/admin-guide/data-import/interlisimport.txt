@@ -122,6 +122,9 @@ Open issues
 
  .. figure:: images/textref.jpg
 
+ * If data is exported from DABASE or other systems it may be that the reach. has double point or that is going from wastewater_node to wastewater_node instead of reach_point to reach_point. Looking for a solution to automatically check after import and "clean" linestring.
+ 
+ 
  
 Possible problems
 -------------------
