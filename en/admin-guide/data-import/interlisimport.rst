@@ -87,12 +87,12 @@ Run this function before importing data from ili2pg to qgep schema, else you wil
 
 set t_key_object to latest sequence of project so that tid (integer) is correct
 
->> SELECT vsa_dss_2015_2_d_304.key_object_seq;
+>>> SELECT vsa_dss_2015_2_d_304.key_object_seq;
 
 Set all the matching definitions for missing dataowner (datenherr) / provider (datenlieferant) organisations in table organisation
 
->> SELECT vsa_dss_2015_2_d.meta_organisation('VSA', 'ch080qwzOG000098');
->> SELECT vsa_dss_2015_2_d.meta_organisation('SBU', 'ch080qwzOG000099');
+>>> SELECT vsa_dss_2015_2_d.meta_organisation('VSA', 'ch080qwzOG000098');
+>>> SELECT vsa_dss_2015_2_d.meta_organisation('SBU', 'ch080qwzOG000099');
 
 Add your own or modify if needed
 
@@ -103,7 +103,9 @@ select meta_organisation_bezeichnung_obj_id.sql as template:
 You have to select the identifier of existing dataowners e.g. VSA and define a relating OBJ_ID for it e.g. 'ch080qwzOG000098
 
 If you test this with the transferdataset from VSA replace also SBU:
-SELECT vsa_dss_2015_2_d_304.meta_organisation('SBU', 'ch080qwzOG000099');
+
+>>> SELECT vsa_dss_2015_2_d_304.meta_organisation('SBU', 'ch080qwzOG000099');
+
 
 Run the import queries for your datamodel
 ----------------------------------------------
