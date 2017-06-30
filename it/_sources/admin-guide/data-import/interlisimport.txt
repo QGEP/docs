@@ -34,12 +34,14 @@ You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model
 
 This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it's corresponding models.
 
-We create a batch file for the import with ili2pg to create an ili2pg schema (named *vsa_dss_2015_2_d*) in postgres importdaten_VSA_DSS_2015_2_d_381.bat
-(Adapt for your environment if necessary)
+We create a batch file for the import with ili2pg to create an ili2pg schema (named ``vsa_dss_2015_2_d``) in postgres *importdaten_VSA_DSS_2015_2_d_381.bat*.
+
+Adapt for your environment if necessary.
 
 >>> java -jar ili2pg.jar --createEnumTxtCol --import --importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping --dbdatabase qgep --dbschema vsa_dss_2015_2_d --dbusr postgres --dbpwd sjib  --log importdaten_VSA_DSS_2015_2_d_361.log transferdatensatz2015_d_mod.xtf
 
-Very important to have these parameters: 
+.. attention:: Very important to have these parameters: 
+
 >>> --importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping
 
 You need to have the necessary model files (ili) in the same folder as the xtf.
@@ -62,7 +64,6 @@ We then need a series of function for the schema transformation form the created
 
 - *01_vsa_dss_2015_2_d_304_tid_generate.sql* : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 - *02_vsa_dss_2015_2_d_304_tid_lookup.sql* : Function to look up tid – used in 060
- 
 - *046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql*  to create t_key_object if table does not exist.
 
  .. figure:: images/functions.png
@@ -155,7 +156,7 @@ Possible problems
 
 * qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –> check whether ok in empty schema qgep.
 
-* Need to use ST_Force3D for geometries – because qgep model is now with 3D coordinates
+* Need to use ``ST_Force3D`` for geometries – because qgep model is now with 3D coordinates
 
 * If identifier in table is not unique there will be an error on the import of the table:
 

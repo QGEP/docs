@@ -154,13 +154,18 @@
 <h3>Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model</p>
 <p>This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it&#8217;s corresponding models.</p>
-<p>We create a batch file for the import with ili2pg to create an ili2pg schema (named <em>vsa_dss_2015_2_d</em>) in postgres importdaten_VSA_DSS_2015_2_d_381.bat
-(Adapt for your environment if necessary)</p>
+<p>We create a batch file for the import with ili2pg to create an ili2pg schema (named <code class="docutils literal"><span class="pre">vsa_dss_2015_2_d</span></code>) in postgres <em>importdaten_VSA_DSS_2015_2_d_381.bat</em>.</p>
+<p>Adapt for your environment if necessary.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">createEnumTxtCol</span> <span class="o">--</span><span class="kn">import</span> <span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">vsa_dss_2015_2_d</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">sjib</span>  <span class="o">--</span><span class="n">log</span> <span class="n">importdaten_VSA_DSS_2015_2_d_361</span><span class="o">.</span><span class="n">log</span> <span class="n">transferdatensatz2015_d_mod</span><span class="o">.</span><span class="n">xtf</span>
 </pre></div>
 </div>
-<p>Very important to have these parameters:
-&gt;&gt;&gt; &#8211;importTid &#8211;sqlEnableNull &#8211;createEnumTabs &#8211;createFk  &#8211;noSmartMapping</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Very important to have these parameters:</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span>
+</pre></div>
+</div>
 <p>You need to have the necessary model files (ili) in the same folder as the xtf.</p>
 <ul class="simple">
 <li><em>Units.ili</em></li>
@@ -277,7 +282,7 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <h3>Possible problems<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –&gt; check whether ok in empty schema qgep.</li>
-<li>Need to use ST_Force3D for geometries – because qgep model is now with 3D coordinates</li>
+<li>Need to use <code class="docutils literal"><span class="pre">ST_Force3D</span></code> for geometries – because qgep model is now with 3D coordinates</li>
 <li>If identifier in table is not unique there will be an error on the import of the table:</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span>&gt;&gt;&gt; FEHLER:  doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“

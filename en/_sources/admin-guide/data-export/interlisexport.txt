@@ -33,19 +33,23 @@ You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model
 
 This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it's corresponding models.
 
-We create a batch file for the import with ili2pg to create an ili2pg schema (named *vsa_dss_2015_2_d*) in postgres importdaten_VSA_DSS_2015_2_d_381.bat
-(Adapt for your environment if necessary)
+We create a batch file for the import with ili2pg to create an ili2pg schema (named ``vsa_dss_2015_2_d``) in postgres *importdaten_VSA_DSS_2015_2_d_381.bat*
+
+Adapt for your environment if necessary.
 
 >>> java -jar ili2pg.jar --createEnumTxtCol --import --importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping --dbdatabase qgep --dbschema vsa_dss_2015_2_d --dbusr postgres --dbpwd sjib  --log importdaten_VSA_DSS_2015_2_d_361.log transferdatensatz2015_d_mod.xtf
 
-Very important to have these parameters: 
+.. attention:: Very important to have these parameters: 
+
 >>>--importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping
 
 You need to have the necessary model files (ili) in the same folder as the xtf.
+
 * Units.ili
 * Base.ili
 * SIA405_Base.ili
 * VSA_DSS_2015_2_d_20170602.ili (for Version 2015) –> corrected version relations 
+
 (!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef -- {0..*} statt 0..1 (Fehlerkorrektur))
 
@@ -55,10 +59,10 @@ Add additional functions
 
 We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema
 
-* 00_vsa_dss_2015_2_d_304_schema_generate.sql: Creates ili2pg empty export schema
-* 01_vsa_dss_2015_2_d_304_tid_generate.sql : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
-* 02_vsa_dss_2015_2_d_304_tid_lookup.sql: Function to look up tid – used in 060
-* 021_vsa_dss_2015_2_d_304_create_seq_ili2td.sql:
+- *00_vsa_dss_2015_2_d_304_schema_generate.sql*  : Creates ili2pg empty export schema
+- *01_vsa_dss_2015_2_d_304_tid_generate.sql*  : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
+- *02_vsa_dss_2015_2_d_304_tid_lookup.sql*  : Function to look up tid – used in 060
+- *021_vsa_dss_2015_2_d_304_create_seq_ili2td.sql*
 
 
  .. figure:: images/functions.png
@@ -66,29 +70,29 @@ We then need a series of function for the schema transformation form the created
 Create model tables in export schema
 -----------------------
 
-* 03_vsa_dss_2015_2_d_304_schema.sql (version 2015)
+- *03_vsa_dss_2015_2_d_304_schema.sql*   (version 2015)
 
 This SQL statement creates the vsa_dss tabellen tables and all related model tables
 
-- sia405_baseclass
-- sia405_symbolpos
-- sia405_textpos
+- **sia405_baseclass**
+- **sia405_symbolpos**
+- **sia405_textpos**
 
 and some metatables for ili2pg:
 
-- t_ili2db_attrname: iliname - sqlname
-- t_ili2db_basket
-- t_ili2db_classname: iliname - sqlname
-- t_ili2db_dataset
-- t_ili2db_import
-- t_ili2db_import_basket
-- t_ili2db_import_object
-- t_ili2db_inheritance
-- t_ili2db_model	bezeichnungen
-- t_ili2db_settings
-- t_ili2_db_trafo	neu ab ili2pg 3xx -> Daten abfüllen TO DO
-- t_ili2_db_seq	neu ab ili2pg 3xx -> fehlt in 03 – neu 021_erzeugen und Daten abfüllen TO DO
-- t_key_object	missing in script 03 -> create with 046 and add data
+- **t_ili2db_attrname**: iliname - sqlname
+- **t_ili2db_basket**
+- **t_ili2db_classname**: iliname - sqlname
+- **t_ili2db_dataset**
+- **t_ili2db_import**
+- **t_ili2db_import_basket**
+- **t_ili2db_import_object**
+- **t_ili2db_inheritance**
+- **t_ili2db_model** : bezeichnungen
+- **t_ili2db_settings**
+- **t_ili2_db_trafo**: new from  ili2pg 3xx -> Daten abfüllen TO DO
+- **t_ili2_db_seq**: new from ili2pg 3xx -> fehlt in 03 – neu 021_erzeugen und Daten abfüllen TO DO
+- **t_key_object**: missing in script 03 -> create with 046 and add data
 
 
 Add more functions and modify ili2pg schema
