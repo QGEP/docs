@@ -38,7 +38,11 @@ We create a batch file for the import with ili2pg to create an ili2pg schema (na
 
 Adapt for your environment if necessary.
 
+```
+::
+
 >>> java -jar ili2pg.jar --createEnumTxtCol --import --importTid --sqlEnableNull --createEnumTabs --createFk  --noSmartMapping --dbdatabase qgep --dbschema vsa_dss_2015_2_d --dbusr postgres --dbpwd sjib  --log importdaten_VSA_DSS_2015_2_d_361.log transferdatensatz2015_d_mod.xtf
+```
 
 .. attention:: Very important to have these parameters: 
 
