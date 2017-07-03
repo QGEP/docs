@@ -158,10 +158,10 @@ The following call exports the data into INTERLIS2 sia405abwasser (Version 2014)
 Needed models: *units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili*
 
 
-Fachprüfung mit VSA Checker (online)
------------------------------------------
-
-https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ -> Link to login at infogrips
+Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))
+-----------------------------------------------------------------------------------
+see https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ 
+-> Link to login at infogrips. 
 
 
 
