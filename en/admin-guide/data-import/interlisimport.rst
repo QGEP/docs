@@ -176,5 +176,5 @@ Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ e
 
 * Change identifier V1.100 to V1.100.2 in class **abwasserbauwerk** for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.
  
- 
+ .. figure:: images/unique_identifier_dataowner.jpg
 
