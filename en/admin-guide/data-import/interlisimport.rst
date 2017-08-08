@@ -68,6 +68,7 @@ We then need a series of function for the schema transformation form the created
 
 - *01_vsa_dss_2015_2_d_304_tid_generate.sql* : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 - *02_vsa_dss_2015_2_d_304_tid_lookup.sql* : Function to look up tid – used in 060
+- *-02_vsa_dss_2015_2_d_304_objid_lookup.sql: Function to look up obj_id – also used in 060 
 - *046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql*  to create t_key_object if table does not exist.
 
  .. figure:: images/functions.png
