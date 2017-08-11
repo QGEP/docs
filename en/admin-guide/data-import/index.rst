@@ -1,19 +1,14 @@
 Data import
 ===========
 
-This represents a guide on how to import data from QGEP.
+This represents a guide on how to import data to QGEP.
 
 Import formats
 ------------------------------
 
-* INTERLIS (in progress)
+* INTERLIS :ref:`_import-interlis`
+
 * dxf (in progress)
 * Shape
-* MOUSE / MikeUrban 
+* MOUSE / MikeUrban (please connect with the developer team if you are interested in this)
 * other
-
-
-INTERLIS
-^^^^^^^^^^^^^^^^^
-
-INTERLIS Import can be done using the ili2pg tool. For further information contact the developer team.
