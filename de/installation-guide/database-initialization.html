@@ -277,12 +277,13 @@ cd datamodel &amp;&amp; git submodule init &amp;&amp; git submodule update
 </div>
 </li>
 <li><p class="first">Starten Sie das Skript:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>./scripts/dbsetup.sh
+<div class="highlight-python"><div class="highlight"><pre><span></span>./scripts/db_setup.sh
 </pre></div>
 </div>
 </li>
 </ul>
-<p>Wenn Sie eine andere SRID verwenden möchten, dann benutzen Sie die <code class="docutils literal"><span class="pre">-s</span></code> option. Zum Beispiel <code class="docutils literal"><span class="pre">./scripts/dbsetup.sh</span> <span class="pre">-s</span> <span class="pre">2056</span></code> für SRID <strong>2056</strong>.</p>
+<p>If you want to use a different SRID you need to use the <code class="docutils literal"><span class="pre">-s</span></code> option.
+For instance, run <code class="docutils literal"><span class="pre">./scripts/db_setup.sh</span> <span class="pre">-s</span> <span class="pre">2056</span></code> for the <strong>2056</strong> SRID.</p>
 <p>Wenn Sie schon ein Datenmodell haben und dieses erneut erzeugen möchten, dann nutzen Sie die <cite>-f`</cite> Option: <code class="docutils literal"><span class="pre">./scripts/db_setup.sh</span> <span class="pre">-f</span></code>.</p>
 </div>
 </div>
