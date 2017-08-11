@@ -140,21 +140,17 @@ working QGEP installation with a demo dataset. The VM also has a working demo of
 won&#8217;t be a problem for the case where the VM is used outside virtualization (e.g use the virtual disk as basis to create
 a non-virtualized usb-stick to be used for demo purposes).</p>
 <p>Software instalat:</p>
-<blockquote>
-<div><ul class="simple">
-<li>PostgreSQL 9.5.2 with Postgis 2.3</li>
-<li>QGIS 2.16</li>
+<ul class="simple">
+<li>PostgreSQL 9.6.0 with Postgis 2.3</li>
+<li>QGIS 2.18</li>
+<li>pgAdmin 4 (open the browser at <a class="reference external" href="http://localhost:5050">http://localhost:5050</a> to access it)</li>
 </ul>
-</div></blockquote>
 <p>Setări care sunt schimbate față de cele inițiale:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="first"><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> e setat cu <strong>trust</strong> pentru conexiunile locale</p>
-</li>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <code class="docutils literal"><span class="pre">trust</span></code> for local connections</li>
 <li><p class="first">QGIS are activat <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering</a></p>
 </li>
 </ul>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The users <code class="docutils literal"><span class="pre">qgis</span></code> and <code class="docutils literal"><span class="pre">root</span></code> have the password <code class="docutils literal"><span class="pre">qgis</span></code></p>
@@ -170,11 +166,6 @@ a non-virtualized usb-stick to be used for demo purposes).</p>
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">QGIS has been build from source as Debian developpers have dropped QtWebKit python support in the packages.
-After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benefit again from the QGIS repo packages.</p>
 </div>
 </div>
 

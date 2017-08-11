@@ -18,7 +18,7 @@ General
 -------
 When digitzing you start with the point elements (wastewater structures such as manholes, special structures). Then you can connect those with line elements (channels with reaches).
 
-To start with data entry select the QGEP button **Wizard**
+To start with data entry select the QGEP button **Wizard**.
 
 .. figure:: images/button_data_entry_wizard_selected.jpg
 

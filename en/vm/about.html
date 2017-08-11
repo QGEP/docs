@@ -140,19 +140,16 @@ working QGEP installation with a demo dataset. The VM also has a working demo of
 won&#8217;t be a problem for the case where the VM is used outside virtualization (e.g use the virtual disk as basis to create
 a non-virtualized usb-stick to be used for demo purposes).</p>
 <p>Installed software:</p>
-<blockquote>
-<div><ul class="simple">
-<li>PostgreSQL 9.5.2 with Postgis 2.3</li>
-<li>QGIS 2.16</li>
+<ul class="simple">
+<li>PostgreSQL 9.6.0 with Postgis 2.3</li>
+<li>QGIS 2.18</li>
+<li>pgAdmin 4 (open the browser at <a class="reference external" href="http://localhost:5050">http://localhost:5050</a> to access it)</li>
 </ul>
-</div></blockquote>
 <p>Settings that are changed from a default software install:</p>
-<blockquote>
-<div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <strong>trust</strong> for local connections</li>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <code class="docutils literal"><span class="pre">trust</span></code> for local connections</li>
 <li>QGIS is setup with <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering enabled</a></li>
 </ul>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The users <code class="docutils literal"><span class="pre">qgis</span></code> and <code class="docutils literal"><span class="pre">root</span></code> have the password <code class="docutils literal"><span class="pre">qgis</span></code></p>
@@ -166,11 +163,6 @@ a non-virtualized usb-stick to be used for demo purposes).</p>
 <li>regenerate the ssh keys by running in a terminal <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">rm</span> <span class="pre">/etc/ssh/ssh_host_*</span> <span class="pre">&amp;&amp;</span> <span class="pre">sudo</span> <span class="pre">dpkg-reconfigure</span> <span class="pre">openssh-server</span></code></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">QGIS has been build from source as Debian developpers have dropped QtWebKit python support in the packages.
-After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benefit again from the QGIS repo packages.</p>
 </div>
 </div>
 

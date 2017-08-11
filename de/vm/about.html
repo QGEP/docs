@@ -137,22 +137,17 @@
 <p>Die VM basiert auf Debian Test mit dem &#8216;Cinnamon&#8217; Desktop.</p>
 <p>Debian Testing wurde ausgesucht um über GDAL 2.x zu verfügen und auch vom aktuellsten Linux Betriebssystem zu profitieren, damit die aktuellste Hardware kein Problem darstellt, für den Fall dass die VM ausserhalb der Virtualisierung verwendet wird (z.B Benützung der Virtuellen Diskette als Basis zur Erstellung eines nicht virtualisierten USB-Stick welcher für Demonstrationzwecke verwendet wird).</p>
 <p>Benötigte Software:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="first">PostgreSQL 9.5.2 mit Postgis 2.3</p>
-</li>
-<li>QGIS 2.16</li>
+<ul class="simple">
+<li>PostgreSQL 9.6.0 with Postgis 2.3</li>
+<li>QGIS 2.18</li>
+<li>pgAdmin 4 (open the browser at <a class="reference external" href="http://localhost:5050">http://localhost:5050</a> to access it)</li>
 </ul>
-</div></blockquote>
 <p>Einstellungen welche bei einer Standard Softwareinstallation geändert werden:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="first"><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> besitzt <strong>trust</strong> für lokale Verbindungen</p>
-</li>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">pg_hba.conf</span></code> has <code class="docutils literal"><span class="pre">trust</span></code> for local connections</li>
 <li><p class="first">QGIS ist Aufgebaut mit <a class="reference external" href="http://www.lutraconsulting.co.uk/products/qgis-mtr">multithreaded rendering enabled</a></p>
 </li>
 </ul>
-</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Der Benutzer <code class="docutils literal"><span class="pre">qgis</span></code> und <code class="docutils literal"><span class="pre">root</span></code> besitzen das Password &#8220;gqis</p>
@@ -169,10 +164,6 @@ laufen lassen</p>
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">QGIS wurde aus Source erstellt, als Debian Entwickler das QtWebKit python Support fallen gelassen haben. Nachdem das QGIS ecosystem seine QtWebKit Abhängigkeiten entfernt, profitiert die VM wieder von den QGIS repo Packeten.</p>
 </div>
 </div>
 
