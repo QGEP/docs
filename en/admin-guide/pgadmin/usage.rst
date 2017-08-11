@@ -31,8 +31,6 @@ Database dump
  * Enter the filename where the dump should be stored
  * Check the following options
 
-::
-
  .. figure:: images/Screenshot-from-2015-01-22-102152.png
  .. figure:: images/Screenshot-from-2015-01-22-102155.png
  .. figure:: images/Screenshot-from-2015-01-22-102159.png

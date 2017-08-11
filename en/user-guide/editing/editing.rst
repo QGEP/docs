@@ -8,8 +8,9 @@ This represents a guide on how to edit existing data in QGEP.
 Demo project
 ------------
 
-* Make sure you have imported the demo project with pgAdminIII (:ref:`database-initialization`)
-* Open the demoproject with Menu Project/Open
+* Make sure you have imported the demo project with pgAdminIII (see the :ref:`database-initialization` chapter)
+* Open the demoproject by going to the main menu and press **Project** --> **Open**  or by pressing ``CTRL``
+  + ``O`` at the same time.
 
 .. figure:: images/qgep_demoproject_selection_qgep_en_qgs.jpg
    :scale: 50 %
@@ -32,19 +33,23 @@ Layers
 Layer vw_qgep_cover
 ^^^^^^^^^^^^^^^^^^^
 
-* The layer vw_qgep_cover allows to edit all point elements. This are the wastewater structures such as manholes, special structures, discharge points and infiltration installation (not supported yet are wwtp_structures, which is also a wastewater structure), but not the channels.
+* The **vw_qgep_cover** layer allows to edit all point elements. This are the wastewater structures such as manholes,
+  special structures, discharge points and infiltration installation (**wwtp_structures**, which is also a wastewater
+  structure, are not supported yet).
 
 .. figure:: images/layer_vw_qgep_cover.jpg
 
 Layer vw_qgep_reach
 ^^^^^^^^^^^^^^^^^^^
 
-* The layer vw_qgep_reach allows to edit all linear elements of the wastewater network (reaches / channels).
+* The **vw_qgep_reach** layer allows to edit all linear elements of the wastewater network (**reaches** / **channels**).
 
 Layer Waste water structures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance events, the relation table between waste water structures and maintenance events and the organisation table (where owners, dataowners, etc. are stored)
+* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance
+  events, the relation table between waste water structures and maintenance events and the organisation table (where **owners**,
+  **dataowners**, etc. are stored)
 
 Layer Value lists
 ^^^^^^^^^^^^^^^^^
@@ -54,35 +59,36 @@ Layer Value lists
 Layer Hydraulic
 ^^^^^^^^^^^^^^^
 
-* This layer allows to select and edit waste water nodes. Select the layer, then choose the info tool and double click on a node.
+* This layer allows to select and edit waste water nodes. Select the layer, then choose the **Identify Features** tool and double click on a node.
 
 Layer Topology
 ^^^^^^^^^^^^^^
 
-* Here you can find all needed information about the topology of the network
+* Here you can find all needed information about the topology of the network.
 
 
 Changing attributes of point elements (manholes / special structures)
 ---------------------------------------------------------------------
 
- * To change an attribut first select the vw_qgep_cover layer and switch to the edit mode
- * Or start the QGEP Wizard and click on Start Data entry
- * Then click on the info button and choose the element you want to edit by double-clicking
+ * To change an attribute you first need to select the **vw_qgep_cover** layer and switch to the edit mode.
+ * Or start the **QGEP Wizard** and click on **Start Data Entry**.
+ * Then click on the **Identify features** button and choose the element you want to edit by double-clicking.
  
  .. figure:: images/qgep_info_button.jpg
  
- * The form of the vw_qgep_cover will open
+ * The **vw_qgep_cover** form will open.
  
  .. figure:: images/form_vw_qgep_cover.jpg
  
  * On the first tab you can change the most common attributes
- * To change attributes of related tables such as the cover select that tab. Depending on the kind of wastewater structure you can edit additional attributs in the respective tab (special structure, manhole). 
- * The tab "covers" allows you to add additional covers. 
- * In "Structure parts" you can add also further parts such as acces aids, backflow prevention, dryweather flume etc.
+ * To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
+   kind of wastewater structure you can edit additional attributes in the respective tab (**special structure**, **manhole**).
+ * The **covers** tab allows you to add additional covers.
+ * In **Structure parts** you can add also further parts such as **acces aids**, **backflow prevention**, **dryweather flume** etc.
  
  .. figure:: images/form_vw_qgep_cover_structure_parts.jpg
  
- * In "Wastewater nodes parts" you can edit or add all attributes of this class or add a second element
+ * In **Wastewater nodes parts** you can edit or add all attributes of this class or add a second element.
 
  .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
  
@@ -90,14 +96,14 @@ Changing attributes of point elements (manholes / special structures)
 Changing attributes of linear elements (channels)
 -------------------------------------------------
 
- * To change an attribut first select the vw_qgep_reach layer and switch to the edit mode 
- * Then click on the info button and choose the element you want to edit by double-clicking a channel
- * The form of the vw_qgep_reach will open
+ * To change an attribute you first need to select the **vw_qgep_cover** layer and switch to the edit mode.
+ * Then click on the **Idendify features** button and choose the element you want to edit by double-clicking a channel.
+ * The **vw_qgep_reach** form will open.
  
   .. figure:: images/form_vw_qgep_reach.jpg
  
- * On the first tab you can change the most common attributes
- * To change attributes of related tables e.g. such as reach points select that tab. 
+ * On the first tab you can change the most common attributes.
+ * To change attributes of related tables (e.g. **reach points**) select the correspondent tab.
  
   .. figure:: images/form_vw_qgep_reach_reachpoints.jpg
  
@@ -105,19 +111,20 @@ Changing attributes of linear elements (channels)
 Changing attributes of hydraulic elements
 -----------------------------------------
 
-* If you right click on an element, you get a selection of all existing objects
+* With the **Identify feature** tool activated, right clicking an element outputs a selection of all existing objects.
 
  .. figure:: images/qgep_info_button_rightclick.jpg
  
- * You then can select the object you want and you will get the respective form to see the details.
+ * You can select then the object you want. This will get you to the correspondent form to see the details.
  
  
 Saving changes
 --------------
  
-* Click save and then deselect the edit mode or click on stop data entry, if you have worked with the QGEP Data entry Wizard.
+* Click **Save** and then deactivate the edit mode or click on **Stop data entry** if you have worked with the **QGEP Data Entry** wizard.
   
 ..* TO DO:
+
   * Changing relations (Verknüpfungen ändern)
   * Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))
   * Split channels into different reaches (Kanäle unterteilen)
