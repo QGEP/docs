@@ -12,13 +12,15 @@ a non-virtualized usb-stick to be used for demo purposes).
 
 Installed software:
 
- - PostgreSQL 9.5.2 with Postgis 2.3
- - QGIS 2.16
+- PostgreSQL 9.6.0 with Postgis 2.3
+- QGIS 2.18
+- pgAdmin 4 (open the browser at http://localhost:5050 to access it)
+
 
 Settings that are changed from a default software install:
 
- - ``pg_hba.conf`` has **trust** for local connections
- - QGIS is setup with `multithreaded rendering enabled <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_
+- ``pg_hba.conf`` has ``trust`` for local connections
+- QGIS is setup with `multithreaded rendering enabled <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_
 
 .. note::
 
@@ -30,9 +32,3 @@ Settings that are changed from a default software install:
 
   - change the passwords
   - regenerate the ssh keys by running in a terminal ``sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``
-
-.. note::
-
- QGIS has been build from source as Debian developpers have dropped QtWebKit python support in the packages.
- After the QGIS ecosystem will remove its QtWebKit dependencies the VM will benefit again from the QGIS repo packages.
-
