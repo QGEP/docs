@@ -148,3 +148,22 @@ Working with more than one database
   user=qgepuser
   
 * Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with 'pg_communityA'
+
+
+Add your own OID in the project
+-----------------------------------
+
+You have to add your OID data in the table is_oid_prefixes:
+
+https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql
+
+-- sample entry for the City of Uster - you need to adapt this entry later for your own organization
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('00000000','Invalid',TRUE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch11h8mw','Stadt Uster',FALSE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch15z36d','SIGE',FALSE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch13p7mz','Arbon',FALSE);
+and set the OID you want to use in your project to TRUE.
+
+Edit 02_oid_generation.sql with your OID if you want it permanently in the QGEP project and hand in a pull request or add it locally to your project with an INSERT statement.
+
+OID prefixes have to be ordered at http://www.interlis.ch/oid/oid_commande_e.php

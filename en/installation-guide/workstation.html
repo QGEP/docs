@@ -96,6 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">1.3.3. Install QGEP plugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">1.3.4. Install the demo project</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">1.3.5. Working with more than one database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">1.3.6. Add your own OID in the project</a></li>
 </ul>
 </li>
 </ul>
@@ -278,6 +279,19 @@ sudo apt-get install libqt4-sql-psql
 <ul class="simple">
 <li>Search and replace in the copy of <code class="docutils literal"><span class="pre">qgep_en.qgs</span></code> all &#8216;pg_qgep&#8217; with &#8216;pg_communityA&#8217;</li>
 </ul>
+</div>
+<div class="section" id="add-your-own-oid-in-the-project">
+<h2>1.3.6. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
+<p>You have to add your OID data in the table is_oid_prefixes:</p>
+<p><a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql">https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql</a></p>
+<p>&#8211; sample entry for the City of Uster - you need to adapt this entry later for your own organization
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;00000000&#8217;,&#8217;Invalid&#8217;,TRUE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch11h8mw&#8217;,&#8217;Stadt Uster&#8217;,FALSE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch15z36d&#8217;,&#8217;SIGE&#8217;,FALSE);
+INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch13p7mz&#8217;,&#8217;Arbon&#8217;,FALSE);
+and set the OID you want to use in your project to TRUE.</p>
+<p>Edit 02_oid_generation.sql with your OID if you want it permanently in the QGEP project and hand in a pull request or add it locally to your project with an INSERT statement.</p>
+<p>OID prefixes have to be ordered at <a class="reference external" href="http://www.interlis.ch/oid/oid_commande_e.php">http://www.interlis.ch/oid/oid_commande_e.php</a></p>
 </div>
 </div>
 
