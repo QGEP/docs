@@ -7,3 +7,5 @@ A short explanation for each predefined layer.
    :maxdepth: 2
 
    layerexplanation
+   addviewlayer
+   
