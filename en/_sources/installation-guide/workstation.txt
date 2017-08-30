@@ -161,12 +161,12 @@ Add your own OID in the project
 
 https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql
 
-::
+.. code:: ini
 
--- sample entry for the City of Uster - you need to add an entry for your own organization
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch11h8mw','Stadt Uster',TRUE);
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch15z36d','SIGE',FALSE);
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch13p7mz','Arbon',FALSE);
+  -- sample entry for the City of Uster - you need to add an entry for your own organization
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch11h8mw','Stadt Uster',TRUE);
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch15z36d','SIGE',FALSE);
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch13p7mz','Arbon',FALSE);
 
 and set the OID you want to use in your project to TRUE.
 
