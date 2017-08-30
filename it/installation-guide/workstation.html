@@ -292,8 +292,10 @@ sudo apt-get install libqt4-sql-psql
 <li>Edit <code class="docutils literal"><span class="pre">02_oid_generation.sql</span></code> with your OID if you want it permanently in the QGEP project and hand in a pull request</li>
 </ul>
 <p><a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql">https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql</a></p>
-<p>&#8211; sample entry for the City of Uster - you need to adapt this entry later for your own organization
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch11h8mw&#8217;,&#8217;Stadt Uster&#8217;,TRUE);
+<div class="highlight-python"><div class="highlight"><pre><span></span>-- sample entry for the City of Uster - you need to add an entry for your own organization
+</pre></div>
+</div>
+<p>INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch11h8mw&#8217;,&#8217;Stadt Uster&#8217;,TRUE);
 INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch15z36d&#8217;,&#8217;SIGE&#8217;,FALSE);
 INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#8216;ch13p7mz&#8217;,&#8217;Arbon&#8217;,FALSE);</p>
 <p>and set the OID you want to use in your project to TRUE.</p>
