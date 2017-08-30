@@ -6,7 +6,7 @@ QGEP User Guide
 This represents a guide on how to collect data in QGEP (digitizing), edit existing data and use various tools like length profile, network following and plan plotting.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    layerexplanations/index
    digitizing/index
