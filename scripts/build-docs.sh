@@ -10,5 +10,5 @@ if [ -f ~/.transifexrc ]; then
 make transifex_pull
 fi
 make html
-# make all-pdf
+make all-pdf
 popd
