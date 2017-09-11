@@ -22,14 +22,14 @@ install:
 # Sphinx requirements
   - pip install -r requirements.txt
 # Latex requirements
-#  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
-#  - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-#  - tlmgr update --self
-#  - tlmgr install combelow
-#  - tlmgr install babel-french
-#  - tlmgr install babel-german
-#  - tlmgr install babel-romanian
-#  - tlmgr install babel-italian
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
+  - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
+  - tlmgr update --self
+  - tlmgr install combelow
+  - tlmgr install babel-french
+  - tlmgr install babel-german
+  - tlmgr install babel-romanian
+  - tlmgr install babel-italian
 
 before_script:
   - ./scripts/ci/setup_git.sh
