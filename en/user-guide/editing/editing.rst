@@ -124,6 +124,7 @@ Adding additional covers and nodes to an existing wastewater structure
 ----------------------------------------------------------------------
 
 The description is for an additional cover.
+
 * Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.
 * Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation
 
