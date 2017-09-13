@@ -122,10 +122,10 @@ You can also generate the data model under Linux.
 
 * Run the generation script::
 
-   ./scripts/dbsetup.sh
+   ./scripts/db_setup.sh
 
 If you want to use a different SRID you need to use the ``-s`` option.
-For instance, run ``./scripts/dbsetup.sh -s 2056`` for the **2056** SRID.
+For instance, run ``./scripts/db_setup.sh -s 2056`` for the **2056** SRID.
 
 If you already have a data model and you want to force the regeneration
 of the model you can also use the ``-f`` option: ``./scripts/db_setup.sh -f``.

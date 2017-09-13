@@ -19,9 +19,10 @@ This is recommended for:
 Digitizing tool
 ---------------
 
-* Select the **vw_qgep_cover** layer
+* Select the **vw_qgep_wastewater_structure** layer
 * Select the object where you want to add a detailed geometry with the info tool
-* Right click the object and select the **vw_qgep_cover** layer
+* Right click the object 
+* if there are several objects: select the **vw_qgep_wastewater_structure** layer
 * Choose **Digitize**
 
 .. figure:: images/digitizing_detailedgeometry1.jpg
@@ -35,3 +36,5 @@ Digitizing tool
 * Right click to stop.
 
 .. figure:: images/digitizing_detailedgeometry4.jpg
+
+An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Aktionen** menu of the form.

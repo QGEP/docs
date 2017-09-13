@@ -11,7 +11,6 @@
 # Sphinx documentation first
 #
 
-#LOCALES=`ls i18n`
 LOCALES='de fr it ro'
 
 # Exit on error
