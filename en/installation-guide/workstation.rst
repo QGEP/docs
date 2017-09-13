@@ -124,6 +124,31 @@ Install the demo project
 
 * Open `project/qgep_en.qgs` with QGIS
 
+Add your own OID in the project
+-----------------------------------
+
+* You have to add your OID data in the table is_oid_prefixes:
+
+.. figure:: images/is_oid_prefixes.jpg
+
+* Edit ``02_oid_generation.sql`` with your OID if you want it permanently in the QGEP project and hand in a pull request
+
+https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql
+
+.. code:: sql
+
+  -- sample entry for the City of Uster - you need to add an entry for your own organization
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch11h8mw','Stadt Uster',TRUE);
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch15z36d','SIGE',FALSE);
+  INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES ('ch13p7mz','Arbon',FALSE);
+
+and set the OID you want to use in your project to TRUE.
+
+* or add it locally to your project with an INSERT statement.
+
+* OID prefixes have to be ordered at http://www.interlis.ch/oid/oid_commande_e.php
+
+
 Working with more than one database
 -----------------------------------
 
@@ -134,6 +159,7 @@ Working with more than one database
 * Go further on as descript in 1.2 Database initialization
 
 * Change the ``pg_service.conf`` - file 
+
 .. code:: ini
 
   [pg_qgep]    

@@ -7,7 +7,7 @@ Main layers
 vw_qgep_wastewater_structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Main layer for covers of manholes, special structures, infiltration installtions, discharge points (and wwtp structure). Creating a new record in this layer always creates a new cover, a new wastewater node and a new wastewater structure. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).
+Main layer for covers of manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new cover, a new wastewater node and a new wastewater structure. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).
 
 .. figure:: images/schema_vw_qgep_wastewater_structure.jpg
 
@@ -24,7 +24,7 @@ Wastewater Structures
 od_wastewater_structure
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-This layer shows the detailed geometrys of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure.
+This layer shows the detailed geometries of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure.
 
 Structure Parts
 ^^^^^^^^^^^^^^^
@@ -49,7 +49,7 @@ todo: This table is today at a strange place and has to be revised
 Inspection
 ----------
 
-These tables are used in the maintenance tabs auf the main tables. Do not edit directly.
+These tables are used in the maintenance tabs in the main tables. Do not edit directly.
 
 Value Lists
 -----------
