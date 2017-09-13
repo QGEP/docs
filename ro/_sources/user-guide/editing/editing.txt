@@ -84,11 +84,14 @@ Changing attributes of point elements (manholes / special structures)
  * To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
    kind of wastewater structure you can edit additional attributes in the respective tab (**special structure**, **manhole**).
  * The **covers** tab allows you to add additional covers.
+ To add a second cover in this part is not recommended, because you can not define the geometry of the new point.
+ 
  * In **Structure parts** you can add also further parts such as **acces aids**, **backflow prevention**, **dryweather flume** etc.
  
  .. figure:: images/form_vw_qgep_cover_structure_parts.jpg
  
  * In **Wastewater nodes parts** you can edit or add all attributes of this class or add a second element.
+ To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.
 
  .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
  
@@ -117,6 +120,20 @@ Changing attributes of hydraulic elements
  
  * You can select then the object you want. This will get you to the correspondent form to see the details.
  
+Adding additional covers and nodes to an existing wastewater structure
+----------------------------------------------------------------------
+
+The description is for an additional cover.
+
+* Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.
+* Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation
+
+.. figure:: images/vw_cover_properties_fields.jpg
+
+* Start editing vw_cover and add the new cover
+* In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure
+
+.. figure:: images/new_cover_connect_to_wws.jpg
  
 Saving changes
 --------------

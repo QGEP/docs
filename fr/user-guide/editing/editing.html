@@ -93,7 +93,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Modification des attributs des éléments hydrauliques</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.6. Sauvez les modifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Adding additional covers and nodes to an existing wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Sauvez les modifications</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer les couvercles avec les conduites et les noeuds de réseau</a></li>
@@ -263,6 +264,9 @@
 </li>
 <li><p class="first">L&#8217;onglet <strong>couvercles</strong> permets aussi d&#8217;ajouter des couvercles additionnels.</p>
 </li>
+</ul>
+<p>To add a second cover in this part is not recommended, because you can not define the geometry of the new point.</p>
+<ul class="simple">
 <li><p class="first">Dans l&#8217;onglet <strong>Parties structurelles</strong>, vous pouvez ajouter des éléments tels que des <strong>chemins d&#8217;accès aux ouvrages</strong>, des <strong>protections contre le refoulement</strong>, des <strong>cunettes de débit de temps sec</strong>, etc...</p>
 </li>
 </ul>
@@ -273,6 +277,7 @@
 <li><p class="first">Dans l&#8217;onglet <strong>Wastewater nodes parts</strong>, vous pouvez éditer ou ajouter tous les attributs de cette classe ou ajouter un second élément.</p>
 </li>
 </ul>
+<p>To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.</p>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" src="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" />
 </div>
@@ -323,8 +328,26 @@
 </ul>
 </div></blockquote>
 </div>
+<div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
+<h2>2.3.1.6. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
+<p>The description is for an additional cover.</p>
+<ul class="simple">
+<li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
+<li>Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation</li>
+</ul>
+<div class="figure">
+<img alt="user-guide/editing/images/vw_cover_properties_fields.jpg" src="user-guide/editing/images/vw_cover_properties_fields.jpg" />
+</div>
+<ul class="simple">
+<li>Start editing vw_cover and add the new cover</li>
+<li>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</li>
+</ul>
+<div class="figure">
+<img alt="user-guide/editing/images/new_cover_connect_to_wws.jpg" src="user-guide/editing/images/new_cover_connect_to_wws.jpg" />
+</div>
+</div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.6. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.7. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Cliquez sur <strong>sauvez</strong> et ensuite désactivez le mode d&#8217;édition ou tout simplement cliquez sur <strong>Stop data entry</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP, le <strong>wizard</strong>.</p>
 </li>

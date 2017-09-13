@@ -124,32 +124,6 @@ Install the demo project
 
 * Open `project/qgep_en.qgs` with QGIS
 
-Working with more than one database
------------------------------------
-
-* Create a new database in pgAdmin III with a new name, e.g. communityA
-
-* Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
-
-* Go further on as descript in 1.2 Database initialization
-
-* Change the ``pg_service.conf`` - file 
-.. code:: ini
-
-  [pg_qgep]    
-  host=localhost    
-  port=5432    
-  dbname=qgep    
-  user=qgepuser
-  [pg_communityA]    
-  host=localhost      
-  port=5432      
-  dbname=communityA      
-  user=qgepuser
-  
-* Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with 'pg_communityA'
-
-
 Add your own OID in the project
 -----------------------------------
 
@@ -173,3 +147,30 @@ and set the OID you want to use in your project to TRUE.
 * or add it locally to your project with an INSERT statement.
 
 * OID prefixes have to be ordered at http://www.interlis.ch/oid/oid_commande_e.php
+
+
+Working with more than one database
+-----------------------------------
+
+* Create a new database in pgAdmin III with a new name, e.g. communityA
+
+* Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
+
+* Go further on as descript in 1.2 Database initialization
+
+* Change the ``pg_service.conf`` - file 
+
+.. code:: ini
+
+  [pg_qgep]    
+  host=localhost    
+  port=5432    
+  dbname=qgep    
+  user=qgepuser
+  [pg_communityA]    
+  host=localhost      
+  port=5432      
+  dbname=communityA      
+  user=qgepuser
+  
+* Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with 'pg_communityA'
