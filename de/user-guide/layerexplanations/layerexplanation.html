@@ -85,7 +85,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Layer in QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.1. Layer Erläuterungen</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.1. Layer Erläuterungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-layers">2.1.1.1. Main layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wastewater-structures">2.1.1.2. Wastewater Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inspection">2.1.1.3. Inspection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value-lists">2.1.1.4. Value Lists</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydraulic-vw-wastewater-node">2.1.1.5. Hydraulic / vw_wastewater_node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#topology">2.1.1.6. Topology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catchment">2.1.1.7. Catchment</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="addviewlayer.html">2.1.2. Add View Layer</a></li>
 </ul>
 </li>
@@ -142,65 +151,68 @@
             
   <div class="section" id="layer-explanation">
 <h1>2.1.1. Layer Erläuterungen<a class="headerlink" href="#layer-explanation" title="Link zu dieser Überschrift">¶</a></h1>
-<ul class="simple">
-<li><p class="first">vw_qgep_wastewater_structure (Abwasserbauwerk)</p>
-</li>
-</ul>
+<div class="section" id="main-layers">
+<h2>2.1.1.1. Main layers<a class="headerlink" href="#main-layers" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="vw-qgep-wastewater-structure">
+<h3>2.1.1.1.1. vw_qgep_wastewater_structure<a class="headerlink" href="#vw-qgep-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Main layer for covers of manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new cover, a new wastewater node and a new wastewater structure. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).</p>
-<ul class="simple">
-<li><p class="first">vw_qgep_reach (Haltung)</p>
-</li>
-</ul>
+<div class="figure">
+<img alt="../../_images/schema_vw_qgep_wastewater_structure.jpg" src="../../_images/schema_vw_qgep_wastewater_structure.jpg" />
+</div>
+</div>
+<div class="section" id="vw-qgep-reach">
+<h3>2.1.1.1.2. vw_qgep_reach<a class="headerlink" href="#vw-qgep-reach" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Haupt-Layer für Linien-Abwasserbauwerke (Kanäle).
 Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein neuer Kanal erstellt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse).</p>
-<ul class="simple">
-<li><p class="first">Wastewater Structures / od_wastewater_structure (Abwasserbauwerk):</p>
-</li>
-</ul>
+<div class="figure">
+<img alt="../../_images/schema_vw_qgep_reach.jpg" src="../../_images/schema_vw_qgep_reach.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="wastewater-structures">
+<h2>2.1.1.2. Wastewater Structures<a class="headerlink" href="#wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="od-wastewater-structure">
+<h3>2.1.1.2.1. od_wastewater_structure<a class="headerlink" href="#od-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
 <p>This layer shows the detailed geometries of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure.</p>
-<ul class="simple">
-<li><p class="first">Wastewater Structures / Structure Parts (Bauwerksteile):</p>
-</li>
-</ul>
+</div>
+<div class="section" id="structure-parts">
+<h3>2.1.1.2.2. Structure Parts<a class="headerlink" href="#structure-parts" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Deckel ist der einzige Bauwerksteil mit einer eigenen Lageinformation. Alle anderen Bauwerksteile sind nur mit ihrem Abwasserbauwerk verknüpft und sollen nur über die Hauptlayer  (vw_qgep_wastewater_structure und vw_qgep_reach) geändert werden.</p>
-<ul class="simple">
-<li><p class="first">Wastewater Structures / Structure Parts / vw_cover (Deckel)</p>
-</li>
-</ul>
+</div>
+<div class="section" id="vw-cover">
+<h3>2.1.1.2.3. vw_cover<a class="headerlink" href="#vw-cover" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Den Deckellayer nur benutzen, um die Lageinfo von einem ausgewählten Deckel zu verändern (und nicht das ganze Abwasserbauwerk  zu verschieben). Oder um einen neuen Deckel zu einem Abwasserbauwerk hinzu zu fügen. (Ein Deckel kann auch im covers-Tab von vw_qgep_wastewater-structure hinzugefügt werden, aber dieser Deckel hat dann keine Lageinformation...).</p>
-<ul class="simple">
-<li><p class="first">Wastewater Structure / vw_channel (Kanal):</p>
-</li>
-</ul>
+</div>
+<div class="section" id="vw-channel">
+<h3>2.1.1.2.4. vw_channel<a class="headerlink" href="#vw-channel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Wird dieser Layer für etwas benutzt oder kann er gelöscht werden?</p>
-<ul class="simple">
-<li><p class="first">Wastewater Structure / od_organisation (Organisation):</p>
-</li>
-</ul>
-<p>Diese Tabelle ist zur Zeit an einem komischen Ort und muss revidiert werden.</p>
-<ul class="simple">
-<li>Inspection:</li>
-</ul>
+</div>
+<div class="section" id="od-organisation">
+<h3>2.1.1.2.5. od_organisation<a class="headerlink" href="#od-organisation" title="Link zu dieser Überschrift">¶</a></h3>
+<p>todo: This table is today at a strange place and has to be revised</p>
+</div>
+</div>
+<div class="section" id="inspection">
+<h2>2.1.1.3. Inspection<a class="headerlink" href="#inspection" title="Link zu dieser Überschrift">¶</a></h2>
 <p>These tables are used in the maintenance tabs in the main tables. Do not edit directly.</p>
-<ul class="simple">
-<li><p class="first">Value Lists (Wertelisten):</p>
-</li>
-</ul>
+</div>
+<div class="section" id="value-lists">
+<h2>2.1.1.4. Value Lists<a class="headerlink" href="#value-lists" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese Wertelisten sind im Datenmodell VSA-DSS definiert. Nicht ändern.</p>
-<ul class="simple">
-<li><p class="first">Hydraulic / vw_wastewater_node (Abwasserknoten):</p>
-</li>
-</ul>
-<p>Den Abwasserknotenlayer nur benutzen, um die Lageinfo von einem ausgewählten Abwasserknoten zu verändern (und nicht das ganze Abwasserbauwerk zu verschieben). Oder um einen neuen Abwasserknoten zu einem Abwasserbauwerk hinzu zu fügen. (Ein Abwasserknoten kann auch im wastewater nodes-Tab von vw_qgep_wastewater-structure hinzugefügt werden, aber dieser Abwasserknoten hat dann keine Lageinformation...). Dieser Layer muss in Zukunft noch mit weiteren verknüpften Tabellen erweitert werden (z.B. Überlauf-Tabellen...)</p>
-<ul class="simple">
-<li>Topology:</li>
-</ul>
+</div>
+<div class="section" id="hydraulic-vw-wastewater-node">
+<h2>2.1.1.5. Hydraulic / vw_wastewater_node<a class="headerlink" href="#hydraulic-vw-wastewater-node" title="Link zu dieser Überschrift">¶</a></h2>
+<p>You use this layer only, if you want to change the situation of just one selected ww_node (and not the hole wastewater structure) or if you want to add a new ww_node to an existing wastewater structure. (you can add an additional ww_node also in the wastewater nodes-tab of the vw_qgep_wastewater_structure, but this node has no situation...).</p>
+<p>This layer must be expanded in the future with related tables (e.g. overflow-tables...)</p>
+</div>
+<div class="section" id="topology">
+<h2>2.1.1.6. Topology<a class="headerlink" href="#topology" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese beiden Layer werden von der qgep-Extension für das Längenporfil und die Netzverfolgung verwendet. Nicht verändern oder sonst benutzen.</p>
-<ul class="simple">
-<li><p class="first">Catchment (Einzugsgebiet):</p>
-</li>
-</ul>
+</div>
+<div class="section" id="catchment">
+<h2>2.1.1.7. Catchment<a class="headerlink" href="#catchment" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hauptlayer um Einzugsgebiete zu erfassen oder zu verändern.</p>
+</div>
 </div>
 
 
