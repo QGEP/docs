@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Export INTERLIS Data &mdash; documentation QGEP 0.5</title>
+  <title>Export de données au format INTERLIS &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -107,7 +107,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Export INTERLIS Data</li>
+    <li>Export de données au format INTERLIS</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -122,15 +122,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="export-interlis-data">
-<span id="export-interlis"></span><h1>Export INTERLIS Data<a class="headerlink" href="#export-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
-<p>This represents a guide on how to export data from QGEP to INTERLIS 2 Transfer Format (xtf).</p>
+<span id="export-interlis"></span><h1>Export de données au format INTERLIS<a class="headerlink" href="#export-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce chapitre présente un guide pour l&#8217;export de données depuis QGEP vers le format INTERLIS 2 (xtf).</p>
 <div class="section" id="general">
-<h2>General<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:
-* Translation Englisch – German / French (Classes / Attributes)
-* Conversion of value list to / from numeric values (Integer)
-* Restructuring of data from relational to object oriented modelling
-* Conversion of OID (16 characters) to foreign keys TID (integer)</p>
+<h2>Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L&#8217;export INTERLIS peut être effectué en utilisant l&#8217;outil ili2pg de Eisenhut Informatik et une collection de scripts SQL préparés à cet effet. Ces dernier vont : * Traduire de l&#8217;anglais vers l&#8217;allemand / français (classes / attributs) * Convertir les listes de valeurs de / vers des valeurs numériques (Integer) * Restructurer les données relationnelles vers des données modélisées en orienté objet * Convertir les OID (varchar 16) vers des clés étrangères TID (integer)</p>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/interlisexport.jpg" src="../../_images/interlisexport.jpg" />
@@ -138,10 +134,10 @@
 </div></blockquote>
 </div>
 <div class="section" id="step-by-step">
-<h2>Step by step<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="tool">
-<h3>Tool<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Download the latest version of <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
+<h3>Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Télécharger la dernière version de <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/eisenhut.jpg" src="../../_images/eisenhut.jpg" />
@@ -149,14 +145,15 @@
 </div></blockquote>
 </div>
 <div class="section" id="generate-postgres-ili2pg-schema-with-data-model">
-<h3>Generate postgres ili2pg schema with data model<a class="headerlink" href="#generate-postgres-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Générer le shéma du modèle de données à l&#8217;aide de postgres ili2pg<a class="headerlink" href="#generate-postgres-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>a) Generate schema with data model
 You need the wanted INTERLIS model with all related models:</p>
 <ul class="simple">
 <li><em>Units.ili</em></li>
 <li><em>Base.ili</em></li>
 <li><em>SIA405_Base.ili</em></li>
-<li><em>VSA_DSS_2015_2_d_20170602.ili</em> for Version 2015 –&gt; corrected version relations</li>
+<li><p class="first"><em>VSA_DSS_2015_2_d_20170602.ili</em> pour la version 2015 –&gt; versions corrigées</p>
+</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">createEnumTxtCol</span> <span class="o">--</span><span class="n">schemaimport</span> <span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">vsa_dss_2015_2_d_391</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">sjib</span>  <span class="o">--</span><span class="n">log</span> <span class="n">createschema_VSA_DSS_2015_2_d_391</span><span class="o">.</span><span class="n">log</span> <span class="n">VSA_DSS_2015_2_d_20170602</span><span class="o">.</span><span class="n">ili</span>
 </pre></div>
@@ -183,7 +180,8 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><em>Units.ili</em></li>
 <li><em>Base.ili</em></li>
 <li><em>SIA405_Base.ili</em></li>
-<li><em>VSA_DSS_2015_2_d_20170602.ili</em> for Version 2015 –&gt; corrected version relations</li>
+<li><p class="first"><em>VSA_DSS_2015_2_d_20170602.ili</em> pour la version 2015 –&gt; versions corrigées</p>
+</li>
 </ul>
 <p>(!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef &#8211; {0..*} statt 0..1 (Fehlerkorrektur))</p>
