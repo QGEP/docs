@@ -90,15 +90,15 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.3.1. Bearbeiten von bestehenden Daten</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#demo-project">2.3.1.1. Demoprojekt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Ebenen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Attribute der Punktelemente ändern (Kanalschächte / Sondebauwerke)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Attribute der Hydraulikelemente ändern</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Adding additional covers and nodes to an existing wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Änderungen Speichern</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Verschieben von Abdeckungen mit Haltungen und Abwasserknoten</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Hinzufügen oder bearbeiten von  Unterhalts Veranstaltungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Abwassernetzwerkselemente verbinden</a></li>
 </ul>
 </li>
@@ -193,7 +193,7 @@
 <div class="section" id="layer-vw-qgep-cover">
 <h3>2.3.1.2.1. vw_qgep_cover Ebene<a class="headerlink" href="#layer-vw-qgep-cover" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li><p class="first">Die <strong>vw_qgep_cover</strong> Ebene erlaubt es uns alle Punktelemente zu bearbeiten. Das sind Abwasserbauten wie zum Beispiel Kanalschächte, Sonderbauwerke, Entlastungspunkte und Versickerung Installationen (<strong>wwtp_structures</strong>, welches auch eine Abwasserbaute ist aber noch nicht unterstützt wird).</p>
+<li><p class="first">Die <strong>vw_qgep_cover</strong> Ebene erlaubt es uns alle Punktelemente zu bearbeiten. Das sind Abwasserbauten wie zum Beispiel Kanalschächte, Sonderbauwerke, Entlastungspunkte und Versickerung Installationen (<strong>wwtp_structures</strong> ist auch eine Abwasserbauwerk, wird aber noch nicht unterstützt ).</p>
 </li>
 </ul>
 <div class="figure">
@@ -203,19 +203,19 @@
 <div class="section" id="layer-vw-qgep-reach">
 <h3>2.3.1.2.2. vw_qgep_reach Ebene<a class="headerlink" href="#layer-vw-qgep-reach" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li><p class="first">Die Ebene <strong>vw_qgep_reach ermöglichts uns alle linearen Elemente des Abwassernetzwerkes zu bearbeiten (**reaches</strong> / <strong>channels</strong>).</p>
+<li><p class="first">Die Ebene <strong>vw_qgep_reach ermöglicht es uns, alle linearen Elemente des Abwassernetz zu bearbeiten (**reaches</strong> / <strong>channels</strong>).</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-waste-water-structures">
-<h3>2.3.1.2.3. Abwasserbauten Ebene<a class="headerlink" href="#layer-waste-water-structures" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>2.3.1.2.3. Ebene Abwasserbauwerke<a class="headerlink" href="#layer-waste-water-structures" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li><p class="first">Diese Ebene beinhaltet verschiedene Unterebenen in Verbundenheit mit der Abwasserbaute. Es beinhaltet auch Verbindungen zu den Unterhalt Veranstaltungen, die Verbindungstabelle zwischen Abwasserbauten und den Unterhalts Veranstaltungen und die Organsatio der Tabellen (wo <strong>owners</strong>, <strong>dataowners</strong>, etc gespeichert sind)</p>
+<li><p class="first">Diese Ebene beinhaltet verschiedene Unterebenen die mit Abwasserbauwerken verknüpft sind. Es beinhaltet auch Verbindungen zu den Erhaltungsereignissen, die Verbindungstabelle zwischen Abwasserbauten und den Erhaltungsereignissen und der Tabelle Organsation (wo <strong>owners</strong>, <strong>dataowners</strong>, etc gespeichert sind)</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-value-lists">
-<h3>2.3.1.2.4. Werteliste Ebene<a class="headerlink" href="#layer-value-lists" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>2.3.1.2.4. Ebene Werteliste<a class="headerlink" href="#layer-value-lists" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Hier können sie verschiedene Wertelisten sehen, welche mit den Klassen der Kanalisationsnetzwerken in Verbindung stehen.</p>
 </li>
@@ -224,7 +224,7 @@
 <div class="section" id="layer-hydraulic">
 <h3>2.3.1.2.5. Hydraulik Ebene<a class="headerlink" href="#layer-hydraulic" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li><p class="first">Diese Ebene erlaubt es uns Abwasserknoten auszuwählen und zu bearbeiten. Wählen Sie die Ebene und dann wählen Sie das <strong>Identify Features</strong> Werkzeug und dann Doppelklicken Sie auf deinen Knoten</p>
+<li><p class="first">Diese Ebene erlaubt es, Abwasserknoten auszuwählen und zu bearbeiten. Wählen Sie die Ebene und dann wählen Sie das <strong>Identify Features</strong> Werkzeug und dann Doppelklicken Sie auf den Knoten</p>
 </li>
 </ul>
 </div>
@@ -237,14 +237,14 @@
 </div>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>2.3.1.3. Attribute der Punktelemente ändern (Kanalschächte / Sondebauwerke)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst die <strong>vw_qgep_cover</strong> Ebende und wechseln Sie zum Bearbeitungsmodus.</p>
+<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst die <strong>vw_qgep_cover</strong> Ebene auswählen und wechseln Sie zum Bearbeitungsmodus.</p>
 </li>
 <li><p class="first">Oder starten Sie den <strong>QGEP Wizard</strong> und klicken sie auf <strong>Start Data Entry</strong></p>
 </li>
-<li><p class="first">Dann klicken Sie auf den <strong>Identify feautures</strong> Knopf und wählend Sie das Element, welches Sie bearbeiten wollen, mit einem Doppelklick</p>
+<li><p class="first">Dann klicken Sie auf den <strong>Identify features</strong> Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Doppelklick</p>
 </li>
 </ul>
 <div class="figure">
@@ -258,26 +258,26 @@
 <img alt="../../_images/form_vw_qgep_cover.jpg" src="../../_images/form_vw_qgep_cover.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Auf dem ersten Tab können Sie am häufigsten benutzten Attribute ändern</p>
+<li><p class="first">Auf dem ersten Tab können Sie die am häufigsten benutzten Attribute ändern</p>
 </li>
-<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B Abdeckungen)  zu ändern, müssen Sie den entsprechenden Tab auswählen. Abhängig von der Art des Abwasserbauteils können Sie zusätzliche Attribute im zugehörigen Tab bearbeiten (<strong>special structure</strong>, <strong>manhole</strong>).</p>
+<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B Deckel) zu ändern, müssen Sie den entsprechenden Tab auswählen. Abhängig von der Art des Abwasserbauwerks können Sie zusätzliche Attribute im zugehörigen Tab bearbeiten (<strong>special structure</strong>, <strong>manhole</strong>).</p>
 </li>
-<li><p class="first">Der <strong>covers</strong> Tab erlaubt ihnen zusätzliche Abdeckungen hinzuzufügen.</p>
+<li><p class="first">Der <strong>covers</strong> Tab erlaubt ihnen zusätzliche Deckel hinzuzufügen.</p>
 </li>
 </ul>
-<p>To add a second cover in this part is not recommended, because you can not define the geometry of the new point.</p>
+<p>Es ist nicht empfohlen, an dieser Stelle einen weiteren Deckel hinzuzufügen, weil die Lage des neuen Deckels nicht definiert werden kann.</p>
 <ul class="simple">
-<li><p class="first">Im <em>structure parts*</em> können Sie auch weitere Teile wie zum Beispiel <strong>Access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc. hinzufügen</p>
+<li><p class="first">Unter <strong>Bauwerkteile/structure parts</strong> können Sie weitere Bauwerksteile wie zum Beispiel <strong>Einstiegshilfen/access aids</strong>, <strong>Rückstausicherung/backflow prevention</strong>, <strong>Trockenwetterrinne/dryweather flume</strong> etc. hinzufügen</p>
 </li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_structure_parts.jpg" src="../../_images/form_vw_qgep_cover_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Im <a href="#id1"><span class="problematic" id="id2">**</span></a>wastewater nodes part* können Sie alle Attribute dieser Klasse bearbeiten oder hinzufügen oder ein zweites Element hinzufügen.</p>
+<li><p class="first">Unter <a href="#id1"><span class="problematic" id="id2">**</span></a>Abwasserknoten/wastewater nodes part* können Sie alle Attribute dieser Klasse bearbeiten oder hinzufügen oder einen  weiteren Abwasserknoten hinzufügen.</p>
 </li>
 </ul>
-<p>To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.</p>
+<p>Es ist nicht empfohlen, an dieser Stelle einen weiteren Abwasserknoten hinzuzufügen, weil die Lage des neuen Abwasserknotens nicht definiert werden kann.</p>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" src="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" />
 </div>
@@ -287,9 +287,9 @@
 <h2>2.3.1.4. Attribute der Linienelemente ändern (Kanäle)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst die <strong>vw_qgep_cover</strong> Ebende und wechseln Sie zum Bearbeitungsmodus.</p>
+<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst die <strong>vw_qgep_cover</strong> Ebene auswählen und wechseln Sie zum Bearbeitungsmodus.</p>
 </li>
-<li><p class="first">Dann klicken Sie auf den <strong>Identify feautures</strong> Knopf und wählend Sie das Element, welches Sie bearbeiten wollen, mit einem Doppelklick auf einen Kanal.</p>
+<li><p class="first">Dann klicken Sie auf den <strong>Identify feautures</strong> Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Doppelklick auf einen Kanal.</p>
 </li>
 <li><p class="first">Das <strong>vw_qgep_reach</strong> Formular öffnet sich.</p>
 </li>
@@ -302,7 +302,7 @@
 <ul class="simple">
 <li><p class="first">Auf dem ersten Tab können Sie am häufigsten benutzte Attribute ändern.</p>
 </li>
-<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B <strong>reach points</strong>) zu ändern, wählen Sie den entsprechenden Tab.</p>
+<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B <strong>Haltungspunkte/reach points</strong>) zu ändern, wählen Sie den entsprechenden Tab.</p>
 </li>
 </ul>
 <blockquote>
@@ -315,7 +315,7 @@
 <div class="section" id="changing-attributes-of-hydraulic-elements">
 <h2>2.3.1.5. Attribute der Hydraulikelemente ändern<a class="headerlink" href="#changing-attributes-of-hydraulic-elements" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Aktiviert mit dem <strong>Identify feature</strong> Werkzeug, werden durch Rechtklicken eine Auswahl aller existierender Objekte ausgegeben.</p>
+<li><p class="first">Aktiviert mit dem <strong>Identify feature</strong> Werkzeug, wird durch Rechtsklicken eine Auswahl aller existierender Objekte ausgegeben.</p>
 </li>
 </ul>
 <blockquote>
@@ -323,24 +323,28 @@
 <img alt="../../_images/qgep_info_button_rightclick.jpg" src="../../_images/qgep_info_button_rightclick.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sie können dann das Objekt, welches Sie wollen auswählen. Das bringt Sie zum zugehörigen Formular um die Details einzusehen</p>
+<li><p class="first">Sie können dann das gewünschte Objekt auswählen. Es erscheint das zugehörige Formular um die Details einzusehen</p>
 </li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.6. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
-<p>The description is for an additional cover.</p>
+<h2>2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Dieser Beschrieb ist für einen zusätzlichen Deckel.</p>
 <ul class="simple">
-<li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
-<li>Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation</li>
+<li><p class="first">Voraussetzung: Unter Projekt/Projekteigenschaften/Beziehungen muss die Beziehung zwischen vw_cover (Feld fk_wastewater_structure) und vw_qgep_wastewater_structure (Feld obj_id) vorhanden sein.</p>
+</li>
+<li><p class="first">Im Layer vw_cover / Eigenschaften /Felder muss das Feld fk_wastewater_structure als Beziehungsreferenz definiert sein.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
-<li>Start editing vw_cover and add the new cover</li>
-<li>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</li>
+<li><p class="first">Die Bearbeitung des Layer vw_cover starten und einen neuen Deckel definieren.</p>
+</li>
+<li><p class="first">In der Form hat es hinter dem Feld fk_wastewater_structure einen  Knopf, mit dem der neue Deckel mit einem bestehenden Abwasserbauwerk verknüpft warden kann.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="user-guide/editing/images/new_cover_connect_to_wws.jpg" src="user-guide/editing/images/new_cover_connect_to_wws.jpg" />
@@ -352,7 +356,7 @@
 <li><p class="first">Drücken Sie <strong>Save</strong> und dann deaktivieren Sie den Bearbeitungsmodus oder klicken Sie auf <strong>Stop data entry</strong> wenn Sie mit dem <strong>QGEP Data Entry</strong> Arbeitsassistenten gearbeitet haben.</p>
 </li>
 </ul>
-<p>..* Vorgehen:</p>
+<p>..* TO DO:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Changing relations (Verknüpfungen ändern)</li>

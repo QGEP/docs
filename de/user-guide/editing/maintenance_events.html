@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.3. Hinzufügen oder bearbeiten von Unterhalts Veranstaltungen &mdash; QGEP 0.5 Dokumentation</title>
+  <title>2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -89,7 +89,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Bearbeiten in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="editing.html">2.3.1. Bearbeiten von bestehenden Daten</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Verschieben von Abdeckungen mit Haltungen und Abwasserknoten</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.3. Hinzufügen oder bearbeiten von  Unterhalts Veranstaltungen</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.3.3.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-for-single-events-that-just-belong-to-one-structure">2.3.3.2. Hinzufügen ( Für Einzeltermine welche nur zu einem Bauwerk gehören)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-for-many-events-that-can-belong-to-many-structures">2.3.3.3. Hinzufügen ( für mehrere Wartungsereignisse, welche zu mehreren Bauwerken gehören können)</a></li>
@@ -134,7 +134,7 @@
       
           <li><a href="index.html">2.3. Bearbeiten in QGEP</a> &raquo;</li>
       
-    <li>2.3.3. Hinzufügen oder bearbeiten von  Unterhalts Veranstaltungen</li>
+    <li>2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -149,12 +149,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="adding-or-editing-of-maintenance-events">
-<span id="maintenance-events"></span><h1>2.3.3. Hinzufügen oder bearbeiten von  Unterhalts Veranstaltungen<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Eine Anleitung zum hinzufügen oder bearbeiten vom  Unterhalts Veranstaltungs Dateien in QGEP.</p>
+<span id="maintenance-events"></span><h1>2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Eine Anleitung zum hinzufügen oder bearbeiten vom  Erhaltungsereignissen Datensätzen in QGEP.</p>
 <div class="section" id="general">
 <h2>2.3.3.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Unterhalts  Veranstaltungen können mit einer Baute oder mit vielen Verbunden sein. Deshalb  benutzt QGEP ein Zwischenmann RE_table um die Beziehung zwischen n:m zu gestalten (<strong>re_maintenance_event_wastewater_structure</strong>)</p>
+<li><p class="first">Erhaltungsereignissen können mit einem oder mehreren Abwasserbauwerken verbunden sein. In der Datenbank ist das mit einer re-Zwischentabelle umgesetzt, um die n:m-Beziehung abzubilden (<strong>re_maintenance_event_wastewater_structure</strong>)</p>
 </li>
 </ul>
 </div>
@@ -165,9 +165,9 @@
 </li>
 <li><p class="first">Mit dem <strong>Identify Features</strong> Werkzeug können Sie <strong>manholes</strong> oder <strong>reaches auswählen indem sie ihre zugehörige Ebene auswählen (**vw_qgep_cover</strong> oder <strong>vw_qgep_reach</strong>)</p>
 </li>
-<li><p class="first">Das entsprechende Formular öffnet sich. Wechseln Sie zum <em>Wartungsereignis*</em> tab</p>
+<li><p class="first">Das entsprechende Formular öffnet sich. Wechseln Sie zum <strong>Erhaltungsereignisse</strong> -Reiter</p>
 </li>
-<li><p class="first">Erstellen Sie ein neues Wartungsereignis.</p>
+<li><p class="first">Erstellen Sie ein neues Erhaltungsereignis.</p>
 </li>
 </ul>
 <blockquote>
@@ -176,7 +176,7 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li><p class="first">Oder verknüpfen Sie es mit einem bereits bestehenden Wartungsereignis</p>
+<li><p class="first">Oder verknüpfen Sie es mit einem bereits bestehenden Erhaltungsereignis.</p>
 </li>
 </ul>
 <blockquote>
@@ -200,7 +200,7 @@
 <h2>2.3.3.4. Bearbeitung<a class="headerlink" href="#editing" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">Machen Sie es wie es beim Hinzufügen beschrieben wurde - aber bearbeiten Sie bereits bestehende Wartungsereignisse</p>
+<li><p class="first">Machen Sie es wie es beim Hinzufügen beschrieben - aber bearbeiten Sie nur die bereits bestehenden Erhaltungsereignisse</p>
 </li>
 </ul>
 </div></blockquote>
