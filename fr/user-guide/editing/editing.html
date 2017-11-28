@@ -93,7 +93,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Modification des attributs des éléments hydrauliques</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Adding additional covers and nodes to an existing wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Ajouter des <strong>couvercles</strong> et <strong>noeuds</strong> additionnels à une <strong>structure assainissement</strong> existante</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Sauvez les modifications</a></li>
 </ul>
 </li>
@@ -104,7 +104,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Outils de poursuite de réseau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
@@ -265,7 +265,7 @@
 <li><p class="first">L&#8217;onglet <strong>couvercles</strong> permets aussi d&#8217;ajouter des couvercles additionnels.</p>
 </li>
 </ul>
-<p>To add a second cover in this part is not recommended, because you can not define the geometry of the new point.</p>
+<p>Ajouter un second <strong>couvercle</strong> à ce niveau n&#8217;est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
 <ul class="simple">
 <li><p class="first">Dans l&#8217;onglet <strong>Parties structurelles</strong>, vous pouvez ajouter des éléments tels que des <strong>chemins d&#8217;accès aux ouvrages</strong>, des <strong>protections contre le refoulement</strong>, des <strong>cunettes de débit de temps sec</strong>, etc...</p>
 </li>
@@ -277,7 +277,7 @@
 <li><p class="first">Dans l&#8217;onglet <strong>Wastewater nodes parts</strong>, vous pouvez éditer ou ajouter tous les attributs de cette classe ou ajouter un second élément.</p>
 </li>
 </ul>
-<p>To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.</p>
+<p>Ajouter un second <strong>noeud assainissement</strong> à ce niveau n&#8217;est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" src="../../_images/form_vw_qgep_cover_wastewater_nodes.jpg" />
 </div>
@@ -329,7 +329,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.6. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.6. Ajouter des <strong>couvercles</strong> et <strong>noeuds</strong> additionnels à une <strong>structure assainissement</strong> existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
 <p>The description is for an additional cover.</p>
 <ul class="simple">
 <li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
@@ -339,7 +339,8 @@
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
-<li>Start editing vw_cover and add the new cover</li>
+<li><p class="first">Commencez par éditer la couche <strong>vw_cover</strong> et ajoutez le nouveau <strong>couvercle</strong></p>
+</li>
 <li>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</li>
 </ul>
 <div class="figure">
@@ -355,7 +356,8 @@
 <p>..* TO DO:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Changing relations (Verknüpfungen ändern)</li>
+<li><p class="first">Changer les relations (Verknüpfungen ändern)</p>
+</li>
 <li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
 <li>Split channels into different reaches (Kanäle unterteilen)</li>
 </ul>
