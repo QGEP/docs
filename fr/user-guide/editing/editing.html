@@ -330,10 +330,11 @@
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
 <h2>2.3.1.6. Ajouter des <strong>couvercles</strong> et <strong>noeuds</strong> additionnels à une <strong>structure assainissement</strong> existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The description is for an additional cover.</p>
+<p>La description concerne un couvercle supplémentaire.</p>
 <ul class="simple">
 <li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
-<li>Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation</li>
+<li><p class="first">Dans la couche <strong>vw_couvercle / propriétés / champs</strong>, définissez le champ <strong>fk_structure_assainissement</strong> comme valeur relationnelle</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
@@ -359,10 +360,11 @@
 <li><p class="first">Changer les relations (Verknüpfungen ändern)</p>
 </li>
 <li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
-<li>Split channels into different reaches (Kanäle unterteilen)</li>
+<li><p class="first">Sépare les conduites en différents tronçons (Kanäle unterteilen)</p>
+</li>
 </ul>
 </div></blockquote>
-<p><a class="reference external" href="http://dss.vsa.ch">Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:</a></p>
+<p>Lien vers la page principale de l&#8217; <strong>Association suisse des professionnels de la protection des eaux - Modèle de données VSA-DSS: &lt;http://dss.vsa.ch&gt;`_</strong></p>
 </div>
 </div>
 

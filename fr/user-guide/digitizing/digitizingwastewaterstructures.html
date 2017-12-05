@@ -154,7 +154,7 @@
 <h1>2.2.2. Numériser les structures<a class="headerlink" href="#digitizing-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.2.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Disable the <strong>Reuse last entered attribute values</strong> option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
+<p>Désactivez la case <strong>Réutiliser la dernière valeur attributaire saisie</strong> (<strong>Préférences</strong> -&gt; <strong>Options</strong> -&gt; <strong>Numérisation</strong> -&gt; <strong>Création d&#8217;entités</strong>), pour éviter que la saisie de votre deuxième objet soit bloquée. Ce bug sera corrigé au plus tard dans QGIS 3.0.</p>
 <p>QGEP propose un outils d&#8217;assistance (wizard) pour construire les structures.</p>
 <p>Sélectionner le bouton <strong>Wizard</strong> puis cliquez sur le bouton <strong>Start Data Entry</strong> et choisissez <strong>Wastewater Structure</strong> dans le menu déroulant.</p>
 <div class="figure">
@@ -170,7 +170,7 @@
 <div class="figure">
 <img alt="../../_images/wizard_data_entry_with_new_cursor.jpg" src="../../_images/wizard_data_entry_with_new_cursor.jpg" />
 </div>
-<p>Then the <strong>vw_qgep_wastewater_structure</strong> form opens and you can start adding data in the <strong>General</strong> tab:</p>
+<p>Le formulaire <strong>vw_qgep_structure_assainissement</strong> s&#8217;ouvre ensuite et vous pouvez commencer la saisie de données dans l&#8217;onglet <strong>Général</strong>:</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" />
 </div>
@@ -185,8 +185,7 @@
 <li><p class="first">Structure spéciale</p>
 </li>
 </ul>
-<p>Then add the identifier (this is the attribute that will be displayed on the map).
-As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
+<p>Ajoutez ensuite l&#8217;identifiant (c&#8217;est l&#8217;attribut qui sera affiché sur la carte). Par défaut, l&#8217;identifiant de la structure assainissement est également l&#8217;identifiant du couvercle et du noeud assainissement.</p>
 <p>Pour les chambres et les structures spéciales, choisissez la fonction dans l&#8217;attribut  <strong>manhole_function</strong> ou <strong>special structure_function</strong> selon le type d&#8217;objet. Dans le future, seul l&#8217;attribut correspondant apparaîtra une fois le type <strong>ws_type</strong> choisit.</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" />
@@ -215,14 +214,15 @@ Now you can click OK.</p>
 <ol class="loweralpha simple">
 <li><p class="first">Un nouvel objet est ajouté dans la classe <strong>wastewater_structure</strong></p>
 </li>
-<li>a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked</li>
+<li><p class="first">Un nouvel objet sera crée et lié dans les sous-classes respectives [point_de_déversement, installation_d_infiltration, chambre, structure_spéciale)</p>
+</li>
 <li><p class="first">un nouvel objet <strong>couvercle</strong> est ajouté et lié à la structure assainissement</p>
 </li>
 <li><p class="first">un nouvel objet <strong>noeud assainissement</strong> est généré dans la couche <strong>éléments du réseau assainissement</strong> et sa sous-classe <strong>noeuds assainissement</strong></p>
 </li>
 </ol>
 <p>To add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a> chapter).</p>
-<p>..(take more from GEPView-Howto 1.2. Chapter 4.1)</p>
+<p>..(voir aussi GEPView-Tutoriel 1.2. Chapitre 4.1)</p>
 </div>
 </div>
 
