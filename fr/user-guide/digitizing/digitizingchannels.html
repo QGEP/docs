@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.5. Numérisation des Canalisations &mdash; documentation QGEP 0.5</title>
+  <title>2.2.5. Numérisation de canalisations &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -33,7 +33,7 @@
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.6. Suppression d’objets" href="deletingobjects.html"/>
-        <link rel="prev" title="2.2.4. Numérisation des Canalisations de drainage" href="digitizingdrainagechannel.html"/> 
+        <link rel="prev" title="2.2.4. Numérisation de canalisations de drainage" href="digitizingdrainagechannel.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -87,10 +87,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométrie élaborée</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation des Canalisations de drainage</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Numérisation des Canalisations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation de canalisations de drainage</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Numérisation de canalisations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Général</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Autres classes et attributs</a></li>
@@ -98,7 +98,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des Bassins Versants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
@@ -137,7 +137,7 @@
       
           <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.5. Numérisation des Canalisations</li>
+    <li>2.2.5. Numérisation de canalisations</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -152,10 +152,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-channels">
-<h1>2.2.5. Numérisation des Canalisations<a class="headerlink" href="#digitizing-channels" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>2.2.5. Numérisation de canalisations<a class="headerlink" href="#digitizing-channels" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.5.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Désactivez la case <strong>Réutiliser la dernière valeur attributaire saisie</strong> (<strong>Préférences</strong> -&gt; <strong>Options</strong> -&gt; <strong>Numérisation</strong> -&gt; <strong>Création d&#8217;entités</strong>), pour éviter que la saisie de votre deuxième objet soit bloquée. Ce bug sera corrigé au plus tard dans QGIS 3.0.</p>
+<p>Désactivez la case <strong>Réutiliser la dernière valeur attributaire saisie</strong> (<strong>Préférences</strong> -&gt; <strong>Options</strong> -&gt; <strong>Numérisation</strong> -&gt; <strong>Création d&#8217;entités</strong>), pour éviter que la saisie de votre deuxième objet ne soit bloquée. Ce bug sera corrigé au plus tard dans QGIS 3.0.</p>
 <p>QGEP propose un outil pour construire les canalisations et les connecter aux chambres/structures spéciales (tout en créant la topologie pour les nœuds de réseau et les conduites).</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
@@ -182,7 +182,7 @@
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Utiliser le bouton gauche de la souris pour définir les points intermédiaires de la conduite. Vous pouvez aussi directement sélectionner une autre chambre pour dessiner une conduite droite.</p>
+<li><p class="first">Utilisez le bouton gauche de la souris pour définir les points intermédiaires de la conduite. Vous pouvez aussi directement sélectionner une autre chambre pour dessiner une conduite droite.</p>
 </li>
 </ul>
 <div class="figure">
@@ -214,7 +214,7 @@
 <img alt="../../_images/wizard_wastewater_structure_reach_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_reach_form_data_ok.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sauvez les informations de la couche en stoppant l&#8217;outil d&#8217;assistance (&#8220;the wizard&#8221;).</p>
+<li><p class="first">Sauvez les informations de la couche en stoppant l&#8217;outil d&#8217;assistance (&#8220;Wizard&#8221;).</p>
 </li>
 </ul>
 <div class="figure">
@@ -272,7 +272,7 @@
         <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.2.6. Suppression d’objets" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Numérisation des Canalisations de drainage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Numérisation de canalisations de drainage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

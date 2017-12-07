@@ -93,13 +93,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Modification des attributs des éléments hydrauliques</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Ajouter des <strong>couvercles</strong> et <strong>noeuds</strong> additionnels à une <strong>structure assainissement</strong> existante</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Sauvez les modifications</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer les couvercles avec les conduites et les noeuds de réseau</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Ajout et Édition d&#8217;Événements de maintenance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Connexion des éléments du réseau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Ajout et édition d&#8217;événements de maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Connexion des éléments du réseau assainissement</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
@@ -159,7 +159,7 @@
 <ul class="simple">
 <li><p class="first">Assurez-vous d&#8217;avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Initialisation de la base de données</span></a>)</p>
 </li>
-<li><p class="first">Ouvrez le projet demo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> &#8211;&gt; <strong>Ouvrir</strong> ou tout simplement en pressant sur les touches &#8220;CTRL&#8221; + &#8220;O&#8221; simultanément.</p>
+<li><p class="first">Ouvrez le projet démo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> &#8211;&gt; <strong>Ouvrir</strong> ou en pressant sur les touches &#8220;CTRL&#8221; + &#8220;O&#8221; simultanément.</p>
 </li>
 </ul>
 <div class="figure">
@@ -191,7 +191,7 @@
 </li>
 </ul>
 <div class="section" id="layer-vw-qgep-cover">
-<h3>2.3.1.2.1. Couche <strong>Structure_assainissement</strong> (&#8220;vw_qgep_wastewater_structure&#8221;)<a class="headerlink" href="#layer-vw-qgep-cover" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.1. Couche vw_qgep_couvercles<a class="headerlink" href="#layer-vw-qgep-cover" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">La vue <strong>vw_qgep_wastewater_structure</strong> permet d&#8217;éditer les éléments de type point. Ce sont les structures d&#8217;assainissement tels que les chambres, les structures spéciales, les installations d&#8217;infiltration et les exutoires (<strong>wwtp_structures</strong>, qui est aussi une structure d&#8217;assainissement, n&#8217;est pas encore supporté).</p>
 </li>
@@ -201,35 +201,35 @@
 </div>
 </div>
 <div class="section" id="layer-vw-qgep-reach">
-<h3>2.3.1.2.2. Couche <strong>vw_qgep_tronçon</strong> (&#8220;vw_qgep_reach&#8221;)<a class="headerlink" href="#layer-vw-qgep-reach" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.2. Couche vw_qgep_tronçon<a class="headerlink" href="#layer-vw-qgep-reach" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">La vue <strong>vw_qgep_reach</strong> permet d&#8217;éditer les éléments de type ligne du réseau d&#8217;assainissement (<strong>conduites</strong> / <strong>channels</strong>).</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-waste-water-structures">
-<h3>2.3.1.2.3. Couche <strong>Structure_assainissement</strong><a class="headerlink" href="#layer-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.3. Couche Structures_assainissement<a class="headerlink" href="#layer-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Cette couche contient différentes sous-couches en relation avec les structures d&#8217;assainissement. Elle contient aussi les liens avec les événements de maintenances et la table organisationnelle (ou sont stockés <strong>propriétaire</strong>, <strong>propriétaire des données</strong>, etc.)</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-value-lists">
-<h3>2.3.1.2.4. Couche <strong>Listes de valeurs</strong> (&#8220;Value lists&#8221;)<a class="headerlink" href="#layer-value-lists" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.4. Couche Listes de valeurs<a class="headerlink" href="#layer-value-lists" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">ici vous trouverez différentes liste de valeurs en relation avec les classes du réseau d&#8217;assainissement.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-hydraulic">
-<h3>2.3.1.2.5. Couche <strong>Hydraulique</strong><a class="headerlink" href="#layer-hydraulic" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.5. Couche Hydraulique<a class="headerlink" href="#layer-hydraulic" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Cette couche permets de sélectionner et éditer les nœuds du réseau. Sélectionnez la couche et utilisez l&#8217;outil <strong>Identifier une entité</strong> pour cliquer sur un nœud et faire apparaître ses informations.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="layer-topology">
-<h3>2.3.1.2.6. Couche <strong>Topologie</strong><a class="headerlink" href="#layer-topology" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>2.3.1.2.6. Couche Topologie<a class="headerlink" href="#layer-topology" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Ici vous pouvez trouver toutes les informations relatives à la topologie du réseau.</p>
 </li>
@@ -265,7 +265,7 @@
 <li><p class="first">L&#8217;onglet <strong>couvercles</strong> permets aussi d&#8217;ajouter des couvercles additionnels.</p>
 </li>
 </ul>
-<p>Ajouter un second <strong>couvercle</strong> à ce niveau n&#8217;est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
+<p>Ajouter un second couvercle à ce niveau n&#8217;est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
 <ul class="simple">
 <li><p class="first">Dans l&#8217;onglet <strong>Eléments de structure</strong>, vous pouvez ajouter des éléments tels que: <strong>chemin d&#8217;accès aux ouvrages</strong>, <strong>protection contre le refoulement</strong>, <strong>cunette de débit par temps sec</strong>, etc...</p>
 </li>
@@ -329,10 +329,11 @@
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.6. Ajouter des <strong>couvercles</strong> et <strong>noeuds</strong> additionnels à une <strong>structure assainissement</strong> existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.6. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La description concerne un couvercle supplémentaire.</p>
 <ul class="simple">
-<li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
+<li><p class="first">Assurez-vous que votre projet (dans &#8220;Propriétés du projet&#8221; / &#8220;Relations&#8221;) inclue bien la relation entre les  tables <strong>vw_cover</strong> (champ &#8220;fk_wastewater_structure&#8221;) et <strong>vw_qgep_wastewater_structure</strong> (champ &#8220;obj_id&#8221;)</p>
+</li>
 <li><p class="first">Dans la couche <strong>vw_couvercle / propriétés / champs</strong>, définissez le champ <strong>fk_structure_assainissement</strong> comme valeur relationnelle</p>
 </li>
 </ul>
@@ -342,7 +343,8 @@
 <ul class="simple">
 <li><p class="first">Commencez par éditer la couche <strong>vw_cover</strong> et ajoutez le nouveau <strong>couvercle</strong></p>
 </li>
-<li>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</li>
+<li><p class="first">Dans le formulaire, derrière le champ <strong>fk_structure_assainissement</strong>, vous trouverez un bouton pour connecter le nouveau couvercle à une structure assainissement existante.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="user-guide/editing/images/new_cover_connect_to_wws.jpg" src="user-guide/editing/images/new_cover_connect_to_wws.jpg" />
@@ -357,9 +359,10 @@
 <p>..* TO DO:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">Changer les relations (Verknüpfungen ändern)</p>
+<li><p class="first">Modifier les relations</p>
 </li>
-<li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
+<li><p class="first">Changer le <strong>ws_type</strong> (changer la sous-classe d&#8217;une structure d&#8217;eaux usées [l&#8217;identifiant de l&#8217;objet [&#8220;obj_id&#8221;] change aussi !] )</p>
+</li>
 <li><p class="first">Sépare les conduites en différents tronçons (Kanäle unterteilen)</p>
 </li>
 </ul>

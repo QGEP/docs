@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.3. Numérisation de géométrie élaborée &mdash; documentation QGEP 0.5</title>
+  <title>2.2.3. Numérisation de géométries détaillées &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
-        <link rel="next" title="2.2.4. Numérisation des Canalisations de drainage" href="digitizingdrainagechannel.html"/>
-        <link rel="prev" title="2.2.2. Numériser les structures" href="digitizingwastewaterstructures.html"/> 
+        <link rel="next" title="2.2.4. Numérisation de canalisations de drainage" href="digitizingdrainagechannel.html"/>
+        <link rel="prev" title="2.2.2. Numériser les structures assainissement" href="digitizingwastewaterstructures.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -87,16 +87,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.3. Numérisation de géométrie élaborée</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.3. Numérisation de géométries détaillées</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.3.1. Général</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">2.2.3.2. Outils de numérisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">2.2.3.2. Outil de numérisation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation des Canalisations de drainage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation des Canalisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation de canalisations de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des Bassins Versants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
@@ -135,7 +135,7 @@
       
           <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.3. Numérisation de géométrie élaborée</li>
+    <li>2.2.3. Numérisation de géométries détaillées</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -150,13 +150,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-detailed-geometry">
-<h1>2.2.3. Numérisation de géométrie élaborée<a class="headerlink" href="#digitizing-detailed-geometry" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>2.2.3. Numérisation de géométries détaillées<a class="headerlink" href="#digitizing-detailed-geometry" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.3.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est possible d&#8217;ajouter une forme géométrique à une structure.</p>
+<p>Il est possible d&#8217;ajouter une forme géométrique à une structure assainissement.</p>
 <p>Ceci est recommandé pour:</p>
 <ul class="simple">
-<li><p class="first">Les structures spéciales et les points d&#8217;infiltration, parce qu&#8217;il n&#8217;existe pas de structure normées comme pour les regards de visite pour les quels il suffit de définir les <strong>dimension1</strong> et <strong>dimension2</strong> pour représenter leur étendu.</p>
+<li><p class="first">Les structures spéciales et les points d&#8217;infiltration, parce qu&#8217;il n&#8217;existe pas de structure normée comme pour les regards, pour lesquels vous pouvez définir les <strong>dimension1</strong> et <strong>dimension2</strong> pour représenter leur étendue.</p>
 </li>
 <li><p class="first">Les installations d&#8217;infiltration pour les même raisons</p>
 </li>
@@ -167,13 +167,13 @@
 </div>
 </div>
 <div class="section" id="digitizing-tool">
-<h2>2.2.3.2. Outils de numérisation<a class="headerlink" href="#digitizing-tool" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.3.2. Outil de numérisation<a class="headerlink" href="#digitizing-tool" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Sélectionnez la couche <strong>vw_qgep_wastewater_structure</strong></p>
 </li>
 <li><p class="first">Sélectionnez avec le curseur d&#8217;information l&#8217;objet auquel vous voulez rajouter une géométrie détaillée</p>
 </li>
-<li><p class="first">Effectuer un clic droit sur l&#8217;objet</p>
+<li><p class="first">Effectuez un clic droit sur l&#8217;objet</p>
 </li>
 <li><p class="first">S&#8217;il y a plusieurs objets: sélectionnez la couche <strong>vw_qgep_wastewater_structure</strong></p>
 </li>
@@ -194,7 +194,7 @@
 <img alt="../../_images/digitizing_detailedgeometry3.jpg" src="../../_images/digitizing_detailedgeometry3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Faire un clique droit pour arrêter la numérisation.</p>
+<li><p class="first">Faites un clic droit pour arrêter la numérisation.</p>
 </li>
 </ul>
 <div class="figure">
@@ -211,10 +211,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="2.2.4. Numérisation des Canalisations de drainage" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="2.2.4. Numérisation de canalisations de drainage" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingwastewaterstructures.html" class="btn btn-neutral" title="2.2.2. Numériser les structures" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingwastewaterstructures.html" class="btn btn-neutral" title="2.2.2. Numériser les structures assainissement" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

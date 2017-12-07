@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.2. Numériser les structures &mdash; documentation QGEP 0.5</title>
+  <title>2.2.2. Numériser les structures assainissement &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -32,7 +32,7 @@
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
-        <link rel="next" title="2.2.3. Numérisation de géométrie élaborée" href="digitizingdetailedgeometry.html"/>
+        <link rel="next" title="2.2.3. Numérisation de géométries détaillées" href="digitizingdetailedgeometry.html"/>
         <link rel="prev" title="2.2.1. Saisie de données" href="dataentry.html"/> 
 
   
@@ -87,17 +87,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Numériser les structures</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Numériser les structures assainissement</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.2.1. Général</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.2.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.2.3. Autres classes et attributs</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométrie élaborée</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation des Canalisations de drainage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation des Canalisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation de canalisations de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des Bassins Versants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
@@ -136,7 +136,7 @@
       
           <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.2. Numériser les structures</li>
+    <li>2.2.2. Numériser les structures assainissement</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -151,7 +151,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-waste-water-structures">
-<h1>2.2.2. Numériser les structures<a class="headerlink" href="#digitizing-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>2.2.2. Numériser les structures assainissement<a class="headerlink" href="#digitizing-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.2.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Désactivez la case <strong>Réutiliser la dernière valeur attributaire saisie</strong> (<strong>Préférences</strong> -&gt; <strong>Options</strong> -&gt; <strong>Numérisation</strong> -&gt; <strong>Création d&#8217;entités</strong>), pour éviter que la saisie de votre deuxième objet soit bloquée. Ce bug sera corrigé au plus tard dans QGIS 3.0.</p>
@@ -190,19 +190,15 @@
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" />
 </div>
-<p>Add other attributes in the <strong>General</strong> tab.
-You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node)
-You can not add new records in the tab Covers, Structure Parts, Wastewater Nodes and Maintenance, because you have to save first the Wastewater Structure-Record to the database before you can add aditional records.
-You can not use <strong>Aktionen</strong> for the same reason. First safe the record.
-Now you can click OK.</p>
+<p>Ajoutez d&#8217;autres attributs dans l&#8217;onglet <strong>Général</strong>. Vous pouvez également ajouter des attributs dans les autres onglets (<strong>Couvercles</strong>, <strong>Structures assainissement</strong>, <strong>Regards</strong> et <strong>Noeuds assainissement</strong>). Cependant, vous devez sauvegarder les modifications apportées à  <strong>structure assainissement</strong> dans la base de données avant de pouvoir créer de nouvelles donnés dans les onglets <strong>Couvercles</strong>, <strong>Structures assainissement</strong>, <strong>Noeuds assainissement</strong> ou <strong>Maintenance</strong>. Vous ne pouvez pas non plus utiliser <strong>Action</strong> pour les mêmes raisons. Sauvegardez tout d&#8217;abord l&#8217;enregistrement. Maintenant vous pouvez cliquer sur &#8220;&#8221;OK&#8221;.</p>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" />
 </div>
-<p>Sauvegarder les informations de la couche en stoppant le &#8220;wizard&#8221;</p>
+<p>Sauvegardez les informations de la couche en cliquant sur &#8220;Stop Data Entry&#8221; dans l&#8217;assistant (&#8220;wizard&#8221;)</p>
 <div class="figure">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
-<p>Pour réediter l&#8217;objet, passer en mode d&#8217;édition et cliquez sur l&#8217;objet avec le curseur information. Si le mode d&#8217;édition n&#8217;est pas activé, vous pourrez seulement consulter les informations relatives à l&#8217;objet.</p>
+<p>Pour rééditer l&#8217;objet, passer en mode d&#8217;édition et cliquez sur l&#8217;objet à éditer avec le curseur en mode &#8220;Identifier les entités&#8221;. Si le mode d&#8217;édition n&#8217;est pas activé, vous pourrez seulement consulter les informations relatives à l&#8217;objet.</p>
 <div class="figure">
 <img alt="../../_images/manhole_info_manhole.jpg" src="../../_images/manhole_info_manhole.jpg" />
 </div>
@@ -214,14 +210,14 @@ Now you can click OK.</p>
 <ol class="loweralpha simple">
 <li><p class="first">Un nouvel objet est ajouté dans la classe <strong>wastewater_structure</strong></p>
 </li>
-<li><p class="first">Un nouvel objet sera crée et lié dans les sous-classes respectives [point_de_déversement, installation_d_infiltration, chambre, structure_spéciale)</p>
+<li><p class="first">Un nouvel objet sera crée et lié dans les sous-classes respectives (<em>point_de_déversement</em>, <em>installation_d_infiltration</em>, <em>chambre</em>, <em>structure_spéciale</em>)</p>
 </li>
 <li><p class="first">un nouvel objet <strong>couvercle</strong> est ajouté et lié à la structure assainissement</p>
 </li>
 <li><p class="first">un nouvel objet <strong>noeud assainissement</strong> est généré dans la couche <strong>éléments du réseau assainissement</strong> et sa sous-classe <strong>noeuds assainissement</strong></p>
 </li>
 </ol>
-<p>Pour ajouter des éléments additionnels comme des éléments de structure (en plus des couvercles, <strong>aide à l&#8217;accès</strong>, <em>prévention contre débordement*</em>, etc.),  vous devez d&#8217;abord sauver, puis éditer les objets ponctuels (voir le <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a> chapter).</p>
+<p>Pour ajouter des éléments additionnels comme des éléments de structure (en plus des <em>couvercles</em>, <em>aide à l&#8217;accès</em>, <em>prévention contre débordement</em>, etc.), vous devez d&#8217;abord sauver, puis éditer les objets ponctuels (voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a>).</p>
 <p>..(voir aussi GEPView-Tutoriel 1.2. Chapitre 4.1)</p>
 </div>
 </div>
@@ -233,7 +229,7 @@ Now you can click OK.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="digitizingdetailedgeometry.html" class="btn btn-neutral float-right" title="2.2.3. Numérisation de géométrie élaborée" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="digitizingdetailedgeometry.html" class="btn btn-neutral float-right" title="2.2.3. Numérisation de géométries détaillées" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="dataentry.html" class="btn btn-neutral" title="2.2.1. Saisie de données" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
