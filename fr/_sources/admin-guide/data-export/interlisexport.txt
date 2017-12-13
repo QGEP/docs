@@ -10,6 +10,7 @@ General
 ^^^^^^^^^^^^^
 
 INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:
+
 * Translation Englisch – German / French (Classes / Attributes)
 * Conversion of value list to / from numeric values (Integer)
 * Restructuring of data from relational to object oriented modelling
@@ -188,12 +189,14 @@ see https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-dat
 
 Open issues
 ---------------
+
 * _text classe are not exported properly - no data in qgep
 * check if status is exported correctly 
 
  
 Possible problems
 -------------------
+
 * compoundcurve to linestring needed
 * 2D -> 3D coordinates (use ST_Force2D from postgis extension)
 
