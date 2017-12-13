@@ -6,7 +6,12 @@ This represents a guide on how to import data to QGEP.
 Import formats
 ------------------------------
 
-* INTERLIS :ref:`_import-interlis`
+.. toctree::
+   :maxdepth: 2
+
+   interlisimport
+
+In discussion:
 
 * dxf (in progress)
 * Shape
