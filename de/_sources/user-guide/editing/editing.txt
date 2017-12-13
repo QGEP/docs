@@ -135,6 +135,12 @@ The description is for an additional cover.
 
 .. figure:: images/new_cover_connect_to_wws.jpg
  
+
+Multiedit
+---------
+If you want to edit attributes for multiple objects of the same class you can use the `mulitedit Tool of QGIS <https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
+
+ 
 Saving changes
 --------------
  
