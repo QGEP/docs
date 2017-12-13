@@ -138,7 +138,7 @@ The description is for an additional cover.
 
 Multiedit
 ---------
-If you want to edit attributes for multiple objects of the same class you can use the `mulitedit Tool of QGIS <https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
+If you want to edit attributes for multiple objects of the same class you can use the `multiedit Tool of QGIS <https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
 
  
 Saving changes
@@ -146,11 +146,13 @@ Saving changes
  
 * Click **Save** and then deactivate the edit mode or click on **Stop data entry** if you have worked with the **QGEP Data Entry** wizard.
   
-..* TO DO:
+  
+..
+   ..* TO DO:
 
-  * Changing relations (Verknüpfungen ändern)
-  * Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))
-  * Split channels into different reaches (Kanäle unterteilen)
+   * Changing relations (Verknüpfungen ändern)
+   * Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))
+   * Split channels into different reaches (Kanäle unterteilen)
   
   
 `Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS: <http://dss.vsa.ch>`_
