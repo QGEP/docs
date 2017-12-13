@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Import INTERLIS Data &mdash; documentation QGEP 0.5</title>
+  <title>Import de données INTERLIS &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -107,7 +107,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Import INTERLIS Data</li>
+    <li>Import de données INTERLIS</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -122,8 +122,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="import-interlis-data">
-<span id="import-interlis"></span><h1>Import INTERLIS Data<a class="headerlink" href="#import-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
-<p>This represents a guide on how to import data to QGEP from INTERLIS 2 Transfer Format (xtf).</p>
+<span id="import-interlis"></span><h1>Import de données INTERLIS<a class="headerlink" href="#import-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Guide pour l&#8217;import de données dans QGEP à partir du format de transfert d&#8217; INTERLIS 2 (xtf).</p>
 <div class="section" id="general">
 <h2>Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>INTERLIS Import can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
@@ -155,7 +155,7 @@
 <p>You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model</p>
 <p>This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it&#8217;s corresponding models.</p>
 <p>We create a batch file for the import with ili2pg to create an ili2pg schema (named <code class="docutils literal"><span class="pre">vsa_dss_2015_2_d</span></code>) in postgres <em>importdaten_VSA_DSS_2015_2_d_381.bat</em>.</p>
-<p>Adapt for your environment if necessary.</p>
+<p>Adaptez à votre environnement si nécessaire.</p>
 <p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">createEnumTxtCol</span> <span class="o">--</span><span class="kn">import</span> <span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">vsa_dss_2015_2_d</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">sjib</span>  <span class="o">--</span><span class="n">log</span> <span class="n">importdaten_VSA_DSS_2015_2_d_361</span><span class="o">.</span><span class="n">log</span> <span class="n">transferdatensatz2015_d_mod</span><span class="o">.</span><span class="n">xtf</span>
 </pre></div>
@@ -163,12 +163,12 @@
 <p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">Very important to have these parameters:</p>
+<p class="last">Il est très important d&#8217;avoir ces paramètres:</p>
 </div>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">--</span><span class="n">importTid</span> <span class="o">--</span><span class="n">sqlEnableNull</span> <span class="o">--</span><span class="n">createEnumTabs</span> <span class="o">--</span><span class="n">createFk</span>  <span class="o">--</span><span class="n">noSmartMapping</span>
 </pre></div>
 </div>
-<p>You need to have the necessary model files (ili) in the same folder as the xtf.</p>
+<p>Vous devez avoir les fichiers modèles nécéssaires (.ili) dans le même dossier que le fichier .xtf.</p>
 <ul class="simple">
 <li><em>Units.ili</em></li>
 <li><em>Base.ili</em></li>
@@ -183,7 +183,7 @@
 </div>
 </div>
 <div class="section" id="add-additional-functions">
-<h3>Add additional functions<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>We then need a series of function for the schema transformation form the created ili2pg schema to the <code class="docutils literal"><span class="pre">qgep</span></code> schema</p>
 <ul class="simple">
 <li><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em> : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
@@ -231,7 +231,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Add your own or modify if needed.</p>
+<p>Ajoutez le vôtre ou modifiez si nécessaire.</p>
 <p>This generates data in table <strong>organization (privat)</strong> for existing additional dataproviders and dataowners (metadata) with the new function meta_organisation
 select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;VSA&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000098&#39;</span><span class="p">);</span>
@@ -244,16 +244,19 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 </div>
 </div>
 <div class="section" id="run-the-import-queries-for-your-datamodel">
-<h3>Run the import queries for your datamodel<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Lancez les requêtes d&#8217;import  pour votre modèle de données<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li><em>060_sia405_interlisimport.sql</em>  for SIA405 2015 import</li>
-<li><em>060_dss_interlisimport.sql</em>  for VSA-DSS 2015 Import</li>
-<li><em>060_dss_2008_xxx.sql</em> for Version 2008</li>
+<li><p class="first"><em>060_sia405_interlisimport.sql</em> pour l&#8217;import SIA405 2015</p>
+</li>
+<li><p class="first"><em>060_dss_interlisimport.sql</em> pour l&#8217;import VSA-DSS 2015</p>
+</li>
+<li><p class="first"><em>060_dss_2008_xxx.sql</em> pour la version 2008</p>
+</li>
 </ul>
 </div>
 <div class="section" id="create-a-batch-job">
-<h3>Create a batch job<a class="headerlink" href="#create-a-batch-job" title="Lien permanent vers ce titre">¶</a></h3>
-<p>You can also run all the SQL queries in one batch job, here an example:</p>
+<h3>Crée un traitement par lots (batch job)<a class="headerlink" href="#create-a-batch-job" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez également lancer toutes les requêtes SQL en un traitement par lots (batch job), en voici un exemple:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rem</span> <span class="n">bat</span> <span class="ow">and</span> <span class="n">sql</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">directory</span>
 <span class="go">set PATH=%PATH%;C:\Program Files\PostgreSQL\9.4\bin</span>
 <span class="go">psql -U postgres -d vsa_dss_2015_2_d_304 -f 01_vsa_dss_2015_2_d_304_tid_generate.sql</span>
@@ -261,16 +264,15 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <span class="go">pause</span>
 </pre></div>
 </div>
-<p>Specify the path variable to postgresSQL on your system</p>
-<p><code class="docutils literal"><span class="pre">-u</span></code> sets the user
-<code class="docutils literal"><span class="pre">-d</span></code> sets the dbname
-<code class="docutils literal"><span class="pre">-f</span></code> sets the filenam</p>
-<p>For more details see <a class="reference external" href="https://www.postgresql.org/docs/9.2/static/app-psql.html">https://www.postgresql.org/docs/9.2/static/app-psql.html</a></p>
+<p>Spécifiez la variable du chemin pour PostgreSQL dans votre système.</p>
+<p><code class="docutils literal"><span class="pre">-u</span></code> définit l&#8217;utilisateur <code class="docutils literal"><span class="pre">-d</span></code> définit le nom de la base de données <code class="docutils literal"><span class="pre">-f</span></code> définit l&#8217;utilisateur</p>
+<p>Pour plus d&#8217;informations, voir <a class="reference external" href="https://www.postgresql.org/docs/9.2/static/app-psql.html">https://www.postgresql.org/docs/9.2/static/app-psql.html</a></p>
 </div>
 <div class="section" id="open-issues">
-<h3>Open issues<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>More than one Text class per element not supported yet – needs CASE WHEN for vali / hali (to do if needed)</li>
+<li><p class="first">Une seule classe texte par élément est actuellement supportée - nécessite CASE WHEN pour <code class="docutils literal"><span class="pre">vali</span> <span class="pre">/</span> <span class="pre">hali</span></code> ( à faire si nécessité)</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -282,11 +284,15 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 </div></blockquote>
 </div>
 <div class="section" id="possible-problems">
-<h3>Possible problems<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
-<li>qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –&gt; check whether ok in empty schema <code class="docutils literal"><span class="pre">qgep</span></code>.</li>
-<li>Need to use <code class="docutils literal"><span class="pre">ST_Force3D</span></code> for geometries – because qgep model is now with 3D coordinates</li>
-<li>If identifier in table is not unique there will be an error on the import of the table:</li>
+<li><p class="first">Certaines clés étrangères sont manquantes dans le schéma &#8220;Données démo&#8221; de QGEP:
+Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –&gt; Contrôler si celles-ci sont présentes dans le schéma QGEP vide.</p>
+</li>
+<li><p class="first">Nécéssite l&#8217;utilisation de <code class="docutils literal"><span class="pre">ST_Force3D</span></code> pour les géométries, car le modèle QGEP est maintenant en coordonnées cartésiennes (X, Y, Z).</p>
+</li>
+<li><p class="first">Si l&#8217;identifiant dans la table n&#8217;est pas unique, il y aura une erreur dans l&#8217;import de la table:</p>
+</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span>&gt;&gt;&gt; FEHLER:  doppelter Schlüsselwert verletzt Unique-Constraint „in_od_wastewater_structure_identifier“
 DETAIL:  Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ existiert bereits.
