@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Export de données au format INTERLIS &mdash; documentation QGEP 0.5</title>
+  <title>3.3.1.1. Export de données au format INTERLIS &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/> 
+    <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
+        <link rel="up" title="3.3. Export de données" href="index.html"/>
+        <link rel="next" title="4. Machine virtuelle de démonstration" href="../../vm/index.html"/>
+        <link rel="prev" title="3.3. Export de données" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -78,10 +81,21 @@
         
           
           
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d&#8217;administration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">3.1. pgAdmin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">3.2. Import de données</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.3. Export de données</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#export-formats">3.3.1. Formats d&#8217;exportation</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">3.3.1.1. Export de données au format INTERLIS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
@@ -107,7 +121,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Export de données au format INTERLIS</li>
+          <li><a href="../index.html">3. Guide d&#8217;administration</a> &raquo;</li>
+      
+          <li><a href="index.html">3.3. Export de données</a> &raquo;</li>
+      
+    <li>3.3.1.1. Export de données au format INTERLIS</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -122,10 +140,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="export-interlis-data">
-<span id="export-interlis"></span><h1>Export de données au format INTERLIS<a class="headerlink" href="#export-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="export-interlis"></span><h1>3.3.1.1. Export de données au format INTERLIS<a class="headerlink" href="#export-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapitre présente un guide pour l&#8217;export de données depuis QGEP vers le format INTERLIS 2 (xtf).</p>
 <div class="section" id="general">
-<h2>Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>3.3.1.1.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
 <ul class="simple">
 <li>Translation Englisch – German / French (Classes / Attributes)</li>
@@ -140,9 +158,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="step-by-step">
-<h2>Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>3.3.1.1.2. Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="tool">
-<h3>Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.1. Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Télécharger la dernière version de <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
 <blockquote>
 <div><div class="figure">
@@ -151,7 +169,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="generate-postgres-ili2pg-schema-with-data-model">
-<h3>Générer le shéma du modèle de données à l&#8217;aide de postgres ili2pg<a class="headerlink" href="#generate-postgres-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.2. Générer le shéma du modèle de données à l&#8217;aide de postgres ili2pg<a class="headerlink" href="#generate-postgres-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>a) Generate schema with data model
 You need the wanted INTERLIS model with all related models:</p>
 <ul class="simple">
@@ -231,7 +249,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </ul>
 </div>
 <div class="section" id="ili2pg-schema-explanation">
-<h3>Explication du schéma ili2pg<a class="headerlink" href="#ili2pg-schema-explanation" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.3. Explication du schéma ili2pg<a class="headerlink" href="#ili2pg-schema-explanation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les 3 méthodes créent les tables vsa_dss et toutes les tables-modèle liées.</p>
 <ul class="simple">
 <li><strong>sia405_baseclass</strong></li>
@@ -256,7 +274,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </ul>
 </div>
 <div class="section" id="add-additional-functions">
-<h3>Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.4. Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nous devons ensuite créer une suite de fonctions pour la transformation du schéma depuis le schéma ili2pg crée vers le schéma QGEP.</p>
 <ul class="simple">
 <li><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em>  : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
@@ -279,7 +297,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </div></blockquote>
 </div>
 <div class="section" id="run-the-export-queries-for-your-datamodel">
-<h3>Run the export queries for your datamodel<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.5. Run the export queries for your datamodel<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour l&#8217;export vsa_dss</p>
 <ul class="simple">
 <li><em>051_vsa_dss_2015_2_d_304_interlisexport2.sql</em> for VSA-DSS 2015 export</li>
@@ -296,7 +314,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <p>But then the ili2pg schema needs to be created with SIA405 Abwasser model structure.</p>
 </div>
 <div class="section" id="export-data-from-ili2pg-schema-to-interlis">
-<h3>Export des données du schéma ili2pg vers INTERLIS<a class="headerlink" href="#export-data-from-ili2pg-schema-to-interlis" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.6. Export des données du schéma ili2pg vers INTERLIS<a class="headerlink" href="#export-data-from-ili2pg-schema-to-interlis" title="Lien permanent vers ce titre">¶</a></h3>
 <p>The following call exports the data into INTERLIS2 sia405abwasser (Version 2015)</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">trace</span> <span class="o">--</span><span class="n">export</span> <span class="o">--</span><span class="n">log</span> <span class="n">export_sia405abwasser_2015_2_d</span><span class="o">.</span><span class="n">log</span> <span class="o">--</span><span class="n">models</span> <span class="n">SIA405_Abwasser_2015</span> <span class="o">--</span><span class="n">dbhost</span> <span class="n">localhost</span> <span class="o">--</span><span class="n">dbport</span> <span class="mi">5432</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">sia405abwasser</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">yourpassword</span> <span class="n">export</span><span class="o">.</span><span class="n">xtf</span>
 </pre></div>
@@ -320,12 +338,12 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <p>Needed models: <em>units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili</em></p>
 </div>
 <div class="section" id="quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
-<h3>Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.7. Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Lien permanent vers ce titre">¶</a></h3>
 <p>see <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/">https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/</a>
 -&gt; Link to login at infogrips.</p>
 </div>
 <div class="section" id="open-issues">
-<h3>Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.8. Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>_text classe are not exported properly - no data in qgep</li>
 <li><p class="first">contrôle si le statut est exporté correctement.</p>
@@ -333,7 +351,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </ul>
 </div>
 <div class="section" id="possible-problems">
-<h3>Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.1.1.2.9. Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li>compoundcurve to linestring needed</li>
 <li>2D -&gt; 3D coordinates (use ST_Force2D from postgis extension)</li>
@@ -346,6 +364,15 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../vm/index.html" class="btn btn-neutral float-right" title="4. Machine virtuelle de démonstration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="3.3. Export de données" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
