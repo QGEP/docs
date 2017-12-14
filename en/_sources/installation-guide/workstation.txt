@@ -18,6 +18,14 @@ Create a new directory where you want to store the configuration in. (E.g. a new
 
 Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
+.. note:: Search for environment variable in your windows system settings, then click one the following options, for either a user or a system variable:
+
+    Click New to add a new variable name and value.
+    Click an existing variable, and then click Edit to change its name or value.
+    Click an existing variable, and then click Delete to remove it.
+
+  .. figure:: images/umgebungsvariablen_pgconfdir.jpg
+
 Inside this folder, there will be two files
 
 * ``pg_service.conf``

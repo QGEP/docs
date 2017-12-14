@@ -11,5 +11,10 @@ This represents a guide on how to administrate the database, install a Virtual m
    data-export/index
    
 
+In discussion:
 
+* dxf (in progress)
+* Shape
+* MOUSE / MikeUrban (please connect with the developer team if you are interested in this)
+* other
 
