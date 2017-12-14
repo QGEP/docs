@@ -7,9 +7,8 @@ This represents a guide on how to administrate the database, install a Virtual m
    :maxdepth: 2
 
    pgadmin/index
-   data-import/index
    data-export/index
-   
+   data-import/index
 
 In discussion:
 
