@@ -49,13 +49,14 @@ Restore the latest data model that also includes demo data:
 
 * Download demo data
 
-  * https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup
+  * https://github.com/QGEP/data/archive/demodata.zip
+  * Extract the files and look for qgep_demodata.backup
 
 * Right click the `qgep` schema
 
   * Click `Restore`
 
-  * Load your download of qgep.backup
+  * Load your download of qgep_demodata.backup
 
   .. figure:: images/qgep_restore.jpg
 
