@@ -25,6 +25,8 @@ Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
     Click an existing variable, and then click Delete to remove it.
 
   .. figure:: images/umgebungsvariablen_pgconfdir.jpg
+  
+  You can check your environment variables also within QGIS: Menu Settings - Options..., System Tab -> Environment
 
 Inside this folder, there will be two files
 
@@ -164,7 +166,7 @@ Working with more than one database
 
 * Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
 
-* Go further on as descript in 1.2 Database initialization
+* Go further on as described in 1.2 Database initialization
 
 * Change the ``pg_service.conf`` - file 
 
