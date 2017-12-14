@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.1. Bearbeiten von bestehenden Daten &mdash; QGEP 0.7 Dokumentation</title>
+  <title>2.3.1. Bearbeiten von bestehenden Daten &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.7 Dokumentation" href="../../index.html"/>
+    <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.3. Bearbeiten in QGEP" href="index.html"/>
         <link rel="next" title="2.3.2. Verschieben von Abdeckungen mit Haltungen und Abwasserknoten" href="moving.html"/>
         <link rel="prev" title="2.3. Bearbeiten in QGEP" href="index.html"/> 
@@ -60,7 +60,7 @@
           
           
             <div class="version">
-              0.7
+              0.5
             </div>
           
         
@@ -94,8 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Attribute der Hydraulikelemente ändern</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.7. Multiedit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.8. Änderungen Speichern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Änderungen Speichern</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Verschieben von Abdeckungen mit Haltungen und Abwasserknoten</a></li>
@@ -351,16 +350,20 @@
 <img alt="user-guide/editing/images/new_cover_connect_to_wws.jpg" src="user-guide/editing/images/new_cover_connect_to_wws.jpg" />
 </div>
 </div>
-<div class="section" id="multiedit">
-<h2>2.3.1.7. Multiedit<a class="headerlink" href="#multiedit" title="Link zu dieser Überschrift">¶</a></h2>
-<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
-</div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.8. Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.1.7. Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Drücken Sie <strong>Save</strong> und dann deaktivieren Sie den Bearbeitungsmodus oder klicken Sie auf <strong>Stop data entry</strong> wenn Sie mit dem <strong>QGEP Data Entry</strong> Arbeitsassistenten gearbeitet haben.</p>
 </li>
 </ul>
+<p>..* TO DO:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Changing relations (Verknüpfungen ändern)</li>
+<li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
+<li>Split channels into different reaches (Kanäle unterteilen)</li>
+</ul>
+</div></blockquote>
 <p>Link zur Homepage der Schweizer Abwasser Vereinigung - Datamodel VSA-DSS: &lt;<a class="reference external" href="http://dss.vsa.ch">http://dss.vsa.ch</a>&gt;`_</p>
 </div>
 </div>
@@ -384,7 +387,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module / OPENGIS.ch.
+        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
 
     </p>
   </div>
@@ -406,7 +409,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.7',
+            VERSION:'0.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
