@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QGEP'
-copyright = u'2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module / OPENGIS.ch'
+copyright = u'2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
