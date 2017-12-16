@@ -18,16 +18,6 @@ Create a new directory where you want to store the configuration in. (E.g. a new
 
 Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
-.. note:: Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:
-
-    Click New to add a new variable name and value.
-    Click an existing variable, and then click Edit to change its name or value.
-    Click an existing variable, and then click Delete to remove it.
-
-  .. figure:: images/umgebungsvariablen_pgconfdir.jpg
-  
-  You can check your environment variables also within QGIS: Menu Settings - Options..., System Tab -> Environment
-
 Inside this folder, there will be two files
 
 * ``pg_service.conf``
@@ -166,7 +156,7 @@ Working with more than one database
 
 * Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
 
-* Go further on as described in 1.2 Database initialization
+* Go further on as descript in 1.2 Database initialization
 
 * Change the ``pg_service.conf`` - file 
 

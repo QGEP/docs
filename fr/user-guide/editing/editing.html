@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.1. Modification de données existantes &mdash; documentation QGEP 0.7</title>
+  <title>2.3.1. Modification de données existantes &mdash; documentation QGEP 0.5</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.7" href="../../index.html"/>
+    <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.3. Édition dans QGEP" href="index.html"/>
         <link rel="next" title="2.3.2. Déplacer les couvercles avec les conduites et les noeuds de réseau" href="moving.html"/>
         <link rel="prev" title="2.3. Édition dans QGEP" href="index.html"/> 
@@ -60,7 +60,7 @@
           
           
             <div class="version">
-              0.7
+              0.5
             </div>
           
         
@@ -94,8 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-hydraulic-elements">2.3.1.5. Modification des attributs des éléments hydrauliques</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.7. Multiedit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.8. Sauvez les modifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.7. Sauvez les modifications</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer les couvercles avec les conduites et les noeuds de réseau</a></li>
@@ -351,16 +350,20 @@
 <img alt="user-guide/editing/images/new_cover_connect_to_wws.jpg" src="user-guide/editing/images/new_cover_connect_to_wws.jpg" />
 </div>
 </div>
-<div class="section" id="multiedit">
-<h2>2.3.1.7. Multiedit<a class="headerlink" href="#multiedit" title="Lien permanent vers ce titre">¶</a></h2>
-<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
-</div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.8. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.7. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Cliquez sur <strong>sauvez</strong> et ensuite désactivez le mode d&#8217;édition ou tout simplement cliquez sur <strong>Stop Data Entry</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP (<code class="docutils literal"><span class="pre">wizard</span></code>).</p>
 </li>
 </ul>
+<p>..* TO DO:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Changing relations (Verknüpfungen ändern)</li>
+<li>Change ws_type (Subklasse eines Abwasserbauwerkes ändern (ObjektID ändert dann auch!))</li>
+<li>Split channels into different reaches (Kanäle unterteilen)</li>
+</ul>
+</div></blockquote>
 <p>Lien vers la page principale de l&#8217; <strong>Association suisse des professionnels de la protection des eaux - Modèle de données VSA-DSS: &lt;https://www.vsa.ch/fr/domaines-cc/assainissement/structure-des-donnees-de-levacuation-des-eaux-des-agglomerations/&gt;`_</strong></p>
 </div>
 </div>
@@ -384,7 +387,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
 
     </p>
   </div>
@@ -406,7 +409,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.7',
+            VERSION:'0.5',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
