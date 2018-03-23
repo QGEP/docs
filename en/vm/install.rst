@@ -3,7 +3,7 @@ Install
 
 Download
 ^^^^^^^^
-Download the vm from `here <http://docs.qtibia.ro/qgis.vdi.xz>`_
+Download the vm from `here <https://docs.qtibia.ro/qgis.vdi.xz>`_
 
 .. note::
 
