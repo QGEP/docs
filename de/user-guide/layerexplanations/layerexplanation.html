@@ -155,7 +155,7 @@
 <h2>2.1.1.1. Hauptlayer<a class="headerlink" href="#main-layers" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="vw-qgep-wastewater-structure">
 <h3>2.1.1.1.1. vw_qgep_wastewater_structure<a class="headerlink" href="#vw-qgep-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Main layer for covers of manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new cover, a new wastewater node and a new wastewater structure. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).</p>
+<p>Haupt-Layer für Deckel von Schächten, Spezialbauwerken, Versickerungsanlagen, Einleitstellen (und ARA-Bauwerk). Wenn ein neuer Datensatz erstellt wird, wird immer ein neuer Deckel, ein neuer Abwasserknoten und ein neues Abwasserbauwerk erzeugt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse).</p>
 <div class="figure">
 <img alt="../../_images/schema_vw_qgep_wastewater_structure.jpg" src="../../_images/schema_vw_qgep_wastewater_structure.jpg" />
 </div>
@@ -173,7 +173,7 @@ Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein
 <h2>2.1.1.2. Abwasserbauwerke<a class="headerlink" href="#wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="od-wastewater-structure">
 <h3>2.1.1.2.1. od_wastewater_structure<a class="headerlink" href="#od-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
-<p>This layer shows the detailed geometries of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure.</p>
+<p>Dieser Layer zeigt die Detail-Geometrie der Abwasserbauwerke. Eine neue Geometrie wird über den Datensatz im Layer vw_qgep_wastewater_structure digitalisiert. Wenn eine bestehende Geometrie geändert warden soll, dann muss der Layer od_wastewater_structure bearbeitet warden.</p>
 </div>
 <div class="section" id="structure-parts">
 <h3>2.1.1.2.2. Bauwerkteile<a class="headerlink" href="#structure-parts" title="Link zu dieser Überschrift">¶</a></h3>
@@ -202,7 +202,7 @@ Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein
 </div>
 <div class="section" id="hydraulic-vw-wastewater-node">
 <h2>2.1.1.5. Hydraulic / vw_wastewater_node<a class="headerlink" href="#hydraulic-vw-wastewater-node" title="Link zu dieser Überschrift">¶</a></h2>
-<p>You use this layer only, if you want to change the situation of just one selected ww_node (and not the hole wastewater structure) or if you want to add a new ww_node to an existing wastewater structure. (you can add an additional ww_node also in the wastewater nodes-tab of the vw_qgep_wastewater_structure, but this node has no situation...).</p>
+<p>Dieser Layer kann nur benutzt werden, wenn nur ein ausgewählter Abwasserknoten in der Lage geändert warden soll (und nicht das ganze Abwasserbauwerk) oder wenn ein neuer Abwasserknoten zu einem bestehenden Abwasserbauwerk hinzugefügt warden soll. (Ein Abwasserknoten kann auch im Abwasserknoten-Blatt der vw-qgep_wastewater_structure-Eingabemaske hinzugefügt werden, aber dann hat dieser Knoten keine Koordinaten...).</p>
 <p>This layer must be expanded in the future with related tables (e.g. overflow-tables...)</p>
 </div>
 <div class="section" id="topology">
