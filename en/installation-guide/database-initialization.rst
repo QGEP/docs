@@ -32,7 +32,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
 
   * Change to this database
 
-* Create a new schema with the name `qgep`
+* Create a new schema with the name `qgep` (no more necessary with database release 1.0 or higher)
 
 * Open an :ref:`SQL-query` Window and create the extensions (if they're not created yet)
 
@@ -75,9 +75,11 @@ Restore the latest data model that also includes demo data:
 
 .. figure:: images/pgadmin_qgep_refresh.jpg
 
+Since database release 1.0 you will get 3 new schemas (qgep_od, qgep_sys, qgep_vl)
+
 * Update privileges for the database
 
-  * Right click the `qgep` schema
+  * Right click the `qgep_od` schema
 
   * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
     You can also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``
@@ -91,6 +93,8 @@ Restore the latest data model that also includes demo data:
     * Group `qgep`
 
     * Choose `ALL`
+    
+  * Right click the `qgep_sys` schema and repeat the steps described above for the qgep_od-schema
 
 Empty data model
 ^^^^^^^^^^^^^^^^
