@@ -49,7 +49,8 @@ Restore the latest data model that also includes demo data:
 
 * Download demo data
 
-  * https://github.com/QGEP/data/raw/demodata/qgep_demodata.backup
+  * https://github.com/QGEP/datamodel/releases/latest
+  * download `qgep_vx.y.z_structure_and_demo_data.backup`
 
 * Right click the `qgep` schema
 
@@ -97,8 +98,8 @@ Empty data model
 
 You also have the option to restore the latest empty data model (no demo data).
 
-* Download the data model by going to https://github.com/QGEP/datamodel/releases
-  and by downloading the latest `template_db.dump`.
+* Download the data model by going to https://github.com/QGEP/datamodel/releases/latest
+  and by downloading the latest `qgep_vx.y.z_structure_with_value_lists.sql`.
 
 * In order to restore you can follow the steps from :ref:`restore-demomodel`,
   using the template data model instead of the demo data one.
