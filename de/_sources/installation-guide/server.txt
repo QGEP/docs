@@ -11,11 +11,11 @@ Required Software
 Server installation
 ~~~~~~~~~~~~~~~~~~~
 
-* Install PostgreSQL (>=9.3)
+* Install PostgreSQL (>=9.6)
 
   * `Windows download page <http://www.postgresql.org/download/windows>`_
 
-* Install PostGIS (>=2.3)
+* Install PostGIS (>=2.4)
 
 .. note::
 
