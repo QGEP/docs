@@ -37,10 +37,11 @@ Depending on the **ws_type**, you will have different fields and tabs in the for
 Add other attributes in the **General** tab. 
 You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node).
 
-.. attention:: You can not add new records in the tabs **Covers**, **Structure Parts**, **Wastewater Nodes** and **Maintenance**, because you have to save first the Wastewater Structure-record to the database before you can add additional records.
-You can not use **Actions** for the same reason. First safe the record.
+.. note:: The idea of the **General** tab is, that in the normal digitizing process (95% of the manholes) the user has not to change the tabs to enter the attributes that are necessary.
 
-Click OK to close the form.
+.. attention:: You can not add new records in the tabs **Covers**, **Structure Parts**, **Wastewater Nodes** and **Maintenance**, because you have to save first the Wastewater Structure-record to the database before you can add additional records. You can not use **Actions** for the same reason. First safe the record.
+
+Click **OK** to close the form.
 
 .. figure:: images/wizard_wastewater_structure_manhole_form_data_ok3.jpg
 
