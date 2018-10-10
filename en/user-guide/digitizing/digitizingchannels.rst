@@ -23,25 +23,29 @@ Digitizing
 * In digitizing mode the cursor will automatically snap to the nearest cover or reach.
   When left clicking a line starts to draw.
 
-.. figure:: images/wizard_data_entry_reach_with_new_cursor.jpg
+.. figure:: images/wizard_data_entry_reach_with_new_cursor3.jpg
 
 * With further left clicks anywhere you can define intermediary points of the reach progression.
   You can also directly select another manhole to draw a straight channel.
 
-.. figure:: images/wizard_data_entry_reach_with_new_cursor2.jpg
+.. figure:: images/wizard_data_entry_reach_with_new_cursor2-3.jpg
 
 * You finish digitizing the line by right clicking. This will make the **vw_qep_reach** form appear.
 
-.. figure:: images/wizard_wastewater_structure_reach_form.jpg
+.. figure:: images/wizard_wastewater_structure_reach_form3.jpg
 
 .. note:: Keep in mind that the finishing point of the line is the last point where you **left** clicked.
   Thus, for digitizing a simple line with 2 points you need two **left clicks** to digitize the line and one
   **right click** to finish the line digitizing. 
 
-* Add the attributes on the **General** tab. For the profile type you will get a list of defined profiles.
+* Add the attributes on the **General** tab. 
+
+.. note:: Control the snapping to wastewater nodes or other reaches in the fields **rp_from/to_fk_wastewater_networkelement**
+
+* For the profile type you will get a list of defined profiles.
   You can edit those in **od_pipe_profile** table.
 
-.. figure:: images/wizard_wastewater_structure_reach_form_profiles.jpg
+.. figure:: images/wizard_wastewater_structure_reach_form_profiles3.jpg
 
 
 * When finished, then click the **OK** button. 
@@ -55,7 +59,7 @@ Digitizing
 * You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.
 * If you do not select the edit mode, you can just look add the existing data.
 
-.. figure:: images/reach_info_reach.jpg
+.. figure:: images/reach_info_reach3.jpg
 
 * For detailed information about editing see the :ref:`editing-data` chapter.
 
@@ -69,7 +73,7 @@ When a line object is digitized a series of steps take place in the background i
 * a new object is added and linked in the **channel** subclass (``od_channel``)
 * two new reach point objects are added and linked to the reach (**rp_from_node**, **rp_to_node**)
 
-.. figure:: images/wizard_wastewater_structure_reach_form_reach_points.jpg
+.. figure:: images/reach_form_reach_points3.jpg
 
 * a new reach object is generated in the **wastewater network elements** class (``od_wastewater_networkelement``)
   and its subclass **reach** (``od_reach``)
