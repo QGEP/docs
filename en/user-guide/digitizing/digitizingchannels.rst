@@ -50,8 +50,6 @@ Digitizing
 
 * When finished, then click the **OK** button. 
 
-.. figure:: images/wizard_wastewater_structure_reach_form_data_ok.jpg
-
 * Save the information of this layer by stopping the data entry wizard.
 
 .. figure:: images/stop_data_entry.jpg
