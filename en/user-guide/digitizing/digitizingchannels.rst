@@ -3,9 +3,10 @@ Digitizing Channels
 
 General
 -------
-Disable the Reuse last entered attribute values option (Settings -> Options -> Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.
 
 QGEP has a wizard to correctly build channels and connect them to wastewater structures respectively to wastewater nodes or other reaches (building up the topology for waste water nodes and reaches).
+
+.. attention:: There is an error with the wizard in qgep plugin version 1.1.4. See QGEP Issue #443 and #451.
 
 .. figure:: images/wizard_data_entry.jpg
 
@@ -14,7 +15,7 @@ QGEP has a wizard to correctly build channels and connect them to wastewater str
 .. attention:: Start digitizing in the direction of the flow by starting with the
   **from manhole node** and finishing with the **to manhole node**. 
 
-.. Note:: There is no tool yet to change the flow direction (topology), so try to make it right from the beginning.
+.. Note:: There is now a tool to change the flow direction (topology), but there is still a problem with storing the changed channels. See QGEP Issue #380.
 
 Digitizing
 ----------
@@ -29,7 +30,7 @@ Digitizing
 
 .. figure:: images/wizard_data_entry_reach_with_new_cursor2.jpg
 
-* You can finish digitizing the line by right clicking. This will make the **vw_qep_reach** form appear.
+* You finish digitizing the line by right clicking. This will make the **vw_qep_reach** form appear.
 
 .. figure:: images/wizard_wastewater_structure_reach_form.jpg
 
@@ -62,7 +63,7 @@ Digitizing
 Further attributes and classes
 ------------------------------
 
-When a line object is digitized a series of steps take place in the background in the QGIS database:
+When a line object is digitized a series of steps take place in the background in the QGEP database:
 
 * an new object is added in the **wastewater structure** class (``od_wastewater_structure``)
 * a new object is added and linked in the **channel** subclass (``od_channel``)
