@@ -25,7 +25,7 @@ To start with data entry select the QGEP button **Wizard**.
 
 .. figure:: images/button_data_entry_wizard_selected.jpg
 
-On the left side bottom, **QGEP Digitizing** window appears:
+On the left side bottom, **QGEP Data Entry** window appears:
 
 .. figure:: images/wizard_data_entry.jpg
 
