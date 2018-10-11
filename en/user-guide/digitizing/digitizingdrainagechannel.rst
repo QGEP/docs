@@ -17,3 +17,4 @@ Digitizing tool
 * Right click to stop.
 * The polygon is created in the **od_wastewater_structure** layer
 
+An other way is to open the vw_qgep_wastewater_structure form with the info tool and then choose **Digitize Drainage Channel** in the **Actions** menu of the form.
