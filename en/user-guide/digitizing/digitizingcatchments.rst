@@ -43,6 +43,8 @@ Digitizing
 
 .. note:: The new area does not overlap the old areas.
 
+.. figure:: images/catchment_area_digitizing3.jpg
+
 .. note:: To control the exact area of a selected polygon, see in the **Identify Results** window under **(Derived)**.
 
 .. note:: To connect the area with wastewater nodes, see chapter editing / connect wastewater network elements.
@@ -57,8 +59,8 @@ Editing
 Split Areas
 -----------
 
-*You can split existing areas with the **Split** tool. 
-*There is no need to select the area first. Left clicks to define the spliting line. Right click after having defined the last point of the spliting line.
+* You can split existing areas with the **Split** tool. 
+* There is no need to select the area first. Left clicks to define the spliting line. Right click after having defined the last point of the spliting line.
 
 .. figure:: images/split_tool.jpg
 
