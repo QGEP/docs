@@ -87,13 +87,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numérisation de canalisations de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.2.6. Suppression d&#8217;objets</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#delete-reaches">2.2.6.1. Suppression de conduites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-waste-water-structures">2.2.6.2. Suppression de chambres et autres structures assainissement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-wastewater-structures">2.2.6.2. Delete Manholes and other Wastewater Structures</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-covers">2.2.6.3. Suppression de couvercles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-structure-parts">2.2.6.4. Suppression d&#8217;éléments de structures</a></li>
 </ul>
@@ -156,6 +156,10 @@
 <p>Vous pouvez supprimer des objets ponctuels ou linéaires (avec tous les objets associés) dans les couches <strong>vw_qgep_(wastewater_structure/reach)</strong>. Vous pouvez aussi sélectionner et supprimer uniquement un objet spécifique (p.ex. un couvercle).</p>
 <div class="section" id="delete-reaches">
 <h2>2.2.6.1. Suppression de conduites<a class="headerlink" href="#delete-reaches" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Deleting a reach does not delete the associated objects (channel, reach point, networkelement). See QGEP issue #436</p>
+</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez la couche <strong>vw_qgep_reach</strong> et passez en mode édition.</p>
 </li>
@@ -166,8 +170,7 @@
 <img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Utilisez le menu <strong>Edition</strong> &#8211;&gt; <strong>Supprimer les entités</strong> pour effacer.</p>
-</li>
+<li>Use the top menu <strong>Edit</strong> &#8211;&gt; <strong>Delete Selected</strong> to delete.</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
@@ -188,8 +191,8 @@
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
 </div>
 </div>
-<div class="section" id="delete-manholes-and-other-waste-water-structures">
-<h2>2.2.6.2. Suppression de chambres et autres structures assainissement<a class="headerlink" href="#delete-manholes-and-other-waste-water-structures" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="delete-manholes-and-other-wastewater-structures">
+<h2>2.2.6.2. Delete Manholes and other Wastewater Structures<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
 </li>
@@ -200,9 +203,17 @@
 <li><p class="first">Stoppez le mode d&#8217;édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Delete wastewater structures deletes also all connected structure parts and all connected wastewater nodes.</p>
+</div>
 </div>
 <div class="section" id="delete-covers">
 <h2>2.2.6.3. Suppression de couvercles<a class="headerlink" href="#delete-covers" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Deleting a cover does not delete the associated structure part object. See QGEP issue #436</p>
+</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
 </li>
@@ -225,10 +236,15 @@
 </li>
 <li><p class="first">Stoppez le mode édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p>
 </li>
+<li>Second way to delete a cover: select the <strong>vw_cover</strong> layer and change to edit mode, select the cover, use <strong>Edit</strong> &#8211;&gt; <strong>Delete Selected</strong>, stop the editing mode</li>
 </ul>
 </div>
 <div class="section" id="delete-structure-parts">
 <h2>2.2.6.4. Suppression d&#8217;éléments de structures<a class="headerlink" href="#delete-structure-parts" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Deleting a structure part does not delete the associated structure part object. See QGEP issue #436</p>
+</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
 </li>

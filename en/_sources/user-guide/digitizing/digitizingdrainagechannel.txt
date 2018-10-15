@@ -1,10 +1,10 @@
-Digitizing Drainage Channel
-============================
+Digitizing Detailed Geometry as Drainage Channel
+================================================
 
 General
 -------------------------
 
-You can add a polygon to a manhole with function drainage channel just with drawing a simple line. 
+You can add a polygon to a wastewater structure just with drawing a simple line. The functions creates a rectangle from the line with a width of 20cm. This is specially useful for manholes with function drainage channel. 
 
 Digitizing tool
 -------------------------
@@ -15,5 +15,6 @@ Digitizing tool
 * Choose **Digitize Drainage Channel**
 * You can now start digitizing: draw a simple line with two clicks. 
 * Right click to stop.
+* The polygon is created in the **od_wastewater_structure** layer
 
-The functions creates a rectangle from the line with a width of 20cm.
+An other way is to open the vw_qgep_wastewater_structure form with the info tool and then choose **Digitize Drainage Channel** in the **Actions** menu of the form.

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.2. Digitizing Waste water structures &mdash; QGEP 0.5 documentazione</title>
+  <title>2.2.2. Digitizing Wastewater Structures &mdash; QGEP 0.5 documentazione</title>
   
 
   
@@ -87,14 +87,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Layers in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Digitizing in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Data entry</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Digitizing Waste water structures</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Digitizing Wastewater Structures</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.2.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.2.2. Digitizing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.2.3. Further attributes and classes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitizing detailed geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Digitizing Channels</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Deleting objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Digitizing Catchment Areas</a></li>
@@ -136,7 +136,7 @@
       
           <li><a href="index.html">2.2. Digitizing in QGEP</a> &raquo;</li>
       
-    <li>2.2.2. Digitizing Waste water structures</li>
+    <li>2.2.2. Digitizing Wastewater Structures</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -150,52 +150,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="digitizing-waste-water-structures">
-<h1>2.2.2. Digitizing Waste water structures<a class="headerlink" href="#digitizing-waste-water-structures" title="Link a questa intestazione">¶</a></h1>
+  <div class="section" id="digitizing-wastewater-structures">
+<h1>2.2.2. Digitizing Wastewater Structures<a class="headerlink" href="#digitizing-wastewater-structures" title="Link a questa intestazione">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.2.1. General<a class="headerlink" href="#general" title="Link a questa intestazione">¶</a></h2>
-<p>Disable the <strong>Reuse last entered attribute values</strong> option (Settings -&gt; Options -&gt; Digitizing) because it will stop your second new record. This bug will be corrected at least in QGIS 3.0.</p>
 <p>QGEP has a wizard to correctly collect manholes and special structures.</p>
 <p>Select the <strong>Wizard</strong> button, then click <strong>Start Data Entry</strong> and choose <strong>Wastewater Structure</strong> in the pull down menu.</p>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
 <div class="figure">
-<img alt="../../_images/wizard_wastewater_structure.jpg" src="../../_images/wizard_wastewater_structure.jpg" />
+<img alt="../../_images/wizard_wastewater_structure3.jpg" src="../../_images/wizard_wastewater_structure3.jpg" />
 </div>
 </div>
 <div class="section" id="digitizing">
 <h2>2.2.2.2. Digitizing<a class="headerlink" href="#digitizing" title="Link a questa intestazione">¶</a></h2>
 <p>Now the cursor changes to the digitizing symbol and you can select the location of the new point element.</p>
-<div class="figure">
-<img alt="../../_images/wizard_data_entry_with_new_cursor.jpg" src="../../_images/wizard_data_entry_with_new_cursor.jpg" />
-</div>
 <p>Then the <strong>vw_qgep_wastewater_structure</strong> form opens and you can start adding data in the <strong>General</strong> tab:</p>
 <div class="figure">
-<img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type.jpg" />
+<img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" />
 </div>
 <p>Select the ws_type you want (preselected is &#8216;manhole&#8217;):</p>
 <ul class="simple">
-<li>discharge_point</li>
-<li>infiltration_installation</li>
 <li>manhole</li>
 <li>special_structure</li>
+<li>discharge_point</li>
+<li>infiltration_installation</li>
 </ul>
-<p>Then add the identifier (this is the attribute that will be displayed on the map).
-As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
-<p>For manholes and special structures you then choose the function (in <strong>manhole_function</strong>
-or in <strong>special structure_function</strong>). It will be automatically displayed or hidden in the
-future depending on the <strong>ws_type</strong>)</p>
-<div class="figure">
-<img alt="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_manhole_function.jpg" />
+<p>Then add the identifier (this is the attribute that will be displayed on the map).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">If you do not enter an identifier, QGEP will enter the obj_id also as identifier (you can change later). As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
 </div>
+<p>Depending on the <strong>ws_type</strong>, you will have different fields and tabs in the form.</p>
 <p>Add other attributes in the <strong>General</strong> tab.
-You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node)
-You can not add new records in the tab Covers, Structure Parts, Wastewater Nodes and Maintenance, because you have to save first the Wastewater Structure-Record to the database before you can add aditional records.
-You can not use <strong>Aktionen</strong> for the same reason. First safe the record.
-Now you can click OK.</p>
+You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">The idea of the <strong>General</strong> tab is, that in the normal digitizing process (95% of the manholes) the user has not to change the tabs to enter the attributes that are necessary.</p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attenzione</p>
+<p class="last">You can not add new records in the tabs <strong>Covers</strong>, <strong>Structure Parts</strong>, <strong>Wastewater Nodes</strong> and <strong>Maintenance</strong>, because you have to save first the Wastewater Structure-record to the database before you can add additional records. You can not use <strong>Actions</strong> for the same reason. First safe the record.</p>
+</div>
+<p>Click <strong>OK</strong> to close the form.</p>
 <div class="figure">
-<img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok.jpg" />
+<img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
 </div>
 <p>Save the information of this layer by stopping the data entry wizard</p>
 <div class="figure">
@@ -204,20 +204,24 @@ Now you can click OK.</p>
 <p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
 If you do not select the edit mode, you can just look add the existing data.</p>
 <div class="figure">
-<img alt="../../_images/manhole_info_manhole.jpg" src="../../_images/manhole_info_manhole.jpg" />
+<img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
 </div>
 <p>For detailed information about editing see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</p>
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2>2.2.2.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link a questa intestazione">¶</a></h2>
-<p>When a point object is digitized a series of steps take place in the background in the QGIS database:</p>
+<p>When a wastewater_structure object is digitized a series of steps take place in the background in the QGIS database:</p>
 <ol class="loweralpha simple">
 <li>an new object in the class wastewater structure is added</li>
 <li>a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked</li>
-<li>a new cover object is added and linked to the waste water structure</li>
+<li>a new cover object is added and linked to the wastewater structure</li>
 <li>a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes</li>
 </ol>
 <p>To add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter).</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">To add a second cover or a second wastewater node to a wastewater structure, see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</p>
+</div>
 <p>..(take more from GEPView-Howto 1.2. Chapter 4.1)</p>
 </div>
 </div>

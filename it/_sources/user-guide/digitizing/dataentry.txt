@@ -16,13 +16,16 @@ Data entry in QGEP needs some understanding of the underlaying data model `VSA-D
 
 General
 -------
-When digitzing you start with the point elements (wastewater structures such as manholes, special structures). Then you can connect those with line elements (channels with reaches).
+
+Enable the **Reuse last entered attribute values** option (Settings -> Options -> Digitizing) in QGIS 3. 
+
+.. note:: When digitizing, you start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
 
 To start with data entry select the QGEP button **Wizard**.
 
 .. figure:: images/button_data_entry_wizard_selected.jpg
 
-On the left side bottom the **QGEP Digitizing** window appears:
+On the left side bottom, **QGEP Data Entry** window appears:
 
 .. figure:: images/wizard_data_entry.jpg
 
