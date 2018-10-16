@@ -31,8 +31,6 @@ Layers
 * QGEP has different predefined layers. For explanations, see the :ref:`layerexplanation` chapter.
 
 
-
-
 Changing attributes of point elements (manholes / special structures)
 ---------------------------------------------------------------------
 
@@ -100,14 +98,33 @@ Adding additional covers and nodes to an existing wastewater structure
 
 * Start editing vw_cover and add the new cover
 * In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure
+* After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.
 
 .. figure:: images/new_cover_connect_to_wws.jpg
+
+Adding a wastewater node to an existing reach
+---------------------------------------------
+
+In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.
+
+.. note:: This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).
+
+In the datamodel, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbiden to define a connection to a wastewater structure.
+
+In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node. 
+
+.. note:: If you really want to connect the node to a channel, then type the obj_id of the channel mannualy in the fk_wasterwater_structure field of the node.
  
 Saving changes
 --------------
  
 * Click **Save** and then deactivate the edit mode or click on **Stop data entry** if you have worked with the **QGEP Data Entry** wizard.
   
+Changing relations
+------------------
+
+
+
 ..* TO DO:
 
   * Changing relations (Verknüpfungen ändern)
