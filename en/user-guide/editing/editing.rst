@@ -28,79 +28,47 @@ Demo project
 Layers
 ------
 
-* QGEP has different predefined layers:
+* QGEP has different predefined layers. For explanations, see the :ref:`layerexplanation` chapter.
 
-Layer vw_qgep_cover
-^^^^^^^^^^^^^^^^^^^
 
-* The **vw_qgep_cover** layer allows to edit all point elements. This are the wastewater structures such as manholes,
-  special structures, discharge points and infiltration installation (**wwtp_structures**, which is also a wastewater
-  structure, are not supported yet).
-
-.. figure:: images/layer_vw_qgep_cover.jpg
-
-Layer vw_qgep_reach
-^^^^^^^^^^^^^^^^^^^
-
-* The **vw_qgep_reach** layer allows to edit all linear elements of the wastewater network (**reaches** / **channels**).
-
-Layer Waste water structures
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* This layer contains various sublayers related to the waste water structure. It also contains links to the mainntenance
-  events, the relation table between waste water structures and maintenance events and the organisation table (where **owners**,
-  **dataowners**, etc. are stored)
-
-Layer Value lists
-^^^^^^^^^^^^^^^^^
-
-* Here you can see various value lists that are related to the sewer network classes.
-
-Layer Hydraulic
-^^^^^^^^^^^^^^^
-
-* This layer allows to select and edit waste water nodes. Select the layer, then choose the **Identify Features** tool and double click on a node.
-
-Layer Topology
-^^^^^^^^^^^^^^
-
-* Here you can find all needed information about the topology of the network.
 
 
 Changing attributes of point elements (manholes / special structures)
 ---------------------------------------------------------------------
 
- * To change an attribute you first need to select the **vw_qgep_cover** layer and switch to the edit mode.
- * Or start the **QGEP Wizard** and click on **Start Data Entry**.
+ * To change an attribute you first need to select the **vw_qgep_wastewater_structure** layer.
+ * Switch to the edit mode or start the **QGEP Wizard** and click on **Start Data Entry**.
  * Then click on the **Identify features** button and choose the element you want to edit by double-clicking.
  
- .. figure:: images/qgep_info_button.jpg
+ .. figure:: images/identify_feature_tool.jpg
  
- * The **vw_qgep_cover** form will open.
+ * The **vw_qgep_wastewater_structure** form will open.
  
- .. figure:: images/form_vw_qgep_cover.jpg
+ .. figure:: ../digitizing/images/wizard_wastewater_structure_manhole_form_data_ok3.jpg
  
  * On the first tab you can change the most common attributes
  * To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
    kind of wastewater structure you can edit additional attributes in the respective tab (**special structure**, **manhole**).
  * The **covers** tab allows you to add additional covers.
- To add a second cover in this part is not recommended, because you can not define the geometry of the new point.
  
- * In **Structure parts** you can add also further parts such as **acces aids**, **backflow prevention**, **dryweather flume** etc.
+ .. attention:: It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the :ref:`Adding additional covers and nodes to an existing wastewater structure` chapter above.
  
- .. figure:: images/form_vw_qgep_cover_structure_parts.jpg
+ * In **Structure parts** tab you can add further parts such as **access aids**, **backflow prevention**, **dryweather flume** etc.
  
- * In **Wastewater nodes parts** you can edit or add all attributes of this class or add a second element.
+ .. figure:: images/form_vw_qgep_wastewater_structure_structure_parts.jpg
+ 
+ * In **Wastewater nodes** tab you can edit or add all attributes of this class or add a second element.
  To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.
 
- .. figure:: images/form_vw_qgep_cover_wastewater_nodes.jpg
+ .. attention:: It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the :ref:`Adding additional covers and nodes to an existing wastewater structure` chapter above.
  
 
 Changing attributes of linear elements (channels)
 -------------------------------------------------
 
- * To change an attribute you first need to select the **vw_qgep_cover** layer and switch to the edit mode.
- * Then click on the **Idendify features** button and choose the element you want to edit by double-clicking a channel.
+ * To change an attribute you first need to select the **vw_qgep_reach** 
+ * Switch to the edit mode.
+ * Then click on the **Idendify features** button and choose the element you want to edit by double-clicking a reach.
  * The **vw_qgep_reach** form will open.
  
   .. figure:: images/form_vw_qgep_reach.jpg
