@@ -82,7 +82,7 @@ Changing attributes of linear elements (channels)
 Changing attributes of hydraulic elements
 -----------------------------------------
 
-* With the **Identify feature** tool activated, right clicking an element outputs a selection of all existing objects.
+* With the **Identify feature** tool activated, right clicking an element outputs a selection of all existing objects at this place.
 
  .. figure:: images/qgep_info_button_rightclick.jpg
  
