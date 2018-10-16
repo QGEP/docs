@@ -79,8 +79,8 @@ Changing attributes of linear elements (channels)
   .. figure:: images/form_vw_qgep_reach_reachpoints.jpg
  
 
-Changing attributes of hydraulic elements
------------------------------------------
+An other way to choose an object
+--------------------------------
 
 * With the **Identify feature** tool activated, right clicking an element outputs a selection of all existing objects at this place.
 
@@ -91,10 +91,10 @@ Changing attributes of hydraulic elements
 Adding additional covers and nodes to an existing wastewater structure
 ----------------------------------------------------------------------
 
-The description is for an additional cover.
+.. note:: The following description is for an additional cover. It works similar for additional wastewater nodes.
 
 * Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.
-* Define in layer vw_cover / properties / fields the field fk_wastewater_structure as value relation
+* Define in layer vw_cover / Properties / **Attribute Forms** the field **fk_wastewater_structure** as value relation
 
 .. figure:: images/vw_cover_properties_fields.jpg
 
