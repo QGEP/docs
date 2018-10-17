@@ -42,7 +42,7 @@ How to delete a connection
 There is no special tool in the moment to delete a connection between networkelements.
 
 * Select the **vw_qgep_reach** layer and set it to edit mode
-* Click on the **Identify Features" button and select the reach to modify by double clicking
+* Click on the **Identify Features** button and select the reach to modify by double clicking
 * Delete the value in the **rp_..._fk_wastewater_networkelement** field to delete the connection
 
 .. figure:: images/connecting_delete_connection.jpg
