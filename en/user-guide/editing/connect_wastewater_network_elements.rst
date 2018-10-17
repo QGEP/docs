@@ -10,7 +10,7 @@ General
 
 * QGEP has a tool to connect wastewater network elements
 
-.. figure:: images/connect_wastewater_network_elements_buttton.jpg
+.. figure:: images/connect_wastewater_network_elements_button.jpg
 
 How to connect reaches to nodes or reaches to reaches
 -----------------------------------------------------
@@ -21,15 +21,15 @@ How to connect reaches to nodes or reaches to reaches
 * If you move the mouse over an reach, that can be connected, it is marked: you can click
 * Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again
 
-.. figure:: images/connecting1.jpg
+.. figure:: images/connecting_1.jpg
 
 * A window appears, where you can choose, which connection will be defined. If you connect a reach, the window looks like this:
 
-.. figure:: images/connecting2.jpg
+.. figure:: images/connecting_2.jpg
 
 * If everything is ok, you will see a message in a blue bar on top of the map-window
 
-.. figure:: images/connecting3.jpg
+.. figure:: images/connecting_3.jpg
 
 Video Tutorial
 -----------
