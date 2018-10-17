@@ -26,18 +26,18 @@ In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree 
 
 .. note:: Reaches, that are connected to one of the moved reaches, are still connected with the foreign key, but did not move. You have to corrected manually if necessary.
 
-* In the next figure, the special structure ZRAE is also moved by clicking on the cover and clicking at the new place. 
+* In the next figure, the special structure 'ZRAE' is also moved by clicking on the cover and clicking at the new place. 
 
 .. figure:: images/moving_wws_manhole2.jpg
 
-.. note:: The 2 nodes of the special structure and the 3 connected reachpoints are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to coorect manually if necessary.
+.. note:: The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to coorect manually if necessary.
 
 * If you want to move just the cover or a node of a wastewater structure, then select the **vw_cover** or **vw_wastewater_node** layer, set the layer to edit mode and move the cover / the node with the **Move Feature** tool.
-See the figure below: just the cover of manhole ZRAM is moved.
+See the figure below: just the cover of manhole 'ZRAM' is moved.
 
 .. figure:: images/moving_wws_manhole3.jpg
 
-.. attention:: 
+.. attention:: You can also move the wastewater structure with the **Vertex Tool**. The vertex tool moves all layers, that have objects at the same place, where you click. You can move the manhole 'ZB1' with this tool as shown in the first example. But you can not move the nodes and reachpoints, because they are not at the same place. And you can not move only covers in vw_cover. If there are nodes or reachpoints at the same place, they will move to.
 
 
 Video Tutorial
