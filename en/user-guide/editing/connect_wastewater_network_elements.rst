@@ -21,15 +21,15 @@ How to connect reaches to nodes or reaches to reaches
 * If you move the mouse over an reach, that can be connected, it is marked: you can click
 * Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again
 
-.. figure:: images/connect1.jpg
+.. figure:: images/connecting1.jpg
 
 * A window appears, where you can choose, which connection will be defined. If you connect a reach, the window looks like this:
 
-.. figure:: images/connect2.jpg
+.. figure:: images/connecting2.jpg
 
 * If everything is ok, you will see a message in a blue bar on top of the map-window
 
-.. figure:: images/connect3.jpg
+.. figure:: images/connecting3.jpg
 
 Video Tutorial
 -----------
@@ -48,7 +48,6 @@ There is no special tool in the moment to delete a connection between networkele
 .. figure:: images/connecting_delete_connection.jpg
 
 .. note:: Be aware of the 'VSA Erfassungsgrundsätze': A reach point from (rp_from_fk_wastewater_networkelement) should never be connected to another reach.
-For example, when you have a reach discharging directly into another one without a structure between the two,
-  the upstream reach should be connected to the downstream reach (rp_from_fk_wastewater_networkelement = downstream reach). 
-  But inversely, the downstream reach shouldn't be connected to the upstream one. This rule is for swwf-channels (secondary network). In pwwf-network, there must be always a node between to reaches.
+For example, when you have a reach discharging directly into another one without a structure between the two, the upstream reach should be connected to the downstream reach (rp_from_fk_wastewater_networkelement = downstream reach). 
+But inversely, the downstream reach shouldn't be connected to the upstream one. This rule is for swwf-channels (secondary network). In pwwf-network, there must be always a node between to reaches.
  
