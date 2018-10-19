@@ -67,4 +67,4 @@ There is in the moment no tool to create or to link a maintenance event to a sel
 Editing
 --------
 
- * Do as described in adding - but just edit existing maintenance events. Or edit the vw_qgep_maintenance tab (layer group **inspection**)
+ * Do as described in adding - but just edit existing maintenance events. Or edit the **vw_qgep_maintenance** table (layer group **inspection**)
