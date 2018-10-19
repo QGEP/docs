@@ -45,6 +45,7 @@ Link an existing Maintenance Event
  
  * Close the windows with **OK** and turn of the edit mode to save changes
 
+
 Unlink Maintenance Events
 -------------------------------------------------------------
 
@@ -58,13 +59,15 @@ Unlink Maintenance Events
  
  .. attention:: There is only the record in the RE-table deleted. The maintenance event record himself is not deleted and can by linked with other wastewater structures.
 
-Multi Edit
------------------------------------------------------------
-
-There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the **Maintenance** tab is empty. Multi edit with linked tables is not implemented in QGIS. 
-
 
 Editing
 --------
 
  * Do as described in adding - but just edit existing maintenance events. Or edit the **vw_qgep_maintenance** table (layer group **inspection**)
+
+
+Multi Edit
+-----------------------------------------------------------
+
+There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the **Maintenance** tab is empty. 
+Multi edit with linked tables is not implemented in QGIS. 
