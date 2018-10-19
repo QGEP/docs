@@ -113,7 +113,7 @@ In the datamodel, you can connect a node between reaches to a channel (because a
 
 In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node. 
 
-.. note:: If you really want to connect the node to a channel, then type the obj_id of the channel mannualy in the fk_wasterwater_structure field of the node.
+.. note:: If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.
  
 Saving changes
 --------------
