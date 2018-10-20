@@ -33,7 +33,7 @@
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.2. Digitalisieren in QGEP" href="index.html"/>
         <link rel="next" title="2.2.6. Objekte löschen" href="deletingobjects.html"/>
-        <link rel="prev" title="2.2.4. Digitizing Detailed Geometry as Drainage Channel" href="digitizingdrainagechannel.html"/> 
+        <link rel="prev" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" href="digitizingdrainagechannel.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -89,7 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Datenerfassung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitalisieren detaillierter Geometrie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Kanäle Digitalisieren</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Digitalisieren</a></li>
@@ -158,7 +158,7 @@
 <p>QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen).</p>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">There is an error with the wizard in qgep plugin version 1.1.4. See QGEP Issue #443 and #451.</p>
+<p class="last">Im qgep plugin Version 1.1.4 ist eine Fehler. Vgl. QGEP Issue #443 und #451.</p>
 </div>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
@@ -172,7 +172,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">There is now a tool to change the flow direction (topology), but there is still a problem with storing the changed channels. See QGEP Issue #380.</p>
+<p class="last">Es existiert noch ein Werkzeug um die Flussrichtung zu ändern (Topologie), aber es gibt noch ein Problem beim Sichern des geänderten Kanals. Vgl QGEP #Issue 380.</p>
 </div>
 </div>
 <div class="section" id="digitizing">
@@ -192,7 +192,8 @@
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" />
 </div>
 <ul class="simple">
-<li>You finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear.</li>
+<li><p class="first">Sie können das Digitalisieren der Linie mit einem Rechts Klick beenden. Es erscheint das <strong>vw_qgep_reach</strong> (Haltungs-)Formular.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form3.jpg" src="../../_images/wizard_wastewater_structure_reach_form3.jpg" />
@@ -202,15 +203,16 @@
 <p class="last">Behalten Sie im Kopf, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick um die Digitalisierung der Linie zu beenden.</p>
 </div>
 <ul class="simple">
-<li>Add the attributes on the <strong>General</strong> tab.</li>
+<li><p class="first">Fügen Sie ander Attribute im <strong>General</strong> Tab hinzu.</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">Control the snapping to wastewater nodes or other reaches in the fields <strong>rp_from/to_fk_wastewater_networkelement</strong></p>
+<p class="last">Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern <strong>rp_from/to_fk_wastewater_networkelement</strong> kontrolliert werden.</p>
 </div>
 <ul class="simple">
-<li>For the profile type you will get a list of defined profiles.
-You can edit those in <strong>od_pipe_profile</strong> table.</li>
+<li><p class="first">Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der <strong>od_pipe_profile</strong> Tabelle bearbeiten.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" src="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" />
@@ -240,7 +242,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2>2.2.5.3. Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>When a line object is digitized a series of steps take place in the background in the QGEP database:</p>
+<p>Wenn ein Linienobjekt digitalisiert wird, finden eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:</p>
 <ul class="simple">
 <li><p class="first">Ein neues Objekt wird in der Abwasserbauwerk-Tabelle hinzugefügt (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</p>
 </li>
@@ -276,7 +278,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
         <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.2.6. Objekte löschen" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Digitizing Detailed Geometry as Drainage Channel" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

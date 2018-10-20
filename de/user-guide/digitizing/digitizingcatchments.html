@@ -89,15 +89,15 @@
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Datenerfassung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitalisieren detaillierter Geometrie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Kanäle Digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Objekte löschen</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.2.7. Digitalisierung der Einzugsgebiete</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.7.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.7.2. Digitalisieren</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.2.7.3. Bearbeitung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-areas">2.2.7.4. Split Areas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Merge Areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-areas">2.2.7.4. Einzugsgebiete teilen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Einzugsgebiet zusammenführen</a></li>
 </ul>
 </li>
 </ul>
@@ -156,29 +156,31 @@
 <h1>2.2.7. Digitalisierung der Einzugsgebiete<a class="headerlink" href="#digitizing-catchment-areas" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.7.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Catchments can be digitized with QGIS standard tools.</p>
+<p>Die Einzugsgebiete können mit den QGIS Standard Werkzeugen digitalisiert werden.</p>
 <div class="figure">
 <img alt="../../_images/qgis_standard_tools.jpg" src="../../_images/qgis_standard_tools.jpg" />
 </div>
-<p>Catchment areas should not overlap and can have 4 connections to wastewater nodes.</p>
+<p>Einzugsgebiete dürfen sich nicht überlappen und können 4 Verknüpfungen zu Abwasserknoten haben.</p>
 </div>
 <div class="section" id="digitizing">
 <h2>2.2.7.2. Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Select the <strong>Enable Snapping</strong> button</li>
+<li><p class="first">Wähle den <strong>Enable Snapping</strong> Knopf</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/enable_snapping_button.jpg" src="../../_images/enable_snapping_button.jpg" />
 </div>
 <ul class="simple">
-<li>Open the <strong>Project Snapping Option Settings</strong>, check the <strong>od_catchment_area</strong> layer and check the <strong>avoid intersection</strong> checkbox for the od_catchment_area layer</li>
+<li><p class="first">Öffne die <strong>Projekt Objektfang Einstellungen</strong>, schalte den Layer <strong>od_catchment_area</strong> und schalte die <strong>Schnittpunkte vermeiden</strong> Checkbox für den Layer od_catchment_area ein</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_avoid_intersection2.jpg" src="../../_images/catchment_avoid_intersection2.jpg" />
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">New digitized catchement areas will not overlap with existing areas with this settings.</p>
+<p class="last">Neu erfasst Einzugsgebiete überlappen nicht mit bestehenden Einzugsgebieten dank diesen Einstellungen.</p>
 </div>
 <ul class="simple">
 <li><p class="first">Setzen Sie die Ebene <strong>od_catchment_area</strong> in den Bearbeitungsmodus</p>
@@ -190,41 +192,45 @@
 <img alt="../../_images/add_feature_tool.jpg" src="../../_images/add_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li>Start digitizing with left click and continue with left click for every vertex of the polygon</li>
+<li><p class="first">Start das Digitalisieren mit einem Links-Klick und fahre mit Links-Klick für jeden Stützpunkt des Polygons fort</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_area_digitizing1.jpg" src="../../_images/catchment_area_digitizing1.jpg" />
 </div>
 <ul class="simple">
-<li>Stop digitizing with right click</li>
+<li><p class="first">Beende das Digitalisieren mit einem Rechts-Klick</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">Keep in mind, that the finishing point of the polygon is the last point where you <strong>left</strong> clicked.</p>
+<p class="last">Bedenke, dass der Endpunkt des Polygon der letzte Punkt ist, wo ein Links-Klick verwendet wurde</p>
 </div>
 <ul class="simple">
-<li>The <strong>od_catchment_area</strong> form appears</li>
+<li><p class="first">Das <strong>od_catchment_area Objektattribute</strong> Fenster erscheint</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_area_digitizing2.jpg" src="../../_images/catchment_area_digitizing2.jpg" />
 </div>
 <ul class="simple">
-<li>When finished editing attributes, click the <strong>OK</strong> button</li>
+<li><p class="first">Wenn Sie fertig sind klicken Sie den <strong>OK</strong> Knopf</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The new area does not overlap the old areas.</p>
+<p class="last">Das neue Einzugsgebiet überlappt nicht mit den bestehenden Einzugsgebieten.</p>
 </div>
 <div class="figure">
 <img alt="../../_images/catchment_area_digitizing3.jpg" src="../../_images/catchment_area_digitizing3.jpg" />
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">To control the exact area of a selected polygon, see in the <strong>Identify Results</strong> window under <strong>(Derived)</strong>.</p>
+<p class="last">Um die Fläche eines ausgewählten Einzugsgebietes zu kontrollieren, kann im <strong>Abfrageergebnisse</strong> Fenster unter <strong>(abgeleitet)</strong> nachgeschaut werden.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">To connect the area with wastewater nodes, see chapter editing / connect wastewater network elements.</p>
+<p class="last">Für das Verknüpfen der Einzugsgebiete mit Abwasserknoten, vgl. das Kapitel Bearbeiten in QGEP / Abwassernetzwerkselemente verknüpfen</p>
 </div>
 </div>
 <div class="section" id="editing">
@@ -238,35 +244,41 @@
 </div>
 </div>
 <div class="section" id="split-areas">
-<h2>2.2.7.4. Split Areas<a class="headerlink" href="#split-areas" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.2.7.4. Einzugsgebiete teilen<a class="headerlink" href="#split-areas" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>You can split existing areas with the <strong>Split</strong> tool.</li>
-<li>There is no need to select the area first. Left clicks to define the spliting line. Right click after having defined the last point of the spliting line.</li>
+<li><p class="first">Einzugsgebiete können mit dem <strong>Objekte zerteilen</strong> Werkzeug geteilt werden.</p>
+</li>
+<li><p class="first">Das Einzugsgebiet muss nicht zuerst selektiert werden. Mit Links-Klicks wird die Trennlinie definiert. Mit einem Rechts-Klick wird abgeschlossen, wenn der letzte Punkt der Trennlinie abgesetzt ist.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/split_tool.jpg" src="../../_images/split_tool.jpg" />
 </div>
 </div>
 <div class="section" id="merge-areas">
-<h2>2.2.7.5. Merge Areas<a class="headerlink" href="#merge-areas" title="Link zu dieser Überschrift">¶</a></h2>
-<p>You can merge existing areas with the <strong>Merge selected Feature</strong> tool.</p>
+<h2>2.2.7.5. Einzugsgebiet zusammenführen<a class="headerlink" href="#merge-areas" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einzugsgebiet können mit dem <strong>Gewählte Objekte verschmelzen</strong> Tool zusammengeführt werden.</p>
 <div class="figure">
 <img alt="../../_images/merge_selected_feature_tool.jpg" src="../../_images/merge_selected_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li>Selected the <strong>od_catchment_area</strong> layer an set it into the edit mode</li>
-<li>Select at least two areas you want to merge</li>
-<li>Click the &#8220;Merge selected Feature&#8221; tool. -&gt; The <strong>Merge Feature Attributes</strong> windows appears.</li>
+<li><p class="first">Wählen Sie <strong>od_catchment_area</strong> und wechseln Sie zum Bearbeitungsmodus</p>
+</li>
+<li><p class="first">Mindestens zwei Einzugsgebiet auswählen, die zusammengeführt werden sollen</p>
+</li>
+<li><p class="first">Klicke das <strong>Gewählte Objekte verschmelzen</strong> Tool -&gt; zusammengeführt werden. Das <strong>Objektattribute verschmelzen</strong> Fenster erscheint.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/merge_feature_attributes.jpg" src="../../_images/merge_feature_attributes.jpg" />
 </div>
 <ul class="simple">
-<li>Choose which values will be taken from wich old record and click <strong>OK</strong>.</li>
+<li><p class="first">Wähle welche Werte von den alten Datensätzen übernommen werden sollen und klicke <strong>OK</strong>.</p>
+</li>
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">If you select one of the records and click on the <strong>Take attributes from the selected feature</strong> button, then the <strong>obj_id</strong> field will be skipped by default and the database will not accept the changes. After using this button, you have to choose one of the values in the <strong>obj_id</strong> field manually.</p>
+<p class="last">Wenn einer der Datensätze gewählt wird und der Knopf <strong>Attribute des gewählten Objektes übernehmen</strong> geklickt wird, dann wird das Feld <strong>obj_id</strong> standardmässig übersprungen und die Datenbank wird die Änderung nicht akzeptieren. Wenn dieser Knopf benutzt wird, muss für das <strong>obj_id</strong>-Feld manuell ein Wert definiert werden.</p>
 </div>
 </div>
 </div>
