@@ -88,12 +88,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitalisieren in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Bearbeiten in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="editing.html">2.3.1. Bearbeiten von bestehenden Daten</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Verschieben von Abdeckungen mit Haltungen und Abwasserknoten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.3.4. Abwassernetzwerkselemente verbinden</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.3.4.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connecting">2.3.4.2. Verbinden</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remark">2.3.4.3. Bemerkung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">2.3.4.2. How to connect reaches to nodes or reaches to reaches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-tutorial">2.3.4.3. Video Tutorial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-delete-a-connection">2.3.4.4. How to delete a connection</a></li>
 </ul>
 </li>
 </ul>
@@ -157,25 +158,57 @@
 </li>
 </ul>
 <div class="figure">
-<img alt="../../_images/connect_wastewater_network_elements_buttton.jpg" src="../../_images/connect_wastewater_network_elements_buttton.jpg" />
+<img alt="../../_images/connect_wastewater_network_elements_button.jpg" src="../../_images/connect_wastewater_network_elements_button.jpg" />
 </div>
 </div>
-<div class="section" id="connecting">
-<h2>2.3.4.2. Verbinden<a class="headerlink" href="#connecting" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
+<h2>2.3.4.2. How to connect reaches to nodes or reaches to reaches<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Schauen Sie sich diese Videoanleitung an um zu sehen wie es funktioniert &lt;<a class="reference external" href="https://vimeo.com/171536774">https://vimeo.com/171536774</a>&gt;`</p>
-</li>
+<li>It does not matter, which layer is selected</li>
+<li>The <strong>vw_qgep_reach</strong> layer has to be in edit mode</li>
+<li>Click the <strong>Connect wastewater networkelements</strong> button</li>
+<li>If you move the mouse over an reach, that can be connected, it is marked: you can click</li>
+<li>Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/connecting_1.jpg" src="../../_images/connecting_1.jpg" />
+</div>
+<ul class="simple">
+<li>A window appears, where you can choose, which connection will be defined. If you connect a reach, the window looks like this:</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/connecting_2.jpg" src="../../_images/connecting_2.jpg" />
+</div>
+<ul class="simple">
+<li>If everything is ok, you will see a message in a blue bar on top of the map-window</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/connecting_3.jpg" src="../../_images/connecting_3.jpg" />
+</div>
+</div>
+<div class="section" id="video-tutorial">
+<h2>2.3.4.3. Video Tutorial<a class="headerlink" href="#video-tutorial" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li>See <a class="reference external" href="https://vimeo.com/171536774">this video tutorial (QGIS version 2):</a></li>
 </ul>
 </div>
-<div class="section" id="remark">
-<h2>2.3.4.3. Bemerkung<a class="headerlink" href="#remark" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="how-to-delete-a-connection">
+<h2>2.3.4.4. How to delete a connection<a class="headerlink" href="#how-to-delete-a-connection" title="Link zu dieser Überschrift">¶</a></h2>
+<p>There is no special tool in the moment to delete a connection between networkelements.</p>
 <ul class="simple">
-<li><p class="first">Ein von_Haltungspunkt (rp_from_fk_wastewater_networkelement) soll nie mit einer anderen Haltung verknüpft werden.</p>
-</li>
-<li><p class="first">Beispiel: Wenn eine Haltung direct mit einer anderen Haltung verknüpft ist ohne ein Schachtbauwerk, dann soll die obere Haltung mit der unteren Haltung verknüpft warden (rp_from_fk_wastewater_networkelement = downstream reach). Aber die untere Haltung darf in diesem Fall nicht mit der oberen Haltung verknüpft werden.</p>
-</li>
-<li>To Do: Add picture for the example</li>
+<li>Select the <strong>vw_qgep_reach</strong> layer and set it to edit mode</li>
+<li>Click on the <strong>Identify Features</strong> button and select the reach to modify by double clicking</li>
+<li>Delete the value in the <strong>rp_..._fk_wastewater_networkelement</strong> field to delete the connection</li>
 </ul>
+<div class="figure">
+<img alt="../../_images/connecting_delete_connection.jpg" src="../../_images/connecting_delete_connection.jpg" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Be aware of the &#8216;VSA Erfassungsgrundsätze&#8217;: A reach point from (rp_from_fk_wastewater_networkelement) should never be connected to another reach.</p>
+</div>
+<p>For example, when you have a reach discharging directly into another one without a structure between the two, the upstream reach should be connected to the downstream reach (rp_from_fk_wastewater_networkelement = downstream reach).
+But inversely, the downstream reach shouldn&#8217;t be connected to the upstream one. This rule is for swwf-channels (secondary network). In pwwf-network, there must be always a node between to reaches.</p>
 </div>
 </div>
 
