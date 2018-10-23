@@ -92,12 +92,12 @@
 <li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Ebenen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.5. An other way to choose an object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.5. Ein andere Möglichkeit ein Objekt auszuwählen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.7. Adding a wastewater node to an existing reach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.7. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.8. Änderungen Speichern</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.9. Changing Wastewater Structure Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.10. Split a reach (channel) into different reaches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.9. Abwasserbauwerk Typ ändern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.10. Kanäle in verschiedene Haltungen unterteilen</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
@@ -190,15 +190,18 @@
 <div class="section" id="layers">
 <h2>2.3.1.2. Ebenen<a class="headerlink" href="#layers" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>QGEP has different predefined layers. For explanations, see the <span class="xref std std-ref">layerexplanation</span> chapter.</li>
+<li><p class="first">QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel <span class="xref std std-ref">layerexplanation</span>.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
 <h2>2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</li>
-<li>Switch to the edit mode or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</li>
+<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst den <strong>vw_qgep_wastewater_structure</strong> Layer auswählen.</p>
+</li>
+<li><p class="first">Aktivieren sie den Bearbeitungsmodus oder starten Sie den <strong>QGEP Wizard</strong> und klicken sie auf <strong>Start Data Entry</strong>.</p>
+</li>
 <li><p class="first">Dann klicken Sie auf den <strong>Identify features</strong> Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Doppelklick</p>
 </li>
 </ul>
@@ -206,7 +209,8 @@
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
 </div>
 <ul class="simple">
-<li>The <strong>vw_qgep_wastewater_structure</strong> form will open.</li>
+<li><p class="first">Das <strong>vw_qgep_wastewater_structure</strong> Formular öffnet sich.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
@@ -221,21 +225,23 @@
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> chapter above.</p>
+<p class="last">Es ist nicht empfohlen, einen weiteren Deckel in diesem Formular hinzuzufügen, weil für den neuen Deckel keine Koordinaten definiert werden können. Vgl das nachfolgende Kapitel <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> .</p>
 </div>
 <ul class="simple">
-<li>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</li>
+<li><p class="first">Unter dem <strong>Bauwerkteile/structure parts</strong> Reiter können Sie weitere Bauwerksteile wie zum Beispiel <strong>Einstiegshilfen/access aids</strong>, <strong>Rückstausicherung/backflow prevention</strong>, <strong>Trockenwetterrinne/dryweather flume</strong> etc. hinzufügen</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li>In <strong>Wastewater nodes</strong> tab you can edit or add all attributes of this class or add a second element.</li>
+<li><p class="first">Unter dem <strong>Abwasserknoten/wastewater nodes</strong> Reiter können Sie alle Attribute dieser Klasse bearbeiten oder hinzufügen oder einen  weiteren Abwasserknoten hinzufügen.</p>
+</li>
 </ul>
 <p>Es ist nicht empfohlen, an dieser Stelle einen weiteren Abwasserknoten hinzuzufügen, weil die Lage des neuen Abwasserknotens nicht definiert werden kann.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> chapter above.</p>
+<p class="last">Es ist nicht empfohlen, einen weiteren Abwasserknoten in diesem Formular hinzuzufügen, weil für den neuen Abwasserknoten keine Koordinaten definiert werden können. Vgl das nachfolgende Kapitel <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> .</p>
 </div>
 </div></blockquote>
 </div>
@@ -243,9 +249,12 @@
 <h2>2.3.1.4. Attribute der Linienelemente ändern (Kanäle)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></li>
-<li>Switch to the edit mode.</li>
-<li>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a reach.</li>
+<li><p class="first">Um einen Attribut zu ändern müssen Sie zuerst den <strong>vw_qgep_reach</strong> Layer auswählen.</p>
+</li>
+<li><p class="first">Aktivieren Sie den Bearbeitungsmodus.</p>
+</li>
+<li><p class="first">Dann klicken Sie auf den <strong>Identify features</strong> Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Doppelklick auf einen Kanal.</p>
+</li>
 <li><p class="first">Das <strong>vw_qgep_reach</strong> Formular öffnet sich.</p>
 </li>
 </ul>
@@ -268,9 +277,10 @@
 </div></blockquote>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
-<h2>2.3.1.5. An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.1.5. Ein andere Möglichkeit ein Objekt auszuwählen<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</li>
+<li><p class="first">Mit aktiviertem <strong>Identify feature</strong> Werkzeug wird durch Rechtsklicken eine Auswahl aller existierender Objekte an dieser Stelle ausgegeben.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -286,12 +296,13 @@
 <h2>2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
+<p class="last">Die folgende Beschreibung ist für das Hinzufügen eines weiteren Deckels. Es funktioniert analog auch für das Hinzufügen eines weiteren Abwasserknotens.</p>
 </div>
 <ul class="simple">
 <li><p class="first">Voraussetzung: Unter Projekt/Projekteigenschaften/Beziehungen muss die Beziehung zwischen vw_cover (Feld fk_wastewater_structure) und vw_qgep_wastewater_structure (Feld obj_id) vorhanden sein.</p>
 </li>
-<li>Define in layer vw_cover / Properties / <strong>Attribute Forms</strong> the field <strong>fk_wastewater_structure</strong> as value relation</li>
+<li><p class="first">Im Layer vw_cover / Eigenschaften /** Attribute Forms** muss das Feld fk_wastewater_structure als Beziehungsreferenz definiert sein</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
@@ -301,24 +312,25 @@
 </li>
 <li><p class="first">In der Form hat es hinter dem Feld fk_wastewater_structure einen  Knopf, mit dem der neue Deckel mit einem bestehenden Abwasserbauwerk verknüpft warden kann.</p>
 </li>
-<li>After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.</li>
+<li><p class="first">Nach dem Klick auf den Knopf erscheint ein blauer Hinweis im QGIS-Fenster. Das vw_cover-Formularfenster falls notwendig verschieben und mit einem Klick auf das Abwasserbauwerk die Verknüpfung des Deckels mit dem Bauwerk definieren.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/new_cover_connect_to_wws.jpg" src="../../_images/new_cover_connect_to_wws.jpg" />
 </div>
 </div>
 <div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
-<h2>2.3.1.7. Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Link zu dieser Überschrift">¶</a></h2>
-<p>In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.</p>
+<h2>2.3.1.7. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In gewissen Fällen muss ein Abwasserknoten zwischen zwei oder mehrere Haltungen gesetzt werden, obwohl dort kein Schachtbauwerk vorhanden ist.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).</p>
+<p class="last">Diese Fälle sind vorwiegend in PAA-Kanälen (primäre Abwasseranlagen) z.B. bei Gefällswechsel oder Materialwechsel oder bei einem Blindanschluss.</p>
 </div>
-<p>In the datamodel, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbiden to define a connection to a wastewater structure.</p>
-<p>In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node.</p>
+<p>Im VSA-Datenmodell kann ein Abwasserknoten auch mit einem Kanal verknüpft werden (weil ein Kanal auch ein Abwasserbauwerk ist). Im Moment wird diskutiert, ob ein Abwasserknoten zwischen Haltungen zwingend oder optional oder nie mit einem Abwasserbauwerk verbunden werden soll.</p>
+<p>In GQPE existiert im Moment kein Werkzeug, um einen Abwasserknoten mit einem Kanal zu verknüpfen.  Es werden also vorläufig nur die Haltungspunkte mit dem Abwasserknoten verknüpft.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.</p>
+<p class="last">Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden.</p>
 </div>
 </div>
 <div class="section" id="saving-changes">
@@ -329,18 +341,18 @@
 </ul>
 </div>
 <div class="section" id="changing-wastewater-structure-type">
-<h2>2.3.1.9. Changing Wastewater Structure Type<a class="headerlink" href="#changing-wastewater-structure-type" title="Link zu dieser Überschrift">¶</a></h2>
-<p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
+<h2>2.3.1.9. Abwasserbauwerk Typ ändern<a class="headerlink" href="#changing-wastewater-structure-type" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Im vw_qgep_wastewater_structure Formular kann die Subklasse das Abwasserbauwerks geändert werden (z.B. von Normschacht zu Spezialbauwerk oder Versickerungsanlage). Der alte Subklassen-Datensatz wird dabei gelöscht und die Subklassen-spezifischen Felder müssen neu eingegeben werden. Aber alle Verknüpfungen (die beziehen sich auf die Klasse Abwasserbauwerk und nicht auf die Subklasse) und auch die Obj_ID oder die Bezeichnung bleiben unverändert.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">You can not change a point - wastewater structure (e.g. manhole) to a line wastewater structure (channel) or vice versa.</p>
+<p class="last">Ein Schacht-Abwasserbauwerk kann nicht in ein Kanal-Abwasserbauwerk geändert werden oder umgekehrt.</p>
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2>2.3.1.10. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link zu dieser Überschrift">¶</a></h2>
-<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.</p>
-<p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
-<p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.</p>
+<h2>2.3.1.10. Kanäle in verschiedene Haltungen unterteilen<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das ist eine ziemlich komplexe Funktion und zur Zeit nicht implementiert in QGEP. Es gibt ein QGIS-Werkzeug, um Objekte aufzuteilen, aber wenn dieses Wekzeug auf den Layer vw_qgep_reach angewendet wird, resultiert ein Datenbank-Fehler, weil die Obj_ID des aufgeteilten (= duplizierten) Kanales nicht mehr eindeutig sind.</p>
+<p>Temporäre Lösung: Die bestehende Haltung ändern und eine zweite Haltung manuell erstellen. Dann auch die Verknüpfungen kontrollieren.</p>
+<p>In QGEP ist ein Werkzeug geplant, mit dem Haltung aufgeteilt werden können. Der Benutzer kann wählen ob nur die Haltung aufgeteilt werden soll oder auch die Kanäle, ob ein neuer Abwasserknoten zwischen den Haltung eingefügt und verbunden werden soll. Mit dem Werkzeug sollen die neuen Haltungspunktkoten berechnet werden können die bestehenden Abwassernetzelement-Verknüpfungen sind anzupassen falls notwendig.</p>
 <p>Link zur Homepage der Schweizer Abwasser Vereinigung - Datamodel VSA-DSS: &lt;<a class="reference external" href="http://dss.vsa.ch">http://dss.vsa.ch</a>&gt;`_</p>
 </div>
 </div>
