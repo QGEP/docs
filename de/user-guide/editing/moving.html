@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes &mdash; QGEP 0.5 Dokumentation</title>
+  <title>2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten &mdash; QGEP 0.5 Dokumentation</title>
   
 
   
@@ -88,9 +88,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitalisieren in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Bearbeiten in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="editing.html">2.3.1. Bearbeiten von bestehenden Daten</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.3.2.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to">2.3.2.2. How to</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to">2.3.2.2. Anleitung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#video-tutorial">2.3.2.3. Video Tutorial</a></li>
 </ul>
 </li>
@@ -133,7 +133,7 @@
       
           <li><a href="index.html">2.3. Bearbeiten in QGEP</a> &raquo;</li>
       
-    <li>2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</li>
+    <li>2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -148,60 +148,66 @@
            <div itemprop="articleBody">
             
   <div class="section" id="moving-wastewater-structures-with-reaches-covers-and-nodes">
-<span id="moving-covers-with-reaches-and-wastewater-nodes"></span><h1>2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes<a class="headerlink" href="#moving-wastewater-structures-with-reaches-covers-and-nodes" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="moving-covers-with-reaches-and-wastewater-nodes"></span><h1>2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten<a class="headerlink" href="#moving-wastewater-structures-with-reaches-covers-and-nodes" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Eine Anleitung zur Verschiebung von Abdeckungen mit Haltungen und Abwasserknoten verglichen mit der Verschiebung nur von Abdeckungen in QGEP</p>
 <div class="section" id="general">
 <h2>2.3.2.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It&#8217;s not unusual, that manholes are digitized the first time with low precision. Later the manholes are measured, and there is the need, to move the whole wastewater structure (means cover, node and reachpoints of all reaches) to the measuered point.</p>
+<p>Es kommt oft vor, das Schächte zuerst mit beschränkter Genauigkeit digitalisiert werden. Später wird der Schacht vermessen und es wird notwendig, das ganze Bauwerk (also Deckel, Knoten und Haltungspunkte aller verknüpften Haltungen) im GIS auf den gemessenen Punkt zu verschieben.</p>
 </div>
 <div class="section" id="how-to">
-<h2>2.3.2.2. How to<a class="headerlink" href="#how-to" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.2.2. Anleitung<a class="headerlink" href="#how-to" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie die <strong>vw_qgep_wastewater_structure</strong> Ebene</p>
+<li><p class="first">Wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p>
 </li>
-<li>Set the layer to edit mode</li>
-<li>Select the <strong>Move Feature</strong> tool (standard QGIS tool in the advanced digitizing toolbar)</li>
+<li><p class="first">Setzen Sie die Layer in den Bearbeitungsmodus</p>
+</li>
+<li><p class="first">Wähle das <strong>Objekt(e) verschieben</strong> Werkzeug (Standard QGIS Werkzeug in der Digitalisierungswerkzeugleiste)</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/moving_wws_before.jpg" src="../../_images/moving_wws_before.jpg" />
 </div>
 <ul class="simple">
-<li>Left Click one the wastewater_structure you want to move and left click again at the new place</li>
+<li><p class="first">Links-Klick auf das Abwasserbauwerk, das verschoben werden soll und erneuter Links-Klick an der neuen Stelle</p>
+</li>
 </ul>
-<p>In the figure below, there is the &#8216;ZB1&#8217; manhole moved. Cover, node and all tree reachpoints are moved to the new place</p>
+<p>In der Abbildung unten ist der Schacht &#8216;ZB1&#8217; verschoben worden. Deckel, Knoten und alle drei Haltungspunkte wurden an die neue Stelle verschoben</p>
 <div class="figure">
 <img alt="../../_images/moving_wws_manhole1.jpg" src="../../_images/moving_wws_manhole1.jpg" />
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">Reaches, that are connected to one of the moved reaches, are still connected with the foreign key, but did not move. You have to corrected manually if necessary.</p>
+<p class="last">Haltungen, die mit einem der verschobenen Haltungen verknüpft sind, sind immer noch über den Fremdschlüssel verknüpft, aber sie wurden nicht mitverschoben. Die graphische Anpassung muss allenfalls manuell erfolgen.</p>
 </div>
 <ul class="simple">
-<li>In the next figure, the special structure &#8216;ZRAE&#8217; is also moved by clicking on the cover and clicking at the new place.</li>
+<li><p class="first">In der nächsten Abbildung wurde auch das Spezialbauwerk &#8216;ZRAE&#8217; verschoben durch einen Klick auf den Deckel und einen Klick am neuen Ort.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/moving_wws_manhole2.jpg" src="../../_images/moving_wws_manhole2.jpg" />
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to coorect manually if necessary.</p>
+<p class="last">Die 2 Knoten des Spezialbauwerks und die 3 verknüpften Haltungspunkte worden um die gleiche Distanz und in die gleiche Richtung wie der Deckel verschoben. Die Detailgeometrie (Fläche) des Abwasserbauwerks wurde aber nicht mitverschoben. Die graphische Anpassung muss allenfalls manuell erfolgen.</p>
 </div>
 <ul class="simple">
-<li>If you want to move just the cover or a node of a wastewater structure, then select the <strong>vw_cover</strong> or <strong>vw_wastewater_node</strong> layer, set the layer to edit mode and move the cover / the node with the <strong>Move Feature</strong> tool.</li>
+<li><p class="first">Wenn nur der Deckel oder ein Abwasserknoten eines Schachtes verschoben werden soll, dann muss der <strong>vw_cover</strong> oder vw_wastewater_node** Layer gewählt werden. Der Layer muss im Bearbeitungsmodus sein, damit mit dem <strong>Objekt(e) verschieben</strong> Werkzeug der Deckel / der Abwasserknoten verschoben werden kann.</p>
+</li>
 </ul>
-<p>See the figure below: just the cover of manhole &#8216;ZRAM&#8217; is moved.</p>
+<p>Vgl. die Abbildung unten: Nur der Deckel von Schacht &#8216;ZRAM&#8217; wurde verschoben.</p>
 <div class="figure">
 <img alt="../../_images/moving_wws_manhole3.jpg" src="../../_images/moving_wws_manhole3.jpg" />
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">You can also move the wastewater structure with the <strong>Vertex Tool</strong>. The vertex tool moves all layers, that have objects at the same place, where you click. You can move the manhole &#8216;ZB1&#8217; with this tool as shown in the first example. But you can not move the nodes and reachpoints, because they are not at the same place. And you can not move only covers in vw_cover. If there are nodes or reachpoints at the same place, they will move to.</p>
+<p class="last">Abwasserbauwerke können auch mit dem <strong>Knotenwerkzeug</strong> verschoben werden. Das Knotenwerkzeug verschiebt in allen Layern Objekte, welche an der Stelle des ersten Klick liegen. Man kann den Schacht &#8216;ZB1&#8217; damit genau gleich verschieben, wie im ersten Beispiel gezeigt. Aber man kann damit nicht die Knoten und die Haltungspunkte aus dem zweiten Beispiel verschieben, weil diese nicht am gleichen Ort sind. Man kann nicht nur den Deckel in vw_cover verschieben. Wenn Knoten und Haltungspunkte am gleichen Ort sind, werden sie mitverschoben.</p>
 </div>
 </div>
 <div class="section" id="video-tutorial">
 <h2>2.3.2.3. Video Tutorial<a class="headerlink" href="#video-tutorial" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>See <a class="reference external" href="https://vimeo.com/162978741">this video tutorial (version QGIS 2)</a></li>
+<li><p class="first">Vgl. <a class="reference external" href="https://vimeo.com/162978741">video tutorial (version QGIS 2)</a></p>
+</li>
 </ul>
 </div>
 </div>

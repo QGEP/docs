@@ -33,7 +33,7 @@
     <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.3. Bearbeiten in QGEP" href="index.html"/>
         <link rel="next" title="2.3.4. Abwassernetzwerkselemente verbinden" href="connect_wastewater_network_elements.html"/>
-        <link rel="prev" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/> 
+        <link rel="prev" title="2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten" href="moving.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -88,14 +88,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitalisieren in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Bearbeiten in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="editing.html">2.3.1. Bearbeiten von bestehenden Daten</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.3.3.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-new-maintenance-event">2.3.3.2. Ein neues Erhaltungsereignis hinzufügen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#link-an-existing-maintenance-event">2.3.3.3. Link an existing Maintenance Event</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#unlink-maintenance-events">2.3.3.4. Unlink Maintenance Events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#link-an-existing-maintenance-event">2.3.3.3. Verknüpfen mit einem bestehenden Erhaltungsereignis.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unlink-maintenance-events">2.3.3.4. Verknüpfung zu Erhaltungsereignissen auflösen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.3.3.5. Bearbeitung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multi-edit">2.3.3.6. Multi Edit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-edit">2.3.3.6. Mehrfachbearbeitung</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Abwassernetzwerkselemente verbinden</a></li>
@@ -167,15 +167,18 @@
 </li>
 <li><p class="first">Mit dem <strong>Identify Features</strong> Werkzeug können Sie <strong>Schächte</strong> oder <strong>Haltungen</strong> auswählen indem sie den zugehörigen Layer auswählen (<strong>vw_qgep_wastewater_structure</strong> oder <strong>vw_qgep_reach</strong>)</p>
 </li>
-<li>The respective form will open. Change to the <strong>Maintenance</strong> tab.</li>
-<li>Create a new maintenance event with the <strong>Add child feature</strong> button.</li>
+<li><p class="first">Das entsprechende Formular öffnet sich. Wechseln Sie zum <strong>Erhaltungsereignis</strong> -Reiter</p>
+</li>
+<li><p class="first">Erstellen Sie ein neues Erhaltungsereignis mit dem <strong>Kindobjekt hinzufügen</strong> Knopf.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/maintenance_add_child.jpg" src="../../_images/maintenance_add_child.jpg" />
 </div>
 <ul class="simple">
-<li>Edit the new record in the vw_qgep_maintenance form, then click <strong>OK</strong></li>
+<li><p class="first">Bearbeite den neuen Datensatz im vw_qgep_maintenance Formular, dann klicke den <strong>OK</strong> Knopf</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/maintenance_new_record.jpg" src="../../_images/maintenance_new_record.jpg" />
@@ -186,34 +189,40 @@
 </div></blockquote>
 </div>
 <div class="section" id="link-an-existing-maintenance-event">
-<h2>2.3.3.3. Link an existing Maintenance Event<a class="headerlink" href="#link-an-existing-maintenance-event" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.3.3. Verknüpfen mit einem bestehenden Erhaltungsereignis.<a class="headerlink" href="#link-an-existing-maintenance-event" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Aktivieren Sie den Bearbeitungsmodus.</p>
 </li>
 <li><p class="first">Mit dem <strong>Identify Features</strong> Werkzeug können Sie <strong>Schächte</strong> oder <strong>Haltungen</strong> auswählen indem sie den zugehörigen Layer auswählen (<strong>vw_qgep_wastewater_structure</strong> oder <strong>vw_qgep_reach</strong>)</p>
 </li>
-<li>The respective form will open. Change to the <strong>Maintenance</strong> tab.</li>
-<li>Click the <strong>Link existing child features</strong> button.</li>
+<li><p class="first">Das entsprechende Formular öffnet sich. Wechseln Sie zum <strong>Erhaltungsereignis</strong> -Reiter</p>
+</li>
+<li><p class="first">Klicke den <strong>Vorhandene Kindobjekte verknüpfen</strong> Knopf.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/maintenance_link_child.jpg" src="../../_images/maintenance_link_child.jpg" />
 </div>
 <ul class="simple">
-<li>Choose a maintenenace event from the <strong>Dialog</strong> window by clicking in the box of the record. The box must by yellow. Then click <strong>OK</strong></li>
-<li>Close the windows with <strong>OK</strong> and turn of the edit mode to save changes</li>
+<li><p class="first">Wähle ein Erhaltungsereignis aus dem <strong>Dialog</strong> Fenster mit Klick in in das Kästchen vor dem Datensatz. Das Kästchen muss gelb sein. Dann auf <strong>OK</strong> klicken</p>
+</li>
+<li><p class="first">Schliessen Sie die Fenster mit <strong>OK</strong> und  beenden Sie den Bearbeitungsmodus um die Änderungen zu speichern</p>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="unlink-maintenance-events">
-<h2>2.3.3.4. Unlink Maintenance Events<a class="headerlink" href="#unlink-maintenance-events" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.3.4. Verknüpfung zu Erhaltungsereignissen auflösen<a class="headerlink" href="#unlink-maintenance-events" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Aktivieren Sie den Bearbeitungsmodus.</p>
 </li>
 <li><p class="first">Mit dem <strong>Identify Features</strong> Werkzeug können Sie <strong>Schächte</strong> oder <strong>Haltungen</strong> auswählen indem sie den zugehörigen Layer auswählen (<strong>vw_qgep_wastewater_structure</strong> oder <strong>vw_qgep_reach</strong>)</p>
 </li>
-<li>The respective form will open. Change to the <strong>Maintenance</strong> tab.</li>
-<li>Select a maintenance event by clicking in the box (box gets yellow), then click the <strong>Delete child feature</strong> button.</li>
+<li><p class="first">Das entsprechende Formular öffnet sich. Wechseln Sie zum <strong>Erhaltungsereignis</strong> -Reiter</p>
+</li>
+<li><p class="first">Wähle ein Erhaltungsereignis mit Klick in das Kästchen vor dem Datensatz (das Kästchen wird gelb), dann klicke den <strong>Kindobjekt löschen</strong> Knopf.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -221,7 +230,7 @@
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">There is only the record in the RE-table deleted. The maintenance event record himself is not deleted and can by linked with other wastewater structures.</p>
+<p class="last">Es wird nur der Datensatz in der RE-Tabelle gelöscht. Der Erhaltungsereignis-Datensatz selbst wird nicht gelöscht. Er kann weiterhin mit anderen Abwasserbauwerken verknüpft werden.</p>
 </div>
 </div></blockquote>
 </div>
@@ -229,14 +238,14 @@
 <h2>2.3.3.5. Bearbeitung<a class="headerlink" href="#editing" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Do as described in adding - but just edit existing maintenance events. Or edit the <strong>vw_qgep_maintenance</strong> table (layer group <strong>inspection</strong>)</li>
+<li><p class="first">Machen Sie es wie es beim Hinzufügen beschrieben - aber bearbeiten Sie nur die bereits bestehenden Erhaltungsereignisse. Oder bearbeiten Sie die <strong>vw_qgep_maintenance**Tabelle (Layergruppe **Inspektion</strong>)</p>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="multi-edit">
-<h2>2.3.3.6. Multi Edit<a class="headerlink" href="#multi-edit" title="Link zu dieser Überschrift">¶</a></h2>
-<p>There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the <strong>Maintenance</strong> tab is empty.
-Multi edit with linked tables is not implemented in QGIS.</p>
+<h2>2.3.3.6. Mehrfachbearbeitung<a class="headerlink" href="#multi-edit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Zur Zeit gibt es kein Werkzeug um ein Erhaltungsereignis mit einer Auswahl von Haltungen oder Abwasserbauwerken zu verknüpfen. Wenn das Formular im Mehrfachbearbeiten-Modus geöffnet wird, ist der <a href="#id1"><span class="problematic" id="id2">**</span></a>Erhaltungsereignis**Reiter leer. Mehrfachbearbeiten mit verknüpften Tabellen ist zur Zeit in QGIS nicht umgesetzt.</p>
 </div>
 </div>
 
@@ -250,7 +259,7 @@ Multi edit with linked tables is not implemented in QGIS.</p>
         <a href="connect_wastewater_network_elements.html" class="btn btn-neutral float-right" title="2.3.4. Abwassernetzwerkselemente verbinden" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="moving.html" class="btn btn-neutral" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="moving.html" class="btn btn-neutral" title="2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
