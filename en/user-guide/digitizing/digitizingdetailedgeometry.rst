@@ -37,4 +37,4 @@ Digitizing tool
 
 .. figure:: images/digitizing_detailedgeometry4.jpg
 
-An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Aktionen** menu of the form.
+An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Actions** menu of the form.
