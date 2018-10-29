@@ -8,7 +8,7 @@ You can add a detailed geometry to waste water structures.
 
 This is recommended for:
 
-* Special structures and infiltration points, because they are not normed structures like manholes,
+* Special structures and discharge points, because they are not normed structures like manholes,
   where you can define **dimension1** and **dimension2** to describe the extension.
 * Infiltration installations where **dimension1** and **2** are not enough to describe the geometry
 
