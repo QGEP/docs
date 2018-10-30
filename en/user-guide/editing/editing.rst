@@ -49,7 +49,7 @@ Changing attributes of point elements (manholes / special structures)
    kind of wastewater structure you can edit additional attributes in the respective tab (**special structure**, **manhole**).
  * The **covers** tab allows you to add additional covers.
  
- .. attention:: It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the :ref:`Adding-additional-covers-and-nodes-to-a-existing-wastewater-structure` chapter above.
+ .. attention:: It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the :ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure` chapter above.
  
  * In **Structure parts** tab you can add further parts such as **access aids**, **backflow prevention**, **dryweather flume** etc.
  
@@ -58,7 +58,7 @@ Changing attributes of point elements (manholes / special structures)
  * In **Wastewater nodes** tab you can edit or add all attributes of this class or add a second element.
  To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.
 
- .. attention:: It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the :ref:`Adding additional covers and nodes to an existing wastewater structure` chapter above.
+ .. attention:: It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the :ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure` chapter above.
  
 
 Changing attributes of linear elements (channels)
