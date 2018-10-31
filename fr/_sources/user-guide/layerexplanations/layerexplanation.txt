@@ -1,3 +1,5 @@
+.. _layer-explanation:
+
 Layer explanation
 =================
 

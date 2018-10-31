@@ -93,7 +93,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.5. Ein andere Möglichkeit ein Objekt auszuwählen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.6. Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.7. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.8. Änderungen Speichern</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.9. Abwasserbauwerk Typ ändern</a></li>
@@ -190,8 +190,7 @@
 <div class="section" id="layers">
 <h2>2.3.1.2. Layer<a class="headerlink" href="#layers" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel <span class="xref std std-ref">layerexplanation</span>.</p>
-</li>
+<li>QGEP has different predefined layers. For explanations, see the <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span>Layer Erläuterungen</span></a> chapter.</li>
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
@@ -216,32 +215,32 @@
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Auf dem ersten Tab können Sie die am häufigsten benutzten Attribute ändern</p>
+<li><p class="first">Auf dem ersten Reiter können Sie die am häufigsten benutzten Attribute erfassen</p>
 </li>
-<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B Deckel) zu ändern, müssen Sie den entsprechenden Tab auswählen. Abhängig von der Art des Abwasserbauwerks können Sie zusätzliche Attribute im zugehörigen Tab bearbeiten (<strong>special structure</strong>, <strong>manhole</strong>).</p>
+<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B Deckel) zu ändern, müssen Sie den entsprechenden Reiter auswählen. Abhängig von der Art des Abwasserbauwerks können Sie zusätzliche Attribute im zugehörigen Reiter bearbeiten (<strong>Spezialbauwerk</strong>, <strong>Normschacht</strong>).</p>
 </li>
-<li><p class="first">Der <strong>covers</strong> Tab erlaubt ihnen zusätzliche Deckel hinzuzufügen.</p>
+<li><p class="first">Der Reiter <strong>Deckel</strong> erlaubt zusätzliche Deckel hinzuzufügen.</p>
 </li>
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">Es ist nicht empfohlen, einen weiteren Deckel in diesem Formular hinzuzufügen, weil für den neuen Deckel keine Koordinaten definiert werden können. Vgl das nachfolgende Kapitel <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> .</p>
+<p class="last">It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Unter dem <strong>Bauwerkteile/structure parts</strong> Reiter können Sie weitere Bauwerksteile wie zum Beispiel <strong>Einstiegshilfen/access aids</strong>, <strong>Rückstausicherung/backflow prevention</strong>, <strong>Trockenwetterrinne/dryweather flume</strong> etc. hinzufügen</p>
+<li><p class="first">Unter dem Reiter <strong>Bauwerkteile/structure parts</strong> können Sie weitere Bauwerksteile wie zum Beispiel <strong>Einstiegshilfen/access aids</strong>, <strong>Rückstausicherung/backflow prevention</strong>, <strong>Trockenwetterrinne/dryweather flume</strong> etc. hinzufügen</p>
 </li>
 </ul>
 <div class="figure">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Unter dem <strong>Abwasserknoten/wastewater nodes</strong> Reiter können Sie alle Attribute dieser Klasse bearbeiten oder hinzufügen oder einen  weiteren Abwasserknoten hinzufügen.</p>
+<li><p class="first">Unter dem Reiter <strong>Abwasserknoten/wastewater nodes</strong> können Sie alle Attribute dieser Klasse bearbeiten oder einen  weiteren Abwasserknoten hinzufügen.</p>
 </li>
 </ul>
 <p>Es ist nicht empfohlen, an dieser Stelle einen weiteren Abwasserknoten hinzuzufügen, weil die Lage des neuen Abwasserknotens nicht definiert werden kann.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">Es ist nicht empfohlen, einen weiteren Abwasserknoten in diesem Formular hinzuzufügen, weil für den neuen Abwasserknoten keine Koordinaten definiert werden können. Vgl das nachfolgende Kapitel <span class="xref std std-ref">Adding additional covers and nodes to an existing wastewater structure</span> .</p>
+<p class="last">It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
 </div>
 </div></blockquote>
 </div>
@@ -264,9 +263,9 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li><p class="first">Auf dem ersten Tab können Sie am häufigsten benutzte Attribute ändern.</p>
+<li><p class="first">Auf dem ersten Reiter können die am häufigsten benutzten Attribute geändert werden.</p>
 </li>
-<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B <strong>Haltungspunkte/reach points</strong>) zu ändern, wählen Sie den entsprechenden Tab.</p>
+<li><p class="first">Um die Attribute von in Verbindung stehenden Tabellen (z.B <strong>Haltungspunkte/reach points</strong>) zu ändern, wählen Sie den entsprechenden Reiter.</p>
 </li>
 </ul>
 <blockquote>
@@ -293,7 +292,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.6. Hinzufügen von weiteren Deckel- oder Abwasserknoten-Datensätzen zu bestehenden Abwasserbauwerken<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.1.6. Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Die folgende Beschreibung ist für das Hinzufügen eines weiteren Deckels. Es funktioniert analog auch für das Hinzufügen eines weiteren Abwasserknotens.</p>
@@ -301,7 +300,7 @@
 <ul class="simple">
 <li><p class="first">Voraussetzung: Unter Projekt/Projekteigenschaften/Beziehungen muss die Beziehung zwischen vw_cover (Feld fk_wastewater_structure) und vw_qgep_wastewater_structure (Feld obj_id) vorhanden sein.</p>
 </li>
-<li><p class="first">Im Layer vw_cover / Eigenschaften /** Attribute Forms** muss das Feld fk_wastewater_structure als Beziehungsreferenz definiert sein</p>
+<li><p class="first">Im Layer vw_cover / Eigenschaften / <strong>Attribute Forms</strong> muss das Feld <strong>fk_wastewater_structure</strong> als Beziehungsreferenz definiert sein</p>
 </li>
 </ul>
 <div class="figure">

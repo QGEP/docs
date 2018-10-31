@@ -3,7 +3,7 @@
 Moving Wastewater Structures with Reaches, Covers and Nodes
 ===========================================================
 
-This represents a guide on how to move covers with reaches and wastewater nodes compared to just moving the cover in QGEP.
+This represents a guide on how to move wastewater structures with reaches and wastewater nodes compared to just moving the cover in QGEP.
 
 General
 ------------
@@ -30,7 +30,7 @@ In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree 
 
 .. figure:: images/moving_wws_manhole2.jpg
 
-.. note:: The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to coorect manually if necessary.
+.. note:: The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to correct manually if necessary.
 
 * If you want to move just the cover or a node of a wastewater structure, then select the **vw_cover** or **vw_wastewater_node** layer, set the layer to edit mode and move the cover / the node with the **Move Feature** tool.
 See the figure below: just the cover of manhole 'ZRAM' is moved.
