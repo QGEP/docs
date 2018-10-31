@@ -45,7 +45,7 @@ Delete Covers
 .. attention:: Deleting a cover does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
-* Select the object (**manholes**, **special structures** etc.) to which you want the cover deleted
+* Select the object (**manholes**, **special structures** etc.) from which you want the cover deleted
 * Use the **Identify Features** tool to open the form
 * Switch to the covers tab 
 * Select the cover(s) you want to delete
@@ -63,7 +63,7 @@ Delete Structure parts
 .. attention:: Deleting a structure part does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
-* Select the object (**manholes**, **special structures** etc.) to which you want to delete a structure part
+* Select the object (**manholes**, **special structures** etc.) from which you want to delete a structure part
 * Use the **Identify Features** tool to open the form
 * Switch to the structure parts tab
 * Select the structure part you want to delete
