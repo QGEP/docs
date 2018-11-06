@@ -32,8 +32,6 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
 
   * Change to this database
 
-* Create a new schema with the name `qgep` (no more necessary with database release 1.0 or higher)
-
 * Open an :ref:`SQL-query` Window and create the extensions (if they're not created yet)
 
   * ``CREATE EXTENSION hstore;``
@@ -77,7 +75,7 @@ Restore the latest data model that also includes demo data:
 
 Since database release 1.0 you will get 3 new schemas (qgep_od, qgep_sys, qgep_vl)
 
-* Update privileges for the database
+* Update privileges for the database (all 3 schemas)
 
   * Right click the `qgep_od` schema
 
@@ -94,7 +92,7 @@ Since database release 1.0 you will get 3 new schemas (qgep_od, qgep_sys, qgep_v
 
     * Choose `ALL`
     
-  * Right click the `qgep_sys` schema and repeat the steps described above for the qgep_od-schema
+  * Right click the `qgep_sys` schema and the `qgep_vl` schema and repeat the steps described above for the qgep_od-schema
 
 Empty data model
 ^^^^^^^^^^^^^^^^
