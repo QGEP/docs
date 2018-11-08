@@ -77,7 +77,7 @@ There are now 4 new schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
 * Update privileges for the qgep_od, qgep_sys and qgep_vl schema
 
-  * Right click the `qgep_xx` schema
+  * Right click the `qgep_od` schema
 
   * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
 
