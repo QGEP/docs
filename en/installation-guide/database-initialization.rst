@@ -73,14 +73,13 @@ Restore the latest data model that also includes demo data:
 
 .. figure:: images/pgadmin_qgep_refresh.jpg
 
-Since database release 1.0 you will get 3 new schemas (qgep_od, qgep_sys, qgep_vl)
+There are now 4 new schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
-* Update privileges for the database (all 3 schemas)
+* Update privileges for the qgep_od, qgep_sys and qgep_vl schema
 
-  * Right click the `qgep_od` schema
+  * Right click the `qgep_xx` schema
 
   * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
-    You can also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``
 
   * Click `Grant Wizard …`
 
@@ -93,6 +92,17 @@ Since database release 1.0 you will get 3 new schemas (qgep_od, qgep_sys, qgep_v
     * Choose `ALL`
     
   * Right click the `qgep_sys` schema and the `qgep_vl` schema and repeat the steps described above for the qgep_od-schema
+  
+* You can update the privileges easier as a query: 
+  
+  ::
+  
+     GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
+     GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
+     GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
+     GRANT ALL ON schema qgep_od TO postgres;
+     GRANT ALL ON schema qgep_sys TO postgres;
+     GRANT ALL ON schema qgep_vl TO postgres;
 
 Empty data model
 ^^^^^^^^^^^^^^^^
