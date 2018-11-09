@@ -73,7 +73,7 @@ Restore the latest data model that also includes demo data:
 
 .. figure:: images/pgadmin_qgep_refresh.jpg
 
-There are now 4 new schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
+There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
 * Update privileges for the qgep_od, qgep_sys and qgep_vl schema
 
