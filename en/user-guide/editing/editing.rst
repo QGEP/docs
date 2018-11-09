@@ -81,17 +81,20 @@ Working with codes of valuelist
 -------------------------------
 
 * The values of fields with valuelist are stored in the database with codes. 
-* In qgep with correct configuration you see in the table view or the form view the values in our language and not the codes.
-* But if you use the editor for defining a selection or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: **represent_value("field")**
+* In a qgep project with correct configuration you see in the table view or the form view the values in our language and not the codes.
+* But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: **represent_value("field")**
 
-* Examples for using **represent_value**
+
+Examples for using **represent_value**
+
 * Search all primary wastewater facility reaches (function_hierarchic starts with pwwf)
  .. figure:: images/represent_value1.jpg
  
 * Search all reaches, that have not the same usage_planned as usage_current
-.. figure:: images/represent_value2.jpg
+ .. figure:: images/represent_value2.jpg
 
-.. note:: In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only for one language. 
+.. note:: In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only work for one language. 
+
 
 An other way to choose an object
 --------------------------------
