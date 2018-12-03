@@ -170,8 +170,6 @@ GRANT qgep TO qgepuser;
 </li>
 </ul>
 </li>
-<li><p class="first">Erzeugen sie ein neues Schema mit Name &#8216;qgep&#8217;.</p>
-</li>
 <li><p class="first">Öffnen sie ein neues SQL-Fenster und erzeugen Sie die folgenden Extensions (wenn sie nicht schon existieren):</p>
 <ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
@@ -227,13 +225,12 @@ ist</p>
 <div class="figure">
 <img alt="../_images/pgadmin_qgep_refresh.jpg" src="../_images/pgadmin_qgep_refresh.jpg" />
 </div>
-<ul class="simple">
-<li><p class="first">Datenbank Zugriffsrechte aktualisieren</p>
+<p>There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
 <ul>
-<li><p class="first">Auf das Schema <cite>qgep</cite> rechtsklicken.</p>
-</li>
-<li><p class="first">Eigenschaften -&gt; Sonderrechte Tab &gt;  bewilligen Sie &#8220;USAGE&#8221; zur Gruppe &#8220;qgep&#8221;. Sie können dies auch un der query tun: &#8220;GRANT USAGE ON SCHMEA qgep TO GROUP qgep;&#8221;</p>
-</li>
+<li><p class="first">Update privileges for the qgep_od, qgep_sys and qgep_vl schema</p>
+<ul class="simple">
+<li>Right click the <cite>qgep_od</cite> schema</li>
+<li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.</li>
 <li><p class="first">Recktsklick auf das das Schema &#8216;qgep&#8217;; &#8216;Grant Wizard ...&#8217; wählen</p>
 </li>
 <li><p class="first">Menü &#8216;Selection&#8217;; &#8216;Check all&#8217; wählen</p>
@@ -246,7 +243,18 @@ ist</p>
 </li>
 </ul>
 </li>
+<li>Right click the <cite>qgep_sys</cite> schema and the <cite>qgep_vl</cite> schema and repeat the steps described above for the qgep_od-schema</li>
 </ul>
+</li>
+<li><p class="first">You can update the privileges easier as a query:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
+GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
+GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
+GRANT ALL ON schema qgep_od TO postgres;
+GRANT ALL ON schema qgep_sys TO postgres;
+GRANT ALL ON schema qgep_vl TO postgres;
+</pre></div>
+</div>
 </li>
 </ul>
 </div>

@@ -165,7 +165,6 @@ GRANT qgep TO qgepuser;
 <li>Change to this database</li>
 </ul>
 </li>
-<li>Create a new schema with the name <cite>qgep</cite></li>
 <li>Open an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL query</span></a> Window and create the extensions (if they&#8217;re not created yet)<ul>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
@@ -213,11 +212,12 @@ GRANT qgep TO qgepuser;
 <div class="figure">
 <img alt="../_images/pgadmin_qgep_refresh.jpg" src="../_images/pgadmin_qgep_refresh.jpg" />
 </div>
+<p>There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
+<ul>
+<li><p class="first">Update privileges for the qgep_od, qgep_sys and qgep_vl schema</p>
 <ul class="simple">
-<li>Update privileges for the database<ul>
-<li>Right click the <cite>qgep</cite> schema</li>
-<li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.
-You can also do this as a query: <code class="docutils literal"><span class="pre">GRANT</span> <span class="pre">USAGE</span> <span class="pre">ON</span> <span class="pre">SCHEMA</span> <span class="pre">qgep</span> <span class="pre">TO</span> <span class="pre">GROUP</span> <span class="pre">qgep;</span></code></li>
+<li>Right click the <cite>qgep_od</cite> schema</li>
+<li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.</li>
 <li>Click <cite>Grant Wizard …</cite></li>
 <li>Selection, click <cite>Check All</cite></li>
 <li>Privileges<ul>
@@ -225,7 +225,18 @@ You can also do this as a query: <code class="docutils literal"><span class="pre
 <li>Choose <cite>ALL</cite></li>
 </ul>
 </li>
+<li>Right click the <cite>qgep_sys</cite> schema and the <cite>qgep_vl</cite> schema and repeat the steps described above for the qgep_od-schema</li>
 </ul>
+</li>
+<li><p class="first">You can update the privileges easier as a query:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
+GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
+GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
+GRANT ALL ON schema qgep_od TO postgres;
+GRANT ALL ON schema qgep_sys TO postgres;
+GRANT ALL ON schema qgep_vl TO postgres;
+</pre></div>
+</div>
 </li>
 </ul>
 </div>
