@@ -32,8 +32,6 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
 
   * Change to this database
 
-* Create a new schema with the name `qgep`
-
 * Open an :ref:`SQL-query` Window and create the extensions (if they're not created yet)
 
   * ``CREATE EXTENSION hstore;``
@@ -76,12 +74,13 @@ Restore the latest data model that also includes demo data:
 
 .. figure:: images/pgadmin_qgep_refresh.jpg
 
-* Update privileges for the database
+There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
-  * Right click the `qgep` schema
+* Update privileges for the qgep_od, qgep_sys and qgep_vl schema
+
+  * Right click the `qgep_od` schema
 
   * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
-    You can also do this as a query: ``GRANT USAGE ON SCHEMA qgep TO GROUP qgep;``
 
   * Click `Grant Wizard …`
 
@@ -92,6 +91,19 @@ Restore the latest data model that also includes demo data:
     * Group `qgep`
 
     * Choose `ALL`
+    
+  * Right click the `qgep_sys` schema and the `qgep_vl` schema and repeat the steps described above for the qgep_od-schema
+  
+* You can update the privileges easier as a query: 
+  
+  ::
+  
+     GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
+     GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
+     GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
+     GRANT ALL ON schema qgep_od TO postgres;
+     GRANT ALL ON schema qgep_sys TO postgres;
+     GRANT ALL ON schema qgep_vl TO postgres;
 
 Empty data model
 ^^^^^^^^^^^^^^^^
