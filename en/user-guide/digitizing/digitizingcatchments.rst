@@ -81,3 +81,30 @@ You can merge existing areas with the **Merge selected Feature** tool.
 * Choose which values will be taken from wich old record and click **OK**.
 
 .. attention:: If you select one of the records and click on the **Take attributes from the selected feature** button, then the **obj_id** field will be skipped by default and the database will not accept the changes. After using this button, you have to choose one of the values in the **obj_id** field manually.
+
+Connect Catchment_area to Wastewater Network Nodes
+--------------------------------------------------
+
+You connect catchment_areas with the tool connect wastewater networkelements (it's the same tool to connect reaches and nodes described in the chapter Editing in QGEP).
+
+.. figure:: images/connect_wastewater_network_elements_button.jpg
+
+* It does not matter, which layer is selected
+* The **catchment_area** layer has to be in edit mode
+* Click the **Connect wastewater networkelements** button
+* If you move the mouse over an catchment_area near the border of the catchment_area, it is marked: you can click to choose this record
+* Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again
+
+.. figure:: images/connecting_1.jpg
+
+* A window appears, where you can choose, which connection(s) will be defined. 
+
+.. figure:: images/connecting_2.jpg
+
+* If everything is ok, you will see a message in a blue bar on top of the map-window
+
+.. figure:: images/connecting_3.jpg
+
+.. note:: In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to wastewater nodes or to reaches. Because a lot of hydraulic calculation do not support connections to reaches, this tool in qgep connects only to wastewater nodes and not to reaches.
+
+.. note:: The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It's only the user who deciedes, if a node is ok or not. If you are not sure, please check the **VSA Wegleitung GEP-Daten**, part **Erfassungsgrundsätze**
