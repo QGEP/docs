@@ -9,6 +9,8 @@ Upstream
 
 * It does not matter, which layer is selected
 
+* Be sure, that your network topology is updated (if not sure, use the **refresh network topology** tool first).
+
 * To start upstream network following select the **Upstream** QGEP button 
 
 .. figure:: images/network_upstream_button.jpg
@@ -37,7 +39,9 @@ Downstream
 
 .. figure:: images/network_downstream_button.jpg
 
-* You can see where the water is going to.
+* You can see where the water is going to. 
+
+* Control, if QGEP finds also the overflows
 
 * Use this to check whether the topology of your network is correct or to find out where you could intervene in case of an accident.
 
