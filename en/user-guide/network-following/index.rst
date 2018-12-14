@@ -1,7 +1,17 @@
 Network following tools
 =======================
 
-* Be sure, that your network topology is updated (if not sure, use the **refresh network topology** tool first).
+Refresh network topology
+------------------------
+
+* Before using the notwork following tools, be sure, that your network topology is updated
+
+* To refresh the network topology, you select the layer **vw_qgep_reach** and set the layer to the edit mode
+
+* Click the **refresh network topology** tool (Button with SQL and drip)
+
+* If ok, there is a message: **Success: Network successfully updated**
+
 
 Upstream
 --------
