@@ -84,7 +84,7 @@ Working with codes of valuelist
 
  .. note:: The codes are unique, also if there is the same text in different valuelists. E.g. the code for "rain_wastewater" in the vl_channel_usage_current and in the vl_channel_usage_planned is different.
  
-* In a qgep project with correct configuration you see in the table view or the form view the values in our language and not the codes.
+* In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.
 * But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: **represent_value("field")**
 
 
