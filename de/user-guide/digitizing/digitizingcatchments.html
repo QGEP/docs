@@ -98,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.2.7.3. Bearbeitung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#split-areas">2.2.7.4. Einzugsgebiete teilen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Einzugsgebiet zusammenführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connect-catchment-area-to-wastewater-network-nodes">2.2.7.6. Connect Catchment area to Wastewater Network Nodes</a></li>
 </ul>
 </li>
 </ul>
@@ -242,6 +243,10 @@
 <div class="figure">
 <img alt="../../_images/identify_feature_tool.jpg" src="../../_images/identify_feature_tool.jpg" />
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">There are ideas to have a menu in the feature attribut window, that allows you to copy all current-values to the planned-fields. Not realized yet.</p>
+</div>
 </div>
 <div class="section" id="split-areas">
 <h2>2.2.7.4. Einzugsgebiete teilen<a class="headerlink" href="#split-areas" title="Link zu dieser Überschrift">¶</a></h2>
@@ -282,6 +287,48 @@
 <p class="first admonition-title">Achtung</p>
 <p class="last">Wenn einer der Datensätze gewählt wird und der Knopf <strong>Attribute des gewählten Objektes übernehmen</strong> geklickt wird, dann wird das Feld <strong>obj_id</strong> standardmässig übersprungen und die Datenbank wird die Änderung nicht akzeptieren. Wenn dieser Knopf benutzt wird, muss für das <strong>obj_id</strong>-Feld manuell ein Wert definiert werden.</p>
 </div>
+</div>
+<div class="section" id="connect-catchment-area-to-wastewater-network-nodes">
+<h2>2.2.7.6. Connect Catchment area to Wastewater Network Nodes<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Link zu dieser Überschrift">¶</a></h2>
+<p>You connect catchment areas with the tool <strong>Connect wastewater networkelements</strong> (it&#8217;s the same tool to connect reaches and nodes described in the chapter Editing in QGEP).</p>
+<div class="figure">
+<img alt="../../_images/connect_wastewater_network_elements_button.jpg" src="../../_images/connect_wastewater_network_elements_button.jpg" />
+</div>
+<ul class="simple">
+<li><p class="first">Es spielt keine Rolle, welcher Layer ausgewählt ist</p>
+</li>
+<li>The <strong>catchment_area</strong> layer has to be in edit mode</li>
+<li><p class="first">Klicke den <strong>Verbinde Abwassernetzwerkelement</strong> Knopf</p>
+</li>
+<li>If you move the mouse over an catchment area near the border of the catchment area, it is marked: you can click to choose this record</li>
+<li>Move the mouse to the networkelement, to which the catchment area will by connected (again: selectable objects get marked) and click again</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/catchment_area_connect1.jpg" src="../../_images/catchment_area_connect1.jpg" />
+</div>
+<ul class="simple">
+<li>A window appears, where you can choose, which connection(s) will be defined.</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/catchment_area_connect2.jpg" src="../../_images/catchment_area_connect2.jpg" />
+</div>
+<ul class="simple">
+<li><p class="first">Wenn die Verknüpfung gespeichert wurde, erscheint ein blauer Mitteilungsbalken oben im Kartenfenster</p>
+</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/catchment_area_connect3.jpg" src="../../_images/catchment_area_connect3.jpg" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to wastewater nodes or to reaches. Because a lot of hydraulic calculation do not support connections to reaches, this tool in qgep connects only to wastewater nodes and not to reaches.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It&#8217;s only the user who deciedes, if a node is ok or not. If you are not sure, please check the <strong>VSA Wegleitung GEP-Daten</strong>, part <strong>Erfassungsgrundsätze</strong></p>
+</div>
+<p>You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes</p>
+<p>Do delete a connection to a wastewater node, you can edit the area with the <strong>Identify features</strong> tool.</p>
 </div>
 </div>
 
