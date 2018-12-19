@@ -225,12 +225,14 @@ ist</p>
 <div class="figure">
 <img alt="../_images/pgadmin_qgep_refresh.jpg" src="../_images/pgadmin_qgep_refresh.jpg" />
 </div>
-<p>There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
+<p>Es sind jetzt 4 Schemata vorhanden (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
 <ul>
-<li><p class="first">Update privileges for the qgep_od, qgep_sys and qgep_vl schema</p>
+<li><p class="first">Aktualisiere die Zugriffrechte der qgep_od, qgep_sys und qgep_vl Schemata</p>
 <ul class="simple">
-<li>Right click the <cite>qgep_od</cite> schema</li>
-<li>Properties -&gt; Privileges Tab &gt; Grant <code class="docutils literal"><span class="pre">USAGE</span></code> to group <code class="docutils literal"><span class="pre">qgep</span></code>.</li>
+<li><p class="first">Auf das Schema <cite>qgep_od</cite> rechtsklicken.</p>
+</li>
+<li><p class="first">Eigenschaften -&gt; Sonderrechte (Privileges) Tab &gt; bewilligen Sie &#8220;USAGE&#8221; für Gruppe &#8220;qgep&#8221;.</p>
+</li>
 <li><p class="first">Recktsklick auf das das Schema &#8216;qgep&#8217;; &#8216;Grant Wizard ...&#8217; wählen</p>
 </li>
 <li><p class="first">Menü &#8216;Selection&#8217;; &#8216;Check all&#8217; wählen</p>
@@ -243,10 +245,11 @@ ist</p>
 </li>
 </ul>
 </li>
-<li>Right click the <cite>qgep_sys</cite> schema and the <cite>qgep_vl</cite> schema and repeat the steps described above for the qgep_od-schema</li>
+<li><p class="first">Wiederhole die oben für das qgep_od-Schema beschrieben Schritte auch für das <cite>qgep_sys</cite> und für das <cite>qgep_vl</cite> Schema</p>
+</li>
 </ul>
 </li>
-<li><p class="first">You can update the privileges easier as a query:</p>
+<li><p class="first">Mit der folgenden Query ist das Anpassen der Sonderrechte einfacher:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
 GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
 GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
@@ -262,8 +265,8 @@ GRANT ALL ON schema qgep_vl TO postgres;
 <h3>1.2.1.2. Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist auch möglich, ein leeres Datenbank-Schema zu erstellen (ohne Demodatensatz).</p>
 <ul class="simple">
-<li>Download the data model by going to <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
-and by downloading the latest <cite>qgep_vx.y.z_structure_with_value_lists.sql</cite>.</li>
+<li><p class="first">Herunterladen das Datenbank-Schema unter <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>, und der Datei <cite>qgep_vx.y.z_structure_with_value_lists.sql</cite>.</p>
+</li>
 <li><p class="first">An Stelle von &#8220;restore&#8221; der Demodaten ist es auch möglich, einfach das Datenmodell zu erzeugen</p>
 </li>
 </ul>

@@ -98,7 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.2.7.3. Bearbeitung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#split-areas">2.2.7.4. Einzugsgebiete teilen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Einzugsgebiet zusammenführen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#connect-catchment-area-to-wastewater-network-nodes">2.2.7.6. Connect Catchment area to Wastewater Network Nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connect-catchment-area-to-wastewater-network-nodes">2.2.7.6. Einzugsgebiete mit Abwasserknoten verbinden</a></li>
 </ul>
 </li>
 </ul>
@@ -245,7 +245,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">There are ideas to have a menu in the feature attribut window, that allows you to copy all current-values to the planned-fields. Not realized yet.</p>
+<p class="last">Es ist die Absicht, ein Menu im Eingabefenster zu erstellen, mit dem alle Ist-Zustand-Werte einfach in die Planungszustand-Felder übernommen werden können. Noch nicht reailisiert.</p>
 </div>
 </div>
 <div class="section" id="split-areas">
@@ -289,25 +289,29 @@
 </div>
 </div>
 <div class="section" id="connect-catchment-area-to-wastewater-network-nodes">
-<h2>2.2.7.6. Connect Catchment area to Wastewater Network Nodes<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>You connect catchment areas with the tool <strong>Connect wastewater networkelements</strong> (it&#8217;s the same tool to connect reaches and nodes described in the chapter Editing in QGEP).</p>
+<h2>2.2.7.6. Einzugsgebiete mit Abwasserknoten verbinden<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Einzugsgebiete werden mit dem Tool <strong>Connect wastewater networkelements</strong> verknüpft (es ist das gleiche Tool mit dem Haltungen und Abwasserknoten verknüpft werden, vgl. den Beschrieb im Kapitel Bearbeiten in QGEP).</p>
 <div class="figure">
 <img alt="../../_images/connect_wastewater_network_elements_button.jpg" src="../../_images/connect_wastewater_network_elements_button.jpg" />
 </div>
 <ul class="simple">
 <li><p class="first">Es spielt keine Rolle, welcher Layer ausgewählt ist</p>
 </li>
-<li>The <strong>catchment_area</strong> layer has to be in edit mode</li>
+<li><p class="first">Der Layer <strong>catchment_area</strong> muss im Bearbeitungsmodus sein</p>
+</li>
 <li><p class="first">Klicke den <strong>Verbinde Abwassernetzwerkelement</strong> Knopf</p>
 </li>
-<li>If you move the mouse over an catchment area near the border of the catchment area, it is marked: you can click to choose this record</li>
-<li>Move the mouse to the networkelement, to which the catchment area will by connected (again: selectable objects get marked) and click again</li>
+<li><p class="first">Wenn der Mausezeiger über eine Einzugsgebiets-Grenze fährt,  dann wird das Einzugsgebiet markiert: jetzt kann man klicken</p>
+</li>
+<li><p class="first">Den Mausezeiger zu einem Abwassernetzelement führen, mit dem das Einzugsgebiet verknüpft werden soll (wieder werden wählbare Objekte markiert) und dort wieder klicken</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_area_connect1.jpg" src="../../_images/catchment_area_connect1.jpg" />
 </div>
 <ul class="simple">
-<li>A window appears, where you can choose, which connection(s) will be defined.</li>
+<li><p class="first">Ein Fenster erscheint, in dem gewählt werden kann, welche Verknüpfung(en) definiert wird.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_area_connect2.jpg" src="../../_images/catchment_area_connect2.jpg" />
@@ -321,14 +325,14 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to wastewater nodes or to reaches. Because a lot of hydraulic calculation do not support connections to reaches, this tool in qgep connects only to wastewater nodes and not to reaches.</p>
+<p class="last">Im VSA-DSS-Datenmodell können Einzugsgebiete mit Abwasserknoten oder mit Haltungen verknüpft werden. Weil viele Hydraulikprogramme die Verknüpfung mit Haltungen nicht unterstützen, verknüpft dieses QGEP-Tool nur mit Abwasserknoten und nicht mit Haltungen.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It&#8217;s only the user who deciedes, if a node is ok or not. If you are not sure, please check the <strong>VSA Wegleitung GEP-Daten</strong>, part <strong>Erfassungsgrundsätze</strong></p>
+<p class="last">Das Tool prüft nicht, ob der gewählte Abwasserknoten zum PAA-Abwassernetz (primäre Abwasseranlagen) gehört. Der Benutzer muss entscheiden, auf welche Knoten er die Einzugsgebiete verknüpft. Wenn du unsicher bist, hilft die <strong>VSA Wegleitung GEP-Daten</strong>, Teil <strong>Erfassungsgrundsätze</strong> weiter</p>
 </div>
-<p>You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes</p>
-<p>Do delete a connection to a wastewater node, you can edit the area with the <strong>Identify features</strong> tool.</p>
+<p>Mit dem Tool können nicht mehrere Einzugsgebiete auf einmal mit einem Abwasserknoten verknüpft werden. Wenn das gewünscht ist, müssen die Einzugsgebiet ausgewählt werden, dann die Attributtabelle öffnen und den Mehrfach-Editier-Modus starten. Der gewünschte Abwasserknoten kann dann aus der Liste der vorhandenen Abwasserknoten gewählt werden</p>
+<p>Um eine Verknüpfung mit einem Abwasserknoten zu löschen, kann das Einzugsgebiet mit dem <strong>Identify features</strong> Werkzeug bearbeiten werden.</p>
 </div>
 </div>
 
