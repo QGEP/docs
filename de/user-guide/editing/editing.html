@@ -286,16 +286,19 @@
 <blockquote>
 <div><div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The codes are unique, also if there is the same text in different valuelists. E.g. the code for &#8220;rain_wastewater&#8221; in the vl_channel_usage_current and in the vl_channel_usage_planned is different.</p>
+<p class="last">Die Zahlencodes sind einmalig, auch in verschiedenen Wertelisten die gleichen Texte vorkommen. Beispiel: Der Zahlencode für &#8220;Regenabwasser&#8221; ist in den Wertelisten für Nutzungsart_Ist und Nutzungsart_geplant nicht gleich.</p>
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.</li>
-<li>But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: <strong>represent_value(&#8220;field&#8221;)</strong></li>
+<li><p class="first">In einem QGEP-Projekt mit richtiger Konfiguration erscheinen in den Attributtabellen oder den Eingabe-Fenstern die Werte in deiner Sprache und nicht als Zahlencode.</p>
+</li>
+<li><p class="first">Aber wenn du einen Auswahl mit einem Ausdruck oder eine regelbasierte Darstellung für einen Layer verwenden willst, musst du die Zahlencodes kennen oder du verwendest den folgenden Ausdruck: <strong>represent_value(&#8220;field&#8221;)</strong></p>
+</li>
 </ul>
-<p>Examples for using <strong>represent_value</strong></p>
+<p>Beispiele für die Anwendung von <strong>represent_value</strong></p>
 <ul class="simple">
-<li>Search all primary wastewater facility reaches (function_hierarchic starts with pwwf)</li>
+<li><p class="first">Suche alle primären Abwasserbauwerke / Haltungen (Funktion_Hierarchisch beginnt mit pwwf oder paa - je nach Sprache)</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -303,7 +306,8 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>Search all reaches, that have not the same usage_planned as usage_current</li>
+<li><p class="first">Suche alle Haltungen, bei denen Nutzungsart_Ist nicht gleich der Nutzungsart_geplant ist</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -312,11 +316,11 @@
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The expression <cite>&#8220;ch_usage_current&#8221; &lt;&gt; &#8220;ch_usage planned&#8221;</cite> does not work because of the unique codes!</p>
+<p class="last">Der Ausdruck <cite>&#8220;ch_usage_current&#8221; &lt;&gt; &#8220;ch_usage planned&#8221;</cite> funktioniert nicht, weil die Zahlencodes einmalig sind!</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only work for one language.</p>
+<p class="last">Im Demo-Projekt wird der Ausdruck repesent_value für regelbasierte Symbole nicht verwendet, weil die Regeln sonst nur für eine spezifische Sprache funktionieren.</p>
 </div>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
