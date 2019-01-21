@@ -97,7 +97,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.7.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.2.7.3. Édition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#split-areas">2.2.7.4. Split Areas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Merge Areas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merge-areas">2.2.7.5. Fusionner des zones</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#connect-catchment-area-to-wastewater-network-nodes">2.2.7.6. Connect Catchment area to Wastewater Network Nodes</a></li>
 </ul>
 </li>
@@ -157,7 +157,7 @@
 <h1>2.2.7. Numérisation des bassins versants<a class="headerlink" href="#digitizing-catchment-areas" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
 <h2>2.2.7.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Catchments can be digitized with QGIS standard tools.</p>
+<p>Les bassins versants peuvent être numérisés avec les outils standards de QGIS.</p>
 <div class="figure">
 <img alt="../../_images/qgis_standard_tools.jpg" src="../../_images/qgis_standard_tools.jpg" />
 </div>
@@ -166,7 +166,8 @@
 <div class="section" id="digitizing">
 <h2>2.2.7.2. Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Select the <strong>Enable Snapping</strong> button</li>
+<li><p class="first">Sélectionnez le bouton <strong>Activer l&#8217;accrochage</strong></p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/enable_snapping_button.jpg" src="../../_images/enable_snapping_button.jpg" />
@@ -179,7 +180,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">New digitized catchement areas will not overlap with existing areas with this settings.</p>
+<p class="last">Les périmètres de bassins versants nouvellement numérisés ne vont pas chevaucher de périmètres existants avec ce réglage.</p>
 </div>
 <ul class="simple">
 <li><p class="first">Passez la couche <em>od_aire_bassin_versant</em> en mode édition</p>
@@ -191,17 +192,20 @@
 <img alt="../../_images/add_feature_tool.jpg" src="../../_images/add_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li>Start digitizing with left click and continue with left click for every vertex of the polygon</li>
+<li><p class="first">Commencer la numérisation avec un clic gauche et continuer avec un clic gauche pour chaque sommet du polygone</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/catchment_area_digitizing1.jpg" src="../../_images/catchment_area_digitizing1.jpg" />
 </div>
 <ul class="simple">
-<li>Stop digitizing with right click</li>
+<li><p class="first">Stopper la numérisation avec un clic droit</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Keep in mind, that the finishing point of the polygon is the last point where you <strong>left</strong> clicked.</p>
+<p class="last">Gardez en mémoire que le point final du polygone est le dernier point où
+vous avez effectué un clic <strong>gauche</strong>.</p>
 </div>
 <ul class="simple">
 <li>The <strong>od_catchment_area</strong> form appears</li>
@@ -210,11 +214,12 @@
 <img alt="../../_images/catchment_area_digitizing2.jpg" src="../../_images/catchment_area_digitizing2.jpg" />
 </div>
 <ul class="simple">
-<li>When finished editing attributes, click the <strong>OK</strong> button</li>
+<li><p class="first">Lorsque vous avez terminé l&#8217;édition des attributs, cliquez sur le bouton <strong>OK</strong></p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The new area does not overlap the old areas.</p>
+<p class="last">La nouvelle zone ne chevauche pas les anciennes zones.</p>
 </div>
 <div class="figure">
 <img alt="../../_images/catchment_area_digitizing3.jpg" src="../../_images/catchment_area_digitizing3.jpg" />
@@ -255,7 +260,7 @@
 </ul>
 </div>
 <div class="section" id="merge-areas">
-<h2>2.2.7.5. Merge Areas<a class="headerlink" href="#merge-areas" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.7.5. Fusionner des zones<a class="headerlink" href="#merge-areas" title="Lien permanent vers ce titre">¶</a></h2>
 <p>You can merge existing areas with the <strong>Merge selected Feature</strong> tool.</p>
 <div class="figure">
 <img alt="../../_images/merge_selected_feature_tool.jpg" src="../../_images/merge_selected_feature_tool.jpg" />
