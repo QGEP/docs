@@ -64,7 +64,7 @@ To save the password as well on the system you may use the file `pgpass <http://
 Install QGIS
 ------------
 
-* Minimum requirement 2.14
+* Minimum requirement 3.4
 
 * We recommend using the latest master build (called qgis-dev on Windows)
   which often offers a better experience in combination with QGEP.
