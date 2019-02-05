@@ -77,6 +77,14 @@ When a line object is digitized a series of steps take place in the background i
   and its subclass **reach** (``od_reach``)
 
 
+Geometry synchronization
+------------------------
+
+The start- and the end-point of the added feature's geometry defines the reach point's geometries. The altitude (Z value of geometry) of the added feature's start- and the end-point is defined by the level values `rp_from_level` and `rp_to_level`. This means, the Z values of the reach point's geometry is set by the level as well. These values could be filled up by the snapped features:
+
+.. figure::images/reach_geometry_snapping.jpg
+
+.. note:: If a reach point's level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach's geometry changes, the reach point's geometry and its level is ajusted as well. If both value change, the level dominates.
 
 TO DO Documentation
 ---------------------

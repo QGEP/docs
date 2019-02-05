@@ -74,3 +74,13 @@ To add additional objects such as structure parts (besides covers there are acce
 .. note:: To add a second cover or a second wastewater node to a wastewater structure, see the :ref:`editing-data` chapter.
 
 ..(take more from GEPView-Howto 1.2. Chapter 4.1)
+
+Geometry synchronization
+------------------------
+
+The added feature's geometry defines the geometry of the connected tables like cover and wastewater node. The Z value of the geometry can be set by defining the level-values. This means when the level of the cover `co_level` is entered, this value is adapted to the Z value of the cover's geometry. The bottom level of the wastewater node `wn_bottom_level` defines the Z value of the wastewater node's geometry.
+The geometry of the wastewater structure feature corresponds to the one of the cover. This means, the Z geometry of the digitized feature is actually the entered value on `co_level`.
+
+.. figure::images/wastewater_structure_geometry_synchronization.jpg
+
+.. note:: If a cover level changes, the Z value of the cover's geometry will be ajusted. When the geometry changes, the level is ajusted as well. If both value change, the level dominates. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set the levels of cover and wastewater node.
