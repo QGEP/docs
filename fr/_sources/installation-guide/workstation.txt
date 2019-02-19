@@ -64,7 +64,7 @@ To save the password as well on the system you may use the file `pgpass <http://
 Install QGIS
 ------------
 
-* Minimum requirement 2.14
+* Minimum requirement 3.4
 
 * We recommend using the latest master build (called qgis-dev on Windows)
   which often offers a better experience in combination with QGEP.
@@ -76,8 +76,7 @@ Install QGEP plugin
 
 Plugin requirements:
 
-- networkx
-- Qt 4 PostgreSQL database driver
+- networkx >= 2.1
 
 You can install them on debian based systems with::
 
