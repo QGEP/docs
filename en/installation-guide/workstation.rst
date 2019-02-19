@@ -76,7 +76,7 @@ Install QGEP plugin
 
 Plugin requirements:
 
-- networkx
+- networkx >= 2.1
 
 You can install them on debian based systems with::
 
