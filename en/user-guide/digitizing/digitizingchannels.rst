@@ -84,7 +84,7 @@ The start- and the end-point of the added feature's geometry defines the reach p
 
 .. figure::images/reach_geometry_snapping_01.jpg
 
-The snapped features 9405 and 9390 have the altitude from the cover levels: 424.090 and 422.900. These values are entered into the attributes `rp_from_level` and `rp_to_level` and can be eddited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well. 
+The snapped features 9405 and 9390 have the altitude from the cover levels: 424.090 and 422.900. These values are entered into the attributes `rp_from_level` and `rp_to_level` and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well. 
 
 .. figure::images/reach_geometry_snapping_02.jpg
 
