@@ -88,7 +88,7 @@ The snapped features 9405 and 9390 have the altitude from the cover levels: 424.
 
 .. figure::images/reach_geometry_snapping_02.jpg
 
-.. note:: If a reach point's level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach's geometry changes, the reach point's geometry and its level is ajusted as well. If both value change, the level dominates.
+.. note:: If a reach point's level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach's geometry changes, the reach point's geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it's like when both value change. Means the reach's geometry is set according to the reach point's levels and if they are NULL, the Z value of the reach's start- and end-point are set to NaN.
 
 TO DO Documentation
 ---------------------
