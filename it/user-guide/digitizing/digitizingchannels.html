@@ -94,7 +94,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Digitizing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Further attributes and classes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#to-do-documentation">2.2.5.4. TO DO Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometry-synchronization">2.2.5.4. Geometry synchronization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#to-do-documentation">2.2.5.5. TO DO Documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Deleting objects</a></li>
@@ -252,8 +253,17 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
 and its subclass <strong>reach</strong> (<code class="docutils literal"><span class="pre">od_reach</span></code>)</li>
 </ul>
 </div>
+<div class="section" id="geometry-synchronization">
+<h2>2.2.5.4. Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Link a questa intestazione">¶</a></h2>
+<p>The start- and the end-point of the added feature&#8217;s geometry defines the reach point&#8217;s geometries. The altitude (Z value of geometry) of the added feature&#8217;s start- and the end-point is defined by the level values <cite>rp_from_level</cite> and <cite>rp_to_level</cite>. This means, the Z values of the reach point&#8217;s geometry is set by the level as well. These values could be filled up by the snapped features:</p>
+<p>The snapped features 9405 and 9390 have the altitude from the cover levels: 424.090 and 422.900. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">If a reach point&#8217;s level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach&#8217;s geometry changes, the reach point&#8217;s geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it&#8217;s like when both value change. Means the reach&#8217;s geometry is set according to the reach point&#8217;s levels and if they are NULL, the Z value of the reach&#8217;s start- and end-point are set to NaN.</p>
+</div>
+</div>
 <div class="section" id="to-do-documentation">
-<h2>2.2.5.4. TO DO Documentation<a class="headerlink" href="#to-do-documentation" title="Link a questa intestazione">¶</a></h2>
+<h2>2.2.5.5. TO DO Documentation<a class="headerlink" href="#to-do-documentation" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li>take more from GEPView-Howto 1.2. Chapter 4.2)</li>
 </ul>
