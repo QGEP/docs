@@ -94,7 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Digitalisieren</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Weitere Attribute und Klassen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#geometry-synchronization">2.2.5.4. Geometry synchronization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometry-synchronization">2.2.5.4. Geometrieabgleichung</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#to-do-documentation">2.2.5.5. TO DO - Dokumentation</a></li>
 </ul>
 </li>
@@ -261,12 +261,12 @@
 </ul>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2>2.2.5.4. Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
-<p>The start- and the end-point of the added feature&#8217;s geometry defines the reach point&#8217;s geometries. The altitude (Z value of geometry) of the added feature&#8217;s start- and the end-point is defined by the level values <cite>rp_from_level</cite> and <cite>rp_to_level</cite>. This means, the Z values of the reach point&#8217;s geometry is set by the level as well. These values could be filled up by the snapped features:</p>
-<p>The snapped features 9405 and 9390 have the altitude from the cover levels: 424.090 and 422.900. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
+<h2>2.2.5.4. Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Start- und Entpunkt der Geometrie des Features bestimmen die Geometrie der Reachpoints. Die Altitude (Z Wert der Geometrie) des Start- und Endpunktes des hinzugefügten Features wird über die Level-Werte <cite>rp_from_level</cite> und <cite>rp_to_level</cite> definiert. Das heisst, der Z Wert der Geometrie des Reachpoints wird ebenso über den Level-Wert gesetzt. Diese Werte können über das &#8220;gefangene&#8221; Feature gesetzt werden:</p>
+<p>Die &#8220;gefangenen&#8221; Features 9405 und 9390 haben die Altitude der Coverlevels: 424.090 und 422.900. Diese Werte werden in die Attribute <cite>rp_from_level</cite> und <cite>rp_to_level</cite> eingetragen, wo sie vom Benutzer editiert werden könnten. Wenn der Benutzer diese Werte ändert, wird die Geometrie des digitalisierten Features und seinen Reachpoints ebenfalls geändert.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">If a reach point&#8217;s level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach&#8217;s geometry changes, the reach point&#8217;s geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it&#8217;s like when both value change. Means the reach&#8217;s geometry is set according to the reach point&#8217;s levels and if they are NULL, the Z value of the reach&#8217;s start- and end-point are set to NaN.</p>
+<p class="last">Wenn das Level eines Reachpoints ändert, ändert sich auch der Z Wert seiner Geometrie und somit auch die Geometrie des Start- und Endpunktes der Reach. Wenn der Z Wert der Geometrie der Reach ändert, ändert auch die Geometrie und das Level der Reachpoints. Wenn beide Werte gleichzeitig ändern, hat das Level Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Reach gemäss der Level der Reachpoints gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Reach auf NaN gesetzt.</p>
 </div>
 </div>
 <div class="section" id="to-do-documentation">
