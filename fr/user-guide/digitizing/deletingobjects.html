@@ -87,13 +87,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les ouvrages assainissement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.2.6. Suppression d&#8217;objets</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#delete-reaches">2.2.6.1. Suppression de conduites</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-wastewater-structures">2.2.6.2. Delete Manholes and other Wastewater Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-wastewater-structures">2.2.6.2. Supprimer des regards et d&#8217;autres ouvrages assainissement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-covers">2.2.6.3. Suppression de couvercles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-structure-parts">2.2.6.4. Suppression d&#8217;éléments de structures</a></li>
 </ul>
@@ -153,24 +153,25 @@
             
   <div class="section" id="deleting-objects">
 <h1>2.2.6. Suppression d&#8217;objets<a class="headerlink" href="#deleting-objects" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Vous pouvez supprimer des objets ponctuels ou linéaires (avec tous les objets associés) dans les couches <strong>vw_qgep_(wastewater_structure/reach)</strong>. Vous pouvez aussi sélectionner et supprimer uniquement un objet spécifique (p.ex. un couvercle).</p>
+<p>Vous pouvez supprimer des objets ponctuels ou linéaires (avec tous les objets associés) dans les couches <strong>vw_qgep_(ouvrage_assainissement/troncon)</strong>. Vous pouvez aussi sélectionner et supprimer uniquement un objet spécifique (p.ex. un couvercle).</p>
 <div class="section" id="delete-reaches">
 <h2>2.2.6.1. Suppression de conduites<a class="headerlink" href="#delete-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">Deleting a reach does not delete the associated objects (channel, reach point, networkelement). See QGEP issue #436</p>
+<p class="last">Supprimer un tronçon ne supprime pas les objets associés (conduite, point de tronçon, élément de réseau). Voir problème QGEP #436</p>
 </div>
 <ul class="simple">
-<li><p class="first">Sélectionnez la couche <strong>vw_qgep_reach</strong> et passez en mode édition.</p>
+<li><p class="first">Sélectionnez la couche <strong>vw_qgep_troncon</strong> et passez en mode édition.</p>
 </li>
-<li><p class="first">Sélectionnez la/les conduite(s) que vous voulez supprimer. Vous pouvez cliquer sur l&#8217;objet ou dessiner une aire de sélection.</p>
+<li><p class="first">Sélectionnez la/les tronçon(s) que vous voulez supprimer. Vous pouvez cliquer sur l&#8217;objet ou dessiner une zone de sélection.</p>
 </li>
 </ul>
 <div class="figure">
 <img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
 </div>
 <ul class="simple">
-<li>Use the top menu <strong>Edit</strong> &#8211;&gt; <strong>Delete Selected</strong> to delete.</li>
+<li><p class="first">Utiliser le menu <strong>Edition</strong> &#8211;&gt; <strong>Supprimer sélection</strong> pour supprimer.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
@@ -192,9 +193,9 @@
 </div>
 </div>
 <div class="section" id="delete-manholes-and-other-wastewater-structures">
-<h2>2.2.6.2. Delete Manholes and other Wastewater Structures<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.2.6.2. Supprimer des regards et d&#8217;autres ouvrages assainissement<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
+<li><p class="first">Sélectionner <strong>vw_qgep_ouvrage_assainissement</strong> et passer en mode édition</p>
 </li>
 <li><p class="first">Sélectionnez les objets (<strong>chambres</strong>, <strong>structures spéciales</strong> etc.) que vous voulez supprimer</p>
 </li>
@@ -205,7 +206,7 @@
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Delete wastewater structures deletes also all connected structure parts and all connected wastewater nodes.</p>
+<p class="last">La suppression des ouvrages assainissement supprime également tous les éléments d&#8217;ouvrage connectés et tous les noeuds assainissement connectés.</p>
 </div>
 </div>
 <div class="section" id="delete-covers">
@@ -215,12 +216,13 @@
 <p class="last">Effacer un couvercle ne supprime pas l&#8217;objet partie de structure associé. Voir le problème QGEP #436</p>
 </div>
 <ul class="simple">
-<li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
+<li><p class="first">Sélectionner <strong>vw_qgep_ouvrage_assainissement</strong> et passer en mode édition</p>
 </li>
-<li>Select the object (<strong>manholes</strong>, <strong>special structures</strong> etc.) from which you want the cover deleted</li>
+<li><p class="first">Sélectionnez l&#8217;objet (<strong>regard</strong>, <strong>ouvrage spécial</strong>, etc.) auquel vous voulez supprimer le couvercle</p>
+</li>
 <li><p class="first">Utilisez l&#8217;outil <strong>Sélectionner une entité</strong> pour ouvrir le formulaire</p>
 </li>
-<li><p class="first">Allez dans l&#8217;onglet <strong>couvercles</strong></p>
+<li><p class="first">Allez dans l&#8217;onglet couvercles</p>
 </li>
 <li><p class="first">Sélectionnez le(s) couvercle(s) que vous voulez supprimer</p>
 </li>
@@ -235,26 +237,29 @@
 </li>
 <li><p class="first">Stoppez le mode édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p>
 </li>
-<li>Second way to delete a cover: select the <strong>vw_cover</strong> layer and change to edit mode, select the cover, use <strong>Edit</strong> &#8211;&gt; <strong>Delete Selected</strong>, stop the editing mode</li>
+<li><p class="first">Méthode alternative pour effacer un couvercle: sélectionner la couche <strong>vw_couvercle</strong> et passer en mode édition, sélectionner le couvercle, cliquer sur <strong>Edition</strong> &#8211;&gt; <strong>Supprimer sélection</strong>, quitter le mode édition.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="delete-structure-parts">
 <h2>2.2.6.4. Suppression d&#8217;éléments de structures<a class="headerlink" href="#delete-structure-parts" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">Deleting a structure part does not delete the associated structure part object. See QGEP issue #436</p>
+<p class="last">Supprimer une pièce d&#8217;ouvrage ne supprime pas l&#8217;objet pièce d&#8217;ouvrage associé. Voir le problème QGIS #436</p>
 </div>
 <ul class="simple">
-<li><p class="first">Sélectionnez <strong>vw_qgep_wastewater_structure</strong> et passez en mode édition</p>
+<li><p class="first">Sélectionner <strong>vw_qgep_ouvrage_assainissement</strong> et passer en mode édition</p>
 </li>
-<li>Select the object (<strong>manholes</strong>, <strong>special structures</strong> etc.) from which you want to delete a structure part</li>
+<li><p class="first">Sélectionnez l&#8217;objet (<strong>regard</strong>, <strong>ouvrage spécial</strong>, etc.) auquel vous voulez supprimer une pièce de structure</p>
+</li>
 <li><p class="first">Utilisez l&#8217;outil <strong>Sélectionner une entité</strong> pour ouvrir le formulaire</p>
 </li>
 <li><p class="first">Allez dans l&#8217;onglet éléments de structure</p>
 </li>
 <li><p class="first">Sélectionnez le(s) élément(s) que vous voulez supprimer</p>
 </li>
-<li>Click the red x button to delete the structure parts</li>
+<li><p class="first">Cliquez sur le bouton x rouge pour supprimer les pièces d&#8217;ouvrage</p>
+</li>
 <li><p class="first">Cliquez sur le bouton <strong>Sauvegarder</strong> du formulaire</p>
 </li>
 <li><p class="first">Stoppez le mode d&#8217;édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p>

@@ -33,7 +33,7 @@
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.6. Suppression d’objets" href="deletingobjects.html"/>
-        <link rel="prev" title="2.2.4. Digitizing Detailed Geometry as Drainage Channel" href="digitizingdrainagechannel.html"/> 
+        <link rel="prev" title="2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage" href="digitizingdrainagechannel.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -87,9 +87,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les ouvrages assainissement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Numérisation de canalisations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Général</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Numérisation</a></li>
@@ -159,7 +159,7 @@
 <p>QGEP propose un outil pour construire les canalisations et les connecter aux chambres/structures spéciales (tout en créant la topologie pour les nœuds de réseau et les conduites).</p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">There is an error with the wizard in qgep plugin version 1.1.4. See QGEP Issue #443 and #451.</p>
+<p class="last">Il y a une erreur avec l&#8217;assistant dans la version 11.4 du plugin QGEP. Voir les problèmes QGEP #443 et #451.</p>
 </div>
 <div class="figure">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
@@ -221,7 +221,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
 <ul class="simple">
 <li><p class="first">Une fois que vous avez terminé, cliquez sur le bouton <strong>OK</strong>.</p>
 </li>
-<li><p class="first">Sauvez les informations de la couche en stoppant l&#8217;outil d&#8217;assistance (&#8220;wizard&#8221;).</p>
+<li><p class="first">Sauvez les informations de la couche en stoppant l&#8217;assistant de saisie.</p>
 </li>
 </ul>
 <div class="figure">
@@ -245,9 +245,9 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
 <h2>2.2.5.3. Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>When a line object is digitized a series of steps take place in the background in the QGEP database:</p>
 <ul class="simple">
-<li><p class="first">Un nouvel objet est ajouté dans la classe <strong>structure_assainissement</strong> (<strong>od_wastewater_structure</strong>)</p>
+<li><p class="first">Un nouvel objet est ajouté dans la classe <strong>ouvrage_assainissement</strong> (<strong>od_ouvrage_assainissement</strong>)</p>
 </li>
-<li><p class="first">Un nouvel objet est ajouté et lié dans la sous-classe <strong>channel</strong> (<code class="docutils literal"><span class="pre">od_channel</span></code>)</p>
+<li><p class="first">Un nouvel objet est ajouté et lié dans la sous-classe <strong>tronçon</strong> (<code class="docutils literal"><span class="pre">od_troncon</span></code>)</p>
 </li>
 <li><p class="first">Deux objets de type <strong>reach point</strong> sont ajoutés et liés à la conduite (<code class="docutils literal"><span class="pre">rp_from_node</span></code>, <code class="docutils literal"><span class="pre">rp_to_node</span></code>)</p>
 </li>
@@ -266,13 +266,13 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
 <p>The snapped features 9405 and 9390 have the altitude from the cover levels: 424.090 and 422.900. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If a reach point&#8217;s level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach&#8217;s geometry changes, the reach point&#8217;s geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it&#8217;s like when both value change. Means the reach&#8217;s geometry is set according to the reach point&#8217;s levels and if they are NULL, the Z value of the reach&#8217;s start- and end-point are set to NaN.</p>
+<p class="last">Si le niveau d&#8217;un point de tronçon change, la valeur Z de sa géométrie change, ainsi que le point de départ ou d&#8217;arrivée du tronçon. Quant la valeur Z de la géométrie du tronçon change, la géométrie du point de tronçon et son niveau sont ajustés également. Si les deux valeurs changent, le niveau est prédominant. Lors d&#8217;une insertion, c&#8217;est comme lorsque les deux valeurs changent. Cela signifie que la géométrie du tronçon est définie selon les niveaux des points de tronçon et que s&#8217;ils sont NULL, les valeurs Z du départ et de la fin du tronçon sont définis à NaN.</p>
 </div>
 </div>
 <div class="section" id="to-do-documentation">
 <h2>2.2.5.5. Documentation QGEP<a class="headerlink" href="#to-do-documentation" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">voir aussi GEPView-Tutoriel 1.2. Chapitre 4.2)</p>
+<li><p class="first">plus de renseignements sous Vue PGEE-Tutoriel 1.2. Chapitre 4.2)</p>
 </li>
 </ul>
 </div>
@@ -288,7 +288,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</li>
         <a href="deletingobjects.html" class="btn btn-neutral float-right" title="2.2.6. Suppression d’objets" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Digitizing Detailed Geometry as Drainage Channel" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral" title="2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -32,7 +32,7 @@
   
     <link rel="top" title="documentation QGEP 0.5" href="../../index.html"/>
         <link rel="up" title="2.3. Édition dans QGEP" href="index.html"/>
-        <link rel="next" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/>
+        <link rel="next" title="2.3.2. Déplacer des ouvrages assainissement avec tronçons, couvercles et noeuds" href="moving.html"/>
         <link rel="prev" title="2.3. Édition dans QGEP" href="index.html"/> 
 
   
@@ -90,18 +90,18 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.3.1. Modification de données existantes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#demo-project">2.3.1.1. Projet Demo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Couches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / ouvrages spéciaux)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (conduites)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">2.3.1.5. Working with codes of valuelist</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.6. An other way to choose an object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.6. Une autre façon de choisir un objet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.7. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.8. Adding a wastewater node to an existing reach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.9. Sauvez les modifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.10. Changing Wastewater Structure Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.11. Split a reach (channel) into different reaches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.8. Ajouter un noeud assainissement à un tronçon existant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.9. Sauver les modifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.10. Changer le type de l&#8217;ouvrage assainissement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.11. Séparer un tronçon (conduite) en différents tronçons</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer des ouvrages assainissement avec tronçons, couvercles et noeuds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Ajout et édition d&#8217;événements de maintenance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Connexion des éléments du réseau assainissement</a></li>
 </ul>
@@ -161,9 +161,9 @@
 <div class="section" id="demo-project">
 <h2>2.3.1.1. Projet Demo<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Assurez-vous d&#8217;avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Initialisation de la base de données</span></a>)</p>
+<li><p class="first">Assurez-vous d&#8217;avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <span class="xref std std-ref">initialisation-base de données</span>)</p>
 </li>
-<li><p class="first">Ouvrez le projet démo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> &#8211;&gt; <strong>Ouvrir</strong> ou en pressant sur les touches &#8220;CTRL&#8221; + &#8220;O&#8221; simultanément.</p>
+<li><p class="first">Ouvrez le projet démo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> &#8211;&gt; <strong>Ouvrir</strong> ou en pressant sur les touches <code class="docutils literal"><span class="pre">CTRL``+``O</span></code> simultanément.</p>
 </li>
 </ul>
 <div class="figure">
@@ -195,7 +195,7 @@
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>2.3.1.3. Changer les attributs des éléments de type point (chambres / structure spéciales)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.3. Changer les attributs des éléments de type point (chambres / ouvrages spéciaux)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</li>
@@ -207,7 +207,8 @@
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
 </div>
 <ul class="simple">
-<li>The <strong>vw_qgep_wastewater_structure</strong> form will open.</li>
+<li><p class="first">Le formulaire <strong>vw_qgep_ouvrage_assainissement</strong> va s&#8217;ouvrir.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
@@ -215,14 +216,14 @@
 <ul class="simple">
 <li><p class="first">Dans le premier onglet, vous pouvez changer les attributs les plus communs</p>
 </li>
-<li><p class="first">Pour modifier les attributs de tables liées aux structures d&#8217;assainissement (p. ex. couvercle), vous devez sélectionnez l&#8217;onglet correspondant. Des attributs additionnels peuvent être édités selon le type de structures (<strong>structure spéciale</strong>, <strong>chambre</strong>).</p>
+<li><p class="first">Pour modifier les attributs de tables liées aux structures d&#8217;assainissement (p. ex. couvercle), vous devez sélectionnez l&#8217;onglet correspondant. Des attributs additionnels peuvent être édités selon le type de structures (<strong>structure spéciale</strong>, <strong>regard</strong>).</p>
 </li>
-<li><p class="first">L&#8217;onglet <strong>couvercles</strong> vous permet aussi d&#8217;ajouter des couvercles additionnels.</p>
+<li><p class="first">L&#8217;onglet <strong>couvercles</strong> vous permet d&#8217;ajouter des couvercles additionnels.</p>
 </li>
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
+<p class="last">Il n&#8217;est pas recommandé d&#8217;ajouter un second couvercle dans ce formulaire car vous ne pourrez pas définir sa géométrie. Voir le chapitre ci-dessus <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span>.</p>
 </div>
 <ul class="simple">
 <li>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</li>
@@ -231,23 +232,25 @@
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li>In <strong>Wastewater nodes</strong> tab you can edit or add all attributes of this class or add a second element.</li>
+<li><p class="first">Dans l&#8217;onglet <strong>noeuds assainissement</strong> vous pouvez éditer ou ajouter tous les attributs de cette classe ou ajouter un second élément.</p>
+</li>
 </ul>
 <p>Ajouter un second <strong>noeud assainissement</strong> à ce niveau n&#8217;est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
+<p class="last">Il n&#8217;est pas recommandé d&#8217;ajouter un second noeud assainissement dans ce formulaire, car vous ne pourrez pas définir sa géométrie. Voir le chapitre ci-dessus <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span>.</p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h2>2.3.1.4. Modification des attributs des éléments linéaires (canalisations, conduites)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.4. Modification des attributs des éléments linéaires (conduites)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></li>
-<li>Switch to the edit mode.</li>
+<li><p class="first">Basculer en mode édition.</p>
+</li>
 <li>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a reach.</li>
-<li><p class="first">Le formulaire de la couche <strong>vw_qgep_reach</strong> s&#8217;ouvre.</p>
+<li><p class="first">Le formulaire de la couche <strong>vw_qgep_troncon</strong> s&#8217;ouvre.</p>
 </li>
 </ul>
 <blockquote>
@@ -258,7 +261,7 @@
 <ul class="simple">
 <li><p class="first">Dans le premier onglet vous pouvez changer les attributs les plus courants.</p>
 </li>
-<li><p class="first">Pour modifier les attributs des tables liées (p. ex. <strong>point de tronçons</strong>), sélectionnez l&#8217;onglet correspondant.</p>
+<li><p class="first">Pour modifier les attributs des tables liées (p. ex. <strong>points de tronçon</strong>), sélectionnez l&#8217;onglet correspondant.</p>
 </li>
 </ul>
 <blockquote>
@@ -271,7 +274,8 @@
 <div class="section" id="working-with-codes-of-valuelist">
 <h2>2.3.1.5. Working with codes of valuelist<a class="headerlink" href="#working-with-codes-of-valuelist" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>The values of fields with valuelist are stored in the database with codes.</li>
+<li><p class="first">Les valeurs des champs avec liste de valeurs sont stockés sous forme de codes dans la base de données.</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="admonition note">
@@ -281,7 +285,8 @@
 </div></blockquote>
 <ul class="simple">
 <li>In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.</li>
-<li>But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: <strong>represent_value(&#8220;field&#8221;)</strong></li>
+<li><p class="first">Mais si vous voulez définir une sélection avec une expression ou si vous vous voulez définir une symbologie basée sur des règles pour votre couche, vous devez connaître les codes ou utiliser l&#8217;expression suivante: <strong>represent_value(&#8220;field&#8221;)</strong></p>
+</li>
 </ul>
 <p>Examples for using <strong>represent_value</strong></p>
 <ul class="simple">
@@ -293,7 +298,8 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>Search all reaches, that have not the same usage_planned as usage_current</li>
+<li><p class="first">Sélectionner tous les tronçons n&#8217;ayant pas la même valeur pour usage_planifié et usage_courant</p>
+</li>
 </ul>
 <blockquote>
 <div><div class="figure">
@@ -302,15 +308,15 @@
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The expression <cite>&#8220;ch_usage_current&#8221; &lt;&gt; &#8220;ch_usage planned&#8221;</cite> does not work because of the unique codes!</p>
+<p class="last">L&#8217;expression <cite>&#8220;co_usage_courant&#8221; &lt;&gt; &#8220;co_usage planifie&#8221;</cite> ne fonctionne pas à cause des codes uniques!</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only work for one language.</p>
+<p class="last">Dans le projet démo il n&#8217;y a pas d&#8217;utilisation de valeur_representation pour les symboles basés sur des règles, sinon les règles ne vont fonctionner que pour un seul langage.</p>
 </div>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
-<h2>2.3.1.6. An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.6. Une autre façon de choisir un objet<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</li>
 </ul>
@@ -331,7 +337,7 @@
 <p class="last">The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Assurez-vous que votre projet (dans &#8220;Propriétés du projet&#8221; / &#8220;Relations&#8221;) inclue bien la relation entre les  tables <strong>vw_cover</strong> (champ &#8220;fk_wastewater_structure&#8221;) et <strong>vw_qgep_wastewater_structure</strong> (champ &#8220;obj_id&#8221;)</p>
+<li><p class="first">S&#8217;assurer que la relation entre les  tables <strong>vw_couvercle</strong> (champ &#8220;fk_ouvrage_assainissement&#8221;) et <strong>vw_qgep_ouvrage_assainissement</strong> (champ &#8220;obj_id&#8221;) soit bien présente dans <em>Propriétés du projet / Relations</em></p>
 </li>
 <li>Define in layer vw_cover / Properties / <strong>Attribute Forms</strong> the field <strong>fk_wastewater_structure</strong> as value relation</li>
 </ul>
@@ -339,7 +345,7 @@
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Commencez par éditer la couche <strong>vw_cover</strong> et ajoutez le nouveau <strong>couvercle</strong></p>
+<li><p class="first">Commencer par éditer la couche <strong>vw_couvercle</strong> et ajouter le nouveau couvercle</p>
 </li>
 <li><p class="first">Dans le formulaire, derrière le champ <strong>fk_structure_assainissement</strong>, vous trouverez un bouton pour connecter le nouveau couvercle à une structure assainissement existante.</p>
 </li>
@@ -350,7 +356,7 @@
 </div>
 </div>
 <div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
-<h2>2.3.1.8. Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.8. Ajouter un noeud assainissement à un tronçon existant<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Lien permanent vers ce titre">¶</a></h2>
 <p>In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -364,24 +370,24 @@
 </div>
 </div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.9. Sauvez les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.9. Sauver les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Cliquez sur <strong>Sauver</strong> et désactivez ensuite le mode d&#8217;édition ou cliquez sur <strong>Stop Data Entry</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP (<code class="docutils literal"><span class="pre">wizard</span></code>).</p>
+<li><p class="first">Cliquer sur <strong>Sauver</strong> et désactiver ensuite le mode d&#8217;édition ou cliquer sur <strong>Terminer l&#8217;entrée de données</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP (<code class="docutils literal"><span class="pre">wizard</span></code>).</p>
 </li>
 </ul>
 </div>
 <div class="section" id="changing-wastewater-structure-type">
-<h2>2.3.1.10. Changing Wastewater Structure Type<a class="headerlink" href="#changing-wastewater-structure-type" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.10. Changer le type de l&#8217;ouvrage assainissement<a class="headerlink" href="#changing-wastewater-structure-type" title="Lien permanent vers ce titre">¶</a></h2>
 <p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You can not change a point - wastewater structure (e.g. manhole) to a line wastewater structure (channel) or vice versa.</p>
+<p class="last">Vous ne pouvez pas changer un élément ponctuel assainissement (p.ex. regard) en élément linéaire assainissement (p.ex. conduite) ou vice versa.</p>
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2>2.3.1.11. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.11. Séparer un tronçon (conduite) en différents tronçons<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.</p>
-<p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
+<p>Solution temporaire: Changer le tronçon existant et dessiner le second tronçon manuellement. Contrôler les connexions.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.</p>
 <p><a href="#id1"><span class="problematic" id="id2">`</span></a>Lien vers la page principale de l&#8217; <strong>Association suisse des professionnels de la protection des eaux - Modèle de données VSA-DSS: &lt;https://www.vsa.ch/fr/domaines-cc/assainissement/structure-des-donnees-de-levacuation-des-eaux-des-agglomerations/&gt;`_</strong></p>
 </div>
@@ -394,7 +400,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="moving.html" class="btn btn-neutral float-right" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="moving.html" class="btn btn-neutral float-right" title="2.3.2. Déplacer des ouvrages assainissement avec tronçons, couvercles et noeuds" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="2.3. Édition dans QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

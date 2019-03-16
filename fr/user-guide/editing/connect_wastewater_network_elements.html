@@ -88,13 +88,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Numérisation dans QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Édition dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="editing.html">2.3.1. Modification de données existantes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer des ouvrages assainissement avec tronçons, couvercles et noeuds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Ajout et édition d&#8217;événements de maintenance</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">2.3.4. Connexion des éléments du réseau assainissement</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.3.4.1. Général</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">2.3.4.2. How to connect reaches to nodes or reaches to reaches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#video-tutorial">2.3.4.3. Video Tutorial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-delete-a-connection">2.3.4.4. How to delete a connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">2.3.4.2. Comment connecter les tronçons aux noeuds ou les noeuds à d&#8217;autres noeuds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-tutorial">2.3.4.3. Tutoriel vidéo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-delete-a-connection">2.3.4.4. Comment supprimer une connection</a></li>
 </ul>
 </li>
 </ul>
@@ -150,7 +150,7 @@
             
   <div class="section" id="connect-wastewater-network-elements">
 <span id="id1"></span><h1>2.3.4. Connexion des éléments du réseau assainissement<a class="headerlink" href="#connect-wastewater-network-elements" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Procédure pour connecter les objets du réseau assainissement dans QGEP.</p>
+<p>Procédure pour connecter les éléments du réseau assainissement dans QGEP.</p>
 <div class="section" id="general">
 <h2>2.3.4.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
@@ -162,11 +162,13 @@
 </div>
 </div>
 <div class="section" id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
-<h2>2.3.4.2. How to connect reaches to nodes or reaches to reaches<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.4.2. Comment connecter les tronçons aux noeuds ou les noeuds à d&#8217;autres noeuds<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>It does not matter, which layer is selected</li>
+<li><p class="first">Peu importe la couche sélectionnée</p>
+</li>
 <li>The <strong>vw_qgep_reach</strong> layer has to be in edit mode</li>
-<li>Click the <strong>Connect wastewater networkelements</strong> button</li>
+<li><p class="first">Cliquer sur le bouton <strong>Connecter éléments réseau assainissement</strong></p>
+</li>
 <li>If you move the mouse over an reach, that can be connected, it is marked: you can click</li>
 <li>Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again</li>
 </ul>
@@ -180,24 +182,26 @@
 <img alt="../../_images/connecting_2.jpg" src="../../_images/connecting_2.jpg" />
 </div>
 <ul class="simple">
-<li>If everything is ok, you will see a message in a blue bar on top of the map-window</li>
+<li><p class="first">Si tout est OK, vous verrez apparaître un message dans une barre bleue, au-dessus de la vue de la carte</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/connecting_3.jpg" src="../../_images/connecting_3.jpg" />
 </div>
 </div>
 <div class="section" id="video-tutorial">
-<h2>2.3.4.3. Video Tutorial<a class="headerlink" href="#video-tutorial" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.4.3. Tutoriel vidéo<a class="headerlink" href="#video-tutorial" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>See <a class="reference external" href="https://vimeo.com/171536774">this video tutorial (QGIS version 2):</a></li>
 </ul>
 </div>
 <div class="section" id="how-to-delete-a-connection">
-<h2>2.3.4.4. How to delete a connection<a class="headerlink" href="#how-to-delete-a-connection" title="Lien permanent vers ce titre">¶</a></h2>
-<p>There is no special tool in the moment to delete a connection between networkelements.</p>
+<h2>2.3.4.4. Comment supprimer une connection<a class="headerlink" href="#how-to-delete-a-connection" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il n&#8217;existe pas pour le moment d&#8217;outil spécial pour supprimer une connexion entre éléments du réseau.</p>
 <ul class="simple">
 <li>Select the <strong>vw_qgep_reach</strong> layer and set it to edit mode</li>
-<li>Click on the <strong>Identify Features</strong> button and select the reach to modify by double clicking</li>
+<li><p class="first">Cliquer sur le bouton <strong>Identifier objets</strong> et sélectionner le tronçon à modifier par double-clic</p>
+</li>
 <li>Delete the value in the <strong>rp_..._fk_wastewater_networkelement</strong> field to delete the connection</li>
 </ul>
 <div class="figure">
