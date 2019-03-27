@@ -96,7 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">1.3.3. Installer le plugin QGEP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">1.3.4. Installation du projet de démo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">1.3.5. Add your own OID in the project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">1.3.6. Working with more than one database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">1.3.6. Travailler avec plusieurs base de  données</a></li>
 </ul>
 </li>
 </ul>
@@ -193,7 +193,8 @@ and <code class="docutils literal"><span class="pre">.pgpass</span></code> into 
 <div class="section" id="install-qgis">
 <h2>1.3.2. Installer QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Minimum requirement 3.4</li>
+<li><p class="first">Configuration minimale 3.4</p>
+</li>
 <li><p class="first">Nous vous recommandons l&#8217;utilisation des versions de développements de QGIS (appelées qgis-dev sous Windows). Elles offriront une meilleure expérience utilisateur avec QGEP. Pour une installation sur Windows, télécharger l&#8217;installeur <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a>  , choisir <em>installation avancée</em> et installer qgis-dev.</p>
 </li>
 </ul>
@@ -281,17 +282,20 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 </div>
 <p>and set the OID you want to use in your project to TRUE.</p>
 <ul class="simple">
-<li>or add it locally to your project with an INSERT statement.</li>
+<li><p class="first">ou ajoutez-le localement à votre projet avec une commande INSERER</p>
+</li>
 <li>OID prefixes have to be ordered at <a class="reference external" href="http://www.interlis.ch/oid/oid_commande_e.php">http://www.interlis.ch/oid/oid_commande_e.php</a></li>
 </ul>
 </div>
 <div class="section" id="working-with-more-than-one-database">
-<h2>1.3.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.3.6. Travailler avec plusieurs base de  données<a class="headerlink" href="#working-with-more-than-one-database" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Create a new database in pgAdmin III with a new name, e.g. communityA</li>
+<li><p class="first">Créer une nouvelle base de données dans pgAdmin III avec un nouveau nom, p.ex. communauteA</p>
+</li>
 <li>Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)</li>
 <li>Go further on as descript in 1.2 Database initialization</li>
-<li>Change the <code class="docutils literal"><span class="pre">pg_service.conf</span></code> - file</li>
+<li><p class="first">Modifier le fichier <code class="docutils literal"><span class="pre">pg_service.conf</span></code></p>
+</li>
 </ul>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
 <span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
@@ -306,7 +310,8 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 </pre></div>
 </div>
 <ul class="simple">
-<li>Search and replace in the copy of <code class="docutils literal"><span class="pre">qgep_en.qgs</span></code> all &#8216;pg_qgep&#8217; with &#8216;pg_communityA&#8217;</li>
+<li><p class="first">Chercher et remplacer dans la copie de <code class="docutils literal"><span class="pre">qgep_fr.qgs</span></code> tous les &#8216;pg_qgep&#8217; avec &#8216;pg_communauteA&#8217;</p>
+</li>
 </ul>
 </div>
 </div>
