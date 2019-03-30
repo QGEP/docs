@@ -96,8 +96,8 @@ You can install them on debian based systems with::
       * Name: QGEP
 
       * URL:
-        ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``
-
+        ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
+        
     * Enable `Show also experimental plugins`
 
   * Activate the plugin (see image below):
