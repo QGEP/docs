@@ -161,7 +161,7 @@ Possible problems
 
 * qgep schema of demodata has missing foreignkeys: Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –> check whether ok in empty schema ``qgep``.
 
-* Need to use ``ST_Force3D`` for geometries – because qgep model is now with 3D coordinates
+* Need to use ``ST_Force3D`` for geometries – because qgep model is with 3D coordinates
 
 * If identifier in table is not unique there will be an error on the import of the table:
 
