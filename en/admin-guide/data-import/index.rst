@@ -138,7 +138,7 @@ pause
 
 Specify the path variable to postgresSQL on your system
 
-``-u`` sets the user 
+``-U`` sets the user 
 ``-d`` sets the dbname
 ``-f`` sets the filenam
 
