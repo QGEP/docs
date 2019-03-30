@@ -74,7 +74,7 @@ To save the password as well on the system you may use the file `pgpass <http://
 Install QGIS
 ------------
 
-* Minimum requirement 2.14
+* Minimum requirement 3.4
 
 * We recommend using the latest master build (called qgis-dev on Windows)
   which often offers a better experience in combination with QGEP.
@@ -86,8 +86,7 @@ Install QGEP plugin
 
 Plugin requirements:
 
-- networkx
-- Qt 4 PostgreSQL database driver
+- networkx >= 2.1
 
 You can install them on debian based systems with::
 
@@ -107,8 +106,8 @@ You can install them on debian based systems with::
       * Name: QGEP
 
       * URL:
-        ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``
-
+        ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
+        
     * Enable `Show also experimental plugins`
 
   * Activate the plugin (see image below):
@@ -126,11 +125,12 @@ You can install them on debian based systems with::
 Install the demo project
 ------------------------
 
-* Download https://github.com/QGEP/data/archive/demodata.zip
+* Download from https://github.com/QGEP/datamodel/releases/latest
+  New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available
 
 * Extract the file
 
-* Restore the file `qgep_demodata.backup` with pgAdminIII
+* Restore the file `qgep_vx.x.x_structure_and_demo_data.backup` with pgAdmin
 
 * Open `project/qgep_en.qgs` with QGIS
 
@@ -162,7 +162,7 @@ and set the OID you want to use in your project to TRUE.
 Working with more than one database
 -----------------------------------
 
-* Create a new database in pgAdmin III with a new name, e.g. communityA
+* Create a new database in pgAdmin with a new name, e.g. communityA
 
 * Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
 

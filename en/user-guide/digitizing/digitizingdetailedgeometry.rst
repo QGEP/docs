@@ -8,7 +8,7 @@ You can add a detailed geometry to waste water structures.
 
 This is recommended for:
 
-* Special structures and infiltration points, because they are not normed structures like manholes,
+* Special structures and discharge points, because they are not normed structures like manholes,
   where you can define **dimension1** and **dimension2** to describe the extension.
 * Infiltration installations where **dimension1** and **2** are not enough to describe the geometry
 
@@ -37,4 +37,4 @@ Digitizing tool
 
 .. figure:: images/digitizing_detailedgeometry4.jpg
 
-An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Aktionen** menu of the form.
+An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Actions** menu of the form.
