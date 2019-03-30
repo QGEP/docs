@@ -144,3 +144,8 @@ If you already have a data model and you want to force the regeneration
 of the model you can also use the ``-f`` option: ``./scripts/db_setup.sh -f``.
 
 You can use the ``-r`` option to add roles (``qgep_viewer``, ``qgep_user``, ``qgep_manager``, ``qgep_sysadmin``).
+
+- Viewer: Can consult tables and views.
+- User: Can edit data.
+- Manager: Can edit data and value lists.
+- Admin: Database administrator.

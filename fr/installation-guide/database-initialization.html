@@ -292,6 +292,12 @@ as in the <a class="reference internal" href="workstation.html#pg-service-linux"
 For instance, run <code class="docutils literal"><span class="pre">./scripts/db_setup.sh</span> <span class="pre">-s</span> <span class="pre">2056</span></code> for the <strong>2056</strong> SRID.</p>
 <p>Si vous avez déjà un modèle de données et désirez forcer la régénération du modèle, vous pouvez également utiliser l&#8217;option <code class="docutils literal"><span class="pre">-f</span></code>: <code class="docutils literal"><span class="pre">./scripts/db_setup.sh</span> <span class="pre">-f</span></code>.</p>
 <p>Vous pouvez utiliser l&#8217;option  <code class="docutils literal"><span class="pre">-r</span></code> pour ajouter des rôles (<code class="docutils literal"><span class="pre">qgep_viewer</span></code>, <code class="docutils literal"><span class="pre">qgep_user</span></code>, <code class="docutils literal"><span class="pre">qgep_manager</span></code>, <code class="docutils literal"><span class="pre">qgep_sysadmin</span></code>).</p>
+<ul class="simple">
+<li>Viewer: Can consult tables and views.</li>
+<li>User: Can edit data.</li>
+<li>Manager: Can edit data and value lists.</li>
+<li>Admin: Database administrator.</li>
+</ul>
 </div>
 </div>
 </div>
