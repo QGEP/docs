@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.1. Bearbeiten von bestehenden Daten &mdash; QGEP 0.5 Dokumentation</title>
+  <title>2.3.1. Bearbeiten von bestehenden Daten &mdash; QGEP 0.7 Dokumentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.5 Dokumentation" href="../../index.html"/>
+    <link rel="top" title="QGEP 0.7 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.3. Bearbeiten in QGEP" href="index.html"/>
         <link rel="next" title="2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten" href="moving.html"/>
         <link rel="prev" title="2.3. Bearbeiten in QGEP" href="index.html"/> 
@@ -60,7 +60,7 @@
           
           
             <div class="version">
-              0.5
+              0.7
             </div>
           
         
@@ -96,8 +96,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.6. Ein andere Möglichkeit ein Objekt auszuwählen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.7. Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.8. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.9. Änderungen Speichern</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.10. Abwasserbauwerk Typ ändern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.9. Multiedit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.10. Änderungen Speichern</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.11. Kanäle in verschiedene Haltungen unterteilen</a></li>
 </ul>
 </li>
@@ -380,15 +380,16 @@
 <p class="last">Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden.</p>
 </div>
 </div>
+<div class="section" id="multiedit">
+<h2>2.3.1.9. Multiedit<a class="headerlink" href="#multiedit" title="Link zu dieser Überschrift">¶</a></h2>
+<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
+</div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.9. Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>2.3.1.10. Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Drücken Sie <strong>Save</strong> und dann deaktivieren Sie den Bearbeitungsmodus oder klicken Sie auf <strong>Stop data entry</strong> wenn Sie mit dem <strong>QGEP Data Entry</strong> Arbeitsassistenten gearbeitet haben.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="changing-wastewater-structure-type">
-<h2>2.3.1.10. Abwasserbauwerk Typ ändern<a class="headerlink" href="#changing-wastewater-structure-type" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Im vw_qgep_wastewater_structure Formular kann die Subklasse das Abwasserbauwerks geändert werden (z.B. von Normschacht zu Spezialbauwerk oder Versickerungsanlage). Der alte Subklassen-Datensatz wird dabei gelöscht und die Subklassen-spezifischen Felder müssen neu eingegeben werden. Aber alle Verknüpfungen (die beziehen sich auf die Klasse Abwasserbauwerk und nicht auf die Subklasse) und auch die Obj_ID oder die Bezeichnung bleiben unverändert.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
@@ -423,7 +424,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
     </p>
   </div>
@@ -445,7 +446,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.5',
+            VERSION:'0.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

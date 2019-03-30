@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.3. Arbeitsplatzrechner Einrichten &mdash; QGEP 0.5 Dokumentation</title>
+  <title>1.3. Arbeitsplatzrechner Einrichten &mdash; QGEP 0.7 Dokumentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.5 Dokumentation" href="../index.html"/>
+    <link rel="top" title="QGEP 0.7 Dokumentation" href="../index.html"/>
         <link rel="up" title="1. Leitfaden QGEP Installation" href="index.html"/>
         <link rel="next" title="2. QGEP Benutzerhandbuch" href="../user-guide/index.html"/>
         <link rel="prev" title="1.2. Initialisierung der Datenbank" href="database-initialization.html"/> 
@@ -60,7 +60,7 @@
           
           
             <div class="version">
-              0.5
+              0.7
             </div>
           
         
@@ -154,6 +154,18 @@
 <h3>1.3.1.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Erstellen Sie ein neues Verzeichnis indem Sie die Konfigurationen ablegen möchten (z.B. ein neues Verzeichnis <code class="docutils literal"><span class="pre">pgconfig`</span> <span class="pre">in</span> <span class="pre">ihrem</span> <span class="pre">Stammverzeichnis).</span> <span class="pre">Diese</span> <span class="pre">Anleitung</span> <span class="pre">wird</span> <span class="pre">jeweils</span> <span class="pre">mit</span>&nbsp; <span class="pre">``PGSYSCONFDIR</span></code> darauf verweisen.</p>
 <p>Setzen Sie die Umgebungsvariable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> auf den Dateipfad von <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p>Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:</p>
+<blockquote>
+<div>Click New to add a new variable name and value.
+Click an existing variable, and then click Edit to change its name or value.
+Click an existing variable, and then click Delete to remove it.</div></blockquote>
+<div class="figure">
+<img alt="../_images/umgebungsvariablen_pgconfdir.jpg" src="../_images/umgebungsvariablen_pgconfdir.jpg" />
+</div>
+<p class="last">You can check your environment variables also within QGIS: Menu Settings - Options..., System Tab -&gt; Environment</p>
+</div>
 <p>In diesem Verzeichnis werden zwei Dateien sein</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
@@ -335,7 +347,7 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
     </p>
   </div>
@@ -357,7 +369,7 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.5',
+            VERSION:'0.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

@@ -139,11 +139,19 @@ In QGEP, there is in the moment no tool, that helps you to connect a wastewater 
 
 .. note:: If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.
  
+
+Multiedit
+---------
+If you want to edit attributes for multiple objects of the same class you can use the `multiedit Tool of QGIS <https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
+
+ 
 Saving changes
 --------------
  
 * Click **Save** and then deactivate the edit mode or click on **Stop data entry** if you have worked with the **QGEP Data Entry** wizard.
   
+
+=======
 Changing Wastewater Structure Type
 ----------------------------------
 

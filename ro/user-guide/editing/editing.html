@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.1. Editing of existing data &mdash; QGEP 0.5 documentation</title>
+  <title>2.3.1. Editing of existing data &mdash; QGEP 0.7 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.5 documentation" href="../../index.html"/>
+    <link rel="top" title="QGEP 0.7 documentation" href="../../index.html"/>
         <link rel="up" title="2.3. Editing in QGEP" href="index.html"/>
         <link rel="next" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/>
         <link rel="prev" title="2.3. Editing in QGEP" href="index.html"/> 
@@ -60,7 +60,7 @@
           
           
             <div class="version">
-              0.5
+              0.7
             </div>
           
         
@@ -96,8 +96,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.6. An other way to choose an object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.7. Adding additional covers and nodes to an existing wastewater structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.8. Adding a wastewater node to an existing reach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.9. Saving changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.10. Changing Wastewater Structure Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.9. Multiedit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.10. Saving changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.11. Split a reach (channel) into different reaches</a></li>
 </ul>
 </li>
@@ -349,14 +349,15 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 <p class="last">If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.</p>
 </div>
 </div>
+<div class="section" id="multiedit">
+<h2>2.3.1.9. Multiedit<a class="headerlink" href="#multiedit" title="Permalink to this headline">¶</a></h2>
+<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
+</div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.9. Saving changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h2>
+<h2>2.3.1.10. Saving changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</li>
 </ul>
-</div>
-<div class="section" id="changing-wastewater-structure-type">
-<h2>2.3.1.10. Changing Wastewater Structure Type<a class="headerlink" href="#changing-wastewater-structure-type" title="Permalink to this headline">¶</a></h2>
 <p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -391,7 +392,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, The QGEP Project/OPENGIS.ch.
+        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
     </p>
   </div>
@@ -413,7 +414,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.5',
+            VERSION:'0.7',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

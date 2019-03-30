@@ -46,15 +46,15 @@ Restore demo datamodel
 Restore the latest data model that also includes demo data:
 
 * Download demo data
-
   * https://github.com/QGEP/datamodel/releases/latest
   * download `qgep_vx.y.z_structure_and_demo_data.backup`
+
 
 * Right click the `qgep` schema
 
   * Click `Restore`
 
-  * Load your download of qgep.backup
+  * Load your download of qgep_demodata.backup
 
   .. figure:: images/qgep_restore.jpg
 
