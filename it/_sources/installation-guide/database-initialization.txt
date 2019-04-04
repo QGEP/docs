@@ -28,7 +28,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
  CREATE ROLE qgepuser LOGIN;
  GRANT qgep TO qgepuser;
 
-* Create a new database (preferably named `qgep`, but you are free to choose)
+* Create a new database with UTF8 encoding (preferably named `qgep`, but you are free to choose)
 
   * Change to this database
 
