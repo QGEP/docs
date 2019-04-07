@@ -61,4 +61,26 @@ Downstream
 * Use this to check whether the topology of your network is correct or to find out where you could intervene in case of an accident.
 
 
+Flow times downstream
+---------------------
+
+* This is a tool in the QGEP-toolbox.
+
+* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool. There are already considerations about this functionality.
+
+* For this tool you need a layer (table) in the QGEP-project with the flowtime per reach and the obj_id of the reach.
+
+* You have to select the start-reach (where the accident is) in the vw_qgep_reach-layer
+
+* Start the tool with double-click one Flow times downstream
+
+* In the window you have to choose 
+as reach layer: vw_qgep_reach
+as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum up downstream)
+as reach id field: the field in your table that is the obj_id of the reach
+as Flow times field: the field in your table, that you want to sum up
+as Flow times: if you let this field empty, there will be a temporary file with the resultats in your projects. Otherwise you can save the resultat to a vector layer.
+
+* The Tool makes a downstream network search starting with the selected reach and creates for every reach a record in the (temporary) vector layer with just one field (the sum of the Flow times).
+
 
