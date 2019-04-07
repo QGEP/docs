@@ -75,12 +75,18 @@ Flow times downstream
 * Start the tool with double-click one Flow times downstream
 
 * In the window you have to choose 
-as reach layer: vw_qgep_reach
-as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum up downstream)
-as reach id field: the field in your table that is the obj_id of the reach
-as Flow times field: the field in your table, that you want to sum up
-as Flow times: if you let this field empty, there will be a temporary file with the resultats in your projects. Otherwise you can save the resultat to a vector layer.
+  * as reach layer: vw_qgep_reach
+  * as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum up downstream)
+  * as reach id field: the field in your table that is the obj_id of the reach
+  * as Flow times field: the field in your table, that you want to sum up
+  * as Flow times: if you let this field empty, there will be a temporary file with the resultats in your projects. Otherwise you can save the resultat to a vector layer.
 
 * The Tool makes a downstream network search starting with the selected reach and creates for every reach a record in the (temporary) vector layer with just one field (the sum of the Flow times).
 
+.. attention:: If there is more than one downstream-way, the results are wrong after the branch.
+
+* There are many cases, where you get an empty flow time-Layer and red (error) text in the Log-window:
+  * Do not select more than one reach to start
+  * Do not select vw_qgep_reach as flow time layer (to sum up the length, use the vw_network_segment layer)
+  * If the reach id field has now values that match the reach obj_id, you will also get an error
 
