@@ -73,14 +73,20 @@ Flow times downstream
 * You have to select the start-reach (where the accident is) in the vw_qgep_reach-layer
 
 * Start the tool with double-click one **Flow times downstream**
+
 .. figure:: images/toolbox.jpg
 .. figure:: images/qgep_toolbox.jpg
 
 * In the window you have to choose 
+
   * as reach layer: vw_qgep_reach
+
   * as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum up downstream)
+  
   * as reach id field: the field in your table that is the obj_id of the reach
+  
   * as Flow times field: the field in your table, that you want to sum up
+  
   * as Flow times: if you let this field empty, there will be a temporary file with the resultats in your projects. Otherwise you can save the resultat to a vector layer.
 .. figure:: images/flow_time_downstream_window.jpg
 
