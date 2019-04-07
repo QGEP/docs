@@ -95,8 +95,11 @@ Flow times downstream
 
 .. attention:: If there is more than one downstream-way, the results are wrong after the branch.
 
-* There are many cases, where you get an empty flow time-Layer and red (error) text in the Log-window:
+* There are some cases, where you get an empty flow time-Layer and red (error) text in the Log-window:
+ 
   * Do not select more than one reach to start
+ 
   * Do not select vw_qgep_reach as flow time layer (to sum up the length, use the vw_network_segment layer)
+  
   * If the reach id field has now values that match the reach obj_id, you will also get an error
 
