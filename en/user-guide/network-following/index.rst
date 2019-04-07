@@ -101,5 +101,5 @@ Flow times downstream
  
   * Do not select vw_qgep_reach as flow time layer (to sum up the length, use the vw_network_segment layer)
   
-  * If the reach id field has now values that match the reach obj_id, you will also get an error
+  * If the reach id field has no values that match the reach obj_id, you will also get an error
 
