@@ -87,10 +87,12 @@ Do not use the Reverse line button of QGIS, because this button do not change th
 * To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.
 
 * Open the **Processing Toolbox**  
-..figure:: images/toolbox.jpg
+
+.. figure:: images/toolbox.jpg
 
 * Double click the **Change reach direction** tool 
-..figure:: images/qgep_toolbox.jpg
+
+.. figure:: images/qgep_toolbox.jpg
 
 * In the tool-window you have to choose the **vw_qgep_reach** - Layer and then click on **Run**
 
@@ -108,10 +110,10 @@ This tool snaps reaches graphically to the wastewater network element they are c
 * To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.
 
 * Open the **Processing Toolbox**  
-..figure:: images/toolbox.jpg
+.. figure:: images/toolbox.jpg
 
 * Double click the **Snap reach geometry** tool 
-..figure:: images/qgep_toolbox.jpg
+.. figure:: images/qgep_toolbox.jpg
 
 * In the tool-window you have to choose the **vw_qgep_reach** - layer and the **vw_wastewater_node** - layer, then click on **Run**
 
