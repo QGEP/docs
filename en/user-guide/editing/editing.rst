@@ -76,7 +76,27 @@ Changing attributes of linear elements (channels)
  
   .. figure:: images/form_vw_qgep_reach_reachpoints.jpg
  
- 
+Change reach direction
+----------------------
+
+..note:: The definition in VSA-DSS is, that reaches have to be defined in the flow-direction. The start node is where the water comes from, the end node is where the water flows.
+
+QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
+Do not use the Reverse line button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.
+
+* To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.
+
+* Open the **Processing Toolbox**  ..figure:: images/toolbox.jpg
+
+* Double click the **Change reach direction** tool  ..figure:: images/qgep_toolbox.jpg
+
+* In the tool-window you have to choose the **vw_qgep_reach** - Layer and then click on **Run**
+
+* If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed. 
+
+* You can save now the change
+
+
 Working with codes of valuelist
 -------------------------------
 
