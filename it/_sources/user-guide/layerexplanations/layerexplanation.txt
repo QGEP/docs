@@ -68,7 +68,7 @@ This layer must be expanded in the future with related tables (e.g. overflow-tab
 Topology
 --------
 
-These two layers are used by the qgep-extension for the profil and the network-following. Do not change or use otherwise.
+These two layers are used by the qgep-extension for the profile and the network-following. Do not change or use otherwise.
 
 Catchment
 ---------
