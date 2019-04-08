@@ -94,7 +94,7 @@ Do not use the Reverse line button of QGIS, because this button do not change th
 
 * If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed. 
 
-* You can save now the change
+* You can save now the change.
 
 
 Working with codes of valuelist
