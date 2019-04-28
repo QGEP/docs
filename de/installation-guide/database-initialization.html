@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Initialisierung der Datenbank &mdash; QGEP 0.7 Dokumentation</title>
+  <title>1.2. Initialisierung der Datenbank &mdash; QGEP 0.7 Dokumentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.7 Dokumentation" href="../index.html"/>
-        <link rel="up" title="Leitfaden QGEP Installation" href="index.html"/>
-        <link rel="next" title="3. Arbeitsplatzrechner Einrichten" href="workstation.html"/>
-        <link rel="prev" title="1. Datenbankserver aufsetzen" href="server.html"/> 
+        <link rel="up" title="1. Leitfaden QGEP Installation" href="index.html"/>
+        <link rel="next" title="1.3. Arbeitsplatzrechner Einrichten" href="workstation.html"/>
+        <link rel="prev" title="1.1. Datenbankserver aufsetzen" href="server.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,23 +82,23 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Leitfaden QGEP Installation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">1. Datenbankserver aufsetzen</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2. Initialisierung der Datenbank</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#process">2.1. Vorgehen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">2.1.1. Demodaten einrichten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#empty-data-model">2.1.2. Leeres Datenbank-Schema</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-the-data-model">2.1.3. Erzeugen des Datenmodells</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Leitfaden QGEP Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Datenbankserver aufsetzen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.2. Initialisierung der Datenbank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#process">1.2.1. Vorgehen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">1.2.1.1. Demodaten einrichten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empty-data-model">1.2.1.2. Leeres Datenbank-Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-the-data-model">1.2.1.3. Erzeugen des Datenmodells</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">3. Arbeitsplatzrechner Einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">1.3. Arbeitsplatzrechner Einrichten</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">1. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">2. Administratorhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">3. Demo virtuelle Maschine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 </ul>
 
           
@@ -123,9 +123,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">Leitfaden QGEP Installation</a> &raquo;</li>
+          <li><a href="index.html">1. Leitfaden QGEP Installation</a> &raquo;</li>
       
-    <li>2. Initialisierung der Datenbank</li>
+    <li>1.2. Initialisierung der Datenbank</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -140,14 +140,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="database-initialization">
-<span id="id1"></span><h1>2. Initialisierung der Datenbank<a class="headerlink" href="#database-initialization" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="id1"></span><h1>1.2. Initialisierung der Datenbank<a class="headerlink" href="#database-initialization" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Für die Konfiguration der Datenbank können sie pgAdmin verwenden.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Mit diesem Link können sie lernen wie man <a class="reference internal" href="../admin-guide/pgadmin/install.html#install-pgadmin"><span>Installation von pgAdmin</span></a> benutzt.</p>
 </div>
 <div class="section" id="process">
-<h2>2.1. Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>1.2.1. Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
 <p>in pgAdminIII</p>
 <ul class="simple">
 <li><p class="first">Verbinden Sie sich mit dem Datenbankserver</p>
@@ -164,7 +164,8 @@ GRANT qgep TO qgepuser;
 </pre></div>
 </div>
 <ul class="simple">
-<li>Create a new database with UTF8 encoding (preferably named <cite>qgep</cite>, but you are free to choose)<ul>
+<li><p class="first">Erzeugen sie eine neue Datenbank mit UTF8-Codierung (vorzugsweise mit Name &#8216;qgep&#8217;; sie können aber auch einen anderen Namen wählen)</p>
+<ul>
 <li><p class="first">Wechseln Sie in diese Datenbank</p>
 </li>
 </ul>
@@ -177,7 +178,7 @@ GRANT qgep TO qgepuser;
 </li>
 </ul>
 <div class="section" id="restore-demo-datamodel">
-<span id="restore-demomodel"></span><h3>2.1.1. Demodaten einrichten<a class="headerlink" href="#restore-demo-datamodel" title="Link zu dieser Überschrift">¶</a></h3>
+<span id="restore-demomodel"></span><h3>1.2.1.1. Demodaten einrichten<a class="headerlink" href="#restore-demo-datamodel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das aktuelle Datenbank-Schema mit dem Demodatensatz einrichten</p>
 <ul>
 <li><p class="first">Download demo data
@@ -188,7 +189,8 @@ GRANT qgep TO qgepuser;
 <ul class="simple">
 <li><p class="first">&#8216;Restore&#8217; wählen</p>
 </li>
-<li>Load your download of qgep_demodata.backup</li>
+<li><p class="first">Laden sie ihren Download von qgep_demodata.backup</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../_images/qgep_restore.jpg" src="../_images/qgep_restore.jpg" />
@@ -258,7 +260,7 @@ GRANT ALL ON schema qgep_vl TO postgres;
 </ul>
 </div>
 <div class="section" id="empty-data-model">
-<h3>2.1.2. Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>1.2.1.2. Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist auch möglich, ein leeres Datenbank-Schema zu erstellen (ohne Demodatensatz).</p>
 <ul class="simple">
 <li><p class="first">Herunterladen das Datenbank-Schema unter <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>, und der Datei <cite>qgep_vx.y.z_structure_with_value_lists.sql</cite>.</p>
@@ -268,7 +270,7 @@ GRANT ALL ON schema qgep_vl TO postgres;
 </ul>
 </div>
 <div class="section" id="generate-the-data-model">
-<h3>2.1.3. Erzeugen des Datenmodells<a class="headerlink" href="#generate-the-data-model" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>1.2.1.3. Erzeugen des Datenmodells<a class="headerlink" href="#generate-the-data-model" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist auch unter LINUX möglich das Datenmodell zu erzeugen</p>
 <ul>
 <li><p class="first">Download des Datenmodells</p>
@@ -294,10 +296,14 @@ cd datamodel &amp;&amp; git submodule init &amp;&amp; git submodule update
 <p>Wenn Sie schon ein Datenmodell haben und dieses erneut erzeugen möchten, dann nutzen Sie die <cite>-f`</cite> Option: <code class="docutils literal"><span class="pre">./scripts/db_setup.sh</span> <span class="pre">-f</span></code>.</p>
 <p>Sie können die <code class="docutils literal"><span class="pre">-r</span></code> Option nutzen, um die folgenden Rollen hinzuzufügen (<code class="docutils literal"><span class="pre">qgep_viewer</span></code>, <code class="docutils literal"><span class="pre">qgep_user</span></code>, <code class="docutils literal"><span class="pre">qgep_manager</span></code>, <code class="docutils literal"><span class="pre">qgep_sysadmin</span></code>).</p>
 <ul class="simple">
-<li>Viewer: Can consult tables and views.</li>
-<li>User: Can edit data.</li>
-<li>Manager: Can edit data and value lists.</li>
-<li>Admin: Database administrator.</li>
+<li><p class="first">Viewer: Kann Tabellen und Views anschauen.</p>
+</li>
+<li><p class="first">User: Kann Daten editieren.</p>
+</li>
+<li><p class="first">Manager: Kann Daten und Wertebereiche bearbeiten.</p>
+</li>
+<li><p class="first">Admin: Datenbank Administrator.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -310,10 +316,10 @@ cd datamodel &amp;&amp; git submodule init &amp;&amp; git submodule update
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workstation.html" class="btn btn-neutral float-right" title="3. Arbeitsplatzrechner Einrichten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workstation.html" class="btn btn-neutral float-right" title="1.3. Arbeitsplatzrechner Einrichten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="server.html" class="btn btn-neutral" title="1. Datenbankserver aufsetzen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="server.html" class="btn btn-neutral" title="1.1. Datenbankserver aufsetzen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
