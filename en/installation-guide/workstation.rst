@@ -26,7 +26,7 @@ Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
   .. figure:: images/umgebungsvariablen_pgconfdir.jpg
   
-  You can check your environment variables also within QGIS: ``Menu Settings`` - ``Options...``, ``System Tab`` -> ``Environment``
+  You can check your environment variables also within QGIS: Menu ``Settings`` --> ``Options...`` --> ``System`` Tab  --> ``Environment``
 
 Inside this folder, there will be two files
 
