@@ -9,7 +9,7 @@ General
 
 INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:
 
-* Translation Englisch – German / French (Classes / Attributes)
+* Translation English – German / French (Classes / Attributes)
 * Conversion of value list to / from numeric values (Integer)
 * Restructuring of data from relational to object oriented modelling
 * Conversion of OID (16 characters) to foreign keys TID (integer)
