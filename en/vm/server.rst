@@ -13,7 +13,7 @@ Access the Web Services
 
 The Apache server is setup to respond to requests pointing to the `http://qgisplatform.demo`.
 Accessing the above link with the Internet Browser of the VM will take you to the starting
-page of QWC depicted in the above image.
+page of QWC depicted in the below image.
 
 .. figure:: images/001_qwc.png
 
