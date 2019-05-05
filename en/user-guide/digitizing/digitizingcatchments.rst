@@ -56,7 +56,7 @@ Editing
 
 .. figure:: images/identify_feature_tool.jpg
 
-.. note:: There are ideas to have a menu in the feature attribut window, that allows you to copy all current-values to the planned-fields. Not realized yet.
+.. note:: There are ideas to have a menu in the feature attribute window, that allows you to copy all current-values to the planned-fields. Not realized yet.
 
 Split Areas
 -----------
@@ -76,11 +76,11 @@ You can merge existing areas with the **Merge selected Feature** tool.
 
 * Selected the **od_catchment_area** layer an set it into the edit mode
 * Select at least two areas you want to merge
-* Click the "Merge selected Feature" tool. -> The **Merge Feature Attributes** windows appears.
+* Click the ``Merge selected Feature`` tool. -> The **Merge Feature Attributes** windows appears.
 
 .. figure:: images/merge_feature_attributes.jpg
 
-* Choose which values will be taken from wich old record and click **OK**.
+* Choose which values will be taken from which old record and click **OK**.
 
 .. attention:: If you select one of the records and click on the **Take attributes from the selected feature** button, then the **obj_id** field will be skipped by default and the database will not accept the changes. After using this button, you have to choose one of the values in the **obj_id** field manually.
 
@@ -109,7 +109,7 @@ You connect catchment areas with the tool **Connect wastewater networkelements**
 
 .. note:: In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to wastewater nodes or to reaches. Because a lot of hydraulic calculation do not support connections to reaches, this tool in qgep connects only to wastewater nodes and not to reaches.
 
-.. note:: The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It's only the user who deciedes, if a node is ok or not. If you are not sure, please check the **VSA Wegleitung GEP-Daten**, part **Erfassungsgrundsätze**
+.. note:: The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It's only the user who decides, if a node is ok or not. If you are not sure, please check the **VSA Wegleitung GEP-Daten**, part **Erfassungsgrundsätze**
 
 You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes 
 
