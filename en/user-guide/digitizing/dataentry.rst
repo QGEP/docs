@@ -17,7 +17,7 @@ Data entry in QGEP needs some understanding of the underlaying data model `VSA-D
 General
 -------
 
-Enable the **Reuse last entered attribute values** option (Settings -> Options -> Digitizing) in QGIS 3. 
+Enable the **Reuse last entered attribute values** option (``Settings`` -> ``Options`` -> ``Digitizing``) in QGIS 3. 
 
 .. note:: When digitizing, you start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
 
