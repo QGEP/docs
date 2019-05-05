@@ -20,13 +20,13 @@ Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
 .. note:: Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:
 
-    Click New to add a new variable name and value.
-    Click an existing variable, and then click Edit to change its name or value.
-    Click an existing variable, and then click Delete to remove it.
+    Click ``New`` to add a new variable name and value.
+    Click an existing variable, and then click ``Edit`` to change its name or value.
+    Click an existing variable, and then click ``Delete`` to remove it.
 
   .. figure:: images/umgebungsvariablen_pgconfdir.jpg
   
-  You can check your environment variables also within QGIS: Menu Settings - Options..., System Tab -> Environment
+  You can check your environment variables also within QGIS: Menu ``Settings`` --> ``Options...`` --> ``System`` Tab  --> ``Environment``
 
 Inside this folder, there will be two files
 
@@ -37,7 +37,7 @@ Inside this folder, there will be two files
 
  On Windows, you need to save ``pg_service.conf`` in Unix format in order to work.
  One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
- and ``Edit --> EOL Conversion --> UNIX Format --> File save`` .
+ and ``Edit`` --> ``EOL Conversion`` --> ``UNIX Format`` --> ``File save`` .
   
 .. _pg_service-linux:
 
@@ -95,11 +95,11 @@ You can install them on debian based systems with::
 
 * Open QGIS
 
-* Go to Plugins
+* Go to ``Plugins``
 
-  * Manage and Install Plugins
+  * ``Manage and Install Plugins``
 
-  * Settings
+  * ``Settings``
 
     * Add...
 
@@ -108,7 +108,7 @@ You can install them on debian based systems with::
       * URL:
         ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
         
-    * Enable `Show also experimental plugins`
+    * Enable ``Show also experimental plugins``
 
   * Activate the plugin (see image below):
 
@@ -164,7 +164,7 @@ Working with more than one database
 
 * Create a new database in pgAdmin with a new name, e.g. communityA
 
-* Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
+* Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)
 
 * Go further on as described in 1.2 Database initialization
 
