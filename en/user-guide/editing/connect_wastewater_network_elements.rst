@@ -17,9 +17,9 @@ How to connect reaches to nodes or reaches to reaches
 
 * It does not matter, which layer is selected
 * The **vw_qgep_reach** layer has to be in edit mode
-* Click the **Connect wastewater networkelements** button
+* Click the **Connect wastewater network elements** button
 * If you move the mouse over an reach, that can be connected, it is marked: you can click
-* Move the mouse to the networkelement, to which the first object will by connected (again: selectable objects get marked) and click again
+* Move the mouse to the network element, to which the first object will be connected (again: selectable objects get marked) and click again
 
 .. figure:: images/connecting_1.jpg
 
@@ -39,7 +39,7 @@ Video Tutorial
 How to delete a connection
 --------------------------
 
-There is no special tool in the moment to delete a connection between networkelements.
+There is no special tool in the moment to delete a connection between network elements.
 
 * Select the **vw_qgep_reach** layer and set it to edit mode
 * Click on the **Identify Features** button and select the reach to modify by double clicking
