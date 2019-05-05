@@ -4,7 +4,7 @@ Data entry
 There are basically two ways:
 
 * Data entry by constructing or digitizing in the QGEP GIS itself
-* Data entry in an external programm or software and then importing the position and/or technical data into QGEP e.g.:
+* Data entry in an external program or software and then importing the position and/or technical data into QGEP e.g.:
 
    * coordinates from manholes from measurement
    * position and/or technical data from another GIS or CAD system
