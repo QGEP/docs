@@ -4,7 +4,7 @@ Network following tools
 Refresh network topology
 ------------------------
 
-* Before using the notwork following tools, be sure, that your network topology is updated
+* Before using the network following tools, be sure, that your network topology is updated
 
 * To refresh the network topology, you select the layer **vw_qgep_reach** and set the layer to the edit mode
 
@@ -27,14 +27,14 @@ Upstream
 
 * If there is more than one node in this area, you choose the one you want form the mouse-list
 
-.. attention:: With qgepplugin 1.1.8 / QGIS 3.4.2, it's a good idea to zoom in so far, that you can choose your startnode without having any other node nearby. If you choose the node from the mouse-list, you may get unexpected results.
+.. attention:: With qgepplugin 1.1.8 / QGIS 3.4.2, it's a good idea to zoom in so far, that you can choose your start node without having any other node nearby. If you choose the node from the mouse-list, you may get unexpected results.
 
 .. figure:: images/network_select_start_node.jpg
 
 
 * After a few seconds all upstream reaches will be highlighted and you can see where the water is coming from.
 
-* If you want to select the highlighted reaches, then klick on the **Select current path** button in the profile window
+* If you want to select the highlighted reaches, then click on the **Select current path** button in the profile window
 
 
 .. figure:: images/network_select_currentpath.jpg

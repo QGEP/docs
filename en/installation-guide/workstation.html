@@ -161,13 +161,13 @@ server itself.</p>
 <p class="first admonition-title">Note</p>
 <p>Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:</p>
 <blockquote>
-<div>Click New to add a new variable name and value.
-Click an existing variable, and then click Edit to change its name or value.
-Click an existing variable, and then click Delete to remove it.</div></blockquote>
+<div>Click <code class="docutils literal"><span class="pre">New</span></code> to add a new variable name and value.
+Click an existing variable, and then click <code class="docutils literal"><span class="pre">Edit</span></code> to change its name or value.
+Click an existing variable, and then click <code class="docutils literal"><span class="pre">Delete</span></code> to remove it.</div></blockquote>
 <div class="figure">
 <img alt="../_images/umgebungsvariablen_pgconfdir.jpg" src="../_images/umgebungsvariablen_pgconfdir.jpg" />
 </div>
-<p class="last">You can check your environment variables also within QGIS: Menu Settings - Options..., System Tab -&gt; Environment</p>
+<p class="last">You can check your environment variables also within QGIS: Menu <code class="docutils literal"><span class="pre">Settings</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Options...</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">System</span></code> Tab  &#8211;&gt; <code class="docutils literal"><span class="pre">Environment</span></code></p>
 </div>
 <p>Inside this folder, there will be two files</p>
 <ul class="simple">
@@ -178,7 +178,7 @@ Click an existing variable, and then click Delete to remove it.</div></blockquot
 <p class="first admonition-title">Attention</p>
 <p class="last">On Windows, you need to save <code class="docutils literal"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
 One way to do it is to open it with <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>
-and <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
+and <code class="docutils literal"><span class="pre">Edit</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">EOL</span> <span class="pre">Conversion</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">UNIX</span> <span class="pre">Format</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">File</span> <span class="pre">save</span></code> .</p>
 </div>
 </div>
 <div class="section" id="linux-pg-service">
@@ -232,16 +232,16 @@ sudo apt-get install libqt4-sql-psql
 </div>
 <ul class="simple">
 <li>Open QGIS</li>
-<li>Go to Plugins<ul>
-<li>Manage and Install Plugins</li>
-<li>Settings<ul>
+<li>Go to <code class="docutils literal"><span class="pre">Plugins</span></code><ul>
+<li><code class="docutils literal"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span></code></li>
+<li><code class="docutils literal"><span class="pre">Settings</span></code><ul>
 <li>Add...<ul>
 <li>Name: QGEP</li>
 <li>URL:
 <code class="docutils literal"><span class="pre">https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3</span></code></li>
 </ul>
 </li>
-<li>Enable <cite>Show also experimental plugins</cite></li>
+<li>Enable <code class="docutils literal"><span class="pre">Show</span> <span class="pre">also</span> <span class="pre">experimental</span> <span class="pre">plugins</span></code></li>
 </ul>
 </li>
 <li>Activate the plugin (see image below):</li>
@@ -296,7 +296,7 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 <h2>3.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Create a new database in pgAdmin with a new name, e.g. communityA</li>
-<li>Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)</li>
+<li>Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)</li>
 <li>Go further on as described in 1.2 Database initialization</li>
 <li>Change the <code class="docutils literal"><span class="pre">pg_service.conf</span></code> - file</li>
 </ul>
