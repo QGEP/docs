@@ -24,7 +24,7 @@ It is allowed to add additional fields to tables by naming them as ``XXX` (TO BE
 
 If added in base views, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
 
-``PGSERVICE=pg_qgep SRID=2056 ./view/create_views.py``
+``./view/create_views.py --pg_service pg_qgep --srid 2056``
 
 
 Joining additional tables
@@ -53,7 +53,7 @@ For joining a table to ``qgep_od.wastewater_structure``, here is an example:
 
 This YAML file should be given as a file path when running the script:
 
-``qgep_wastewater_structure_extra=/path_to/extra_ws.yaml PGSERVICE=pg_qgep SRID=2056 ./view/create_views.py``
+``./view/create_views.py --pg_service pg_qgep --srid 2056 --qgep_wastewater_structure_extra /path_to/extra_ws.yaml``
 
 And similarly for ``vw_qgep_reach`` view, by specifying ``qgep_reach_extra`` variable to the corresponding YAML file path.
 
