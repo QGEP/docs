@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.3. Setup workstation &mdash; QGEP 0.7 documentation</title>
+  <title>3. Setup workstation &mdash; QGEP 0.7 documentation</title>
   
 
   
@@ -32,8 +32,8 @@
   
     <link rel="top" title="QGEP 0.7 documentation" href="../index.html"/>
         <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
-        <link rel="next" title="2. QGEP User Guide" href="../user-guide/index.html"/>
-        <link rel="prev" title="1.2. Database initialization" href="database-initialization.html"/> 
+        <link rel="next" title="1. QGEP User Guide" href="../user-guide/index.html"/>
+        <link rel="prev" title="2. Database initialization" href="database-initialization.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -83,27 +83,27 @@
           
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">1.1. Setup database server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.2. Database initialization</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Setup workstation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.3.1. Database configuration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">1.3.1.1. Windows pg_service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#linux-pg-service">1.3.1.2. Linux pg_service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#all-systems">1.3.1.3. All systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">1. Setup database server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2. Database initialization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">3. Setup workstation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">3.1. Database configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">3.1.1. Windows pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux-pg-service">3.1.2. Linux pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">3.1.3. All systems</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#install-qgis">1.3.2. Install QGIS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">1.3.3. Install QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">1.3.4. Install the demo project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">1.3.5. Add your own OID in the project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">1.3.6. Working with more than one database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgis">3.2. Install QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">3.3. Install QGEP plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">3.4. Install the demo project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">3.5. Add your own OID in the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">3.6. Working with more than one database</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">1. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">2. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">3. Demo Virtual Machine</a></li>
 </ul>
 
           
@@ -130,7 +130,7 @@
       
           <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
       
-    <li>1.3. Setup workstation</li>
+    <li>3. Setup workstation</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -145,16 +145,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-workstation">
-<h1>1.3. Setup workstation<a class="headerlink" href="#setup-workstation" title="Permalink to this headline">¶</a></h1>
+<h1>3. Setup workstation<a class="headerlink" href="#setup-workstation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="database-configuration">
-<h2>1.3.1. Database configuration<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Database configuration<a class="headerlink" href="#database-configuration" title="Permalink to this headline">¶</a></h2>
 <p>To tell a workstation, where the database is (on the local system or on a
 network server) you will have to create some files initially on every device on
 which you will have QGIS/QGEP running. It is not required to do that on the
 server itself.</p>
 <p>These instructions depend on your operating system.</p>
 <div class="section" id="windows-pg-service">
-<h3>1.3.1.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Permalink to this headline">¶</a></h3>
 <p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
 <p>Set the environment variable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <div class="admonition note">
@@ -182,12 +182,12 @@ and <code class="docutils literal"><span class="pre">Edit</span></code> &#8211;&
 </div>
 </div>
 <div class="section" id="linux-pg-service">
-<span id="pg-service-linux"></span><h3>1.3.1.2. Linux pg_service<a class="headerlink" href="#linux-pg-service" title="Permalink to this headline">¶</a></h3>
+<span id="pg-service-linux"></span><h3>3.1.2. Linux pg_service<a class="headerlink" href="#linux-pg-service" title="Permalink to this headline">¶</a></h3>
 <p>On <a href="#id1"><span class="problematic" id="id2">*</span></a>nix systems (linux/macOS etc.) you may put the files <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>
 and <code class="docutils literal"><span class="pre">.pgpass</span></code> into your home folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>).</p>
 </div>
 <div class="section" id="all-systems">
-<h3>1.3.1.3. All systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
+<h3>3.1.3. All systems<a class="headerlink" href="#all-systems" title="Permalink to this headline">¶</a></h3>
 <p>Put the following content in the file <code class="docutils literal"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>.
 You may have to adapt the variables for your setup.</p>
 <div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
@@ -210,7 +210,7 @@ server.</p>
 </div>
 </div>
 <div class="section" id="install-qgis">
-<h2>1.3.2. Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Minimum requirement 3.4</li>
 <li>We recommend using the latest master build (called qgis-dev on Windows)
@@ -220,7 +220,7 @@ choose <em>advanced installation</em> and install qgis-dev.</li>
 </ul>
 </div>
 <div class="section" id="install-qgep-plugin">
-<h2>1.3.3. Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Install QGEP plugin<a class="headerlink" href="#install-qgep-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Plugin requirements:</p>
 <ul class="simple">
 <li>networkx &gt;= 2.1</li>
@@ -259,7 +259,7 @@ sudo apt-get install libqt4-sql-psql
 </div>
 </div>
 <div class="section" id="install-the-demo-project">
-<h2>1.3.4. Install the demo project<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Install the demo project<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Download from <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
 New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</li>
@@ -269,7 +269,7 @@ New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other 
 </ul>
 </div>
 <div class="section" id="add-your-own-oid-in-the-project">
-<h2>1.3.5. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
+<h2>3.5. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>You have to add your OID data in the table is_oid_prefixes:</li>
 </ul>
@@ -293,7 +293,7 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 </ul>
 </div>
 <div class="section" id="working-with-more-than-one-database">
-<h2>1.3.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
+<h2>3.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Create a new database in pgAdmin with a new name, e.g. communityA</li>
 <li>Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)</li>
@@ -325,10 +325,10 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="2. QGEP User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="1. QGEP User Guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="database-initialization.html" class="btn btn-neutral" title="1.2. Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="database-initialization.html" class="btn btn-neutral" title="2. Database initialization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
