@@ -18,6 +18,16 @@ Create a new directory where you want to store the configuration in. (E.g. a new
 
 Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
 
+.. note:: Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:
+
+    Click ``New`` to add a new variable name and value.
+    Click an existing variable, and then click ``Edit`` to change its name or value.
+    Click an existing variable, and then click ``Delete`` to remove it.
+
+  .. figure:: images/umgebungsvariablen_pgconfdir.jpg
+  
+  You can check your environment variables also within QGIS: Menu ``Settings`` --> ``Options...`` --> ``System`` Tab  --> ``Environment``
+
 Inside this folder, there will be two files
 
 * ``pg_service.conf``
@@ -27,7 +37,7 @@ Inside this folder, there will be two files
 
  On Windows, you need to save ``pg_service.conf`` in Unix format in order to work.
  One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
- and ``Edit --> EOL Conversion --> UNIX Format --> File save`` .
+ and ``Edit`` --> ``EOL Conversion`` --> ``UNIX Format`` --> ``File save`` .
   
 .. _pg_service-linux:
 
@@ -85,20 +95,20 @@ You can install them on debian based systems with::
 
 * Open QGIS
 
-* Go to Plugins
+* Go to ``Plugins``
 
-  * Manage and Install Plugins
+  * ``Manage and Install Plugins``
 
-  * Settings
+  * ``Settings``
 
     * Add...
 
       * Name: QGEP
 
       * URL:
-        ``https://raw.githubusercontent.com/QGEP/repository/master/plugins.xml``
-
-    * Enable `Show also experimental plugins`
+        ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
+        
+    * Enable ``Show also experimental plugins``
 
   * Activate the plugin (see image below):
 
@@ -115,11 +125,12 @@ You can install them on debian based systems with::
 Install the demo project
 ------------------------
 
-* Download https://github.com/QGEP/data/archive/demodata.zip
+* Download from https://github.com/QGEP/datamodel/releases/latest
+  New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available
 
 * Extract the file
 
-* Restore the file `qgep_demodata.backup` with pgAdminIII
+* Restore the file `qgep_vx.x.x_structure_and_demo_data.backup` with pgAdmin
 
 * Open `project/qgep_en.qgs` with QGIS
 
@@ -151,11 +162,11 @@ and set the OID you want to use in your project to TRUE.
 Working with more than one database
 -----------------------------------
 
-* Create a new database in pgAdmin III with a new name, e.g. communityA
+* Create a new database in pgAdmin with a new name, e.g. communityA
 
-* Create a new schema qgep in this database (do not choose an other name, because all scripts works with the schema-name qgep)
+* Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)
 
-* Go further on as descript in 1.2 Database initialization
+* Go further on as described in 1.2 Database initialization
 
 * Change the ``pg_service.conf`` - file 
 

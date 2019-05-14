@@ -28,7 +28,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
  CREATE ROLE qgepuser LOGIN;
  GRANT qgep TO qgepuser;
 
-* Create a new database (preferably named `qgep`, but you are free to choose)
+* Create a new database with UTF8 encoding (preferably named `qgep`, but you are free to choose)
 
   * Change to this database
 
@@ -46,7 +46,6 @@ Restore demo datamodel
 Restore the latest data model that also includes demo data:
 
 * Download demo data
-
   * https://github.com/QGEP/datamodel/releases/latest
   * download `qgep_vx.y.z_structure_and_demo_data.backup`
 
@@ -55,6 +54,7 @@ Restore the latest data model that also includes demo data:
   * Click `Restore`
 
   * Load your download of qgep_vx.y.z_structure_and_demo_data.backup
+
 
   .. figure:: images/qgep_restore.jpg
 
@@ -67,7 +67,10 @@ Restore the latest data model that also includes demo data:
   .. figure:: images/qgep_restore_messages.jpg
   
   * Check whether in Message window last line is Exit Code 0
-  If the Exit Code is 1 and the Detail reads sth like
+  
+  .. note:
+  
+    If the Exit Code is 1 and the Detail reads sth like
   "pg_restore: [archiver] unsupported version (1.13) in file header"
   or in German "pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf"
   try updating your PostgreSQL, see https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r
@@ -148,3 +151,8 @@ If you already have a data model and you want to force the regeneration
 of the model you can also use the ``-f`` option: ``./scripts/db_setup.sh -f``.
 
 You can use the ``-r`` option to add roles (``qgep_viewer``, ``qgep_user``, ``qgep_manager``, ``qgep_sysadmin``).
+
+- Viewer: Can consult tables and views.
+- User: Can edit data.
+- Manager: Can edit data and value lists.
+- Admin: Database administrator.

@@ -76,7 +76,57 @@ Changing attributes of linear elements (channels)
  
   .. figure:: images/form_vw_qgep_reach_reachpoints.jpg
  
- 
+Change reach direction
+----------------------
+
+.. note:: The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).
+
+QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
+Do not use the **Reverse line** button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.
+
+* To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.
+
+* Open the **Processing Toolbox**  
+
+.. figure:: images/toolbox.jpg
+
+* Double click the **Change reach direction** tool 
+
+.. figure:: images/qgep_toolbox.jpg
+
+* In the tool window you have to choose the **vw_qgep_reach** - Layer and then click on **Run**
+
+* If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed. 
+
+* Refresh network topology.
+
+* You can save now the change.
+
+
+Snap reach geometry
+-------------------
+This tool snaps reaches graphically to the wastewater network element they are connected to. So they are not only logically, but also graphically connected.
+
+* To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.
+
+* Open the **Processing Toolbox**  
+
+.. figure:: images/toolbox.jpg
+
+* Double click the **Snap reach geometry** tool 
+
+.. figure:: images/qgep_toolbox.jpg
+
+* In the tool window you have to choose the **vw_qgep_reach** - layer and the **vw_wastewater_node** - layer, then click on **Run**
+
+* If you zoom in or out, you see the changes.
+
+* If the result is not, what you expect, try with a greater snapping distance
+
+If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.
+
+.. attention:: If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.
+
 Working with codes of valuelist
 -------------------------------
 
@@ -139,11 +189,19 @@ In QGEP, there is in the moment no tool, that helps you to connect a wastewater 
 
 .. note:: If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.
  
+
+Multiedit
+---------
+If you want to edit attributes for multiple objects of the same class you can use the `multiedit Tool of QGIS <https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
+
+ 
 Saving changes
 --------------
  
 * Click **Save** and then deactivate the edit mode or click on **Stop data entry** if you have worked with the **QGEP Data Entry** wizard.
   
+
+=======
 Changing Wastewater Structure Type
 ----------------------------------
 
