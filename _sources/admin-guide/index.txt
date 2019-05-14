@@ -9,6 +9,7 @@ This represents a guide on how to administrate the database, install a Virtual m
    pgadmin/index
    data-export/index
    data-import/index
+   db-customization/index
 
 In discussion:
 
