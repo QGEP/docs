@@ -15,8 +15,6 @@ QGEP has a wizard to correctly build channels and connect them to wastewater str
 .. attention:: Start digitizing in the direction of the flow by starting with the
   **from manhole node** and finishing with the **to manhole node**. 
 
-.. Note:: There is now a tool to change the flow direction (topology), but there is still a problem with storing the changed channels. See QGEP Issue #380.
-
 Digitizing
 ----------
 

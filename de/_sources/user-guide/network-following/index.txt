@@ -61,4 +61,45 @@ Downstream
 * Use this to check whether the topology of your network is correct or to find out where you could intervene in case of an accident.
 
 
+Flow times downstream
+---------------------
+
+* This is a tool in the QGEP-toolbox.
+
+* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool. There are already considerations about this functionality.
+
+* For this tool you need a layer (table) in the QGEP-project with the flowtime per reach and the obj_id of the reach.
+
+* You have to select the start-reach (where the accident is) in the vw_qgep_reach-layer
+
+* Start the tool with double-click one **Flow times downstream**
+
+.. figure:: images/toolbox.jpg
+.. figure:: images/qgep_toolbox.jpg
+
+* In the window you have to choose 
+
+  * as reach layer: vw_qgep_reach
+
+  * as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum-up downstream)
+  
+  * as reach id field: the field in your table that is the obj_id of the reach
+  
+  * as Flow times field: the field in your table, that you want to sum-up
+  
+  * as Flow times: if you let this field empty, there will be a temporary file with the results in your projects. Otherwise you can save the results to a vector layer.
+.. figure:: images/flow_time_downstream_window.jpg
+
+* The tool makes a downstream network search starting with the selected reach and creates for every reach a record in the (temporary) vector layer with just one field (the sum of the Flow times).
+.. figure:: images/flow_time_downstream_result.jpg
+
+.. attention:: If there is more than one downstream-way, the results are wrong after the branch.
+
+* There are some cases, where you get an empty flow time-Layer and red (error) text in the Log-window:
+ 
+  * Do not select more than one reach to start
+ 
+  * Do not select vw_qgep_reach as flow time layer (to sum-up the length, use the vw_network_segment layer)
+  
+  * If the reach id field has no values that match the reach obj_id, you will also get an error
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3.1. Editing of existing data &mdash; QGEP 0.7 documentation</title>
+  <title>1.3.1. Editing of existing data &mdash; QGEP 0.7 documentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.7 documentation" href="../../index.html"/>
-        <link rel="up" title="2.3. Editing in QGEP" href="index.html"/>
-        <link rel="next" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/>
-        <link rel="prev" title="2.3. Editing in QGEP" href="index.html"/> 
+        <link rel="up" title="1.3. Editing in QGEP" href="index.html"/>
+        <link rel="next" title="1.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/>
+        <link rel="prev" title="1.3. Editing in QGEP" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,37 +82,39 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Layers in QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitizing in QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.1. Editing of existing data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#demo-project">2.3.1.1. Demo project</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Layers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Changing attributes of linear elements (channels)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">2.3.1.5. Working with codes of valuelist</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.6. An other way to choose an object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.7. Adding additional covers and nodes to an existing wastewater structure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.8. Adding a wastewater node to an existing reach</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.9. Multiedit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.10. Saving changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.11. Split a reach (channel) into different reaches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">QGEP Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. QGEP User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">1.1. Layers in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">1.2. Digitizing in QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.3. Editing in QGEP</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">1.3.1. Editing of existing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demo-project">1.3.1.1. Demo project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layers">1.3.1.2. Layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">1.3.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">1.3.1.4. Changing attributes of linear elements (channels)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#change-reach-direction">1.3.1.5. Change reach direction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snap-reach-geometry">1.3.1.6. Snap reach geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">1.3.1.7. Working with codes of valuelist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">1.3.1.8. An other way to choose an object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">1.3.1.9. Adding additional covers and nodes to an existing wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">1.3.1.10. Adding a wastewater node to an existing reach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiedit">1.3.1.11. Multiedit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">1.3.1.12. Saving changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">1.3.1.13. Split a reach (channel) into different reaches</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Adding or Editing of Maintenance Events</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Connect Wastewater Network Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">1.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">1.3.3. Adding or Editing of Maintenance Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">1.3.4. Connect Wastewater Network Elements</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Length profiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Network following tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">1.4. Length profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">1.5. Network following tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">1.6. Plan plotting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Mașină Virtuală de Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">2. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Mașină Virtuală de Demo</a></li>
 </ul>
 
           
@@ -137,11 +139,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
+          <li><a href="../index.html">1. QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.3. Editing in QGEP</a> &raquo;</li>
+          <li><a href="index.html">1.3. Editing in QGEP</a> &raquo;</li>
       
-    <li>2.3.1. Editing of existing data</li>
+    <li>1.3.1. Editing of existing data</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -156,10 +158,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-of-existing-data">
-<span id="editing-data"></span><h1>2.3.1. Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Permalink to this headline">¶</a></h1>
+<span id="editing-data"></span><h1>1.3.1. Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Permalink to this headline">¶</a></h1>
 <p>This represents a guide on how to edit existing data in QGEP.</p>
 <div class="section" id="demo-project">
-<h2>2.3.1.1. Demo project<a class="headerlink" href="#demo-project" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.1. Demo project<a class="headerlink" href="#demo-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Make sure you have imported the demo project with pgAdminIII (see the <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a> chapter)</li>
 <li>Open the demoproject by going to the main menu and press <strong>Project</strong> &#8211;&gt; <strong>Open</strong>  or by pressing <code class="docutils literal"><span class="pre">CTRL</span></code>
@@ -185,13 +187,13 @@
 </ul>
 </div>
 <div class="section" id="layers">
-<h2>2.3.1.2. Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.2. Layers<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>QGEP has different predefined layers. For explanations, see the <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span>Layer explanation</span></a> chapter.</li>
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>2.3.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</li>
@@ -234,7 +236,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h2>2.3.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></li>
@@ -258,8 +260,63 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div></blockquote>
 </div></blockquote>
 </div>
+<div class="section" id="change-reach-direction">
+<h2>1.3.1.5. Change reach direction<a class="headerlink" href="#change-reach-direction" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).</p>
+</div>
+<p>QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
+Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.</p>
+<ul class="simple">
+<li>To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
+<li>Open the <strong>Processing Toolbox</strong></li>
+</ul>
+<div class="figure">
+<img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
+</div>
+<ul class="simple">
+<li>Double click the <strong>Change reach direction</strong> tool</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
+</div>
+<ul class="simple">
+<li>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - Layer and then click on <strong>Run</strong></li>
+<li>If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed.</li>
+<li>Refresh network topology.</li>
+<li>You can save now the change.</li>
+</ul>
+</div>
+<div class="section" id="snap-reach-geometry">
+<h2>1.3.1.6. Snap reach geometry<a class="headerlink" href="#snap-reach-geometry" title="Permalink to this headline">¶</a></h2>
+<p>This tool snaps reaches graphically to the wastewater network element they are connected to. So they are not only logically, but also graphically connected.</p>
+<ul class="simple">
+<li>To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
+<li>Open the <strong>Processing Toolbox</strong></li>
+</ul>
+<div class="figure">
+<img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
+</div>
+<ul class="simple">
+<li>Double click the <strong>Snap reach geometry</strong> tool</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
+</div>
+<ul class="simple">
+<li>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - layer and the <strong>vw_wastewater_node</strong> - layer, then click on <strong>Run</strong></li>
+<li>If you zoom in or out, you see the changes.</li>
+<li>If the result is not, what you expect, try with a greater snapping distance</li>
+</ul>
+<p>If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
+</div>
+</div>
 <div class="section" id="working-with-codes-of-valuelist">
-<h2>2.3.1.5. Working with codes of valuelist<a class="headerlink" href="#working-with-codes-of-valuelist" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.7. Working with codes of valuelist<a class="headerlink" href="#working-with-codes-of-valuelist" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The values of fields with valuelist are stored in the database with codes.</li>
 </ul>
@@ -300,7 +357,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
-<h2>2.3.1.6. An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.8. An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</li>
 </ul>
@@ -314,7 +371,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.7. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.9. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
@@ -336,7 +393,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div>
 <div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
-<h2>2.3.1.8. Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.10. Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Permalink to this headline">¶</a></h2>
 <p>In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -350,11 +407,11 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div>
 <div class="section" id="multiedit">
-<h2>2.3.1.9. Multiedit<a class="headerlink" href="#multiedit" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.11. Multiedit<a class="headerlink" href="#multiedit" title="Permalink to this headline">¶</a></h2>
 <p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
 </div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.10. Saving changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.12. Saving changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</li>
 </ul>
@@ -365,7 +422,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2>2.3.1.11. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Permalink to this headline">¶</a></h2>
+<h2>1.3.1.13. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Permalink to this headline">¶</a></h2>
 <p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.</p>
 <p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.</p>
@@ -380,10 +437,10 @@ kind of wastewater structure you can edit additional attributes in the respectiv
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="moving.html" class="btn btn-neutral float-right" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="moving.html" class="btn btn-neutral float-right" title="1.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="2.3. Editing in QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="1.3. Editing in QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
