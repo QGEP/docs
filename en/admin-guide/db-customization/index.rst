@@ -10,17 +10,19 @@ Introduction
 The data model is versionned and updates are achieved using Postgres Updates Manager (aka `PUM <https://github.com/opengisch/pum>`_).
 The views required to edit the data are automatically generated using `Pirogue <https://github.com/opengisch/pirogue>`_ library.
 
-
 The combination of both allows to introduce small customizations of the data model such as adding fields to existing base tables or extending views by joining additional tables.
 
+Before going further, we strongly recommend to ask the community if you have any doubts about how to store any information in the database. 
 
-This chapter describes these possible customizations.
+If QGEP data model is not able yet to hold some data, please let us know what kind and how it should be handled. QGEP data model is a standard proof adaptative model and could follow your needs.
+
+If a customization is still required, the following explanations and rules explain how to adapt QGEP data model to your specific needs.
 
 
 Adding fields
 ^^^^^^^^^^^^^
 
-It is allowed to add additional fields to tables by naming them as ``XXX` (TO BE DEFINED).
+It is allowed to add additional fields to tables by naming them as ``usr_…`.
 
 If added in base views, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
 
