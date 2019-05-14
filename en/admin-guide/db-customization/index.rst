@@ -12,7 +12,8 @@ The views required to edit the data are automatically generated using `Pirogue <
 
 The combination of both allows to introduce small customizations of the data model such as adding fields to existing base tables or extending views by joining additional tables.
 
-Before going further, we strongly recommend to ask the community if you have any doubts about how to store any information in the database. 
+Before going further, we strongly recommend to ask the community if you have any doubts about how to store any information in the database. QGEP complies with `SIA 405 <http://www.sia.ch/405>`_ Waste Water and `VSA-DSS <http://dss.vsa.ch>`_ datamodel.
+
 
 If QGEP data model is not able yet to hold some data, please let us know what kind and how it should be handled. QGEP data model is a standard proof adaptative model and could follow your needs.
 
