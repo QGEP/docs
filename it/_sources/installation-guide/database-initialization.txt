@@ -12,7 +12,7 @@ You can use :ref:`pgAdmin` to access and manage the database server.
 Process
 -------
 
-In pgAdminIII
+In pgAdminIII or pgAdmin4
 
 * Connect to the database server
 
@@ -49,12 +49,12 @@ Restore the latest data model that also includes demo data:
   * https://github.com/QGEP/datamodel/releases/latest
   * download `qgep_vx.y.z_structure_and_demo_data.backup`
 
-
-* Right click the `qgep` schema
+* Back in pgAdmin, right click the `qgep` database
 
   * Click `Restore`
 
-  * Load your download of qgep_demodata.backup
+  * Load your download of qgep_vx.y.z_structure_and_demo_data.backup
+
 
   .. figure:: images/qgep_restore.jpg
 
@@ -67,6 +67,13 @@ Restore the latest data model that also includes demo data:
   .. figure:: images/qgep_restore_messages.jpg
   
   * Check whether in Message window last line is Exit Code 0
+  
+  .. note:
+  
+    If the Exit Code is 1 and the Detail reads sth like
+  "pg_restore: [archiver] unsupported version (1.13) in file header"
+  or in German "pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf"
+  try updating your PostgreSQL, see https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r
 
   * Click `Cancel`
 
