@@ -4,3 +4,5 @@ init
 *~
 *.mo
 i18n
+.DS_Store
+.idea
