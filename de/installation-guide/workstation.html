@@ -156,15 +156,14 @@
 <p>Setzen Sie die Umgebungsvariable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> auf den Dateipfad von <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p>Search for environment variable in your windows system settings, then click one of the following options, for either a user or a system variable:</p>
+<p>Suchen sie Umgebungsvariablen in den Windows Systemeinstellungen, dann klicken sie auf eine der folgenden Optionen, entweder für Benutzer- oder Systemvariablen:</p>
 <blockquote>
-<div>Click <code class="docutils literal"><span class="pre">New</span></code> to add a new variable name and value.
-Click an existing variable, and then click <code class="docutils literal"><span class="pre">Edit</span></code> to change its name or value.
-Click an existing variable, and then click <code class="docutils literal"><span class="pre">Delete</span></code> to remove it.</div></blockquote>
+<div><p>Klicke <code class="docutils literal"><span class="pre">Neu</span></code> um eine neue Variable hinzuzufügen. Klicke eine bestehende Variable und dann auf <code class="docutils literal"><span class="pre">Bearbeiten</span></code> um den Variablennamen oder den Wert zu ändern. Klicke eine bestehende Variable und dann auf <code class="docutils literal"><span class="pre">Löschen</span></code> um die Variable zu entfernen.</p>
+</div></blockquote>
 <div class="figure">
 <img alt="../_images/umgebungsvariablen_pgconfdir.jpg" src="../_images/umgebungsvariablen_pgconfdir.jpg" />
 </div>
-<p class="last">You can check your environment variables also within QGIS: Menu <code class="docutils literal"><span class="pre">Settings</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Options...</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">System</span></code> Tab  &#8211;&gt; <code class="docutils literal"><span class="pre">Environment</span></code></p>
+<p class="last">Sie können die Umgebungsvariablen auch in QGIS kontrollieren: Menü <code class="docutils literal"><span class="pre">Einstellungen</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Optionen...</span></code>  &#8211;&gt; <code class="docutils literal"><span class="pre">System</span></code> Tab &#8211;&gt; <code class="docutils literal"><span class="pre">Umgebung</span></code></p>
 </div>
 <p>In diesem Verzeichnis werden zwei Dateien sein</p>
 <ul class="simple">
@@ -174,9 +173,7 @@ Click an existing variable, and then click <code class="docutils literal"><span 
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Achtung</p>
-<p class="last">On Windows, you need to save <code class="docutils literal"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
-One way to do it is to open it with <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>
-and <code class="docutils literal"><span class="pre">Edit</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">EOL</span> <span class="pre">Conversion</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">UNIX</span> <span class="pre">Format</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">File</span> <span class="pre">save</span></code> .</p>
+<p class="last">In Windows müssen Sie <code class="docutils literal"><span class="pre">pg_service.conf</span></code> im Unix Format speichern damit es funktioniert. Eine Möglichkeit dafür bietet <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> im Menü <code class="docutils literal"><span class="pre">Bearbeiten</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Format</span> <span class="pre">Zeilenende</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Konvertiere</span> <span class="pre">zu</span> <span class="pre">UNIX</span> <span class="pre">(LF)</span></code> &#8211;&gt; <cite>Sichern`</cite> .</p>
 </div>
 </div>
 <div class="section" id="linux-pg-service">
@@ -226,9 +223,12 @@ sudo apt-get install libqt4-sql-psql
 <ul class="simple">
 <li><p class="first">QGIS öffnen</p>
 </li>
-<li>Go to <code class="docutils literal"><span class="pre">Plugins</span></code><ul>
-<li><code class="docutils literal"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span></code></li>
-<li><code class="docutils literal"><span class="pre">Settings</span></code><ul>
+<li><p class="first">Gehen sie zu <code class="docutils literal"><span class="pre">Erweiterungen</span></code></p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">Erweiterungen</span> <span class="pre">verwalten</span> <span class="pre">und</span> <span class="pre">installieren...</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Einstellungen</span></code></p>
+<ul>
 <li><p class="first">Hinzufügen...</p>
 <ul>
 <li>Name: QGEP</li>
@@ -236,7 +236,8 @@ sudo apt-get install libqt4-sql-psql
 <code class="docutils literal"><span class="pre">https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3</span></code></li>
 </ul>
 </li>
-<li>Enable <code class="docutils literal"><span class="pre">Show</span> <span class="pre">also</span> <span class="pre">experimental</span> <span class="pre">plugins</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Auch</span> <span class="pre">experimentelle</span> <span class="pre">Erweiterungen</span> <span class="pre">anzeigen</span></code> aktivieren</p>
+</li>
 </ul>
 </li>
 <li><p class="first">Plugin aktivieren (siehe untenstehendes Bild)</p>
@@ -260,8 +261,8 @@ sudo apt-get install libqt4-sql-psql
 <div class="section" id="install-the-demo-project">
 <h2>1.3.4. Das Demo Projekt installieren<a class="headerlink" href="#install-the-demo-project" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Download from <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
-New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</li>
+<li><p class="first">Herunterladen von  <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</p>
+</li>
 <li><p class="first">Die Datei entpacken</p>
 </li>
 <li><p class="first">Wiederherstellen der Datei <cite>qgep_vx.x.x_structure_and_demo_data.backup</cite>  mit pgAdmin</p>
@@ -303,7 +304,8 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 <ul class="simple">
 <li><p class="first">Eine neue Database in pgAdmin erzeugen mit neuem Namen, z.B. communityA</p>
 </li>
-<li>Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)</li>
+<li><p class="first">Ein neues Schema qgep in der Database erstellen (den Namen qgep nicht ändern, da in vielen Scripten der Schemanamen qgep verwendet wird)</p>
+</li>
 <li><p class="first">Weiter wie in 1.2 Initialisierung der Datenbank beschrieben.</p>
 </li>
 <li><p class="first">Die <code class="docutils literal"><span class="pre">pg_service.conf</span></code> - Datei anpassen</p>

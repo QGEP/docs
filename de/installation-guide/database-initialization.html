@@ -148,7 +148,7 @@
 </div>
 <div class="section" id="process">
 <h2>1.2.1. Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
-<p>In pgAdminIII or pgAdmin4</p>
+<p>In pgAdminIII oder pgAdmin4</p>
 <ul class="simple">
 <li><p class="first">Verbinden Sie sich mit dem Datenbankserver</p>
 </li>
@@ -181,15 +181,14 @@ GRANT qgep TO qgepuser;
 <span id="restore-demomodel"></span><h3>1.2.1.1. Demodaten einrichten<a class="headerlink" href="#restore-demo-datamodel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Das aktuelle Datenbank-Schema mit dem Demodatensatz einrichten</p>
 <ul>
-<li><p class="first">Download demo data
-* <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
-* download <cite>qgep_vx.y.z_structure_and_demo_data.backup</cite></p>
+<li><p class="first">Herunterladen der Demodaten * <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> * download <cite>qgep_vx.y.z_structure_and_demo_data.backup</cite></p>
 </li>
-<li><p class="first">Back in pgAdmin, right click the <cite>qgep</cite> database</p>
+<li><p class="first">Zurück in pgAdmin, auf das Schema <cite>qgep</cite> rechtsklicken</p>
 <ul class="simple">
 <li><p class="first">&#8216;Restore&#8217; wählen</p>
 </li>
-<li>Load your download of qgep_vx.y.z_structure_and_demo_data.backup</li>
+<li><p class="first">Laden sie ihren Download von <cite>qgep_vx.y.z_structure_and_demo_data.backup</cite></p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../_images/qgep_restore.jpg" src="../_images/qgep_restore.jpg" />
@@ -213,9 +212,7 @@ GRANT qgep TO qgepuser;
 ist</p>
 </li>
 </ul>
-<p>&#8220;pg_restore: [archiver] unsupported version (1.13) in file header&#8221;
-or in German &#8220;pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf&#8221;
-try updating your PostgreSQL, see <a class="reference external" href="https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r">https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r</a></p>
+<p>&#8220;pg_restore: [archiver] unsupported version (1.13) in file header&#8221; resp. in Deutsch &#8220;pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf&#8221; updaten sie PostgreSQL, vgl. <a class="reference external" href="https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r">https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r</a></p>
 <ul class="simple">
 <li><p class="first">&#8216;Cancel&#8217; wählen</p>
 </li>
