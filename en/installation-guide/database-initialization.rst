@@ -124,7 +124,7 @@ You can also generate the data model under Linux.
 * Download the data model::
 
    git clone https://github.com/QGEP/datamodel
-   cd datamodel && git submodule init && git submodule update
+   cd datamodel
 
 * Setup the ``pg_service.conf`` file and add the ``pg_qgep`` service
   as in the :ref:`pg_service-linux` section.
