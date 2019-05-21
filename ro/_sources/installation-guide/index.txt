@@ -14,6 +14,7 @@ get your system ready for running QGEP.
    :maxdepth: 3
    :numbered:
 
+   requirements
    server
    database-initialization
    workstation
