@@ -7,7 +7,7 @@ This chapter describes the possible customization to the data model.
 Introduction
 ^^^^^^^^^^^^^
 
-The data model is versionned and updates are achieved using Postgres Updates Manager (aka `PUM <https://github.com/opengisch/pum>`_).
+The data model is versioned and updates are achieved using Postgres Updates Manager (aka `PUM <https://github.com/opengisch/pum>`_).
 The views required to edit the data are automatically generated using `Pirogue <https://github.com/opengisch/pirogue>`_ library.
 
 The combination of both allows to introduce small customizations of the data model such as adding fields to existing base tables or extending views by joining additional tables.
@@ -23,11 +23,15 @@ If a customization is still required, the following explanations and rules expla
 Adding fields
 ^^^^^^^^^^^^^
 
-It is allowed to add additional fields to tables by naming them as ``usr_…`.
+It is allowed to add additional fields to tables by naming them as ``usr_…``.
 
 If added in base views, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
 
 ``./view/create_views.py --pg_service pg_qgep --srid 2056``
+
+.. note:: When running datemodel upgrades using PUM, it will be required to use the additional option ``--exclude-field-pattern 'usr_%'``
+
+
 
 
 Joining additional tables
