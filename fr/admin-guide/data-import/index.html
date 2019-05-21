@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.3. Import de données INTERLIS &mdash; documentation QGEP 0.7</title>
+  <title>3.3. Import de données INTERLIS &mdash; documentation QGEP 0.7</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.7" href="../../index.html"/>
-        <link rel="up" title="2. Guide d’administration" href="../index.html"/>
-        <link rel="next" title="2.4. Customization of the data model" href="../db-customization/index.html"/>
-        <link rel="prev" title="2.2. Export de données au format INTERLIS" href="../data-export/index.html"/> 
+        <link rel="up" title="3. Guide d’administration" href="../index.html"/>
+        <link rel="next" title="3.4. Customization of the data model" href="../db-customization/index.html"/>
+        <link rel="prev" title="3.2. Export de données au format INTERLIS" href="../data-export/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,32 +82,32 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">1. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;administration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">2.1. pgAdmin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">2.2. Export de données au format INTERLIS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.3. Import de données INTERLIS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#general">2.3.1. Général</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-by-step">2.3.2. Pas à pas</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#tool">2.3.2.1. Outil</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-ili2pg-schema-with-data-model">2.3.2.2. Generate ili2pg schema with data model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-additional-functions">2.3.2.3. Ajoute des fonctions additionnelles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-additional-view">2.3.2.4. Add additional view</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-two-other-functions">2.3.2.5. Add two other functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#modify-metadata-and-organisation-data">2.3.2.6. Modify Metadata and Organisation data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-the-import-queries-for-your-datamodel">2.3.2.7. Lancez les requêtes d&#8217;import  pour votre modèle de données</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-batch-job">2.3.2.8. Crée un traitement par lots (batch job)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#open-issues">2.3.2.9. Questions en suspens</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#possible-problems">2.3.2.10. Problèmes éventuels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d&#8217;administration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">3.1. pgAdmin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">3.2. Export de données au format INTERLIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">3.3. Import de données INTERLIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">3.3.1. Général</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-by-step">3.3.2. Pas à pas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool">3.3.2.1. Outil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-ili2pg-schema-with-data-model">3.3.2.2. Generate ili2pg schema with data model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-additional-functions">3.3.2.3. Ajoute des fonctions additionnelles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-additional-view">3.3.2.4. Add additional view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-two-other-functions">3.3.2.5. Add two other functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modify-metadata-and-organisation-data">3.3.2.6. Modify Metadata and Organisation data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-import-queries-for-your-datamodel">3.3.2.7. Lancez les requêtes d&#8217;import  pour votre modèle de données</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-batch-job">3.3.2.8. Crée un traitement par lots (batch job)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-issues">3.3.2.9. Questions en suspens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#possible-problems">3.3.2.10. Problèmes éventuels</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">2.4. Customization of the data model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">3.4. Customization of the data model</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -132,9 +132,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;administration</a> &raquo;</li>
+          <li><a href="../index.html">3. Guide d&#8217;administration</a> &raquo;</li>
       
-    <li>2.3. Import de données INTERLIS</li>
+    <li>3.3. Import de données INTERLIS</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -149,10 +149,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="import-interlis-data">
-<h1>2.3. Import de données INTERLIS<a class="headerlink" href="#import-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>3.3. Import de données INTERLIS<a class="headerlink" href="#import-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Guide pour l&#8217;import de données dans QGEP à partir du format de transfert d&#8217; INTERLIS 2 (xtf).</p>
 <div class="section" id="general">
-<h2>2.3.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>3.3.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>INTERLIS Import can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
 <ul class="simple">
 <li>Translation Englisch – German / French (Classes / Attributes)</li>
@@ -167,9 +167,9 @@
 </div></blockquote>
 </div>
 <div class="section" id="step-by-step">
-<h2>2.3.2. Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>3.3.2. Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="tool">
-<h3>2.3.2.1. Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.1. Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Télécharger la dernière version de <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
 <blockquote>
 <div><div class="figure">
@@ -178,7 +178,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="generate-ili2pg-schema-with-data-model">
-<h3>2.3.2.2. Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.2. Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model</p>
 <p>This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it&#8217;s corresponding models.</p>
 <p>We create a batch file for the import with ili2pg to create an ili2pg schema (named <code class="docutils literal"><span class="pre">vsa_dss_2015_2_d</span></code>) in postgres <em>importdaten_VSA_DSS_2015_2_d_381.bat</em>.</p>
@@ -210,7 +210,7 @@
 </div>
 </div>
 <div class="section" id="add-additional-functions">
-<h3>2.3.2.3. Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.3. Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>We then need a series of function for the schema transformation form the created ili2pg schema to the <code class="docutils literal"><span class="pre">qgep</span></code> schema</p>
 <ul class="simple">
 <li><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em> : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
@@ -225,21 +225,21 @@
 </div></blockquote>
 </div>
 <div class="section" id="add-additional-view">
-<h3>2.3.2.4. Add additional view<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.4. Add additional view<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
 <p>This view is needed for the import queries and has to be added to the ili2pg schema beforehand</p>
 <ul class="simple">
 <li><em>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</em></li>
 </ul>
 </div>
 <div class="section" id="add-two-other-functions">
-<h3>2.3.2.5. Add two other functions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.5. Add two other functions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><em>053_create_key_object_seq.sql</em> : key_objects_seq function copies the latest seq value into table t_key_object</li>
 <li><em>054_create_function_meta_organisation.sql</em> : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</li>
 </ul>
 </div>
 <div class="section" id="modify-metadata-and-organisation-data">
-<h3>2.3.2.6. Modify Metadata and Organisation data<a class="headerlink" href="#modify-metadata-and-organisation-data" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.6. Modify Metadata and Organisation data<a class="headerlink" href="#modify-metadata-and-organisation-data" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><em>055_select meta_organisation_bezeichnung_obj_id.sql</em></li>
 </ul>
@@ -271,7 +271,7 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 </div>
 </div>
 <div class="section" id="run-the-import-queries-for-your-datamodel">
-<h3>2.3.2.7. Lancez les requêtes d&#8217;import  pour votre modèle de données<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.7. Lancez les requêtes d&#8217;import  pour votre modèle de données<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first"><em>060_sia405_interlisimport.sql</em> pour l&#8217;import SIA405 2015</p>
 </li>
@@ -282,7 +282,7 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 </ul>
 </div>
 <div class="section" id="create-a-batch-job">
-<h3>2.3.2.8. Crée un traitement par lots (batch job)<a class="headerlink" href="#create-a-batch-job" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.8. Crée un traitement par lots (batch job)<a class="headerlink" href="#create-a-batch-job" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous pouvez également lancer toutes les requêtes SQL en un traitement par lots (batch job), en voici un exemple:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rem</span> <span class="n">bat</span> <span class="ow">and</span> <span class="n">sql</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">directory</span>
 <span class="go">set PATH=%PATH%;C:\Program Files\PostgreSQL\9.4\bin</span>
@@ -298,7 +298,7 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <p>Pour plus d&#8217;informations, voir <a class="reference external" href="https://www.postgresql.org/docs/9.2/static/app-psql.html">https://www.postgresql.org/docs/9.2/static/app-psql.html</a></p>
 </div>
 <div class="section" id="open-issues">
-<h3>2.3.2.9. Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.9. Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Une seule classe texte par élément est actuellement supportée - nécessite CASE WHEN pour <code class="docutils literal"><span class="pre">vali</span> <span class="pre">/</span> <span class="pre">hali</span></code> ( à faire si nécessité)</p>
 </li>
@@ -313,7 +313,7 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 </div></blockquote>
 </div>
 <div class="section" id="possible-problems">
-<h3>2.3.2.10. Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.10. Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Certaines clés étrangères sont manquantes dans le schéma &#8220;Données démo&#8221; de QGEP:
 Einleitstelle.fs_Gewaessersektor, Versickerungsanlage.fs_Grundwasserleiter, Abwasserknoten.fs_hydrgeomref –&gt; Contrôler si celles-ci sont présentes dans le schéma QGEP vide.</p>
@@ -349,10 +349,10 @@ Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ e
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="2.4. Customization of the data model" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="3.4. Customization of the data model" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../data-export/index.html" class="btn btn-neutral" title="2.2. Export de données au format INTERLIS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../data-export/index.html" class="btn btn-neutral" title="3.2. Export de données au format INTERLIS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
