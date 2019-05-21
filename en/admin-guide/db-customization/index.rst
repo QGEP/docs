@@ -23,11 +23,15 @@ If a customization is still required, the following explanations and rules expla
 Adding fields
 ^^^^^^^^^^^^^
 
-It is allowed to add additional fields to tables by naming them as ``usr_…`.
+It is allowed to add additional fields to tables by naming them as ``usr_…``.
 
 If added in base views, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
 
 ``./view/create_views.py --pg_service pg_qgep --srid 2056``
+
+.. note:: When running datemodel upgrades using PUM, it will be required to use the additional option ``--exclude-field-pattern 'usr_%'``
+
+
 
 
 Joining additional tables
