@@ -7,7 +7,7 @@ This chapter describes the possible customization to the data model.
 Introduction
 ^^^^^^^^^^^^^
 
-The data model is versionned and updates are achieved using Postgres Updates Manager (aka `PUM <https://github.com/opengisch/pum>`_).
+The data model is versioned and updates are achieved using Postgres Updates Manager (aka `PUM <https://github.com/opengisch/pum>`_).
 The views required to edit the data are automatically generated using `Pirogue <https://github.com/opengisch/pirogue>`_ library.
 
 The combination of both allows to introduce small customizations of the data model such as adding fields to existing base tables or extending views by joining additional tables.
