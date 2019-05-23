@@ -25,7 +25,7 @@ Adding fields
 
 It is allowed to add additional fields to tables by naming them as ``usr_…``.
 
-If added in base views, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
+If added in base tables, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:
 
 ``./view/create_views.py --pg_service pg_qgep --srid 2056``
 
@@ -71,6 +71,6 @@ It is possible to create custom views and add them to the data model.
 
 In order to allow upgrades of the data model, one should provide a script to create them and one to delete them.
 These scripts (SQL or Python) should be placed in a specific path and name them as pre-all.{py,sql} and post-all.{py,sql}.
-This path shall be given as argument to PUM when upgrading the data model as a delta directory (see PUM `documetation <https://github.com/opengisch/pum>`_).
+This path shall be given as argument to PUM when upgrading the data model as a delta directory (see PUM `documentation <https://github.com/opengisch/pum>`_).
 
 If one wants to have these views automatically updated when fields are added the data model, Pirogue can be used to dynamically generate the views. You can take example of the creation of the views in the data model.
