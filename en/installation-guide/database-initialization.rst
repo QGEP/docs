@@ -12,7 +12,7 @@ You can use :ref:`pgAdmin` to access and manage the database server.
 Process
 -------
 
-In pgAdminIII or pgAdmin4
+In pgAdmin4
 
 * Connect to the database server
 
@@ -28,7 +28,7 @@ You can do this graphically or by simply opening a pgAdminIII :ref:`SQL-query` w
  CREATE ROLE qgepuser LOGIN;
  GRANT qgep TO qgepuser;
 
-* Create a new database with UTF8 encoding (preferably named `qgep`, but you are free to choose)
+* Create a new database with UTF8 encoding. For restoring demo datamodel, the database has to be named `qgep-prod`.
 
   * Change to this database
 
@@ -49,37 +49,37 @@ Restore the latest data model that also includes demo data:
   * https://github.com/QGEP/datamodel/releases/latest
   * download `qgep_vx.y.z_structure_and_demo_data.backup`
 
-* Back in pgAdmin, right click the `qgep` database
+* Back in pgAdmin, right click the `qgep-prod` database
 
   * Click `Restore`
 
   * Load your download of qgep_vx.y.z_structure_and_demo_data.backup
 
 
-  .. figure:: images/qgep_restore.jpg
+  .. figure:: images/demodata_restore.jpg
 
-  * Restore Options #2: Activate `Clean before restore`
+  * Check the `Restore Options` Tab
 
-  .. figure:: images/qgep_restore_options2.jpg
+  .. figure:: images/demodata-restore_options.jpg
 
   * Click `Restore`
-
-  .. figure:: images/qgep_restore_messages.jpg
   
-  * Check whether in Message window last line is Exit Code 0
+  * Check whether in Message window `Restoring backup on the server` is successfully completed.
   
   .. note:
   
-    If the Exit Code is 1 and the Detail reads sth like
+    If the the Restore is failed and the Detail reads something like
   "pg_restore: [archiver] unsupported version (1.13) in file header"
   or in German "pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf"
   try updating your PostgreSQL, see https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r
 
-  * Click `Cancel`
+  * Close the Restoring-Window
 
 * Right click the database and click `Refresh`
 
 .. figure:: images/pgadmin_qgep_refresh.jpg
+
+* Propably you want to rename the database: Right click the database and click `Properties...` and rename the database.
 
 There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
@@ -87,17 +87,16 @@ There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
 
   * Right click the `qgep_od` schema
 
-  * Properties -> Privileges Tab > Grant ``USAGE`` to group ``qgep``.
+  * Properties... -> Security Tab -> Privileges `+`Button (Add new row) > as `Grantee` choose ``qgep``, `Privileges` click ``USAGE``. Then Click `Save`
 
-  * Click `Grant Wizard …`
+  * Right click again, choose `Grant Wizard …`
 
-  * Selection, click `Check All`
+  * In Step 1 of 3: Click the Box to the left of `Object Type` to select all objects, click `Next`
 
-  * Privileges
+  * In Step 2 of 3: `+`Button (Add new row) > as `Grantee` choose ``qgep``, `Privileges` click ``ALL``, click `Next`
+  
+  * In Step 3 of 3: click `Finish`
 
-    * Group `qgep`
-
-    * Choose `ALL`
     
   * Right click the `qgep_sys` schema and the `qgep_vl` schema and repeat the steps described above for the qgep_od-schema
   
@@ -112,6 +111,7 @@ There are 4 schemas (qgep_od, qgep_sys, qgep_vl, qgep_import)
      GRANT ALL ON schema qgep_sys TO postgres;
      GRANT ALL ON schema qgep_vl TO postgres;
 
+
 Empty data model
 ^^^^^^^^^^^^^^^^
 
@@ -120,11 +120,13 @@ You also have the option to restore the latest empty data model (no demo data).
 * Download the data model by going to https://github.com/QGEP/datamodel/releases/latest
   and by downloading the latest `qgep_vx.y.z_structure_with_value_lists.sql`.
 
-* In order to restore you can follow the steps from :ref:`restore-demomodel`,
-  using the template data model instead of the demo data one.
+* In order to restore:: 
 
-Generate the data model
-^^^^^^^^^^^^^^^^^^^^^^^
+   psql -U postgres -h localhost -p 5432 -d qgep-prod -W -f qgep_v1.2.0_structure_with_value_lists.sql
+
+
+Generate the data model under Linux
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also generate the data model under Linux.
 
