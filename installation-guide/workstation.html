@@ -272,19 +272,19 @@ New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other 
 <div class="section" id="add-your-own-oid-in-the-project">
 <h2>4.5. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>You have to add your OID data in the table is_oid_prefixes:</li>
+<li>You have to add your OID data in the table qgep_sys.oid_prefixes:</li>
 </ul>
 <div class="figure">
-<img alt="../_images/is_oid_prefixes.jpg" src="../_images/is_oid_prefixes.jpg" />
+<img alt="../_images/oid_prefix.jpg" src="../_images/oid_prefix.jpg" />
 </div>
 <ul class="simple">
 <li>Edit <code class="docutils literal"><span class="pre">02_oid_generation.sql</span></code> with your OID if you want it permanently in the QGEP project and hand in a pull request</li>
 </ul>
 <p><a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql">https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql</a></p>
 <div class="code sql highlight-python"><div class="highlight"><pre><span></span>-- sample entry for the City of Uster - you need to add an entry for your own organization
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch11h8mw&#39;,&#39;Stadt Uster&#39;,TRUE);
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch15z36d&#39;,&#39;SIGE&#39;,FALSE);
-INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p7mz&#39;,&#39;Arbon&#39;,FALSE);
+INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch11h8mw&#39;,&#39;Stadt Uster&#39;,TRUE);
+INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch15z36d&#39;,&#39;SIGE&#39;,FALSE);
+INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p7mz&#39;,&#39;Arbon&#39;,FALSE);
 </pre></div>
 </div>
 <p>and set the OID you want to use in your project to TRUE.</p>
@@ -292,6 +292,10 @@ INSERT INTO qgep.is_oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p
 <li>or add it locally to your project with an INSERT statement.</li>
 <li>OID prefixes have to be ordered at <a class="reference external" href="http://www.interlis.ch/oid/oid_commande_e.php">http://www.interlis.ch/oid/oid_commande_e.php</a></li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you work with different databases for different communitys, you should use different OID prefixes for each database.</p>
+</div>
 </div>
 <div class="section" id="working-with-more-than-one-database">
 <h2>4.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
