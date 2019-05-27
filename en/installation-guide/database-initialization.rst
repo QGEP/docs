@@ -56,7 +56,7 @@ Restore the latest data model that also includes demo data:
   * Load your download of qgep_vx.y.z_structure_and_demo_data.backup
 
 
-  .. figure:: images/demodata_restore.jpg
+  .. figure:: images/demodata-restore.jpg
 
   * Check the `Restore Options` Tab
 
@@ -120,9 +120,9 @@ You also have the option to restore the latest empty data model (no demo data).
 * Download the data model by going to https://github.com/QGEP/datamodel/releases/latest
   and by downloading the latest `qgep_vx.y.z_structure_with_value_lists.sql`.
 
-* In order to restore:: 
+* In order to restore (replace x.y.z with your version):: 
 
-   psql -U postgres -h localhost -p 5432 -d qgep-prod -W -f qgep_v1.2.0_structure_with_value_lists.sql
+   psql -U postgres -h localhost -p 5432 -d qgep-prod -W -f qgep_vx.y.z_structure_with_value_lists.sql
 
 
 Generate the data model under Linux
