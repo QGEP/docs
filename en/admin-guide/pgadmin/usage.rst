@@ -10,12 +10,6 @@ SQL query
 
    **Running SQL commands in pgAdmin4**
    
-   
-.. figure:: images/001_roles.jpeg
-
-   **Running SQL commands in pgAdminIII**
-  
-
 
 
 .. note::
