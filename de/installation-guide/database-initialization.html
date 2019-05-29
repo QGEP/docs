@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Initialisierung der Datenbank &mdash; QGEP 0.7 Dokumentation</title>
+  <title>1.3. Initialisierung der Datenbank &mdash; QGEP 0.7 Dokumentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="QGEP 0.7 Dokumentation" href="../index.html"/>
-        <link rel="up" title="Leitfaden QGEP Installation" href="index.html"/>
-        <link rel="next" title="4. Arbeitsplatzrechner Einrichten" href="workstation.html"/>
-        <link rel="prev" title="2. Datenbankserver aufsetzen" href="server.html"/> 
+        <link rel="up" title="1. Leitfaden QGEP Installation" href="index.html"/>
+        <link rel="next" title="1.4. Arbeitsplatzrechner Einrichten" href="workstation.html"/>
+        <link rel="prev" title="1.2. Datenbankserver aufsetzen" href="server.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Leitfaden QGEP Installation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="requirements.html">1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server.html">2. Datenbankserver aufsetzen</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3. Initialisierung der Datenbank</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#process">3.1. Vorgehen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">3.1.1. Demodaten einrichten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#empty-data-model">3.1.2. Leeres Datenbank-Schema</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-the-data-model-under-linux">3.1.3. Generate the data model under Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Leitfaden QGEP Installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">1.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">1.2. Datenbankserver aufsetzen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.3. Initialisierung der Datenbank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#process">1.3.1. Vorgehen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">1.3.1.1. Demodaten einrichten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#empty-data-model">1.3.1.2. Leeres Datenbank-Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-the-data-model-under-linux">1.3.1.3. Generate the data model under Linux</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">4. Arbeitsplatzrechner Einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">1.4. Arbeitsplatzrechner Einrichten</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">1. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">2. Administratorhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">3. Demo virtuelle Maschine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 </ul>
 
           
@@ -124,9 +124,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">Leitfaden QGEP Installation</a> &raquo;</li>
+          <li><a href="index.html">1. Leitfaden QGEP Installation</a> &raquo;</li>
       
-    <li>3. Initialisierung der Datenbank</li>
+    <li>1.3. Initialisierung der Datenbank</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -141,14 +141,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="database-initialization">
-<span id="id1"></span><h1>3. Initialisierung der Datenbank<a class="headerlink" href="#database-initialization" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="id1"></span><h1>1.3. Initialisierung der Datenbank<a class="headerlink" href="#database-initialization" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Für die Konfiguration der Datenbank können sie pgAdmin verwenden.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Mit diesem Link können sie lernen wie man <a class="reference internal" href="../admin-guide/pgadmin/install.html#install-pgadmin"><span>Installation von pgAdmin</span></a> benutzt.</p>
 </div>
 <div class="section" id="process">
-<h2>3.1. Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>1.3.1. Vorgehen<a class="headerlink" href="#process" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In pgAdmin4</p>
 <ul class="simple">
 <li><p class="first">Verbinden Sie sich mit dem Datenbankserver</p>
@@ -158,32 +158,34 @@
 <li><p class="first">Erzeugen sie eine neue Login Rolle (Login Roles) mit Name <cite>qgepuser</cite> (zum Beispiel) und fügen sie diese zur <cite>qgep</cite> Gruppe hinzu.</p>
 </li>
 </ul>
-<p>Sie können dies grafisch tun oder Sie öffnen ein SQL-Fenster in pgAdminIII und tippen folgenden Text ein:</p>
+<p>You can do this graphically or by simply opening a pgAdmin <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL Abfrage</span></a> window and type the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>CREATE GROUP qgep;
 CREATE ROLE qgepuser LOGIN;
 GRANT qgep TO qgepuser;
 </pre></div>
 </div>
+<div class="section" id="restore-demo-datamodel">
+<span id="restore-demomodel"></span><h3>1.3.1.1. Demodaten einrichten<a class="headerlink" href="#restore-demo-datamodel" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das aktuelle Datenbank-Schema mit dem Demodatensatz einrichten</p>
 <ul class="simple">
-<li>Create a new database with UTF8 encoding. For restoring demo datamodel, the database has to be named <cite>qgep-prod</cite>.<ul>
+<li><p class="first">Herunterladen der Demodaten * <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> * download <cite>qgep_vx.y.z_structure_and_demo_data.backup</cite></p>
+</li>
+<li>Back in pgAdmin, create a new database with UTF8 encoding.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">For restoring demo datamodel, the database has to be named <cite>qgep_prod</cite>.</p>
+</div>
+<ul>
 <li><p class="first">Wechseln Sie in diese Datenbank</p>
 </li>
-</ul>
-</li>
 <li><p class="first">Öffnen sie ein neues SQL-Fenster und erzeugen Sie die folgenden Extensions (wenn sie nicht schon existieren):</p>
-<ul>
+<ul class="simple">
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">hstore;</span></code></li>
 <li><code class="docutils literal"><span class="pre">CREATE</span> <span class="pre">EXTENSION</span> <span class="pre">postgis;</span></code></li>
 </ul>
 </li>
-</ul>
-<div class="section" id="restore-demo-datamodel">
-<span id="restore-demomodel"></span><h3>3.1.1. Demodaten einrichten<a class="headerlink" href="#restore-demo-datamodel" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Das aktuelle Datenbank-Schema mit dem Demodatensatz einrichten</p>
-<ul>
-<li><p class="first">Herunterladen der Demodaten * <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> * download <cite>qgep_vx.y.z_structure_and_demo_data.backup</cite></p>
-</li>
-<li><p class="first">Back in pgAdmin, right click the <cite>qgep-prod</cite> database</p>
+<li><p class="first">Right click the <cite>qgep_prod</cite> database</p>
 <ul class="simple">
 <li><p class="first">&#8216;Restore&#8217; wählen</p>
 </li>
@@ -194,7 +196,7 @@ GRANT qgep TO qgepuser;
 <img alt="../_images/demodata-restore.jpg" src="../_images/demodata-restore.jpg" />
 </div>
 <ul class="simple">
-<li>Check the <cite>Restore Options</cite> Tab</li>
+<li>Click the <cite>Restore Options</cite> Tab and check these options</li>
 </ul>
 <div class="figure">
 <img alt="../_images/demodata-restore_options.jpg" src="../_images/demodata-restore_options.jpg" />
@@ -204,36 +206,44 @@ GRANT qgep TO qgepuser;
 </li>
 <li>Check whether in Message window <cite>Restoring backup on the server</cite> is successfully completed.</li>
 </ul>
-<p>&#8220;pg_restore: [archiver] unsupported version (1.13) in file header&#8221; resp. in Deutsch &#8220;pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf&#8221; updaten sie PostgreSQL, vgl. <a class="reference external" href="https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r">https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r</a></p>
-<ul class="simple">
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<blockquote>
+<div>If the Restore is failed and the detail reads something like &#8220;pg_restore: [archiver] unsupported version (1.13) in file header&#8221; or in German &#8220;pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf&#8221; try updating your PostgreSQL, see <a class="reference external" href="https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r">https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r</a></div></blockquote>
+<ul class="last simple">
 <li>Close the Restoring-Window</li>
 </ul>
-</li>
+</div>
+<ul class="simple">
 <li><p class="first">Recktsklick auf die Datenbank und &#8216;Refresh&#8217; wählen</p>
 </li>
 </ul>
 <div class="figure">
-<img alt="../_images/pgadmin_qgep_refresh.jpg" src="../_images/pgadmin_qgep_refresh.jpg" />
+<img alt="../_images/demodata-refresh.jpg" src="../_images/demodata-refresh.jpg" />
 </div>
 <ul class="simple">
-<li>Propably you want to rename the database: Right click the database and click <cite>Properties...</cite> and rename the database.</li>
+<li>Propably you want to rename the database: Right click the database, click <cite>Properties...</cite> and rename the database.</li>
 </ul>
-<p>Es sind jetzt 4 Schemata vorhanden (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
+<p>There are now 4 schemas in the database (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
 <ul>
 <li><p class="first">Aktualisiere die Zugriffrechte der qgep_od, qgep_sys und qgep_vl Schemata</p>
 <ul class="simple">
 <li><p class="first">Auf das Schema <cite>qgep_od</cite> rechtsklicken.</p>
-</li>
+<ul>
 <li>Properties... -&gt; Security Tab -&gt; Privileges <cite>+`Button (Add new row) &gt; as `Grantee</cite> choose <code class="docutils literal"><span class="pre">qgep</span></code>, <cite>Privileges</cite> click <code class="docutils literal"><span class="pre">USAGE</span></code>. Then Click <cite>Save</cite></li>
 <li>Right click again, choose <cite>Grant Wizard …</cite></li>
 <li>In Step 1 of 3: Click the Box to the left of <cite>Object Type</cite> to select all objects, click <cite>Next</cite></li>
 <li>In Step 2 of 3: <cite>+`Button (Add new row) &gt; as `Grantee</cite> choose <code class="docutils literal"><span class="pre">qgep</span></code>, <cite>Privileges</cite> click <code class="docutils literal"><span class="pre">ALL</span></code>, click <cite>Next</cite></li>
 <li>In Step 3 of 3: click <cite>Finish</cite></li>
+</ul>
+</li>
 <li><p class="first">Wiederhole die oben für das qgep_od-Schema beschrieben Schritte auch für das <cite>qgep_sys</cite> und für das <cite>qgep_vl</cite> Schema</p>
 </li>
 </ul>
 </li>
-<li><p class="first">Mit der folgenden Query ist das Anpassen der Sonderrechte einfacher:</p>
+<li><p class="first">You can update the privileges easier in an <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL Abfrage</span></a> Window :</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
 GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
 GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
@@ -246,20 +256,41 @@ GRANT ALL ON schema qgep_vl TO postgres;
 </ul>
 </div>
 <div class="section" id="empty-data-model">
-<h3>3.1.2. Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>1.3.1.2. Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist auch möglich, ein leeres Datenbank-Schema zu erstellen (ohne Demodatensatz).</p>
-<ul>
+<ul class="simple">
 <li><p class="first">Herunterladen das Datenbank-Schema unter <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>, und der Datei <cite>qgep_vx.y.z_structure_with_value_lists.sql</cite>.</p>
 </li>
-<li><p class="first">In order to restore (replace x.y.z with your version):</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>psql -U postgres -h localhost -p 5432 -d qgep-prod -W -f qgep_vx.y.z_structure_with_value_lists.sql
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">If you run the sql in a <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span>SQL Abfrage</span></a> Window, you will get an error. You have to use a BAT-File.</p>
+</div>
+<ul>
+<li><p class="first">Use a BAT-File like that, to create the database, the extensions and the schemas with valuelist  (replace x.y.z with your version):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>rem bat and sql in the same directory
+
+set db=qgep-empty
+set port=5432
+set PATH=%PATH%;C:\Program Files\PostgreSQL\9.6\bin
+
+createdb -U postgres -p %port% %db%
+psql -U postgres -h localhost -p %port% -d %db% -f qgep_vx.y.z_structure_with_value_lists.sql
+PAUSE
 </pre></div>
 </div>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">You are free to choose any database name.</p>
+</div>
+<ul class="simple">
+<li>Update privileges for the qgep_od, qgep_sys and qgep_vl schema as described in the chapter <cite>Restore demo data</cite>.</li>
+</ul>
 </div>
 <div class="section" id="generate-the-data-model-under-linux">
-<h3>3.1.3. Generate the data model under Linux<a class="headerlink" href="#generate-the-data-model-under-linux" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>1.3.1.3. Generate the data model under Linux<a class="headerlink" href="#generate-the-data-model-under-linux" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Es ist auch unter LINUX möglich das Datenmodell zu erzeugen</p>
 <ul>
 <li><p class="first">Download des Datenmodells</p>
@@ -305,10 +336,10 @@ cd datamodel
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="workstation.html" class="btn btn-neutral float-right" title="4. Arbeitsplatzrechner Einrichten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workstation.html" class="btn btn-neutral float-right" title="1.4. Arbeitsplatzrechner Einrichten" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="server.html" class="btn btn-neutral" title="2. Datenbankserver aufsetzen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="server.html" class="btn btn-neutral" title="1.2. Datenbankserver aufsetzen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

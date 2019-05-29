@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.2. Utiliser pgAdmin &mdash; documentation QGEP 0.7</title>
+  <title>2.1.2. Using pgAdmin &mdash; documentation QGEP 0.7</title>
   
 
   
@@ -87,7 +87,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;administration</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. pgAdmin</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="install.html">2.1.1. Installer pgAdmin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.2. Utiliser pgAdmin</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.2. Using pgAdmin</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sql-query">2.1.2.1. Requêtes SQL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#database-dump">2.1.2.2. &#8220;Dump&#8221; de la base de données</a></li>
 </ul>
@@ -128,7 +128,7 @@
       
           <li><a href="index.html">2.1. pgAdmin</a> &raquo;</li>
       
-    <li>2.1.2. Utiliser pgAdmin</li>
+    <li>2.1.2. Using pgAdmin</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -143,12 +143,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-pgadmin">
-<h1>2.1.2. Utiliser pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>2.1.2. Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="sql-query">
 <span id="id1"></span><h2>2.1.2.1. Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="figure" id="id3">
-<img alt="../../_images/001_roles.jpeg" src="../../_images/001_roles.jpeg" />
-<p class="caption"><span class="caption-text"><strong>Exécuter des commandes SQL dans PgAdmin III</strong></span></p>
+<img alt="../../_images/sql-query4.jpg" src="../../_images/sql-query4.jpg" />
+<p class="caption"><span class="caption-text"><strong>Running SQL commands in pgAdmin4</strong></span></p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -165,36 +165,31 @@
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="simple">
-<li><p class="first">Ouvrir pgAdmin III et se connecter à la base de données</p>
-</li>
+<li>Open pgAdmin4 and connect to the database</li>
 <li><p class="first">Faire un clic droit sur le schéma (dans l&#8217;arborescence sous &#8220;Schemas&#8221;) que l&#8217;on veut sauvegarder</p>
 </li>
 <li><p class="first">Entrer l&#8217;endroit ou le fichier devra être sauvegardé</p>
 </li>
-<li><p class="first">Cocher les options suivantes</p>
-</li>
 </ul>
-<div class="figure">
-<img alt="../../_images/Screenshot-from-2015-01-22-102152.png" src="../../_images/Screenshot-from-2015-01-22-102152.png" />
+<blockquote>
+<div><div class="figure">
+<img alt="../../_images/database-dump-general4.jpg" src="../../_images/database-dump-general4.jpg" />
 </div>
-<div class="figure">
-<img alt="../../_images/Screenshot-from-2015-01-22-102155.png" src="../../_images/Screenshot-from-2015-01-22-102155.png" />
-</div>
-<div class="figure">
-<img alt="../../_images/Screenshot-from-2015-01-22-102159.png" src="../../_images/Screenshot-from-2015-01-22-102159.png" />
-</div>
+</div></blockquote>
+<ul class="simple">
+<li>Click the option-tab and check the following options</li>
+</ul>
 <div class="last figure">
-<img alt="../../_images/Screenshot-from-2015-01-22-102218.png" src="../../_images/Screenshot-from-2015-01-22-102218.png" />
+<img alt="../../_images/database-dump-options4.jpg" src="../../_images/database-dump-options4.jpg" />
 </div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="simple">
-<li><p class="first">Après avoir fait tourner le processus de sauvegarde, le code de sortie devrait indiquer 0 si tout s&#8217;est bien passé</p>
-</li>
+<li>After running the process, the window in the right bottom shows that everything went ok</li>
 </ul>
 <div class="last figure">
-<img alt="../../_images/Screenshot-from-2015-01-22-102222.png" src="../../_images/Screenshot-from-2015-01-22-102222.png" />
+<img alt="../../_images/database-dump-complete4.jpg" src="../../_images/database-dump-complete4.jpg" />
 </div>
 </div>
 </div>

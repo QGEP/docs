@@ -1,4 +1,4 @@
-Using Pgadmin
+Using pgAdmin
 ==============
 
 .. _SQL-query:
@@ -6,9 +6,11 @@ Using Pgadmin
 SQL query
 ---------
 
-.. figure:: images/001_roles.jpeg
+.. figure:: images/sql-query4.jpg
 
-   **Running SQL commands in PgAdminIII**
+   **Running SQL commands in pgAdmin4**
+   
+
 
 .. note::
 
@@ -22,18 +24,18 @@ Database dump
 -------------
 
 .. note::
- * Open pgAdminIII and connect to the database
+ * Open pgAdmin4 and connect to the database
  * Right click the Schema that you want to backup (in the tree structure below "Schemas")
  * Enter the filename where the dump should be stored
- * Check the following options
+ 
+  .. figure:: images/database-dump-general4.jpg
+  
+ * Click the option-tab and check the following options
 
- .. figure:: images/Screenshot-from-2015-01-22-102152.png
- .. figure:: images/Screenshot-from-2015-01-22-102155.png
- .. figure:: images/Screenshot-from-2015-01-22-102159.png
- .. figure:: images/Screenshot-from-2015-01-22-102218.png
+ .. figure:: images/database-dump-options4.jpg
 
 .. note::
 
- * After running the process, the exit code 0 indicates that everything went ok
+ * After running the process, the window in the right bottom shows that everything went ok
 
- .. figure:: images/Screenshot-from-2015-01-22-102222.png
+ .. figure:: images/database-dump-complete4.jpg
