@@ -29,7 +29,7 @@ If added in base tables, these additional fields will be automatically added to 
 
 ``./view/create_views.py --pg_service pg_qgep --srid 2056``
 
-.. note:: When running datemodel upgrades using PUM, it will be required to use the additional option ``--exclude-field-pattern 'usr_%'``
+.. note:: When running data model upgrades using PUM, it will be required to use the additional option ``--exclude-field-pattern 'usr_%'``
 
 
 
