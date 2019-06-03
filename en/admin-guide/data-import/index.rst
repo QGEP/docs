@@ -56,7 +56,7 @@ You need to have the necessary model files (ili) in the same folder as the xtf.
 (!! 29.5.2017 Beziehung Erhaltungsereignis.Ausfuehrende_Firma 0..* statt 0..1 (Fehlerkorrektur)
 !! 2.6.2017 Beziehung Abwasserknoten_Hydr_GeometrieAssocRef -- {0..*} statt 0..1 (Fehlerkorrektur))
 
-.. Note:: If the INTERLIS model is German, then the ili2pg schema will have German table names. If the model is French, then the will be in French.
+.. Note:: If the INTERLIS model is German, then the ili2pg schema will have German table names. If the model is French, then it will be in French.
 
 
 Add additional functions
