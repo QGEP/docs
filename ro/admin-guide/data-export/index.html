@@ -95,7 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#add-additional-functions">3.2.2.4. Add additional functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-the-export-queries-for-your-datamodel">3.2.2.5. Run the export queries for your datamodel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#export-data-from-ili2pg-schema-to-interlis">3.2.2.6. Export data from ili2pg schema to INTERLIS</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">3.2.2.7. Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">3.2.2.7. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#open-issues">3.2.2.8. Open issues</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#possible-problems">3.2.2.9. Possible problems</a></li>
 </ul>
@@ -280,7 +280,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </div>
 <div class="section" id="add-additional-functions">
 <h3>3.2.2.4. Add additional functions<a class="headerlink" href="#add-additional-functions" title="Permalink to this headline">¶</a></h3>
-<p>We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema</p>
+<p>We then need a series of function for the schema transformation from the created ili2pg schema to the qgep schema</p>
 <ul class="simple">
 <li><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em>  : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
 <li><em>02_vsa_dss_2015_2_d_304_tid_lookup.sql</em>  : Function to look up tid – used in 060</li>
@@ -305,7 +305,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <h3>3.2.2.5. Run the export queries for your datamodel<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Permalink to this headline">¶</a></h3>
 <p>For VSA-DSS export</p>
 <ul class="simple">
-<li><em>051_vsa_dss_2015_2_d_304_interlisexport2.sql</em> for VSA-DSS 2015 export</li>
+<li><em>051_vsa_dss_2015_2_d_304_interlisexport2.sql</em> : for VSA-DSS 2015 export</li>
 <li><em>kf_0511_geoAbwBW_li2cu.sql</em> : change from compoundcurve to linestring (ändert Geometrie type in export schema (curve))</li>
 <li><em>052a_vsa_dss_2015_2_d_304_interlisexport2.sql</em> : second part of data export</li>
 </ul>
@@ -329,7 +329,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li>&#8211;log &lt;tag&gt; can be set as wanted – it makes sense to name it in a structured way <em>export_ &amp; name of dataset_ &amp; modellversion(ili name).log</em></li>
 <li>Adapt dbdatabase, dbschema, dbusr and dbpwd</li>
 </ul>
-<p>This needs the following model files / Braucht folgende Modelldateien (licence for use neede from VSA or sia – you can get it by <strong>purchasing</strong> <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405</a> or <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/datenstruktur-siedlungsentwaesserung/interliscd/">VSA-DSS CD</a>):</p>
+<p>This needs the following model files / Braucht folgende Modelldateien (licence for use needed from VSA or sia – you can get it by <strong>purchasing</strong> <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405</a> or <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/datenstruktur-siedlungsentwaesserung/interliscd/">VSA-DSS CD</a>):</p>
 <ul class="simple">
 <li><em>units.ili</em></li>
 <li><em>base.ili</em></li>
@@ -342,8 +342,8 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </div>
 <p>Needed models: <em>units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili</em></p>
 </div>
-<div class="section" id="quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
-<h3>3.2.2.7. Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-controle-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
+<h3>3.2.2.7. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Permalink to this headline">¶</a></h3>
 <p>see <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/">https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/</a>
 -&gt; Link to login at infogrips.</p>
 </div>

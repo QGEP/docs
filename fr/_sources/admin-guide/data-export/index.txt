@@ -121,7 +121,7 @@ and some metatables for ili2pg:
 Add additional functions
 --------------------------------
 
-We then need a series of function for the schema transformation form the created ili2pg schema to the qgep schema
+We then need a series of function for the schema transformation from the created ili2pg schema to the qgep schema
 
 - *01_vsa_dss_2015_2_d_304_tid_generate.sql*  : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 - *02_vsa_dss_2015_2_d_304_tid_lookup.sql*  : Function to look up tid – used in 060
@@ -141,7 +141,7 @@ Run the export queries for your datamodel
 
 For VSA-DSS export
 
-- *051_vsa_dss_2015_2_d_304_interlisexport2.sql* for VSA-DSS 2015 export
+- *051_vsa_dss_2015_2_d_304_interlisexport2.sql* : for VSA-DSS 2015 export
 - *kf_0511_geoAbwBW_li2cu.sql* : change from compoundcurve to linestring (ändert Geometrie type in export schema (curve))
 - *052a_vsa_dss_2015_2_d_304_interlisexport2.sql* : second part of data export
 
@@ -164,7 +164,7 @@ The following call exports the data into INTERLIS2 sia405abwasser (Version 2015)
 * --log <tag> can be set as wanted – it makes sense to name it in a structured way *export_ & name of dataset_ & modellversion(ili name).log*
 * Adapt dbdatabase, dbschema, dbusr and dbpwd
 
-This needs the following model files / Braucht folgende Modelldateien (licence for use neede from VSA or sia – you can get it by **purchasing** `Norm SIA405 <http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_ or `VSA-DSS CD <https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/datenstruktur-siedlungsentwaesserung/interliscd/>`_):
+This needs the following model files / Braucht folgende Modelldateien (licence for use needed from VSA or sia – you can get it by **purchasing** `Norm SIA405 <http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_ or `VSA-DSS CD <https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/datenstruktur-siedlungsentwaesserung/interliscd/>`_):
 
 - *units.ili*
 - *base.ili*
@@ -178,7 +178,7 @@ The following call exports the data into INTERLIS2 sia405abwasser (Version 2014)
 Needed models: *units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili*
 
 
-Quality controle with VSA online checker (Fachprüfung mit VSA Checker (online))
+Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
 see https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ 
 -> Link to login at infogrips. 
