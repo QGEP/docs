@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.3.1. Modification de données existantes &mdash; documentation QGEP 0.7</title>
+  <title>2.3.1. Modification de données existantes &mdash; documentation QGEP 0.7</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.7" href="../../index.html"/>
-        <link rel="up" title="1.3. Édition dans QGEP" href="index.html"/>
-        <link rel="next" title="1.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds" href="moving.html"/>
-        <link rel="prev" title="1.3. Édition dans QGEP" href="index.html"/> 
+        <link rel="up" title="2.3. Édition dans QGEP" href="index.html"/>
+        <link rel="next" title="2.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds" href="moving.html"/>
+        <link rel="prev" title="2.3. Édition dans QGEP" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,39 +82,39 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">1.1. Couches dans QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">1.2. Numérisation dans QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.3. Édition dans QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">1.3.1. Modification de données existantes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#demo-project">1.3.1.1. Projet Demo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#layers">1.3.1.2. Couches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">1.3.1.3. Changer les attributs des éléments de type point (chambres / structures spéciales)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">1.3.1.4. Modification des attributs des éléments linéaires (conduites)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#change-reach-direction">1.3.1.5. Changez la direction du tronçon</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#snap-reach-geometry">1.3.1.6. Snap reach geometry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">1.3.1.7. Travailler avec les codes les listes de valeurs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">1.3.1.8. Une autre façon de choisir un objet</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">1.3.1.9. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">1.3.1.10. Ajouter un noeud assainissement à un tronçon existant</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multiedit">1.3.1.11. Multiedit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#saving-changes">1.3.1.12. Sauver les modifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">1.3.1.13. Séparer un tronçon (conduite) en différents tronçons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Numérisation dans QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Édition dans QGEP</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.1. Modification de données existantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#demo-project">2.3.1.1. Projet Demo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Couches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changer les attributs des éléments de type point (chambres / structures spéciales)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">2.3.1.4. Modification des attributs des éléments linéaires (conduites)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#change-reach-direction">2.3.1.5. Changez la direction du tronçon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#snap-reach-geometry">2.3.1.6. Snap reach geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">2.3.1.7. Travailler avec les codes les listes de valeurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">2.3.1.8. Une autre façon de choisir un objet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.9. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.10. Ajouter un noeud assainissement à un tronçon existant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.11. Edition multiple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.12. Sauver les modifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.13. Séparer un tronçon (conduite) en différents tronçons</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="moving.html">1.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds</a></li>
-<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">1.3.3. Ajout et édition d&#8217;événements de maintenance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">1.3.4. Connexion des éléments du réseau assainissement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">2.3.3. Ajout et édition d&#8217;événements de maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">2.3.4. Connexion des éléments du réseau assainissement</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">1.4. Profils en long</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">1.5. Outils de poursuite de réseau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">1.6. Impression de plans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Outils de poursuite de réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">2. Guide d&#8217;administration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -139,11 +139,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
       
-          <li><a href="index.html">1.3. Édition dans QGEP</a> &raquo;</li>
+          <li><a href="index.html">2.3. Édition dans QGEP</a> &raquo;</li>
       
-    <li>1.3.1. Modification de données existantes</li>
+    <li>2.3.1. Modification de données existantes</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -158,10 +158,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-of-existing-data">
-<span id="editing-data"></span><h1>1.3.1. Modification de données existantes<a class="headerlink" href="#editing-of-existing-data" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="editing-data"></span><h1>2.3.1. Modification de données existantes<a class="headerlink" href="#editing-of-existing-data" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Voici un guide pour la modification de données existantes dans QGEP.</p>
 <div class="section" id="demo-project">
-<h2>1.3.1.1. Projet Demo<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.1. Projet Demo<a class="headerlink" href="#demo-project" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Assurez-vous d&#8217;avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <span class="xref std std-ref">initialisation-base de données</span>)</p>
 </li>
@@ -191,13 +191,14 @@
 </ul>
 </div>
 <div class="section" id="layers">
-<h2>1.3.1.2. Couches<a class="headerlink" href="#layers" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.2. Couches<a class="headerlink" href="#layers" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>QGEP has different predefined layers. For explanations, see the <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span>Description de la couche</span></a> chapter.</li>
+<li><p class="first">QGEP a plusieurs couches prédéfinies. Pour plus d&#8217;informations, voir le chapitre <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span>Description de la couche</span></a>.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>1.3.1.3. Changer les attributs des éléments de type point (chambres / structures spéciales)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.3. Changer les attributs des éléments de type point (chambres / structures spéciales)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p class="first">Pour changer un attribut, vous devez d&#8217;abord sélectionner la couche <strong>vw_qgep_wastewater_structure</strong>.</p>
@@ -246,7 +247,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h2>1.3.1.4. Modification des attributs des éléments linéaires (conduites)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.4. Modification des attributs des éléments linéaires (conduites)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p class="first">Pour changer un attribut, il est nécessaire de sélectionner la couche <strong>vw_qgep_reach</strong></p>
@@ -277,7 +278,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="change-reach-direction">
-<h2>1.3.1.5. Changez la direction du tronçon<a class="headerlink" href="#change-reach-direction" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.5. Changez la direction du tronçon<a class="headerlink" href="#change-reach-direction" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).</p>
@@ -285,14 +286,16 @@
 <p>QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
 Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.</p>
 <ul class="simple">
-<li>To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
+<li><p class="first">Pour commencer, vous devez sélectionner tous les tronçons que vous souhaitez modifier. Il n&#8217;est pas nécessaire de sélectionner la couche vw_qgep_troncon ou de passer cette couche en mode d&#8217;édition.</p>
+</li>
 <li>Open the <strong>Processing Toolbox</strong></li>
 </ul>
 <div class="figure">
 <img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
 </div>
 <ul class="simple">
-<li>Double click the <strong>Change reach direction</strong> tool</li>
+<li><p class="first">Faites un double clic sur l&#8217;outil <strong>Changer la direction du tronçon</strong></p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
@@ -300,14 +303,15 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <ul class="simple">
 <li>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - Layer and then click on <strong>Run</strong></li>
 <li>If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed.</li>
-<li>Refresh network topology.</li>
+<li><p class="first">Rafraîchissez la topologie du réseau.</p>
+</li>
 <li><p class="first">Vous pouvez maintenant enregistrer la modification.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="snap-reach-geometry">
-<h2>1.3.1.6. Snap reach geometry<a class="headerlink" href="#snap-reach-geometry" title="Lien permanent vers ce titre">¶</a></h2>
-<p>This tool snaps reaches graphically to the wastewater network element they are connected to. So they are not only logically, but also graphically connected.</p>
+<h2>2.3.1.6. Snap reach geometry<a class="headerlink" href="#snap-reach-geometry" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cet outil accroche graphiquement les tronçons à l&#8217;élément du réseau assainissement auquel ils sont connectés. Ils sont ainsi connectés non seulement de manière logique mais également de manière graphique.</p>
 <ul class="simple">
 <li>To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
 <li>Open the <strong>Processing Toolbox</strong></li>
@@ -334,7 +338,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="working-with-codes-of-valuelist">
-<h2>1.3.1.7. Travailler avec les codes les listes de valeurs<a class="headerlink" href="#working-with-codes-of-valuelist" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.7. Travailler avec les codes les listes de valeurs<a class="headerlink" href="#working-with-codes-of-valuelist" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Les valeurs des champs avec liste de valeurs sont stockés sous forme de codes dans la base de données.</p>
 </li>
@@ -346,7 +350,8 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.</li>
+<li><p class="first">Dans un projet Qgep correctement configuré, les vues des tables ou des formulaires doivent afficher les valeurs dans votre langue et non les codes.</p>
+</li>
 <li><p class="first">Mais si vous voulez définir une sélection avec une expression ou si vous vous voulez définir une symbologie basée sur des règles pour votre couche, vous devez connaître les codes ou utiliser l&#8217;expression suivante: <strong>represent_value(&#8220;field&#8221;)</strong></p>
 </li>
 </ul>
@@ -378,7 +383,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
-<h2>1.3.1.8. Une autre façon de choisir un objet<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.8. Une autre façon de choisir un objet<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</li>
 </ul>
@@ -393,7 +398,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>1.3.1.9. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.9. Ajouter des couvercles et noeuds additionnels à une structure assainissement existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
@@ -418,7 +423,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
-<h2>1.3.1.10. Ajouter un noeud assainissement à un tronçon existant<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.10. Ajouter un noeud assainissement à un tronçon existant<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Lien permanent vers ce titre">¶</a></h2>
 <p>In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -432,11 +437,11 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="multiedit">
-<h2>1.3.1.11. Multiedit<a class="headerlink" href="#multiedit" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.11. Edition multiple<a class="headerlink" href="#multiedit" title="Lien permanent vers ce titre">¶</a></h2>
 <p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
 </div>
 <div class="section" id="saving-changes">
-<h2>1.3.1.12. Sauver les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.12. Sauver les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Cliquez sur <strong>Sauver</strong> et désactivez ensuite le mode d&#8217;édition ou cliquez sur <strong>Terminer l&#8217;entrée de données</strong> si vous avez travaillé avec l&#8217;assistant de saisie de données QGEP (<code class="docutils literal"><span class="pre">wizard</span></code>).</p>
 </li>
@@ -448,7 +453,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2>1.3.1.13. Séparer un tronçon (conduite) en différents tronçons<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>2.3.1.13. Séparer un tronçon (conduite) en différents tronçons<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.</p>
 <p>Solution temporaire: Changez le tronçon existant et dessinez le second tronçon manuellement. Contrôlez les connexions.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.</p>
@@ -463,10 +468,10 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="moving.html" class="btn btn-neutral float-right" title="1.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="moving.html" class="btn btn-neutral float-right" title="2.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="1.3. Édition dans QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="2.3. Édition dans QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
