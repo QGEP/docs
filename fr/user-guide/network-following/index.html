@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.5. Outils de poursuite de réseau &mdash; documentation QGEP 0.7</title>
+  <title>1.5. Outils de poursuite de réseau &mdash; documentation QGEP 0.7</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.7" href="../../index.html"/>
-        <link rel="up" title="2. Guide d’utilisateur de QGEP" href="../index.html"/>
-        <link rel="next" title="2.6. Impression de plans" href="../plan-plotting/index.html"/>
-        <link rel="prev" title="2.4. Profils en long" href="../length-profile/index.html"/> 
+        <link rel="up" title="1. Guide d’utilisateur de QGEP" href="../index.html"/>
+        <link rel="next" title="1.6. Impression de plans" href="../plan-plotting/index.html"/>
+        <link rel="prev" title="1.4. Profils en long" href="../length-profile/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Couches dans QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Numérisation dans QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.5. Outils de poursuite de réseau</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#refresh-network-topology">2.5.1. Rafraîchir la topologie du réseau</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#upstream">2.5.2. Flux amont</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#downstream">2.5.3. Flux aval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flow-times-downstream">2.5.4. Flow times downstream</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">1.1. Couches dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">1.2. Numérisation dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">1.3. Édition dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">1.4. Profils en long</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">1.5. Outils de poursuite de réseau</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#refresh-network-topology">1.5.1. Rafraîchir la topologie du réseau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upstream">1.5.2. Flux amont</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downstream">1.5.3. Flux aval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flow-times-downstream">1.5.4. Temps d&#8217;écoulement en amont du réseau.</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">1.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">2. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -124,9 +124,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
       
-    <li>2.5. Outils de poursuite de réseau</li>
+    <li>1.5. Outils de poursuite de réseau</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -141,29 +141,36 @@
            <div itemprop="articleBody">
             
   <div class="section" id="network-following-tools">
-<h1>2.5. Outils de poursuite de réseau<a class="headerlink" href="#network-following-tools" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>1.5. Outils de poursuite de réseau<a class="headerlink" href="#network-following-tools" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="refresh-network-topology">
-<h2>2.5.1. Rafraîchir la topologie du réseau<a class="headerlink" href="#refresh-network-topology" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.5.1. Rafraîchir la topologie du réseau<a class="headerlink" href="#refresh-network-topology" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>Before using the network following tools, be sure, that your network topology is updated</li>
-<li>To refresh the network topology, you select the layer <strong>vw_qgep_reach</strong> and set the layer to the edit mode</li>
-<li>Click the <strong>refresh network topology</strong> tool (Button with SQL and drip)</li>
-<li>If ok, there is a message: <strong>Success: Network successfully updated</strong></li>
+<li><p class="first">Avant d&#8217;utiliser l&#8217;outil de suivis de réseau, assurez-vous que la topologie du réseau a été rafraîchie</p>
+</li>
+<li><p class="first">Pour rafraîchir la topologie du réseau, sélectionnez la couche vw_qgep_reach et la mettre en mode d&#8217;édition</p>
+</li>
+<li><p class="first">Cliquer sur l&#8217;outil <strong>refresh network topology</strong> dans le plugin QGEP</p>
+</li>
+<li><p class="first">Le message <strong>Success: Network successfully updated</strong> s&#8217;affiche si cela a fonctionné</p>
+</li>
 </ul>
 </div>
 <div class="section" id="upstream">
-<h2>2.5.2. Flux amont<a class="headerlink" href="#upstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.5.2. Flux amont<a class="headerlink" href="#upstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Peu importe la couche sélectionnée</p>
 </li>
-<li>To start upstream network following select the <strong>Upstream</strong> QGEP button</li>
+<li><p class="first">Pour débuter la poursuite de réseau amont, sélectionnez le bouton <strong>Amont</strong> dans  QGEP et cliquez ensuite sur un noeud:</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/network_upstream_button.jpg" src="../../_images/network_upstream_button.jpg" />
 </div>
 <ul class="simple">
-<li>QGEP opens then profile window at the bottom of the map. Click on your start node.</li>
-<li>If there is more than one node in this area, you choose the one you want form the mouse-list</li>
+<li><p class="first">Une fenêtre de profil s&#8217;ouvre alors dans le bas de la carte. Cliquez sur le nœud de départ</p>
+</li>
+<li><p class="first">S&#8217;il y a plus d&#8217;un noeud dans la zone, sélectionner le bon dans la liste</p>
+</li>
 </ul>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
@@ -190,7 +197,7 @@
 </div>
 </div>
 <div class="section" id="downstream">
-<h2>2.5.3. Flux aval<a class="headerlink" href="#downstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.5.3. Flux aval<a class="headerlink" href="#downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p class="first">La poursuite de réseau flux aval fonctionne de la même façon que la poursuite de réseau flux amont décrite ci-dessus.</p>
 </li>
@@ -199,20 +206,26 @@
 <img alt="../../_images/network_downstream_button.jpg" src="../../_images/network_downstream_button.jpg" />
 </div>
 <ul class="simple">
-<li>You can see where the water is going to.</li>
+<li><p class="first">Vous pouvez voir l&#8217;écoulement de l&#8217;eau.</p>
+</li>
 <li>Control, if QGEP finds also the overflows</li>
 <li><p class="first">Utilisez ceci pour contrôler si la topologie de votre réseau est correcte ou pour découvrir à quel endroit vous pourriez intervenir en cas d&#8217;accident.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="flow-times-downstream">
-<h2>2.5.4. Flow times downstream<a class="headerlink" href="#flow-times-downstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.5.4. Temps d&#8217;écoulement en amont du réseau.<a class="headerlink" href="#flow-times-downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>This is a tool in the QGEP-toolbox.</li>
-<li>The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool. There are already considerations about this functionality.</li>
-<li>For this tool you need a layer (table) in the QGEP-project with the flowtime per reach and the obj_id of the reach.</li>
-<li>You have to select the start-reach (where the accident is) in the vw_qgep_reach-layer</li>
-<li>Start the tool with double-click one <strong>Flow times downstream</strong></li>
+<li><p class="first">C&#8217;est un outil dans la boîte à outils QGEP.</p>
+</li>
+<li><p class="first">Cet outil est prévu pour calculer le temps d&#8217;écoulement entre un point de départ ( p.e. un accident sur le réseau) et une structure intéressante du réseau en amont. L&#8217;outil n&#8217;est pas prévu pour planifier le temps d&#8217;écoulement complet du réseau, cette fonctionnalité est actuellement considérée séparément.</p>
+</li>
+<li><p class="first">Pour cet outil, vous avez besoin d&#8217;une couche (table) dans le projet QGEP qui comprend le temps d&#8217;écoulement par conduite et l&#8217;identifiant unique (obj_id) de chaque conduite.</p>
+</li>
+<li><p class="first">Vous devez sélectionner la conduite de départ (p.e. à l&#8217;endroit ou à eu lieu l&#8217;accident) dans la couche vw_qgep_reach.</p>
+</li>
+<li><p class="first">Démarré l&#8217;outil en double-cliquant sur <strong>Flow times downstream</strong></p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
@@ -221,12 +234,18 @@
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
 </div>
 <ul class="simple">
-<li>In the window you have to choose<ul>
-<li>as reach layer: vw_qgep_reach</li>
-<li>as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum-up downstream)</li>
-<li>as reach id field: the field in your table that is the obj_id of the reach</li>
-<li>as Flow times field: the field in your table, that you want to sum-up</li>
-<li>as Flow times: if you let this field empty, there will be a temporary file with the results in your projects. Otherwise you can save the results to a vector layer.</li>
+<li><p class="first">Dans la fenêtre qui s&#8217;ouvre, choisissez</p>
+<ul>
+<li><p class="first">comme couche de conduite (reach layer): vw_qgep_reach</p>
+</li>
+<li><p class="first">comme couche de temps d&#8217;écoulement: la table que vous avez créée avec le temps d&#8217;écoulement et l&#8217;obj_id de chaque conduite</p>
+</li>
+<li><p class="first">comme champ d&#8217;identifiant pour la conduite: le champ dans votre table contenant les obj_id des conduites</p>
+</li>
+<li><p class="first">comme temps d&#8217;écoulement: le champ qui contient les temps d&#8217;écoulement dans votre table</p>
+</li>
+<li><p class="first">Si vous laissez le champ du temps d&#8217;écoulement vide, cela va créer une couche temporaire avec les résultats dans votre projet. Sinon vous pouvez l&#8217;enregistrer en temps que couche vecteur.</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -234,20 +253,25 @@
 <img alt="../../_images/flow_time_downstream_window.jpg" src="../../_images/flow_time_downstream_window.jpg" />
 </div>
 <ul class="simple">
-<li>The tool makes a downstream network search starting with the selected reach and creates for every reach a record in the (temporary) vector layer with just one field (the sum of the Flow times).</li>
+<li><p class="first">L&#8217;outil effectue une recherche de l&#8217;écoulement aval à partir de la conduite sélectionnée comme point de départ.  Un champ par conduite est enregistré avec la somme des temps d&#8217;écoulement.</p>
+</li>
 </ul>
 <div class="figure">
 <img alt="../../_images/flow_time_downstream_result.jpg" src="../../_images/flow_time_downstream_result.jpg" />
 </div>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">S&#8217;il y a plus d&#8217;un chemin possible pour le flux aval, les résultats seront faux après l&#8217;embranchement.</p>
+<p class="last">S&#8217;il y a plus d&#8217;un chemin possible pour l&#8217;écoulement aval, les résultats seront faux après l&#8217;embranchement.</p>
 </div>
 <ul class="simple">
-<li>There are some cases, where you get an empty flow time-Layer and red (error) text in the Log-window:<ul>
-<li>Do not select more than one reach to start</li>
-<li>Do not select vw_qgep_reach as flow time layer (to sum-up the length, use the vw_network_segment layer)</li>
-<li>If the reach id field has no values that match the reach obj_id, you will also get an error</li>
+<li><p class="first">Dans certain cas, le résultat pourra être nul et une erreur en rouge dans le journal des messages</p>
+<ul>
+<li><p class="first">Ne sélectionnez pas plus d&#8217;une conduite de départ</p>
+</li>
+<li><p class="first">Ne sélectionnez pas vw_qgep_reach comme couche du temps d&#8217;écoulement</p>
+</li>
+<li><p class="first">Une erreur sera soulevée si aucunes valeurs ne correspond à l&#8217;obj_id de la conduite</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -261,10 +285,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../plan-plotting/index.html" class="btn btn-neutral float-right" title="2.6. Impression de plans" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../plan-plotting/index.html" class="btn btn-neutral float-right" title="1.6. Impression de plans" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../length-profile/index.html" class="btn btn-neutral" title="2.4. Profils en long" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../length-profile/index.html" class="btn btn-neutral" title="1.4. Profils en long" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
