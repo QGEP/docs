@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1.2. Using pgAdmin &mdash; documentation QGEP 0.7</title>
+  <title>2.1.2. Using pgAdmin &mdash; documentation QGEP 0.7</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.7" href="../../index.html"/>
-        <link rel="up" title="3.1. pgAdmin" href="index.html"/>
-        <link rel="next" title="3.2. Export de données au format INTERLIS" href="../data-export/index.html"/>
-        <link rel="prev" title="3.1.1. Installer pgAdmin" href="install.html"/> 
+        <link rel="up" title="2.1. pgAdmin" href="index.html"/>
+        <link rel="next" title="2.2. Export de données au format INTERLIS" href="../data-export/index.html"/>
+        <link rel="prev" title="2.1.1. Installer pgAdmin" href="install.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,24 +82,24 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d&#8217;administration</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.1. pgAdmin</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install.html">3.1.1. Installer pgAdmin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">3.1.2. Using pgAdmin</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sql-query">3.1.2.1. Requêtes SQL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#database-dump">3.1.2.2. &#8220;Dump&#8221; de la base de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">1. Guide d&#8217;utilisateur de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;administration</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. pgAdmin</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install.html">2.1.1. Installer pgAdmin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.2. Using pgAdmin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sql-query">2.1.2.1. Requêtes SQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-dump">2.1.2.2. &#8220;Dump&#8221; de la base de données</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">3.2. Export de données au format INTERLIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">3.3. Import de données INTERLIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">3.4. Personnalisation du modèle de données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">2.2. Export de données au format INTERLIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">2.3. Import de données INTERLIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">2.4. Personnalisation du modèle de données</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -124,11 +124,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">3. Guide d&#8217;administration</a> &raquo;</li>
+          <li><a href="../index.html">2. Guide d&#8217;administration</a> &raquo;</li>
       
-          <li><a href="index.html">3.1. pgAdmin</a> &raquo;</li>
+          <li><a href="index.html">2.1. pgAdmin</a> &raquo;</li>
       
-    <li>3.1.2. Using pgAdmin</li>
+    <li>2.1.2. Using pgAdmin</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -143,9 +143,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-pgadmin">
-<h1>3.1.2. Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>2.1.2. Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="sql-query">
-<span id="id1"></span><h2>3.1.2.1. Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="id1"></span><h2>2.1.2.1. Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="figure" id="id3">
 <img alt="../../_images/sql-query4.jpg" src="../../_images/sql-query4.jpg" />
 <p class="caption"><span class="caption-text"><strong>Running SQL commands in pgAdmin4</strong></span></p>
@@ -161,7 +161,7 @@
 </div>
 </div>
 <div class="section" id="database-dump">
-<span id="id2"></span><h2>3.1.2.2. &#8220;Dump&#8221; de la base de données<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="id2"></span><h2>2.1.2.2. &#8220;Dump&#8221; de la base de données<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <ul class="simple">
@@ -202,10 +202,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-export/index.html" class="btn btn-neutral float-right" title="3.2. Export de données au format INTERLIS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../data-export/index.html" class="btn btn-neutral float-right" title="2.2. Export de données au format INTERLIS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="install.html" class="btn btn-neutral" title="3.1.1. Installer pgAdmin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral" title="2.1.1. Installer pgAdmin" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
