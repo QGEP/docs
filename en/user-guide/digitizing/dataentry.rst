@@ -37,6 +37,10 @@ When adding new wastewater structures, the wizard has no additional functionalit
 
 When adding new reaches, the wizard has some additional functionality:
 
+* Snapping on wastewater nodes and other reaches is on, even if QGIS enable snapping is off.
+* Snapping on nodes is always preferred to snapping on reaches.
+* When the new reach snaps, then the obj_id_links are automatically entered in the field fk_fields of the reach points.
+* The **Reuse the last entered attribute values** - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value 
 
 General
 -------
