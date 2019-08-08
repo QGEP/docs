@@ -29,28 +29,40 @@ On the left side bottom, **QGEP Data Entry** window appears:
 
 Click **Start Data entry** to enter the edit mode. 
 
-Choose **Wastewater Structure** or **Reach**. Start adding new feature.
+Choose **Wastewater Structure** or **Reach**. Start adding new feature in vw_qgep_wastewater_structure or vw_qgep_reach.
 
 There is no need to select the correct layer in the layers-window, you do not need to toggle editing or to choose the add feature tool.
 
-When adding new wastewater structures, the wizard has no additional functionality. To **Reuse the last entered attribute values**, it is necessary (and recommended) to enable this option in :menuselection:`Settings --> Options --> Digitizing`.
+When adding **new wastewater structures**, the wizard has no additional functionality. To **Reuse the last entered attribute values**, it is necessary (and recommended) to enable this option in :menuselection:`Settings --> Options --> Digitizing`.
 
-When adding new reaches, the wizard has some additional functionality:
+When adding **new reaches**, the wizard has some additional functionality:
 
-* Snapping on wastewater nodes and other reaches is on, even if QGIS enable snapping is off.
+* Snapping on wastewater nodes and other reaches is on, even if QGIS **Enable Snapping** is off.
 * Snapping on nodes is always preferred to snapping on reaches.
-* When the new reach snaps, then the obj_id_links are automatically entered in the field fk_fields of the reach points.
-* The **Reuse the last entered attribute values** - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value 
+* When the new reach snaps, then the obj_id_links are automatically entered in the fk_fields of the reach points.
+* The **Reuse the last entered attribute values** - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value.
 
-General
--------
+If you use another tool (e.g. the **Identify Features** tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to klick **Stop Data Entry** and then **Start Data Entry** and you can continue.
+
+If you change from digitizing wastewater structures to digitizing reaches, it is recommended to  stop and start data entry also. This saves the new manholes and enables the reaches the snap also on new digitized manholes.
+
+.. note:: When digitizing, it is recommended to start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
+
+It is possible to use the **Advanced Digitizing** tools together with the wizard.
 
 
-.. note:: When digitizing, you start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
+QGIS standard tools
+-------------------
 
+To digitize in other layers then vw_qep_wastewater_structure or vw_qgep_reach, you work with the standard QGIS tools:
+* Select the layer you want to edit
+* Toggle Editing if necessary
+* Enable snapping if necessary
+* Choose the add feature tool
 
+It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes. 
 
-
+It is possible the get an automatic value in the rp_from/to_fk_wastewater_networkelement field with a special expression (lock at QGEP Issue #443).
 
 
 
