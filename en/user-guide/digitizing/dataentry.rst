@@ -29,26 +29,22 @@ On the left side bottom, **QGEP Data Entry** window appears:
 
 Click **Start Data entry** to enter the edit mode. 
 
-Choose **Wastewater Structure** or **Reach**.
+Choose **Wastewater Structure** or **Reach**. Start adding new feature.
 
 There is no need to select the correct layer in the layers-window, you do not need to toggle editing or to choose the add feature tool.
+
+When adding new wastewater structures, the wizard has no additional functionality. To **Reuse the last entered attribute values**, it is necessary (and recommended) to enable this option in :menuselection:`Settings --> Options --> Digitizing`.
+
+When adding new reaches, the wizard has some additional functionality:
+
 
 General
 -------
 
-Enable the **Reuse last entered attribute values** option in :menuselection:`Settings --> Options --> Digitizing`.
 
 .. note:: When digitizing, you start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
 
-To start with data entry select the QGEP button **Wizard**.
 
-.. figure:: images/button_data_entry_wizard_selected.jpg
-
-On the left side bottom, **QGEP Data Entry** window appears:
-
-.. figure:: images/wizard_data_entry.jpg
-
-Click **Start Data entry** to enter the edit mode. 
 
 
 
