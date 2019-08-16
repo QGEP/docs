@@ -1,11 +1,12 @@
-Layers in QGEP
+Overview of QGEP
 ==============
 
-A short explanation for each predefined layer.
+An overview of QGEP including the layer explanation
 
 .. toctree::
    :maxdepth: 2
 
+   overview
    layerexplanation
    addviewlayer
    
