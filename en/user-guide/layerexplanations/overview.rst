@@ -23,5 +23,5 @@ The idea is, to support with the wizard the digitizing, so that 95% of the manho
 
 **QGEP wizard**
 
-To use the wizard (:ref:`Digitizing-Wastewater-Structures`) is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.
+To use the wizard (:ref:`digitizing-wastewater-structures`) is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.
 
