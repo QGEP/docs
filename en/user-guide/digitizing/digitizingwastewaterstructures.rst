@@ -73,7 +73,6 @@ To add additional objects such as structure parts (besides covers there are acce
 
 .. note:: To add a second cover or a second wastewater node to a wastewater structure, see the :ref:`editing-data` chapter.
 
-..(take more from GEPView-Howto 1.2. Chapter 4.1)
 
 Geometry synchronization
 ------------------------

@@ -20,5 +20,5 @@ To support the digitizing, QGEP uses two main-views: **vw_qgep_wastewater_struct
 The idea is, to support with the wizard the digitizing, so that 95% of the manholes and channels can be collected on the general-tab of the feature attribute-window, that means with as few mouse clicks as possible.
 
 **QGEP wizard**
-To use the wizard is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.
+To use the wizard (:ref:`Digitizing-Wastewater-Structures`) is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.
 
