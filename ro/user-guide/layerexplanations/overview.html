@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.1.1. Introduction and Overview &mdash; QGEP 0.7 documentation</title>
+  <title>1.1.1. Introduction and Overview &mdash; QGEP 0.8 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="QGEP 0.7 documentation" href="../../index.html"/>
+    <link rel="top" title="QGEP 0.8 documentation" href="../../index.html"/>
         <link rel="up" title="1.1. Overview of QGEP" href="index.html"/>
         <link rel="next" title="1.1.2. Layer explanation" href="layerexplanation.html"/>
         <link rel="prev" title="1.1. Overview of QGEP" href="index.html"/> 
@@ -146,13 +146,13 @@
 <div class="figure">
 <img alt="../../_images/qgep_title.png" src="../../_images/qgep_title.png" />
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a>QGEP**is a selection of tools and a database implementation to work with the data in the data structure for wastewater and GEP, short VSA-DSS.</p>
+<p><strong>QGEP</strong> is a selection of tools and a database implementation to work with the data in the data structure for wastewater and GEP, short VSA-DSS.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). More information you can find on the homepage of the <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
 </div>
 <p>The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK.</p>
-<p>To work with QGEP-tools, it is important to know the following norm: Wegleitung GEP-Daten &lt;<a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation</a>&gt;`_ of the VSA and there specially the annex &#8220;<strong>Erfassungsgrundsätze</strong>&#8221;.</p>
+<p>To work with QGEP-tools, it is important to know the following norm: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> of the VSA and there specially the annex &#8220;<strong>Erfassungsgrundsätze</strong>&#8221;.</p>
 <p>This is important because with VSA-DSS you do not only describe the manholes and channels (wastewater structures as constructive part), but with the nodes and reaches you do create the hydraulic model of the sewer network (network elements) also.</p>
 <p>It is important to know the difference between <strong>primary and secondary wastewater facilities</strong> (pwwf / swwf). There are not the same rules for placing wastewater nodes in pwwf and swwf-networks. Catchment areas should be connected only to pwwf-network.
 Reaches are always created in flow-direction (flow direction in case of normal-flow).</p>
@@ -181,7 +181,7 @@ To use the wizard is recommended for digitizing reaches because it supports snap
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
     </p>
   </div>
@@ -203,7 +203,7 @@ To use the wizard is recommended for digitizing reaches because it supports snap
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.7',
+            VERSION:'0.8',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
