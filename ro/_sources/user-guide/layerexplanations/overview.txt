@@ -9,7 +9,7 @@ Introduction and Overview
 
 The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK.
 
-To work with QGEP-tools, it is important to know the following norm: "Wegleitung GEP-Daten" <https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation>`_ of the VSA and there specially the annex "***Erfassungsgrundsätze***".
+To work with QGEP-tools, it is important to know the following norm: Wegleitung GEP-Daten <https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation>`_ of the VSA and there specially the annex "***Erfassungsgrundsätze***".
 
 This is important because with VSA-DSS you do not only describe the manholes and channels (wastewater structures as constructive part), but with the nodes and reaches you do create the hydraulic model of the sewer network (network elements) also.
 
