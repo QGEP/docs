@@ -218,12 +218,11 @@ If you do not select the edit mode, you can just look add the existing data.</p>
 <li>a new cover object is added and linked to the wastewater structure</li>
 <li>a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes</li>
 </ol>
-<p>To add additional objects such as structure parts (besides covers there are access aids, backflow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter).</p>
+<p>To add additional objects such as structure parts (besides covers there are access aids, back flow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter).</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
 <p class="last">To add a second cover or a second wastewater node to a wastewater structure, see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</p>
 </div>
-<p>..(take more from GEPView-Howto 1.2. Chapter 4.1)</p>
 </div>
 <div class="section" id="geometry-synchronization">
 <h2>1.2.2.4. Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Link a questa intestazione">¶</a></h2>
@@ -231,7 +230,7 @@ If you do not select the edit mode, you can just look add the existing data.</p>
 The geometry of the wastewater structure feature corresponds to the one of the cover. This means, the Z geometry of the digitized feature is actually the entered value on <cite>co_level</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">If a cover level changes, the Z value of the cover&#8217;s geometry will be ajusted. When the geometry changes, the level is ajusted as well. If both values change, the level takes precendence. On an insert it&#8217;s like when both value change. Means the cover&#8217;s geometry is set according to the cover level and if it&#8217;s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
+<p class="last">If a cover level changes, the Z value of the cover&#8217;s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it&#8217;s like when both value change. Means the cover&#8217;s geometry is set according to the cover level and if it&#8217;s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
 </div>
 </div>
 </div>

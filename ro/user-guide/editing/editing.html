@@ -94,7 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-linear-elements-channels">1.3.1.4. Changing attributes of linear elements (channels)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#change-reach-direction">1.3.1.5. Change reach direction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#snap-reach-geometry">1.3.1.6. Snap reach geometry</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-valuelist">1.3.1.7. Working with codes of valuelist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-with-codes-of-value-list">1.3.1.7. Working with codes of value list</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#an-other-way-to-choose-an-object">1.3.1.8. An other way to choose an object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">1.3.1.9. Adding additional covers and nodes to an existing wastewater structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">1.3.1.10. Adding a wastewater node to an existing reach</a></li>
@@ -315,15 +315,15 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p class="last">If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
 </div>
 </div>
-<div class="section" id="working-with-codes-of-valuelist">
-<h2>1.3.1.7. Working with codes of valuelist<a class="headerlink" href="#working-with-codes-of-valuelist" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="working-with-codes-of-value-list">
+<h2>1.3.1.7. Working with codes of value list<a class="headerlink" href="#working-with-codes-of-value-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>The values of fields with valuelist are stored in the database with codes.</li>
+<li>The values of fields with value list are stored in the database with codes.</li>
 </ul>
 <blockquote>
 <div><div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The codes are unique, also if there is the same text in different valuelists. E.g. the code for &#8220;rain_wastewater&#8221; in the vl_channel_usage_current and in the vl_channel_usage_planned is different.</p>
+<p class="last">The codes are unique, also if there is the same text in different value lists. E.g. the code for &#8220;rain_wastewater&#8221; in the vl_channel_usage_current and in the vl_channel_usage_planned is different.</p>
 </div>
 </div></blockquote>
 <ul class="simple">
@@ -399,7 +399,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p class="first admonition-title">Note</p>
 <p class="last">This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).</p>
 </div>
-<p>In the datamodel, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbiden to define a connection to a wastewater structure.</p>
+<p>In the data model, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbidden to define a connection to a wastewater structure.</p>
 <p>In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -423,9 +423,9 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
 <h2>1.3.1.13. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Permalink to this headline">¶</a></h2>
-<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.</p>
+<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= duplicated) records are no more unique.</p>
 <p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
-<p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.</p>
+<p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if necessary.</p>
 <p><a class="reference external" href="http://dss.vsa.ch">Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:</a></p>
 </div>
 </div>

@@ -127,12 +127,12 @@ If there are connections from reach to reach, the reach point moves at right ang
 
 .. attention:: If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.
 
-Working with codes of valuelist
+Working with codes of value list
 -------------------------------
 
-* The values of fields with valuelist are stored in the database with codes. 
+* The values of fields with value list are stored in the database with codes. 
 
- .. note:: The codes are unique, also if there is the same text in different valuelists. E.g. the code for "rain_wastewater" in the vl_channel_usage_current and in the vl_channel_usage_planned is different.
+ .. note:: The codes are unique, also if there is the same text in different value lists. E.g. the code for "rain_wastewater" in the vl_channel_usage_current and in the vl_channel_usage_planned is different.
  
 * In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.
 * But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: **represent_value("field")**
@@ -183,7 +183,7 @@ In some cases, you need to add a wastewater node between two or more reaches, al
 
 .. note:: This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).
 
-In the datamodel, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbiden to define a connection to a wastewater structure.
+In the data model, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbidden to define a connection to a wastewater structure.
 
 In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node. 
 
@@ -213,11 +213,11 @@ In the vw_qgep_wastewater_structure form, you can change the subclass of the was
 Split a reach (channel) into different reaches
 -----------------------------------------------
 
-This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= doublicated) records are no more unique.
+This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= duplicated) records are no more unique.
 
 Temporary solution: Change the existing reach and draw the second reach manually. Control the connections. 
 
-There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if nesseccary.
+There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if necessary.
   
 `Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS: <http://dss.vsa.ch>`_
 
