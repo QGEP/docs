@@ -5,7 +5,7 @@ Introduction and Overview
 
 **QGEP** is a selection of tools and a database implementation to work with the data in the data structure for wastewater and GEP, short VSA-DSS.
 
-.. note:: The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset for sewer networks as described in `Norm SIA405 (Merkblatt 2015 / 2016)<http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_. More information you can find on the homepage of the `VSA <http://dss.vsa.ch>`_ 
+.. note:: The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset for sewer networks as described in `Norm SIA405 (Merkblatt 2015 / 2016) <http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_. More information you can find on the homepage of the `VSA <http://dss.vsa.ch>`_ 
 
 .. note:: The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK.
 
