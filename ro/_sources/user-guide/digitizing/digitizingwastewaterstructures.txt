@@ -1,3 +1,5 @@
+.. _digitizing-wastewater-structures:
+
 Digitizing Wastewater Structures 
 =================================
 
