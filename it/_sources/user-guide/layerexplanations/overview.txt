@@ -1,7 +1,7 @@
+.. figure:: images/qgep_title.png
+
 Introduction and Overview
 =================
-
-.. figure:: images/qgep_title.png
 
 **QGEP** is a selection of tools and a database implementation to work with the data in the data structure for wastewater and GEP, short VSA-DSS.
 
