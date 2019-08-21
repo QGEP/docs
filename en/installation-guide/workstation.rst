@@ -122,8 +122,8 @@ You can install them on debian based systems with::
 
    **Add the QGEP plugin**
 
-Install the demo project
-------------------------
+Install the demo data
+---------------------
 
 * Download from https://github.com/QGEP/datamodel/releases/latest
   New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available
@@ -132,7 +132,17 @@ Install the demo project
 
 * Restore the file `qgep_vx.x.x_structure_and_demo_data.backup` with pgAdmin
 
-* Open `project/qgep_en.qgs` with QGIS
+Install the demo project
+------------------------
+
+* Download from https://github.com/QGEP/qgep/releases/latest the qgep.zip
+
+* Extract the file
+
+* If you do not remove the qgep_language.qm - file in the same directory as the qgep.qgs - file and start QGIS with language, your qgep-project will be translated if you start the project.
+
+* Open `project/qgep.qgs` with QGIS
+
 
 Add your own OID in the project
 -----------------------------------
