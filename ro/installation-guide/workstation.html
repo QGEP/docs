@@ -95,9 +95,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#install-qgis">4.2. Instalare QGIS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#install-qgep-plugin">4.3. Instalare plugin QGEP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">4.4. Instalează proiectul demo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">4.5. Add your own OID in the project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">4.6. Working with more than one database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-data">4.4. Install the demo data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-demo-project">4.5. Instalează proiectul demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-your-own-oid-in-the-project">4.6. Add your own OID in the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-more-than-one-database">4.7. Working with more than one database</a></li>
 </ul>
 </li>
 </ul>
@@ -261,20 +262,28 @@ sudo apt-get install libqt4-sql-psql
 <p class="caption"><span class="caption-text"><strong>Adaugă pluginul QGEP</strong></span></p>
 </div>
 </div>
-<div class="section" id="install-the-demo-project">
-<h2>4.4. Instalează proiectul demo<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-the-demo-data">
+<h2>4.4. Install the demo data<a class="headerlink" href="#install-the-demo-data" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Download from <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
 New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</li>
 <li><p class="first">Extrage fișierul</p>
 </li>
 <li>Restore the file <cite>qgep_vx.x.x_structure_and_demo_data.backup</cite> with pgAdmin</li>
-<li><p class="first">Deschide <cite>project/qgep_en.qgs</cite> cu QGIS</p>
+</ul>
+</div>
+<div class="section" id="install-the-demo-project">
+<h2>4.5. Instalează proiectul demo<a class="headerlink" href="#install-the-demo-project" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Download from <a class="reference external" href="https://github.com/QGEP/qgep/releases/latest">https://github.com/QGEP/qgep/releases/latest</a> the qgep.zip</li>
+<li><p class="first">Extrage fișierul</p>
 </li>
+<li>If you leave the qgep_[language].qm - file in the same directory as the qgep.qgs - file and start QGIS with language, your qgep-project will be translated if you start the project.</li>
+<li>Open <cite>project/qgep.qgs</cite> with QGIS</li>
 </ul>
 </div>
 <div class="section" id="add-your-own-oid-in-the-project">
-<h2>4.5. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. Add your own OID in the project<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>You have to add your OID data in the table qgep_sys.oid_prefixes:</li>
 </ul>
@@ -302,7 +311,7 @@ INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch13
 </div>
 </div>
 <div class="section" id="working-with-more-than-one-database">
-<h2>4.6. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
+<h2>4.7. Working with more than one database<a class="headerlink" href="#working-with-more-than-one-database" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Create a new database in pgAdmin with a new name, e.g. communityA</li>
 <li>Create a new schema qgep in this database (do not choose another name, because all scripts works with the schema-name qgep)</li>
