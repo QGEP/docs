@@ -6,9 +6,9 @@ You can also pick and delete only a specific object (e.g. cover).
 
 Delete Reaches
 --------------
-.. attention:: Deleting a reach does not delete the associated objects (channel, reach point, networkelement). See QGEP issue #436
 
 * Select **vw_qgep_reach** and change to edit mode.
+
 * Select the reach(es) you want to delete. You can click on an object or draw an area.
 
 .. figure:: images/select_tool.jpg
@@ -29,6 +29,7 @@ Delete Reaches
 
 .. figure:: images/delete_reach_confirm.jpg
 
+.. note:: Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.
 
 Delete Manholes and other Wastewater Structures
 ------------------------------------------------
@@ -42,7 +43,6 @@ Delete Manholes and other Wastewater Structures
 
 Delete Covers
 -------------
-.. attention:: Deleting a cover does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) from which you want the cover deleted
@@ -60,7 +60,6 @@ Delete Covers
 
 Delete Structure parts
 ----------------------
-.. attention:: Deleting a structure part does not delete the associated structure part object. See QGEP issue #436
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) from which you want to delete a structure part
