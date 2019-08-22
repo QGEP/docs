@@ -44,7 +44,7 @@ When adding **new reaches**, the wizard has some additional functionality:
 
 If you use another tool (e.g. the **Identify Features** tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to klick **Stop Data Entry** and then **Start Data Entry** and you can continue.
 
-If you change from digitizing wastewater structures to digitizing reaches, it is recommended to  stop and start data entry also. This saves the new manholes and enables the reaches the snap also on new digitized manholes.
+If you change from digitizing wastewater structures to digitizing reaches, it is recommended to  stop and start data entry also. This saves the new manholes and enables the reaches to snap also on new digitized manholes.
 
 .. note:: When digitizing, it is recommended to start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).
 
