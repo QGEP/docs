@@ -63,7 +63,6 @@ To digitize in other layers than vw_qep_wastewater_structure or vw_qgep_reach, y
 
 It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes. 
 
-It is possible the get an automatic value in the rp_from/to_fk_wastewater_networkelement field with a special expression (lock at QGEP Issue #443).
 
 
 
