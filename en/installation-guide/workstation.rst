@@ -139,7 +139,7 @@ Install the demo project
 
 * Extract the file
 
-* If you do not remove the qgep_language.qm - file in the same directory as the qgep.qgs - file and start QGIS with language, your qgep-project will be translated if you start the project.
+* If you leave the qgep_[language].qm - file in the same directory as the qgep.qgs - file and start QGIS with language, your qgep-project will be translated if you start the project.
 
 * Open `project/qgep.qgs` with QGIS
 
