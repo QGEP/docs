@@ -87,7 +87,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">1.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1.2. Digitizing in QGEP</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">1.2.1. Data entry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">1.2.1.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-qgep-wizard">1.2.1.1. The QGEP wizard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-standard-tools">1.2.1.2. QGIS standard tools</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">1.2.2. Digitizing Wastewater Structures</a></li>
@@ -152,7 +153,7 @@
 <h1>1.2.1. Data entry<a class="headerlink" href="#data-entry" title="Permalink to this headline">¶</a></h1>
 <p>There are basically two ways:</p>
 <ul>
-<li><p class="first">Data entry by constructing or digitizing in the QGEP GIS itself</p>
+<li><p class="first">Data entry by constructing or digitizing in the QGEP with the QGEP-wizard or QGIS-tools itself</p>
 </li>
 <li><p class="first">Data entry in an external program or software and then importing the position and/or technical data into QGEP e.g.:</p>
 <blockquote>
@@ -167,13 +168,9 @@
 </li>
 </ul>
 <p>Data entry in QGEP needs some understanding of the underlaying data model <a class="reference external" href="http://dss.vsa.ch">VSA-DSS</a>, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.</p>
-<div class="section" id="general">
-<h2>1.2.1.1. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
-<p>Enable the <strong>Reuse last entered attribute values</strong> option in <span class="menuselection">Settings ‣ Options ‣ Digitizing</span>.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">When digitizing, you start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).</p>
-</div>
+<div class="section" id="the-qgep-wizard">
+<h2>1.2.1.1. The QGEP wizard<a class="headerlink" href="#the-qgep-wizard" title="Permalink to this headline">¶</a></h2>
+<p>The QGEP wizard helps digitizing manholes and reaches with just a few clicks.</p>
 <p>To start with data entry select the QGEP button <strong>Wizard</strong>.</p>
 <div class="figure">
 <img alt="../../_images/button_data_entry_wizard_selected.jpg" src="../../_images/button_data_entry_wizard_selected.jpg" />
@@ -183,6 +180,34 @@
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
 <p>Click <strong>Start Data entry</strong> to enter the edit mode.</p>
+<p>Choose <strong>Wastewater Structure</strong> or <strong>Reach</strong>. Start adding new feature in vw_qgep_wastewater_structure or vw_qgep_reach.</p>
+<p>There is no need to select the correct layer in the layers-window, you do not need to toggle editing or to choose the add feature tool.</p>
+<p>When adding <strong>new wastewater structures</strong>, the wizard has no additional functionality. To <strong>Reuse the last entered attribute values</strong>, it is necessary (and recommended) to enable this option in <span class="menuselection">Settings ‣ Options ‣ Digitizing</span>.</p>
+<p>When adding <strong>new reaches</strong>, the wizard has some additional functionality:</p>
+<ul class="simple">
+<li>Snapping on wastewater nodes and other reaches is on, even if QGIS <strong>Enable Snapping</strong> is off.</li>
+<li>Snapping on nodes is always preferred to snapping on reaches.</li>
+<li>When the new reach snaps, then the obj_id_links are automatically entered in the fk_fields of the reach points.</li>
+<li>The <strong>Reuse the last entered attribute values</strong> - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value.</li>
+</ul>
+<p>If you use another tool (e.g. the <strong>Identify Features</strong> tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to klick <strong>Stop Data Entry</strong> and then <strong>Start Data Entry</strong> and you can continue.</p>
+<p>If you change from digitizing wastewater structures to digitizing reaches, it is recommended to  stop and start data entry also. This saves the new manholes and enables the reaches to snap also on new digitized manholes.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When digitizing, it is recommended to start with the point elements (wastewater structures such as manholes, special structures). Afterwards its easy to connect those points with line elements (channels with reaches).</p>
+</div>
+<p>It is possible to use the <strong>Advanced Digitizing</strong> tools together with the wizard.</p>
+</div>
+<div class="section" id="qgis-standard-tools">
+<h2>1.2.1.2. QGIS standard tools<a class="headerlink" href="#qgis-standard-tools" title="Permalink to this headline">¶</a></h2>
+<p>To digitize in other layers than vw_qep_wastewater_structure or vw_qgep_reach, you work with the standard QGIS tools:</p>
+<ul class="simple">
+<li>Select the layer you want to edit</li>
+<li>Toggle Editing if necessary</li>
+<li>Enable snapping if necessary</li>
+<li>Choose the add feature tool</li>
+</ul>
+<p>It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes.</p>
 </div>
 </div>
 
