@@ -40,6 +40,8 @@ Digitizing
 
 * Control the snapping to wastewater nodes or other reaches in the fields **rp_from/to_fk_wastewater_networkelement**
 
+.. note:: If you do not enter an `identifier` (reach-identifier) in the General tab, QGEP will enter the `obj_id` also as identifier (you can change later). As default, the `identifier` of the reach is also the `ws_identifier` of the channel. The reachpoint-identifier are build from the reach-identifier+'F' or +'T' (from- and to-reachpoint).
+
 .. note:: See :ref:`reach_geometrysync` for automatic reachpoint levels when snapping to wastewater nodes with level.
 
 * For the profile type you will get a list of defined profiles.
