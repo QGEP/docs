@@ -156,10 +156,6 @@
 <p>Vous pouvez supprimer des objets ponctuels ou linéaires (avec tous les objets associés) dans les couches <strong>vw_qgep_(ouvrage_assainissement/troncon)</strong>. Vous pouvez aussi sélectionner et supprimer uniquement un objet spécifique (p.ex. un couvercle).</p>
 <div class="section" id="delete-reaches">
 <h2>2.2.6.1. Suppression de tronçons<a class="headerlink" href="#delete-reaches" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Supprimer un tronçon ne supprime pas les objets associés (conduite, point de tronçon, élément de réseau). Voir problème QGEP #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez la couche <strong>vw_qgep_troncon</strong> et basculez en mode édition.</p>
 </li>
@@ -191,6 +187,10 @@
 <div class="figure">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.</p>
+</div>
 </div>
 <div class="section" id="delete-manholes-and-other-wastewater-structures">
 <h2>2.2.6.2. Supprimer des regards et d&#8217;autres structures assainissement<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h2>
@@ -211,10 +211,6 @@
 </div>
 <div class="section" id="delete-covers">
 <h2>2.2.6.3. Suppression de couvercles<a class="headerlink" href="#delete-covers" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Effacer un couvercle ne supprime pas l&#8217;objet partie de structure associé. Voir le problème QGEP #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez <strong>vw_qgep_ouvrage_assainissement</strong> et passez en mode d&#8217;édition</p>
 </li>
@@ -243,10 +239,6 @@
 </div>
 <div class="section" id="delete-structure-parts">
 <h2>2.2.6.4. Suppression d&#8217;éléments de structures<a class="headerlink" href="#delete-structure-parts" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Supprimer une pièce d&#8217;ouvrage ne supprime pas l&#8217;objet pièce d&#8217;ouvrage associé. Voir le problème QGIS #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Sélectionnez <strong>vw_qgep_ouvrage_assainissement</strong> et passez en mode d&#8217;édition</p>
 </li>

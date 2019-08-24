@@ -157,10 +157,6 @@
 You can also pick and delete only a specific object (e.g. cover).</p>
 <div class="section" id="delete-reaches">
 <h2>1.2.6.1. Delete Reaches<a class="headerlink" href="#delete-reaches" title="Link a questa intestazione">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">Deleting a reach does not delete the associated objects (channel, reach point, networkelement). See QGEP issue #436</p>
-</div>
 <ul class="simple">
 <li>Select <strong>vw_qgep_reach</strong> and change to edit mode.</li>
 <li>Select the reach(es) you want to delete. You can click on an object or draw an area.</li>
@@ -190,6 +186,10 @@ elsewhere.</p>
 <div class="figure">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.</p>
+</div>
 </div>
 <div class="section" id="delete-manholes-and-other-wastewater-structures">
 <h2>1.2.6.2. Delete Manholes and other Wastewater Structures<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Link a questa intestazione">¶</a></h2>
@@ -206,10 +206,6 @@ elsewhere.</p>
 </div>
 <div class="section" id="delete-covers">
 <h2>1.2.6.3. Delete Covers<a class="headerlink" href="#delete-covers" title="Link a questa intestazione">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">Deleting a cover does not delete the associated structure part object. See QGEP issue #436</p>
-</div>
 <ul class="simple">
 <li>Select <strong>vw_qgep_wastewater_structure</strong> and change to edit mode</li>
 <li>Select the object (<strong>manholes</strong>, <strong>special structures</strong> etc.) from which you want the cover deleted</li>
@@ -229,10 +225,6 @@ elsewhere.</p>
 </div>
 <div class="section" id="delete-structure-parts">
 <h2>1.2.6.4. Delete Structure parts<a class="headerlink" href="#delete-structure-parts" title="Link a questa intestazione">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">Deleting a structure part does not delete the associated structure part object. See QGEP issue #436</p>
-</div>
 <ul class="simple">
 <li>Select <strong>vw_qgep_wastewater_structure</strong> and change to edit mode</li>
 <li>Select the object (<strong>manholes</strong>, <strong>special structures</strong> etc.) from which you want to delete a structure part</li>

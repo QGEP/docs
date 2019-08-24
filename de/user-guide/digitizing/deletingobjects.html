@@ -156,10 +156,6 @@
 <p>Sie können Punkt- oder Linienobjekte (mit allen zugehörigen Objekten) mit den <strong>vw_ggep_(wastewater_structure/reach)</strong> Layern löschen. Sie können auch nur ein spezifisches Objekt auswählen und löschen (z.B. Deckel).</p>
 <div class="section" id="delete-reaches">
 <h2>2.2.6.1. Haltungen löschen<a class="headerlink" href="#delete-reaches" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Wenn eine Haltung gelöscht wird, werden die verknüpften Objekte (Kanal, Haltungspunkte, Netzwerkelement) nicht gelöscht. Vgl. QGEP Issue #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Wählen Sie <strong>vw_qgep_reach</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
 </li>
@@ -191,6 +187,10 @@
 <div class="figure">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.</p>
+</div>
 </div>
 <div class="section" id="delete-manholes-and-other-wastewater-structures">
 <h2>2.2.6.2. Normschächte und andere Abwasserbauwerke löschen<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
@@ -211,10 +211,6 @@
 </div>
 <div class="section" id="delete-covers">
 <h2>2.2.6.3. Deckel löschen<a class="headerlink" href="#delete-covers" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Wenn ein Deckel gelöscht wird, wird der verknüpfte Bauwerksteil-Datensatz nicht gelöscht. Vgl. QGEP Issue #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
 </li>
@@ -243,10 +239,6 @@
 </div>
 <div class="section" id="delete-structure-parts">
 <h2>2.2.6.4. Bauwerksteile löschen<a class="headerlink" href="#delete-structure-parts" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Wenn ein Bauwerksteil gelöscht wird, wird der verknüpfte Subklassen-Bauwerksteil-Datensatz nicht gelöscht. Vgl. QGEP Issue #436</p>
-</div>
 <ul class="simple">
 <li><p class="first">Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
 </li>

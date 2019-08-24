@@ -6,13 +6,12 @@ Digitizing Wastewater Structures
 General
 -------
 
-QGEP has a wizard to correctly collect manholes and special structures.
+QGEP has a wizard to correctly collect manholes and special structures. see the :ref:`wizard` chapter.
 
 Select the **Wizard** button, then click **Start Data Entry** and choose **Wastewater Structure** in the pull down menu.
 
 .. figure:: images/wizard_data_entry.jpg
 
-.. figure:: images/wizard_wastewater_structure3.jpg
 
 Digitizing
 ----------
@@ -30,11 +29,11 @@ Select the ws_type you want (preselected is 'manhole'):
 - discharge_point
 - infiltration_installation
 
+Depending on the **ws_type**, you will have different fields and tabs in the form.
+
 Then add the identifier (this is the attribute that will be displayed on the map).
 
 .. note:: If you do not enter an identifier, QGEP will enter the obj_id also as identifier (you can change later). As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.
-
-Depending on the **ws_type**, you will have different fields and tabs in the form.
 
 Add other attributes in the **General** tab. 
 You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node).
