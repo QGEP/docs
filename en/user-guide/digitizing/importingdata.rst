@@ -12,8 +12,10 @@ General
   There for it is normally not the best idea the use shp-format because of the 10 letters limitation of the dbf-format (Alias field names do not work).
 * If you have a translated project, be sure the take the English field names (not the translated name that you find as Alias of the field).
 * If there is a field with valuelist, you have to use the code, not the plain text.
+* If your fields are prepared, then just copy and paste in the QGEP-layer.
 
 An example
 ----------
 
-Importing a manholes form a list of (GPS)-coordinates
+Importing manholes form a list (TXT-File) of (GPS)-coordinates:
+* 
