@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2.8. Importing data &mdash; documentation QGEP 0.8</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
+        <link rel="next" title="2.3. Édition dans QGEP" href="../editing/index.html"/>
+        <link rel="prev" title="2.2.7. Numérisation des bassins versants" href="digitizingcatchments.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.8. Importing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">2.2.8.1. Généralités</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">2.2.8.2. Example Importing manholes from a TXT-File:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">2.2.8.3. Example Importing manholes with attributes:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Outils de poursuite de réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+      
+          <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
+      
+    <li>2.2.8. Importing data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/user-guide/digitizing/importingdata.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="importing-data">
+<h1>2.2.8. Importing data<a class="headerlink" href="#importing-data" title="Lien permanent vers ce titre">¶</a></h1>
+<p>It is quite easy to import data (geometry and attributes) from an external software.
+Here is a general discription and a specific example.</p>
+<div class="section" id="general">
+<h2>2.2.8.1. Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>You have to add the data you want to import as (vector) layer into the QGEP project.</li>
+<li>The field names of the attributes have to be the same as the field names of the QGEP Layer.
+Therefore it is normaly not a good idea the use shp-files, because of the 10 letters limitation of the dbf-format (Alias field names do not work).</li>
+<li>If you have a translated project, be sure the take the English field names (not the translated name that you find as Alias of the field).</li>
+<li>If there is a field with valuelist, you have to use the code, not the plain text.</li>
+<li>If your fields are prepared, then just copy and paste in the QGEP-layer.</li>
+</ul>
+</div>
+<div class="section" id="example-importing-manholes-from-a-txt-file">
+<h2>2.2.8.2. Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Change the fieldnames to identifier, x, y, co_level</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/importdata_txtfile.jpg" src="../../_images/importdata_txtfile.jpg" />
+</div>
+<ul class="simple">
+<li>Open the txt-file with <span class="menuselection">Layer ‣ Add Layer ‣ Add Delimited Text Layer...</span>.</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/importdata_opentxtfile.jpg" src="../../_images/importdata_opentxtfile.jpg" />
+</div>
+<ul class="simple">
+<li>You have now a vector-layer with your points in the QGEP-project</li>
+<li>Select the points of the new layer</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/importdata_selectpoints.jpg" src="../../_images/importdata_selectpoints.jpg" />
+</div>
+<ul class="simple">
+<li>Choose <span class="menuselection">Edit ‣ Copy Features</span>.</li>
+<li>Select the vw_qgep_wastewater_structure layer and set it editable</li>
+<li>Choose <span class="menuselection">Edit ‣ Paste Features</span>.</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/importdata_5newpoints.jpg" src="../../_images/importdata_5newpoints.jpg" />
+</div>
+<div class="figure">
+<img alt="../../_images/importdata_5newpointstable.jpg" src="../../_images/importdata_5newpointstable.jpg" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ws_type is set as default to manhole. The identifier is used not only for the wastewater_structure, but also as cover_identifier and as wastewaternode_identifier.</p>
+</div>
+</div>
+<div class="section" id="example-importing-manholes-with-attributes">
+<h2>2.2.8.3. Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li>Example to add additional attributes</li>
+</ul>
+<div class="figure">
+<img alt="../../_images/importdata_txtfile2.jpg" src="../../_images/importdata_txtfile2.jpg" />
+</div>
+<ul class="simple">
+<li>The field ws_type is an exception. Possible values are manhole, special_structure, infiltration_installation, discharge_point.</li>
+<li>For other fields with valuelists you have to use the code.</li>
+<li>In the example above, the values for ma_function in the row discharge_point or special_structure has no effect.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../editing/index.html" class="btn btn-neutral float-right" title="2.3. Édition dans QGEP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="digitizingcatchments.html" class="btn btn-neutral" title="2.2.7. Numérisation des bassins versants" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
