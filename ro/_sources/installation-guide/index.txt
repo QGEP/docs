@@ -14,7 +14,6 @@ get your system ready for running QGEP.
 
 .. toctree::
    :maxdepth: 3
-   :numbered:
 
    requirements
    server
