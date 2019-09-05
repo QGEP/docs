@@ -1,3 +1,5 @@
+.. _installation-guide:
+
 QGEP Installation Guide
 =======================
 
