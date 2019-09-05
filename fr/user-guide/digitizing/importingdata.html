@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.8. Importing data &mdash; documentation QGEP 0.8</title>
+  <title>1.2.8. Importing data &mdash; documentation QGEP 0.8</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
-        <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
-        <link rel="next" title="2.3. Édition dans QGEP" href="../editing/index.html"/>
-        <link rel="prev" title="2.2.7. Numérisation des bassins versants" href="digitizingcatchments.html"/> 
+        <link rel="up" title="1.2. Numérisation dans QGEP" href="index.html"/>
+        <link rel="next" title="1.3. Édition dans QGEP" href="../editing/index.html"/>
+        <link rel="prev" title="1.2.7. Numérisation des bassins versants" href="digitizingcatchments.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,33 +82,33 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Numériser les structures assainissement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.8. Importing data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">2.2.8.1. Généralités</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">2.2.8.2. Example Importing manholes from a TXT-File:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">2.2.8.3. Example Importing manholes with attributes:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">Guide d&#8217;installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">1.1. Overview of QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1.2. Numérisation dans QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">1.2.1. Saisie de données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">1.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">1.2.3. Numérisation de géométries détaillées</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">1.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">1.2.5. Numérisation de canalisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">1.2.6. Suppression d&#8217;objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">1.2.7. Numérisation des bassins versants</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">1.2.8. Importing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">1.2.8.1. Généralités</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">1.2.8.2. Example Importing manholes from a TXT-File:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">1.2.8.3. Example Importing manholes with attributes:</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Outils de poursuite de réseau</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">1.3. Édition dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">1.4. Profils en long</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">1.5. Outils de poursuite de réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">1.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">2. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">3. Machine virtuelle de démonstration</a></li>
 </ul>
 
           
@@ -133,11 +133,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html">1. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
+          <li><a href="index.html">1.2. Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.8. Importing data</li>
+    <li>1.2.8. Importing data</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -152,11 +152,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="importing-data">
-<h1>2.2.8. Importing data<a class="headerlink" href="#importing-data" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>1.2.8. Importing data<a class="headerlink" href="#importing-data" title="Lien permanent vers ce titre">¶</a></h1>
 <p>It is quite easy to import data (geometry and attributes) from an external software.
 Here is a general discription and a specific example.</p>
 <div class="section" id="general">
-<h2>2.2.8.1. Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.2.8.1. Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>You have to add the data you want to import as (vector) layer into the QGEP project.</li>
 <li>The field names of the attributes have to be the same as the field names of the QGEP Layer.
@@ -167,7 +167,7 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
 </ul>
 </div>
 <div class="section" id="example-importing-manholes-from-a-txt-file">
-<h2>2.2.8.2. Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.2.8.2. Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>Change the fieldnames to identifier, x, y, co_level</li>
 </ul>
@@ -204,7 +204,7 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
 </div>
 </div>
 <div class="section" id="example-importing-manholes-with-attributes">
-<h2>2.2.8.3. Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1.2.8.3. Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>Example to add additional attributes</li>
 </ul>
@@ -226,10 +226,10 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../editing/index.html" class="btn btn-neutral float-right" title="2.3. Édition dans QGEP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../editing/index.html" class="btn btn-neutral float-right" title="1.3. Édition dans QGEP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="digitizingcatchments.html" class="btn btn-neutral" title="2.2.7. Numérisation des bassins versants" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="digitizingcatchments.html" class="btn btn-neutral" title="1.2.7. Numérisation des bassins versants" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
