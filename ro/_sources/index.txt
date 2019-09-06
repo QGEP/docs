@@ -24,6 +24,7 @@ Contents
    user-guide/index
    admin-guide/index
    vm/index
+   wincan2qgep/index
 
 Indices and tables
 ==================

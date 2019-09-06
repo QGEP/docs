@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Wincan 2 QGEP plugin &mdash; QGEP 0.8 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.8 documentation" href="../index.html"/>
+        <link rel="next" title="5.1. Introduction" href="introduction.html"/>
+        <link rel="prev" title="4.3. QGIS Server" href="../vm/server.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Mașină Virtuală de Demo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Wincan 2 QGEP plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Match channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">5.4. Fixing issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">5.6. Viewing data in QGEP</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Wincan 2 QGEP plugin</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/wincan2qgep/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wincan-2-qgep-plugin">
+<span id="installation-guide"></span><h1>5. Wincan 2 QGEP plugin<a class="headerlink" href="#wincan-2-qgep-plugin" title="Permalink to this headline">¶</a></h1>
+<p>This will guide you ot use Wincan 2 QGEP plugin for QGIS to import inspection data from Wincan.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="match-channels.html">5.3. Match channels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html#automatic-matching">5.3.1. Automatic matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html#manual-matching">5.3.2. Manual matching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html#skipping-channels-or-observations">5.3.3. Skipping channels or observations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fixing-issues.html">5.4. Fixing issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#length-issues">5.4.1. Length issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. 1 channel in the inspection data corresponds to several channels in the QGEP data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#several-channels-in-the-insepction-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Several channels in the insepction data correspond to a single channel in the QGEP data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="import-data.html">5.5. Import data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewing-data-qgep.html">5.6. Viewing data in QGEP</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="5.1. Introduction" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../vm/server.html" class="btn btn-neutral" title="4.3. QGIS Server" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
