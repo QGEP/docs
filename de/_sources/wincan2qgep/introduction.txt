@@ -8,3 +8,9 @@ It can be seen a matching procedure between the inspection TV data and the netwo
 
 The plugin will read the XML file from the data and offer an interface to search and select on map the corresponding channels from the inspection data.
 Once this matching achieved, data can be imported within QGEP.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/72s6_YnSZas" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
