@@ -37,6 +37,15 @@ trans.it = i18n/it/user-guide.po
 trans.ro = i18n/ro/user-guide.po
 type = PO
 
+[qgep-documentation.wincan2qgep]
+source_file = i18n/pot/wincan2qgep.pot
+source_lang = en
+trans.de = i18n/de/wincan2qgep.po
+trans.fr = i18n/fr/wincan2qgep.po
+trans.it = i18n/it/wincan2qgep.po
+trans.ro = i18n/ro/wincan2qgep.po
+type = PO
+
 [qgep-documentation.admin-guide]
 source_file = i18n/pot/admin-guide.pot
 source_lang = en
