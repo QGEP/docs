@@ -4,7 +4,7 @@ Wincan 2 QGEP plugin
 ====================
 
 
-This will guide you ot use Wincan 2 QGEP plugin for QGIS to import inspection data from Wincan.
+This will guide you to use Wincan 2 QGEP plugin for QGIS to import inspection data from Wincan.
 
 .. toctree::
    :maxdepth: 3
