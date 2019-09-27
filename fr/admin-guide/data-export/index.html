@@ -156,7 +156,8 @@
 <p>INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
 <ul class="simple">
 <li>Translation English – German / French (Classes / Attributes)</li>
-<li>Conversion of value list to / from numeric values (Integer)</li>
+<li><p class="first">Conversion d&#8217;une liste de valeurs vers/depuis des valeurs numériques (integer)</p>
+</li>
 <li>Restructuring of data from relational to object oriented modelling</li>
 <li>Conversion of OID (16 characters) to foreign keys TID (integer)</li>
 </ul>
@@ -340,11 +341,11 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><em>sia405_base.ili</em></li>
 <li><em>SIA405_Abwasser_2015_2_d.ili</em></li>
 </ul>
-<p>The following call exports the data into INTERLIS2 sia405abwasser (Version 2014)</p>
+<p>La commande suivante exporte les données vers INTERLIS2 sia405 assainissement (Version 2014)</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">trace</span> <span class="o">--</span><span class="n">export</span> <span class="o">--</span><span class="n">log</span> <span class="n">export_sia405abwasser_2014_2_d</span><span class="o">.</span><span class="n">log</span> <span class="o">--</span><span class="n">models</span> <span class="n">SIA405_Abwasser</span> <span class="o">--</span><span class="n">dbhost</span> <span class="n">localhost</span> <span class="o">--</span><span class="n">dbport</span> <span class="mi">5432</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">sia405abwasser</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">yourpassword</span> <span class="n">export</span><span class="o">.</span><span class="n">xtf</span>
 </pre></div>
 </div>
-<p>Needed models: <em>units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili</em></p>
+<p>Modèles nécessaires: <em>units.ili, base.ili, sia405_base.ili, SIA405_Assainissement_2014_2_d.ili</em></p>
 </div>
 <div class="section" id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
 <h3>3.2.2.7. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Lien permanent vers ce titre">¶</a></h3>

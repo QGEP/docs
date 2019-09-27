@@ -89,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="about.html">4.1. À propos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">4.2. installer</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">4.3. serveur QGIS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">4.3.1. Access the Web Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">4.3.1. Accès aux services Web</a></li>
 </ul>
 </li>
 </ul>
@@ -137,27 +137,23 @@
             
   <div class="section" id="qgis-server">
 <h1>4.3. serveur QGIS<a class="headerlink" href="#qgis-server" title="Lien permanent vers ce titre">¶</a></h1>
-<p>You can download a VM with an older QGEP setup that also
-has QGIS Server installed from <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a> .</p>
+<p>Vous pouvez télécharger une machine virtuelle comprenant une ancienne configuration de QGEP ainsi qu&#8217;une installation de QGIS Serveur depuis <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a></p>
 <p>The VM has working installations of
 <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">QGIS Server</a>
 and <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
 <div class="section" id="access-the-web-services">
-<h2>4.3.1. Access the Web Services<a class="headerlink" href="#access-the-web-services" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>4.3.1. Accès aux services Web<a class="headerlink" href="#access-the-web-services" title="Lien permanent vers ce titre">¶</a></h2>
 <p>The Apache server is setup to respond to requests pointing to the <cite>http://qgisplatform.demo</cite>.
 Accessing the above link with the Internet Browser of the VM will take you to the starting
 page of QWC depicted in the below image.</p>
 <div class="figure" id="id2">
 <img alt="../_images/001_qwc.png" src="../_images/001_qwc.png" />
-<p class="caption"><span class="caption-text"><strong>QGIS Web client starting page</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>QGIS page de démarrage client Web</strong></span></p>
 </div>
-<p>If you want to access the web services outside the VM, you need to edit the <code class="docutils literal"><span class="pre">hosts</span></code> file on
-your machine and point <code class="docutils literal"><span class="pre">qgisplatform.demo</span></code> to the IP of the VM.</p>
+<p>Si vous souhaitez accéder aux services Web en dehors de la MV, vous devez éditer les fichiers <code class="docutils literal"><span class="pre">hosts</span></code> sur votre machine et pointer sur <code class="docutils literal"><span class="pre">qgisplatform.demo</span></code> comme IP de la MV.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you&#8217;ve setup the VM with the network adapter in NAT mode only the VM host will
-be able to access the services. If you want all the devices on your LAN to do it,
-you need to setup the network adapter in bridge mode.</p>
+<p class="last">Si vous avez configuré la MV avec l&#8217;adaptateur réseau en mode NAT, seule la MV hôte pourra accéder aux services. Si vous souhaitez que toutes les machines de votre réseau local puissent y accéder, vous devez configurer l&#8217;adaptateur réseau en mode pont.</p>
 </div>
 </div>
 </div>

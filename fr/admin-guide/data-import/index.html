@@ -93,8 +93,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#tool">3.3.2.1. Outil</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#generate-ili2pg-schema-with-data-model">3.3.2.2. Generate ili2pg schema with data model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-additional-functions">3.3.2.3. Ajoute des fonctions additionnelles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-additional-view">3.3.2.4. Add additional view</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#add-two-other-functions">3.3.2.5. Add two other functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-additional-view">3.3.2.4. Ajout d&#8217;une vue additionnelle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-two-other-functions">3.3.2.5. Ajouter deux autres fonctions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#modify-metadata-and-organisation-data">3.3.2.6. Modify Metadata and Organisation data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#run-the-import-queries-for-your-datamodel">3.3.2.7. Lancez les requêtes d&#8217;import  pour votre modèle de données</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#create-a-batch-job">3.3.2.8. Crée un traitement par lots (batch job)</a></li>
@@ -154,10 +154,11 @@
 <p>Guide pour l&#8217;import de données dans QGEP à partir du format de transfert d&#8217; INTERLIS 2 (xtf).</p>
 <div class="section" id="general">
 <h2>3.3.1. Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>INTERLIS Import can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
+<p>L&#8217;import INTERLIS peut être réalisé en utilisant l&#8217;outil illi2pg d&#8217;Eisnhut Informatik et une série de scripts SQL préconfigurés. Ceux-ci vont réaliser:</p>
 <ul class="simple">
 <li>Translation English – German / French (Classes / Attributes)</li>
-<li>Conversion of value list to / from numeric values (Integer)</li>
+<li><p class="first">Conversion d&#8217;une liste de valeurs vers/depuis des valeurs numériques (integer)</p>
+</li>
 <li>Restructuring of data from relational to object oriented modelling</li>
 <li>Conversion of foreign keys TID (integer) to OID (16 characters) again</li>
 </ul>
@@ -212,7 +213,7 @@
 </div>
 <div class="section" id="add-additional-functions">
 <h3>3.3.2.3. Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
-<p>We then need a series of function for the schema transformation form the created ili2pg schema to the <code class="docutils literal"><span class="pre">qgep</span></code> schema</p>
+<p>Nous avons ensuite besoin d&#8217;une série de fonctions pour la transformation du schéma illi2pg nouvellement créé vers le schéma <code class="docutils literal"><span class="pre">qgep</span></code></p>
 <ul class="simple">
 <li><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em> : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</li>
 <li><em>02_vsa_dss_2015_2_d_304_tid_lookup.sql</em> : Function to look up tid – used in 060</li>
@@ -226,14 +227,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="add-additional-view">
-<h3>3.3.2.4. Add additional view<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
-<p>This view is needed for the import queries and has to be added to the ili2pg schema beforehand</p>
+<h3>3.3.2.4. Ajout d&#8217;une vue additionnelle<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette vue est nécessaire pour importer des requêtes et doit être ajoutée auparavant au schéma illi2pg</p>
 <ul class="simple">
 <li><em>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</em></li>
 </ul>
 </div>
 <div class="section" id="add-two-other-functions">
-<h3>3.3.2.5. Add two other functions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>3.3.2.5. Ajouter deux autres fonctions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><em>053_create_key_object_seq.sql</em> : key_objects_seq function copies the latest seq value into table t_key_object</li>
 <li><em>054_create_function_meta_organisation.sql</em> : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</li>
@@ -244,7 +245,7 @@
 <ul class="simple">
 <li><em>055_select meta_organisation_bezeichnung_obj_id.sql</em></li>
 </ul>
-<p>Run this function before importing data from ili2pg to qgep schema, else you will have problems importing fk_dataowner / fk_provider fields if they are not with a valid obj_id but some form of identifier (e.g. with the Transferdatensatz_VSA_DSS.xtf)</p>
+<p>Lancer cette fonction avant d&#8217;importer les données depuis illi2pg vers le schéma QGEP, sinon vous rencontrerez des problèmes pour importer les champs fk_dataowner / fk_provider s&#8217;ils ne comportent pas un obj_id valide mais une autre forme d&#8217;identifiant (p.  ex. avec le jeu de données pour transfert_VSA_DSS.xtf)</p>
 <blockquote>
 <div><div class="figure">
 <img alt="../../_images/set_key_object_seq.png" src="../../_images/set_key_object_seq.png" />
