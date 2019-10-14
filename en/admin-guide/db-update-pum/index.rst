@@ -34,7 +34,9 @@ PUM installation
 
 To update PUM
 
-``sudo -H pip3 install --upgrade pum``
+``pip3 install --upgrade pum``
+
+``sudo`` can be used to install ``PUM`` and ``pirogue`` system wide or the ``--user`` flag can be used to install they into the current user's home directory. 
 
 Pirogue installation
 ^^^^^^^^^^^^^^^^^^^^
@@ -42,7 +44,7 @@ Pirogue installation
 
 To update pirogue
 
-``sudo -H pip3 install --upgrade pirogue``
+``pip3 install --upgrade pirogue``
 
 
 Database update
@@ -73,7 +75,7 @@ Download and install current database release
 
 * Create current database. It is used for comparison (target).
 
-``psql -U postgres -c 'CREATE DATABASE qgep_comp;'``
+``psql -h host -p port -U postgres -c 'CREATE DATABASE qgep_comp;'``
 
 * Install current datamodel release. 
 
@@ -83,7 +85,7 @@ Create empty database
 ^^^^^^^^^^^^^^^^^^^^^^
 * Create test database. It is used to test the update processus.
 
-``psql -U postgres -c 'CREATE DATABASE qgep_test;'``
+``psql -h host -p port -U postgres -c 'CREATE DATABASE qgep_test;'``
 
 Launch update
 ^^^^^^^^^^^^^^
