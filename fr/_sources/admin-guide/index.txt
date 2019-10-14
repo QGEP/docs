@@ -10,6 +10,7 @@ This represents a guide on how to administrate the database, install a Virtual m
    data-export/index
    data-import/index
    db-customization/index
+   db-update-pum/index
 
 In discussion:
 
