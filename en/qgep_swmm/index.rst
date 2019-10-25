@@ -4,14 +4,17 @@ QGEP SWMM plugin
 ====================
 
 
-This will guide you ot use SWMM plugin for QGIS to import inspection data from Wincan.
+This will guide you ot use SWMM plugin for QGIS.
 
 .. toctree::
    :maxdepth: 3
 
-   introduction
-   open-inspection
-   match-channels
-   fixing-issues
-   import-data
-   viewing-data-qgep
+   Installation-demo-data
+   QGEP-SWMM-workflow
+   Generate-.INP-file
+   Open-.INP-with-SWMM
+   Change-parameters
+   Run-a-simulation
+   Run-current-state-simulation
+   Run-aimed-state-simulation
+   Run-variants-(network-is-modified)

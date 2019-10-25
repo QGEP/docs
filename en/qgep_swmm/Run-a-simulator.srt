@@ -1,0 +1,14 @@
+Run a simulation
+================
+Use the *lightning* button
+
+Solve running errors
+--------------------
+
+'Errors explanation<https://swmm5.org/2016/09/05/swmm-5-1-and-infoswmm-error-and-warning-messages>'
+
+*ERROR 211: invalid number -XXX at line XXX of [JUNC] section:*
+
+A negative number is provided for the depth => change the value in QGEP or in the .inp file.
+
+

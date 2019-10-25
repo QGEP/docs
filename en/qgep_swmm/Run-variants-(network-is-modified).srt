@@ -1,0 +1,3 @@
+Run variants (network is modified)
+==================================
+- New links and new nodes are created directly in SWMM GUI

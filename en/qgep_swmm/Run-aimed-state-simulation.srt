@@ -1,0 +1,7 @@
+Run aimed state simulation
+==========================
+- Copy the inp file used for the previous simulation
+
+Impervious areas increase
+----------------------------
+Hydrology > Subcatchements > % Imperv

@@ -1,0 +1,15 @@
+Run current state simulation
+============================
+
+Minimal parameters to be set
+----------------------------
+! TO BE CHECKED!
+
+- *Time series* Create a time serie for the rain (default_qgep_raingage_timeserie) / the time serie have to be linked to the raingages *Hydrology > Rain Gages* (which are linked to the subcatchments)
+
+- *Hydrology > Subcatchment* : Set percent of of impervious area and infiltration parameters
+
+
+Optional parameters
+-------------------
+- *Climatology > Evaporation*
