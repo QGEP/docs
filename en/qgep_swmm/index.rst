@@ -1,20 +1,17 @@
-.. _installation-guide:
+.. _qgep_swmm:
 
 QGEP SWMM plugin
-====================
+================
 
-
-This will guide you ot use SWMM plugin for QGIS.
 
 .. toctree::
    :maxdepth: 3
 
-   Installation-demo-data
+   QGEP-SWMM-installation
    QGEP-SWMM-workflow
-   Generate-.INP-file
-   Open-.INP-with-SWMM
-   Change-parameters
-   Run-a-simulation
-   Run-current-state-simulation
-   Run-aimed-state-simulation
-   Run-variants-(network-is-modified)
+   Create-DB-tables
+   Create-Input
+   Execute
+   Extract-Results
+   Mapping
+   Change-simulation-parameters
