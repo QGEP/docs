@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.4. SWMM Create Input &mdash; QGEP 0.8 documentazione</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
+        <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
+        <link rel="next" title="6.5. SWMM Execute" href="Execute.html"/>
+        <link rel="prev" title="6.3. SWMM Create DB Tables" href="Create-DB-tables.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6.4. SWMM Create Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.4.1. QGEP plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-input-file">6.4.2. Check input file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#change-simulation-parameters">6.4.3. Change simulation parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-command-line">6.4.4. Python command line</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.8. Change simulation parameters</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">6. QGEP SWMM plugin</a> &raquo;</li>
+      
+    <li>6.4. SWMM Create Input</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/qgep_swmm/Create-Input.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="swmm-create-input">
+<span id="create-input"></span><h1>6.4. SWMM Create Input<a class="headerlink" href="#swmm-create-input" title="Link a questa intestazione">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">.inp</span></code> file is the input file format for SWMM. It contains the wastewater network AND simulation parameters. The network can be extracted from the QGEP data, but the simulation parameters must be set according to your study.</p>
+<p>The simulation parameters are copied from a provided <code class="docutils literal"><span class="pre">.inp</span></code> file.
+A default file is provided in the plugin folder in <code class="docutils literal"><span class="pre">src\swmm\default_qgep_swmm_parameters.inp</span></code>, but you can create and use your own template file.</p>
+<div class="section" id="qgep-plugin">
+<h2>6.4.1. QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link a questa intestazione">¶</a></h2>
+<p>Launch <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Database</span></code>: the name of the service used to connect to the database</li>
+<li><code class="docutils literal"><span class="pre">Template</span> <span class="pre">INP</span> <span class="pre">file</span></code>: a <code class="docutils literal"><span class="pre">.inp</span></code> from which simulation parameters will be copied</li>
+<li><code class="docutils literal"><span class="pre">Result</span> <span class="pre">INP</span> <span class="pre">file</span></code>: the <code class="docutils literal"><span class="pre">.inp</span></code> generated from QGEP data</li>
+</ul>
+</div>
+<div class="section" id="check-input-file">
+<h2>6.4.2. Check input file<a class="headerlink" href="#check-input-file" title="Link a questa intestazione">¶</a></h2>
+<p>The generated <code class="docutils literal"><span class="pre">.inp</span></code> file can be imported in SWMM GUI. It is likely that some errors will be raised. You will have to solve them (see <a class="reference external" href="./Execute.html#common-import-errors">Common Import Errors</a>).</p>
+</div>
+<div class="section" id="change-simulation-parameters">
+<h2>6.4.3. Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link a questa intestazione">¶</a></h2>
+<p>From SWMM GUI you can set the simulation parameters (see <a class="reference external" href="./Change-simulation-parameters.html#change-simulation-parameters">Change Simulation Parameters</a>).</p>
+</div>
+<div class="section" id="python-command-line">
+<h2>6.4.4. Python command line<a class="headerlink" href="#python-command-line" title="Link a questa intestazione">¶</a></h2>
+<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">TITLE</span> <span class="o">=</span> <span class="s1">&#39;title simulation&#39;</span>
+<span class="n">PGSERVICE</span> <span class="o">=</span> <span class="s1">&#39;pg_qgep&#39;</span>
+<span class="n">INPFILE</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">qgep_swmm</span><span class="se">\\</span><span class="s1">input</span><span class="se">\\</span><span class="s1">qgep_swmm.inp&#39;</span>
+<span class="n">INPTEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">qgep_swmm</span><span class="se">\\</span><span class="s1">simulation_parameters</span><span class="se">\\</span><span class="s1">default_qgep_swmm_parameters.inp&#39;</span>
+<span class="n">OUTFILE</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">qs</span> <span class="o">=</span> <span class="n">qgep_swmm</span><span class="p">(</span><span class="n">TITLE</span><span class="p">,</span> <span class="n">PGSERVICE</span><span class="p">,</span> <span class="n">INPFILE</span><span class="p">,</span> <span class="n">INPTEMPLATE</span><span class="p">,</span> <span class="n">OUTFILE</span><span class="p">)</span>
+<span class="n">qs</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Execute.html" class="btn btn-neutral float-right" title="6.5. SWMM Execute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Create-DB-tables.html" class="btn btn-neutral" title="6.3. SWMM Create DB Tables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

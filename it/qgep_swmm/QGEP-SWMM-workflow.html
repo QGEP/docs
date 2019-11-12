@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.2. QGEP-SWMM workflow &mdash; QGEP 0.8 documentazione</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
+        <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
+        <link rel="next" title="6.3. SWMM Create DB Tables" href="Create-DB-tables.html"/>
+        <link rel="prev" title="6.1. QGEP-SWMM installation" href="QGEP-SWMM-installation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6.2. QGEP-SWMM workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">6.2.1. Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gep-project">6.2.2. GEP project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.8. Change simulation parameters</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">6. QGEP SWMM plugin</a> &raquo;</li>
+      
+    <li>6.2. QGEP-SWMM workflow</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/qgep_swmm/QGEP-SWMM-workflow.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qgep-swmm-workflow">
+<span id="id1"></span><h1>6.2. QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Link a questa intestazione">¶</a></h1>
+<div class="section" id="workflow">
+<h2>6.2.1. Workflow<a class="headerlink" href="#workflow" title="Link a questa intestazione">¶</a></h2>
+<p>In the QGEP processing tool, there are four SWMM processes:</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code> generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.</li>
+<li><code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code> reads data from the PostgreSQL tables (schema <code class="docutils literal"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</li>
+</ol>
+<p>3. <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Execute</span></code> launches SWMM. Its likely that the <code class="docutils literal"><span class="pre">.inp</span></code> file generated in the previous step contains error.
+In this case, the <code class="docutils literal"><span class="pre">.inp</span></code> file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors.
+Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal"><span class="pre">.inp</span></code> file with SWMM GUI.
+4. <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code> parses the result file and generates three QGIS table layers.
+5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.</p>
+</div>
+<div class="section" id="gep-project">
+<h2>6.2.2. GEP project<a class="headerlink" href="#gep-project" title="Link a questa intestazione">¶</a></h2>
+<p><strong>WORK IN PROGRESS: This section must be completed with end users</strong></p>
+<p>Usually, a GEP analysis has at least three steps:</p>
+<ol class="arabic simple">
+<li>The current state of the network is analysed</li>
+<li>The aimed state (available areas are built at 100%) is analysed.</li>
+<li>Several variants are tested and analysed</li>
+</ol>
+<p><strong>Minimal parameters to be set</strong></p>
+<p><code class="docutils literal"><span class="pre">Time</span> <span class="pre">series</span></code>: Create a time serie for the rain. The time series have to be linked to the raingages <code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Rain</span> <span class="pre">Gages</span></code> (which are linked to the subcatchments)</p>
+<p><code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchment</span></code>: Set percent of of impervious area and infiltration parameters</p>
+<p><strong>Optional parameters</strong></p>
+<p><code class="docutils literal"><span class="pre">Climatology</span> <span class="pre">&gt;</span> <span class="pre">Evaporation</span></code></p>
+<p><strong>Run aimed state simulation</strong></p>
+<ul class="simple">
+<li>Copy the <code class="docutils literal"><span class="pre">inp</span></code> file used for the previous simulation</li>
+<li>Increase the impervious areas:<code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchements</span> <span class="pre">&gt;</span> <span class="pre">%</span> <span class="pre">Imperv</span></code></li>
+</ul>
+<p><strong>Run variants (network is modified)</strong></p>
+<p>New links and new nodes are created directly in SWMM GUI</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Create-DB-tables.html" class="btn btn-neutral float-right" title="6.3. SWMM Create DB Tables" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="QGEP-SWMM-installation.html" class="btn btn-neutral" title="6.1. QGEP-SWMM installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

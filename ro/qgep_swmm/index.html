@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. QGEP SWMM plugin &mdash; QGEP 0.8 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.8 documentation" href="../index.html"/>
+        <link rel="next" title="6.1. QGEP-SWMM installation" href="QGEP-SWMM-installation.html"/>
+        <link rel="prev" title="5.6. Viewing data in QGEP" href="../wincan2qgep/viewing-data-qgep.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Mașină Virtuală de Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">6. QGEP SWMM plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.8. Change simulation parameters</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>6. QGEP SWMM plugin</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/qgep_swmm/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="qgep-swmm-plugin">
+<span id="qgep-swmm"></span><h1>6. QGEP SWMM plugin<a class="headerlink" href="#qgep-swmm-plugin" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html#swmm-installation">6.1.1. SWMM Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html#workflow">6.2.1. Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html#gep-project">6.2.2. GEP project</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html#qgep-plugin">6.3.1. QGEP plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html#python-command-line">6.3.2. Python command line</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html#qgep-plugin">6.4.1. QGEP plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html#check-input-file">6.4.2. Check input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html#change-simulation-parameters">6.4.3. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html#python-command-line">6.4.4. Python command line</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html#qgep-plugin">6.5.1. QGEP plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html#common-import-errors">6.5.2. Common import errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html#common-running-errors">6.5.3. Common running errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html#python-command-line">6.5.4. Python command line</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Change-simulation-parameters.html">6.8. Change simulation parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#title-notes">6.8.1. Title/Notes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#options">6.8.2. Options:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#climatology">6.8.3. Climatology:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#hydrology">6.8.4. Hydrology:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#hydraulics">6.8.5. Hydraulics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#quality">6.8.6. Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#curves">6.8.7. Curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#time-series">6.8.8. Time series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#time-patterns">6.8.9. Time patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html#labels">6.8.10. Labels</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="QGEP-SWMM-installation.html" class="btn btn-neutral float-right" title="6.1. QGEP-SWMM installation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../wincan2qgep/viewing-data-qgep.html" class="btn btn-neutral" title="5.6. Viewing data in QGEP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -25,6 +25,7 @@ Contents
    admin-guide/index
    vm/index
    wincan2qgep/index
+   qgep_swmm/index
 
 Indices and tables
 ==================

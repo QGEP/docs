@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.8. Change simulation parameters &mdash; QGEP 0.8 documentazione</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
+        <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
+        <link rel="prev" title="6.7. Mapping" href="Mapping.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> QGEP
+        
+
+        
+        </a>
+
+        
+          
+          
+            <div class="version">
+              0.7
+            </div>
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">6.8. Change simulation parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#title-notes">6.8.1. Title/Notes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#options">6.8.2. Options:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#climatology">6.8.3. Climatology:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydrology">6.8.4. Hydrology:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydraulics">6.8.5. Hydraulics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality">6.8.6. Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#curves">6.8.7. Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-series">6.8.8. Time series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-patterns">6.8.9. Time patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#labels">6.8.10. Labels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">QGEP</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">6. QGEP SWMM plugin</a> &raquo;</li>
+      
+    <li>6.8. Change simulation parameters</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/qgep_swmm/Change-simulation-parameters.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="change-simulation-parameters">
+<span id="id1"></span><h1>6.8. Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link a questa intestazione">¶</a></h1>
+<p>The easiest way to edit the simulation parameters is to open the <code class="docutils literal"><span class="pre">.inp</span></code> file with SWMM GUI.
+Then, you will find the parameters liste hereunder.
+These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template <code class="docutils literal"><span class="pre">.inp</span></code> file.</p>
+<div class="section" id="title-notes">
+<h2>6.8.1. Title/Notes:<a class="headerlink" href="#title-notes" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Set by the user as a QGEP_SWMM option</li>
+<li>update title if necessary.</li>
+</ul>
+</div>
+<div class="section" id="options">
+<h2>6.8.2. Options:<a class="headerlink" href="#options" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Copied from the template input file if exists.</li>
+<li>set / update simulation parameters.</li>
+</ul>
+</div>
+<div class="section" id="climatology">
+<h2>6.8.3. Climatology:<a class="headerlink" href="#climatology" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Copied from the template input file if exists.</li>
+<li>set / update climatology parameters</li>
+</ul>
+</div>
+<div class="section" id="hydrology">
+<h2>6.8.4. Hydrology:<a class="headerlink" href="#hydrology" title="Link a questa intestazione">¶</a></h2>
+<p><strong>Rain Gages:</strong></p>
+<p>QGEP_SWMM creates one raingage for each subcatchment.</p>
+<p>By default:</p>
+<ul class="simple">
+<li>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name update accordingly.</li>
+<li>Other parameters have default SWMM values</li>
+</ul>
+<p><strong>Aquifers:</strong></p>
+<p>QGEP_SWMM creates an aquifer for each QGEP <code class="docutils literal"><span class="pre">aquifiers</span></code>.</p>
+<p>By default:</p>
+<ul class="simple">
+<li>An aquifer is created for each QGEP <code class="docutils literal"><span class="pre">aquifiers</span></code></li>
+<li>The bottom elevation is set to the <code class="docutils literal"><span class="pre">minimal_groundwater_level</span></code></li>
+<li>The water table elevation is set to the <code class="docutils literal"><span class="pre">average_groundwater_level</span></code></li>
+<li>Other parameters have default SWMM values</li>
+</ul>
+<p><strong>Subcatchment:</strong></p>
+<p>QGEP_SWMM creates a subcatchment for each QGEP catchment area.</p>
+<p>By default:</p>
+<ul class="simple">
+<li>A subcatchment is created for each QGEP <code class="docutils literal"><span class="pre">catchment</span> <span class="pre">area</span></code></li>
+<li>it is linked to a rain gage.</li>
+<li>The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknow the centroid is used rather thant the outlet.</li>
+<li>The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone</li>
+<li>Other parameters have default SWMM values</li>
+</ul>
+<p>The subcatchment can be linked to an aquifer via the groundwater attribute.</p>
+<p><strong>Snow Packs</strong></p>
+<ul class="simple">
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Unit hydrographs</strong></p>
+<ul class="simple">
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>LID Controls</strong></p>
+<ul class="simple">
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="hydraulics">
+<h2>6.8.5. Hydraulics<a class="headerlink" href="#hydraulics" title="Link a questa intestazione">¶</a></h2>
+<p><strong>Junctions</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates a junction for each QGEP manhole and some kind of special structures.</li>
+<li>See <code class="docutils literal"><span class="pre">vw_swmm_junctions.sql</span></code> for details.</li>
+</ul>
+<p><strong>Outfalls</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates an outfall for each QGEP discharge_point.</li>
+<li>See <code class="docutils literal"><span class="pre">vw_swmm_outfalls.sql</span></code> for details.</li>
+</ul>
+<p><strong>Dividers</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Storage Units</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates a storage for some kind of QGEP infiltration installations and some kind of QGEP special structures.</li>
+<li>See <code class="docutils literal"><span class="pre">vw_swmm_storages.sql</span></code> for details.</li>
+</ul>
+<p><strong>Conduits</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates a conduit for each QGEP reach.</li>
+<li>See <code class="docutils literal"><span class="pre">vw_swmm_conduits.sql</span></code> for details.</li>
+</ul>
+<p><strong>Pumps</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates a pump for each QGEP pump.</li>
+<li>See <code class="docutils literal"><span class="pre">vw_swmm_pumps.sql</span></code> for details.</li>
+</ul>
+<p><strong>Orifices</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Weirs</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Outlets</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Transects</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+<p><strong>Controls</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="quality">
+<h2>6.8.6. Quality<a class="headerlink" href="#quality" title="Link a questa intestazione">¶</a></h2>
+<p><strong>Land uses</strong></p>
+<ul class="simple">
+<li>QGEP_SWMM creates a land use for each QGEP planning zone kind.</li>
+</ul>
+<p><strong>Pollutants</strong></p>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="curves">
+<h2>6.8.7. Curves<a class="headerlink" href="#curves" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="time-series">
+<h2>6.8.8. Time series<a class="headerlink" href="#time-series" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="time-patterns">
+<h2>6.8.9. Time patterns<a class="headerlink" href="#time-patterns" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+<div class="section" id="labels">
+<h2>6.8.10. Labels<a class="headerlink" href="#labels" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>Are not created from QGEP objects.</li>
+<li>Copied from the template input file if exists.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Mapping.html" class="btn btn-neutral" title="6.7. Mapping" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.8',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
