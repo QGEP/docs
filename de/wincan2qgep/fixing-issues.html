@@ -32,7 +32,7 @@
   
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="5. Wincan 2 QGEP plugin" href="index.html"/>
-        <link rel="next" title="5.5. Import data" href="import-data.html"/>
+        <link rel="next" title="5.5. Datenimport" href="import-data.html"/>
         <link rel="prev" title="5.3. Match channels" href="match-channels.html"/> 
 
   
@@ -87,16 +87,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Wincan 2 QGEP plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Einleitung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Match channels</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">5.4. Fixing issues</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#length-issues">5.4.1. Length issues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. One channel in the inspection data corresponds to several channels in the QGEP data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Several channels in the inspection data correspond to a single channel in the QGEP data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen Haltung in QGEP</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Datenimport</a></li>
 <li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">5.6. Viewing data in QGEP</a></li>
 </ul>
 </li>
@@ -149,16 +149,12 @@
 This should be fixed in the data or can be forced in the observation table by checking the corresponding column.</p>
 </div>
 <div class="section" id="one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">
-<h2>5.4.2. One channel in the inspection data corresponds to several channels in the QGEP data<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It may happen that one channel in the inspection data corresponds to several channels in the QGEP data.
-To fix this, you can select up to 3 channels in the widgets.
-Observation lengths will be accordingly shifted.</p>
+<h2>5.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Bericht in den Kanalfernsehdaten kann mehrere Haltungen/Kanäle in den QGEP-Daten entsprechen. In diesem Fall können bis zu 3 Haltungen im Widget gewählt werden. Die Beobachtungslängen werden entsprechend angepasst.</p>
 </div>
 <div class="section" id="several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">
-<h2>5.4.3. Several channels in the inspection data correspond to a single channel in the QGEP data<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It may happen that several channels in the inspection data correspond to a single channel in the QGEP data.
-To fix this, you can select &#8220;Reuse previous channel&#8221; checkbox.
-Observation lengths will be accordingly shifted.</p>
+<h2>5.4.3. Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen Haltung in QGEP<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein Bericht in den Kanalfernsehdaten kann mehrere Haltungen/Kanäle in den QGEP-Daten entsprechen. In diesem Fall kann die Checkbox  &#8220;Reuse previous channel&#8221; selektiert werden. Die Beobachtungslängen werden entsprechend angepasst.</p>
 </div>
 </div>
 
@@ -169,7 +165,7 @@ Observation lengths will be accordingly shifted.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="import-data.html" class="btn btn-neutral float-right" title="5.5. Import data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="import-data.html" class="btn btn-neutral float-right" title="5.5. Datenimport" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="match-channels.html" class="btn btn-neutral" title="5.3. Match channels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
