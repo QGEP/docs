@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.4. Fixing issues &mdash; QGEP 0.8 Dokumentation</title>
+  <title>5.4. Problemlösungen &mdash; QGEP 0.8 Dokumentation</title>
   
 
   
@@ -33,7 +33,7 @@
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="5. Wincan 2 QGEP plugin" href="index.html"/>
         <link rel="next" title="5.5. Datenimport" href="import-data.html"/>
-        <link rel="prev" title="5.3. Match channels" href="match-channels.html"/> 
+        <link rel="prev" title="5.3. Haltungen abgleichen" href="match-channels.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -88,16 +88,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Wincan 2 QGEP plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Einleitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Match channels</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.4. Fixing issues</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#length-issues">5.4.1. Length issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Untersuchungsdatei öffnen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Haltungen abgleichen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">5.4. Problemlösungen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#length-issues">5.4.1. Probleme mit Längenangabe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen Haltung in QGEP</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Datenimport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">5.6. Viewing data in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">5.6. Daten in QGEP anschauen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
@@ -127,7 +127,7 @@
       
           <li><a href="index.html">5. Wincan 2 QGEP plugin</a> &raquo;</li>
       
-    <li>5.4. Fixing issues</li>
+    <li>5.4. Problemlösungen</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -142,11 +142,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="fixing-issues">
-<span id="wincan2qgep-fixing-issues"></span><h1>5.4. Fixing issues<a class="headerlink" href="#fixing-issues" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="wincan2qgep-fixing-issues"></span><h1>5.4. Problemlösungen<a class="headerlink" href="#fixing-issues" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="length-issues">
-<h2>5.4.1. Length issues<a class="headerlink" href="#length-issues" title="Link zu dieser Überschrift">¶</a></h2>
-<p>If the length of the channel is longer in the data than in the map, a warning will occur.
-This should be fixed in the data or can be forced in the observation table by checking the corresponding column.</p>
+<h2>5.4.1. Probleme mit Längenangabe<a class="headerlink" href="#length-issues" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn ein Untersuchungsbericht eine grössere Länge hat als die Haltung im Plan, erscheint eine Warnung.  Dies sollte in den Daten festgelegt sein oder kann in den Untersuchungsdaten erzwungen werden, indem die entsprechende Spalte markiert wird</p>
 </div>
 <div class="section" id="one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">
 <h2>5.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Link zu dieser Überschrift">¶</a></h2>
@@ -168,7 +167,7 @@ This should be fixed in the data or can be forced in the observation table by ch
         <a href="import-data.html" class="btn btn-neutral float-right" title="5.5. Datenimport" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="match-channels.html" class="btn btn-neutral" title="5.3. Match channels" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="match-channels.html" class="btn btn-neutral" title="5.3. Haltungen abgleichen" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
