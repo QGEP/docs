@@ -25,7 +25,7 @@ Set the environment variable ``PGSYSCONFDIR`` to the path to ``PGSYSCONFDIR``.
     Click an existing variable, and then click ``Delete`` to remove it.
 
   .. figure:: images/umgebungsvariablen_pgconfdir.jpg
-  
+
   You can check your environment variables also within QGIS: Menu ``Settings`` --> ``Options...`` --> ``System`` Tab  --> ``Environment``
 
 Inside this folder, there will be two files
@@ -38,7 +38,7 @@ Inside this folder, there will be two files
  On Windows, you need to save ``pg_service.conf`` in Unix format in order to work.
  One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
  and ``Edit`` --> ``EOL Conversion`` --> ``UNIX Format`` --> ``File save`` .
-  
+
 .. _pg_service-linux:
 
 Linux pg_service
@@ -107,7 +107,7 @@ You can install them on debian based systems with::
 
       * URL:
         ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
-        
+
     * Enable ``Show also experimental plugins``
 
   * Activate the plugin (see image below):
@@ -121,6 +121,11 @@ You can install them on debian based systems with::
 .. figure:: images/001_searchplugin.jpeg
 
    **Add the QGEP plugin**
+
+Optional plugin
+~~~~~~~~~~~~~~~
+
+QGEP uses a data historization process. The ``pg history viewer`` `plugin <http://plugins.qgis.org/plugins/pg_history_viewer/>`_ allows you to view the changes made and replay some of them.
 
 Install the demo data
 ---------------------
@@ -180,19 +185,19 @@ Working with more than one database
 
 * Go further on as described in 1.2 Database initialization
 
-* Change the ``pg_service.conf`` - file 
+* Change the ``pg_service.conf`` - file
 
 .. code:: ini
 
-  [pg_qgep]    
-  host=localhost    
-  port=5432    
-  dbname=qgep    
+  [pg_qgep]   
+  host=localhost   
+  port=5432   
+  dbname=qgep   
   user=qgepuser
-  [pg_communityA]    
-  host=localhost      
-  port=5432      
-  dbname=communityA      
+  [pg_communityA]   
+  host=localhost     
+  port=5432     
+  dbname=communityA     
   user=qgepuser
-  
+
 * Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with 'pg_communityA'
