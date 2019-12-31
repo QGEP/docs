@@ -62,7 +62,7 @@ You need to have the necessary model files (ili) in the same folder as the xtf.
 Add additional functions
 ------------------------
 
-We then need a series of function for the schema transformation form the created ili2pg schema to the ``qgep`` schema
+We then need a series of function for the schema transformation from the created ili2pg schema to the ``qgep`` schema
 
 - *01_vsa_dss_2015_2_d_304_tid_generate.sql* : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists
 - *02_vsa_dss_2015_2_d_304_tid_lookup.sql* : Function to look up tid – used in 060
