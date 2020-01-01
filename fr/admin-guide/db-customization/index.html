@@ -186,9 +186,7 @@
 <div class="section" id="creating-custom-views">
 <h2>3.4.4. Créer des vues personnalisées<a class="headerlink" href="#creating-custom-views" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est possible de créer des vues personnalisées et de les ajouter au modèle de données.</p>
-<p>In order to allow upgrades of the data model, one should provide a script to create them and one to delete them.
-These scripts (SQL or Python) should be placed in a specific path and name them as pre-all.{py,sql} and post-all.{py,sql}.
-This path shall be given as argument to PUM when upgrading the data model as a delta directory (see PUM <a class="reference external" href="https://github.com/opengisch/pum">documentation</a>).</p>
+<p>Afin de permettre les mises à niveau du modèle de données, un script de création et un script de suppression de la vue doivent être fournis. Ces scripts (SQL ou Python) doivent être placés dans un endroit spécifique et être nommés pre-all.{py,sql} et post-all.{py,sql}. Le chemin sera donné comme paramètre à PUM lors de la mise à niveau  (voir PUM <a class="reference external" href="https://github.com/opengisch/pum">documentation</a>).</p>
 <p>Si quelqu&#8217;un souhaite avoir ces vues mises à jour automatiquement lors d&#8217;une mise à jour du modèle, Pirogue peut être utilisé dynamiquement pour générer les vues. L&#8217;exemple de création des vues dans le modèle peut être utilisé.</p>
 </div>
 </div>
