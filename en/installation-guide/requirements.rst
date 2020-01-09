@@ -7,4 +7,8 @@ The following Python packages (installed using `pip <https://pypi.org/project/pi
 
 * `PUM <https://github.com/opengisch/pum>`_ for model upgrades
 * `Pirogue <https://github.com/opengisch/pirogue>`_ for model generation and upgrades
-Note: not needed for the installation, see https://github.com/QGEP/docs/issues/107#issuecomment-572481141
+
+.. note::
+
+  These modules are not required for the initial installation but only for subsequent datamodel upgrades.
+  
