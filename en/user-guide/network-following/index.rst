@@ -61,12 +61,45 @@ Downstream
 * Use this to check whether the topology of your network is correct or to find out where you could intervene in case of an accident.
 
 
+Sum up upstream
+---------------
+
+* This is a tool in the QGEP-toolbox.
+
+* The idea for this tool is to sum up a value over the whole network of chanels, e.g. the flowtime for each point to the outlet of the network.
+
+* For this tool you need a field in the layer vw_qgep_reach with the values to sum up. Because interesting values are normally not part of this layer, you have first to join the value-field (e.g flowtime or flow rate) to the layer vw_qgep_reach.
+
+Picture how to join
+
+* Start the tool with double-click one **Sum up upstream**
+
+.. figure:: images/toolbox.jpg
+.. figure:: images/qgep_toolbox2.jpg
+
+* In the window you have to enter/to choose 
+
+  * an expression as shown in the titel of the field (COALESCE("field_name",0)
+
+  * the branch behavior (Minimum, Maximum, Average): which value will be used after a loop to continue the summing
+  
+  * the advanced paramaters are preconfigured for QGEP and must not be changed
+  
+  * Summed up: if you let this field empty, there will be a temporary file (point layer) with the results in your projects. Otherwise you can save the results to a point-vector layer.
+  
+.. figure:: images/sum_up_upstream_window.jpg
+
+The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field **value** with the sum for each wastewater node.
+
+**Example**
+
+
 Flow times downstream
 ---------------------
 
 * This is a tool in the QGEP-toolbox.
 
-* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool. There are already considerations about this functionality.
+* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool (use the **sum up upstream** tool for this task).
 
 * For this tool you need a layer (table) in the QGEP-project with the flowtime per reach and the obj_id of the reach.
 
