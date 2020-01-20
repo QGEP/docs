@@ -70,16 +70,23 @@ Sum up upstream
 
 * For this tool you need a field in the layer vw_qgep_reach with the values to sum up. Because interesting values are normally not part of this layer, you have first to join the value-field (e.g flowtime or flow rate) to the layer vw_qgep_reach.
 
-Picture how to join
+* As example look at this small network, labeled with reach-identifier, length and flow direction arrow
+
+.. figure:: images/sumupupstream-example.jpg
+
+* We need a table (in the example called sum up tool) with at least two fields: field identifier for the join and field flow rate (in the example in [m/s]) to sum up.
+* Open the properties of layer vw_qgep_reach, choose **Joins** and **Add new join** (green + Button) and define the join with the join field (identifier) and the joined fields (field to sum up).
+
+.. figure:: images/sumupupstream-join1.jpg
 
 * Start the tool with double-click one **Sum up upstream**
 
 .. figure:: images/toolbox.jpg
-.. figure:: images/qgep_toolbox2.jpg
+.. figure:: images/qgep_toolbox.jpg
 
 * In the window you have to enter/to choose 
 
-  * an expression as shown in the titel of the field (COALESCE("field_name",0)
+  * an expression as shown in the titel of the field (COALESCE("field_name",0). If you do not use the **coalesce** command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s]. 
 
   * the branch behavior (Minimum, Maximum, Average): which value will be used after a loop to continue the summing
   
@@ -87,11 +94,12 @@ Picture how to join
   
   * Summed up: if you let this field empty, there will be a temporary file (point layer) with the results in your projects. Otherwise you can save the results to a point-vector layer.
   
-.. figure:: images/sum_up_upstream_window.jpg
+.. figure:: images/sumupupstream-tool.jpg
 
 The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field **value** with the sum for each wastewater node.
+* In the figure below you see the result of the example with all tree branch behaviour: minimum = normal style, maximum = bold, average = underscored
 
-**Example**
+.. figure:: images/sumupupstream-resultat.jpg
 
 
 Flow times downstream
