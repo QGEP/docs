@@ -61,6 +61,8 @@ Downstream
 * Use this to check whether the topology of your network is correct or to find out where you could intervene in case of an accident.
 
 
+.. _SumUpUpstream:
+
 Sum up upstream
 ---------------
 
@@ -88,16 +90,16 @@ Sum up upstream
 
   * an expression as shown in the titel of the field (COALESCE("field_name",0). If you do not use the **coalesce** command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s]. 
 
-  * the branch behavior (Minimum, Maximum, Average): which value will be used after a loop to continue the summing
+  * the branch behavior (Minimum, Maximum, Average): which value will be used after when two branches join to continue the summing.
   
-  * the advanced paramaters are preconfigured for QGEP and must not be changed
+  * the advanced paramaters are preconfigured for QGEP and should not need to be changed.
   
-  * Summed up: if you let this field empty, there will be a temporary file (point layer) with the results in your projects. Otherwise you can save the results to a point-vector layer.
+  * Summed up: if you let this field empty, there will be a temporary point layer with the results in your project. Otherwise you can save the results to a new point vector layer.
   
 .. figure:: images/sumupupstream-tool.jpg
 
 The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field **value** with the sum for each wastewater node.
-* In the figure below you see the result of the example with all tree branch behaviour: minimum = normal style, maximum = bold, average = underscored
+* In the figure below you see the result of the example with all three branch behaviours: minimum = normal style, maximum = bold, average = underscored
 
 .. figure:: images/sumupupstream-resultat.jpg
 
@@ -107,7 +109,7 @@ Flow times downstream
 
 * This is a tool in the QGEP-toolbox.
 
-* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool (use the **sum up upstream** tool for this task).
+* The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool (use the SumUpTool_ tool for this task).
 
 * For this tool you need a layer (table) in the QGEP-project with the flowtime per reach and the obj_id of the reach.
 
@@ -143,4 +145,3 @@ Flow times downstream
   * Do not select vw_qgep_reach as flow time layer (to sum-up the length, use the vw_network_segment layer)
   
   * If the reach id field has no values that match the reach obj_id, you will also get an error
-
