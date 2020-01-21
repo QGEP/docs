@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Plugin Wincan 2 QGEP &mdash; documentation QGEP 0.8</title>
+  <title>5. Plugin Wincan 2 QGEP &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../index.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../index.html"/>
         <link rel="next" title="5.1. Introduction" href="introduction.html"/>
         <link rel="prev" title="4.3. serveur QGIS" href="../vm/server.html"/> 
 
@@ -81,11 +84,11 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">5. Plugin Wincan 2 QGEP</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Plugin Wincan 2 QGEP</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Ouvrir une inspection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Faire correspondre les conduites</a></li>
@@ -119,11 +122,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>5. Plugin Wincan 2 QGEP</li>
+    <li><span class="section-number">5. </span>Plugin Wincan 2 QGEP</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/wincan2qgep/index.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/wincan2qgep/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -134,8 +137,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wincan-2-qgep-plugin">
-<span id="installation-guide"></span><h1>5. Plugin Wincan 2 QGEP<a class="headerlink" href="#wincan-2-qgep-plugin" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ce tutoriel va vous guider dans l&#8217;utilisation du plugin Wincan 2 QGEP, destiné à l&#8217;import des données d&#8217;inspection de Wincan.</p>
+<span id="installation-guide"></span><h1><span class="section-number">5. </span>Plugin Wincan 2 QGEP<a class="headerlink" href="#wincan-2-qgep-plugin" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce tutoriel va vous guider dans l’utilisation du plugin Wincan 2 QGEP, destiné à l’import des données d’inspection de Wincan.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
@@ -148,8 +151,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fixing-issues.html">5.4. Résoudre les problèmes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#length-issues">5.4.1. Problèmes de longueur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Une conduite dans les données d&#8217;inspection correspond à plusieurs conduites dans les données QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Plusieurs conduites dans les données d&#8217;inspection correspondent à une seule conduite dans les données QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Une conduite dans les données d’inspection correspond à plusieurs conduites dans les données QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Plusieurs conduites dans les données d’inspection correspondent à une seule conduite dans les données QGEP</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="import-data.html">5.5. Importer les données</a></li>
@@ -208,6 +211,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

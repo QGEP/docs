@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Indice"
+              href="../genindex.html"/>
+        <link rel="search" title="Cerca" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
         <link rel="up" title="1. QGEP Installation Guide" href="index.html"/>
         <link rel="next" title="1.3. Database initialization" href="database-initialization.html"/>
@@ -84,7 +87,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">1. QGEP Installation Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="requirements.html">1.1. Requirements</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">1.2. Setup database server</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.2. Setup database server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#required-software">1.2.1. Required Software</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#server-installation">1.2.1.1. Server installation</a></li>
 </ul>
@@ -124,13 +127,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">1. QGEP Installation Guide</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">1. </span>QGEP Installation Guide</a> &raquo;</li>
       
-    <li>1.2. Setup database server</li>
+    <li><span class="section-number">1.2. </span>Setup database server</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/installation-guide/server.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/installation-guide/server.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -141,31 +144,32 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-database-server">
-<h1>1.2. Setup database server<a class="headerlink" href="#setup-database-server" title="Link a questa intestazione">¶</a></h1>
+<h1><span class="section-number">1.2. </span>Setup database server<a class="headerlink" href="#setup-database-server" title="Link a questa intestazione">¶</a></h1>
 <p>If you expect to access the data from several different workstations, you can
 install the database on a network accessible server. If it is just a single
 desktop you are working on, this can be installed on the same machine.</p>
 <div class="section" id="required-software">
-<h2>1.2.1. Required Software<a class="headerlink" href="#required-software" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">1.2.1. </span>Required Software<a class="headerlink" href="#required-software" title="Link a questa intestazione">¶</a></h2>
 <div class="section" id="server-installation">
-<h3>1.2.1.1. Server installation<a class="headerlink" href="#server-installation" title="Link a questa intestazione">¶</a></h3>
+<h3><span class="section-number">1.2.1.1. </span>Server installation<a class="headerlink" href="#server-installation" title="Link a questa intestazione">¶</a></h3>
 <ul class="simple">
-<li>Install PostgreSQL (&gt;=9.6)<ul>
-<li><a class="reference external" href="http://www.postgresql.org/download/windows">Windows download page</a></li>
+<li><p>Install PostgreSQL (&gt;=9.6)</p>
+<ul>
+<li><p><a class="reference external" href="http://www.postgresql.org/download/windows">Windows download page</a></p></li>
 </ul>
 </li>
-<li>Install PostGIS (&gt;=2.4)</li>
+<li><p>Install PostGIS (&gt;=2.4)</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
+<p class="admonition-title">Nota</p>
 <p>In a single desktop environment (no network database server) you can setup
 your database to trust local connections.</p>
-<p>This way, the database won&#8217;t ask for a password if you&#8217;re connecting from your
+<p>This way, the database won’t ask for a password if you’re connecting from your
 local workstation while no password is written  anywhere. You even can do
 with no database password at all.</p>
-<p class="last">This can be done by editing the database access configuration file
+<p>This can be done by editing the database access configuration file
 <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
-and set the auth-options from <code class="docutils literal"><span class="pre">md5</span></code> to <code class="docutils literal"><span class="pre">trust</span></code>. A database service reload
+and set the auth-options from <code class="docutils literal notranslate"><span class="pre">md5</span></code> to <code class="docutils literal notranslate"><span class="pre">trust</span></code>. A database service reload
 is required to activate changes.</p>
 </div>
 </div>
@@ -222,6 +226,7 @@ is required to activate changes.</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

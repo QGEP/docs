@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.2. Digitalisieren in QGEP" href="index.html"/>
         <link rel="next" title="2.2.7. Digitalisierung der Einzugsgebiete" href="digitizingcatchments.html"/>
@@ -91,7 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitalisieren detaillierter Geometrie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Kanäle Digitalisieren</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.6. Objekte löschen</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.6. Objekte löschen</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#delete-reaches">2.2.6.1. Haltungen löschen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-wastewater-structures">2.2.6.2. Normschächte und andere Abwasserbauwerke löschen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-covers">2.2.6.3. Deckel löschen</a></li>
@@ -136,15 +139,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP Benutzerhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Digitalisieren in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Digitalisieren in QGEP</a> &raquo;</li>
       
-    <li>2.2.6. Objekte löschen</li>
+    <li><span class="section-number">2.2.6. </span>Objekte löschen</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/deletingobjects.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/deletingobjects.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,110 +158,85 @@
            <div itemprop="articleBody">
             
   <div class="section" id="deleting-objects">
-<h1>2.2.6. Objekte löschen<a class="headerlink" href="#deleting-objects" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.2.6. </span>Objekte löschen<a class="headerlink" href="#deleting-objects" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Sie können Punkt- oder Linienobjekte (mit allen zugehörigen Objekten) mit den <strong>vw_ggep_(wastewater_structure/reach)</strong> Layern löschen. Sie können auch nur ein spezifisches Objekt auswählen und löschen (z.B. Deckel).</p>
 <div class="section" id="delete-reaches">
-<h2>2.2.6.1. Haltungen löschen<a class="headerlink" href="#delete-reaches" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.6.1. </span>Haltungen löschen<a class="headerlink" href="#delete-reaches" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie <strong>vw_qgep_reach</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
-</li>
-<li><p class="first">Wählen Sie die Haltung(en), die Sie löschen möchten. Sie können auf ein Objekt drücken oder eine Fläche zeichnen.</p>
-</li>
+<li><p>Wählen Sie <strong>vw_qgep_reach</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
+<li><p>Wählen Sie die Haltung(en), die Sie löschen möchten. Sie können auf ein Objekt drücken oder eine Fläche zeichnen.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Benutzen Sie das Menü <strong>Bearbeiten</strong> &#8211;&gt; <strong>Ausgewähltes löschen</strong>  zum löschen.</p>
-</li>
+<li><p>Benutzen Sie das Menü <strong>Bearbeiten</strong> –&gt; <strong>Ausgewähltes löschen</strong>  zum löschen.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
+<p class="admonition-title">Bemerkung</p>
 <p>Am einfachsten ist es, die <strong>Delete</strong> Taste auf Ihrer Tastatur zu drücken. Oder Sie können den <strong>Delete</strong> Knopf anklicken, welcher sich in der <strong>Digitizing toolbar</strong> befindet.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/delete_button.jpg" src="../../_images/delete_button.jpg" />
 </div>
-<p class="last">Abhängig von ihren QGIS&#8211; Einstellungen kann die <strong>Digitizing Toolbar</strong> versteckt sein oder sich an einem anderen Ort befinden.</p>
+<p>Abhängig von ihren QGIS– Einstellungen kann die <strong>Digitizing Toolbar</strong> versteckt sein oder sich an einem anderen Ort befinden.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p>
-</li>
+<li><p>Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Das Löschen von Haltung entfernt ebenfalls verbundene Bauwerke. Der korrespondierende Kanal wird nur gelöscht, falls kein weiteres Abwasserbauwerk verbunden ist. Wenn zwei Haltungen an einen Kanal gebunden sind, wird dieser nur gelöscht, wenn beide Haltungen entfernt wurden.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Das Löschen von Haltung entfernt ebenfalls verbundene Bauwerke. Der korrespondierende Kanal wird nur gelöscht, falls kein weiteres Abwasserbauwerk verbunden ist. Wenn zwei Haltungen an einen Kanal gebunden sind, wird dieser nur gelöscht, wenn beide Haltungen entfernt wurden.</p>
 </div>
 </div>
 <div class="section" id="delete-manholes-and-other-wastewater-structures">
-<h2>2.2.6.2. Normschächte und andere Abwasserbauwerke löschen<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.6.2. </span>Normschächte und andere Abwasserbauwerke löschen<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
-</li>
-<li><p class="first">Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.), welches Sie löschen möchten</p>
-</li>
-<li><p class="first">Zum löschen benutzen Sie <strong>Bearbeiten</strong> &#8211;&gt;**Ausgewähltes löschen** .</p>
-</li>
-<li><p class="first">Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p>
-</li>
+<li><p>Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
+<li><p>Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.), welches Sie löschen möchten</p></li>
+<li><p>Zum löschen benutzen Sie <strong>Bearbeiten</strong> –&gt;**Ausgewähltes löschen** .</p></li>
+<li><p>Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Wenn ein Abwasserbauwerk gelöscht wird, werden auch alle verknüpften Bauwerksteile und Abwasserknoten gelöscht.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn ein Abwasserbauwerk gelöscht wird, werden auch alle verknüpften Bauwerksteile und Abwasserknoten gelöscht.</p>
 </div>
 </div>
 <div class="section" id="delete-covers">
-<h2>2.2.6.3. Deckel löschen<a class="headerlink" href="#delete-covers" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.6.3. </span>Deckel löschen<a class="headerlink" href="#delete-covers" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
-</li>
-<li><p class="first">Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.) von welchem Sie den/einen Deckel löschen möchten.</p>
-</li>
-<li><p class="first">Benutzen Sie das Werkzeug <strong>Objekte abfragen</strong>, um das Formular zu öffnen</p>
-</li>
-<li><p class="first">Wechseln Sie zum Deckel -Reiter</p>
-</li>
-<li><p class="first">Wählen Sie den(die) Deckel, welche Sie löschen möchten</p>
-</li>
-<li><p class="first">Klicken Sie auf den roten X Knopf, um die Deckel zu löschen</p>
-</li>
+<li><p>Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
+<li><p>Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.) von welchem Sie den/einen Deckel löschen möchten.</p></li>
+<li><p>Benutzen Sie das Werkzeug <strong>Objekte abfragen</strong>, um das Formular zu öffnen</p></li>
+<li><p>Wechseln Sie zum Deckel -Reiter</p></li>
+<li><p>Wählen Sie den(die) Deckel, welche Sie löschen möchten</p></li>
+<li><p>Klicken Sie auf den roten X Knopf, um die Deckel zu löschen</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/delete_covers.jpg" src="../../_images/delete_covers.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Klicken Sie im Formular auf Speichern</p>
-</li>
-<li><p class="first">Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p>
-</li>
-<li><p class="first">Ein 2. Möglichkeit einen Deckel zu löschen: Den Layer <strong>vw_qgep_cover</strong> auswählen und den Bearbeitungsmodus starten, den Deckel auswählen, im Menü <strong>Bearbeiten</strong> &#8211;&gt; <strong>Ausgewähltes löschen</strong> wählen, den Bearbeitungsmodus beenden</p>
-</li>
+<li><p>Klicken Sie im Formular auf Speichern</p></li>
+<li><p>Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
+<li><p>Ein 2. Möglichkeit einen Deckel zu löschen: Den Layer <strong>vw_qgep_cover</strong> auswählen und den Bearbeitungsmodus starten, den Deckel auswählen, im Menü <strong>Bearbeiten</strong> –&gt; <strong>Ausgewähltes löschen</strong> wählen, den Bearbeitungsmodus beenden</p></li>
 </ul>
 </div>
 <div class="section" id="delete-structure-parts">
-<h2>2.2.6.4. Bauwerksteile löschen<a class="headerlink" href="#delete-structure-parts" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.6.4. </span>Bauwerksteile löschen<a class="headerlink" href="#delete-structure-parts" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p>
-</li>
-<li><p class="first">Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.) von welchem Sie Bauwerksteile löschen möchten.</p>
-</li>
-<li><p class="first">Benutzen Sie das Werkzeug <strong>Objekte abfragen</strong>, um das Formular zu öffnen</p>
-</li>
-<li><p class="first">Wechseln Sie zum Reiter &#8220;Bauwerksteile&#8221;</p>
-</li>
-<li><p class="first">Wählen Sie die Bauwerksteile, welche Sie löschen möchten</p>
-</li>
-<li><p class="first">Klicken Sie auf den roten X Knopf um die Bauwerksteile zu löschen</p>
-</li>
-<li><p class="first">Klicken Sie im Formular auf Speichern</p>
-</li>
-<li><p class="first">Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p>
-</li>
+<li><p>Wählen Sie <strong>vw_qgep_wastewater_structure</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
+<li><p>Wählen Sie das Objekt (<strong>manholes</strong>, <strong>special structures</strong> etc.) von welchem Sie Bauwerksteile löschen möchten.</p></li>
+<li><p>Benutzen Sie das Werkzeug <strong>Objekte abfragen</strong>, um das Formular zu öffnen</p></li>
+<li><p>Wechseln Sie zum Reiter „Bauwerksteile“</p></li>
+<li><p>Wählen Sie die Bauwerksteile, welche Sie löschen möchten</p></li>
+<li><p>Klicken Sie auf den roten X Knopf um die Bauwerksteile zu löschen</p></li>
+<li><p>Klicken Sie im Formular auf Speichern</p></li>
+<li><p>Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
 </div>
 </div>
@@ -313,6 +291,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

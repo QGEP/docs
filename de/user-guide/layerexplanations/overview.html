@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.1. Übersicht über QGEP" href="index.html"/>
         <link rel="next" title="2.1.2. Layer Erläuterungen" href="layerexplanation.html"/>
@@ -85,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Übersicht über QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.1. Einleitung und Übersicht</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Einleitung und Übersicht</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanation.html">2.1.2. Layer Erläuterungen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="addviewlayer.html">2.1.3. View Layer hinzufügen</a></li>
 </ul>
@@ -125,15 +128,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP Benutzerhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
       
-          <li><a href="index.html">2.1. Übersicht über QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>Übersicht über QGEP</a> &raquo;</li>
       
-    <li>2.1.1. Einleitung und Übersicht</li>
+    <li><span class="section-number">2.1.1. </span>Einleitung und Übersicht</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/layerexplanations/overview.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/layerexplanations/overview.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,30 +146,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="figure">
+  <div class="figure align-default">
 <img alt="../../_images/qgep_title.png" src="../../_images/qgep_title.png" />
 </div>
 <div class="section" id="introduction-and-overview">
-<h1>2.1.1. Einleitung und Übersicht<a class="headerlink" href="#introduction-and-overview" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.1.1. </span>Einleitung und Übersicht<a class="headerlink" href="#introduction-and-overview" title="Link zu dieser Überschrift">¶</a></h1>
 <p><strong>QGEP</strong> ist eine Sammlung von Werkzeugen und eine GIS-Datenbank Umsetzung, um  Abwasser- und GEP-Daten in der Datenstruktur VSA-DSS bearbeiten zu können.</p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Die Datenstruktur Siedlungsentwässerung des Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), abgekürzt VSA-DSS wurde 1999 publiziert und ist seither der gültige Standard Generelle Entwässerungsplanung (GEP). Wenn die VSA-DSS angewendet wird, wird auch die SIA405 Abwasser gemäss der <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016) befolgt</a>. Weiter Infos auf der Homepage des <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
+<p class="admonition-title">Bemerkung</p>
+<p>Die Datenstruktur Siedlungsentwässerung des Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), abgekürzt VSA-DSS wurde 1999 publiziert und ist seither der gültige Standard Generelle Entwässerungsplanung (GEP). Wenn die VSA-DSS angewendet wird, wird auch die SIA405 Abwasser gemäss der <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016) befolgt</a>. Weiter Infos auf der Homepage des <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Die Datenbank Umsetzung in PostgreSQL entspricht der Version 2015 des VSA-DSS Datenmodels, inklusive der Erweiterung VSA-KEK für Kanalfernsehuntersuchungen.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Die Datenbank Umsetzung in PostgreSQL entspricht der Version 2015 des VSA-DSS Datenmodels, inklusive der Erweiterung VSA-KEK für Kanalfernsehuntersuchungen.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Es wird empfohlen, durch den Kauf der <strong>CD VSA-DSS</strong> im VSA Shop die Lizenz für das Datenmodell zu erwerben. Damit erhält man auch den INTERLIS Beschrieb, die Objektkataloge sowie zusätzlichen Beschreibungen und Dokumentation zu den Transfer-Datensätzen und der Modellabbildung. <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a></p>
+<p class="admonition-title">Bemerkung</p>
+<p>Es wird empfohlen, durch den Kauf der <strong>CD VSA-DSS</strong> im VSA Shop die Lizenz für das Datenmodell zu erwerben. Damit erhält man auch den INTERLIS Beschrieb, die Objektkataloge sowie zusätzlichen Beschreibungen und Dokumentation zu den Transfer-Datensätzen und der Modellabbildung. <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a></p>
 </div>
-<p>Für die Arbeit mit QGEP ist es wichtig, die folgenden Richtlinien zu kennen: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> mit einer Anleitung aus der Praxis für das Modellieren der Realität im GIS und im hydraulischen Modell des VSA und dort speziell die Beilage &#8220;<strong>Erfassungsgrundsätze</strong>&#8221; .</p>
+<p>Für die Arbeit mit QGEP ist es wichtig, die folgenden Richtlinien zu kennen: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> mit einer Anleitung aus der Praxis für das Modellieren der Realität im GIS und im hydraulischen Modell des VSA und dort speziell die Beilage „<strong>Erfassungsgrundsätze</strong>“ .</p>
 <p>Das ist wichtig, denn mit der VSA-DSS werden nicht nur Schächte und Kanäle (also der bauliche Teil der Abwasserbauwerke) erfasst, sondern mit den Abwasserknoten und Haltungen (Abwassernetzlemente) wird auch das hydraulische Modell des Abwassernetzes aufgebaut.</p>
 <p>Es ist wichtig, den Unterschied zwischen <strong>primären und sekundären Abwasseranlagen</strong> (PAA / SAA) zu kennen. In PAA- und SAA-Netzen gelten nicht die gleichen Regeln für das Platzieren von Abwasserknoten. Einzugsgebiete sollen nur auf PAA-Abwasserelemente verknüpft werden. Haltungen werden immer in Fliessrichtung (Fliessrichtung bei Normalabfluss), also von oben nach unten erzeugt werden.</p>
-<p>QGEP nutzt zwei Hauptlayer für das Erfassen und Bearbeiten der Daten der Abwasserbauwerke: <strong>vw_qgep_wastewater_structure</strong> für Schachtbauwerke und <strong>vw_qgep_reach</strong> für Haltungen/Kanäle. Um diese Hauptlayer zu bearbeiten ist ein sepzieller Wizard (&#8220;Zauberer&#8221;) und vorkonfigurierte Eingabefenster für diese Layer vorhanden.  Das Ziel ist es, mit dieser Konfiguration 95% der Schächte und Kanäle mit den Attributfeldern auf dem Generell Tab des Eingabefensters und damit mit möglichst wenigen Mausklicks erfassen zu können (trotz dem relativ komplexen Datenmodell mit verschiedenen involvierten Klassen).</p>
+<p>QGEP nutzt zwei Hauptlayer für das Erfassen und Bearbeiten der Daten der Abwasserbauwerke: <strong>vw_qgep_wastewater_structure</strong> für Schachtbauwerke und <strong>vw_qgep_reach</strong> für Haltungen/Kanäle. Um diese Hauptlayer zu bearbeiten ist ein sepzieller Wizard („Zauberer“) und vorkonfigurierte Eingabefenster für diese Layer vorhanden.  Das Ziel ist es, mit dieser Konfiguration 95% der Schächte und Kanäle mit den Attributfeldern auf dem Generell Tab des Eingabefensters und damit mit möglichst wenigen Mausklicks erfassen zu können (trotz dem relativ komplexen Datenmodell mit verschiedenen involvierten Klassen).</p>
 <p><strong>QGEP Wizard</strong></p>
-<p>Die Benutzung des Wizard (<a class="reference internal" href="../digitizing/digitizingwastewaterstructures.html#digitizing-wastewater-structures"><span>Abwasserbauwerke digitalisieren</span></a>) ist speziell für das Digitalisieren von Haltungen empohlen, weil damit das Schnappen und Verknüpfen auf Abwasserknoten bevorzugt unterstützt wird. Wenn das QGIS - Linienobjekt hinzufügen - Werkzeug verwendet wird, können die Abwasserknoten für das Verknüpfen nicht so einfach ausgewählt werden.</p>
+<p>Die Benutzung des Wizard (<a class="reference internal" href="../digitizing/digitizingwastewaterstructures.html#digitizing-wastewater-structures"><span class="std std-ref">Abwasserbauwerke digitalisieren</span></a>) ist speziell für das Digitalisieren von Haltungen empohlen, weil damit das Schnappen und Verknüpfen auf Abwasserknoten bevorzugt unterstützt wird. Wenn das QGIS - Linienobjekt hinzufügen - Werkzeug verwendet wird, können die Abwasserknoten für das Verknüpfen nicht so einfach ausgewählt werden.</p>
 </div>
 
 
@@ -219,6 +222,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1. Introduction &mdash; documentation QGEP 0.8</title>
+  <title>5.1. Introduction &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../index.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../index.html"/>
         <link rel="up" title="5. Plugin Wincan 2 QGEP" href="index.html"/>
         <link rel="next" title="5.2. Ouvrir une inspection" href="open-inspection.html"/>
         <link rel="prev" title="5. Plugin Wincan 2 QGEP" href="index.html"/> 
@@ -82,12 +85,12 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Plugin Wincan 2 QGEP</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.1. Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Ouvrir une inspection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Faire correspondre les conduites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">5.4. Résoudre les problèmes</a></li>
@@ -120,13 +123,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">5. Plugin Wincan 2 QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">5. </span>Plugin Wincan 2 QGEP</a> &raquo;</li>
       
-    <li>5.1. Introduction</li>
+    <li><span class="section-number">5.1. </span>Introduction</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/wincan2qgep/introduction.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/wincan2qgep/introduction.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -137,11 +140,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="introduction">
-<h1>5.1. Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p><a class="reference external" href="https://github.com/QGEP/qgis_wincan2qgep">Wincan 2 QGEP</a> est un plugin QGIS pour l&#8217;import des données d&#8217;inspection Wincan dans QGEP.
-A l&#8217;heure actuelle, il fonctionne uniquement avec le format Wincan 8, mais une mise à niveau est prévue pour supporter Wincan VX et/ou le format pur  <a class="reference external" href="https://www.vsa.ch/en/fachbereiche-cc/siedlungsentwaesserung/vsa-dss/datenmodell/">VSA-DSS</a> KEK.</p>
-<p>Ce plugin peut être décrit comme une procédure de mise en correspondance entre les données d&#8217;inspection TV et les données du réseau.</p>
-<p>Le plugin va lire le fichier XML à partir des données et offrir une interface pour rechercher et sélectionner sur la carte les conduites correspondantes à celles provenant des données d&#8217;inspection. Une fois cette correspondance établie, les données pourront être importées dans QGEP.</p>
+<h1><span class="section-number">5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://github.com/QGEP/qgis_wincan2qgep">Wincan 2 QGEP</a> est un plugin QGIS pour l’import des données d’inspection Wincan dans QGEP.
+A l’heure actuelle, il fonctionne uniquement avec le format Wincan 8, mais une mise à niveau est prévue pour supporter Wincan VX et/ou le format pur  <a class="reference external" href="https://www.vsa.ch/en/fachbereiche-cc/siedlungsentwaesserung/vsa-dss/datenmodell/">VSA-DSS</a> KEK.</p>
+<p>Ce plugin peut être décrit comme une procédure de mise en correspondance entre les données d’inspection TV et les données du réseau.</p>
+<p>Le plugin va lire le fichier XML à partir des données et offrir une interface pour rechercher et sélectionner sur la carte les conduites correspondantes à celles provenant des données d’inspection. Une fois cette correspondance établie, les données pourront être importées dans QGEP.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
     <iframe src="https://www.youtube.com/embed/72s6_YnSZas" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div></div>
@@ -196,6 +199,7 @@ A l&#8217;heure actuelle, il fonctionne uniquement avec le format Wincan 8, mais
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

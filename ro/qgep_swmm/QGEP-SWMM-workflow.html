@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6.2. QGEP-SWMM workflow &mdash; QGEP 0.8 documentation</title>
+  <title>6.2. QGEP-SWMM workflow &mdash; QGEP 0.8 documentație</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="QGEP 0.8 documentation" href="../index.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Căutare" href="../search.html"/>
+    <link rel="top" title="QGEP 0.8 documentație" href="../index.html"/>
         <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
         <link rel="next" title="6.3. SWMM Create DB Tables" href="Create-DB-tables.html"/>
         <link rel="prev" title="6.1. QGEP-SWMM installation" href="QGEP-SWMM-installation.html"/> 
@@ -89,7 +92,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.2. QGEP-SWMM workflow</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2. QGEP-SWMM workflow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#workflow">6.2.1. Workflow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gep-project">6.2.2. GEP project</a></li>
 </ul>
@@ -126,13 +129,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">6. QGEP SWMM plugin</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
       
-    <li>6.2. QGEP-SWMM workflow</li>
+    <li><span class="section-number">6.2. </span>QGEP-SWMM workflow</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/qgep_swmm/QGEP-SWMM-workflow.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/qgep_swmm/QGEP-SWMM-workflow.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,38 +146,38 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qgep-swmm-workflow">
-<span id="id1"></span><h1>6.2. QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">6.2. </span>QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Link permanent la acest titlu">¶</a></h1>
 <div class="section" id="workflow">
-<h2>6.2.1. Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2.1. </span>Workflow<a class="headerlink" href="#workflow" title="Link permanent la acest titlu">¶</a></h2>
 <p>In the QGEP processing tool, there are four SWMM processes:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code> generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.</li>
-<li><code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code> reads data from the PostgreSQL tables (schema <code class="docutils literal"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code> generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code> reads data from the PostgreSQL tables (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</p></li>
 </ol>
-<p>3. <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Execute</span></code> launches SWMM. Its likely that the <code class="docutils literal"><span class="pre">.inp</span></code> file generated in the previous step contains error.
-In this case, the <code class="docutils literal"><span class="pre">.inp</span></code> file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors.
-Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal"><span class="pre">.inp</span></code> file with SWMM GUI.
-4. <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code> parses the result file and generates three QGIS table layers.
+<p>3. <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code> launches SWMM. Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains error.
+In this case, the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors.
+Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.
+4. <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code> parses the result file and generates three QGIS table layers.
 5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.</p>
 </div>
 <div class="section" id="gep-project">
-<h2>6.2.2. GEP project<a class="headerlink" href="#gep-project" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2.2. </span>GEP project<a class="headerlink" href="#gep-project" title="Link permanent la acest titlu">¶</a></h2>
 <p><strong>WORK IN PROGRESS: This section must be completed with end users</strong></p>
 <p>Usually, a GEP analysis has at least three steps:</p>
 <ol class="arabic simple">
-<li>The current state of the network is analysed</li>
-<li>The aimed state (available areas are built at 100%) is analysed.</li>
-<li>Several variants are tested and analysed</li>
+<li><p>The current state of the network is analysed</p></li>
+<li><p>The aimed state (available areas are built at 100%) is analysed.</p></li>
+<li><p>Several variants are tested and analysed</p></li>
 </ol>
 <p><strong>Minimal parameters to be set</strong></p>
-<p><code class="docutils literal"><span class="pre">Time</span> <span class="pre">series</span></code>: Create a time serie for the rain. The time series have to be linked to the raingages <code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Rain</span> <span class="pre">Gages</span></code> (which are linked to the subcatchments)</p>
-<p><code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchment</span></code>: Set percent of of impervious area and infiltration parameters</p>
+<p><code class="docutils literal notranslate"><span class="pre">Time</span> <span class="pre">series</span></code>: Create a time serie for the rain. The time series have to be linked to the raingages <code class="docutils literal notranslate"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Rain</span> <span class="pre">Gages</span></code> (which are linked to the subcatchments)</p>
+<p><code class="docutils literal notranslate"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchment</span></code>: Set percent of of impervious area and infiltration parameters</p>
 <p><strong>Optional parameters</strong></p>
-<p><code class="docutils literal"><span class="pre">Climatology</span> <span class="pre">&gt;</span> <span class="pre">Evaporation</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Climatology</span> <span class="pre">&gt;</span> <span class="pre">Evaporation</span></code></p>
 <p><strong>Run aimed state simulation</strong></p>
 <ul class="simple">
-<li>Copy the <code class="docutils literal"><span class="pre">inp</span></code> file used for the previous simulation</li>
-<li>Increase the impervious areas:<code class="docutils literal"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchements</span> <span class="pre">&gt;</span> <span class="pre">%</span> <span class="pre">Imperv</span></code></li>
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">inp</span></code> file used for the previous simulation</p></li>
+<li><p>Increase the impervious areas:<code class="docutils literal notranslate"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchements</span> <span class="pre">&gt;</span> <span class="pre">%</span> <span class="pre">Imperv</span></code></p></li>
 </ul>
 <p><strong>Run variants (network is modified)</strong></p>
 <p>New links and new nodes are created directly in SWMM GUI</p>
@@ -231,6 +234,8 @@ Similarly, if you need to tune the simulation parameters, you have to edit the <
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
 
   
 

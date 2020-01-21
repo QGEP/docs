@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.2. Digitizing Wastewater Structures &mdash; QGEP 0.8 documentation</title>
+  <title>2.2.2. Digitizing Wastewater Structures &mdash; QGEP 0.8 documentație</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="QGEP 0.8 documentation" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Căutare" href="../../search.html"/>
+    <link rel="top" title="QGEP 0.8 documentație" href="../../index.html"/>
         <link rel="up" title="2.2. Digitizing in QGEP" href="index.html"/>
         <link rel="next" title="2.2.3. Digitizing detailed geometry" href="digitizingdetailedgeometry.html"/>
         <link rel="prev" title="2.2.1. Data entry" href="dataentry.html"/> 
@@ -87,7 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Digitizing in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Data entry</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Digitizing Wastewater Structures</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.2. Digitizing Wastewater Structures</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.2.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.2.2. Digitizing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.2.3. Further attributes and classes</a></li>
@@ -136,15 +139,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Digitizing in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Digitizing in QGEP</a> &raquo;</li>
       
-    <li>2.2.2. Digitizing Wastewater Structures</li>
+    <li><span class="section-number">2.2.2. </span>Digitizing Wastewater Structures</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingwastewaterstructures.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingwastewaterstructures.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,82 +158,82 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-wastewater-structures">
-<span id="id1"></span><h1>2.2.2. Digitizing Wastewater Structures<a class="headerlink" href="#digitizing-wastewater-structures" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">2.2.2. </span>Digitizing Wastewater Structures<a class="headerlink" href="#digitizing-wastewater-structures" title="Link permanent la acest titlu">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.2.1. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.2.1. </span>General<a class="headerlink" href="#general" title="Link permanent la acest titlu">¶</a></h2>
 <p>QGEP has a wizard to correctly collect manholes and special structures. see the <span class="xref std std-ref">wizard</span> chapter.</p>
 <p>Select the <strong>Wizard</strong> button, then click <strong>Start Data Entry</strong> and choose <strong>Wastewater Structure</strong> in the pull down menu.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
 </div>
 <div class="section" id="digitizing">
-<h2>2.2.2.2. Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.2.2. </span>Digitizing<a class="headerlink" href="#digitizing" title="Link permanent la acest titlu">¶</a></h2>
 <p>Now the cursor changes to the digitizing symbol and you can select the location of the new point element.</p>
 <p>Then the <strong>vw_qgep_wastewater_structure</strong> form opens and you can start adding data in the <strong>General</strong> tab:</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" />
 </div>
-<p>Select the ws_type you want (preselected is &#8216;manhole&#8217;):</p>
+<p>Select the ws_type you want (preselected is «manhole»):</p>
 <ul class="simple">
-<li>manhole</li>
-<li>special_structure</li>
-<li>discharge_point</li>
-<li>infiltration_installation</li>
+<li><p>manhole</p></li>
+<li><p>special_structure</p></li>
+<li><p>discharge_point</p></li>
+<li><p>infiltration_installation</p></li>
 </ul>
 <p>Depending on the <strong>ws_type</strong>, you will have different fields and tabs in the form.</p>
 <p>Then add the identifier (this is the attribute that will be displayed on the map).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you do not enter an identifier, QGEP will enter the obj_id also as identifier (you can change later). As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
+<p class="admonition-title">Notă</p>
+<p>If you do not enter an identifier, QGEP will enter the obj_id also as identifier (you can change later). As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.</p>
 </div>
 <p>Add other attributes in the <strong>General</strong> tab.
 You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The idea of the <strong>General</strong> tab is, that in the normal digitizing process (95% of the manholes) the user has not to change the tabs to enter the attributes that are necessary.</p>
+<p class="admonition-title">Notă</p>
+<p>The idea of the <strong>General</strong> tab is, that in the normal digitizing process (95% of the manholes) the user has not to change the tabs to enter the attributes that are necessary.</p>
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">You can not add new records in the tabs <strong>Covers</strong>, <strong>Structure Parts</strong>, <strong>Wastewater Nodes</strong> and <strong>Maintenance</strong>, because you have to save first the Wastewater Structure-record to the database before you can add additional records. You can not use <strong>Actions</strong> for the same reason. First safe the record.</p>
+<p class="admonition-title">Atenție</p>
+<p>You can not add new records in the tabs <strong>Covers</strong>, <strong>Structure Parts</strong>, <strong>Wastewater Nodes</strong> and <strong>Maintenance</strong>, because you have to save first the Wastewater Structure-record to the database before you can add additional records. You can not use <strong>Actions</strong> for the same reason. First safe the record.</p>
 </div>
 <p>Click <strong>OK</strong> to close the form.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
 </div>
 <p>Save the information of this layer by stopping the data entry wizard</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
 <p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
 If you do not select the edit mode, you can just look add the existing data.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
 </div>
-<p>For detailed information about editing see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</p>
+<p>For detailed information about editing see the <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Editing of existing data</span></a> chapter.</p>
 </div>
 <div class="section" id="further-attributes-and-classes">
-<h2>2.2.2.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.2.3. </span>Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link permanent la acest titlu">¶</a></h2>
 <p>When a wastewater_structure object is digitized a series of steps take place in the background in the QGIS database:</p>
 <ol class="loweralpha simple">
-<li>an new object in the class wastewater structure is added</li>
-<li>a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked</li>
-<li>a new cover object is added and linked to the wastewater structure</li>
-<li>a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes</li>
+<li><p>an new object in the class wastewater structure is added</p></li>
+<li><p>a new object in the respective subclass [discharge_point, infiltration_installation, manhole, special_structure] is added and linked</p></li>
+<li><p>a new cover object is added and linked to the wastewater structure</p></li>
+<li><p>a new wastewater node object is generated in wastewater network elements and its subclass wastewater nodes</p></li>
 </ol>
-<p>To add additional objects such as structure parts (besides covers there are access aids, back flow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter).</p>
+<p>To add additional objects such as structure parts (besides covers there are access aids, back flow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Editing of existing data</span></a> chapter).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To add a second cover or a second wastewater node to a wastewater structure, see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</p>
+<p class="admonition-title">Notă</p>
+<p>To add a second cover or a second wastewater node to a wastewater structure, see the <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Editing of existing data</span></a> chapter.</p>
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2>2.2.2.4. Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Permalink to this headline">¶</a></h2>
-<p>The added feature&#8217;s geometry defines the geometry of the connected tables like cover and wastewater node. The Z value of the geometry can be set by defining the level-values. This means when the level of the cover <cite>co_level</cite> is entered, this value is adapted to the Z value of the cover&#8217;s geometry. The bottom level of the wastewater node <cite>wn_bottom_level</cite> defines the Z value of the wastewater node&#8217;s geometry.
+<h2><span class="section-number">2.2.2.4. </span>Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Link permanent la acest titlu">¶</a></h2>
+<p>The added feature’s geometry defines the geometry of the connected tables like cover and wastewater node. The Z value of the geometry can be set by defining the level-values. This means when the level of the cover <cite>co_level</cite> is entered, this value is adapted to the Z value of the cover’s geometry. The bottom level of the wastewater node <cite>wn_bottom_level</cite> defines the Z value of the wastewater node’s geometry.
 The geometry of the wastewater structure feature corresponds to the one of the cover. This means, the Z geometry of the digitized feature is actually the entered value on <cite>co_level</cite>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If a cover level changes, the Z value of the cover&#8217;s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it&#8217;s like when both value change. Means the cover&#8217;s geometry is set according to the cover level and if it&#8217;s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
+<p class="admonition-title">Notă</p>
+<p>If a cover level changes, the Z value of the cover’s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it’s like when both value change. Means the cover’s geometry is set according to the cover level and if it’s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
 </div>
 </div>
 </div>
@@ -285,6 +288,8 @@ The geometry of the wastewater structure feature corresponds to the one of the c
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
 

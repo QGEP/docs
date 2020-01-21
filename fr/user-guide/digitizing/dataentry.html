@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.1. Saisie de données &mdash; documentation QGEP 0.8</title>
+  <title>2.2.1. Saisie de données &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Recherche" href="../../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.2. Numériser les structures assainissement" href="digitizingwastewaterstructures.html"/>
         <link rel="prev" title="2.2. Numérisation dans QGEP" href="index.html"/> 
@@ -82,12 +85,12 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d’utilisateur de QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.1. Saisie de données</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#the-qgep-wizard">2.2.1.1. L&#8217;assistant QGEP</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.1. Saisie de données</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-qgep-wizard">2.2.1.1. L’assistant QGEP</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#qgis-standard-tools">2.2.1.2. Outils standards de QGIS</a></li>
 </ul>
 </li>
@@ -95,7 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d’objets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="importingdata.html">2.2.8. Importing data</a></li>
 </ul>
@@ -106,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
@@ -134,15 +137,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>Guide d’utilisateur de QGEP</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.1. Saisie de données</li>
+    <li><span class="section-number">2.2.1. </span>Saisie de données</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/dataentry.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/dataentry.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,69 +156,60 @@
            <div itemprop="articleBody">
             
   <div class="section" id="data-entry">
-<h1>2.2.1. Saisie de données<a class="headerlink" href="#data-entry" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.1. </span>Saisie de données<a class="headerlink" href="#data-entry" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Elle peut se faire de deux façons:</p>
 <ul>
-<li><p class="first">Saisie de données par construction ou numérisation dans QGEP avec l&#8217;outil d&#8217;assistance à la saisie ou directement avec les outils de QGIS</p>
-</li>
-<li><p class="first">En saisissant les données dans un programme/logiciel externe puis en important les positions et/ou données techniques dans le modèle QGEP, par exemple:</p>
+<li><p>Saisie de données par construction ou numérisation dans QGEP avec l’outil d’assistance à la saisie ou directement avec les outils de QGIS</p></li>
+<li><p>En saisissant les données dans un programme/logiciel externe puis en important les positions et/ou données techniques dans le modèle QGEP, par exemple:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p class="first">coordonnées des chambres provenant de mesures de terrain</p>
-</li>
-<li><p class="first">positions et/ou données techniques provenant d&#8217;un autre système SIG ou DAO</p>
-</li>
-<li><p class="first">En utilisant les données de la mensuration (p. ex. &#8220;limites de parcelles&#8221;) comme base pour définir les limites des bassins versants.</p>
-</li>
-<li><p class="first">autres</p>
-</li>
+<li><p>coordonnées des chambres provenant de mesures de terrain</p></li>
+<li><p>positions et/ou données techniques provenant d’un autre système SIG ou DAO</p></li>
+<li><p>En utilisant les données de la mensuration (p. ex. « limites de parcelles ») comme base pour définir les limites des bassins versants.</p></li>
+<li><p>autres</p></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
-<p>Bien qu&#8217;elle demande une certaine compréhension du modèle de données <a class="reference external" href="http://dss.vsa.ch">VSA-SDEE</a>, la saisie de données dans QGEP est prise en charge par des outils d&#8217;assistance et des formulaires qui permettent de relier correctement les différentes tables. La relation entre les conduites et les structures est ainsi automatisée et peut être contrôlée à travers l&#8217;outil de poursuite du réseau.</p>
+<p>Bien qu’elle demande une certaine compréhension du modèle de données <a class="reference external" href="http://dss.vsa.ch">VSA-SDEE</a>, la saisie de données dans QGEP est prise en charge par des outils d’assistance et des formulaires qui permettent de relier correctement les différentes tables. La relation entre les conduites et les structures est ainsi automatisée et peut être contrôlée à travers l’outil de poursuite du réseau.</p>
 <div class="section" id="the-qgep-wizard">
-<h2>2.2.1.1. L&#8217;assistant QGEP<a class="headerlink" href="#the-qgep-wizard" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L&#8217;assistant QGEP aide à digitaliser les regards et les conduites en quelques clics.</p>
-<p>Pour commencer la saisie de données, sélectionnez le bouton <strong>Wizard</strong> (assistant) de la barre d&#8217;outils QGEP.</p>
-<div class="figure">
+<h2><span class="section-number">2.2.1.1. </span>L’assistant QGEP<a class="headerlink" href="#the-qgep-wizard" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’assistant QGEP aide à digitaliser les regards et les conduites en quelques clics.</p>
+<p>Pour commencer la saisie de données, sélectionnez le bouton <strong>Wizard</strong> (assistant) de la barre d’outils QGEP.</p>
+<div class="figure align-default">
 <img alt="../../_images/button_data_entry_wizard_selected.jpg" src="../../_images/button_data_entry_wizard_selected.jpg" />
 </div>
 <p>Dans le coin inférieur gauche, la fenêtre <strong>Saisie de données QGEP</strong> apparaît:</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
-<p>Cliquez sur <strong>Commencer la saisie de données</strong> pour basculer en mode d&#8217;édition.</p>
+<p>Cliquez sur <strong>Commencer la saisie de données</strong> pour basculer en mode d’édition.</p>
 <p>Choose <strong>Wastewater Structure</strong> or <strong>Reach</strong>. Start adding new feature in vw_qgep_wastewater_structure or vw_qgep_reach.</p>
 <p>There is no need to select the correct layer in the layers-window, you do not need to toggle editing or to choose the add feature tool.</p>
 <p>When adding <strong>new wastewater structures</strong>, the wizard has no additional functionality. To <strong>Reuse the last entered attribute values</strong>, it is necessary (and recommended) to enable this option in <span class="menuselection">Settings ‣ Options ‣ Digitizing</span>.</p>
 <p>When adding <strong>new reaches</strong>, the wizard has some additional functionality:</p>
 <ul class="simple">
-<li><p class="first">La fonction accrochage &#8220;snapping&#8221; sur les nœuds d&#8217;eaux usées et sur les tronçons de réseaux reste activée, même si dans l&#8217;interface QGIS &#8220;Activer la capture&#8221; est désactivée.</p>
-</li>
-<li><p class="first">Privilégier l&#8217;accrochage aux noeuds à l&#8217;accrochage aux conduites.</p>
-</li>
-<li>When the new reach snaps, then the obj_id_links are automatically entered in the fk_fields of the reach points.</li>
-<li>The <strong>Reuse the last entered attribute values</strong> - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value.</li>
+<li><p>La fonction accrochage « snapping » sur les nœuds d’eaux usées et sur les tronçons de réseaux reste activée, même si dans l’interface QGIS « Activer la capture » est désactivée.</p></li>
+<li><p>Privilégier l’accrochage aux noeuds à l’accrochage aux conduites.</p></li>
+<li><p>When the new reach snaps, then the obj_id_links are automatically entered in the fk_fields of the reach points.</p></li>
+<li><p>The <strong>Reuse the last entered attribute values</strong> - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value.</p></li>
 </ul>
 <p>If you use another tool (e.g. the <strong>Identify Features</strong> tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to klick <strong>Stop Data Entry</strong> and then <strong>Start Data Entry</strong> and you can continue.</p>
-<p>Si vous passez de la numérisation de structures assainissement à la numérisation de tronçons, il est recommandé de terminer et recommencer la saisie des données également. Ceci afin d&#8217;enregistrer les nouveaux regards et de permettre aux tronçons de s&#8217;accrocher aux regards nouvellement numérisés également.</p>
+<p>Si vous passez de la numérisation de structures assainissement à la numérisation de tronçons, il est recommandé de terminer et recommencer la saisie des données également. Ceci afin d’enregistrer les nouveaux regards et de permettre aux tronçons de s’accrocher aux regards nouvellement numérisés également.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Lors de la numérisation, il est préférable de commencer avec les éléments points (structures d&#8217;assainissement telles que regards, structures spéciales). Il sera ensuite aisé de connecter ces éléments points avec des éléments linéaires (conduites avec tronçons).</p>
+<p class="admonition-title">Note</p>
+<p>Lors de la numérisation, il est préférable de commencer avec les éléments points (structures d’assainissement telles que regards, structures spéciales). Il sera ensuite aisé de connecter ces éléments points avec des éléments linéaires (conduites avec tronçons).</p>
 </div>
-<p>Il est possible d&#8217;utiliser les outils de <strong>Numérisation avancée</strong> avec l&#8217;assistant de saisie.</p>
+<p>Il est possible d’utiliser les outils de <strong>Numérisation avancée</strong> avec l’assistant de saisie.</p>
 </div>
 <div class="section" id="qgis-standard-tools">
-<h2>2.2.1.2. Outils standards de QGIS<a class="headerlink" href="#qgis-standard-tools" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.1.2. </span>Outils standards de QGIS<a class="headerlink" href="#qgis-standard-tools" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour numériser dans des couches autres que vw_qep_wastewater_structure ou vw_qgep_troncon, il faut utiliser les outils standards de QGIS:</p>
 <ul class="simple">
-<li><p class="first">Sélectionner la couche à éditer</p>
-</li>
-<li>Toggle Editing if necessary</li>
-<li><p class="first">Activer l&#8217;accrochage si nécessaire</p>
-</li>
-<li>Choose the add feature tool</li>
+<li><p>Sélectionner la couche à éditer</p></li>
+<li><p>Toggle Editing if necessary</p></li>
+<li><p>Activer l’accrochage si nécessaire</p></li>
+<li><p>Choose the add feature tool</p></li>
 </ul>
 <p>It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes.</p>
 </div>
@@ -271,6 +265,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

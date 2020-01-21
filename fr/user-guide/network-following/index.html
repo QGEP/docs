@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.5. Outils de poursuite de réseau &mdash; documentation QGEP 0.8</title>
+  <title>2.5. Outils de poursuite de réseau &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Recherche" href="../../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../../index.html"/>
         <link rel="up" title="2. Guide d’utilisateur de QGEP" href="../index.html"/>
         <link rel="next" title="2.6. Impression de plans" href="../plan-plotting/index.html"/>
         <link rel="prev" title="2.4. Profils en long" href="../length-profile/index.html"/> 
@@ -82,23 +85,23 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d’utilisateur de QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Numérisation dans QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Édition dans QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Profils en long</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.5. Outils de poursuite de réseau</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Outils de poursuite de réseau</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#refresh-network-topology">2.5.1. Rafraîchir la topologie du réseau</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upstream">2.5.2. Flux amont</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#downstream">2.5.3. Flux aval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flow-times-downstream">2.5.4. Temps d&#8217;écoulement en amont du réseau.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flow-times-downstream">2.5.4. Temps d’écoulement en amont du réseau.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
@@ -126,13 +129,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>Guide d’utilisateur de QGEP</a> &raquo;</li>
       
-    <li>2.5. Outils de poursuite de réseau</li>
+    <li><span class="section-number">2.5. </span>Outils de poursuite de réseau</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/network-following/index.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/network-following/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,137 +146,111 @@
            <div itemprop="articleBody">
             
   <div class="section" id="network-following-tools">
-<h1>2.5. Outils de poursuite de réseau<a class="headerlink" href="#network-following-tools" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.5. </span>Outils de poursuite de réseau<a class="headerlink" href="#network-following-tools" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="refresh-network-topology">
-<h2>2.5.1. Rafraîchir la topologie du réseau<a class="headerlink" href="#refresh-network-topology" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.5.1. </span>Rafraîchir la topologie du réseau<a class="headerlink" href="#refresh-network-topology" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Avant d&#8217;utiliser l&#8217;outil de suivis de réseau, assurez-vous que la topologie du réseau a été rafraîchie</p>
-</li>
-<li><p class="first">Pour rafraîchir la topologie du réseau, sélectionnez la couche vw_qgep_reach et la mettre en mode d&#8217;édition</p>
-</li>
-<li><p class="first">Cliquer sur l&#8217;outil <strong>refresh network topology</strong> dans le plugin QGEP</p>
-</li>
-<li><p class="first">Le message <strong>Success: Network successfully updated</strong> s&#8217;affiche si cela a fonctionné</p>
-</li>
+<li><p>Avant d’utiliser l’outil de suivis de réseau, assurez-vous que la topologie du réseau a été rafraîchie</p></li>
+<li><p>Pour rafraîchir la topologie du réseau, sélectionnez la couche vw_qgep_reach et la mettre en mode d’édition</p></li>
+<li><p>Cliquer sur l’outil <strong>refresh network topology</strong> dans le plugin QGEP</p></li>
+<li><p>Le message <strong>Success: Network successfully updated</strong> s’affiche si cela a fonctionné</p></li>
 </ul>
 </div>
 <div class="section" id="upstream">
-<h2>2.5.2. Flux amont<a class="headerlink" href="#upstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.5.2. </span>Flux amont<a class="headerlink" href="#upstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Peu importe la couche sélectionnée</p>
-</li>
-<li><p class="first">Pour débuter la poursuite de réseau amont, sélectionnez le bouton <strong>Amont</strong> dans  QGEP et cliquez ensuite sur un noeud:</p>
-</li>
+<li><p>Peu importe la couche sélectionnée</p></li>
+<li><p>Pour débuter la poursuite de réseau amont, sélectionnez le bouton <strong>Amont</strong> dans  QGEP et cliquez ensuite sur un noeud:</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_upstream_button.jpg" src="../../_images/network_upstream_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Une fenêtre de profil s&#8217;ouvre alors dans le bas de la carte. Cliquez sur le nœud de départ</p>
-</li>
-<li><p class="first">S&#8217;il y a plus d&#8217;un noeud dans la zone, sélectionner le bon dans la liste</p>
-</li>
+<li><p>Une fenêtre de profil s’ouvre alors dans le bas de la carte. Cliquez sur le nœud de départ</p></li>
+<li><p>S’il y a plus d’un noeud dans la zone, sélectionner le bon dans la liste</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">With qgepplugin 1.1.8 / QGIS 3.4.2, it&#8217;s a good idea to zoom in so far, that you can choose your start node without having any other node nearby. If you choose the node from the mouse-list, you may get unexpected results.</p>
+<p class="admonition-title">Attention</p>
+<p>With qgepplugin 1.1.8 / QGIS 3.4.2, it’s a good idea to zoom in so far, that you can choose your start node without having any other node nearby. If you choose the node from the mouse-list, you may get unexpected results.</p>
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_select_start_node.jpg" src="../../_images/network_select_start_node.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Au bout de quelques secondes, tous les tronçons du flux amont seront surlignés et vous pourrez visualiser la provenance des eaux.</p>
-</li>
-<li>If you want to select the highlighted reaches, then click on the <strong>Select current path</strong> button in the profile window</li>
+<li><p>Au bout de quelques secondes, tous les tronçons du flux amont seront surlignés et vous pourrez visualiser la provenance des eaux.</p></li>
+<li><p>If you want to select the highlighted reaches, then click on the <strong>Select current path</strong> button in the profile window</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_select_currentpath.jpg" src="../../_images/network_select_currentpath.jpg" />
 </div>
 <ul class="simple">
-<li>You can now work with your reach selection in the attribute table or zoom to the selected reaches (if the vw_qgep_reach layer is selected)</li>
-<li>Use this tool to check if the topology of your network is correct.</li>
+<li><p>You can now work with your reach selection in the attribute table or zoom to the selected reaches (if the vw_qgep_reach layer is selected)</p></li>
+<li><p>Use this tool to check if the topology of your network is correct.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">In the button select current path, you have a menu <strong>Configure Select</strong>. This is prepared to select later not only the path, put also the catchment areas that are connected to the path. This feature is not working with qgepplugin 1.1.8.</p>
+<p class="admonition-title">Note</p>
+<p>In the button select current path, you have a menu <strong>Configure Select</strong>. This is prepared to select later not only the path, put also the catchment areas that are connected to the path. This feature is not working with qgepplugin 1.1.8.</p>
 </div>
 </div>
 <div class="section" id="downstream">
-<h2>2.5.3. Flux aval<a class="headerlink" href="#downstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.5.3. </span>Flux aval<a class="headerlink" href="#downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">La poursuite de réseau flux aval fonctionne de la même façon que la poursuite de réseau flux amont décrite ci-dessus.</p>
-</li>
+<li><p>La poursuite de réseau flux aval fonctionne de la même façon que la poursuite de réseau flux amont décrite ci-dessus.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_downstream_button.jpg" src="../../_images/network_downstream_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Vous pouvez voir l&#8217;écoulement de l&#8217;eau.</p>
-</li>
-<li>Control, if QGEP finds also the overflows</li>
-<li><p class="first">Utilisez ceci pour contrôler si la topologie de votre réseau est correcte ou pour découvrir à quel endroit vous pourriez intervenir en cas d&#8217;accident.</p>
-</li>
+<li><p>Vous pouvez voir l’écoulement de l’eau.</p></li>
+<li><p>Control, if QGEP finds also the overflows</p></li>
+<li><p>Utilisez ceci pour contrôler si la topologie de votre réseau est correcte ou pour découvrir à quel endroit vous pourriez intervenir en cas d’accident.</p></li>
 </ul>
 </div>
 <div class="section" id="flow-times-downstream">
-<h2>2.5.4. Temps d&#8217;écoulement en amont du réseau.<a class="headerlink" href="#flow-times-downstream" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.5.4. </span>Temps d’écoulement en amont du réseau.<a class="headerlink" href="#flow-times-downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">C&#8217;est un outil dans la boîte à outils QGEP.</p>
-</li>
-<li><p class="first">Cet outil est prévu pour calculer le temps d&#8217;écoulement entre un point de départ ( p.e. un accident sur le réseau) et une structure intéressante du réseau en amont. L&#8217;outil n&#8217;est pas prévu pour planifier le temps d&#8217;écoulement complet du réseau, cette fonctionnalité est actuellement considérée séparément.</p>
-</li>
-<li><p class="first">Pour cet outil, vous avez besoin d&#8217;une couche (table) dans le projet QGEP qui comprend le temps d&#8217;écoulement par conduite et l&#8217;identifiant unique (obj_id) de chaque conduite.</p>
-</li>
-<li><p class="first">Vous devez sélectionner la conduite de départ (p.e. à l&#8217;endroit ou à eu lieu l&#8217;accident) dans la couche vw_qgep_reach.</p>
-</li>
-<li><p class="first">Démarré l&#8217;outil en double-cliquant sur <strong>Flow times downstream</strong></p>
-</li>
+<li><p>C’est un outil dans la boîte à outils QGEP.</p></li>
+<li><p>Cet outil est prévu pour calculer le temps d’écoulement entre un point de départ ( p.e. un accident sur le réseau) et une structure intéressante du réseau en amont. L’outil n’est pas prévu pour planifier le temps d’écoulement complet du réseau, cette fonctionnalité est actuellement considérée séparément.</p></li>
+<li><p>Pour cet outil, vous avez besoin d’une couche (table) dans le projet QGEP qui comprend le temps d’écoulement par conduite et l’identifiant unique (obj_id) de chaque conduite.</p></li>
+<li><p>Vous devez sélectionner la conduite de départ (p.e. à l’endroit ou à eu lieu l’accident) dans la couche vw_qgep_reach.</p></li>
+<li><p>Démarré l’outil en double-cliquant sur <strong>Flow times downstream</strong></p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Dans la fenêtre qui s&#8217;ouvre, choisissez</p>
+<li><p>Dans la fenêtre qui s’ouvre, choisissez</p>
 <ul>
-<li><p class="first">comme couche de conduite (reach layer): vw_qgep_reach</p>
-</li>
-<li><p class="first">comme couche de temps d&#8217;écoulement: la table que vous avez créée avec le temps d&#8217;écoulement et l&#8217;obj_id de chaque conduite</p>
-</li>
-<li><p class="first">comme champ d&#8217;identifiant pour la conduite: le champ dans votre table contenant les obj_id des conduites</p>
-</li>
-<li><p class="first">comme temps d&#8217;écoulement: le champ qui contient les temps d&#8217;écoulement dans votre table</p>
-</li>
-<li><p class="first">Si vous laissez le champ du temps d&#8217;écoulement vide, cela va créer une couche temporaire avec les résultats dans votre projet. Sinon vous pouvez l&#8217;enregistrer en temps que couche vecteur.</p>
-</li>
+<li><p>comme couche de conduite (reach layer): vw_qgep_reach</p></li>
+<li><p>comme couche de temps d’écoulement: la table que vous avez créée avec le temps d’écoulement et l’obj_id de chaque conduite</p></li>
+<li><p>comme champ d’identifiant pour la conduite: le champ dans votre table contenant les obj_id des conduites</p></li>
+<li><p>comme temps d’écoulement: le champ qui contient les temps d’écoulement dans votre table</p></li>
+<li><p>Si vous laissez le champ du temps d’écoulement vide, cela va créer une couche temporaire avec les résultats dans votre projet. Sinon vous pouvez l’enregistrer en temps que couche vecteur.</p></li>
 </ul>
 </li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_window.jpg" src="../../_images/flow_time_downstream_window.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">L&#8217;outil effectue une recherche de l&#8217;écoulement aval à partir de la conduite sélectionnée comme point de départ.  Un champ par conduite est enregistré avec la somme des temps d&#8217;écoulement.</p>
-</li>
+<li><p>L’outil effectue une recherche de l’écoulement aval à partir de la conduite sélectionnée comme point de départ.  Un champ par conduite est enregistré avec la somme des temps d’écoulement.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_result.jpg" src="../../_images/flow_time_downstream_result.jpg" />
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">S&#8217;il y a plus d&#8217;un chemin possible pour l&#8217;écoulement aval, les résultats seront faux après l&#8217;embranchement.</p>
+<p class="admonition-title">Attention</p>
+<p>S’il y a plus d’un chemin possible pour l’écoulement aval, les résultats seront faux après l’embranchement.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Dans certain cas, le résultat pourra être nul et une erreur en rouge dans le journal des messages</p>
+<li><p>Dans certain cas, le résultat pourra être nul et une erreur en rouge dans le journal des messages</p>
 <ul>
-<li><p class="first">Ne sélectionnez pas plus d&#8217;une conduite de départ</p>
-</li>
-<li><p class="first">Ne sélectionnez pas vw_qgep_reach comme couche du temps d&#8217;écoulement</p>
-</li>
-<li><p class="first">Une erreur sera soulevée si aucunes valeurs ne correspond à l&#8217;obj_id de la conduite</p>
-</li>
+<li><p>Ne sélectionnez pas plus d’une conduite de départ</p></li>
+<li><p>Ne sélectionnez pas vw_qgep_reach comme couche du temps d’écoulement</p></li>
+<li><p>Une erreur sera soulevée si aucunes valeurs ne correspond à l’obj_id de la conduite</p></li>
 </ul>
 </li>
 </ul>
@@ -330,6 +307,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

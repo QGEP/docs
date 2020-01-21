@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.1.1. Introduction and Overview &mdash; QGEP 0.8 documentation</title>
+  <title>2.1.1. Introduction and Overview &mdash; QGEP 0.8 documentație</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="QGEP 0.8 documentation" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Căutare" href="../../search.html"/>
+    <link rel="top" title="QGEP 0.8 documentație" href="../../index.html"/>
         <link rel="up" title="2.1. Overview of QGEP" href="index.html"/>
         <link rel="next" title="2.1.2. Layer explanation" href="layerexplanation.html"/>
         <link rel="prev" title="2.1. Overview of QGEP" href="index.html"/> 
@@ -85,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.1. Overview of QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.1.1. Introduction and Overview</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Introduction and Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanation.html">2.1.2. Layer explanation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="addviewlayer.html">2.1.3. Add View Layer</a></li>
 </ul>
@@ -125,15 +128,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.1. Overview of QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.1. </span>Overview of QGEP</a> &raquo;</li>
       
-    <li>2.1.1. Introduction and Overview</li>
+    <li><span class="section-number">2.1.1. </span>Introduction and Overview</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/layerexplanations/overview.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/layerexplanations/overview.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,32 +146,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="figure">
+  <div class="figure align-default">
 <img alt="../../_images/qgep_title.png" src="../../_images/qgep_title.png" />
 </div>
 <div class="section" id="introduction-and-overview">
-<h1>2.1.1. Introduction and Overview<a class="headerlink" href="#introduction-and-overview" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.1.1. </span>Introduction and Overview<a class="headerlink" href="#introduction-and-overview" title="Link permanent la acest titlu">¶</a></h1>
 <p><strong>QGEP</strong> is a selection of tools and a database implementation to work with the data in the data structure for wastewater and GEP, short VSA-DSS.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset for sewer networks as described in <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016)</a>. More information you can find on the homepage of the <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
+<p class="admonition-title">Notă</p>
+<p>The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset for sewer networks as described in <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016)</a>. More information you can find on the homepage of the <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK.</p>
+<p class="admonition-title">Notă</p>
+<p>The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We also recommend you to get a licence for the data model by purchasing the <strong>CD VSA-DSS</strong> with the datamodel in INTERLIS, object catalogues and additional description and introduction and transfer datasets in the <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a></p>
+<p class="admonition-title">Notă</p>
+<p>We also recommend you to get a licence for the data model by purchasing the <strong>CD VSA-DSS</strong> with the datamodel in INTERLIS, object catalogues and additional description and introduction and transfer datasets in the <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a></p>
 </div>
-<p>To work with QGEP-tools, it is important to know also the following norm: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> which is a practitioners guide to modelling reality into GIS and hydraulic datamodel of the VSA and there specially the annex &#8220;<strong>Erfassungsgrundsätze</strong>&#8221; (data acquisition policy).</p>
+<p>To work with QGEP-tools, it is important to know also the following norm: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> which is a practitioners guide to modelling reality into GIS and hydraulic datamodel of the VSA and there specially the annex „<strong>Erfassungsgrundsätze</strong>” (data acquisition policy).</p>
 <p>This is important because with VSA-DSS you do not only describe the manholes and channels (wastewater structures as constructive part), but with the nodes and reaches you do create the hydraulic model of the sewer network (network elements) also.</p>
 <p>It is important to know the difference between <strong>primary and secondary wastewater facilities</strong> (pwwf / swwf). There are not the same rules for placing wastewater nodes in pwwf and swwf-networks. Catchment areas should be connected only to pwwf-network.
 Reaches are always created in flow-direction (flow direction in case of normal-flow).</p>
 <p>To support the digitizing, QGEP uses two main-views: <strong>vw_qgep_wastewater_structure</strong> and <strong>vw_qgep_reach</strong>. To edit these main views, there is a special wizard and the preconfigured feature attribute windows of these views.
 The idea is, to support with the wizard the digitizing, so that 95% of the manholes and channels can be collected on the general-tab of the feature attribute-window, that means with as few mouse clicks as possible.</p>
 <p><strong>QGEP wizard</strong></p>
-<p>To use the wizard (<a class="reference internal" href="../digitizing/digitizingwastewaterstructures.html#digitizing-wastewater-structures"><span>Digitizing Wastewater Structures</span></a>) is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.</p>
+<p>To use the wizard (<a class="reference internal" href="../digitizing/digitizingwastewaterstructures.html#digitizing-wastewater-structures"><span class="std std-ref">Digitizing Wastewater Structures</span></a>) is recommended for digitizing reaches because it supports snapping and connecting to the nodes preferred to the reaches. If you use the QGIS - Add line feature - tool you can not select and pick the nodes as easy.</p>
 </div>
 
 
@@ -221,6 +224,8 @@ The idea is, to support with the wizard the digitizing, so that 95% of the manho
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
 

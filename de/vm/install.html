@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../genindex.html"/>
+        <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="4. Demo virtuelle Maschine" href="index.html"/>
         <link rel="next" title="4.3. QGIS Server" href="server.html"/>
@@ -87,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Administratorhandbuch</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Demo virtuelle Maschine</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="about.html">4.1. Um</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">4.2. Installation</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#download">4.2.1. Herunterladen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#extract">4.2.2. Entpacken</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-qgep">4.2.3. QGEP ausführen</a></li>
@@ -122,13 +125,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">4. Demo virtuelle Maschine</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">4. </span>Demo virtuelle Maschine</a> &raquo;</li>
       
-    <li>4.2. Installation</li>
+    <li><span class="section-number">4.2. </span>Installation</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/vm/install.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/vm/install.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -139,38 +142,36 @@
            <div itemprop="articleBody">
             
   <div class="section" id="install">
-<h1>4.2. Installation<a class="headerlink" href="#install" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">4.2. </span>Installation<a class="headerlink" href="#install" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="download">
-<h2>4.2.1. Herunterladen<a class="headerlink" href="#download" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">4.2.1. </span>Herunterladen<a class="headerlink" href="#download" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die VM ist von hier zu laden &lt;<a class="reference external" href="https://docs.qtibia.ro/qgis.vdi.xz">https://docs.qtibia.ro/qgis.vdi.xz</a>&gt;`_</p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Die Größe der VM beträgt komprimiert etwa 2BG und unkomprimiert bis zu 15GB.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Die Größe der VM beträgt komprimiert etwa 2BG und unkomprimiert bis zu 15GB.</p>
 </div>
 </div>
 <div class="section" id="extract">
-<h2>4.2.2. Entpacken<a class="headerlink" href="#extract" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">4.2.2. </span>Entpacken<a class="headerlink" href="#extract" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die virtuelle Diskette wird mit der Benutzung von XZ Komprimierung erzielt</p>
 <p>Um das Archiv zu entpacken</p>
 <ul class="simple">
-<li><p class="first"><strong>Windows</strong> Sie können  <a class="reference external" href="http://7-zip.org/">7-Zip</a> benutzen um das Archiv zu entpacken.</p>
-</li>
-<li><p class="first"><strong>Linux:</strong> CD zum Downloadpfad und lassen Sie <code class="docutils literal"><span class="pre">xz</span> <span class="pre">-d</span> <span class="pre">qgis.vdi.xz</span></code> laufen</p>
-</li>
+<li><p><strong>Windows</strong> Sie können  <a class="reference external" href="http://7-zip.org/">7-Zip</a> benutzen um das Archiv zu entpacken.</p></li>
+<li><p><strong>Linux:</strong> CD zum Downloadpfad und lassen Sie <code class="docutils literal notranslate"><span class="pre">xz</span> <span class="pre">-d</span> <span class="pre">qgis.vdi.xz</span></code> laufen</p></li>
 </ul>
 <p>SIe können die virtuelle Maschine laufen lassen wie Sie es mit einer VirtualBox VW tun würden.</p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Da die virtuelle Maschine auf Linux basiert ist es relativ einfach ein Bild in eine rohe Diskette zu konvertieren und Sie dann auf einen USB-Stick (Minimum 16GB Speicher) zu packen. Dies erlaubt es ihnen die App ohne den Virtualisations Nachteil auszuführen und die volle Geschwindigkeit ihrer Hardware zu geniessen.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Da die virtuelle Maschine auf Linux basiert ist es relativ einfach ein Bild in eine rohe Diskette zu konvertieren und Sie dann auf einen USB-Stick (Minimum 16GB Speicher) zu packen. Dies erlaubt es ihnen die App ohne den Virtualisations Nachteil auszuführen und die volle Geschwindigkeit ihrer Hardware zu geniessen.</p>
 </div>
 </div>
 <div class="section" id="run-qgep">
-<h2>4.2.3. QGEP ausführen<a class="headerlink" href="#run-qgep" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Nachdem Sie sich als &#8220;qgis&#8221; Benutzer und dem selben Passwort angemeldet haben, erhalten Sie durch Klicken auf das QGIS Symbol im unteren Balken folgendes Bild:</p>
-<div class="figure">
+<h2><span class="section-number">4.2.3. </span>QGEP ausführen<a class="headerlink" href="#run-qgep" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Nachdem Sie sich als „qgis“ Benutzer und dem selben Passwort angemeldet haben, erhalten Sie durch Klicken auf das QGIS Symbol im unteren Balken folgendes Bild:</p>
+<div class="figure align-default">
 <img alt="../_images/vm_demo.jpg" src="../_images/vm_demo.jpg" />
 </div>
-<p>Das Klicken auf das <strong>qgp_en</strong> Projekt und das befolgen des <a class="reference internal" href="../user-guide/index.html#user-guide"><span>QGEP Benutzerhandbuch</span></a> sollte Sie ins laufen bringen.</p>
+<p>Das Klicken auf das <strong>qgp_en</strong> Projekt und das befolgen des <a class="reference internal" href="../user-guide/index.html#user-guide"><span class="std std-ref">QGEP Benutzerhandbuch</span></a> sollte Sie ins laufen bringen.</p>
 </div>
 </div>
 
@@ -224,6 +225,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../genindex.html"/>
+        <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="1. Leitfaden QGEP Installation" href="index.html"/>
         <link rel="next" title="2. QGEP Benutzerhandbuch" href="../user-guide/index.html"/>
@@ -86,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="requirements.html">1.1. Voraussetzungen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="server.html">1.2. Datenbankserver aufsetzen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="database-initialization.html">1.3. Initialisierung der Datenbank</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">1.4. Arbeitsplatzrechner Einrichten</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4. Arbeitsplatzrechner Einrichten</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#database-configuration">1.4.1. Konfiguration der Datenbank</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">1.4.1.1. Windows pg_service</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linux-pg-service">1.4.1.2. Linux pg_service</a></li>
@@ -132,13 +135,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">1. Leitfaden QGEP Installation</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">1. </span>Leitfaden QGEP Installation</a> &raquo;</li>
       
-    <li>1.4. Arbeitsplatzrechner Einrichten</li>
+    <li><span class="section-number">1.4. </span>Arbeitsplatzrechner Einrichten</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/installation-guide/workstation.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/installation-guide/workstation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -149,202 +152,177 @@
            <div itemprop="articleBody">
             
   <div class="section" id="setup-workstation">
-<h1>1.4. Arbeitsplatzrechner Einrichten<a class="headerlink" href="#setup-workstation" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">1.4. </span>Arbeitsplatzrechner Einrichten<a class="headerlink" href="#setup-workstation" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="database-configuration">
-<h2>1.4.1. Konfiguration der Datenbank<a class="headerlink" href="#database-configuration" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.1. </span>Konfiguration der Datenbank<a class="headerlink" href="#database-configuration" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um einer Arbeitsstation zu sagen, wo die Datenbank steht (im lokalen System oder auf einem Netzwerkserver) müssen Sie zu Beginn auf jedem System auf dem QGIS/QGEP läuft einige Dateien erzeugen. Dies kann nicht auf dem Server selber gemacht werden.</p>
 <p>Diese Anweisungen sind abhängig vom Betriebssystem.</p>
 <div class="section" id="windows-pg-service">
-<h3>1.4.1.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Erstellen Sie ein neues Verzeichnis indem Sie die Konfigurationen ablegen möchten (z.B. ein neues Verzeichnis <code class="docutils literal"><span class="pre">pgconfig`</span> <span class="pre">in</span> <span class="pre">ihrem</span> <span class="pre">Stammverzeichnis).</span> <span class="pre">Diese</span> <span class="pre">Anleitung</span> <span class="pre">wird</span> <span class="pre">jeweils</span> <span class="pre">mit</span>&nbsp; <span class="pre">``PGSYSCONFDIR</span></code> darauf verweisen.</p>
-<p>Setzen Sie die Umgebungsvariable <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code> auf den Dateipfad von <code class="docutils literal"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<h3><span class="section-number">1.4.1.1. </span>Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Erstellen Sie ein neues Verzeichnis indem Sie die Konfigurationen ablegen möchten (z.B. ein neues Verzeichnis <code class="docutils literal notranslate"><span class="pre">pgconfig`</span> <span class="pre">in</span> <span class="pre">ihrem</span> <span class="pre">Stammverzeichnis).</span> <span class="pre">Diese</span> <span class="pre">Anleitung</span> <span class="pre">wird</span> <span class="pre">jeweils</span> <span class="pre">mit</span>&#160; <span class="pre">``PGSYSCONFDIR</span></code> darauf verweisen.</p>
+<p>Setzen Sie die Umgebungsvariable <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> auf den Dateipfad von <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
+<p class="admonition-title">Bemerkung</p>
 <p>Suchen sie Umgebungsvariablen in den Windows Systemeinstellungen, dann klicken sie auf eine der folgenden Optionen, entweder für Benutzer- oder Systemvariablen:</p>
 <blockquote>
-<div><p>Klicke <code class="docutils literal"><span class="pre">Neu</span></code> um eine neue Variable hinzuzufügen. Klicke eine bestehende Variable und dann auf <code class="docutils literal"><span class="pre">Bearbeiten</span></code> um den Variablennamen oder den Wert zu ändern. Klicke eine bestehende Variable und dann auf <code class="docutils literal"><span class="pre">Löschen</span></code> um die Variable zu entfernen.</p>
+<div><p>Klicke <code class="docutils literal notranslate"><span class="pre">Neu</span></code> um eine neue Variable hinzuzufügen. Klicke eine bestehende Variable und dann auf <code class="docutils literal notranslate"><span class="pre">Bearbeiten</span></code> um den Variablennamen oder den Wert zu ändern. Klicke eine bestehende Variable und dann auf <code class="docutils literal notranslate"><span class="pre">Löschen</span></code> um die Variable zu entfernen.</p>
 </div></blockquote>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/umgebungsvariablen_pgconfdir.jpg" src="../_images/umgebungsvariablen_pgconfdir.jpg" />
 </div>
-<p class="last">Sie können die Umgebungsvariablen auch in QGIS kontrollieren: Menü <code class="docutils literal"><span class="pre">Einstellungen</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Optionen...</span></code>  &#8211;&gt; <code class="docutils literal"><span class="pre">System</span></code> Tab &#8211;&gt; <code class="docutils literal"><span class="pre">Umgebung</span></code></p>
+<p>Sie können die Umgebungsvariablen auch in QGIS kontrollieren: Menü <code class="docutils literal notranslate"><span class="pre">Einstellungen</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Optionen...</span></code>  –&gt; <code class="docutils literal notranslate"><span class="pre">System</span></code> Tab –&gt; <code class="docutils literal notranslate"><span class="pre">Umgebung</span></code></p>
 </div>
 <p>In diesem Verzeichnis werden zwei Dateien sein</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">pg_service.conf</span></code></li>
-<li><p class="first"><code class="docutils literal"><span class="pre">pgpass</span></code> (Um das Passwort nicht jedes Mal eingeben zu müssen)</p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgpass</span></code> (Um das Passwort nicht jedes Mal eingeben zu müssen)</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">In Windows müssen Sie <code class="docutils literal"><span class="pre">pg_service.conf</span></code> im Unix Format speichern damit es funktioniert. Eine Möglichkeit dafür bietet <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> im Menü <code class="docutils literal"><span class="pre">Bearbeiten</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Format</span> <span class="pre">Zeilenende</span></code> &#8211;&gt; <code class="docutils literal"><span class="pre">Konvertiere</span> <span class="pre">zu</span> <span class="pre">UNIX</span> <span class="pre">(LF)</span></code> &#8211;&gt; <cite>Sichern`</cite> .</p>
+<p class="admonition-title">Achtung</p>
+<p>In Windows müssen Sie <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> im Unix Format speichern damit es funktioniert. Eine Möglichkeit dafür bietet <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a> im Menü <code class="docutils literal notranslate"><span class="pre">Bearbeiten</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">Zeilenende</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Konvertiere</span> <span class="pre">zu</span> <span class="pre">UNIX</span> <span class="pre">(LF)</span></code> –&gt; <cite>Sichern`</cite> .</p>
 </div>
 </div>
 <div class="section" id="linux-pg-service">
-<span id="pg-service-linux"></span><h3>1.4.1.2. Linux pg_service<a class="headerlink" href="#linux-pg-service" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Auf <a href="#id1"><span class="problematic" id="id2">*</span></a>nix systemen (linux/macOS etc.) plazieren Sie die Dateien <cite>.pg_service.conf`</cite> und <code class="docutils literal"><span class="pre">.pgpass</span></code> in ihren home folder (normally <code class="docutils literal"><span class="pre">/home/[username]</span></code>).</p>
+<span id="pg-service-linux"></span><h3><span class="section-number">1.4.1.2. </span>Linux pg_service<a class="headerlink" href="#linux-pg-service" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Auf <a href="#id1"><span class="problematic" id="id2">*</span></a>nix systemen (linux/macOS etc.) plazieren Sie die Dateien <cite>.pg_service.conf`</cite> und <code class="docutils literal notranslate"><span class="pre">.pgpass</span></code> in ihren home folder (normally <code class="docutils literal notranslate"><span class="pre">/home/[username]</span></code>).</p>
 </div>
 <div class="section" id="all-systems">
-<h3>1.4.1.3. Auf allen Systemen<a class="headerlink" href="#all-systems" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Schreiben Sie folgenden Text in die Datei <code class="docutils literal"><span class="pre">pg_service.conf</span></code> oder <code class="docutils literal"><span class="pre">.pg_service.conf</span></code>. Allenfalls müssen Sie diesen für Ihre Installation adaptieren.</p>
-<div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
-<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
-<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
-<span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
-<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
+<h3><span class="section-number">1.4.1.3. </span>Auf allen Systemen<a class="headerlink" href="#all-systems" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Schreiben Sie folgenden Text in die Datei <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> oder <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code>. Allenfalls müssen Sie diesen für Ihre Installation adaptieren.</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[pg_qgep]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">dbname</span><span class="o">=</span><span class="s">qgep</span>
+<span class="na">user</span><span class="o">=</span><span class="s">qgepuser</span>
 </pre></div>
 </div>
 <p>Um das Passwort auch auf dem System zu speichern können Sie die Datei <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a> benutzen.</p>
-<div class="code ini highlight-python"><div class="highlight"><pre><span></span>localhost:5432:*:qgepuser:password
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">localhost:5432:*:qgepuser:password</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Falls die Datenbank nicht auf dem lokalen Rechner läuft muss in den Anweisungen oben jeweils <code class="docutils literal"><span class="pre">localhost</span></code> mit der Netzwerkadresse des Datenbankservers ersetzt werden.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Falls die Datenbank nicht auf dem lokalen Rechner läuft muss in den Anweisungen oben jeweils <code class="docutils literal notranslate"><span class="pre">localhost</span></code> mit der Netzwerkadresse des Datenbankservers ersetzt werden.</p>
 </div>
 </div>
 </div>
 <div class="section" id="install-qgis">
-<h2>1.4.2. QGIS installieren<a class="headerlink" href="#install-qgis" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.2. </span>QGIS installieren<a class="headerlink" href="#install-qgis" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">minimale Voraussetzung 3.4</p>
-</li>
-<li><p class="first">Wir empfehlen die Verwendung der aktuellsten master builds (unter Windows sind diese als <cite>qgis-dev</cite> verfügbar). Diese offerieren oft die beste Integration in Kombination mit QGEP. Für die Windows Installation, laden sie den <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a> runter und wählen SIe <em>advanced Installation</em> und installieren Sie qgep-dev.</p>
-</li>
+<li><p>minimale Voraussetzung 3.4</p></li>
+<li><p>Wir empfehlen die Verwendung der aktuellsten master builds (unter Windows sind diese als <cite>qgis-dev</cite> verfügbar). Diese offerieren oft die beste Integration in Kombination mit QGEP. Für die Windows Installation, laden sie den <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a> runter und wählen SIe <em>advanced Installation</em> und installieren Sie qgep-dev.</p></li>
 </ul>
 </div>
 <div class="section" id="install-qgep-plugin">
-<h2>1.4.3. Installation des QGEP Plugins<a class="headerlink" href="#install-qgep-plugin" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.3. </span>Installation des QGEP Plugins<a class="headerlink" href="#install-qgep-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Plugin Voraussetzungen</p>
 <ul class="simple">
-<li>networkx &gt;= 2.1</li>
+<li><p>networkx &gt;= 2.1</p></li>
 </ul>
 <p>Installieren auf debian basierten Sytemen:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo pip install networkx
-sudo apt-get install libqt4-sql-psql
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">networkx</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libqt4</span><span class="o">-</span><span class="n">sql</span><span class="o">-</span><span class="n">psql</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="first">QGIS öffnen</p>
-</li>
-<li><p class="first">Gehen sie zu <code class="docutils literal"><span class="pre">Erweiterungen</span></code></p>
+<li><p>QGIS öffnen</p></li>
+<li><p>Gehen sie zu <code class="docutils literal notranslate"><span class="pre">Erweiterungen</span></code></p>
 <ul>
-<li><p class="first"><code class="docutils literal"><span class="pre">Erweiterungen</span> <span class="pre">verwalten</span> <span class="pre">und</span> <span class="pre">installieren...</span></code></p>
-</li>
-<li><p class="first"><code class="docutils literal"><span class="pre">Einstellungen</span></code></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">Erweiterungen</span> <span class="pre">verwalten</span> <span class="pre">und</span> <span class="pre">installieren...</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Einstellungen</span></code></p>
 <ul>
-<li><p class="first">Hinzufügen...</p>
+<li><p>Hinzufügen…</p>
 <ul>
-<li>Name: QGEP</li>
-<li>URL:
-<code class="docutils literal"><span class="pre">https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3</span></code></li>
+<li><p>Name: QGEP</p></li>
+<li><p>URL:
+<code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3</span></code></p></li>
 </ul>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">Auch</span> <span class="pre">experimentelle</span> <span class="pre">Erweiterungen</span> <span class="pre">anzeigen</span></code> aktivieren</p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Auch</span> <span class="pre">experimentelle</span> <span class="pre">Erweiterungen</span> <span class="pre">anzeigen</span></code> aktivieren</p></li>
 </ul>
 </li>
-<li><p class="first">Plugin aktivieren (siehe untenstehendes Bild)</p>
-</li>
-<li><p class="first">Alle</p>
+<li><p>Plugin aktivieren (siehe untenstehendes Bild)</p></li>
+<li><p>Alle</p>
 <ul>
-<li><p class="first"><cite>QGEP</cite> suchen</p>
-</li>
-<li><p class="first">Aktivieren Sie das Kontrollkästchen daneben</p>
-</li>
+<li><p><cite>QGEP</cite> suchen</p></li>
+<li><p>Aktivieren Sie das Kontrollkästchen daneben</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<div class="figure" id="id3">
+<div class="figure align-default" id="id3">
 <img alt="../_images/001_searchplugin.jpeg" src="../_images/001_searchplugin.jpeg" />
-<p class="caption"><span class="caption-text"><strong>QGEP Zusatzprogramm hinzufügen</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>QGEP Zusatzprogramm hinzufügen</strong></span><a class="headerlink" href="#id3" title="Link zu diesem Bild">¶</a></p>
 </div>
 </div>
 <div class="section" id="install-the-demo-data">
-<h2>1.4.4. Demodaten installieren<a class="headerlink" href="#install-the-demo-data" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.4. </span>Demodaten installieren<a class="headerlink" href="#install-the-demo-data" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Herunterladen von  <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</p>
-</li>
-<li><p class="first">Die Datei entpacken</p>
-</li>
-<li><p class="first">Wiederherstellen der Datei <cite>qgep_vx.x.x_structure_and_demo_data.backup</cite>  mit pgAdmin</p>
-</li>
+<li><p>Herunterladen von  <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a> New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available</p></li>
+<li><p>Die Datei entpacken</p></li>
+<li><p>Wiederherstellen der Datei <cite>qgep_vx.x.x_structure_and_demo_data.backup</cite>  mit pgAdmin</p></li>
 </ul>
 </div>
 <div class="section" id="install-the-demo-project">
-<h2>1.4.5. Das Demo Projekt installieren<a class="headerlink" href="#install-the-demo-project" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.5. </span>Das Demo Projekt installieren<a class="headerlink" href="#install-the-demo-project" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first"><cite>qgep.zip</cite> von <a class="reference external" href="https://github.com/QGEP/qgep/releases/latest">https://github.com/QGEP/qgep/releases/latest</a> herunterladen</p>
-</li>
-<li><p class="first">Die Datei entpacken</p>
-</li>
-<li><p class="first">Wenn die qgep_[Sprache].qm - Datei im gleichen Verzeichnis wie die qgep.qgs - Datei liegt und QGIS mit dieser Sprache gestartet wird, wird das QGEP-Project automatisch übersetzt mit dem Start der Projekt-Datei.</p>
-</li>
-<li><p class="first">Öffnen Sie <cite>project/qgep.qgs</cite> mit QGIS</p>
-</li>
+<li><p><cite>qgep.zip</cite> von <a class="reference external" href="https://github.com/QGEP/qgep/releases/latest">https://github.com/QGEP/qgep/releases/latest</a> herunterladen</p></li>
+<li><p>Die Datei entpacken</p></li>
+<li><p>Wenn die qgep_[Sprache].qm - Datei im gleichen Verzeichnis wie die qgep.qgs - Datei liegt und QGIS mit dieser Sprache gestartet wird, wird das QGEP-Project automatisch übersetzt mit dem Start der Projekt-Datei.</p></li>
+<li><p>Öffnen Sie <cite>project/qgep.qgs</cite> mit QGIS</p></li>
 </ul>
 </div>
 <div class="section" id="add-your-own-oid-in-the-project">
-<h2>1.4.6. Eine eigene OID im Projekt hinzufügen<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.6. </span>Eine eigene OID im Projekt hinzufügen<a class="headerlink" href="#add-your-own-oid-in-the-project" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Sie müssen Ihre OID Daten in der Tabelle qgep_sys.oid_prefixes hinzufügen:</p>
-</li>
+<li><p>Sie müssen Ihre OID Daten in der Tabelle qgep_sys.oid_prefixes hinzufügen:</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/oid_prefix.jpg" src="../_images/oid_prefix.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Fügen Sie Ihre OID zu <code class="docutils literal"><span class="pre">02_oid_generation.sql</span></code> hinzu und machen Sie einen pull request, wenn Sie sie permanent im QGEP Projekt haben wollen.</p>
-</li>
+<li><p>Fügen Sie Ihre OID zu <code class="docutils literal notranslate"><span class="pre">02_oid_generation.sql</span></code> hinzu und machen Sie einen pull request, wenn Sie sie permanent im QGEP Projekt haben wollen.</p></li>
 </ul>
 <p><a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql">https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql</a></p>
-<div class="code sql highlight-python"><div class="highlight"><pre><span></span>-- sample entry for the City of Uster - you need to add an entry for your own organization
-INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch11h8mw&#39;,&#39;Stadt Uster&#39;,TRUE);
-INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch15z36d&#39;,&#39;SIGE&#39;,FALSE);
-INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch13p7mz&#39;,&#39;Arbon&#39;,FALSE);
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="c1">-- sample entry for the City of Uster - you need to add an entry for your own organization</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">qgep_sys</span><span class="p">.</span><span class="n">oid_prefixes</span> <span class="p">(</span><span class="k">prefix</span><span class="p">,</span><span class="n">organization</span><span class="p">,</span><span class="n">active</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;ch11h8mw&#39;</span><span class="p">,</span><span class="s1">&#39;Stadt Uster&#39;</span><span class="p">,</span><span class="k">TRUE</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">qgep_sys</span><span class="p">.</span><span class="n">oid_prefixes</span> <span class="p">(</span><span class="k">prefix</span><span class="p">,</span><span class="n">organization</span><span class="p">,</span><span class="n">active</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;ch15z36d&#39;</span><span class="p">,</span><span class="s1">&#39;SIGE&#39;</span><span class="p">,</span><span class="k">FALSE</span><span class="p">);</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">qgep_sys</span><span class="p">.</span><span class="n">oid_prefixes</span> <span class="p">(</span><span class="k">prefix</span><span class="p">,</span><span class="n">organization</span><span class="p">,</span><span class="n">active</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;ch13p7mz&#39;</span><span class="p">,</span><span class="s1">&#39;Arbon&#39;</span><span class="p">,</span><span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>und setze die gewünschte OID für das aktuelle Projekt auf TRUE.</p>
 <ul class="simple">
-<li><p class="first">oder füge die OID für das Projekt in der Tabelle oid_prefix in der Zeile mit der id = 1 hinzu.</p>
-</li>
-<li><p class="first">Ein OID-Prefix kann bestellt werden bei <a class="reference external" href="http://www.interlis.ch/oid/oid_commande_e.php">http://www.interlis.ch/oid/oid_commande_e.php</a></p>
-</li>
+<li><p>oder füge die OID für das Projekt in der Tabelle oid_prefix in der Zeile mit der id = 1 hinzu.</p></li>
+<li><p>Ein OID-Prefix kann bestellt werden bei <a class="reference external" href="http://www.interlis.ch/oid/oid_commande_e.php">http://www.interlis.ch/oid/oid_commande_e.php</a></p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Wenn sie mit verschiedenen Datenbank für verschiedene Gemeinden arbeiten, sollten sie unterschiedliche OID Prefixe für jede Datenbank benützen.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn sie mit verschiedenen Datenbank für verschiedene Gemeinden arbeiten, sollten sie unterschiedliche OID Prefixe für jede Datenbank benützen.</p>
 </div>
 </div>
 <div class="section" id="working-with-more-than-one-database">
-<h2>1.4.7. Mit mehreren Datenbank-Operaten arbeiten<a class="headerlink" href="#working-with-more-than-one-database" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">1.4.7. </span>Mit mehreren Datenbank-Operaten arbeiten<a class="headerlink" href="#working-with-more-than-one-database" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Eine neue Database in pgAdmin erzeugen mit neuem Namen, z.B. communityA</p>
-</li>
-<li><p class="first">Ein neues Schema qgep in der Database erstellen (den Namen qgep nicht ändern, da in vielen Scripten der Schemanamen qgep verwendet wird)</p>
-</li>
-<li><p class="first">Weiter wie in 1.2 Initialisierung der Datenbank beschrieben.</p>
-</li>
-<li><p class="first">Die <code class="docutils literal"><span class="pre">pg_service.conf</span></code> - Datei anpassen</p>
-</li>
+<li><p>Eine neue Database in pgAdmin erzeugen mit neuem Namen, z.B. communityA</p></li>
+<li><p>Ein neues Schema qgep in der Database erstellen (den Namen qgep nicht ändern, da in vielen Scripten der Schemanamen qgep verwendet wird)</p></li>
+<li><p>Weiter wie in 1.2 Initialisierung der Datenbank beschrieben.</p></li>
+<li><p>Die <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> - Datei anpassen</p></li>
 </ul>
-<div class="code ini highlight-python"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qgep</span><span class="p">]</span>
-<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
-<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
-<span class="n">dbname</span><span class="o">=</span><span class="n">qgep</span>
-<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
-<span class="p">[</span><span class="n">pg_communityA</span><span class="p">]</span>
-<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
-<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
-<span class="n">dbname</span><span class="o">=</span><span class="n">communityA</span>
-<span class="n">user</span><span class="o">=</span><span class="n">qgepuser</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[pg_qgep]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">dbname</span><span class="o">=</span><span class="s">qgep</span>
+<span class="na">user</span><span class="o">=</span><span class="s">qgepuser</span>
+<span class="k">[pg_communityA]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">dbname</span><span class="o">=</span><span class="s">communityA</span>
+<span class="na">user</span><span class="o">=</span><span class="s">qgepuser</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p class="first">In einer Kopie des Projektdatei <code class="docutils literal"><span class="pre">qgep_en.qgs</span></code> alle Vorkommnisse von &#8216;pg_qgep&#8217; suchen und mit  &#8216;pg_communityA&#8217; ersetzen</p>
-</li>
+<li><p>In einer Kopie des Projektdatei <code class="docutils literal notranslate"><span class="pre">qgep_en.qgs</span></code> alle Vorkommnisse von ‚pg_qgep‘ suchen und mit  ‚pg_communityA‘ ersetzen</p></li>
 </ul>
 </div>
 </div>
@@ -399,6 +377,7 @@ INSERT INTO qgep_sys.oid_prefixes (prefix,organization,active) VALUES (&#39;ch13
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

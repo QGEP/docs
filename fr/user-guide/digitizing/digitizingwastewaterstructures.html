@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.2. Numériser les structures assainissement &mdash; documentation QGEP 0.8</title>
+  <title>2.2.2. Numériser les structures assainissement &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Recherche" href="../../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.3. Numérisation de géométries détaillées" href="digitizingdetailedgeometry.html"/>
         <link rel="prev" title="2.2.1. Saisie de données" href="dataentry.html"/> 
@@ -82,12 +85,12 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d’utilisateur de QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.2. Numériser les structures assainissement</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.2. Numériser les structures assainissement</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.2.1. Généralités</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.2.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.2.3. Autres classes et attributs</a></li>
@@ -97,7 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d’objets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Numérisation des bassins versants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="importingdata.html">2.2.8. Importing data</a></li>
 </ul>
@@ -108,7 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
@@ -136,15 +139,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>Guide d’utilisateur de QGEP</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.2. Numériser les structures assainissement</li>
+    <li><span class="section-number">2.2.2. </span>Numériser les structures assainissement</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingwastewaterstructures.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingwastewaterstructures.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,87 +158,79 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-wastewater-structures">
-<span id="id1"></span><h1>2.2.2. Numériser les structures assainissement<a class="headerlink" href="#digitizing-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">2.2.2. </span>Numériser les structures assainissement<a class="headerlink" href="#digitizing-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.2.1. Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.2.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>QGEP has a wizard to correctly collect manholes and special structures. see the <span class="xref std std-ref">wizard</span> chapter.</p>
 <p>Sélectionnez le bouton <strong>Assistant</strong> puis cliquez sur le bouton <strong>Commencer la saisie de données</strong> et choisir <strong>Ouvrage assainissement</strong> dans le menu déroulant.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
 </div>
 <div class="section" id="digitizing">
-<h2>2.2.2.2. Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le curseur passe alors en mode numérisation et il est possible de sélectionner l&#8217;emplacement du nouvel élément.</p>
-<p>Le formulaire <strong>vw_qgep_structure_assainissement</strong> s&#8217;ouvre ensuite et vous pouvez commencer la saisie de données dans l&#8217;onglet <strong>Général</strong>:</p>
-<div class="figure">
+<h2><span class="section-number">2.2.2.2. </span>Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le curseur passe alors en mode numérisation et il est possible de sélectionner l’emplacement du nouvel élément.</p>
+<p>Le formulaire <strong>vw_qgep_structure_assainissement</strong> s’ouvre ensuite et vous pouvez commencer la saisie de données dans l’onglet <strong>Général</strong>:</p>
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" />
 </div>
-<p>Sélectionnez le <strong>ws_type</strong> désiré (&#8216;regard&#8217; est sélectionné par défaut):</p>
+<p>Sélectionnez le <strong>ws_type</strong> désiré (“regard” est sélectionné par défaut):</p>
 <ul class="simple">
-<li><p class="first">Regard</p>
-</li>
-<li><p class="first">structure_speciale</p>
-</li>
-<li><p class="first">point_deversement</p>
-</li>
-<li><p class="first">installation_infiltration</p>
-</li>
+<li><p>Regard</p></li>
+<li><p>structure_speciale</p></li>
+<li><p>point_deversement</p></li>
+<li><p>installation_infiltration</p></li>
 </ul>
 <p>Selon le <strong>ws_type</strong>, vous aurez différents champs et onglets dans le formulaire.</p>
-<p>Ajoutez ensuite l&#8217;identifiant (il s&#8217;agit de l&#8217;attribut qui sera affiché sur la carte)</p>
+<p>Ajoutez ensuite l’identifiant (il s’agit de l’attribut qui sera affiché sur la carte)</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Si vous n&#8217;entrez pas d&#8217;identifiant, QGEP entrera l&#8217;obj_id en tant qu&#8217;identifiant (vous pouvez le modifier plus tard). Par défaut, l&#8217;identifiant de la structure assainissement est également l&#8217;identifiant du couvercle et du noeud assainissement.</p>
+<p class="admonition-title">Note</p>
+<p>Si vous n’entrez pas d’identifiant, QGEP entrera l’obj_id en tant qu’identifiant (vous pouvez le modifier plus tard). Par défaut, l’identifiant de la structure assainissement est également l’identifiant du couvercle et du noeud assainissement.</p>
 </div>
-<p>Ajoutez d&#8217;autres attribus dans l&#8217;onglet <strong>Général</strong>. Vous pouvez également ajouter des attributs dans les autres onglets (Couvercle, Structure assainissement, Regard, Noeud assainissement).</p>
+<p>Ajoutez d’autres attribus dans l’onglet <strong>Général</strong>. Vous pouvez également ajouter des attributs dans les autres onglets (Couvercle, Structure assainissement, Regard, Noeud assainissement).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Le concept de l&#8217;onglet <strong>Général</strong> est que, dans le processus normal de numérisation (95% des regards), l&#8217;opérateur n&#8217;a pas besoin de changer d&#8217;onglet pour renseigner les attributs nécessaires.</p>
+<p class="admonition-title">Note</p>
+<p>Le concept de l’onglet <strong>Général</strong> est que, dans le processus normal de numérisation (95% des regards), l’opérateur n’a pas besoin de changer d’onglet pour renseigner les attributs nécessaires.</p>
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Vous ne pouvez pas ajouter de nouveaux entrées dans les onglets <strong>Couvercles</strong>, <strong>Noeuds assainissement</strong> et <strong>Maintenance</strong>, car vous devez sauvegarder au préalable l&#8217;enregistrement de la structure assainissement dans la base de données avant de pouvoir ajouter de nouvelles entrées. Pour la même raison, vous ne pouvez pas utiliser <strong>Actions</strong>. Sauvegardez d&#8217;abord l&#8217;entrée.</p>
+<p class="admonition-title">Attention</p>
+<p>Vous ne pouvez pas ajouter de nouveaux entrées dans les onglets <strong>Couvercles</strong>, <strong>Noeuds assainissement</strong> et <strong>Maintenance</strong>, car vous devez sauvegarder au préalable l’enregistrement de la structure assainissement dans la base de données avant de pouvoir ajouter de nouvelles entrées. Pour la même raison, vous ne pouvez pas utiliser <strong>Actions</strong>. Sauvegardez d’abord l’entrée.</p>
 </div>
 <p>Cliquez <strong>OK</strong> pour fermer le formulaire</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
 </div>
-<p>Sauvegardez les informations de la couche en cliquant sur &#8220;Stop Data Entry&#8221; dans l&#8217;assistant (&#8220;wizard&#8221;)</p>
-<div class="figure">
+<p>Sauvegardez les informations de la couche en cliquant sur « Stop Data Entry » dans l’assistant (« wizard »)</p>
+<div class="figure align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
-<p>Pour rééditer l&#8217;objet, passez en mode d&#8217;édition et cliquez sur l&#8217;objet à éditer avec le curseur en mode &#8220;Identifier les entités&#8221;. Si le mode d&#8217;édition n&#8217;est pas activé, vous pourrez seulement consulter les informations relatives à l&#8217;objet.</p>
-<div class="figure">
+<p>Pour rééditer l’objet, passez en mode d’édition et cliquez sur l’objet à éditer avec le curseur en mode « Identifier les entités ». Si le mode d’édition n’est pas activé, vous pourrez seulement consulter les informations relatives à l’objet.</p>
+<div class="figure align-default">
 <img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
 </div>
-<p>Pour plus d&#8217;informations au sujet de l&#8217;édition de données, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a>.</p>
+<p>Pour plus d’informations au sujet de l’édition de données, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Modification de données existantes</span></a>.</p>
 </div>
 <div class="section" id="further-attributes-and-classes">
-<h2>2.2.2.3. Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Lorsqu&#8217;une structure_assainissement est numérisée, une série d&#8217;opérations se déroulent en arrière-plan dans la base de données QGIS:</p>
+<h2><span class="section-number">2.2.2.3. </span>Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lorsqu’une structure_assainissement est numérisée, une série d’opérations se déroulent en arrière-plan dans la base de données QGIS:</p>
 <ol class="loweralpha simple">
-<li><p class="first">Un nouvel objet est ajouté dans la classe <strong>ouvrage_assainissement</strong></p>
-</li>
-<li><p class="first">Un nouvel objet sera crée et lié dans les sous-classes respectives [point_deversement, installation_infiltration, regard, ouvrage_spécial]</p>
-</li>
-<li><p class="first">un nouvel objet couvercle est créé et lié à l&#8217;ouvrage assainissement</p>
-</li>
-<li><p class="first">un nouvel objet <strong>noeud assainissement</strong> est généré dans la couche <strong>éléments du réseau assainissement</strong> et sa sous-classe <strong>noeuds assainissement</strong></p>
-</li>
+<li><p>Un nouvel objet est ajouté dans la classe <strong>ouvrage_assainissement</strong></p></li>
+<li><p>Un nouvel objet sera crée et lié dans les sous-classes respectives [point_deversement, installation_infiltration, regard, ouvrage_spécial]</p></li>
+<li><p>un nouvel objet couvercle est créé et lié à l’ouvrage assainissement</p></li>
+<li><p>un nouvel objet <strong>noeud assainissement</strong> est généré dans la couche <strong>éléments du réseau assainissement</strong> et sa sous-classe <strong>noeuds assainissement</strong></p></li>
 </ol>
-<p>To add additional objects such as structure parts (besides covers there are access aids, back flow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a> chapter).</p>
+<p>To add additional objects such as structure parts (besides covers there are access aids, back flow prevention etc) you have to save first and then edit the point object (see the <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Modification de données existantes</span></a> chapter).</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pour ajouter un second couvercle ou un second noeud assainissement à un ouvrage assainissement, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span>Modification de données existantes</span></a>.</p>
+<p class="admonition-title">Note</p>
+<p>Pour ajouter un second couvercle ou un second noeud assainissement à un ouvrage assainissement, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Modification de données existantes</span></a>.</p>
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2>2.2.2.4. Synchronisation de la géométrie<a class="headerlink" href="#geometry-synchronization" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La géométrie de la nouvelle entité définit la géométrie des tables connectées comme &#8216;couvercle&#8217; et &#8216;noeud assainissement&#8217;. La valeur Z de la géométrie peut être fixée en définissant les valeurs de cotes. Cela signifie que lorsque la cote du couvercle <cite>co_level</cite> est entrée, cette valeur est adaptée à la valeur Z de la géométrie du couvercle. La cote du radier du noeud assainissement <cite>wn_bottom_level</cite> définit la valeur Z de la géométrie du noeud assainissement. La géométrie de l&#8217;entité noeud assainissement correspond à celle du couvercle. Cela signifie que la géométrie Z de l&#8217;entité numérisée est en fait la valeur entrée dans <cite>co_level</cite>.</p>
+<h2><span class="section-number">2.2.2.4. </span>Synchronisation de la géométrie<a class="headerlink" href="#geometry-synchronization" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La géométrie de la nouvelle entité définit la géométrie des tables connectées comme “couvercle” et “noeud assainissement”. La valeur Z de la géométrie peut être fixée en définissant les valeurs de cotes. Cela signifie que lorsque la cote du couvercle <cite>co_level</cite> est entrée, cette valeur est adaptée à la valeur Z de la géométrie du couvercle. La cote du radier du noeud assainissement <cite>wn_bottom_level</cite> définit la valeur Z de la géométrie du noeud assainissement. La géométrie de l’entité noeud assainissement correspond à celle du couvercle. Cela signifie que la géométrie Z de l’entité numérisée est en fait la valeur entrée dans <cite>co_level</cite>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If a cover level changes, the Z value of the cover&#8217;s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it&#8217;s like when both value change. Means the cover&#8217;s geometry is set according to the cover level and if it&#8217;s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
+<p class="admonition-title">Note</p>
+<p>If a cover level changes, the Z value of the cover’s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it’s like when both value change. Means the cover’s geometry is set according to the cover level and if it’s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
 </div>
 </div>
 </div>
@@ -290,6 +285,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

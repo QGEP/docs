@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../genindex.html"/>
+        <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="5. Wincan 2 QGEP plugin" href="index.html"/>
         <link rel="next" title="5.4. Problemlösungen" href="fixing-issues.html"/>
@@ -89,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Wincan 2 QGEP plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Einleitung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Untersuchungsdatei öffnen</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.3. Haltungen abgleichen</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Haltungen abgleichen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-matching">5.3.1. Automatischer Abgleich</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#manual-matching">5.3.2. Manueller Abgleich</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#skipping-channels-or-observations">5.3.3. Untersuchungsbericht oder Beobachtungen weglassen</a></li>
@@ -125,13 +128,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">5. Wincan 2 QGEP plugin</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">5. </span>Wincan 2 QGEP plugin</a> &raquo;</li>
       
-    <li>5.3. Haltungen abgleichen</li>
+    <li><span class="section-number">5.3. </span>Haltungen abgleichen</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/wincan2qgep/match-channels.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/wincan2qgep/match-channels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -142,38 +145,34 @@
            <div itemprop="articleBody">
             
   <div class="section" id="match-channels">
-<h1>5.3. Haltungen abgleichen<a class="headerlink" href="#match-channels" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">5.3. </span>Haltungen abgleichen<a class="headerlink" href="#match-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Um die Untersuchungsdaten zu importieren, müssen die Untersuchungsberichte den QGEP-Haltungen zugeordnet werden. Das kann halb-automatisch oder manuell geschehen. Noch nicht zugeordnete Untersuchungsberichte werden in der Haupttabelle rot dargestellt.</p>
 <div class="section" id="automatic-matching">
-<h2>5.3.1. Automatischer Abgleich<a class="headerlink" href="#automatic-matching" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">5.3.1. </span>Automatischer Abgleich<a class="headerlink" href="#automatic-matching" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Ein automatischer Abgleich kann durchgeführt werden, indem nach einem Muster in den Schachtbezeichnungen gesucht wird. Geben Sie eine Kanal-ID in das entsprechende Feld ein und das Plugin sucht nach den Kanälen, die mit  Schacht verbinden, wie folgt: `` {channel_id} - {manhole_id} `` (die Schacht-Bezeichnungwird aus den Inspektionsdaten entnommen).</p>
 </div>
 <div class="section" id="manual-matching">
-<h2>5.3.2. Manueller Abgleich<a class="headerlink" href="#manual-matching" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">5.3.2. </span>Manueller Abgleich<a class="headerlink" href="#manual-matching" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der manuelle Abgleich geht wie folgt:</p>
 <ol class="arabic simple">
-<li><p class="first">Den gewünschten Untersuchungsbericht in der Tabelle auswählen</p>
-</li>
-<li><p class="first">In der ersten Haltungszeile auf den <code class="docutils literal"><span class="pre">Select</span> <span class="pre">on</span> <span class="pre">map</span></code> Knopf klicken</p>
-</li>
+<li><p>Den gewünschten Untersuchungsbericht in der Tabelle auswählen</p></li>
+<li><p>In der ersten Haltungszeile auf den <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">on</span> <span class="pre">map</span></code> Knopf klicken</p></li>
 </ol>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/match-channel-1.png" src="../_images/match-channel-1.png" />
 </div>
 <ol class="arabic simple" start="3">
-<li><p class="first">Den zugehörigen Kanal in der Karte suchen und anklicken.</p>
-</li>
-<li><p class="first">Die Haltungs ID erscheint jetzt in der Liste und der Untersuchungsbericht ist nicht mehr rot hinterlegt.</p>
-</li>
+<li><p>Den zugehörigen Kanal in der Karte suchen und anklicken.</p></li>
+<li><p>Die Haltungs ID erscheint jetzt in der Liste und der Untersuchungsbericht ist nicht mehr rot hinterlegt.</p></li>
 </ol>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/match-channel-2.png" src="../_images/match-channel-2.png" />
 </div>
 </div>
 <div class="section" id="skipping-channels-or-observations">
-<h2>5.3.3. Untersuchungsbericht oder Beobachtungen weglassen<a class="headerlink" href="#skipping-channels-or-observations" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">5.3.3. </span>Untersuchungsbericht oder Beobachtungen weglassen<a class="headerlink" href="#skipping-channels-or-observations" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit der Checkbox ganz links können ganze Untersuchungsbericht oder einzelne Beobachtungen einer Untersuchung weggelassen werden.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/skip-data.png" src="../_images/skip-data.png" />
 </div>
 </div>
@@ -229,6 +228,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

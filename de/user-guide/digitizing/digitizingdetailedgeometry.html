@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.2. Digitalisieren in QGEP" href="index.html"/>
         <link rel="next" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" href="digitizingdrainagechannel.html"/>
@@ -88,7 +91,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Digitalisieren in QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Datenerfassung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Abwasserbauwerke digitalisieren</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.3. Digitalisieren detaillierter Geometrie</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.3. Digitalisieren detaillierter Geometrie</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.3.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">2.2.3.2. Digitalisierungswerkzeug</a></li>
 </ul>
@@ -134,15 +137,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP Benutzerhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Digitalisieren in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Digitalisieren in QGEP</a> &raquo;</li>
       
-    <li>2.2.3. Digitalisieren detaillierter Geometrie</li>
+    <li><span class="section-number">2.2.3. </span>Digitalisieren detaillierter Geometrie</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingdetailedgeometry.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingdetailedgeometry.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,54 +156,45 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-detailed-geometry">
-<h1>2.2.3. Digitalisieren detaillierter Geometrie<a class="headerlink" href="#digitizing-detailed-geometry" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.2.3. </span>Digitalisieren detaillierter Geometrie<a class="headerlink" href="#digitizing-detailed-geometry" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.3.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.3.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Sie können detaillierte Geometrie den Abwasser Strukturen hinzufügen</p>
 <p>Das ist empfohlen für:</p>
 <ul class="simple">
-<li><p class="first">Sonderbauwerken und Einleitstellen, wenn diese keine Standardbauwerke wie Normschächte sind, bei denen man <strong>Dimension1</strong> und <strong>Dimension2</strong> definieren kann, um die Geometrie zu beschreiben.</p>
-</li>
-<li><p class="first">Versickerungsanlagen bei welchen <strong>Dimension1</strong> und Dimension2** nicht genügen, um die Geometrie zu beschreiben</p>
-</li>
+<li><p>Sonderbauwerken und Einleitstellen, wenn diese keine Standardbauwerke wie Normschächte sind, bei denen man <strong>Dimension1</strong> und <strong>Dimension2</strong> definieren kann, um die Geometrie zu beschreiben.</p></li>
+<li><p>Versickerungsanlagen bei welchen <strong>Dimension1</strong> und Dimension2** nicht genügen, um die Geometrie zu beschreiben</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Detaillierte Geometrie wird normalerweise nicht für Kanalschächte oder Kanäle benutzt.</p>
+<p class="admonition-title">Achtung</p>
+<p>Detaillierte Geometrie wird normalerweise nicht für Kanalschächte oder Kanäle benutzt.</p>
 </div>
 </div>
 <div class="section" id="digitizing-tool">
-<h2>2.2.3.2. Digitalisierungswerkzeug<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.3.2. </span>Digitalisierungswerkzeug<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p>
-</li>
-<li><p class="first">Wählen Sie das Objekt, bei welchem Sie detaillierte Geometrie hinzufügen wollen mit dem Info Werkzeug</p>
-</li>
-<li><p class="first">Rechtsklick auf das Objekt</p>
-</li>
-<li><p class="first">Wenn mehrere Objekte vorhanden sind: wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p>
-</li>
-<li><p class="first">Wählen Sie <strong>Digitize</strong></p>
-</li>
+<li><p>Wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p></li>
+<li><p>Wählen Sie das Objekt, bei welchem Sie detaillierte Geometrie hinzufügen wollen mit dem Info Werkzeug</p></li>
+<li><p>Rechtsklick auf das Objekt</p></li>
+<li><p>Wenn mehrere Objekte vorhanden sind: wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p></li>
+<li><p>Wählen Sie <strong>Digitize</strong></p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/digitizing_detailedgeometry1.jpg" src="../../_images/digitizing_detailedgeometry1.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sie können nun mit der Digitalisierung des Polygons beginnen</p>
-</li>
+<li><p>Sie können nun mit der Digitalisierung des Polygons beginnen</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/digitizing_detailedgeometry2.jpg" src="../../_images/digitizing_detailedgeometry2.jpg" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/digitizing_detailedgeometry3.jpg" src="../../_images/digitizing_detailedgeometry3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Rechtsklick, um zu stoppen</p>
-</li>
+<li><p>Rechtsklick, um zu stoppen</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/digitizing_detailedgeometry4.jpg" src="../../_images/digitizing_detailedgeometry4.jpg" />
 </div>
 <p>Eine andere Möglichkeit besteht darin, die <strong>vw_qgep_wastewater_structure</strong> Eingabemaske mit dem Info-Tool zu öffnen und dann im <strong>Aktionen</strong>-Menu der Eingabemaske <strong>Digitize</strong> wählen.</p>
@@ -257,6 +251,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../genindex.html"/>
+        <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../index.html"/>
         <link rel="up" title="4. Demo virtuelle Maschine" href="index.html"/>
         <link rel="next" title="5. Wincan 2 QGEP plugin" href="../wincan2qgep/index.html"/>
@@ -88,7 +91,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Demo virtuelle Maschine</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="about.html">4.1. Um</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">4.2. Installation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">4.3. QGIS Server</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. QGIS Server</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">4.3.1. Betreten des Webservices</a></li>
 </ul>
 </li>
@@ -120,13 +123,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">4. Demo virtuelle Maschine</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">4. </span>Demo virtuelle Maschine</a> &raquo;</li>
       
-    <li>4.3. QGIS Server</li>
+    <li><span class="section-number">4.3. </span>QGIS Server</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/vm/server.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/vm/server.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -137,20 +140,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qgis-server">
-<h1>4.3. QGIS Server<a class="headerlink" href="#qgis-server" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">4.3. </span>QGIS Server<a class="headerlink" href="#qgis-server" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Sie können auch eine virtuelle Maschine mit einem älteren QGEP , welches auch einen QGIS Server installiert hat herunter laden, von: <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a> .</p>
 <p>Die virtuelle Maschine hat funktionierende Installationen von dem QGIS Server &lt;<a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html</a>&gt;` und dem <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
 <div class="section" id="access-the-web-services">
-<h2>4.3.1. Betreten des Webservices<a class="headerlink" href="#access-the-web-services" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">4.3.1. </span>Betreten des Webservices<a class="headerlink" href="#access-the-web-services" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Apache-Server ist eingerichtet, um auf Anfragen an <cite>http://qgisplatform.demo</cite> zu reagieren. Bei Zugriff über vorstehende Verlinkung per Webbrowser, wird man durch die VM auf die Startseite von QWC geleitet wie untenstehend ersichtlich.</p>
-<div class="figure" id="id2">
+<div class="figure align-default" id="id2">
 <img alt="../_images/001_qwc.png" src="../_images/001_qwc.png" />
-<p class="caption"><span class="caption-text"><strong>QGIS Web client starting page</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>QGIS Web client starting page</strong></span><a class="headerlink" href="#id2" title="Link zu diesem Bild">¶</a></p>
 </div>
-<p>Wenn Sie den Webservice ausserhalb der VM betreten wollen, müssen Sie die <code class="docutils literal"><span class="pre">hosts</span></code> Datei auf Ihrer Maschine bearbeiten und <code class="docutils literal"><span class="pre">qgisplatform.demo</span></code> zur IP der VM richten.</p>
+<p>Wenn Sie den Webservice ausserhalb der VM betreten wollen, müssen Sie die <code class="docutils literal notranslate"><span class="pre">hosts</span></code> Datei auf Ihrer Maschine bearbeiten und <code class="docutils literal notranslate"><span class="pre">qgisplatform.demo</span></code> zur IP der VM richten.</p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Wenn Sie die VM mit dem Netzwerk Adapter innerhalb des NAT Modus aufgesetzt haben, dann ist nur der VM host in der Lage auf die Services zuzugreifen. Wenn Sie wollen, dass alle Geräte in der LAge sind dies zu tun dann müssen Sie den Netzwerk Adapter im Bridge Modus aufsetzten.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn Sie die VM mit dem Netzwerk Adapter innerhalb des NAT Modus aufgesetzt haben, dann ist nur der VM host in der Lage auf die Services zuzugreifen. Wenn Sie wollen, dass alle Geräte in der LAge sind dies zu tun dann müssen Sie den Netzwerk Adapter im Bridge Modus aufsetzten.</p>
 </div>
 </div>
 </div>
@@ -205,6 +208,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

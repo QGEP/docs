@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Indice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Cerca" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 documentazione" href="../../index.html"/>
         <link rel="up" title="2.3. Editing in QGEP" href="index.html"/>
         <link rel="next" title="2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes" href="moving.html"/>
@@ -87,7 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitizing in QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.3. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.3.1. Editing of existing data</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.3.1. Editing of existing data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#demo-project">2.3.1.1. Demo project</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layers">2.3.1.2. Layers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Changing attributes of point elements (manholes / special structures)</a></li>
@@ -141,15 +144,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.3. Editing in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.3. </span>Editing in QGEP</a> &raquo;</li>
       
-    <li>2.3.1. Editing of existing data</li>
+    <li><span class="section-number">2.3.1. </span>Editing of existing data</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/editing/editing.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/editing/editing.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,271 +163,271 @@
            <div itemprop="articleBody">
             
   <div class="section" id="editing-of-existing-data">
-<span id="editing-data"></span><h1>2.3.1. Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Link a questa intestazione">¶</a></h1>
+<span id="editing-data"></span><h1><span class="section-number">2.3.1. </span>Editing of existing data<a class="headerlink" href="#editing-of-existing-data" title="Link a questa intestazione">¶</a></h1>
 <p>This represents a guide on how to edit existing data in QGEP.</p>
 <div class="section" id="demo-project">
-<h2>2.3.1.1. Demo project<a class="headerlink" href="#demo-project" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.1. </span>Demo project<a class="headerlink" href="#demo-project" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
-<li>Make sure you have imported the demo project with pgAdminIII (see the <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span>Database initialization</span></a> chapter)</li>
-<li>Open the demoproject by going to the main menu and press <strong>Project</strong> &#8211;&gt; <strong>Open</strong>  or by pressing <code class="docutils literal"><span class="pre">CTRL</span></code>
-+ <code class="docutils literal"><span class="pre">O</span></code> at the same time.</li>
+<li><p>Make sure you have imported the demo project with pgAdminIII (see the <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span class="std std-ref">Database initialization</span></a> chapter)</p></li>
+<li><p>Open the demoproject by going to the main menu and press <strong>Project</strong> –&gt; <strong>Open</strong>  or by pressing <code class="docutils literal notranslate"><span class="pre">CTRL</span></code>
++ <code class="docutils literal notranslate"><span class="pre">O</span></code> at the same time.</p></li>
 </ul>
-<div class="figure">
-<a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" /></a>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" style="width: 800.0px; height: 450.0px;" /></a>
 </div>
 <ul class="simple">
-<li>Login to the database</li>
+<li><p>Login to the database</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_demoproject_login.jpg" src="../../_images/qgep_demoproject_login.jpg" />
 </div>
 <ul class="simple">
-<li>You should now have the demoproject loaded</li>
+<li><p>You should now have the demoproject loaded</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_demoproject_overview.jpg" src="../../_images/qgep_demoproject_overview.jpg" />
 </div>
 <ul class="simple">
-<li>The project consists of different layers. Depending on your task what to edit or add you choose the layer.</li>
+<li><p>The project consists of different layers. Depending on your task what to edit or add you choose the layer.</p></li>
 </ul>
 </div>
 <div class="section" id="layers">
-<h2>2.3.1.2. Layers<a class="headerlink" href="#layers" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.2. </span>Layers<a class="headerlink" href="#layers" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
-<li>QGEP has different predefined layers. For explanations, see the <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span>Layer explanation</span></a> chapter.</li>
+<li><p>QGEP has different predefined layers. For explanations, see the <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span class="std std-ref">Layer explanation</span></a> chapter.</p></li>
 </ul>
 </div>
 <div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
-<h2>2.3.1.3. Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.3. </span>Changing attributes of point elements (manholes / special structures)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link a questa intestazione">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</li>
-<li>Switch to the edit mode or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</li>
-<li>Then click on the <strong>Identify features</strong> button and choose the element you want to edit by double-clicking.</li>
+<li><p>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</p></li>
+<li><p>Switch to the edit mode or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</p></li>
+<li><p>Then click on the <strong>Identify features</strong> button and choose the element you want to edit by double-clicking.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
 </div>
 <ul class="simple">
-<li>The <strong>vw_qgep_wastewater_structure</strong> form will open.</li>
+<li><p>The <strong>vw_qgep_wastewater_structure</strong> form will open.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
 </div>
 <ul class="simple">
-<li>On the first tab you can change the most common attributes</li>
-<li>To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
-kind of wastewater structure you can edit additional attributes in the respective tab (<strong>special structure</strong>, <strong>manhole</strong>).</li>
-<li>The <strong>covers</strong> tab allows you to add additional covers.</li>
+<li><p>On the first tab you can change the most common attributes</p></li>
+<li><p>To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
+kind of wastewater structure you can edit additional attributes in the respective tab (<strong>special structure</strong>, <strong>manhole</strong>).</p></li>
+<li><p>The <strong>covers</strong> tab allows you to add additional covers.</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
+<p class="admonition-title">Attenzione</p>
+<p>It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
 </div>
 <ul class="simple">
-<li>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</li>
+<li><p>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li>In <strong>Wastewater nodes</strong> tab you can edit or add all attributes of this class or add a second element.</li>
+<li><p>In <strong>Wastewater nodes</strong> tab you can edit or add all attributes of this class or add a second element.</p></li>
 </ul>
 <p>To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.</p>
 <div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
+<p class="admonition-title">Attenzione</p>
+<p>It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
-<h2>2.3.1.4. Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.4. </span>Changing attributes of linear elements (channels)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Link a questa intestazione">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></li>
-<li>Switch to the edit mode.</li>
-<li>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a reach.</li>
-<li>The <strong>vw_qgep_reach</strong> form will open.</li>
+<li><p>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></p></li>
+<li><p>Switch to the edit mode.</p></li>
+<li><p>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a reach.</p></li>
+<li><p>The <strong>vw_qgep_reach</strong> form will open.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/form_vw_qgep_reach.jpg" src="../../_images/form_vw_qgep_reach.jpg" />
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>On the first tab you can change the most common attributes.</li>
-<li>To change attributes of related tables (e.g. <strong>reach points</strong>) select the correspondent tab.</li>
+<li><p>On the first tab you can change the most common attributes.</p></li>
+<li><p>To change attributes of related tables (e.g. <strong>reach points</strong>) select the correspondent tab.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/form_vw_qgep_reach_reachpoints.jpg" src="../../_images/form_vw_qgep_reach_reachpoints.jpg" />
 </div>
 </div></blockquote>
 </div></blockquote>
 </div>
 <div class="section" id="change-reach-direction">
-<h2>2.3.1.5. Change reach direction<a class="headerlink" href="#change-reach-direction" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.5. </span>Change reach direction<a class="headerlink" href="#change-reach-direction" title="Link a questa intestazione">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).</p>
+<p class="admonition-title">Nota</p>
+<p>The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).</p>
 </div>
 <p>QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
 Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.</p>
 <ul class="simple">
-<li>To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
-<li>Open the <strong>Processing Toolbox</strong></li>
+<li><p>To start you have to select all reaches that you want to change. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</p></li>
+<li><p>Open the <strong>Processing Toolbox</strong></p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
 </div>
 <ul class="simple">
-<li>Double click the <strong>Change reach direction</strong> tool</li>
+<li><p>Double click the <strong>Change reach direction</strong> tool</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
 </div>
 <ul class="simple">
-<li>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - Layer and then click on <strong>Run</strong></li>
-<li>If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed.</li>
-<li>Refresh network topology.</li>
-<li>You can save now the change.</li>
+<li><p>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - Layer and then click on <strong>Run</strong></p></li>
+<li><p>If you zoom in or out, you see, that the slope-arrow and the slope has changed. The reach points level have not changed.</p></li>
+<li><p>Refresh network topology.</p></li>
+<li><p>You can save now the change.</p></li>
 </ul>
 </div>
 <div class="section" id="snap-reach-geometry">
-<h2>2.3.1.6. Snap reach geometry<a class="headerlink" href="#snap-reach-geometry" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.6. </span>Snap reach geometry<a class="headerlink" href="#snap-reach-geometry" title="Link a questa intestazione">¶</a></h2>
 <p>This tool snaps reaches graphically to the wastewater network element they are connected to. So they are not only logically, but also graphically connected.</p>
 <ul class="simple">
-<li>To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</li>
-<li>Open the <strong>Processing Toolbox</strong></li>
+<li><p>To start you have to select all reaches that you want to snap. There is no need to select the vw_qgep_reach layer or to set this layer to the edit mode.</p></li>
+<li><p>Open the <strong>Processing Toolbox</strong></p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
 </div>
 <ul class="simple">
-<li>Double click the <strong>Snap reach geometry</strong> tool</li>
+<li><p>Double click the <strong>Snap reach geometry</strong> tool</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
 </div>
 <ul class="simple">
-<li>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - layer and the <strong>vw_wastewater_node</strong> - layer, then click on <strong>Run</strong></li>
-<li>If you zoom in or out, you see the changes.</li>
-<li>If the result is not, what you expect, try with a greater snapping distance</li>
+<li><p>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - layer and the <strong>vw_wastewater_node</strong> - layer, then click on <strong>Run</strong></p></li>
+<li><p>If you zoom in or out, you see the changes.</p></li>
+<li><p>If the result is not, what you expect, try with a greater snapping distance</p></li>
 </ul>
 <p>If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.</p>
 <div class="admonition attention">
-<p class="first admonition-title">Attenzione</p>
-<p class="last">If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
+<p class="admonition-title">Attenzione</p>
+<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
 </div>
 </div>
 <div class="section" id="working-with-codes-of-value-list">
-<h2>2.3.1.7. Working with codes of value list<a class="headerlink" href="#working-with-codes-of-value-list" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.7. </span>Working with codes of value list<a class="headerlink" href="#working-with-codes-of-value-list" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
-<li>The values of fields with value list are stored in the database with codes.</li>
+<li><p>The values of fields with value list are stored in the database with codes.</p></li>
 </ul>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">The codes are unique, also if there is the same text in different value lists. E.g. the code for &#8220;rain_wastewater&#8221; in the vl_channel_usage_current and in the vl_channel_usage_planned is different.</p>
+<p class="admonition-title">Nota</p>
+<p>The codes are unique, also if there is the same text in different value lists. E.g. the code for «rain_wastewater» in the vl_channel_usage_current and in the vl_channel_usage_planned is different.</p>
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.</li>
-<li>But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: <strong>represent_value(&#8220;field&#8221;)</strong></li>
+<li><p>In a qgep project with correct configuration you see in the table view or the form view the values in your language and not the codes.</p></li>
+<li><p>But if you want to define a selection by expression or if you want to define a rule-based symbology for your layer, you have to know the codes or you use the following expression: <strong>represent_value(«field»)</strong></p></li>
 </ul>
 <p>Examples for using <strong>represent_value</strong></p>
 <ul class="simple">
-<li>Search all primary wastewater facility reaches (function_hierarchic starts with pwwf)</li>
+<li><p>Search all primary wastewater facility reaches (function_hierarchic starts with pwwf)</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/represent_value1.jpg" src="../../_images/represent_value1.jpg" />
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>Search all reaches, that have not the same usage_planned as usage_current</li>
+<li><p>Search all reaches, that have not the same usage_planned as usage_current</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/represent_value2.jpg" src="../../_images/represent_value2.jpg" />
 </div>
 </div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">The expression <cite>&#8220;ch_usage_current&#8221; &lt;&gt; &#8220;ch_usage planned&#8221;</cite> does not work because of the unique codes!</p>
+<p class="admonition-title">Nota</p>
+<p>The expression <cite>«ch_usage_current» &lt;&gt; «ch_usage planned»</cite> does not work because of the unique codes!</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only work for one language.</p>
+<p class="admonition-title">Nota</p>
+<p>In the demo-project is no use of represent_value for rule-based symbols, because the rules will otherwise only work for one language.</p>
 </div>
 </div>
 <div class="section" id="an-other-way-to-choose-an-object">
-<h2>2.3.1.8. An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.8. </span>An other way to choose an object<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
-<li>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</li>
+<li><p>With the <strong>Identify feature</strong> tool activated, right clicking an element outputs a selection of all existing objects at this place.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/qgep_info_button_rightclick.jpg" src="../../_images/qgep_info_button_rightclick.jpg" />
 </div>
 <ul class="simple">
-<li>You can select then the object you want. This will get you to the correspondent form to see the details.</li>
+<li><p>You can select then the object you want. This will get you to the correspondent form to see the details.</p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
-<h2>2.3.1.9. Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.9. </span>Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link a questa intestazione">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
+<p class="admonition-title">Nota</p>
+<p>The following description is for an additional cover. It works similar for additional wastewater nodes.</p>
 </div>
 <ul class="simple">
-<li>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</li>
-<li>Define in layer vw_cover / Properties / <strong>Attribute Forms</strong> the field <strong>fk_wastewater_structure</strong> as value relation</li>
+<li><p>Be sure to have the relation between vw_cover (field fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in your project properties / relations.</p></li>
+<li><p>Define in layer vw_cover / Properties / <strong>Attribute Forms</strong> the field <strong>fk_wastewater_structure</strong> as value relation</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
-<li>Start editing vw_cover and add the new cover</li>
-<li>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</li>
-<li>After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.</li>
+<li><p>Start editing vw_cover and add the new cover</p></li>
+<li><p>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</p></li>
+<li><p>After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/new_cover_connect_to_wws.jpg" src="../../_images/new_cover_connect_to_wws.jpg" />
 </div>
 </div>
 <div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
-<h2>2.3.1.10. Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.10. </span>Adding a wastewater node to an existing reach<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Link a questa intestazione">¶</a></h2>
 <p>In some cases, you need to add a wastewater node between two or more reaches, although there is no manhole at this place.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).</p>
+<p class="admonition-title">Nota</p>
+<p>This cases are mainly in pwwf_channels (primary wastewater facilities) if there is e.g. a change of slope or a change of the material or if there is a connection of two channels without manhole (in German: Blindanschluss).</p>
 </div>
 <p>In the data model, you can connect a node between reaches to a channel (because also a channel is a wastewater structure). There is in the moment a discussion, if it is necessary or optional or even forbidden to define a connection to a wastewater structure.</p>
 <p>In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.</p>
+<p class="admonition-title">Nota</p>
+<p>If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.</p>
 </div>
 </div>
 <div class="section" id="multiedit">
-<h2>2.3.1.11. Multiedit<a class="headerlink" href="#multiedit" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.11. </span>Multiedit<a class="headerlink" href="#multiedit" title="Link a questa intestazione">¶</a></h2>
 <p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
 </div>
 <div class="section" id="saving-changes">
-<h2>2.3.1.12. Saving changes<a class="headerlink" href="#saving-changes" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.12. </span>Saving changes<a class="headerlink" href="#saving-changes" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
-<li>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</li>
+<li><p>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</p></li>
 </ul>
 <p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">You can not change a point - wastewater structure (e.g. manhole) to a line wastewater structure (channel) or vice versa.</p>
+<p class="admonition-title">Nota</p>
+<p>You can not change a point - wastewater structure (e.g. manhole) to a line wastewater structure (channel) or vice versa.</p>
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2>2.3.1.13. Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">2.3.1.13. </span>Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link a questa intestazione">¶</a></h2>
 <p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= duplicated) records are no more unique.</p>
 <p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if necessary.</p>
@@ -482,6 +485,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

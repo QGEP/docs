@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2. QGEP Benutzerhandbuch" href="../index.html"/>
         <link rel="next" title="2.6. Plandruck" href="../plan-plotting/index.html"/>
@@ -88,7 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitalisieren in QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Bearbeiten in QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Längsschnitte</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">2.5. Werkzeuge zur Netzwerkverfolgung</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Werkzeuge zur Netzwerkverfolgung</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#refresh-network-topology">2.5.1. Netzwerk Topologie aktualisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upstream">2.5.2. Gegen die Fließrichtung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#downstream">2.5.3. In Fließrichtung</a></li>
@@ -126,13 +129,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP Benutzerhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
       
-    <li>2.5. Werkzeuge zur Netzwerkverfolgung</li>
+    <li><span class="section-number">2.5. </span>Werkzeuge zur Netzwerkverfolgung</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/network-following/index.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/network-following/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,141 +146,111 @@
            <div itemprop="articleBody">
             
   <div class="section" id="network-following-tools">
-<h1>2.5. Werkzeuge zur Netzwerkverfolgung<a class="headerlink" href="#network-following-tools" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.5. </span>Werkzeuge zur Netzwerkverfolgung<a class="headerlink" href="#network-following-tools" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="refresh-network-topology">
-<h2>2.5.1. Netzwerk Topologie aktualisieren<a class="headerlink" href="#refresh-network-topology" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.5.1. </span>Netzwerk Topologie aktualisieren<a class="headerlink" href="#refresh-network-topology" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Bevor die Netzwerk-Verfolgungs-Werkzeuge verwendet werden können, muss die Netzwerk Topologie aktualisiert sein</p>
-</li>
-<li><p class="first">Um die Netzwerk Topologie zu aktualisieren, wähle den Layer <strong>vw_qgep_reach</strong> und aktiviere den Bearbeitungsmodus</p>
-</li>
-<li><p class="first">Klicke das  <strong>refresh network topology</strong> Werkzeug (Knopf mit SQL und dem Wassertropf)</p>
-</li>
-<li><p class="first">Wenn die Aktualisierung erfolgreich ist, erscheint eine Meldung: <strong>Success: Network successfully updated</strong></p>
-</li>
+<li><p>Bevor die Netzwerk-Verfolgungs-Werkzeuge verwendet werden können, muss die Netzwerk Topologie aktualisiert sein</p></li>
+<li><p>Um die Netzwerk Topologie zu aktualisieren, wähle den Layer <strong>vw_qgep_reach</strong> und aktiviere den Bearbeitungsmodus</p></li>
+<li><p>Klicke das  <strong>refresh network topology</strong> Werkzeug (Knopf mit SQL und dem Wassertropf)</p></li>
+<li><p>Wenn die Aktualisierung erfolgreich ist, erscheint eine Meldung: <strong>Success: Network successfully updated</strong></p></li>
 </ul>
 </div>
 <div class="section" id="upstream">
-<h2>2.5.2. Gegen die Fließrichtung<a class="headerlink" href="#upstream" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.5.2. </span>Gegen die Fließrichtung<a class="headerlink" href="#upstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Es spielt keine Rolle, welcher Layer ausgewählt ist</p>
-</li>
-<li><p class="first">Um einen Netzwerk Verfolgung gegen die Fließrichtung zu starten wählen Sie den <strong>Upstream</strong> Knopf</p>
-</li>
+<li><p>Es spielt keine Rolle, welcher Layer ausgewählt ist</p></li>
+<li><p>Um einen Netzwerk Verfolgung gegen die Fließrichtung zu starten wählen Sie den <strong>Upstream</strong> Knopf</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_upstream_button.jpg" src="../../_images/network_upstream_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">QGEP öffnet das Profil Fenster im unteren Teil des Kartenfensters. Klick auf deinen Start-Abwasserknoten.</p>
-</li>
-<li><p class="first">Wenn mehr als einen Abwasserknoten in der Nähe vorhanden ist, kann der gewünschte Knoten aus einer Liste ausgewählt werden</p>
-</li>
+<li><p>QGEP öffnet das Profil Fenster im unteren Teil des Kartenfensters. Klick auf deinen Start-Abwasserknoten.</p></li>
+<li><p>Wenn mehr als einen Abwasserknoten in der Nähe vorhanden ist, kann der gewünschte Knoten aus einer Liste ausgewählt werden</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Mit dem QGEPPlugin 1.1.8 / QGIS 3.4.2 ist es empfehlenswert, soweit hinein zu zoomen, dass der Start-Knoten direkt angeklickt werden kann. Wenn ein Knoten aus der Liste ausgewählt werden muss, können unerwartete Resultate eintreten.</p>
+<p class="admonition-title">Achtung</p>
+<p>Mit dem QGEPPlugin 1.1.8 / QGIS 3.4.2 ist es empfehlenswert, soweit hinein zu zoomen, dass der Start-Knoten direkt angeklickt werden kann. Wenn ein Knoten aus der Liste ausgewählt werden muss, können unerwartete Resultate eintreten.</p>
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_select_start_node.jpg" src="../../_images/network_select_start_node.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Nach ein paar Sekunden werden alle Elemente gegen die Fließrichtung hervorgehoben und Sie können sehen, woher das Wasser kommt</p>
-</li>
-<li><p class="first">Wenn die graphisch markierten Haltungen als Auswahl selektiert werden soll, dann klicke auf den Knopf <strong>Select current path</strong> im Profil Fenster</p>
-</li>
+<li><p>Nach ein paar Sekunden werden alle Elemente gegen die Fließrichtung hervorgehoben und Sie können sehen, woher das Wasser kommt</p></li>
+<li><p>Wenn die graphisch markierten Haltungen als Auswahl selektiert werden soll, dann klicke auf den Knopf <strong>Select current path</strong> im Profil Fenster</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_select_currentpath.jpg" src="../../_images/network_select_currentpath.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Du kannst dann mit der Auswahl in der Haltungs-Attributtabelle weiterarbeiten oder auf die selektierten Haltungen zoomen (wenn der Layer  vw_qgep_reach selektiert ist)</p>
-</li>
-<li><p class="first">Benutzen Sie dieses Werkzeug um zu überprüfen, ob Ihr Topologie-Netzwerk korrekt ist</p>
-</li>
+<li><p>Du kannst dann mit der Auswahl in der Haltungs-Attributtabelle weiterarbeiten oder auf die selektierten Haltungen zoomen (wenn der Layer  vw_qgep_reach selektiert ist)</p></li>
+<li><p>Benutzen Sie dieses Werkzeug um zu überprüfen, ob Ihr Topologie-Netzwerk korrekt ist</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Im Knopf <strong>Select current path</strong> gibt es das Menu <strong>Configure Select</strong>. Das ist vorbereitet, damit später nicht nur die Haltungen, sondern auch die Einzugsgebiete, welche mit den Haltungen resp. den Abwasserknoten verknüpft sind, ausgewählt werden können. Diese Funktion ist im GQEPPlugin 1.1.8 noch nicht implementiert.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Im Knopf <strong>Select current path</strong> gibt es das Menu <strong>Configure Select</strong>. Das ist vorbereitet, damit später nicht nur die Haltungen, sondern auch die Einzugsgebiete, welche mit den Haltungen resp. den Abwasserknoten verknüpft sind, ausgewählt werden können. Diese Funktion ist im GQEPPlugin 1.1.8 noch nicht implementiert.</p>
 </div>
 </div>
 <div class="section" id="downstream">
-<h2>2.5.3. In Fließrichtung<a class="headerlink" href="#downstream" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.5.3. </span>In Fließrichtung<a class="headerlink" href="#downstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Netzverfolgung in Fliessrichtung funktioniert gleich wie die oben beschriebene Netzverfolgung gegen die Fliessrichtung.</p>
-</li>
+<li><p>Netzverfolgung in Fliessrichtung funktioniert gleich wie die oben beschriebene Netzverfolgung gegen die Fliessrichtung.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/network_downstream_button.jpg" src="../../_images/network_downstream_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Du siehst, wohin das Wasser fliessen wird.</p>
-</li>
-<li><p class="first">Kontrolliere ob QGEP auch die Überlauf findet</p>
-</li>
-<li><p class="first">Benutzen Sie diese Funktion, um zu überprüfen ob Ihr Topologie- Netzwerk korrekt ist oder herauszufinden wo Sie Fehler beheben können.</p>
-</li>
+<li><p>Du siehst, wohin das Wasser fliessen wird.</p></li>
+<li><p>Kontrolliere ob QGEP auch die Überlauf findet</p></li>
+<li><p>Benutzen Sie diese Funktion, um zu überprüfen ob Ihr Topologie- Netzwerk korrekt ist oder herauszufinden wo Sie Fehler beheben können.</p></li>
 </ul>
 </div>
 <div class="section" id="flow-times-downstream">
-<h2>2.5.4. Fliesszeiten abwärts<a class="headerlink" href="#flow-times-downstream" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.5.4. </span>Fliesszeiten abwärts<a class="headerlink" href="#flow-times-downstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Ein Tool in der QGEP-Werkzeugkiste.</p>
-</li>
-<li><p class="first">Die Idee für dieses Tool: Berechne die Fliesszeit zwischen einem Startpunkt (hier ist z.B. ein Unfall) und einem Abwasserbauwerk unterhalb. Es ist nicht die Idee einen Fliesszeitenplan für ein ganzes Abwassernetz mit diesem Tool zu erstellen. Für ein solches Tool gibt es bereits Überlegungen.</p>
-</li>
-<li><p class="first">Für diese Tool braucht es einen Layer (eine Tabelle) im QGEP-Projekt mit der Fliesszeit und der Obj-ID der Haltungen.</p>
-</li>
-<li><p class="first">Die Starthaltung (wo der Unfall passiert ist) muss im vw_qgep_reach - Layer selektiert werden</p>
-</li>
-<li><p class="first">Starten sie mit Doppelklick auf das <strong>Flow times downstream</strong> Tool</p>
-</li>
+<li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
+<li><p>Die Idee für dieses Tool: Berechne die Fliesszeit zwischen einem Startpunkt (hier ist z.B. ein Unfall) und einem Abwasserbauwerk unterhalb. Es ist nicht die Idee einen Fliesszeitenplan für ein ganzes Abwassernetz mit diesem Tool zu erstellen. Für ein solches Tool gibt es bereits Überlegungen.</p></li>
+<li><p>Für diese Tool braucht es einen Layer (eine Tabelle) im QGEP-Projekt mit der Fliesszeit und der Obj-ID der Haltungen.</p></li>
+<li><p>Die Starthaltung (wo der Unfall passiert ist) muss im vw_qgep_reach - Layer selektiert werden</p></li>
+<li><p>Starten sie mit Doppelklick auf das <strong>Flow times downstream</strong> Tool</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Im Toolfenster muss gewählt werden</p>
+<li><p>Im Toolfenster muss gewählt werden</p>
 <ul>
-<li><p class="first">als reach layer: vw_qgep_reach</p>
-</li>
-<li><p class="first">als flow time layer: die Tabelle mit der Haltungs Obj_ID und den Fliesszeiten (oder dem Wert, der aufsummiert werden soll)</p>
-</li>
-<li><p class="first">als reach id field: das Feld in der Tabelle mit der Obj_ID der Haltung</p>
-</li>
-<li><p class="first">als Flow times field: das Feld aus der Tabelle, dass aufsummiert werden soll</p>
-</li>
-<li><p class="first">als Flow times: wenn sie das Feld leer lassen wird ein temporärer Layer im Projekt erstellt. Oder sie können in diesem Feld das Resultat in einen Vektorlayer speichern.</p>
-</li>
+<li><p>als reach layer: vw_qgep_reach</p></li>
+<li><p>als flow time layer: die Tabelle mit der Haltungs Obj_ID und den Fliesszeiten (oder dem Wert, der aufsummiert werden soll)</p></li>
+<li><p>als reach id field: das Feld in der Tabelle mit der Obj_ID der Haltung</p></li>
+<li><p>als Flow times field: das Feld aus der Tabelle, dass aufsummiert werden soll</p></li>
+<li><p>als Flow times: wenn sie das Feld leer lassen wird ein temporärer Layer im Projekt erstellt. Oder sie können in diesem Feld das Resultat in einen Vektorlayer speichern.</p></li>
 </ul>
 </li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_window.jpg" src="../../_images/flow_time_downstream_window.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Das Tool macht eine Netzverfolgung in Fliessrichtung ab der selektierten Haltung und erzeugt für jede Haltung einen Datensatz im (temporären) Vektor-Layer mit nur einem Feld (der Summe der Werte im flow times field).</p>
-</li>
+<li><p>Das Tool macht eine Netzverfolgung in Fliessrichtung ab der selektierten Haltung und erzeugt für jede Haltung einen Datensatz im (temporären) Vektor-Layer mit nur einem Feld (der Summe der Werte im flow times field).</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_result.jpg" src="../../_images/flow_time_downstream_result.jpg" />
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Wenn es mehr als einen Abwärts - Fliessweg gibt, sind die Resultate nach der Verzweigung falsch.</p>
+<p class="admonition-title">Achtung</p>
+<p>Wenn es mehr als einen Abwärts - Fliessweg gibt, sind die Resultate nach der Verzweigung falsch.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Es gibt Fälle, bei denen ein leerer flow time - Layer und roter (Fehler-)Text im Log-Fenster resultieren:</p>
+<li><p>Es gibt Fälle, bei denen ein leerer flow time - Layer und roter (Fehler-)Text im Log-Fenster resultieren:</p>
 <ul>
-<li><p class="first">Nicht mehr als eine Haltung als Start selektieren</p>
-</li>
-<li><p class="first">vw_qgep_reach nicht als Flow time layer auswählen (um die Länge der Haltungen zu summieren, kann der vw_network_segment - Layer verwendet werden)</p>
-</li>
-<li><p class="first">Wenn im reach id Feld kein Wert vorhanden ist, der zu der Haltungs Obj_ID passt, gibt es einen Fehler</p>
-</li>
+<li><p>Nicht mehr als eine Haltung als Start selektieren</p></li>
+<li><p>vw_qgep_reach nicht als Flow time layer auswählen (um die Länge der Haltungen zu summieren, kann der vw_network_segment - Layer verwendet werden)</p></li>
+<li><p>Wenn im reach id Feld kein Wert vorhanden ist, der zu der Haltungs Obj_ID passt, gibt es einen Fehler</p></li>
 </ul>
 </li>
 </ul>
@@ -334,6 +307,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

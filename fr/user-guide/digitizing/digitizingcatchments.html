@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.7. Numérisation des bassins versants &mdash; documentation QGEP 0.8</title>
+  <title>2.2.7. Numérisation des bassins versants &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Recherche" href="../../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../../index.html"/>
         <link rel="up" title="2.2. Numérisation dans QGEP" href="index.html"/>
         <link rel="next" title="2.2.8. Importing data" href="importingdata.html"/>
         <link rel="prev" title="2.2.6. Suppression d’objets" href="deletingobjects.html"/> 
@@ -82,8 +85,8 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Guide d’utilisateur de QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Numérisation dans QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Saisie de données</a></li>
@@ -91,8 +94,8 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Numérisation de géométries détaillées</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Numérisation de canalisations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d&#8217;objets</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.7. Numérisation des bassins versants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Suppression d’objets</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.7. Numérisation des bassins versants</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.7.1. Généralités</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.7.2. Numérisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#editing">2.2.7.3. Édition</a></li>
@@ -110,7 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Impression de plans</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
@@ -138,15 +141,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. Guide d&#8217;utilisateur de QGEP</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>Guide d’utilisateur de QGEP</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Numérisation dans QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Numérisation dans QGEP</a> &raquo;</li>
       
-    <li>2.2.7. Numérisation des bassins versants</li>
+    <li><span class="section-number">2.2.7. </span>Numérisation des bassins versants</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingcatchments.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingcatchments.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,185 +160,163 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-catchment-areas">
-<h1>2.2.7. Numérisation des bassins versants<a class="headerlink" href="#digitizing-catchment-areas" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2.2.7. </span>Numérisation des bassins versants<a class="headerlink" href="#digitizing-catchment-areas" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.7.1. Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.7.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les bassins versants peuvent être numérisés avec les outils standards de QGIS.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/qgis_standard_tools.jpg" src="../../_images/qgis_standard_tools.jpg" />
 </div>
 <p>Les bassins versants ne doivent pas se chevaucher et peuvent avoir 4 connexions avec des noeuds assainissement.</p>
 </div>
 <div class="section" id="digitizing">
-<h2>2.2.7.2. Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.7.2. </span>Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Sélectionnez le bouton <strong>Activer l&#8217;accrochage</strong></p>
-</li>
+<li><p>Sélectionnez le bouton <strong>Activer l’accrochage</strong></p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/enable_snapping_button.jpg" src="../../_images/enable_snapping_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Ouvrez <strong>Réglages des options d&#8217;accrochage du projet</strong>, contrôlez la couche <strong>od_zone_bassin-versant</strong> et contrôlez la boîte à cocher <strong>éviter intersection</strong> dans cette même couche</p>
-</li>
+<li><p>Ouvrez <strong>Réglages des options d’accrochage du projet</strong>, contrôlez la couche <strong>od_zone_bassin-versant</strong> et contrôlez la boîte à cocher <strong>éviter intersection</strong> dans cette même couche</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_avoid_intersection2.jpg" src="../../_images/catchment_avoid_intersection2.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Les périmètres de bassins versants nouvellement numérisés ne vont pas chevaucher de périmètres existants avec ce réglage.</p>
+<p class="admonition-title">Note</p>
+<p>Les périmètres de bassins versants nouvellement numérisés ne vont pas chevaucher de périmètres existants avec ce réglage.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Passez la couche <em>od_aire_bassin_versant</em> en mode d&#8217;édition</p>
-</li>
-<li><p class="first">Utilisez l&#8217;outil <strong>Ajouter une entité</strong> pour numériser un bassin versant.</p>
-</li>
+<li><p>Passez la couche <em>od_aire_bassin_versant</em> en mode d’édition</p></li>
+<li><p>Utilisez l’outil <strong>Ajouter une entité</strong> pour numériser un bassin versant.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/add_feature_tool.jpg" src="../../_images/add_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Commencer la numérisation avec un clic gauche et continuer avec un clic gauche pour chaque sommet du polygone</p>
-</li>
+<li><p>Commencer la numérisation avec un clic gauche et continuer avec un clic gauche pour chaque sommet du polygone</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_digitizing1.jpg" src="../../_images/catchment_area_digitizing1.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Stoppez la numérisation avec un clic droit</p>
-</li>
+<li><p>Stoppez la numérisation avec un clic droit</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Gardez en mémoire que le point final du polygone est le dernier point où vous avez effectué un clic <strong>gauche</strong>.</p>
+<p class="admonition-title">Note</p>
+<p>Gardez en mémoire que le point final du polygone est le dernier point où vous avez effectué un clic <strong>gauche</strong>.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Le formulaire <strong>od_zone_bassin-versant</strong> apparait</p>
-</li>
+<li><p>Le formulaire <strong>od_zone_bassin-versant</strong> apparait</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_digitizing2.jpg" src="../../_images/catchment_area_digitizing2.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Lorsque vous avez terminé l&#8217;édition des attributs, cliquez sur le bouton <strong>OK</strong></p>
-</li>
+<li><p>Lorsque vous avez terminé l’édition des attributs, cliquez sur le bouton <strong>OK</strong></p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">La nouvelle zone ne chevauche pas les anciennes zones.</p>
+<p class="admonition-title">Note</p>
+<p>La nouvelle zone ne chevauche pas les anciennes zones.</p>
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_digitizing3.jpg" src="../../_images/catchment_area_digitizing3.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pour contrôler la zone exacte du polygone sélectionné, regardez dans la fenêtre  <strong>(Dérivé)</strong> &#8211;&gt; <a href="#id1"><span class="problematic" id="id2">**</span></a>Identifier résultats* sous <a href="#id3"><span class="problematic" id="id4">**</span></a>.</p>
+<p class="admonition-title">Note</p>
+<p>Pour contrôler la zone exacte du polygone sélectionné, regardez dans la fenêtre  <strong>(Dérivé)</strong> –&gt; <a href="#id1"><span class="problematic" id="id2">**</span></a>Identifier résultats* sous <a href="#id3"><span class="problematic" id="id4">**</span></a>.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Pour connecter la zone avec les noeuds assainissement, voir le chapitre <span class="xref std std-ref">connecter-éléments-réseau-assainissement</span>.</p>
+<p class="admonition-title">Note</p>
+<p>Pour connecter la zone avec les noeuds assainissement, voir le chapitre <span class="xref std std-ref">connecter-éléments-réseau-assainissement</span>.</p>
 </div>
 </div>
 <div class="section" id="editing">
-<h2>2.2.7.3. Édition<a class="headerlink" href="#editing" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.7.3. </span>Édition<a class="headerlink" href="#editing" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Vous pouvez éditer des bassins existants avec l&#8217;outil <strong>Sélectionner une entité</strong>.</p>
-</li>
+<li><p>Vous pouvez éditer des bassins existants avec l’outil <strong>Sélectionner une entité</strong>.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/identify_feature_tool.jpg" src="../../_images/identify_feature_tool.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Des réflexions sont en cours afin d&#8217;intégrer un menu (dans la fenêtre attribut des entités) qui permettrait de recopier toutes les valeurs des champs &#8216;courant&#8217; dans les champs &#8216;planifié&#8217;. Option non réalisée pour le moment.</p>
+<p class="admonition-title">Note</p>
+<p>Des réflexions sont en cours afin d’intégrer un menu (dans la fenêtre attribut des entités) qui permettrait de recopier toutes les valeurs des champs “courant” dans les champs “planifié”. Option non réalisée pour le moment.</p>
 </div>
 </div>
 <div class="section" id="split-areas">
-<h2>2.2.7.4. Séparer des zones<a class="headerlink" href="#split-areas" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2.7.4. </span>Séparer des zones<a class="headerlink" href="#split-areas" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Vous pouvez séparer des zones existantes avec l&#8217;outil <strong>Séparer</strong>.</p>
-</li>
+<li><p>Vous pouvez séparer des zones existantes avec l’outil <strong>Séparer</strong>.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/split_tool.jpg" src="../../_images/split_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Il n&#8217;est pas nécessaire de sélectionner la zone en premier. Effectuez un clic gauche pour définir la ligne de séparation. Effectuez un clic droit après avoir défini le dernier point de la ligne de séparation.</p>
-</li>
+<li><p>Il n’est pas nécessaire de sélectionner la zone en premier. Effectuez un clic gauche pour définir la ligne de séparation. Effectuez un clic droit après avoir défini le dernier point de la ligne de séparation.</p></li>
 </ul>
 </div>
 <div class="section" id="merge-areas">
-<h2>2.2.7.5. Fusionner des zones<a class="headerlink" href="#merge-areas" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous pouvez fusionner des zones existantes avec l&#8217;outil <strong>Fusionner objets sélectionnés</strong>.</p>
-<div class="figure">
+<h2><span class="section-number">2.2.7.5. </span>Fusionner des zones<a class="headerlink" href="#merge-areas" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez fusionner des zones existantes avec l’outil <strong>Fusionner objets sélectionnés</strong>.</p>
+<div class="figure align-default">
 <img alt="../../_images/merge_selected_feature_tool.jpg" src="../../_images/merge_selected_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Sélectionnez la couche <strong>od_zone_bassin-versant</strong> et basculez dans le mode d&#8217;édition</p>
-</li>
-<li><p class="first">Sélectionnez au moins deux zones que vous voulez fusionner</p>
-</li>
-<li><p class="first">Cliquez sur l&#8217;outil &#8220;Fusionner les entités sélectionnés&#8221;. La fenêtre <strong>Fusionner attributs entités</strong> apparaît.</p>
-</li>
+<li><p>Sélectionnez la couche <strong>od_zone_bassin-versant</strong> et basculez dans le mode d’édition</p></li>
+<li><p>Sélectionnez au moins deux zones que vous voulez fusionner</p></li>
+<li><p>Cliquez sur l’outil « Fusionner les entités sélectionnés ». La fenêtre <strong>Fusionner attributs entités</strong> apparaît.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/merge_feature_attributes.jpg" src="../../_images/merge_feature_attributes.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Choisir quelles valeurs seront reprise à partir de quelle entrée existante et cliquer <strong>OK</strong>.</p>
-</li>
+<li><p>Choisir quelles valeurs seront reprise à partir de quelle entrée existante et cliquer <strong>OK</strong>.</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Si vous sélectionnez l&#8217;une des entrées et cliquez sur le bouton <strong>Reprendre les attributs de l&#8217;objet sélectionné</strong>, le champ <strong>id_obj</strong> sera ignoré par défaut et la base de données n&#8217;acceptera pas les modifications. Après avoir utilisé ce bouton, vous devez choisir manuellement l&#8217;une des valeurs du champ <strong>id_obj</strong>.</p>
+<p class="admonition-title">Attention</p>
+<p>Si vous sélectionnez l’une des entrées et cliquez sur le bouton <strong>Reprendre les attributs de l’objet sélectionné</strong>, le champ <strong>id_obj</strong> sera ignoré par défaut et la base de données n’acceptera pas les modifications. Après avoir utilisé ce bouton, vous devez choisir manuellement l’une des valeurs du champ <strong>id_obj</strong>.</p>
 </div>
 </div>
 <div class="section" id="connect-catchment-area-to-wastewater-network-nodes">
-<h2>2.2.7.6. Connecter la zone du bassin versant aux noeuds du réseau assainissement<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Vous connectez les bassins versants avec l&#8217;outil <strong>Connecter éléments réseau assainissement</strong> (c&#8217;est le même outil qui est utilisé pour connecter les tronçons et les noeuds, décrit dans le chapitre &#8220;Editer dans QGEP&#8221;).</p>
-<div class="figure">
+<h2><span class="section-number">2.2.7.6. </span>Connecter la zone du bassin versant aux noeuds du réseau assainissement<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous connectez les bassins versants avec l’outil <strong>Connecter éléments réseau assainissement</strong> (c’est le même outil qui est utilisé pour connecter les tronçons et les noeuds, décrit dans le chapitre « Editer dans QGEP »).</p>
+<div class="figure align-default">
 <img alt="../../_images/connect_wastewater_network_elements_button.jpg" src="../../_images/connect_wastewater_network_elements_button.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Peu importe la couche sélectionnée</p>
-</li>
-<li><p class="first">La couche <strong>zone_bassin-versant</strong> doit être en mode d&#8217;édition</p>
-</li>
-<li><p class="first">Cliquez sur le bouton <strong>Connecter éléments réseau assainissement</strong></p>
-</li>
-<li><p class="first">Si vous déplacez la souris au-dessus d&#8217;un bassin versant, à proximité de sa périphérie, l&#8217;objet est mis en évidence: vous pouvez cliquer pour choisir cet objet.</p>
-</li>
-<li><p class="first">Déplacez la souris sur l&#8217;élément du réseau auquel le bassin versant sera connecté (rappel: les objets sélectionnables sont mis en évidence) et cliquez à nouveau</p>
-</li>
+<li><p>Peu importe la couche sélectionnée</p></li>
+<li><p>La couche <strong>zone_bassin-versant</strong> doit être en mode d’édition</p></li>
+<li><p>Cliquez sur le bouton <strong>Connecter éléments réseau assainissement</strong></p></li>
+<li><p>Si vous déplacez la souris au-dessus d’un bassin versant, à proximité de sa périphérie, l’objet est mis en évidence: vous pouvez cliquer pour choisir cet objet.</p></li>
+<li><p>Déplacez la souris sur l’élément du réseau auquel le bassin versant sera connecté (rappel: les objets sélectionnables sont mis en évidence) et cliquez à nouveau</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_connect1.jpg" src="../../_images/catchment_area_connect1.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Une fenêtre apparaît, dans laquelle vous pouvez choisir quelle(s) connexion(s) sera(ont) définie(s).</p>
-</li>
+<li><p>Une fenêtre apparaît, dans laquelle vous pouvez choisir quelle(s) connexion(s) sera(ont) définie(s).</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_connect2.jpg" src="../../_images/catchment_area_connect2.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Si tout est OK, vous verrez apparaître un message dans une barre bleue, au-dessus de la vue de la carte</p>
-</li>
+<li><p>Si tout est OK, vous verrez apparaître un message dans une barre bleue, au-dessus de la vue de la carte</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/catchment_area_connect3.jpg" src="../../_images/catchment_area_connect3.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Dans le modèle VSA-DSS, il est possible de connecter les bassins versants aux noeuds ou aux tronçons assainissement. Cependant, vu qu&#8217;un grand nombre de calculs hydrauliques ne supportent pas les connexions aux tronçons, cet outil dans QGEP se connecte uniquement aux noeuds assainissement et pas aux tronçons.</p>
+<p class="admonition-title">Note</p>
+<p>Dans le modèle VSA-DSS, il est possible de connecter les bassins versants aux noeuds ou aux tronçons assainissement. Cependant, vu qu’un grand nombre de calculs hydrauliques ne supportent pas les connexions aux tronçons, cet outil dans QGEP se connecte uniquement aux noeuds assainissement et pas aux tronçons.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">L&#8217;outil ne contrôle pas si le noeud du réseau assainissement sélectionné fait partie du réseau pwwf (réseau principal). C&#8217;est exclusivement l&#8217;utilisateur qui décide si un noeud est correct ou pas. Si vous n&#8217;êtes pas sûr, consultez ** VSA Guide des données PGEE**, section <strong>Principes de saisie</strong></p>
+<p class="admonition-title">Note</p>
+<p>L’outil ne contrôle pas si le noeud du réseau assainissement sélectionné fait partie du réseau pwwf (réseau principal). C’est exclusivement l’utilisateur qui décide si un noeud est correct ou pas. Si vous n’êtes pas sûr, consultez ** VSA Guide des données PGEE**, section <strong>Principes de saisie</strong></p>
 </div>
-<p>Vous ne pouvez pas, en une seule opération avec l&#8217;outil, connecter de multiples zones avec un noeud assainissement. Si vous voulez le faire, vous devez sélectionner les bassins versants, ouvrir la table d&#8217;attributs et ensuite démarrer en mode d&#8217;édition multiple. Vous pouvez maintenant choisir le noeud assainissement à partir de la liste de tous les noeuds</p>
-<p>Pour supprimer une connexion à un noeud assainissement, vous pouvez éditer la zone avec l&#8217;outil <strong>Identifier entités</strong>.</p>
+<p>Vous ne pouvez pas, en une seule opération avec l’outil, connecter de multiples zones avec un noeud assainissement. Si vous voulez le faire, vous devez sélectionner les bassins versants, ouvrir la table d’attributs et ensuite démarrer en mode d’édition multiple. Vous pouvez maintenant choisir le noeud assainissement à partir de la liste de tous les noeuds</p>
+<p>Pour supprimer une connexion à un noeud assainissement, vous pouvez éditer la zone avec l’outil <strong>Identifier entités</strong>.</p>
 </div>
 </div>
 
@@ -389,6 +370,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

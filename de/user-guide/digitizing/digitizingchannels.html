@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="2.2. Digitalisieren in QGEP" href="index.html"/>
         <link rel="next" title="2.2.6. Objekte löschen" href="deletingobjects.html"/>
@@ -90,7 +93,7 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Abwasserbauwerke digitalisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitalisieren detaillierter Geometrie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Kanäle Digitalisieren</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.5. Kanäle Digitalisieren</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. Allgemeines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Digitalisieren</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Weitere Attribute und Klassen</a></li>
@@ -136,15 +139,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP Benutzerhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Digitalisieren in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Digitalisieren in QGEP</a> &raquo;</li>
       
-    <li>2.2.5. Kanäle Digitalisieren</li>
+    <li><span class="section-number">2.2.5. </span>Kanäle Digitalisieren</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingchannels.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingchannels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,128 +158,113 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-channels">
-<h1>2.2.5. Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.2.5. </span>Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.5.1. Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.5.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen). Siehe Kapitel <span class="xref std std-ref">wizard</span>.</p>
 <p>Select the <strong>Wizard</strong> button, then click <strong>Start Data Entry</strong> and choose <strong>Reach</strong> in the pull down menu.
 Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <strong>Start Data Entry</strong> und wählen <strong>Reach</strong> im Ausziehmenü.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach.jpg" src="../../_images/wizard_data_entry_reach.jpg" />
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Starten Sie die Digitalisierung von Haltungen/Kanälen immer in Fliessrichtung des Kanales, indem sie mit dem <strong>from manhole node</strong> starten und mit dem <strong>to manhole node</strong> aufhören.</p>
+<p class="admonition-title">Achtung</p>
+<p>Starten Sie die Digitalisierung von Haltungen/Kanälen immer in Fliessrichtung des Kanales, indem sie mit dem <strong>from manhole node</strong> starten und mit dem <strong>to manhole node</strong> aufhören.</p>
 </div>
 </div>
 <div class="section" id="digitizing">
-<h2>2.2.5.2. Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.5.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Im Digitalisierungsmodus greift der Eingabezeiger automatisch auf die nächstgelegene Abdeckung oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet.</p>
-</li>
+<li><p>Im Digitalisierungsmodus greift der Eingabezeiger automatisch auf die nächstgelegene Abdeckung oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Mit weiteren Klicks irgendwo können Sie die dazwischenliegenden Punkte des Haltungsverlaufs definieren. Sie können auch direkt einen anderen Kanalschacht anwählen, um einen geraden Kanal zu zeichnen.</p>
-</li>
-<li><p class="first">Die <strong>Advanced Digitizing</strong> Werkzeuge können zusammen mit dem Wizard eingesetzt werden.</p>
-</li>
+<li><p>Mit weiteren Klicks irgendwo können Sie die dazwischenliegenden Punkte des Haltungsverlaufs definieren. Sie können auch direkt einen anderen Kanalschacht anwählen, um einen geraden Kanal zu zeichnen.</p></li>
+<li><p>Die <strong>Advanced Digitizing</strong> Werkzeuge können zusammen mit dem Wizard eingesetzt werden.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Mit einem Rechtsklick wird die Linienzeichnung beendet. Im Anschluss erscheint das <strong>vw_qep_reach</strong> Formular in dem Sie Daten im Reiter <strong>General</strong> eingeben können:</p>
-</li>
+<li><p>Mit einem Rechtsklick wird die Linienzeichnung beendet. Im Anschluss erscheint das <strong>vw_qep_reach</strong> Formular in dem Sie Daten im Reiter <strong>General</strong> eingeben können:</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_reach_form3.jpg" src="../../_images/wizard_wastewater_structure_reach_form3.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Behalten Sie im Kopf, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick um die Digitalisierung der Linie zu beenden.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Behalten Sie im Kopf, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick um die Digitalisierung der Linie zu beenden.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern <strong>rp_from/to_fk_wastewater_networkelement</strong> kontrolliert werden.</p>
-</li>
+<li><p>Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern <strong>rp_from/to_fk_wastewater_networkelement</strong> kontrolliert werden.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Wenn kein Bezeichner (reach-identifier) im Reiter Allgemeines eingegeben wird, übernimmt QGEP die <cite>obj_id</cite> als Bezeichnung (kann später geändert werden). Als Vorgabewert ist der Bezeichner der Haltung gleich dem <cite>ws_identifier</cite> des Kanals. Der Haltungsbezeichner wird aus dem Haltungsbezeichner+&#8217;F&#8217; oder +&#8217;T&#8217; (von und nach Haltungspunkt) gebildet.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn kein Bezeichner (reach-identifier) im Reiter Allgemeines eingegeben wird, übernimmt QGEP die <cite>obj_id</cite> als Bezeichnung (kann später geändert werden). Als Vorgabewert ist der Bezeichner der Haltung gleich dem <cite>ws_identifier</cite> des Kanals. Der Haltungsbezeichner wird aus dem Haltungsbezeichner+‘F‘ oder +‘T‘ (von und nach Haltungspunkt) gebildet.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Siehe <span class="xref std std-ref">reach_geometrysync</span> für automatische Haltungspunkthöhen bei Fang auf Abwasserknoten mit Höhe.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Siehe <span class="xref std std-ref">reach_geometrysync</span> für automatische Haltungspunkthöhen bei Fang auf Abwasserknoten mit Höhe.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der <strong>od_pipe_profile</strong> Tabelle bearbeiten.</p>
-</li>
+<li><p>Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der <strong>od_pipe_profile</strong> Tabelle bearbeiten.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" src="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Wenn Sie fertig sind klicken Sie den <strong>OK</strong> Knopf</p>
-</li>
-<li><p class="first">Speichern Sie die Informationen des Layers, indem Sie den <strong>Data entry Wizard</strong> beenden</p>
-</li>
+<li><p>Wenn Sie fertig sind klicken Sie den <strong>OK</strong> Knopf</p></li>
+<li><p>Speichern Sie die Informationen des Layers, indem Sie den <strong>Data entry Wizard</strong> beenden</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Bei Verwendung des Assistenten während der Erstellung von Haltungen verwenden die Vorgabefelder im Reiter Allgemeines (und ausschliesslich diese Felder) den zuletzt eingegebene Wert. Die Auswahlmöglichkeit <em>Reuse the last entered attribute values*</em> von QGIS hat hier keine Auswirkung.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Bei Verwendung des Assistenten während der Erstellung von Haltungen verwenden die Vorgabefelder im Reiter Allgemeines (und ausschliesslich diese Felder) den zuletzt eingegebene Wert. Die Auswahlmöglichkeit <em>Reuse the last entered attribute values*</em> von QGIS hat hier keine Auswirkung.</p>
 </div>
 <ul class="simple">
-<li><p class="first">Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Kursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p>
-</li>
-<li><p class="first">Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p>
-</li>
+<li><p>Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Kursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p></li>
+<li><p>Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_info_reach3.jpg" src="../../_images/reach_info_reach3.jpg" />
 </div>
 <ul class="simple">
-<li><p class="first">Für detailliertere Informationen über das Bearbeiten lesen die das Kapitel <a class="reference internal" href="../editing/editing.html#editing-data"><span>Bearbeiten von bestehenden Daten</span></a>.</p>
-</li>
+<li><p>Für detailliertere Informationen über das Bearbeiten lesen die das Kapitel <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Bearbeiten von bestehenden Daten</span></a>.</p></li>
 </ul>
 </div>
 <div class="section" id="further-attributes-and-classes">
-<h2>2.2.5.3. Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.5.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn ein Linienobjekt digitalisiert wird, finden eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:</p>
 <ul class="simple">
-<li><p class="first">Ein neues Objekt wird in der Abwasserbauwerk Klasse hinzugefügt (&#8220;od_wastewater_structure&#8221;)</p>
-</li>
-<li><p class="first">Ein neues Objekt wird hinzugefügt und verknüpft in der <strong>Kanal</strong> Unterklasse (<code class="docutils literal"><span class="pre">od_channel</span></code>)</p>
-</li>
-<li><p class="first">ein neues Haltungsobjekt wird in der <strong>Abwassernetzelement</strong> Tabelle (<code class="docutils literal"><span class="pre">od_wastewater_networkelement</span></code>) und dessen Unterklasse <strong>Haltung</strong> (<code class="docutils literal"><span class="pre">od_reach</span></code>) generiert.</p>
-</li>
-<li><p class="first">zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p>
-</li>
+<li><p>Ein neues Objekt wird in der Abwasserbauwerk Klasse hinzugefügt („od_wastewater_structure“)</p></li>
+<li><p>Ein neues Objekt wird hinzugefügt und verknüpft in der <strong>Kanal</strong> Unterklasse (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
+<li><p>ein neues Haltungsobjekt wird in der <strong>Abwassernetzelement</strong> Tabelle (<code class="docutils literal notranslate"><span class="pre">od_wastewater_networkelement</span></code>) und dessen Unterklasse <strong>Haltung</strong> (<code class="docutils literal notranslate"><span class="pre">od_reach</span></code>) generiert.</p></li>
+<li><p>zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_form_reach_points3.jpg" src="../../_images/reach_form_reach_points3.jpg" />
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2>2.2.5.4. Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Start- und Endpunkt der Geometrie des Features bestimmen die Geometrie der Reachpoints. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes des hinzugefügten Features wird über die Level-Werte <cite>rp_from_level</cite> und <cite>rp_to_level</cite> definiert. Das heisst, der Z Wert der Geometrie des Reachpoints wird ebenso über den Level-Wert gesetzt. Diese Werte können über das &#8220;gefangene&#8221; Feature gesetzt werden:</p>
-<div class="figure">
+<h2><span class="section-number">2.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Start- und Endpunkt der Geometrie des Features bestimmen die Geometrie der Reachpoints. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes des hinzugefügten Features wird über die Level-Werte <cite>rp_from_level</cite> und <cite>rp_to_level</cite> definiert. Das heisst, der Z Wert der Geometrie des Reachpoints wird ebenso über den Level-Wert gesetzt. Diese Werte können über das „gefangene“ Feature gesetzt werden:</p>
+<div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
 <p>Die gefangenen Merkmale 9405 und 9390 beziehen ihre Höhe von den Höhen der Abwasserknoten. Diese Werte werden in die Attribute rp_from_level` und <cite>rp_to_level</cite> eingefügt und können von Benutzer verändert werden. Bei Änderung durch den Benutzer, wird der Z-Wert der digitalisierten Geometrie des Merkmals sowie des korrespondierenden Haltungspunktes gesetzt.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Wenn das Level eines Reachpoints ändert, ändert sich auch der Z Wert seiner Geometrie und somit auch die Geometrie des Start- und Endpunktes der Reach. Wenn der Z Wert der Geometrie der Reach ändert, ändert auch die Geometrie und das Level der Reachpoints. Wenn beide Werte gleichzeitig ändern, hat das Level Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Reach gemäss der Level der Reachpoints gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Reach auf NaN gesetzt.</p>
+<p class="admonition-title">Bemerkung</p>
+<p>Wenn das Level eines Reachpoints ändert, ändert sich auch der Z Wert seiner Geometrie und somit auch die Geometrie des Start- und Endpunktes der Reach. Wenn der Z Wert der Geometrie der Reach ändert, ändert auch die Geometrie und das Level der Reachpoints. Wenn beide Werte gleichzeitig ändern, hat das Level Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Reach gemäss der Level der Reachpoints gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Reach auf NaN gesetzt.</p>
 </div>
 </div>
 </div>
@@ -331,6 +319,7 @@ Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <stro
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Indice"
+              href="../genindex.html"/>
+        <link rel="search" title="Cerca" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
         <link rel="up" title="5. Wincan 2 QGEP plugin" href="index.html"/>
         <link rel="next" title="5.4. Fixing issues" href="fixing-issues.html"/>
@@ -89,7 +92,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Wincan 2 QGEP plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.3. Match channels</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. Match channels</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-matching">5.3.1. Automatic matching</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#manual-matching">5.3.2. Manual matching</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#skipping-channels-or-observations">5.3.3. Skipping channels or observations</a></li>
@@ -125,13 +128,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">5. Wincan 2 QGEP plugin</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">5. </span>Wincan 2 QGEP plugin</a> &raquo;</li>
       
-    <li>5.3. Match channels</li>
+    <li><span class="section-number">5.3. </span>Match channels</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/wincan2qgep/match-channels.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/wincan2qgep/match-channels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -142,39 +145,39 @@
            <div itemprop="articleBody">
             
   <div class="section" id="match-channels">
-<h1>5.3. Match channels<a class="headerlink" href="#match-channels" title="Link a questa intestazione">¶</a></h1>
+<h1><span class="section-number">5.3. </span>Match channels<a class="headerlink" href="#match-channels" title="Link a questa intestazione">¶</a></h1>
 <p>To import the inspection data, the inspected channels have to be matched with the QGEP channels.
 This process can be done semi-automatically or manually.
 As long as channels are not matched to existing data, they will be highlighted in red in the main table.</p>
 <div class="section" id="automatic-matching">
-<h2>5.3.1. Automatic matching<a class="headerlink" href="#automatic-matching" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">5.3.1. </span>Automatic matching<a class="headerlink" href="#automatic-matching" title="Link a questa intestazione">¶</a></h2>
 <p>An automatic matching can be performed by looking for a pattern in manhole identifiers.
 Enter a channel identifier in the corresponding field, and the plugin will search
-for the channels connecting the manhole as follows: <code class="docutils literal"><span class="pre">{channel_id}</span> <span class="pre">-</span> <span class="pre">{manhole_id}</span></code>
+for the channels connecting the manhole as follows: <code class="docutils literal notranslate"><span class="pre">{channel_id}</span> <span class="pre">-</span> <span class="pre">{manhole_id}</span></code>
 (the manhole id being taken from the inspection data).</p>
 </div>
 <div class="section" id="manual-matching">
-<h2>5.3.2. Manual matching<a class="headerlink" href="#manual-matching" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">5.3.2. </span>Manual matching<a class="headerlink" href="#manual-matching" title="Link a questa intestazione">¶</a></h2>
 <p>Manual matching can be performed as follows:</p>
 <ol class="arabic simple">
-<li>Select the desired channel in the table</li>
-<li>In the first channel widget, click on the <code class="docutils literal"><span class="pre">Select</span> <span class="pre">on</span> <span class="pre">map</span></code> button</li>
+<li><p>Select the desired channel in the table</p></li>
+<li><p>In the first channel widget, click on the <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">on</span> <span class="pre">map</span></code> button</p></li>
 </ol>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/match-channel-1.png" src="../_images/match-channel-1.png" />
 </div>
 <ol class="arabic simple" start="3">
-<li>Find and click on the corresponding channel on the map.</li>
-<li>The channel ID is now listed and the line in the table is not highlighted anymore.</li>
+<li><p>Find and click on the corresponding channel on the map.</p></li>
+<li><p>The channel ID is now listed and the line in the table is not highlighted anymore.</p></li>
 </ol>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/match-channel-2.png" src="../_images/match-channel-2.png" />
 </div>
 </div>
 <div class="section" id="skipping-channels-or-observations">
-<h2>5.3.3. Skipping channels or observations<a class="headerlink" href="#skipping-channels-or-observations" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">5.3.3. </span>Skipping channels or observations<a class="headerlink" href="#skipping-channels-or-observations" title="Link a questa intestazione">¶</a></h2>
 <p>If you want to skip some of the inspected channels, they simply need to be unchecked in the channel table and similarly for observations.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../_images/skip-data.png" src="../_images/skip-data.png" />
 </div>
 </div>
@@ -230,6 +233,7 @@ for the channels connecting the manhole as follows: <code class="docutils litera
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

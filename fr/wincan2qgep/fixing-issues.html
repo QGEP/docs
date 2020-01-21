@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.4. Résoudre les problèmes &mdash; documentation QGEP 0.8</title>
+  <title>5.4. Résoudre les problèmes &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../index.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Recherche" href="../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../index.html"/>
         <link rel="up" title="5. Plugin Wincan 2 QGEP" href="index.html"/>
         <link rel="next" title="5.5. Importer les données" href="import-data.html"/>
         <link rel="prev" title="5.3. Faire correspondre les conduites" href="match-channels.html"/> 
@@ -82,18 +85,18 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d&#8217;administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d’administration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Plugin Wincan 2 QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Ouvrir une inspection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Faire correspondre les conduites</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">5.4. Résoudre les problèmes</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. Résoudre les problèmes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#length-issues">5.4.1. Problèmes de longueur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Une conduite dans les données d&#8217;inspection correspond à plusieurs conduites dans les données QGEP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Plusieurs conduites dans les données d&#8217;inspection correspondent à une seule conduite dans les données QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Une conduite dans les données d’inspection correspond à plusieurs conduites dans les données QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Plusieurs conduites dans les données d’inspection correspondent à une seule conduite dans les données QGEP</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Importer les données</a></li>
@@ -125,13 +128,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">5. Plugin Wincan 2 QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">5. </span>Plugin Wincan 2 QGEP</a> &raquo;</li>
       
-    <li>5.4. Résoudre les problèmes</li>
+    <li><span class="section-number">5.4. </span>Résoudre les problèmes</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/wincan2qgep/fixing-issues.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/wincan2qgep/fixing-issues.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -142,18 +145,18 @@
            <div itemprop="articleBody">
             
   <div class="section" id="fixing-issues">
-<span id="wincan2qgep-fixing-issues"></span><h1>5.4. Résoudre les problèmes<a class="headerlink" href="#fixing-issues" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="wincan2qgep-fixing-issues"></span><h1><span class="section-number">5.4. </span>Résoudre les problèmes<a class="headerlink" href="#fixing-issues" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="length-issues">
-<h2>5.4.1. Problèmes de longueur<a class="headerlink" href="#length-issues" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">5.4.1. </span>Problèmes de longueur<a class="headerlink" href="#length-issues" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si la longueur de la conduite est plus grande dans les données que sur la carte, un avertissement va apparaître. Cela peut être corrigé dans les données ou être contraint en cochant la colonne correspondante dans la table observations.</p>
 </div>
 <div class="section" id="one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">
-<h2>5.4.2. Une conduite dans les données d&#8217;inspection correspond à plusieurs conduites dans les données QGEP<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est possible qu&#8217;une conduite dans les données d&#8217;inspection corresponde à plusieurs conduites dans les données QGEP. Pour corriger cela, vous pouvez sélectionner jusqu&#8217;à 3 conduites dans les widgets. Les longueurs d&#8217;inspection seront modifiées en conséquence.</p>
+<h2><span class="section-number">5.4.2. </span>Une conduite dans les données d’inspection correspond à plusieurs conduites dans les données QGEP<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est possible qu’une conduite dans les données d’inspection corresponde à plusieurs conduites dans les données QGEP. Pour corriger cela, vous pouvez sélectionner jusqu’à 3 conduites dans les widgets. Les longueurs d’inspection seront modifiées en conséquence.</p>
 </div>
 <div class="section" id="several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">
-<h2>5.4.3. Plusieurs conduites dans les données d&#8217;inspection correspondent à une seule conduite dans les données QGEP<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est possible que plusieurs conduites dans les données d&#8217;inspection correspondent à une seule conduite dans les données QGEP. Pour corriger cela, sélectionnez la boîte à cocher &#8220;Réutiliser conduite précédente&#8221;. Les longueurs d&#8217;inspection seront modifiées en conséquence.</p>
+<h2><span class="section-number">5.4.3. </span>Plusieurs conduites dans les données d’inspection correspondent à une seule conduite dans les données QGEP<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est possible que plusieurs conduites dans les données d’inspection correspondent à une seule conduite dans les données QGEP. Pour corriger cela, sélectionnez la boîte à cocher « Réutiliser conduite précédente ». Les longueurs d’inspection seront modifiées en conséquence.</p>
 </div>
 </div>
 
@@ -207,6 +210,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

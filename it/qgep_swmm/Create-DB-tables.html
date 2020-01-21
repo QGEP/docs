@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Indice"
+              href="../genindex.html"/>
+        <link rel="search" title="Cerca" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
         <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
         <link rel="next" title="6.4. SWMM Create Input" href="Create-Input.html"/>
@@ -90,7 +93,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">6.3. SWMM Create DB Tables</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. SWMM Create DB Tables</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.3.1. QGEP plugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python-command-line">6.3.2. Python command line</a></li>
 </ul>
@@ -126,13 +129,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">6. QGEP SWMM plugin</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
       
-    <li>6.3. SWMM Create DB Tables</li>
+    <li><span class="section-number">6.3. </span>SWMM Create DB Tables</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/qgep_swmm/Create-DB-tables.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/qgep_swmm/Create-DB-tables.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,18 +146,18 @@
            <div itemprop="articleBody">
             
   <div class="section" id="swmm-create-db-tables">
-<span id="create-db-tables"></span><h1>6.3. SWMM Create DB Tables<a class="headerlink" href="#swmm-create-db-tables" title="Link a questa intestazione">¶</a></h1>
+<span id="create-db-tables"></span><h1><span class="section-number">6.3. </span>SWMM Create DB Tables<a class="headerlink" href="#swmm-create-db-tables" title="Link a questa intestazione">¶</a></h1>
 <div class="section" id="qgep-plugin">
-<h2>6.3.1. QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link a questa intestazione">¶</a></h2>
-<p>Launch <code class="docutils literal"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code>:</p>
+<h2><span class="section-number">6.3.1. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link a questa intestazione">¶</a></h2>
+<p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code>:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">Database</span></code>: the name of the service used to connect to the database (<a class="reference external" href="http://qgep.github.io/docs/fr/installation-guide/workstation.html#windows-pg-service">QGEP services setup</a>)</li>
-<li><code class="docutils literal"><span class="pre">Path</span> <span class="pre">to</span> <span class="pre">DB</span> <span class="pre">Model</span> <span class="pre">SQL</span></code>: Folder which stores the SQL files used to create the schema and swmm views: <code class="docutils literal"><span class="pre">datamodel\swmm_views</span></code>.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Database</span></code>: the name of the service used to connect to the database (<a class="reference external" href="http://qgep.github.io/docs/fr/installation-guide/workstation.html#windows-pg-service">QGEP services setup</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Path</span> <span class="pre">to</span> <span class="pre">DB</span> <span class="pre">Model</span> <span class="pre">SQL</span></code>: Folder which stores the SQL files used to create the schema and swmm views: <code class="docutils literal notranslate"><span class="pre">datamodel\swmm_views</span></code>.</p></li>
 </ul>
 </div>
 <div class="section" id="python-command-line">
-<h2>6.3.2. Python command line<a class="headerlink" href="#python-command-line" title="Link a questa intestazione">¶</a></h2>
-<div class="code python highlight-python"><div class="highlight"><pre><span></span><span class="n">PGSERVICE</span> <span class="o">=</span> <span class="s1">&#39;pg_qgep&#39;</span>
+<h2><span class="section-number">6.3.2. </span>Python command line<a class="headerlink" href="#python-command-line" title="Link a questa intestazione">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PGSERVICE</span> <span class="o">=</span> <span class="s1">&#39;pg_qgep&#39;</span>
 <span class="n">DBMODEL</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">QGEP</span><span class="se">\\</span><span class="s1">datamodel</span><span class="se">\\</span><span class="s1">swmm_views&#39;</span>
 <span class="n">qs</span> <span class="o">=</span> <span class="n">QgepSwmm</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">PGSERVICE</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">DBMODEL</span><span class="p">)</span>
 <span class="n">qs</span><span class="o">.</span><span class="n">create_fill_swmm_tables</span><span class="p">()</span>
@@ -213,6 +216,7 @@
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
       <script type="text/javascript" src="../_static/translations.js"></script>
 
   

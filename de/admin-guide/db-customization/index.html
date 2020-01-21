@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../search.html"/>
     <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
         <link rel="up" title="3. Administratorhandbuch" href="../index.html"/>
         <link rel="next" title="3.5. Update of the datamodel" href="../db-update-pum/index.html"/>
@@ -88,7 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">3.1. pgAdmin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data-export/index.html">3.2. INTERLIS Datenexport</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../data-import/index.html">3.3. Import INTERLIS Data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">3.4. Customization of the data model</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Customization of the data model</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">3.4.1. Introduction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adding-fields">3.4.2. Adding fields</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#joining-additional-tables">3.4.3. Joining additional tables</a></li>
@@ -125,13 +128,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">3. Administratorhandbuch</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">3. </span>Administratorhandbuch</a> &raquo;</li>
       
-    <li>3.4. Customization of the data model</li>
+    <li><span class="section-number">3.4. </span>Customization of the data model</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/admin-guide/db-customization/index.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/admin-guide/db-customization/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -142,10 +145,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="customization-of-the-data-model">
-<h1>3.4. Customization of the data model<a class="headerlink" href="#customization-of-the-data-model" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">3.4. </span>Customization of the data model<a class="headerlink" href="#customization-of-the-data-model" title="Link zu dieser Überschrift">¶</a></h1>
 <p>This chapter describes the possible customization to the data model.</p>
 <div class="section" id="introduction">
-<h2>3.4.1. Introduction<a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">3.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link zu dieser Überschrift">¶</a></h2>
 <p>The data model is versioned and updates are achieved using Postgres Updates Manager (aka <a class="reference external" href="https://github.com/opengisch/pum">PUM</a>).
 The views required to edit the data are automatically generated using <a class="reference external" href="https://github.com/opengisch/pirogue">Pirogue</a> library.</p>
 <p>The combination of both allows to introduce small customizations of the data model such as adding fields to existing base tables or extending views by joining additional tables.</p>
@@ -154,41 +157,41 @@ The views required to edit the data are automatically generated using <a class="
 <p>If a customization is still required, the following explanations and rules explain how to adapt QGEP data model to your specific needs.</p>
 </div>
 <div class="section" id="adding-fields">
-<h2>3.4.2. Adding fields<a class="headerlink" href="#adding-fields" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It is allowed to add additional fields to tables by naming them as <code class="docutils literal"><span class="pre">usr_…</span></code>.</p>
+<h2><span class="section-number">3.4.2. </span>Adding fields<a class="headerlink" href="#adding-fields" title="Link zu dieser Überschrift">¶</a></h2>
+<p>It is allowed to add additional fields to tables by naming them as <code class="docutils literal notranslate"><span class="pre">usr_…</span></code>.</p>
 <p>If added in base tables, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:</p>
-<p><code class="docutils literal"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span></code></p>
 <div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">When running data model upgrades using PUM, it will be required to use the additional option <code class="docutils literal"><span class="pre">--exclude-field-pattern</span> <span class="pre">'usr_%'</span></code></p>
+<p class="admonition-title">Bemerkung</p>
+<p>When running data model upgrades using PUM, it will be required to use the additional option <code class="docutils literal notranslate"><span class="pre">--exclude-field-pattern</span> <span class="pre">'usr_%'</span></code></p>
 </div>
 </div>
 <div class="section" id="joining-additional-tables">
-<h2>3.4.3. Joining additional tables<a class="headerlink" href="#joining-additional-tables" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It is possible to join additional tables to the two main views (<code class="docutils literal"><span class="pre">vw_qgep_wastewater_structure</span></code> and <code class="docutils literal"><span class="pre">vw_qgep_reach</span></code>).
+<h2><span class="section-number">3.4.3. </span>Joining additional tables<a class="headerlink" href="#joining-additional-tables" title="Link zu dieser Überschrift">¶</a></h2>
+<p>It is possible to join additional tables to the two main views (<code class="docutils literal notranslate"><span class="pre">vw_qgep_wastewater_structure</span></code> and <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>).
 This is done by using a YAML definition file for each view and defining a list of joined tables.
 Fields of these tables will be joined as read-only fields as they are discarded in edit triggers.
-For joining a table to <code class="docutils literal"><span class="pre">qgep_od.wastewater_structure</span></code>, here is an example:</p>
-<div class="code YAML highlight-python"><div class="highlight"><pre><span></span>joins:
-  my_extra_join:
-    table: qgep_od.my_table
-    alias: mt
-    prefix: mt_
-    skip_columns:
-      - field_1
-      - field_2
-    remap_columns:
-      field_3: my_renamed_field
-    join_on: mt.fk_ws = ws.obj_id
+For joining a table to <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, here is an example:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">joins</span><span class="p">:</span>
+  <span class="nt">my_extra_join</span><span class="p">:</span>
+    <span class="nt">table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">qgep_od.my_table</span>
+    <span class="nt">alias</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mt</span>
+    <span class="nt">prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mt_</span>
+    <span class="nt">skip_columns</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">field_1</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">field_2</span>
+    <span class="nt">remap_columns</span><span class="p">:</span>
+      <span class="nt">field_3</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my_renamed_field</span>
+    <span class="nt">join_on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mt.fk_ws = ws.obj_id</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">table</span></code> and <code class="docutils literal"><span class="pre">join_on</span></code> are mandatory keys, all the others are optional.</p>
+<p><code class="docutils literal notranslate"><span class="pre">table</span></code> and <code class="docutils literal notranslate"><span class="pre">join_on</span></code> are mandatory keys, all the others are optional.</p>
 <p>This YAML file should be given as a file path when running the script:</p>
-<p><code class="docutils literal"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span> <span class="pre">--qgep_wastewater_structure_extra</span> <span class="pre">/path_to/extra_ws.yaml</span></code></p>
-<p>And similarly for <code class="docutils literal"><span class="pre">vw_qgep_reach</span></code> view, by specifying <code class="docutils literal"><span class="pre">qgep_reach_extra</span></code> variable to the corresponding YAML file path.</p>
+<p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span> <span class="pre">--qgep_wastewater_structure_extra</span> <span class="pre">/path_to/extra_ws.yaml</span></code></p>
+<p>And similarly for <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code> view, by specifying <code class="docutils literal notranslate"><span class="pre">qgep_reach_extra</span></code> variable to the corresponding YAML file path.</p>
 </div>
 <div class="section" id="creating-custom-views">
-<h2>3.4.4. Creating custom views<a class="headerlink" href="#creating-custom-views" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">3.4.4. </span>Creating custom views<a class="headerlink" href="#creating-custom-views" title="Link zu dieser Überschrift">¶</a></h2>
 <p>It is possible to create custom views and add them to the data model.</p>
 <p>In order to allow upgrades of the data model, one should provide a script to create them and one to delete them.
 These scripts (SQL or Python) should be placed in a specific path and name them as pre-all.{py,sql} and post-all.{py,sql}.
@@ -247,6 +250,7 @@ This path shall be given as argument to PUM when upgrading the data model as a d
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   

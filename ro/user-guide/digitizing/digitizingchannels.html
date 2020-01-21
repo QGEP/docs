@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.2.5. Digitizing Channels &mdash; QGEP 0.8 documentation</title>
+  <title>2.2.5. Digitizing Channels &mdash; QGEP 0.8 documentație</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="QGEP 0.8 documentation" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Căutare" href="../../search.html"/>
+    <link rel="top" title="QGEP 0.8 documentație" href="../../index.html"/>
         <link rel="up" title="2.2. Digitizing in QGEP" href="index.html"/>
         <link rel="next" title="2.2.6. Deleting objects" href="deletingobjects.html"/>
         <link rel="prev" title="2.2.4. Digitizing Detailed Geometry as Drainage Channel" href="digitizingdrainagechannel.html"/> 
@@ -90,7 +93,7 @@
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitizing detailed geometry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">2.2.5. Digitizing Channels</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.5. Digitizing Channels</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">2.2.5.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitizing">2.2.5.2. Digitizing</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#further-attributes-and-classes">2.2.5.3. Further attributes and classes</a></li>
@@ -136,15 +139,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">2. QGEP User Guide</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP User Guide</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Digitizing in QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2.2. </span>Digitizing in QGEP</a> &raquo;</li>
       
-    <li>2.2.5. Digitizing Channels</li>
+    <li><span class="section-number">2.2.5. </span>Digitizing Channels</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/user-guide/digitizing/digitizingchannels.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user-guide/digitizing/digitizingchannels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,119 +158,119 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digitizing-channels">
-<h1>2.2.5. Digitizing Channels<a class="headerlink" href="#digitizing-channels" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.2.5. </span>Digitizing Channels<a class="headerlink" href="#digitizing-channels" title="Link permanent la acest titlu">¶</a></h1>
 <div class="section" id="general">
-<h2>2.2.5.1. General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.5.1. </span>General<a class="headerlink" href="#general" title="Link permanent la acest titlu">¶</a></h2>
 <p>QGEP has a wizard to correctly build channels and connect them to wastewater structures respectively to wastewater nodes or other reaches (building up the topology for waste water nodes and reaches). See the <span class="xref std std-ref">wizard</span> chapter.</p>
 <p>Select the <strong>Wizard</strong> button, then click <strong>Start Data Entry</strong> and choose <strong>Reach</strong> in the pull down menu.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach.jpg" src="../../_images/wizard_data_entry_reach.jpg" />
 </div>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Start digitizing in the direction of the flow by starting with the
+<p class="admonition-title">Atenție</p>
+<p>Start digitizing in the direction of the flow by starting with the
 <strong>from manhole node</strong> and finishing with the <strong>to manhole node</strong>.</p>
 </div>
 </div>
 <div class="section" id="digitizing">
-<h2>2.2.5.2. Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.5.2. </span>Digitizing<a class="headerlink" href="#digitizing" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
-<li>In digitizing mode the cursor will automatically snap to the nearest wastewater node or reach.
-When left clicking a line starts to draw.</li>
+<li><p>In digitizing mode the cursor will automatically snap to the nearest wastewater node or reach.
+When left clicking a line starts to draw.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" />
 </div>
 <ul class="simple">
-<li>With further left clicks anywhere you can define intermediary points of the reach progression.
-You can also directly select another manhole to draw a straight channel.</li>
-<li>It is possible to use the <strong>Advanced Digitizing</strong> tools together with the wizard.</li>
+<li><p>With further left clicks anywhere you can define intermediary points of the reach progression.
+You can also directly select another manhole to draw a straight channel.</p></li>
+<li><p>It is possible to use the <strong>Advanced Digitizing</strong> tools together with the wizard.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" />
 </div>
 <ul class="simple">
-<li>You finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear and you can start adding data in the <strong>General</strong> tab:</li>
+<li><p>You finish digitizing the line by right clicking. This will make the <strong>vw_qep_reach</strong> form appear and you can start adding data in the <strong>General</strong> tab:</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_reach_form3.jpg" src="../../_images/wizard_wastewater_structure_reach_form3.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Keep in mind that the finishing point of the line is the last point where you <strong>left</strong> clicked.
+<p class="admonition-title">Notă</p>
+<p>Keep in mind that the finishing point of the line is the last point where you <strong>left</strong> clicked.
 Thus, for digitizing a simple line with 2 points you need two <strong>left clicks</strong> to digitize the line and one
 <strong>right click</strong> to finish the line digitizing.</p>
 </div>
 <ul class="simple">
-<li>Control the snapping to wastewater nodes or other reaches in the fields <strong>rp_from/to_fk_wastewater_networkelement</strong></li>
+<li><p>Control the snapping to wastewater nodes or other reaches in the fields <strong>rp_from/to_fk_wastewater_networkelement</strong></p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you do not enter an <cite>identifier</cite> (reach-identifier) in the General tab, QGEP will enter the <cite>obj_id</cite> also as identifier (you can change later). As default, the <cite>identifier</cite> of the reach is also the <cite>ws_identifier</cite> of the channel. The reachpoint-identifier are build from the reach-identifier+&#8217;F&#8217; or +&#8217;T&#8217; (from- and to-reachpoint).</p>
+<p class="admonition-title">Notă</p>
+<p>If you do not enter an <cite>identifier</cite> (reach-identifier) in the General tab, QGEP will enter the <cite>obj_id</cite> also as identifier (you can change later). As default, the <cite>identifier</cite> of the reach is also the <cite>ws_identifier</cite> of the channel. The reachpoint-identifier are build from the reach-identifier+»F» or +»T» (from- and to-reachpoint).</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">See <span class="xref std std-ref">reach_geometrysync</span> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
+<p class="admonition-title">Notă</p>
+<p>See <span class="xref std std-ref">reach_geometrysync</span> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
 </div>
 <ul class="simple">
-<li>For the profile type you will get a list of defined profiles.
-You can edit those in <strong>od_pipe_profile</strong> table.</li>
+<li><p>For the profile type you will get a list of defined profiles.
+You can edit those in <strong>od_pipe_profile</strong> table.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" src="../../_images/wizard_wastewater_structure_reach_form_profiles3.jpg" />
 </div>
 <ul class="simple">
-<li>When finished, then click the <strong>OK</strong> button.</li>
-<li>Save the information of this layer by stopping the data entry wizard.</li>
+<li><p>When finished, then click the <strong>OK</strong> button.</p></li>
+<li><p>Save the information of this layer by stopping the data entry wizard.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The standard-fields on the <strong>General</strong> tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The <strong>Reuse the last entered attribute values</strong> - option of QGIS has no influence.</p>
+<p class="admonition-title">Notă</p>
+<p>The standard-fields on the <strong>General</strong> tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The <strong>Reuse the last entered attribute values</strong> - option of QGIS has no influence.</p>
 </div>
 <ul class="simple">
-<li>You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.</li>
-<li>If you do not select the edit mode, you can just look add the existing data.</li>
+<li><p>You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.</p></li>
+<li><p>If you do not select the edit mode, you can just look add the existing data.</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_info_reach3.jpg" src="../../_images/reach_info_reach3.jpg" />
 </div>
 <ul class="simple">
-<li>For detailed information about editing see the <a class="reference internal" href="../editing/editing.html#editing-data"><span>Editing of existing data</span></a> chapter.</li>
+<li><p>For detailed information about editing see the <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Editing of existing data</span></a> chapter.</p></li>
 </ul>
 </div>
 <div class="section" id="further-attributes-and-classes">
-<h2>2.2.5.3. Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.5.3. </span>Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Link permanent la acest titlu">¶</a></h2>
 <p>When a line object is digitized a series of steps take place in the background in the QGEP database:</p>
 <ul class="simple">
-<li>a new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_structure</span></code>)</li>
-<li>a new object is added and linked in the <strong>channel</strong> subclass (<code class="docutils literal"><span class="pre">od_channel</span></code>)</li>
-<li>a new reach object is generated in the <strong>wastewater network elements</strong> class (<code class="docutils literal"><span class="pre">od_wastewater_networkelement</span></code>)
-and its subclass <strong>reach</strong> (<code class="docutils literal"><span class="pre">od_reach</span></code>)</li>
-<li>two new reach point objects are added and linked to the reach (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</li>
+<li><p>a new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal notranslate"><span class="pre">od_wastewater_structure</span></code>)</p></li>
+<li><p>a new object is added and linked in the <strong>channel</strong> subclass (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
+<li><p>a new reach object is generated in the <strong>wastewater network elements</strong> class (<code class="docutils literal notranslate"><span class="pre">od_wastewater_networkelement</span></code>)
+and its subclass <strong>reach</strong> (<code class="docutils literal notranslate"><span class="pre">od_reach</span></code>)</p></li>
+<li><p>two new reach point objects are added and linked to the reach (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p></li>
 </ul>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_form_reach_points3.jpg" src="../../_images/reach_form_reach_points3.jpg" />
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2>2.2.5.4. Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Permalink to this headline">¶</a></h2>
-<p>The start- and the end-point of the added feature&#8217;s geometry defines the reach point&#8217;s geometries. The altitude (Z value of geometry) of the added feature&#8217;s start- and the end-point is defined by the level values <cite>rp_from_level</cite> and <cite>rp_to_level</cite>. This means, the Z values of the reach point&#8217;s geometry is set by the level as well. These values could be filled up by the snapped features:</p>
-<div class="figure">
+<h2><span class="section-number">2.2.5.4. </span>Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Link permanent la acest titlu">¶</a></h2>
+<p>The start- and the end-point of the added feature’s geometry defines the reach point’s geometries. The altitude (Z value of geometry) of the added feature’s start- and the end-point is defined by the level values <cite>rp_from_level</cite> and <cite>rp_to_level</cite>. This means, the Z values of the reach point’s geometry is set by the level as well. These values could be filled up by the snapped features:</p>
+<div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
 <p>The snapped features 9405 and 9390 have the altitude from the wastewater node levels. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If a reach point&#8217;s level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach&#8217;s geometry changes, the reach point&#8217;s geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it&#8217;s like when both value change. Means the reach&#8217;s geometry is set according to the reach point&#8217;s levels and if they are NULL, the Z value of the reach&#8217;s start- and end-point are set to NaN.</p>
+<p class="admonition-title">Notă</p>
+<p>If a reach point’s level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach’s geometry changes, the reach point’s geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it’s like when both value change. Means the reach’s geometry is set according to the reach point’s levels and if they are NULL, the Z value of the reach’s start- and end-point are set to NaN.</p>
 </div>
 </div>
 </div>
@@ -322,6 +325,8 @@ and its subclass <strong>reach</strong> (<code class="docutils literal"><span cl
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
 

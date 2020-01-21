@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1.2. Using pgAdmin &mdash; documentation QGEP 0.8</title>
+  <title>3.1.2. Using pgAdmin &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="documentation QGEP 0.8" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Recherche" href="../../search.html"/>
+    <link rel="top" title="Documentation QGEP 0.8" href="../../index.html"/>
         <link rel="up" title="3.1. pgAdmin" href="index.html"/>
         <link rel="next" title="3.2. Export de données au format INTERLIS" href="../data-export/index.html"/>
         <link rel="prev" title="3.1.1. Installer pgAdmin" href="install.html"/> 
@@ -82,14 +85,14 @@
           
           
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d&#8217;installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d&#8217;utilisateur de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d&#8217;administration</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d’administration</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3.1. pgAdmin</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="install.html">3.1.1. Installer pgAdmin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">3.1.2. Using pgAdmin</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.1.2. Using pgAdmin</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#sql-query">3.1.2.1. Requêtes SQL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#database-dump">3.1.2.2. &#8220;Dump&#8221; de la base de données</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#database-dump">3.1.2.2. « Dump » de la base de données</a></li>
 </ul>
 </li>
 </ul>
@@ -127,15 +130,15 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">3. Guide d&#8217;administration</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">3. </span>Guide d’administration</a> &raquo;</li>
       
-          <li><a href="index.html">3.1. pgAdmin</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3.1. </span>pgAdmin</a> &raquo;</li>
       
-    <li>3.1.2. Using pgAdmin</li>
+    <li><span class="section-number">3.1.2. </span>Using pgAdmin</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/admin-guide/pgadmin/usage.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/admin-guide/pgadmin/usage.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -146,52 +149,48 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-pgadmin">
-<h1>3.1.2. Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.1.2. </span>Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="sql-query">
-<span id="id1"></span><h2>3.1.2.1. Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="figure" id="id3">
+<span id="id1"></span><h2><span class="section-number">3.1.2.1. </span>Requêtes SQL<a class="headerlink" href="#sql-query" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="figure align-default" id="id3">
 <img alt="../../_images/sql-query4.jpg" src="../../_images/sql-query4.jpg" />
-<p class="caption"><span class="caption-text"><strong>Running SQL commands in pgAdmin4</strong></span></p>
+<p class="caption"><span class="caption-text"><strong>Running SQL commands in pgAdmin4</strong></span><a class="headerlink" href="#id3" title="Lien permanent vers cette image">¶</a></p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li><p class="first">En cliquant sur l’icône mis en évidence par le point 1 vous pouvez ouvrir une requête SQL. L&#8217;icône SQL n&#8217;est actif que lorsque vous êtes connecté à une base de données.</p>
-</li>
-<li><p class="first">Un clic sur l’icône mise en évidence au point <em>2</em> lance les requêtes SQL.</p>
-</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>En cliquant sur l’icône mis en évidence par le point 1 vous pouvez ouvrir une requête SQL. L’icône SQL n’est actif que lorsque vous êtes connecté à une base de données.</p></li>
+<li><p>Un clic sur l’icône mise en évidence au point <em>2</em> lance les requêtes SQL.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="database-dump">
-<span id="id2"></span><h2>3.1.2.2. &#8220;Dump&#8221; de la base de données<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="id2"></span><h2><span class="section-number">3.1.2.2. </span>« Dump » de la base de données<a class="headerlink" href="#database-dump" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <ul class="simple">
-<li>Open pgAdmin4 and connect to the database</li>
-<li><p class="first">Faire un clic droit sur le schéma (dans l&#8217;arborescence sous &#8220;Schemas&#8221;) que l&#8217;on veut sauvegarder</p>
-</li>
-<li><p class="first">Entrer l&#8217;endroit ou le fichier devra être sauvegardé</p>
-</li>
+<li><p>Open pgAdmin4 and connect to the database</p></li>
+<li><p>Faire un clic droit sur le schéma (dans l’arborescence sous « Schemas ») que l’on veut sauvegarder</p></li>
+<li><p>Entrer l’endroit ou le fichier devra être sauvegardé</p></li>
 </ul>
 <blockquote>
-<div><div class="figure">
+<div><div class="figure align-default">
 <img alt="../../_images/database-dump-general4.jpg" src="../../_images/database-dump-general4.jpg" />
 </div>
 </div></blockquote>
 <ul class="simple">
-<li>Click the option-tab and check the following options</li>
+<li><p>Click the option-tab and check the following options</p></li>
 </ul>
-<div class="last figure">
+<div class="figure align-default">
 <img alt="../../_images/database-dump-options4.jpg" src="../../_images/database-dump-options4.jpg" />
 </div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <ul class="simple">
-<li>After running the process, the window in the right bottom shows that everything went ok</li>
+<li><p>After running the process, the window in the right bottom shows that everything went ok</p></li>
 </ul>
-<div class="last figure">
+<div class="figure align-default">
 <img alt="../../_images/database-dump-complete4.jpg" src="../../_images/database-dump-complete4.jpg" />
 </div>
 </div>
@@ -248,6 +247,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
       <script type="text/javascript" src="../../_static/translations.js"></script>
 
   
