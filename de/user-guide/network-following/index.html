@@ -95,7 +95,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#refresh-network-topology">2.5.1. Netzwerk Topologie aktualisieren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upstream">2.5.2. Gegen die Fließrichtung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#downstream">2.5.3. In Fließrichtung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sum-up-upstream">2.5.4. Sum up upstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sum-up-upstream">2.5.4. Summieren gegen die Fließrichtung</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#flow-times-downstream">2.5.5. Fliesszeiten abwärts</a></li>
 </ul>
 </li>
@@ -208,25 +208,25 @@
 </ul>
 </div>
 <div class="section" id="sum-up-upstream">
-<span id="sumupupstream"></span><h2><span class="section-number">2.5.4. </span>Sum up upstream<a class="headerlink" href="#sum-up-upstream" title="Link zu dieser Überschrift">¶</a></h2>
+<span id="sumupupstream"></span><h2><span class="section-number">2.5.4. </span>Summieren gegen die Fließrichtung<a class="headerlink" href="#sum-up-upstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
-<li><p>The idea for this tool is to sum up a value over the whole network of chanels, e.g. the flowtime for each point to the outlet of the network.</p></li>
-<li><p>For this tool you need a field in the layer vw_qgep_reach with the values to sum up. Because interesting values are normally not part of this layer, you have first to join the value-field (e.g flowtime or flow rate) to the layer vw_qgep_reach.</p></li>
-<li><p>As example look at this small network, labeled with reach-identifier, length and flow direction arrow</p></li>
+<li><p>Mit diesem Tool kann ein Wert über ein ganzes Kanalnetz summiert werden, z. Bsp. die Fliesszeit von jedem Punkt bis zum Auslass aus dem Kanalnetz.</p></li>
+<li><p>Für dieses Tool ist ein Feld im Layer vw_qgep_reach notwendig, welches die zu summierenden Werte enthält. Weil interessierende Werte normalerweise nicht im Layer vorhanden sind, muss das Feld (z. Bsp. die Fliesszeit oder die Fliessgeschwindigkeit) an den Layer vw_qgep_reach verknüpft (join) werden.</p></li>
+<li><p>Als Beispiel hier ein kleines Netzwerk, beschriftet mit Haltungs-Bezeichnung, Länge und Fliessrichtungspfeil.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/sumupupstream-example.jpg" src="../../_images/sumupupstream-example.jpg" />
 </div>
 <ul class="simple">
-<li><p>We need a table (in the example called sum up tool) with at least two fields: field identifier for the join and field flow rate (in the example in [m/s]) to sum up.</p></li>
-<li><p>Open the properties of layer vw_qgep_reach, choose <strong>Joins</strong> and <strong>Add new join</strong> (green + Button) and define the join with the join field (identifier) and the joined fields (field to sum up).</p></li>
+<li><p>Es braucht eine Tabelle (im Beispiel heisst sie sum up tool) mit mindestens zwei Feldern: Feld identifier als Verknüpfungsfeld und das Feld flow rate (im Beispiel die Fliessgeschwindigkeit in [m/s]) als verknüpftes Feld, dass summiert wird.</p></li>
+<li><p>Im Layer vw_qgep_reach die Einstellungen öffnen, dort <strong>Verknüpfungen</strong> und <strong>Neue Verknüpfung hinzufügen</strong> (grüner + Knopf) wählen. Die Verknüpfung mit dem Verknüpfungsfeld (identifier) und dem verknüpften Feld (Feld das summiert werden soll) definieren.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/sumupupstream-join1.jpg" src="../../_images/sumupupstream-join1.jpg" />
 </div>
 <ul class="simple">
-<li><p>Start the tool with double-click one <strong>Sum up upstream</strong></p></li>
+<li><p>Starten sie mit Doppelklick auf das <strong>Sum up upstream</strong> Tool</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
@@ -235,20 +235,19 @@
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
 </div>
 <ul class="simple">
-<li><p>In the window you have to enter/to choose</p>
+<li><p>Im Fenster muss folgendes eingegeben/gewählt werden</p>
 <ul>
-<li><p>an expression as shown in the titel of the field (COALESCE(„field_name“,0). If you do not use the <strong>coalesce</strong> command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s].</p></li>
-<li><p>the branch behavior (Minimum, Maximum, Average): which value will be used after when two branches join to continue the summing.</p></li>
-<li><p>the advanced paramaters are preconfigured for QGEP and should not need to be changed.</p></li>
-<li><p>Summed up: if you let this field empty, there will be a temporary point layer with the results in your project. Otherwise you can save the results to a new point vector layer.</p></li>
+<li><p>einen Ausdruck gemäss dem Titel des Feldes (COALESCE(„field_name“,0). Wenn der <strong>coalesce</strong> Befehl nicht verwendet wird, gibt es bei der Ausführung des Tools einen Fehler, wenn sich im zu summierenden Feld ein NULL-Wert befindet. In der Abbildung ist als Beispiel die Berechnung der Fliesszeit in [Minuten], berechnet aus der Länge effektiv und der Fliessgeschindigkeit in [m/s].</p></li>
+<li><p>das Verhalten bei Verzweigungen (Minimum, Maximum, Durchschnitt): welcher Wert wird für die weiter Summierung verwendet, wenn zwei Äste des Kanalnetzes zusammenkommen.</p></li>
+<li><p>die erweiterten Parameter sind für QGEP bereits vorkonfiguriert und sollten nicht geändert werden.</p></li>
+<li><p>Summed up: Bleibt das Feld leer wird im Projekt ein temporärer Punkt-Layer mit den Resultaten erstellt. Oder sie können in diesem Feld das Resultat in einen Punkt-Vektorlayer speichern.</p></li>
 </ul>
 </li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/sumupupstream-tool.jpg" src="../../_images/sumupupstream-tool.jpg" />
 </div>
-<p>The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field <strong>value</strong> with the sum for each wastewater node.
-* In the figure below you see the result of the example with all three branch behaviours: minimum = normal style, maximum = bold, average = underscored</p>
+<p>Der resultierende Punkt-Layer hat die Felder des vw_wastewater_node Layer und ein ein zusätzliches Feld <strong>value</strong> mit der Summe für jeden Abwasserknoten. In der Abbildung ist das Resultat des Beispiels mit allen drei Verzweigungsverhalten dargestellt: Minimum = normaler Text, Maximum = fett, Durchschnitt = unterstrichen.</p>
 <div class="figure align-default">
 <img alt="../../_images/sumupupstream-resultat.jpg" src="../../_images/sumupupstream-resultat.jpg" />
 </div>
@@ -257,7 +256,7 @@
 <h2><span class="section-number">2.5.5. </span>Fliesszeiten abwärts<a class="headerlink" href="#flow-times-downstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
-<li><p>The idea for this tool is to get the flowtime between a startpoint (where e.g.is an accident) and an interesting wastewater structure downstreams. It is not the idea to create a flowtime plan for a whole network with this tool (use the <a href="#id1"><span class="problematic" id="id2">SumUpTool_</span></a> tool for this task).</p></li>
+<li><p>Die Idee für dieses Tool: Berechne die Fliesszeit zwischen einem Startpunkt (hier ist z.B. ein Unfall) und einem Abwasserbauwerk unterhalb. Es ist nicht die Idee einen Fliesszeitenplan für ein ganzes Abwassernetz mit diesem Tool zu erstellen (für diese Aufgabe kann das Summieren gegen die Fliessrichtung-Tool verwendet werden).</p></li>
 <li><p>Für diese Tool braucht es einen Layer (eine Tabelle) im QGEP-Projekt mit der Fliesszeit und der Obj-ID der Haltungen.</p></li>
 <li><p>Die Starthaltung (wo der Unfall passiert ist) muss im vw_qgep_reach - Layer selektiert werden</p></li>
 <li><p>Starten sie mit Doppelklick auf das <strong>Flow times downstream</strong> Tool</p></li>
