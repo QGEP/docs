@@ -25,12 +25,15 @@ The "logged events" window is composed of 4 parts.
 Replay function
 ---------------
 
-If you have configured the replay option, you can replay actions. Example below:
+.. note::
+  Doesn't works yet for QGEP.
 
-Actual value:
+.. If you have configured the replay option, you can replay actions. Example below:
 
-.. image:: img/pg_hv_replay_before.png
+.. Actual value:
 
-Select the event you want to replay and its values will become the current ones. Example for the year that becomes 2004 again:
+.. .. image:: img/pg_hv_replay_before.png
 
-.. image:: img/pg_hv_replay_after.png
+.. Select the event you want to replay and its values will become the current ones. Example for the year that becomes 2004 again:
+
+.. .. image:: img/pg_hv_replay_after.png
