@@ -100,14 +100,7 @@ You can install them on debian based systems with::
   * ``Manage and Install Plugins``
 
   * ``Settings``
-
-    * Add...
-
-      * Name: QGEP
-
-      * URL:
-        ``https://raw.githubusercontent.com/QGEP/qgepplugin/master/plugins.xml?qgis=3.3``
-        
+  
     * Enable ``Show also experimental plugins``
 
   * Activate the plugin (see image below):
