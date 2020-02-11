@@ -26,7 +26,7 @@ Replay function
 ---------------
 
 .. note::
-  Doesn't works yet for QGEP.
+  Doesn't work yet for QGEP.
 
 .. If you have configured the replay option, you can replay actions. Example below:
 
