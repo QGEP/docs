@@ -131,7 +131,9 @@ You also have the option to restore the latest empty data model (no demo data).
 
    rem bat and sql in the same directory
 
-   set db=qgep-empty
+   rem edit the following line to change the name of the new database
+   set db=qgep_empty
+
    set port=5432
    set PATH=%PATH%;C:\Program Files\PostgreSQL\9.6\bin
 
