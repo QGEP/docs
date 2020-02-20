@@ -129,45 +129,15 @@ You also have the option to restore the latest empty data model (no demo data).
  
 * Use a BAT-File like that, to create the database, the extensions and the schemas with valuelist  (replace x.y.z with your version):: 
 
-    @echo off
+   rem bat and sql in the same directory
 
-    set filename="qgep_v1.5.0_structure_with_value_lists.sql"
+   set db=qgep-empty
+   set port=5432
+   set PATH=%PATH%;C:\Program Files\PostgreSQL\9.6\bin
 
-    if not exist %filename% (
-       echo "File %filename% does not exist. Please download the latest datamodel from https://github.com/QGEP/datamodel/releases (structure_with_value_lists.sql) and adjust filename in this batch file."
-       PAUSE
-       exit -1
-    )
-
-    set /p db="Please enter the database name? (e.g. qgep_community) "
-    set /p password="Please enter the password for user postgres? "
-
-    set port=5432
-    set PATH=%PATH%;C:\Program Files\PostgreSQL\12\bin
-    set PGPASSWORD=%password%
-
-    createdb -U postgres -p %port% %db%
-
-    psql -U postgres -h localhost -p %port% -d %db% -f %filename%
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA public TO ""qgep"""
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA qgep_vl TO ""qgep"""
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA qgep_od TO ""qgep"""
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA qgep_import TO ""qgep"""
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA qgep_swmm TO ""qgep"""
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON SCHEMA qgep_sys TO ""qgep"""
-
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA qgep_od TO ""qgep""";
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA qgep_swmm TO ""qgep""";
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA qgep_import TO ""qgep""";
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT ON ALL TABLES IN SCHEMA qgep_vl TO ""qgep""";
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT ON ALL TABLES IN SCHEMA qgep_sys TO ""qgep""";
-    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO ""qgep"""
-
-    psql -U postgres -h localhost -p %port% -d %db% -c "REFRESH MATERIALIZED VIEW qgep_od.vw_network_node"
-    psql -U postgres -h localhost -p %port% -d %db% -c "REFRESH MATERIALIZED VIEW qgep_od.vw_network_segment"
-
-    PAUSE
-
+   createdb -U postgres -p %port% %db%
+   psql -U postgres -h localhost -p %port% -d %db% -f qgep_vx.y.z_structure_with_value_lists.sql
+   PAUSE
 
 .. note::
 

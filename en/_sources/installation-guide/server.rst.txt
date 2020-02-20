@@ -31,3 +31,4 @@ Server installation
  and set the auth-options from ``md5`` to ``trust``. A database service reload
  is required to activate changes.
 
+To optimise RAM size etc. of your machine postgreSQL is running on you can use `pgtune <http://www.pgtune.leopard.in.ua/#/>`_. Adapt your postgresql.conf file.
