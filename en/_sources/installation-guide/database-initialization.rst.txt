@@ -163,6 +163,8 @@ You also have the option to restore the latest empty data model (no demo data).
     psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT ON ALL TABLES IN SCHEMA qgep_sys TO ""qgep""";
     psql -U postgres -h localhost -p %port% -d %db% -c "GRANT SELECT ON ALL TABLES IN SCHEMA public TO ""qgep"""
 
+    psql -U postgres -h localhost -p %port% -d %db% -c "GRANT USAGE ON ALL SEQUENCES IN SCHEMA qgep_od TO ""qgep"""
+
     psql -U postgres -h localhost -p %port% -d %db% -c "REFRESH MATERIALIZED VIEW qgep_od.vw_network_node"
     psql -U postgres -h localhost -p %port% -d %db% -c "REFRESH MATERIALIZED VIEW qgep_od.vw_network_segment"
 
