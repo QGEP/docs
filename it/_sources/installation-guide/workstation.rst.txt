@@ -164,7 +164,7 @@ and set the OID you want to use in your project to TRUE.
 
 * or add it locally to your project with an INSERT statement.
 
-* OID prefixes have to be ordered at http://www.interlis.ch/oid/oid_commande_e.php
+* OID prefixes have to be ordered at https://www.interlis.ch/en/dienste/oid-bestellen
 
 .. note:: If you work with different databases for different communities, you should use different OID prefixes for each database.
 
