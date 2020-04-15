@@ -9,7 +9,9 @@ If you have to print plans with labels or if you have to export labels for data 
 If a label is positioned manually in QGIS, this fixed position applies to every scale. And that's not the good solution.
 
 Solution
+
 * Extend the Auxiliary Storage File with new fields for different labelpositions
+
 * Use Rule-based labeling, then you can define different labelpositions for every rule 
 
 In the example below, we want to label the wastewater-structures with a detailed label for network_plan (1:500) and for overviewmap (1:2000).
@@ -25,7 +27,7 @@ You have not the change something in the placement, because this rule uses the s
 
 The second rule is called UP-Labels (UP = Uebersichtsplan = overviewmap). In this rule, you have to change the coordinate fields in the placement-tab.
 
-.. figure:: images/man_labeling_edit_rule.jpg
+.. figure:: images/man_labeling_edit_rules.jpg
 
 .. figure:: images/man_labeling_coordinatefield.jpg
 
