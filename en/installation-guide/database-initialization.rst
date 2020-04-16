@@ -68,48 +68,6 @@ Create  minimal roles and access
 
 .. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_roles.sql file. It is recommended to use these when using QGEP in a production environment.
 
-* Create a new group role (preferably named `qgep`, but you are free to choose)
-
-* Create a new login role (`qgepuser` for example) and make it a member of the `qgep` group
-
-You can do this graphically or by simply opening a pgAdmin :ref:`SQL-query` window and type the following:
-
-::
-
-     CREATE GROUP qgep;
-     CREATE ROLE qgepuser LOGIN;
-     GRANT qgep TO qgepuser;
-
-
-* Update privileges for the qgep_od, qgep_sys and qgep_vl schema
-
-  * Right click the `qgep_od` schema
-
-    * Properties... -> Security Tab -> Privileges `+`Button (Add new row) > as `Grantee` choose ``qgep``, `Privileges` click ``USAGE``. Then Click `Save`
-
-    * Right click again, choose `Grant Wizard …`
-
-    * In Step 1 of 3: Click the Box to the left of `Object Type` to select all objects, click `Next`
-
-    * In Step 2 of 3: `+`Button (Add new row) > as `Grantee` choose ``qgep``, `Privileges` click ``ALL``, click `Next`
-  
-    * In Step 3 of 3: click `Finish`
-
-    
-  * Right click the `qgep_sys` schema and the `qgep_vl` schema and repeat the steps described above for the qgep_od-schema
-  
-* You can update the privileges easier in an :ref:`SQL-query` Window : 
-  
-::
-  
-     GRANT USAGE ON SCHEMA qgep_od TO GROUP qgep;
-     GRANT USAGE ON SCHEMA qgep_sys TO GROUP qgep;
-     GRANT USAGE ON SCHEMA qgep_vl TO GROUP qgep;
-     GRANT ALL ON schema qgep_od TO postgres;
-     GRANT ALL ON schema qgep_sys TO postgres;
-     GRANT ALL ON schema qgep_vl TO postgres;
-
-
 Empty data model
 ^^^^^^^^^^^^^^^^
 
