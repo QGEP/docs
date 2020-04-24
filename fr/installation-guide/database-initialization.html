@@ -160,7 +160,7 @@
 <li><p>Créer un nouveau groupe de rôles (de préférence nommé <cite>qgep</cite>, mais libre à vous de choisir)</p></li>
 <li><p>Créer un nouveau login role (<cite>qgepuser</cite> par exemple) et faites-le devenir membre du groupe <cite>qgep</cite></p></li>
 </ul>
-<p>You can do this graphically or by simply opening a pgAdmin <a class="reference internal" href="../admin-guide/pgadmin/usage.html#sql-query"><span class="std std-ref">Requêtes SQL</span></a> window and type the following:</p>
+<p>Il est possible de faire cela graphiquement ou plus simplement ouvrir une fenetre pgAdmin  <span class="xref std std-ref">SQL query</span> et executer le code:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">GROUP</span> <span class="n">qgep</span><span class="p">;</span>
 <span class="n">CREATE</span> <span class="n">ROLE</span> <span class="n">qgepuser</span> <span class="n">LOGIN</span><span class="p">;</span>
 <span class="n">GRANT</span> <span class="n">qgep</span> <span class="n">TO</span> <span class="n">qgepuser</span><span class="p">;</span>
@@ -335,7 +335,7 @@ as in the <a class="reference internal" href="workstation.html#pg-service-linux"
 </pre></div>
 </div>
 </li>
-<li><p>Run the generation script:</p>
+<li><p>Lancer le script de generation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">db_setup</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
