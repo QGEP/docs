@@ -96,7 +96,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#generate-postgres-ili2pg-schema-with-data-model">3.2.2.2. Générer le shéma du modèle de données à l’aide de postgres ili2pg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ili2pg-schema-explanation">3.2.2.3. Explication du schéma ili2pg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-additional-functions">3.2.2.4. Ajoute des fonctions additionnelles</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-the-export-queries-for-your-datamodel">3.2.2.5. Run the export queries for your datamodel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-export-queries-for-your-datamodel">3.2.2.5. Lancer les requêtes exportée dans votre modèle de données</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#export-data-from-ili2pg-schema-to-interlis">3.2.2.6. Export des données du schéma ili2pg vers INTERLIS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">3.2.2.7. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#open-issues">3.2.2.8. Questions en suspens</a></li>
@@ -286,7 +286,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </div>
 <div class="section" id="add-additional-functions">
 <h3><span class="section-number">3.2.2.4. </span>Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
-<p>We then need a series of function for the schema transformation from the created ili2pg schema to the qgep schema</p>
+<p>Nous avons besoin d’une série de fonctions pour transformer le schéma créé par ili2pg en un schéma qgep</p>
 <ul class="simple">
 <li><p><em>01_vsa_dss_2015_2_d_304_tid_generate.sql</em>  : Function to generate new tid in baseclass and sia405_baseclass when obj_id exists</p></li>
 <li><p><em>02_vsa_dss_2015_2_d_304_tid_lookup.sql</em>  : Function to look up tid – used in 060</p></li>
@@ -308,7 +308,7 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </div></blockquote>
 </div>
 <div class="section" id="run-the-export-queries-for-your-datamodel">
-<h3><span class="section-number">3.2.2.5. </span>Run the export queries for your datamodel<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
+<h3><span class="section-number">3.2.2.5. </span>Lancer les requêtes exportée dans votre modèle de données<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour l’export vsa_dss</p>
 <ul class="simple">
 <li><p><em>051_vsa_dss_2015_2_d_304_interlisexport2.sql</em> : for VSA-DSS 2015 export</p></li>
