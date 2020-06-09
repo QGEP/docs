@@ -1,5 +1,5 @@
 History in QGEP
-==================
+===============
 
 How to manage data history in QGEP.
 
