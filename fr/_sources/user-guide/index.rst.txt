@@ -15,3 +15,4 @@ This represents a guide on how to collect data in QGEP (digitizing), edit existi
    network-following/index
    plan-plotting/index
    history/index
+   How-To/index

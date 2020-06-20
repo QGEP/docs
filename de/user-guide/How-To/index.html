@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>How To &mdash; QGEP 0.8 Dokumentation</title>
+  <title>2.8. How To &mdash; QGEP 0.8 Dokumentation</title>
   
 
   
@@ -33,7 +33,10 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="../../genindex.html"/>
         <link rel="search" title="Suche" href="../../search.html"/>
-    <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/> 
+    <link rel="top" title="QGEP 0.8 Dokumentation" href="../../index.html"/>
+        <link rel="up" title="2. QGEP Benutzerhandbuch" href="../index.html"/>
+        <link rel="next" title="3. Administratorhandbuch" href="../../admin-guide/index.html"/>
+        <link rel="prev" title="2.7.1. History viewer" href="../history/history.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -81,9 +84,23 @@
         
           
           
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Übersicht über QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">2.2. Digitalisieren in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Bearbeiten in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Längsschnitte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Werkzeuge zur Netzwerkverfolgung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Plandruck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/index.html">2.7. History in QGEP</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.8. How To</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-label-positioning-for-different-scales">2.8.1. Manual Label-positioning for different scales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-import-existing-label-positions">2.8.2. How to import existing label-positions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Administratorhandbuch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
@@ -112,7 +129,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>How To</li>
+          <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
+      
+    <li><span class="section-number">2.8. </span>How To</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -127,10 +146,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="how-to">
-<h1>How To<a class="headerlink" href="#how-to" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.8. </span>How To<a class="headerlink" href="#how-to" title="Link zu dieser Überschrift">¶</a></h1>
 <p>This represents a guide on different themes about configuring in QGEP.</p>
 <div class="section" id="manual-label-positioning-for-different-scales">
-<h2>Manual Label-positioning for different scales<a class="headerlink" href="#manual-label-positioning-for-different-scales" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.8.1. </span>Manual Label-positioning for different scales<a class="headerlink" href="#manual-label-positioning-for-different-scales" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGIS label definition can handle different labels for different scales. This works very well if you work on the screen.
 If you have to print plans with labels or if you have to export labels for data exchange (e.g. exchange with RegioGIS-platform), it will often be necessary to determine the label positions manually.
 If a label is positioned manually in QGIS, this fixed position applies to every scale. And that’s not always a good result.</p>
@@ -172,7 +191,7 @@ You have not the change something in the placement, because this rule uses the s
 </div>
 </div>
 <div class="section" id="how-to-import-existing-label-positions">
-<h2>How to import existing label-positions<a class="headerlink" href="#how-to-import-existing-label-positions" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.8.2. </span>How to import existing label-positions<a class="headerlink" href="#how-to-import-existing-label-positions" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Good label-positions can be hard work. So you don’t want to loose it.</p>
 <ul class="simple">
 <li><p>Export your label-positions from your old system in the form obj_id, coordinateX (east), coordinateY (north).</p></li>
@@ -195,6 +214,15 @@ You have not the change something in the placement, because this rule uses the s
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../admin-guide/index.html" class="btn btn-neutral float-right" title="3. Administratorhandbuch" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../history/history.html" class="btn btn-neutral" title="2.7.1. History viewer" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
