@@ -11,7 +11,7 @@ Requirements
 
 Client
 ^^^^^^
-The database can be hosted on a windows environment but PUM must be launched from a linux environment (ie virtual machine).
+PUM can be launched from a windows or linux environment (ie virtual machine).
 
 PostgreSQL
 ^^^^^^^^^^
