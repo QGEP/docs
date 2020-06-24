@@ -36,7 +36,9 @@ To update PUM
 
 ``pip3 install --upgrade pum``
 
-``sudo`` can be used to install ``PUM`` and ``pirogue`` system wide or the ``--user`` flag can be used to install they into the current user's home directory. 
+``sudo`` can be used to install ``PUM`` and ``pirogue`` system wide or the ``--user`` flag can be used to install they into the current user's home directory.
+
+If you encounter any problem with PUM installation or usage, check the `PUM documentation <https://github.com/opengisch/pum#pum>`_.
 
 Pirogue installation
 ^^^^^^^^^^^^^^^^^^^^
