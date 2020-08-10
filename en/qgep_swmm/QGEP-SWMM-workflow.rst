@@ -6,15 +6,13 @@ QGEP-SWMM workflow
 Workflow
 --------
 
-In the QGEP processing tool, there are four SWMM processes:
+In the QGEP processing tool, there are three SWMM processes:
 
-1. ``SWMM Create DB Tables`` generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.
-2. ``SWMM Create Input`` reads data from the PostgreSQL tables (schema ``qgep_swmm``) and generate an input file for SWMM.
-3. ``SWMM Execute`` launches SWMM. Its likely that the ``.inp`` file generated in the previous step contains error. 
-In this case, the ``.inp`` file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors. 
-Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
-4. ``SWMM Extract Results`` parses the result file and generates three QGIS table layers.
-5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.
+1. ``SWMM Create Input`` reads data from the PostgreSQL tables (schema ``qgep_swmm``) and generate an input file for SWMM.
+2. ``SWMM Execute`` launches SWMM. Its likely that the ``.inp`` file generated in the previous step contains error. In this case, the ``.inp`` file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
+3. ``SWMM Extract Results`` parses the result file and generates three QGIS table layers.
+
+Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.
 
 
 

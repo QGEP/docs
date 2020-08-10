@@ -4,7 +4,7 @@ Change simulation parameters
 ============================
 
 The easiest way to edit the simulation parameters is to open the ``.inp`` file with SWMM GUI.
-Then, you will find the parameters liste hereunder.
+Then, you will find the parameters list hereunder.
 These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template ``.inp`` file.
 
 Title/Notes:

@@ -33,9 +33,11 @@ The list of errors can be found `here <https://swmm5.org/2016/09/05/swmm-5-1-and
 
 Python command line
 -------------------
+Advanced users might want to run the scripts directly from Python. 
 
 .. code :: python
 
+	from .QgepSwmm import QgepSwmm
 	INPFILE = 'C:\\qgep_swmm\\input\\qgep_swmm.inp'
 	OUTFILE = 'C:\\qgep_swmm\\output\\swmm.out'
 	LOGFILE = 'C:\\qgep_swmm\\output\\log.out'
