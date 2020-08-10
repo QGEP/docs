@@ -31,16 +31,3 @@ The list of errors can be found `here <https://swmm5.org/2016/09/05/swmm-5-1-and
 
 - ``ERROR 211: invalid number -XXX at line XXX of [JUNC] section:``: A negative number is provided for the depth. Change the value in QGEP or in the ``.inp`` file.
 
-Python command line
--------------------
-Advanced users might want to run the scripts directly from Python. 
-
-.. code :: python
-
-	from .QgepSwmm import QgepSwmm
-	INPFILE = 'C:\\qgep_swmm\\input\\qgep_swmm.inp'
-	OUTFILE = 'C:\\qgep_swmm\\output\\swmm.out'
-	LOGFILE = 'C:\\qgep_swmm\\output\\log.out'
-	qs = qgep_swmm(None, INPFILE, None, OUTFILE, LOGFILE, None, None)
-	qs.execute_swmm()
-

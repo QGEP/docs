@@ -29,19 +29,3 @@ Change simulation parameters
 From SWMM GUI you can set the simulation parameters (see `Change Simulation Parameters <./Change-simulation-parameters.html#change-simulation-parameters>`_).
 
 
-Python command line
--------------------
-
-Advanced users might want to run the scripts directly from Python. 
-
-.. code :: python
-
-	from .QgepSwmm import QgepSwmm
-	TITLE = 'title simulation'
-	PGSERVICE = 'pg_qgep'
-	INPFILE = 'C:\\qgep_swmm\\input\\qgep_swmm.inp'
-	INPTEMPLATE = 'C:\\qgep_swmm\\simulation_parameters\\default_qgep_swmm_parameters.inp'
-	OUTFILE = ''
-	qs = qgep_swmm(TITLE, PGSERVICE, INPFILE, INPTEMPLATE, OUTFILE)
-	qs.write_input()
-
