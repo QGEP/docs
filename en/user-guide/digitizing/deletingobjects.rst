@@ -69,3 +69,13 @@ Delete Structure parts
 * Click the red x button to delete the structure parts
 * Click save on the form
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.
+
+Delete detailled geometries
+----------------------
+
+.. attention:: Removing features directly from **wastewater_structure** will remove these entities from the database and not only the detailled geometry!
+
+* Select **wastewater_structure** and change to edit mode
+* Activate the **Remove part** tool from the Advanced digitizing toolbar
+* Click on the parts you want to delete
+* Stop the editing mode and confirm changes to layer. All changes will be saved to database.
