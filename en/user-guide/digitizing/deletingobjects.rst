@@ -73,7 +73,7 @@ Delete Structure parts
 Delete detailed geometries
 ----------------------
 
-.. attention:: Removing features directly from **wastewater_structure** will remove these entities from the database and not only the detailled geometry!
+.. attention:: Deleting features directly from **wastewater_structure** will remove the complete wastewater structure from the database and not only the geometry of the wastewater structure!
 
 * Select **wastewater_structure** and change to edit mode
 * Activate the **Remove part** tool from the Advanced digitizing toolbar
