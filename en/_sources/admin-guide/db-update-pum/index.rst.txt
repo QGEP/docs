@@ -11,7 +11,7 @@ Requirements
 
 Client
 ^^^^^^
-The database can be hosted on a windows environment but PUM must be launched from a linux environment (ie virtual machine).
+Update is done using `PUM <https://github.com/opengisch/pum>`_ available on linux and windows environment. It does not require to be run on the server directly but can be run from a remote client or a virtual machine. `Pirogue <https://github.com/opengisch/pirogue>`_ is required for views regeneration.
 
 PostgreSQL
 ^^^^^^^^^^
