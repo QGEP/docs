@@ -5,10 +5,6 @@ User Roles
 
 QGEP comes with a set of predefined roles for a multi user configuration.
 
-The SQL related to these roles creation is stored here : 
-
-https://github.com/QGEP/datamodel/blob/master/12_roles.sql
-
 The base installation of QGEP defines the following group roles :
 
 * qgep_viewer : has the rights for project consultation, can select entities of QGEP, view values lists.
@@ -17,3 +13,5 @@ The base installation of QGEP defines the following group roles :
 * qgep_sysadmin : superuser of QGEP database, can edit qgep system tables (`qgep_sys` schema).
 
 Data in QGEP are stored in 3 schemas with default permissions for all of these users.
+
+.. Note:: The SQL related to these roles creation is stored `here <https://github.com/QGEP/datamodel/blob/master/12_roles.sql>`_
