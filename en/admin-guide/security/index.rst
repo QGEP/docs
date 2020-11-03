@@ -9,7 +9,7 @@ The SQL related to these roles creation is stored here :
 
 https://github.com/QGEP/datamodel/blob/master/12_roles.sql
 
-Users are defined in these classes :
+The base installation of QGEP defines the following group roles :
 
 * qgep_viewer : has the rights for project consultation, can select entities of QGEP, view values lists.
 * qgep_user : main QGEP user, can edit entities (`qgep_od` schema), view values lists.
