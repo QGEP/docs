@@ -7,6 +7,7 @@ This represents a guide on how to administrate the database, install a Virtual m
    :maxdepth: 2
 
    pgadmin/index
+   security/index
    data-export/index
    data-import/index
    db-customization/index
