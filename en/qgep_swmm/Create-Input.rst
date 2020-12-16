@@ -18,6 +18,3 @@ Launch ``SWMM Create Input``:
 - ``State``: Current or Planned: extract the wastewater structure according to the status
 - ``Template INP file``: a ``.inp`` from which simulation parameters will be copied
 - ``Destination INP file``: the ``.inp`` generated from QGEP data
-
-
-

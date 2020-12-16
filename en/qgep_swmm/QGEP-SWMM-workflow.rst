@@ -16,6 +16,7 @@ Workflow
 
 5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.
 
+
 Each step is explained in more details in the next chapters.
 
 
