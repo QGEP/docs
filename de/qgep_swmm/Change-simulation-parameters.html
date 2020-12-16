@@ -92,8 +92,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
@@ -155,7 +155,7 @@
   <div class="section" id="change-simulation-parameters">
 <span id="id1"></span><h1><span class="section-number">6.8. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link zu dieser Überschrift">¶</a></h1>
 <p>The easiest way to edit the simulation parameters is to open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.
-Then, you will find the parameters liste hereunder.
+Then, you will find the parameters list hereunder.
 These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p>
 <div class="section" id="title-notes">
 <h2><span class="section-number">6.8.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Link zu dieser Überschrift">¶</a></h2>
@@ -184,7 +184,7 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 <p>QGEP_SWMM creates one raingage for each subcatchment.</p>
 <p>By default:</p>
 <ul class="simple">
-<li><p>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal notranslate"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name update accordingly.</p></li>
+<li><p>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal notranslate"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name updated accordingly.</p></li>
 <li><p>Other parameters have default SWMM values</p></li>
 </ul>
 <p><strong>Aquifers:</strong></p>
@@ -198,14 +198,12 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 </ul>
 <p><strong>Subcatchment:</strong></p>
 <p>QGEP_SWMM creates a subcatchment for each QGEP catchment area.</p>
-<p>By default:</p>
-<ul class="simple">
-<li><p>A subcatchment is created for each QGEP <code class="docutils literal notranslate"><span class="pre">catchment</span> <span class="pre">area</span></code></p></li>
-<li><p>it is linked to a rain gage.</p></li>
-<li><p>The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknow the centroid is used rather thant the outlet.</p></li>
-<li><p>The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone</p></li>
-<li><p>Other parameters have default SWMM values</p></li>
-</ul>
+<p>By default:
+- A subcatchment is created for each QGEP <code class="docutils literal notranslate"><span class="pre">wastewater_networkelement</span></code> linked to the <code class="docutils literal notranslate"><span class="pre">catchment</span> <span class="pre">area</span></code> (max. 4: <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_planned</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_planned</span></code>)
+- it is linked to a rain gage.
+- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
+- The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone
+- Other parameters have default SWMM values</p>
 <p>The subcatchment can be linked to an aquifer via the groundwater attribute.</p>
 <p><strong>Snow Packs</strong></p>
 <ul class="simple">
@@ -224,7 +222,7 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 <h2><span class="section-number">6.8.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Link zu dieser Überschrift">¶</a></h2>
 <p><strong>Junctions</strong></p>
 <ul class="simple">
-<li><p>QGEP_SWMM creates a junction for each QGEP manhole and some kind of special structures.</p></li>
+<li><p>QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.</p></li>
 <li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_junctions.sql</span></code> for details.</p></li>
 </ul>
 <p><strong>Outfalls</strong></p>
@@ -234,8 +232,8 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 </ul>
 <p><strong>Dividers</strong></p>
 <ul class="simple">
-<li><p>Are not created from QGEP objects.</p></li>
-<li><p>Copied from the template input file if exists.</p></li>
+<li><p>QGEP_SWMM creates a divider for the manholes and special structures having the function <code class="docutils literal notranslate"><span class="pre">separating_structure</span></code></p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_dividers.sql</span></code> for details.</p></li>
 </ul>
 <p><strong>Storage Units</strong></p>
 <ul class="simple">

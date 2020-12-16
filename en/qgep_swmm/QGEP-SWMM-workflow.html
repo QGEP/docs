@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentation" href="../index.html"/>
         <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
-        <link rel="next" title="6.3. SWMM Create DB Tables" href="Create-DB-tables.html"/>
+        <link rel="next" title="6.3. SWMM Create Input" href="Create-Input.html"/>
         <link rel="prev" title="6.1. QGEP-SWMM installation" href="QGEP-SWMM-installation.html"/> 
 
   
@@ -97,8 +97,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#gep-project">6.2.2. GEP project</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
@@ -149,16 +149,14 @@
 <span id="id1"></span><h1><span class="section-number">6.2. </span>QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="workflow">
 <h2><span class="section-number">6.2.1. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<p>In the QGEP processing tool, there are four SWMM processes:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code> generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code> reads data from the PostgreSQL tables (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>. It reads data from the QGEP views (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file. Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code> launches SWMM. Run it on a tested <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code>. It parses the result file and generates three QGIS table layers.</p></li>
+<li><p>Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.</p></li>
 </ol>
-<p>3. <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code> launches SWMM. Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains error.
-In this case, the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors.
-Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.
-4. <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code> parses the result file and generates three QGIS table layers.
-5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.</p>
+<p>Each step is explained in more details in the next chapters.</p>
 </div>
 <div class="section" id="gep-project">
 <h2><span class="section-number">6.2.2. </span>GEP project<a class="headerlink" href="#gep-project" title="Permalink to this headline">¶</a></h2>
@@ -166,7 +164,7 @@ Similarly, if you need to tune the simulation parameters, you have to edit the <
 <p>Usually, a GEP analysis has at least three steps:</p>
 <ol class="arabic simple">
 <li><p>The current state of the network is analysed</p></li>
-<li><p>The aimed state (available areas are built at 100%) is analysed.</p></li>
+<li><p>The planned state is analysed.</p></li>
 <li><p>Several variants are tested and analysed</p></li>
 </ol>
 <p><strong>Minimal parameters to be set</strong></p>
@@ -174,10 +172,9 @@ Similarly, if you need to tune the simulation parameters, you have to edit the <
 <p><code class="docutils literal notranslate"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchment</span></code>: Set percent of of impervious area and infiltration parameters</p>
 <p><strong>Optional parameters</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">Climatology</span> <span class="pre">&gt;</span> <span class="pre">Evaporation</span></code></p>
-<p><strong>Run aimed state simulation</strong></p>
+<p><strong>Run planned state simulation</strong></p>
 <ul class="simple">
-<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">inp</span></code> file used for the previous simulation</p></li>
-<li><p>Increase the impervious areas:<code class="docutils literal notranslate"><span class="pre">Hydrology</span> <span class="pre">&gt;</span> <span class="pre">Subcatchements</span> <span class="pre">&gt;</span> <span class="pre">%</span> <span class="pre">Imperv</span></code></p></li>
+<li><p>In the function <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code> choose the state planned. It extract the planned wastewater structures.</p></li>
 </ul>
 <p><strong>Run variants (network is modified)</strong></p>
 <p>New links and new nodes are created directly in SWMM GUI</p>
@@ -191,7 +188,7 @@ Similarly, if you need to tune the simulation parameters, you have to edit the <
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Create-DB-tables.html" class="btn btn-neutral float-right" title="6.3. SWMM Create DB Tables" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Create-Input.html" class="btn btn-neutral float-right" title="6.3. SWMM Create Input" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="QGEP-SWMM-installation.html" class="btn btn-neutral" title="6.1. QGEP-SWMM installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

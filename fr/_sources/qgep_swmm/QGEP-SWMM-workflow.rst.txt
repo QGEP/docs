@@ -6,15 +6,18 @@ QGEP-SWMM workflow
 Workflow
 --------
 
-In the QGEP processing tool, there are four SWMM processes:
+1. Run ``SWMM Create Input``. It reads data from the QGEP views (schema ``qgep_swmm``) and generate an input file for SWMM. 
 
-1. ``SWMM Create DB Tables`` generates the PostgreSQL tables required by the plugin and fill them with the QGEP data.
-2. ``SWMM Create Input`` reads data from the PostgreSQL tables (schema ``qgep_swmm``) and generate an input file for SWMM.
-3. ``SWMM Execute`` launches SWMM. Its likely that the ``.inp`` file generated in the previous step contains error. 
-In this case, the ``.inp`` file has to be opened with the SWMM Graphical User Interface (GUI) to solve the errors. 
-Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
-4. ``SWMM Extract Results`` parses the result file and generates three QGIS table layers.
+2. Check ``.inp`` file. Its likely that the ``.inp`` file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the ``.inp`` file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
+
+3. Run ``SWMM Execute`` launches SWMM. Run it on a tested ``.inp`` file.
+
+4. Run ``SWMM Extract Results``. It parses the result file and generates three QGIS table layers.
+
 5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.
+
+
+Each step is explained in more details in the next chapters.
 
 
 
@@ -25,7 +28,7 @@ GEP project
 Usually, a GEP analysis has at least three steps:
 
 1. The current state of the network is analysed
-2. The aimed state (available areas are built at 100%) is analysed.
+2. The planned state is analysed.
 3. Several variants are tested and analysed
 
 **Minimal parameters to be set**
@@ -38,11 +41,9 @@ Usually, a GEP analysis has at least three steps:
 
 ``Climatology > Evaporation``
 
-**Run aimed state simulation**
+**Run planned state simulation**
 
-- Copy the ``inp`` file used for the previous simulation
-
-- Increase the impervious areas:``Hydrology > Subcatchements > % Imperv``
+- In the function ``SWMM Create Input`` choose the state planned. It extract the planned wastewater structures.
 
 **Run variants (network is modified)**
 

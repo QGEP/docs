@@ -4,7 +4,7 @@ Change simulation parameters
 ============================
 
 The easiest way to edit the simulation parameters is to open the ``.inp`` file with SWMM GUI.
-Then, you will find the parameters liste hereunder.
+Then, you will find the parameters list hereunder.
 These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template ``.inp`` file.
 
 Title/Notes:
@@ -30,7 +30,7 @@ QGEP_SWMM creates one raingage for each subcatchment.
 
 By default:
 
-- Time serie: Each raingage is related to a default rain time serie called ``default_qgep_raingage_timeserie``. The time serie must be created and the value Series Name update accordingly.
+- Time serie: Each raingage is related to a default rain time serie called ``default_qgep_raingage_timeserie``. The time serie must be created and the value Series Name updated accordingly.
 - Other parameters have default SWMM values
 
 **Aquifers:**
@@ -49,10 +49,9 @@ By default:
 QGEP_SWMM creates a subcatchment for each QGEP catchment area.
 
 By default:
-
-- A subcatchment is created for each QGEP ``catchment area``
+- A subcatchment is created for each QGEP ``wastewater_networkelement`` linked to the ``catchment area`` (max. 4: ``fk_wastewater_networkelement_rw_current``, ``fk_wastewater_networkelement_rw_planned``, ``fk_wastewater_networkelement_ww_current``, ``fk_wastewater_networkelement_ww_planned``)
 - it is linked to a rain gage. 
-- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknow the centroid is used rather thant the outlet.
+- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
 - The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone
 - Other parameters have default SWMM values
 
@@ -76,7 +75,7 @@ Hydraulics
 
 **Junctions**
 
-- QGEP_SWMM creates a junction for each QGEP manhole and some kind of special structures.
+- QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.
 
 - See ``vw_swmm_junctions.sql`` for details.
 
@@ -88,9 +87,9 @@ Hydraulics
 
 **Dividers**
 
-- Are not created from QGEP objects.
+- QGEP_SWMM creates a divider for the manholes and special structures having the function ``separating_structure``
 
-- Copied from the template input file if exists.
+- See ``vw_swmm_dividers.sql`` for details.
 
 **Storage Units**
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6.3. SWMM Create DB Tables &mdash; QGEP 0.8 documentație</title>
+  <title>6.4. Check input file &mdash; QGEP 0.8 documentație</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="search" title="Căutare" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentație" href="../index.html"/>
         <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
-        <link rel="next" title="6.4. SWMM Create Input" href="Create-Input.html"/>
-        <link rel="prev" title="6.2. QGEP-SWMM workflow" href="QGEP-SWMM-workflow.html"/> 
+        <link rel="next" title="6.5. SWMM Execute" href="Execute.html"/>
+        <link rel="prev" title="6.3. SWMM Create Input" href="Create-Input.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -93,12 +93,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. SWMM Create DB Tables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.3.1. QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#python-command-line">6.3.2. Python command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. Check input file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-import-errors">6.4.1. Common import errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#catchment-area-connected-to-secondary-wastewater-structure">6.4.1.1. Catchment area connected to secondary wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-discharge-coefficients">6.4.1.2. Missing discharge coefficients</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
@@ -131,11 +134,11 @@
       
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
       
-    <li><span class="section-number">6.3. </span>SWMM Create DB Tables</li>
+    <li><span class="section-number">6.4. </span>Check input file</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/qgep_swmm/Create-DB-tables.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/qgep_swmm/Check-Input.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -145,23 +148,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="swmm-create-db-tables">
-<span id="create-db-tables"></span><h1><span class="section-number">6.3. </span>SWMM Create DB Tables<a class="headerlink" href="#swmm-create-db-tables" title="Link permanent la acest titlu">¶</a></h1>
-<div class="section" id="qgep-plugin">
-<h2><span class="section-number">6.3.1. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link permanent la acest titlu">¶</a></h2>
-<p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">DB</span> <span class="pre">Tables</span></code>:</p>
+  <div class="section" id="check-input-file">
+<span id="check-input"></span><h1><span class="section-number">6.4. </span>Check input file<a class="headerlink" href="#check-input-file" title="Link permanent la acest titlu">¶</a></h1>
+<p>The generated <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file can be imported in SWMM GUI. It is likely that some errors will be raised. You will have to solve them (see hereunder a list of common errors)</p>
+<p>You have to solve the errors in the order in which they appear in the report. Some errors are interrelated (i.e. a node in a conduit is not defined =&gt; the conduit is not imported =&gt; Undefined link error)</p>
+<p>To fix an error you can search in the corresponding QGEP layers in the QGIS project:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Database</span></code>: the name of the service used to connect to the database (<a class="reference external" href="http://qgep.github.io/docs/fr/installation-guide/workstation.html#windows-pg-service">QGEP services setup</a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Path</span> <span class="pre">to</span> <span class="pre">DB</span> <span class="pre">Model</span> <span class="pre">SQL</span></code>: Folder which stores the SQL files used to create the schema and swmm views: <code class="docutils literal notranslate"><span class="pre">datamodel\swmm_views</span></code>.</p></li>
+<li><p>vw_wastewater_node for undefined nodes</p></li>
+<li><p>catchment_area for subcatchment errors</p></li>
+<li><p>etc.</p></li>
 </ul>
+<div class="section" id="common-import-errors">
+<span id="id1"></span><h2><span class="section-number">6.4.1. </span>Common import errors<a class="headerlink" href="#common-import-errors" title="Link permanent la acest titlu">¶</a></h2>
+<div class="section" id="catchment-area-connected-to-secondary-wastewater-structure">
+<h3><span class="section-number">6.4.1.1. </span>Catchment area connected to secondary wastewater structure<a class="headerlink" href="#catchment-area-connected-to-secondary-wastewater-structure" title="Link permanent la acest titlu">¶</a></h3>
+<p>``
+<cite>Undefined Node (CHamtKnv00002706) referenced at line 20997:
+[DWF]
+CHamtKnv00002706        FLOW    0.0204074074074074      dailyPatternDWF
+`</cite></p>
+<p>The catchment area is linked to a secondary wastewater structure</p>
 </div>
-<div class="section" id="python-command-line">
-<h2><span class="section-number">6.3.2. </span>Python command line<a class="headerlink" href="#python-command-line" title="Link permanent la acest titlu">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PGSERVICE</span> <span class="o">=</span> <span class="s1">&#39;pg_qgep&#39;</span>
-<span class="n">DBMODEL</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">QGEP</span><span class="se">\\</span><span class="s1">datamodel</span><span class="se">\\</span><span class="s1">swmm_views&#39;</span>
-<span class="n">qs</span> <span class="o">=</span> <span class="n">QgepSwmm</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">PGSERVICE</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">DBMODEL</span><span class="p">)</span>
-<span class="n">qs</span><span class="o">.</span><span class="n">create_fill_swmm_tables</span><span class="p">()</span>
-</pre></div>
+<div class="section" id="missing-discharge-coefficients">
+<h3><span class="section-number">6.4.1.2. </span>Missing discharge coefficients<a class="headerlink" href="#missing-discharge-coefficients" title="Link permanent la acest titlu">¶</a></h3>
+<p>``
+Too few items at line 104:
+[SUBCATCHMENT]
+ch19ar68CA008855_ww_current     <a class="reference external" href="mailto:raingage&#37;&#52;&#48;ch19ar68CA008855">raingage<span>&#64;</span>ch19ar68CA008855</a>       CHamtKnv00001992        0.0276          19.4322613668305
+``
+The subcatchement discharge coefficients are not filled in.
+You can find them using sql:
+``
+select obj_id, fk_wastewater_networkelement_rw_current, discharge_coefficient_rw_current
+from qgep_od.catchment_area
+where fk_wastewater_networkelement_rw_current is not null and discharge_coefficient_rw_current is null;</p>
+<p>select obj_id, fk_wastewater_networkelement_rw_planned, discharge_coefficient_rw_planned
+from qgep_od.catchment_area
+where fk_wastewater_networkelement_rw_planned is not null and discharge_coefficient_rw_planned is null;</p>
+<p>select obj_id, fk_wastewater_networkelement_ww_current, discharge_coefficient_ww_current
+from qgep_od.catchment_area
+where fk_wastewater_networkelement_ww_current is not null and discharge_coefficient_ww_current is null</p>
+<p>select obj_id, fk_wastewater_networkelement_ww_planned, discharge_coefficient_ww_planned
+from qgep_od.catchment_area
+where fk_wastewater_networkelement_ww_planned is not null and discharge_coefficient_ww_planned is null;
+``</p>
 </div>
 </div>
 </div>
@@ -173,10 +203,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Create-Input.html" class="btn btn-neutral float-right" title="6.4. SWMM Create Input" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Execute.html" class="btn btn-neutral float-right" title="6.5. SWMM Execute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="QGEP-SWMM-workflow.html" class="btn btn-neutral" title="6.2. QGEP-SWMM workflow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Create-Input.html" class="btn btn-neutral" title="6.3. SWMM Create Input" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -9,8 +9,8 @@ QGEP SWMM plugin
 
    QGEP-SWMM-installation
    QGEP-SWMM-workflow
-   Create-DB-tables
    Create-Input
+   Check-Input
    Execute
    Extract-Results
    Mapping

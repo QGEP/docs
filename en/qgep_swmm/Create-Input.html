@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6.4. SWMM Create Input &mdash; QGEP 0.8 documentation</title>
+  <title>6.3. SWMM Create Input &mdash; QGEP 0.8 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="QGEP 0.8 documentation" href="../index.html"/>
         <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
-        <link rel="next" title="6.5. SWMM Execute" href="Execute.html"/>
-        <link rel="prev" title="6.3. SWMM Create DB Tables" href="Create-DB-tables.html"/> 
+        <link rel="next" title="6.4. Check input file" href="Check-Input.html"/>
+        <link rel="prev" title="6.2. QGEP-SWMM workflow" href="QGEP-SWMM-workflow.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -93,14 +93,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-DB-tables.html">6.3. SWMM Create DB Tables</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. SWMM Create Input</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.4.1. QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#check-input-file">6.4.2. Check input file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#change-simulation-parameters">6.4.3. Change simulation parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#python-command-line">6.4.4. Python command line</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. SWMM Create Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.3.1. QGEP plugin</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.7. Mapping</a></li>
@@ -133,7 +130,7 @@
       
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
       
-    <li><span class="section-number">6.4. </span>SWMM Create Input</li>
+    <li><span class="section-number">6.3. </span>SWMM Create Input</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -148,38 +145,21 @@
            <div itemprop="articleBody">
             
   <div class="section" id="swmm-create-input">
-<span id="create-input"></span><h1><span class="section-number">6.4. </span>SWMM Create Input<a class="headerlink" href="#swmm-create-input" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file is the input file format for SWMM. It contains the wastewater network AND simulation parameters. The network can be extracted from the QGEP data, but the simulation parameters must be set according to your study.</p>
-<p>The simulation parameters are copied from a provided <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.
-A default file is provided in the plugin folder in <code class="docutils literal notranslate"><span class="pre">src\swmm\default_qgep_swmm_parameters.inp</span></code>, but you can create and use your own template file.</p>
+<span id="create-input"></span><h1><span class="section-number">6.3. </span>SWMM Create Input<a class="headerlink" href="#swmm-create-input" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>The plugin extracts only the primary wastewater structures</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file is the input file format for SWMM. It contains the wastewater network AND simulation parameters. The network can be extracted from the QGEP data, but the simulation parameters must be set according to your study.</p></li>
+<li><p>The simulation parameters are copied from a provided <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file. A default file is provided in the plugin folder in <code class="docutils literal notranslate"><span class="pre">src\swmm\default_qgep_swmm_parameters.inp</span></code>, but you can create and use your own template file.</p></li>
+</ul>
 <div class="section" id="qgep-plugin">
-<h2><span class="section-number">6.4.1. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3.1. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Permalink to this headline">¶</a></h2>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Database</span></code>: the name of the service used to connect to the database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">State</span></code>: Current or Planned: extract the wastewater structure according to the status</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Template</span> <span class="pre">INP</span> <span class="pre">file</span></code>: a <code class="docutils literal notranslate"><span class="pre">.inp</span></code> from which simulation parameters will be copied</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">INP</span> <span class="pre">file</span></code>: the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> generated from QGEP data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Destination</span> <span class="pre">INP</span> <span class="pre">file</span></code>: the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> generated from QGEP data</p></li>
 </ul>
-</div>
-<div class="section" id="check-input-file">
-<h2><span class="section-number">6.4.2. </span>Check input file<a class="headerlink" href="#check-input-file" title="Permalink to this headline">¶</a></h2>
-<p>The generated <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file can be imported in SWMM GUI. It is likely that some errors will be raised. You will have to solve them (see <a class="reference external" href="./Execute.html#common-import-errors">Common Import Errors</a>).</p>
-</div>
-<div class="section" id="change-simulation-parameters">
-<h2><span class="section-number">6.4.3. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Permalink to this headline">¶</a></h2>
-<p>From SWMM GUI you can set the simulation parameters (see <a class="reference external" href="./Change-simulation-parameters.html#change-simulation-parameters">Change Simulation Parameters</a>).</p>
-</div>
-<div class="section" id="python-command-line">
-<h2><span class="section-number">6.4.4. </span>Python command line<a class="headerlink" href="#python-command-line" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TITLE</span> <span class="o">=</span> <span class="s1">&#39;title simulation&#39;</span>
-<span class="n">PGSERVICE</span> <span class="o">=</span> <span class="s1">&#39;pg_qgep&#39;</span>
-<span class="n">INPFILE</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">qgep_swmm</span><span class="se">\\</span><span class="s1">input</span><span class="se">\\</span><span class="s1">qgep_swmm.inp&#39;</span>
-<span class="n">INPTEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">qgep_swmm</span><span class="se">\\</span><span class="s1">simulation_parameters</span><span class="se">\\</span><span class="s1">default_qgep_swmm_parameters.inp&#39;</span>
-<span class="n">OUTFILE</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">qs</span> <span class="o">=</span> <span class="n">qgep_swmm</span><span class="p">(</span><span class="n">TITLE</span><span class="p">,</span> <span class="n">PGSERVICE</span><span class="p">,</span> <span class="n">INPFILE</span><span class="p">,</span> <span class="n">INPTEMPLATE</span><span class="p">,</span> <span class="n">OUTFILE</span><span class="p">)</span>
-<span class="n">qs</span><span class="o">.</span><span class="n">write_input</span><span class="p">()</span>
-</pre></div>
-</div>
 </div>
 </div>
 
@@ -190,10 +170,10 @@ A default file is provided in the plugin folder in <code class="docutils literal
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Execute.html" class="btn btn-neutral float-right" title="6.5. SWMM Execute" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Check-Input.html" class="btn btn-neutral float-right" title="6.4. Check input file" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Create-DB-tables.html" class="btn btn-neutral" title="6.3. SWMM Create DB Tables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="QGEP-SWMM-workflow.html" class="btn btn-neutral" title="6.2. QGEP-SWMM workflow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
