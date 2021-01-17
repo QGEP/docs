@@ -164,8 +164,7 @@
 <div class="section" id="general">
 <h2><span class="section-number">2.2.5.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen). Siehe Kapitel <span class="xref std std-ref">wizard</span>.</p>
-<p>Select the <strong>Wizard</strong> button, then click <strong>Start Data Entry</strong> and choose <strong>Reach</strong> in the pull down menu.
-Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <strong>Start Data Entry</strong> und wählen <strong>Reach</strong> im Ausziehmenü.</p>
+<p>Wählen Sie die <strong>Wizard</strong> Schaltfläche, drücken <strong>Start Data Entry</strong> und wählen <strong>Reach</strong> im Pulldown-Menü.</p>
 <div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
 </div>
@@ -174,44 +173,44 @@ Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <stro
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
-<p>Starten Sie die Digitalisierung von Haltungen/Kanälen immer in Fliessrichtung des Kanales, indem sie mit dem <strong>from manhole node</strong> starten und mit dem <strong>to manhole node</strong> aufhören.</p>
+<p>Erfassen Sie Haltungen/Kanäle immer in Fliessrichtung des Kanales, indem sie beim <strong>von Abwasserknoten</strong> starten und beim <strong>nach Abwasserknoten</strong> aufhören.</p>
 </div>
 </div>
 <div class="section" id="digitizing">
 <h2><span class="section-number">2.2.5.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p>Im Digitalisierungsmodus greift der Eingabezeiger automatisch auf die nächstgelegene Abdeckung oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet.</p></li>
+<li><p>Im Digitalisierungsmodus schnappt der Cursor automatisch auf das nächstgelegene Abwasserbauwerk oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor3.jpg" />
 </div>
 <ul class="simple">
-<li><p>Mit weiteren Klicks irgendwo können Sie die dazwischenliegenden Punkte des Haltungsverlaufs definieren. Sie können auch direkt einen anderen Kanalschacht anwählen, um einen geraden Kanal zu zeichnen.</p></li>
+<li><p>Mit beliebigen weiteren Klicks können Sie Zwischenpunkte des Haltungsverlaufs definieren. Sie können auch direkt einen anderen Kanalschacht anwählen, um einen geraden Kanal zu zeichnen.</p></li>
 <li><p>Die <strong>Advanced Digitizing</strong> Werkzeuge können zusammen mit dem Wizard eingesetzt werden.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" src="../../_images/wizard_data_entry_reach_with_new_cursor2-3.jpg" />
 </div>
 <ul class="simple">
-<li><p>Mit einem Rechtsklick wird die Linienzeichnung beendet. Im Anschluss erscheint das <strong>vw_qep_reach</strong> Formular in dem Sie Daten im Reiter <strong>Allgemein</strong> eingeben können:</p></li>
+<li><p>Mit einem Rechtsklick wird die Linienzeichnung beendet. Im Anschluss erscheint das <strong>vw_qgep_reach</strong> Formular in dem Sie Daten im Reiter <strong>Allgemein</strong> eingeben können:</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_reach_form3.jpg" src="../../_images/wizard_wastewater_structure_reach_form3.jpg" />
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Behalten Sie im Kopf, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick um die Digitalisierung der Linie zu beenden.</p>
+<p>Beachten Sie, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick, um die Digitalisierung der Linie zu beenden.</p>
 </div>
 <ul class="simple">
-<li><p>Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern <strong>rp_from/to_fk_wastewater_networkelement</strong> kontrolliert werden.</p></li>
+<li><p>Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern <strong>HP_von/nach_FS_Abwassernetzelement</strong> kontrolliert werden.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Wenn kein Bezeichner (reach-identifier) im Reiter Allgemeines eingegeben wird, übernimmt QGEP die <cite>obj_id</cite> als Bezeichnung (kann später geändert werden). Als Vorgabewert ist der Bezeichner der Haltung gleich dem <cite>ws_identifier</cite> des Kanals. Der Haltungsbezeichner wird aus dem Haltungsbezeichner+‘F‘ oder +‘T‘ (von und nach Haltungspunkt) gebildet.</p>
+<p>Wenn im Feld Bezeichnung (reach-identifier) im Reiter Allgemein keine Eingabe gemacht wird, übernimmt QGEP die <cite>obj_id</cite> als Bezeichnung (kann später geändert werden). Als Vorgabewert ist die Bezeichnung der Haltung gleich dem <cite>ws_identifier</cite> des Kanals. Die Bezeichnung der Haltungspunkte wird aus der Haltungsbezeichnung+‘F‘ oder +‘T‘ (von und nach Haltungspunkt) gebildet.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Siehe <span class="xref std std-ref">reach_geometrysync</span> für automatische Haltungspunkthöhen bei Fang auf Abwasserknoten mit Höhe.</p>
+<p>Siehe <span class="xref std std-ref">reach_geometrysync</span> für automatische Haltungspunkthöhen bei Schnappen auf Abwasserknoten mit Koten.</p>
 </div>
 <ul class="simple">
 <li><p>Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der <strong>od_pipe_profile</strong> Tabelle bearbeiten.</p></li>
@@ -228,10 +227,10 @@ Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <stro
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Bei Verwendung des Assistenten während der Erstellung von Haltungen verwenden die Vorgabefelder im Reiter Allgemeines (und ausschliesslich diese Felder) den zuletzt eingegebene Wert. Die Auswahlmöglichkeit <em>Reuse the last entered attribute values*</em> von QGIS hat hier keine Auswirkung.</p>
+<p>Bei Verwendung des Assistenten während der Erstellung von Haltungen verwenden die Vorgabefelder im Reiter Allgemein (und ausschliesslich diese Felder) den zuletzt eingegebene Wert. Die Auswahlmöglichkeit <em>Letzte Attributeingaben wiederverwenden*</em> von QGIS hat hier keine Auswirkung.</p>
 </div>
 <ul class="simple">
-<li><p>Sie können Ihr Punktobjekt bearbeiten indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Kursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p></li>
+<li><p>Sie können einen Datensatz bearbeiten, indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Cursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p></li>
 <li><p>Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p></li>
 </ul>
 <div class="figure align-default">
@@ -243,12 +242,12 @@ Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <stro
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.5.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Wenn ein Linienobjekt digitalisiert wird, finden eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:</p>
+<p>Wenn eine Haltung digitalisiert wird, finden im Hintergrund eine Reihe von Schritten in der QGEP Datenbank statt:</p>
 <ul class="simple">
-<li><p>Ein neues Objekt wird in der Abwasserbauwerk Klasse hinzugefügt („od_wastewater_structure“)</p></li>
-<li><p>Ein neues Objekt wird hinzugefügt und verknüpft in der <strong>Kanal</strong> Unterklasse (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
-<li><p>ein neues Haltungsobjekt wird in der <strong>Abwassernetzelement</strong> Tabelle (<code class="docutils literal notranslate"><span class="pre">od_wastewater_networkelement</span></code>) und dessen Unterklasse <strong>Haltung</strong> (<code class="docutils literal notranslate"><span class="pre">od_reach</span></code>) generiert.</p></li>
-<li><p>zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p></li>
+<li><p>Ein neues Objekt wird in der Klasse <strong>Abwasserbauwerk</strong>  („od_wastewater_structure“) hinzugefügt</p></li>
+<li><p>Ein neues Objekt wird hinzugefügt und verknüpft in der Unterklasse <strong>Kanal</strong> (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
+<li><p>Ein neues Haltungsobjekt wird in der Tabelle  <strong>Abwassernetzelement</strong> (<code class="docutils literal notranslate"><span class="pre">od_wastewater_networkelement</span></code>) und dessen Unterklasse <strong>Haltung</strong> (<code class="docutils literal notranslate"><span class="pre">od_reach</span></code>) generiert.</p></li>
+<li><p>Zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (<strong>rp_from_node</strong>, <strong>rp_to_node</strong>)</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/reach_form_reach_points3.jpg" src="../../_images/reach_form_reach_points3.jpg" />
@@ -256,17 +255,17 @@ Wählen Sie die <strong>Wizard</strong> Schaltfläche aus und drücken Sie <stro
 </div>
 <div class="section" id="geometry-synchronization">
 <h2><span class="section-number">2.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Start- und Endpunkt der Geometrie des Features bestimmen die Geometrie der Reachpoints. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes des hinzugefügten Features wird über die Level-Werte <cite>rp_from_level</cite> und <cite>rp_to_level</cite> definiert. Das heisst, der Z Wert der Geometrie des Reachpoints wird ebenso über den Level-Wert gesetzt. Diese Werte können über das „gefangene“ Feature gesetzt werden:</p>
+<p>Start- und Endpunkt der Linien-Geometrie bestimmen die Geometrie der Haltungspunkte. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes der hinzugefügten Linie wird über die Koten <cite>HP_von_Kote</cite> und <cite>HP_nach_Kote</cite> definiert. Das heisst, der Z Wert der Geometrie des Haltungspunktes wird ebenso über den Kote-Wert gesetzt. Diese Werte können über das „geschnappte“ Objekt gesetzt werden:</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
-<p>Die gefangenen Merkmale 9405 und 9390 beziehen ihre Höhe von den Höhen der Abwasserknoten. Diese Werte werden in die Attribute rp_from_level` und <cite>rp_to_level</cite> eingefügt und können von Benutzer verändert werden. Bei Änderung durch den Benutzer, wird der Z-Wert der digitalisierten Geometrie des Merkmals sowie des korrespondierenden Haltungspunktes gesetzt.</p>
+<p>Die geschnappten Punkte (Abwasserknoten) 9405 und 9390 beziehen ihre Höhe von den Höhen der Abwasserknoten. Diese Werte werden in die Attribute <cite>HP_von_Kote</cite> und <cite>HP_nach_Kote</cite> eingefügt und können dort von Benutzer verändert werden. Bei Änderung durch den Benutzer, wird der Z-Wert der digitalisierten Linien-Geometrie sowie des korrespondierenden Haltungspunktes gesetzt.</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Wenn das Level eines Reachpoints ändert, ändert sich auch der Z Wert seiner Geometrie und somit auch die Geometrie des Start- und Endpunktes der Reach. Wenn der Z Wert der Geometrie der Reach ändert, ändert auch die Geometrie und das Level der Reachpoints. Wenn beide Werte gleichzeitig ändern, hat das Level Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Reach gemäss der Level der Reachpoints gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Reach auf NaN gesetzt.</p>
+<p>Wenn die Kote eines Haltungpunktes ändert, ändert sich auch der Z Wert seiner Punkt-Geometrie und somit auch die Geometrie des Start- bzw. Endpunktes der Haltungslinie. Wenn der Z Wert der Geometrie der Haltung ändert, ändert auch die Geometrie und die Kote der Haltungspunkte. Wenn beide Werte gleichzeitig ändern, hat das Feld Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Haltung gemäss der Koten der Haltungspunkte gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Haltung auf NaN gesetzt.</p>
 </div>
 </div>
 </div>
