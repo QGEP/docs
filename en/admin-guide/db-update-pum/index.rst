@@ -76,6 +76,7 @@ Download and install current database release
 ``git clone https://github.com/QGEP/datamodel.git``
 
 * Switch to current release
+
 ``git checkout tags/<release_number>``
 
 * Create current database. It is used for comparison (target).
