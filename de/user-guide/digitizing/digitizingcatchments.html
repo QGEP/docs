@@ -174,13 +174,13 @@
 <div class="section" id="digitizing">
 <h2><span class="section-number">2.2.7.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p>Wähle den <strong>Enable Snapping</strong> Knopf</p></li>
+<li><p>Wähle den <strong>Einrasten einschalten</strong> Knopf</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/enable_snapping_button.jpg" src="../../_images/enable_snapping_button.jpg" />
 </div>
 <ul class="simple">
-<li><p>Öffne die <strong>Projekt Objektfang Einstellungen</strong>, schalte den Layer <strong>od_catchment_area</strong> und schalte die <strong>Schnittpunkte vermeiden</strong> Checkbox für den Layer od_catchment_area ein</p></li>
+<li><p>Öffne die <strong>Projekt Objektfang Einstellungen</strong>, schalte den Layer <strong>Einzugsgebiet</strong> und schalte die <strong>Schnittpunkte vermeiden</strong> Checkbox für den Layer Einzugsgebiet ein</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/catchment_avoid_intersection2.jpg" src="../../_images/catchment_avoid_intersection2.jpg" />
@@ -190,14 +190,14 @@
 <p>Neu erfasst Einzugsgebiete überlappen nicht mit bestehenden Einzugsgebieten dank diesen Einstellungen.</p>
 </div>
 <ul class="simple">
-<li><p>Setzen Sie den Layer <code class="docutils literal notranslate"><span class="pre">od_catchment_area</span></code> in den Bearbeitungsmodus</p></li>
+<li><p>Setzen Sie den Layer <code class="docutils literal notranslate"><span class="pre">Einzugsgebiet</span></code> in den Bearbeitungsmodus</p></li>
 <li><p>Benützen Sie das <strong>Objekt hinzufügen</strong> Werkzeug, um eine neue Fläche zu digitalisieren.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/add_feature_tool.jpg" src="../../_images/add_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p>Start das Digitalisieren mit einem Links-Klick und fahre mit Links-Klick für jeden Stützpunkt des Polygons fort</p></li>
+<li><p>Starte das Digitalisieren mit einem Links-Klick und fahre mit Links-Klick für jeden Stützpunkt des Polygons fort</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/catchment_area_digitizing1.jpg" src="../../_images/catchment_area_digitizing1.jpg" />
@@ -207,10 +207,10 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Bedenke, dass der Endpunkt des Polygon der letzte Punkt ist, wo ein Links-Klick verwendet wurde</p>
+<p>Beachte, dass der Endpunkt des Polygon der letzte Punkt ist, wo ein Links-Klick verwendet wurde.</p>
 </div>
 <ul class="simple">
-<li><p>Das <strong>od_catchment_area Objektattribute</strong> Fenster erscheint</p></li>
+<li><p>Das <strong>Einzugsgebiet Objektattribute</strong> Fenster erscheint</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/catchment_area_digitizing2.jpg" src="../../_images/catchment_area_digitizing2.jpg" />
@@ -237,7 +237,7 @@
 <div class="section" id="editing">
 <h2><span class="section-number">2.2.7.3. </span>Bearbeitung<a class="headerlink" href="#editing" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><p>Sie können bestehende Bereiche mit dem <strong>Identify features</strong> Werkzeug bearbeiten.</p></li>
+<li><p>Sie können bestehende Bereiche mit dem <strong>Objekte abfragen</strong> Werkzeug bearbeiten.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/identify_feature_tool.jpg" src="../../_images/identify_feature_tool.jpg" />
@@ -266,7 +266,7 @@
 <img alt="../../_images/merge_selected_feature_tool.jpg" src="../../_images/merge_selected_feature_tool.jpg" />
 </div>
 <ul class="simple">
-<li><p>Wählen Sie <strong>od_catchment_area</strong> und wechseln Sie zum Bearbeitungsmodus</p></li>
+<li><p>Wählen Sie den Layer <strong>Einzugsgebiet</strong> und wechseln Sie zum Bearbeitungsmodus</p></li>
 <li><p>Mindestens zwei Einzugsgebiet auswählen, die zusammengeführt werden sollen</p></li>
 <li><p>Klicke das <strong>Gewählte Objekte verschmelzen</strong> Tool. -&gt;  Das <strong>Objektattribute verschmelzen</strong> Fenster erscheint.</p></li>
 </ul>
@@ -289,7 +289,7 @@
 </div>
 <ul class="simple">
 <li><p>Es spielt keine Rolle, welcher Layer ausgewählt ist</p></li>
-<li><p>Der Layer <strong>catchment_area</strong> muss im Bearbeitungsmodus sein</p></li>
+<li><p>Der Layer <strong>Einzugsgebiet</strong> muss im Bearbeitungsmodus sein</p></li>
 <li><p>Klicke den <strong>Verbinde Abwassernetzwerkelement</strong> Knopf</p></li>
 <li><p>Wenn der Mausezeiger über eine Einzugsgebiets-Grenze fährt,  dann wird das Einzugsgebiet markiert: jetzt kann man klicken</p></li>
 <li><p>Den Mausezeiger zu einem Abwassernetzelement führen, mit dem das Einzugsgebiet verknüpft werden soll (wieder werden wählbare Objekte markiert) und dort wieder klicken</p></li>
@@ -315,10 +315,10 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Das Tool pürft nicht, ob der gewählte Abwasserknoten im PAA-Netz (primäre Abwasseranlage) ist. Es ist Aufgabe des Benutzers, den richtigen Abwasserknoten zu wählen. Hinweise dazu finden sie in <strong>VSA Wegleitung GEP-Daten</strong>,Teil <strong>Erfassungsgrundsätze</strong></p>
+<p>Das Tool prüft nicht, ob der gewählte Abwasserknoten im PAA-Netz (primäre Abwasseranlage) ist. Es ist Aufgabe des Benutzers, den richtigen Abwasserknoten zu wählen. Hinweise dazu finden sie in <strong>VSA Wegleitung GEP-Daten</strong>, Teil <strong>Erfassungsgrundsätze</strong></p>
 </div>
 <p>Mit dem Tool können nicht mehrere Einzugsgebiete auf einmal mit einem Abwasserknoten verknüpft werden. Wenn das gewünscht ist, müssen die Einzugsgebiet ausgewählt werden, dann die Attributtabelle öffnen und den Mehrfach-Editier-Modus starten. Der gewünschte Abwasserknoten kann dann aus der Liste der vorhandenen Abwasserknoten gewählt werden</p>
-<p>Um eine Verknüpfung mit einem Abwasserknoten zu löschen, kann das Einzugsgebiet mit dem <strong>Identify features</strong> Werkzeug bearbeiten werden.</p>
+<p>Um eine Verknüpfung mit einem Abwasserknoten zu löschen, kann das Einzugsgebiet mit dem <strong>Objekte abfragen</strong> Werkzeug bearbeiten werden.</p>
 </div>
 </div>
 
