@@ -404,7 +404,7 @@
 <p>Diese Fälle sind vorwiegend in PAA-Kanälen (primäre Abwasseranlagen) z.B. bei Gefällswechsel oder Materialwechsel oder bei einem Blindanschluss.</p>
 </div>
 <p>Im VSA-Datenmodell kann ein Abwasserknoten auch mit einem Kanal verknüpft werden (weil ein Kanal auch ein Abwasserbauwerk ist). Im Moment wird diskutiert, ob ein Abwasserknoten zwischen Haltungen zwingend oder optional oder nie mit einem Abwasserbauwerk verbunden werden soll.</p>
-<p>In GQPE existiert im Moment kein Werkzeug, um einen Abwasserknoten mit einem Kanal zu verknüpfen.  Es werden also vorläufig nur die Haltungspunkte mit dem Abwasserknoten verknüpft.</p>
+<p>In QGEP existiert im Moment kein Werkzeug, um einen Abwasserknoten mit einem Kanal zu verknüpfen.  Es werden also vorläufig nur die Haltungspunkte mit dem Abwasserknoten verknüpft.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden.</p>
@@ -412,7 +412,7 @@
 </div>
 <div class="section" id="multiedit">
 <h2><span class="section-number">2.3.1.11. </span>Mehrfachänderung<a class="headerlink" href="#multiedit" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Wenn sie Attribute von mehreren Datensätzen der gleichen Klasse bearbeiten wollen, können sie das <a class="reference external" href="https://docs.qgis.org/3.4/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool von QGIS  benutzen</a>.</p>
+<p>Wenn sie Attribute von mehreren Datensätzen der gleichen Klasse bearbeiten wollen, können sie das <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool von QGIS  benutzen</a>.</p>
 </div>
 <div class="section" id="saving-changes">
 <h2><span class="section-number">2.3.1.12. </span>Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
@@ -427,7 +427,7 @@
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
 <h2><span class="section-number">2.3.1.13. </span>Kanäle in verschiedene Haltungen unterteilen<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Das ist eine ziemlich komplexe Funktion und zur Zeit nicht implementiert in QGEP. Es gibt ein QGIS-Werkzeug, um Objekte aufzuteilen, aber wenn dieses Wekzeug auf den Layer vw_qgep_reach angewendet wird, resultiert ein Datenbank-Fehler, weil die Obj_ID des aufgeteilten (= duplizierten) Kanales nicht mehr eindeutig sind.</p>
+<p>Das ist eine ziemlich komplexe Funktion und zur Zeit nicht implementiert in QGEP. Es gibt ein QGIS-Werkzeug, um Objekte aufzuteilen, aber wenn dieses Werkzeug auf den Layer vw_qgep_reach angewendet wird, resultiert ein Datenbank-Fehler, weil die Obj_ID des aufgeteilten (= duplizierten) Kanales nicht mehr eindeutig sind.</p>
 <p>Temporäre Lösung: Die bestehende Haltung ändern und eine zweite Haltung manuell erstellen. Dann auch die Verknüpfungen kontrollieren.</p>
 <p>In QGEP ist ein Werkzeug geplant, mit dem Haltung aufgeteilt werden können. Der Benutzer kann wählen ob nur die Haltung aufgeteilt werden soll oder auch die Kanäle, ob ein neuer Abwasserknoten zwischen den Haltung eingefügt und verbunden werden soll. Mit dem Werkzeug sollen die neuen Haltungspunktkoten berechnet werden können die bestehenden Abwassernetzelement-Verknüpfungen sind anzupassen falls notwendig.</p>
 <p>Link zur Homepage der Schweizer Abwasser Vereinigung - Datamodel VSA-DSS: &lt;<a class="reference external" href="http://dss.vsa.ch">http://dss.vsa.ch</a>&gt;`_</p>
