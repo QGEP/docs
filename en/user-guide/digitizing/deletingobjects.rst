@@ -80,5 +80,5 @@ Delete detailed geometries
 * Click on the parts you want to delete
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.
 
-.. note:: **Remove part** is misleading. If there are more than parts (e.g. Drainage channels), you can delete also with this tool just the whole detailed geometrie! Do not conform changes, if the result is not what you expect.
+.. note:: **Remove part** is misleading. If there are more than one geometrie parts (e.g. Drainage channels), you can delete also with this tool just the whole detailed geometrie! Do not confirm changes, if the result is not what you expect.
 
