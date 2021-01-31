@@ -29,7 +29,7 @@ Delete Reaches
 
 .. figure:: images/delete_reach_confirm.jpg
 
-.. note:: Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.
+.. note:: Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.
 
 Delete Manholes and other Wastewater Structures
 ------------------------------------------------
@@ -45,7 +45,7 @@ Delete Covers
 -------------
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
-* Select the object (**manholes**, **special structures** etc.) from which you want the cover deleted
+* Select the object (**manholes**, **special structures** etc.) from which you want to delete the cover
 * Use the **Identify Features** tool to open the form
 * Switch to the covers tab 
 * Select the cover(s) you want to delete
@@ -73,9 +73,12 @@ Delete Structure parts
 Delete detailed geometries
 ----------------------
 
-.. attention:: Deleting features directly from **wastewater_structure** will remove the complete wastewater structure from the database and not only the geometry of the wastewater structure!
+.. attention:: Deleting features directly from **wastewater_structure** will remove the complete wastewater structure from the database and not only the geometry of the wastewater structure! Do not use the red Trash-Button to delete only detailed geometries.
 
 * Select **wastewater_structure** and change to edit mode
 * Activate the **Remove part** tool from the Advanced digitizing toolbar
 * Click on the parts you want to delete
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.
+
+.. note:: **Remove part** is misleading. If there are more than parts (e.g. Drainage channels), you can delete also with this tool just the whole detailed geometrie! Do not conform changes, if the result is not what you expect.
+
