@@ -51,7 +51,7 @@ Save the information of this layer by stopping the data entry wizard
 .. figure:: images/stop_data_entry.jpg
 
 You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
-If you do not select the edit mode, you can just look the existing data.
+If you do not select the edit mode, you can just look at the existing data.
 
 .. figure:: images/wastewater_structure_info_manhole3.jpg
 
