@@ -210,7 +210,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Siehe <span class="xref std std-ref">reach_geometrysync</span> für automatische Haltungspunkthöhen bei Schnappen auf Abwasserknoten mit Koten.</p>
+<p>Siehe <a class="reference internal" href="#reach-geometrysync"><span class="std std-ref">Geometrieabgleichung</span></a> für automatische Haltungspunkthöhen bei Schnappen auf Abwasserknoten mit Koten.</p>
 </div>
 <ul class="simple">
 <li><p>Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der <strong>od_pipe_profile</strong> Tabelle bearbeiten.</p></li>
@@ -231,7 +231,7 @@
 </div>
 <ul class="simple">
 <li><p>Sie können einen Datensatz bearbeiten, indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Cursor auf das Objekt klicken, welches Sie bearbeiten möchten.</p></li>
-<li><p>Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p></li>
+<li><p>If you do not select the edit mode, you can just look at the existing data.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/reach_info_reach3.jpg" src="../../_images/reach_info_reach3.jpg" />
@@ -242,7 +242,7 @@
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.5.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Wenn eine Haltung digitalisiert wird, finden im Hintergrund eine Reihe von Schritten in der QGEP Datenbank statt:</p>
+<p>When a line object is digitized, a series of steps take place in the background in the QGEP database:</p>
 <ul class="simple">
 <li><p>Ein neues Objekt wird in der Klasse <strong>Abwasserbauwerk</strong>  („od_wastewater_structure“) hinzugefügt</p></li>
 <li><p>Ein neues Objekt wird hinzugefügt und verknüpft in der Unterklasse <strong>Kanal</strong> (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
@@ -254,12 +254,12 @@
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2><span class="section-number">2.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
+<span id="reach-geometrysync"></span><h2><span class="section-number">2.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Start- und Endpunkt der Linien-Geometrie bestimmen die Geometrie der Haltungspunkte. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes der hinzugefügten Linie wird über die Koten <cite>HP_von_Kote</cite> und <cite>HP_nach_Kote</cite> definiert. Das heisst, der Z Wert der Geometrie des Haltungspunktes wird ebenso über den Kote-Wert gesetzt. Diese Werte können über das „geschnappte“ Objekt gesetzt werden:</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
-<p>Die geschnappten Punkte (Abwasserknoten) 9405 und 9390 beziehen ihre Höhe von den Höhen der Abwasserknoten. Diese Werte werden in die Attribute <cite>HP_von_Kote</cite> und <cite>HP_nach_Kote</cite> eingefügt und können dort von Benutzer verändert werden. Bei Änderung durch den Benutzer, wird der Z-Wert der digitalisierten Linien-Geometrie sowie des korrespondierenden Haltungspunktes gesetzt.</p>
+<p>The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>

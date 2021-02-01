@@ -59,7 +59,7 @@ Digitizing
 .. note:: The standard-fields on the **General** tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The **Reuse the last entered attribute values** - option of QGIS has no influence. 
 
 * You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.
-* If you do not select the edit mode, you can just look add the existing data.
+* If you do not select the edit mode, you can just look at the existing data.
 
 .. figure:: images/reach_info_reach3.jpg
 
@@ -69,7 +69,7 @@ Digitizing
 Further attributes and classes
 ------------------------------
 
-When a line object is digitized a series of steps take place in the background in the QGEP database:
+When a line object is digitized, a series of steps take place in the background in the QGEP database:
 
 * a new object is added in the **wastewater structure** class (``od_wastewater_structure``)
 * a new object is added and linked in the **channel** subclass (``od_channel``)
@@ -80,7 +80,7 @@ When a line object is digitized a series of steps take place in the background i
 .. figure:: images/reach_form_reach_points3.jpg
 
 
-.. reach_geometrysync:
+.. _reach_geometrysync:
 
 Geometry synchronization
 ------------------------
@@ -89,7 +89,7 @@ The start- and the end-point of the added feature's geometry defines the reach p
 
 .. figure:: images/reach_geometry_snapping_01.jpg
 
-The snapped features 9405 and 9390 have the altitude from the wastewater node levels. These values are entered into the attributes `rp_from_level` and `rp_to_level` and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well. 
+The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes `rp_from_level` and `rp_to_level` and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well. 
 
 .. figure:: images/reach_geometry_snapping_02.jpg
 

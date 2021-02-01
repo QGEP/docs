@@ -13,7 +13,7 @@ There are basically two ways:
 
 Data entry in QGEP needs some understanding of the underlaying data model `VSA-DSS <http://dss.vsa.ch>`_, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.
 
-
+.. _wizard:
 The QGEP wizard
 ---------------
 

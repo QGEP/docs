@@ -215,7 +215,7 @@ Thus, for digitizing a simple line with 2 points you need two <strong>left click
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>See <span class="xref std std-ref">reach_geometrysync</span> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
+<p>See <a class="reference internal" href="#reach-geometrysync"><span class="std std-ref">Geometry synchronization</span></a> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
 </div>
 <ul class="simple">
 <li><p>For the profile type you will get a list of defined profiles.
@@ -237,7 +237,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</p></li>
 </div>
 <ul class="simple">
 <li><p>You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.</p></li>
-<li><p>If you do not select the edit mode, you can just look add the existing data.</p></li>
+<li><p>If you do not select the edit mode, you can just look at the existing data.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/reach_info_reach3.jpg" src="../../_images/reach_info_reach3.jpg" />
@@ -248,7 +248,7 @@ You can edit those in <strong>od_pipe_profile</strong> table.</p></li>
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.5.3. </span>Further attributes and classes<a class="headerlink" href="#further-attributes-and-classes" title="Permalink to this headline">¶</a></h2>
-<p>When a line object is digitized a series of steps take place in the background in the QGEP database:</p>
+<p>When a line object is digitized, a series of steps take place in the background in the QGEP database:</p>
 <ul class="simple">
 <li><p>a new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal notranslate"><span class="pre">od_wastewater_structure</span></code>)</p></li>
 <li><p>a new object is added and linked in the <strong>channel</strong> subclass (<code class="docutils literal notranslate"><span class="pre">od_channel</span></code>)</p></li>
@@ -261,12 +261,12 @@ and its subclass <strong>reach</strong> (<code class="docutils literal notransla
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2><span class="section-number">2.2.5.4. </span>Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Permalink to this headline">¶</a></h2>
+<span id="reach-geometrysync"></span><h2><span class="section-number">2.2.5.4. </span>Geometry synchronization<a class="headerlink" href="#geometry-synchronization" title="Permalink to this headline">¶</a></h2>
 <p>The start- and the end-point of the added feature’s geometry defines the reach point’s geometries. The altitude (Z value of geometry) of the added feature’s start- and the end-point is defined by the level values <cite>rp_from_level</cite> and <cite>rp_to_level</cite>. This means, the Z values of the reach point’s geometry is set by the level as well. These values could be filled up by the snapped features:</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
-<p>The snapped features 9405 and 9390 have the altitude from the wastewater node levels. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
+<p>The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>

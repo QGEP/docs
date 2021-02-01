@@ -10,9 +10,9 @@ General
 * You have to add the data you want to import as (vector) layer into the QGEP project.
 * The field names of the attributes have to be the same as the field names of the QGEP Layer. 
   Therefore it is normaly not a good idea the use shp-files, because of the 10 letters limitation of the dbf-format (Alias field names do not work).
-* If you have a translated project, be sure the take the English field names (not the translated name that you find as Alias of the field).
+* If you have a translated project, be sure to take the English field names (not the translated name that you find as Alias of the field).
 * If there is a field with valuelist, you have to use the code, not the plain text.
-* If your fields are prepared, then just copy and paste in the QGEP-layer.
+* If your fields are prepared as described above, then just copy and paste in the QGEP-layer.
 
 Example Importing manholes from a TXT-File:
 -------------------------------------------

@@ -212,7 +212,7 @@ Ainsi, pour numériser une conduite simple comportant 2 points, il faudra deux c
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>See <span class="xref std std-ref">reach_geometrysync</span> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
+<p>See <a class="reference internal" href="#reach-geometrysync"><span class="std std-ref">Synchronisation de la géométrie</span></a> for automatic reachpoint levels when snapping to wastewater nodes with level.</p>
 </div>
 <ul class="simple">
 <li><p>Pour le type de profil, vous allez obtenir une liste de profils prédéfinis. Vous pouvez les éditer dans la table <strong>od_profil_tuyau</strong>.</p></li>
@@ -233,7 +233,7 @@ Ainsi, pour numériser une conduite simple comportant 2 points, il faudra deux c
 </div>
 <ul class="simple">
 <li><p>Vous pouvez éditer à nouveau un objet en sélectionnant les boutons <strong>Basculer en mode édition</strong> et <strong>Identifier les entités</strong> avant de sélectionner l’objet désiré avec le curseur.</p></li>
-<li><p>Si le mode <strong>édition</strong> n’est pas activé, vous pourrez seulement consulter les informations relatives à l’objet.</p></li>
+<li><p>If you do not select the edit mode, you can just look at the existing data.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/reach_info_reach3.jpg" src="../../_images/reach_info_reach3.jpg" />
@@ -244,7 +244,7 @@ Ainsi, pour numériser une conduite simple comportant 2 points, il faudra deux c
 </div>
 <div class="section" id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.5.3. </span>Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Lorsqu’un objet linéaire est numérisé, une série d’opérations se déroulent en arrière-plan dans la base de données QGEP:</p>
+<p>When a line object is digitized, a series of steps take place in the background in the QGEP database:</p>
 <ul class="simple">
 <li><p>a new object is added in the <strong>wastewater structure</strong> class (<code class="docutils literal notranslate"><span class="pre">od_wastewater_structure</span></code>)</p></li>
 <li><p>Un nouvel objet est ajouté et lié dans la sous-classe <strong>tronçon</strong> (<code class="docutils literal notranslate"><span class="pre">od_troncon</span></code>)</p></li>
@@ -256,12 +256,12 @@ Ainsi, pour numériser une conduite simple comportant 2 points, il faudra deux c
 </div>
 </div>
 <div class="section" id="geometry-synchronization">
-<h2><span class="section-number">2.2.5.4. </span>Synchronisation de la géométrie<a class="headerlink" href="#geometry-synchronization" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="reach-geometrysync"></span><h2><span class="section-number">2.2.5.4. </span>Synchronisation de la géométrie<a class="headerlink" href="#geometry-synchronization" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les points de départ et d’arrivée de la géométrie de la nouvelle entité définissent les géométries des points de tronçon. Les altitudes (valeur Z de la géométrie) des points de départ et d’arrivée de la nouvelle entité sont définies par les valeurs de cote “rp_from_level” et “rp_to_level”. Cela signifie que les valeurs Z des géométries du nouvel objet point de tronçon sont définies par ces cotes également. Ces valeurs peuvent être complétées par les entités auxquels on s’accroche:</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
 </div>
-<p>The snapped features 9405 and 9390 have the altitude from the wastewater node levels. These values are entered into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
+<p>The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes <cite>rp_from_level</cite> and <cite>rp_to_level</cite> and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.</p>
 <div class="figure align-default">
 <img alt="../../_images/reach_geometry_snapping_02.jpg" src="../../_images/reach_geometry_snapping_02.jpg" />
 </div>
