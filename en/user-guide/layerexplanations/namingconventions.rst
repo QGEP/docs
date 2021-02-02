@@ -34,7 +34,7 @@ Attibut names
 
 * Prefixes in attribut names
 In a view, you find fields from different tables. In easier cases, there is only a subclass and a superclass is included. In the qgep-mainlayers there are serveral sub- und superclasses.
-With the prefix of the attribut name, you know, to which table an attribut belongs. The prefix are two letters that belong to a table of the VSA-DSS-datamodel. Example: co = cover, ws = wastewater structure.
+With the prefix of the attribute name, you know, to which table an attribute belongs. The prefix are two letters that belong to a table of the VSA-DSS datamodel. Example: co = cover, ws = wastewater structure.
 The convention is: attributs if the main table have no prefix, all other attributes have a prefix that points to the table they are from. In case of sub- and superclass, the two tables are taken together.
 Example in layer vw_qgep_reach: identifier is the attribut of the table wastewater_networkelement (the superclass of maintable reach) and has therefore now prefix. Material is in table reach, has no prefix because its the maintable.
 ch_usage_current is an attribut of the table channel. ws_remark is the attribut remark of the table wastewater_structure.
@@ -45,5 +45,4 @@ fk_ is not a shortcut for a special table. It stands for foreign key.
 * _ fields
 Attributes that starts with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _skope_per_mill in vw_qgep_reach. 
 _channel_useage_current in vw_qgwp_wastewater_structure is calculated form the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.
-
 
