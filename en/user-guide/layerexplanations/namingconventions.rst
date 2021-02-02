@@ -7,7 +7,7 @@ The QGEP-Database has six qgep-schemas:
 
 * qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel etc.) Here are the tables you normally work.
 
-* qgep_vl: is the schema for valuelists. There is a table for every valuelist of the VSA-DSS. As a QGEP-User you can not edit this tables.
+* qgep_vl: is the schema for value lists. There is a table for every valuelist of the VSA-DSS. As a QGEP-User you can not edit this tables.
 
 * qgep_network: schema for the tables that are nesseccary to use the network-topology with the qgep-tools. You can rebuild this tables from the QGEP-tools.
 
@@ -20,24 +20,24 @@ Layer names
 -----------
 
 * Layer names have often a prefix like od_ or vl_.
-This showes you, in which schema to look for the table. od_organisation is the the table organisation in the qgep_od-schema.
+This shows you, in which schema to look for the table. od_organisation is the table organisation in the qgep_od-schema.
 
 * Layer Names that begin with vw_
-Two or more VSA-DSS-Tables are joined in a view (vw). The layer has the name of the main-table. Example: vw_qgep_reach: the main layer is the table reach (not the table channel).
+Two or more VSA-DSS tables are joined in a view (vw). The layer has the name of the main-table. Example: vw_qgep_reach: the main layer is the table reach (not the table channel).
 It is important to know the main-table to be sure, that you use the correct attributes. 
 
 * Layer vw_network_
 This are views in the schema qgep_network
 
-Attibut names
+Attibute names
 -------------
 
-* Prefixes in attribut names
+* Prefixes in attribute names
 In a view, you find fields from different tables. In easier cases, there is only a subclass and a superclass is included. In the qgep-mainlayers there are serveral sub- und superclasses.
-With the prefix of the attribute name, you know, to which table an attribute belongs. The prefix are two letters that belong to a table of the VSA-DSS datamodel. Example: co = cover, ws = wastewater structure.
-The convention is: attributs if the main table have no prefix, all other attributes have a prefix that points to the table they are from. In case of sub- and superclass, the two tables are taken together.
-Example in layer vw_qgep_reach: identifier is the attribut of the table wastewater_networkelement (the superclass of maintable reach) and has therefore now prefix. Material is in table reach, has no prefix because its the maintable.
-ch_usage_current is an attribut of the table channel. ws_remark is the attribut remark of the table wastewater_structure.
+With the prefix of the attribute name, you know to which table an attribute belongs. The prefix are two letters that belong to a table of the VSA-DSS datamodel. Example: co = cover, ws = wastewater structure.
+The convention is: attributes of the main table have no prefix, all other attributes have a prefix that points to the table they are from. In case of sub- and superclass, the two tables are taken together.
+Example in layer vw_qgep_reach: identifier is the attribute of the table wastewater_networkelement (the superclass of maintable reach) and has therefore now prefix. Material is in table reach, has no prefix because its the maintable.
+ch_usage_current is an attribute of the table channel. ws_remark is the attribute remark of the table wastewater_structure.
 
 * fk_ fields
 fk_ is not a shortcut for a special table. It stands for foreign key.
