@@ -11,7 +11,7 @@ The QGEP-Database has six qgep-schemas:
 
 * qgep_network: schema for the tables that are nesseccary to use the network-topology with the qgep-tools. You can rebuild this tables from the QGEP-tools.
 
-* qgep_sys: special tables for administration of the database. As a QGEP-User you can not edit this tables.
+* qgep_sys: special tables for administration of the database. As a QGEP-User you can not edit these tables.
 
 * qgep_import and qgep_swmm: schema for additional plugins/functions (Qfield and working with SWMM)
 
@@ -45,4 +45,3 @@ fk_ is not a shortcut for a special table. It stands for foreign key.
 * _ fields
 Attributes that starts with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _skope_per_mill in vw_qgep_reach. 
 _channel_useage_current in vw_qgwp_wastewater_structure is calculated form the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.
-
