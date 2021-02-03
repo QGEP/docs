@@ -15,7 +15,6 @@ This is recommended for:
 .. attention:: Detailed geometry is usually not used for manholes or channels!
 
 
-
 Digitizing tool
 ---------------
 
