@@ -103,7 +103,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.10. Adding a wastewater node to an existing reach</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.11. Multiedit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.12. Saving changes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.13. Split a reach (channel) into different reaches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.13. Changing Wastewater Structure Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.14. Split a reach (channel) into different reaches</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
@@ -205,7 +206,7 @@
 <div><ul class="simple">
 <li><p>To change an attribute you first need to select the <strong>vw_qgep_wastewater_structure</strong> layer.</p></li>
 <li><p>Switch to the edit mode or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</p></li>
-<li><p>Then click on the <strong>Identify features</strong> button and choose the element you want to edit by double-clicking.</p></li>
+<li><p>Then click on the <strong>Identify features</strong> button and click on the element you want to edit.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
@@ -217,29 +218,17 @@
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
 </div>
 <ul class="simple">
-<li><p>On the first tab you can change the most common attributes</p></li>
+<li><p>On the first tab (General) you can change the most common attributes</p></li>
 <li><p>To change attributes of related tables (e.g. cover) you need to select the correspondent tab. Depending on the
 kind of wastewater structure you can edit additional attributes in the respective tab (<strong>special structure</strong>, <strong>manhole</strong>).</p></li>
-<li><p>The <strong>covers</strong> tab allows you to add additional covers.</p></li>
-</ul>
-<div class="admonition attention">
-<p class="admonition-title">Atenție</p>
-<p>It is not recommended to add a second cover in this form, because you can not define the geometry of the new cover. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
-</div>
-<ul class="simple">
 <li><p>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li><p>In <strong>Wastewater nodes</strong> tab you can edit or add all attributes of this class or add a second element.</p></li>
+<li><p>The <strong>covers</strong> and <strong>wastewater nodes</strong> tab allows you to look to all nodes or covers of a wastewater structure and to add further elements. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter below.</p></li>
 </ul>
-<p>To add a second wastewater node in this part is not recommended, because you can not define the geometry of the new point.</p>
-<div class="admonition attention">
-<p class="admonition-title">Atenție</p>
-<p>It is not recommended to add a second wastewater node in this form, because you can not define the geometry of the new node. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter above.</p>
-</div>
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
@@ -248,7 +237,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 <div><ul class="simple">
 <li><p>To change an attribute you first need to select the <strong>vw_qgep_reach</strong></p></li>
 <li><p>Switch to the edit mode.</p></li>
-<li><p>Then click on the <strong>Idendify features</strong> button and choose the element you want to edit by double-clicking a reach.</p></li>
+<li><p>Then click on the <strong>Idendify features</strong> button and click the reach you want to edit.</p></li>
 <li><p>The <strong>vw_qgep_reach</strong> form will open.</p></li>
 </ul>
 <blockquote>
@@ -257,7 +246,7 @@ kind of wastewater structure you can edit additional attributes in the respectiv
 </div>
 </div></blockquote>
 <ul class="simple">
-<li><p>On the first tab you can change the most common attributes.</p></li>
+<li><p>On the first tab (<strong>General</strong>) you can change the most common attributes.</p></li>
 <li><p>To change attributes of related tables (e.g. <strong>reach points</strong>) select the correspondent tab.</p></li>
 </ul>
 <blockquote>
@@ -314,12 +303,12 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <ul class="simple">
 <li><p>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - layer and the <strong>vw_wastewater_node</strong> - layer, then click on <strong>Run</strong></p></li>
 <li><p>If you zoom in or out, you see the changes.</p></li>
-<li><p>If the result is not, what you expect, try with a greater snapping distance</p></li>
+<li><p>If the result is not what you expect, try with a greater snapping distance</p></li>
 </ul>
 <p>If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.</p>
 <div class="admonition attention">
 <p class="admonition-title">Atenție</p>
-<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
+<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You habe to rerun the command.</p>
 </div>
 </div>
 <div class="section" id="working-with-codes-of-value-list">
@@ -376,6 +365,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <li><p>You can select then the object you want. This will get you to the correspondent form to see the details.</p></li>
 </ul>
 </div></blockquote>
+<p>– _Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure:</p>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
 <h2><span class="section-number">2.3.1.9. </span>Adding additional covers and nodes to an existing wastewater structure<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link permanent la acest titlu">¶</a></h2>
@@ -391,6 +381,13 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
+<li><p>With QGIS 3.16 there is a new way: select layer vw_qgep_wastewater_structure, set it editable, click the manhole you want to add a cover with the <strong>Identify feature</strong> tool. Go to tab <strong>covers</strong> and click the new child point-button. Now you can digitize a new cover for the wastewater structure.</p></li>
+</ul>
+<div class="figure align-default">
+<img alt="../../_images/new_cover_childpoint.jpg" src="../../_images/new_cover_childpoint.jpg" />
+</div>
+<ul class="simple">
+<li><p>The other way (before QGIS 3.16)</p></li>
 <li><p>Start editing vw_cover and add the new cover</p></li>
 <li><p>In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure</p></li>
 <li><p>After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.</p></li>
@@ -415,13 +412,16 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 <div class="section" id="multiedit">
 <h2><span class="section-number">2.3.1.11. </span>Multiedit<a class="headerlink" href="#multiedit" title="Link permanent la acest titlu">¶</a></h2>
-<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
+<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
 </div>
 <div class="section" id="saving-changes">
 <h2><span class="section-number">2.3.1.12. </span>Saving changes<a class="headerlink" href="#saving-changes" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
 <li><p>Click <strong>Save</strong> and then deactivate the edit mode or click on <strong>Stop data entry</strong> if you have worked with the <strong>QGEP Data Entry</strong> wizard.</p></li>
 </ul>
+</div>
+<div class="section" id="changing-wastewater-structure-type">
+<h2><span class="section-number">2.3.1.13. </span>Changing Wastewater Structure Type<a class="headerlink" href="#changing-wastewater-structure-type" title="Link permanent la acest titlu">¶</a></h2>
 <p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
 <div class="admonition note">
 <p class="admonition-title">Notă</p>
@@ -429,11 +429,10 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2><span class="section-number">2.3.1.13. </span>Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link permanent la acest titlu">¶</a></h2>
-<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= duplicated) records are no more unique.</p>
+<h2><span class="section-number">2.3.1.14. </span>Split a reach (channel) into different reaches<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link permanent la acest titlu">¶</a></h2>
+<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id of the split (= duplicated) records are no more unique.</p>
 <p>Temporary solution: Change the existing reach and draw the second reach manually. Control the connections.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if necessary.</p>
-<p><a class="reference external" href="http://dss.vsa.ch">Link to the Homepage of the Swiss Waste Water Association - Datamodel VSA-DSS:</a></p>
 </div>
 </div>
 

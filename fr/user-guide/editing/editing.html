@@ -103,7 +103,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-wastewater-node-to-an-existing-reach">2.3.1.10. Ajouter un noeud assainissement à un tronçon existant</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#multiedit">2.3.1.11. Edition multiple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#saving-changes">2.3.1.12. Sauver les modifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.13. Séparer un tronçon (conduite) en différents tronçons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changing-wastewater-structure-type">2.3.1.13. Changing Wastewater Structure Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#split-a-reach-channel-into-different-reaches">2.3.1.14. Séparer un tronçon (conduite) en différents tronçons</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">2.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds</a></li>
@@ -204,7 +205,7 @@
 <div><ul class="simple">
 <li><p>Pour changer un attribut, vous devez d’abord sélectionner la couche <strong>vw_qgep_wastewater_structure</strong>.</p></li>
 <li><p>Switch to the edit mode or start the <strong>QGEP Wizard</strong> and click on <strong>Start Data Entry</strong>.</p></li>
-<li><p>Ensuite utilisez l’outil <strong>Identifier une entité</strong> et double-cliquez sur l’élément que vous voulez modifier.</p></li>
+<li><p>Then click on the <strong>Identify features</strong> button and click on the element you want to edit.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
@@ -216,28 +217,16 @@
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok31.jpg" />
 </div>
 <ul class="simple">
-<li><p>Dans le premier onglet, vous pouvez changer les attributs les plus communs</p></li>
+<li><p>On the first tab (General) you can change the most common attributes</p></li>
 <li><p>Pour modifier les attributs de tables liées aux structures d’assainissement (p. ex. couvercle), vous devez sélectionnez l’onglet correspondant. Des attributs additionnels peuvent être édités selon le type de structures (<strong>structure spéciale</strong>, <strong>regard</strong>).</p></li>
-<li><p>L’onglet <strong>couvercles</strong> vous permet d’ajouter des couvercles additionnels.</p></li>
-</ul>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Il n’est pas recommandé d’ajouter un second couvercle dans ce formulaire car vous ne pourrez pas définir sa géométrie. Voir le chapitre ci-dessus <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span>.</p>
-</div>
-<ul class="simple">
 <li><p>In <strong>Structure parts</strong> tab you can add further parts such as <strong>access aids</strong>, <strong>backflow prevention</strong>, <strong>dryweather flume</strong> etc.</p></li>
 </ul>
 <div class="figure align-default">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
 </div>
 <ul class="simple">
-<li><p>Dans l’onglet <strong>noeuds assainissement</strong> vous pouvez éditer ou ajouter tous les attributs de cette classe ou ajouter un second élément.</p></li>
+<li><p>The <strong>covers</strong> and <strong>wastewater nodes</strong> tab allows you to look to all nodes or covers of a wastewater structure and to add further elements. See the <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> chapter below.</p></li>
 </ul>
-<p>Ajouter un second <strong>noeud assainissement</strong> à ce niveau n’est pas recommandé, car vous ne pourrez pas définir la géométrie de ce nouveau point.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Il n’est pas recommandé d’ajouter un second noeud assainissement dans ce formulaire, car vous ne pourrez pas définir sa géométrie. Voir le chapitre ci-dessus <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span>.</p>
-</div>
 </div></blockquote>
 </div>
 <div class="section" id="changing-attributes-of-linear-elements-channels">
@@ -246,7 +235,7 @@
 <div><ul class="simple">
 <li><p>Pour changer un attribut, il est nécessaire de sélectionner la couche <strong>vw_qgep_reach</strong></p></li>
 <li><p>Basculez en mode d’édition.</p></li>
-<li><p>Cliquer ensuite sur le bouton <strong>Idendify features</strong> et sélectionner l’élément à éditer en cliquant sur le tronçon.</p></li>
+<li><p>Then click on the <strong>Idendify features</strong> button and click the reach you want to edit.</p></li>
 <li><p>Le formulaire de la couche <strong>vw_qgep_troncon</strong> s’ouvre.</p></li>
 </ul>
 <blockquote>
@@ -255,7 +244,7 @@
 </div>
 </div></blockquote>
 <ul class="simple">
-<li><p>Dans le premier onglet vous pouvez changer les attributs les plus courants.</p></li>
+<li><p>On the first tab (<strong>General</strong>) you can change the most common attributes.</p></li>
 <li><p>Pour modifier les attributs des tables liées (p. ex. <strong>points de tronçon</strong>), sélectionnez l’onglet correspondant.</p></li>
 </ul>
 <blockquote>
@@ -312,12 +301,12 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <ul class="simple">
 <li><p>In the tool window you have to choose the <strong>vw_qgep_reach</strong> - layer and the <strong>vw_wastewater_node</strong> - layer, then click on <strong>Run</strong></p></li>
 <li><p>Si vous zoomez en avant ou en arrière, vous voyez les modifications.</p></li>
-<li><p>If the result is not, what you expect, try with a greater snapping distance</p></li>
+<li><p>If the result is not what you expect, try with a greater snapping distance</p></li>
 </ul>
 <p>If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, so there is no more graphical connection between reach 1 and reach 2.</p>
+<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You habe to rerun the command.</p>
 </div>
 </div>
 <div class="section" id="working-with-codes-of-value-list">
@@ -374,6 +363,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <li><p>Vous pouvez alors sélectionner l’objet désiré. Ceci ouvrira le formulaire correspondant contenant les informations détaillées.</p></li>
 </ul>
 </div></blockquote>
+<p>– _Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure:</p>
 </div>
 <div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
 <h2><span class="section-number">2.3.1.9. </span>Ajouter des couvercles et noeuds additionnels à une structure assainissement existante<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Lien permanent vers ce titre">¶</a></h2>
@@ -389,6 +379,13 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
 </div>
 <ul class="simple">
+<li><p>With QGIS 3.16 there is a new way: select layer vw_qgep_wastewater_structure, set it editable, click the manhole you want to add a cover with the <strong>Identify feature</strong> tool. Go to tab <strong>covers</strong> and click the new child point-button. Now you can digitize a new cover for the wastewater structure.</p></li>
+</ul>
+<div class="figure align-default">
+<img alt="../../_images/new_cover_childpoint.jpg" src="../../_images/new_cover_childpoint.jpg" />
+</div>
+<ul class="simple">
+<li><p>The other way (before QGIS 3.16)</p></li>
 <li><p>Commencez par éditer la couche <strong>vw_couvercle</strong> et ajoutez le nouveau couvercle</p></li>
 <li><p>Dans le formulaire, derrière le champ <strong>fk_structure_assainissement</strong>, vous trouverez un bouton pour connecter le nouveau couvercle à une structure assainissement existante.</p></li>
 <li><p>After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.</p></li>
@@ -413,13 +410,16 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 <div class="section" id="multiedit">
 <h2><span class="section-number">2.3.1.11. </span>Edition multiple<a class="headerlink" href="#multiedit" title="Lien permanent vers ce titre">¶</a></h2>
-<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
+<p>If you want to edit attributes for multiple objects of the same class you can use the <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool of QGIS</a>.</p>
 </div>
 <div class="section" id="saving-changes">
 <h2><span class="section-number">2.3.1.12. </span>Sauver les modifications<a class="headerlink" href="#saving-changes" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Cliquez sur <strong>Sauver</strong> et désactivez ensuite le mode d’édition ou cliquez sur <strong>Terminer l’entrée de données</strong> si vous avez travaillé avec l’assistant de saisie de données QGEP (<code class="docutils literal notranslate"><span class="pre">wizard</span></code>).</p></li>
 </ul>
+</div>
+<div class="section" id="changing-wastewater-structure-type">
+<h2><span class="section-number">2.3.1.13. </span>Changing Wastewater Structure Type<a class="headerlink" href="#changing-wastewater-structure-type" title="Lien permanent vers ce titre">¶</a></h2>
 <p>In the vw_qgep_wastewater_structure form, you can change the subclass of the wastewater structure (e.g. from manhole to special structure or to infiltration installation). The old subclass-record will be deleted and you must enter those attributes, that are subclass specific. But all connections (they are defined to the class wastewater_structure and not to the subclass) or the obj_id or the identifier will not change.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -427,11 +427,10 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 </div>
 </div>
 <div class="section" id="split-a-reach-channel-into-different-reaches">
-<h2><span class="section-number">2.3.1.13. </span>Séparer un tronçon (conduite) en différents tronçons<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
-<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id if the split (= duplicated) records are no more unique.</p>
+<h2><span class="section-number">2.3.1.14. </span>Séparer un tronçon (conduite) en différents tronçons<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Lien permanent vers ce titre">¶</a></h2>
+<p>This is a quite complex function and not jet implemented in QGEP. There exists a QGIS-Tool to split objects, but if you use this tool with vw_qgep_reach - layer, you will get a database error, because the obj_id of the split (= duplicated) records are no more unique.</p>
 <p>Solution temporaire: Changez le tronçon existant et dessinez le second tronçon manuellement. Contrôlez les connexions.</p>
 <p>There will be later a tool in QGEP to split reaches. The user has to decide, if splitting concerns only class reach or also the class channel, if there a new wastewater node shall be added and connected. The tool shall be able to calculate the new reachpoint - levels and should change the existing network-element-connections if necessary.</p>
-<p><a href="#id1"><span class="problematic" id="id2">`</span></a>Lien vers la page principale de l” Association suisse des professionnels de la protection des eaux - Modèle de données VSA-DSS: &lt;<a class="reference external" href="https://www.vsa.ch/fr/domaines-cc/assainissement/structure-des-donnees-de-levacuation-des-eaux-des-agglomerations/">https://www.vsa.ch/fr/domaines-cc/assainissement/structure-des-donnees-de-levacuation-des-eaux-des-agglomerations/</a>&gt;`_**</p>
 </div>
 </div>
 
