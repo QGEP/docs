@@ -52,9 +52,7 @@ Changing attributes of point elements (manholes / special structures)
  
  .. figure:: images/form_vw_qgep_wastewater_structure_structure_parts.jpg
  
- * The **covers** and **wastewater nodes** tab allows you to look to all nodes or covers of a wastewater structure.
- 
- .. attention:: It is not recommended to add a second cover or wastewater node in the tabs of this form, because you can not define the geometry of the new points. See the :ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure` chapter below.
+ * The **covers** and **wastewater nodes** tab allows you to look to all nodes or covers of a wastewater structure and to add further elements. See the :ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure` chapter below.
  
 
 Changing attributes of linear elements (channels)
@@ -168,6 +166,11 @@ Adding additional covers and nodes to an existing wastewater structure
 
 .. figure:: images/vw_cover_properties_fields.jpg
 
+* With QGIS 3.16 there is a new way: select layer vw_qgep_wastewater_structure, set it editable, click the manhole you want to add a cover with the **Identify feature** tool. Go to tab **covers** and click the new child point-button. Now you can digitize a new cover for the wastewater structure.
+
+.. figure:: images/new_cover_childpoint.jpg
+
+* The other way (before QGIS 3.16)
 * Start editing vw_cover and add the new cover
 * In the form you find behind the field fk_wastewater_structure a button to connect the new cover to an existing wastewater structure
 * After clicking this button, you get blue hint in the qgis-window. You can move the vw_cover - form-window and click on the wastewater_structure, that will be associated to the cover.
