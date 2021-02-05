@@ -27,7 +27,7 @@ Two or more VSA-DSS tables are joined in a view (vw). The layer has the name of 
 It is important to know the main-table to be sure, that you use the correct attributes. 
 
 * Layer vw_network_
-This are views in the schema qgep_network
+These are views in the schema qgep_network
 
 Attibute names
 -------------
