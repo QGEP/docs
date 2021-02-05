@@ -43,5 +43,5 @@ ch_usage_current is an attribute of the table channel. ws_remark is the attribut
 fk_ is not a shortcut for a special table. It stands for foreign key.
 
 * _ fields
-Attributes that starts with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _skope_per_mill in vw_qgep_reach. 
+Attributes that start with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _skope_per_mill in vw_qgep_reach. 
 _channel_useage_current in vw_qgwp_wastewater_structure is calculated form the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.
