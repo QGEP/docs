@@ -73,7 +73,7 @@ You use this layer only, if you want to change the situation of just one selecte
 Overflow tables
 ^^^^^^^^^^^^^^^^
 
-This tables are connencted to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for this tables. In database-schema qgep_od.
+These tables are connencted to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for these tables. In database-schema qgep_od.
 
 Topology
 --------
