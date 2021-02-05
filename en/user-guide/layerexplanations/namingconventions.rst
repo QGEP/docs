@@ -33,7 +33,7 @@ Attibute names
 -------------
 
 * Prefixes in attribute names
-In a view, you find fields from different tables. In easier cases, there is only a subclass and a superclass is included. In the qgep-mainlayers there are serveral sub- und superclasses.
+In a view, you find fields from different tables. In easier cases, there are only a subclass and a superclass included. In the qgep-mainlayers there are serveral sub- und superclasses.
 With the prefix of the attribute name, you know to which table an attribute belongs. The prefix are two letters that belong to a table of the VSA-DSS datamodel. Example: co = cover, ws = wastewater structure.
 The convention is: attributes of the main table have no prefix, all other attributes have a prefix that points to the table they are from. In case of sub- and superclass, the two tables are taken together.
 Example in layer vw_qgep_reach: identifier is the attribute of the table wastewater_networkelement (the superclass of maintable reach) and has therefore now prefix. Material is in table reach, has no prefix because its the maintable.
