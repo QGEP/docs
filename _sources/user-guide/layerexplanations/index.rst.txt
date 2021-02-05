@@ -8,5 +8,5 @@ An overview of QGEP including the layer explanation
 
    overview
    layerexplanation
-   addviewlayer
+   namingconventions
    
