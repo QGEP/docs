@@ -84,4 +84,4 @@ You can use the vw_network_segment layer to show the flow direction, if you use 
 Catchment
 ---------
 
-Main Layer to digitize and edit the catchment_areas.  In database-schema qgep_od.
+Main layer to digitize and edit the catchment_areas.  In database-schema qgep_od.
