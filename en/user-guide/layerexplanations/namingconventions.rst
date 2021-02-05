@@ -9,7 +9,7 @@ The QGEP-Database has six qgep-schemas:
 
 * qgep_vl: is the schema for value lists. There is a table for every value list of the VSA-DSS. As a QGEP-user you can not edit these tables.
 
-* qgep_network: schema for the tables that are nesseccary to use the network-topology with the qgep-tools. You can rebuild this tables from the QGEP-tools.
+* qgep_network: schema for the tables that are nesseccary to use the network-topology with the qgep-tools. You can rebuild these tables from the QGEP-tools.
 
 * qgep_sys: special tables for administration of the database. As a QGEP-User you can not edit these tables.
 
