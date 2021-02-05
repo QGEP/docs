@@ -79,7 +79,7 @@ Topology
 --------
 
 These two layers are used by the qgep-extension for the profile and the network-following. Do not change. In database-schema qgep_network.
-You can use the vw_network_segment Layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
+You can use the vw_network_segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
 
 Catchment
 ---------
