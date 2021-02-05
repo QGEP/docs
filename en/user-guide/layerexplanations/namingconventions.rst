@@ -5,7 +5,7 @@ Schemas in the QGEP-Database
 ---------------------------
 The QGEP-Database has six qgep-schemas:
 
-* qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel etc.) Here are the tables you normally work.
+* qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel etc.) These are the tables you normally work with.
 
 * qgep_vl: is the schema for value lists. There is a table for every value list of the VSA-DSS. As a QGEP-User you can not edit this tables.
 
