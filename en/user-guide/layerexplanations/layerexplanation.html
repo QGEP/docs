@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.1.2. Layer explanation &mdash; QGEP 0.8 documentation</title>
@@ -157,82 +158,82 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="layer-explanation">
+  <section id="layer-explanation">
 <span id="id1"></span><h1><span class="section-number">2.1.2. </span>Layer explanation<a class="headerlink" href="#layer-explanation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="main-layers">
+<section id="main-layers">
 <h2><span class="section-number">2.1.2.1. </span>Main layers<a class="headerlink" href="#main-layers" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="vw-qgep-wastewater-structure">
+<section id="vw-qgep-wastewater-structure">
 <h3><span class="section-number">2.1.2.1.1. </span>vw_qgep_wastewater_structure<a class="headerlink" href="#vw-qgep-wastewater-structure" title="Permalink to this headline">¶</a></h3>
 <p>Main layer for manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new wastewater structure, a new cover and a new wastewater node. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events). In database-schema qgep_od.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_wastewater_structure.jpg" src="../../_images/schema_vw_qgep_wastewater_structure.jpg" />
-</div>
+</figure>
 <p>Even if there are several covers or wastewater nodes, there is just one point for every wastewater structure in this layer. By default, the position of the wastewater node created first is used as the point coordinate.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Do not export this point coordinates as covers. Use the layer vw_cover for this.</p>
 </div>
-</div>
-<div class="section" id="vw-qgep-reach">
+</section>
+<section id="vw-qgep-reach">
 <h3><span class="section-number">2.1.2.1.2. </span>vw_qgep_reach<a class="headerlink" href="#vw-qgep-reach" title="Permalink to this headline">¶</a></h3>
 <p>Main layer for line-wastewater structures (channels). Creating a new record in this layer always creates a new reach and a new channel. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events). In database-schema qgep_od.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_reach.jpg" src="../../_images/schema_vw_qgep_reach.jpg" />
-</div>
-</div>
-</div>
-<div class="section" id="wastewater-structures">
+</figure>
+</section>
+</section>
+<section id="wastewater-structures">
 <h2><span class="section-number">2.1.2.2. </span>Wastewater Structures<a class="headerlink" href="#wastewater-structures" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="od-wastewater-structure">
+<section id="od-wastewater-structure">
 <h3><span class="section-number">2.1.2.2.1. </span>od_wastewater_structure<a class="headerlink" href="#od-wastewater-structure" title="Permalink to this headline">¶</a></h3>
 <p>This layer shows the detailed geometries of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure. In database-schema qgep_od.</p>
-</div>
-<div class="section" id="structure-parts">
+</section>
+<section id="structure-parts">
 <h3><span class="section-number">2.1.2.2.2. </span>Structure Parts<a class="headerlink" href="#structure-parts" title="Permalink to this headline">¶</a></h3>
 <p>Cover is the only structure part with a point-geometry himself. All other structure parts are just linked to there wastewater structures and should by only edited by the main layers (vw_qgep_wastewater_structure and vw_qgep_reach).</p>
-</div>
-<div class="section" id="vw-cover">
+</section>
+<section id="vw-cover">
 <h3><span class="section-number">2.1.2.2.3. </span>vw_cover<a class="headerlink" href="#vw-cover" title="Permalink to this headline">¶</a></h3>
 <p>You use this layer, if you want to change the situation of just one selected cover (and not the hole wastewater structure) or if you want to add a new cover to an existing wastewater structure. (you can add an additional cover also in the covers-tab of the vw_qgep_wastewater_structure, but this cover has no situation…). And you use this layer if you want to show the detail position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions. In database-schema qgep_od.</p>
-</div>
-<div class="section" id="vw-channel">
+</section>
+<section id="vw-channel">
 <h3><span class="section-number">2.1.2.2.4. </span>vw_channel<a class="headerlink" href="#vw-channel" title="Permalink to this headline">¶</a></h3>
 <p>The channel-class has no geometry and is therefore mostly changed in the vw_qgep_reach layer. In database-schema qgep_od.</p>
-</div>
-<div class="section" id="od-organisation">
+</section>
+<section id="od-organisation">
 <h3><span class="section-number">2.1.2.2.5. </span>od_organisation<a class="headerlink" href="#od-organisation" title="Permalink to this headline">¶</a></h3>
 <p>todo: This table is today at a strange place (it is not only related to wastewater structures) and has to be revised. In database-schema qgep_od.</p>
-</div>
-</div>
-<div class="section" id="inspection">
+</section>
+</section>
+<section id="inspection">
 <h2><span class="section-number">2.1.2.3. </span>Inspection<a class="headerlink" href="#inspection" title="Permalink to this headline">¶</a></h2>
 <p>These tables are used in the maintenance tabs in the main tables. Do not edit directly. In database-schema qgep_od.</p>
-</div>
-<div class="section" id="value-lists">
+</section>
+<section id="value-lists">
 <h2><span class="section-number">2.1.2.4. </span>Value Lists<a class="headerlink" href="#value-lists" title="Permalink to this headline">¶</a></h2>
 <p>These value lists are defined in the VSA-datamodel. Do not change. In database-schema qgep_vl.</p>
-</div>
-<div class="section" id="hydraulic">
+</section>
+<section id="hydraulic">
 <h2><span class="section-number">2.1.2.5. </span>Hydraulic<a class="headerlink" href="#hydraulic" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="vw-wastewater-node">
+<section id="vw-wastewater-node">
 <h3><span class="section-number">2.1.2.5.1. </span>vw_wastewater_node<a class="headerlink" href="#vw-wastewater-node" title="Permalink to this headline">¶</a></h3>
 <p>You use this layer only, if you want to change the situation of just one selected ww_node (and not the hole wastewater structure) or if you want to add a new ww_node to an existing wastewater structure. (you can add an additional ww_node also in the wastewater nodes-tab of the vw_qgep_wastewater_structure, but this node has no situation…). In database-schema qgep_od.</p>
-</div>
-<div class="section" id="overflow-tables">
+</section>
+<section id="overflow-tables">
 <h3><span class="section-number">2.1.2.5.2. </span>Overflow tables<a class="headerlink" href="#overflow-tables" title="Permalink to this headline">¶</a></h3>
 <p>These tables are connencted to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for these tables. In database-schema qgep_od.</p>
-</div>
-</div>
-<div class="section" id="topology">
+</section>
+</section>
+<section id="topology">
 <h2><span class="section-number">2.1.2.6. </span>Topology<a class="headerlink" href="#topology" title="Permalink to this headline">¶</a></h2>
 <p>These two layers are used by the qgep-extension for the profile and the network-following. Do not change. In database-schema qgep_network.
 You can use the vw_network_segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.</p>
-</div>
-<div class="section" id="catchment">
+</section>
+<section id="catchment">
 <h2><span class="section-number">2.1.2.7. </span>Catchment<a class="headerlink" href="#catchment" title="Permalink to this headline">¶</a></h2>
 <p>Main layer to digitize and edit the catchment_areas.  In database-schema qgep_od.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

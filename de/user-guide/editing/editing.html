@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.1. Bearbeiten von bestehenden Daten &mdash; QGEP 0.8 Dokumentation</title>
@@ -165,41 +166,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="editing-of-existing-data">
+  <section id="editing-of-existing-data">
 <span id="editing-data"></span><h1><span class="section-number">2.3.1. </span>Bearbeiten von bestehenden Daten<a class="headerlink" href="#editing-of-existing-data" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Eine Anleitung zum Bearbeiten von vorhandenen Daten in QGEP.</p>
-<div class="section" id="demo-project">
+<section id="demo-project">
 <h2><span class="section-number">2.3.1.1. </span>Demoprojekt<a class="headerlink" href="#demo-project" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Gehen Sie sicher, dass sie das Demoprojekt mit pgAdminIII (siehe <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span class="std std-ref">Initialisierung der Datenbank</span></a> Kapitel) importiert haben</p></li>
 <li><p>Öffnen sie das Demoprojekt indem Sie ins Hauptmenu gehen und dann <strong>Project</strong> –&gt; <strong>Open</strong> drücken oder indem sie „STRG“ + „O“ gemeinsam drücken.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" style="width: 800.0px; height: 450.0px;" /></a>
-</div>
+</figure>
 <ul class="simple">
 <li><p>In der Datenbank anmelden</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/qgep_demoproject_login.jpg" src="../../_images/qgep_demoproject_login.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Sie sollten nun das Demonstrationsprojekt geladen haben</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/qgep_demoproject_overview.jpg" src="../../_images/qgep_demoproject_overview.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Das Projekt besteht aus verschiedenen Layern. Je nach Aufgaben wählen Sie die Layer, um Objekte zu bearbeiten oder hinzuzufügen.</p></li>
 </ul>
-</div>
-<div class="section" id="layers">
+</section>
+<section id="layers">
 <h2><span class="section-number">2.3.1.2. </span>Layer<a class="headerlink" href="#layers" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span class="std std-ref">Layer Erläuterungen</span></a>.</p></li>
 </ul>
-</div>
-<div class="section" id="changing-attributes-of-point-elements-manholes-special-structures">
+</section>
+<section id="changing-attributes-of-point-elements-manholes-special-structures">
 <h2><span class="section-number">2.3.1.3. </span>Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)<a class="headerlink" href="#changing-attributes-of-point-elements-manholes-special-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
@@ -207,29 +208,29 @@
 <li><p>Aktivieren sie den Bearbeitungsmodus oder starten Sie den <strong>QGEP Wizard</strong> und klicken sie auf <strong>Start Data Entry</strong>.</p></li>
 <li><p>Dann klicken Sie auf den <strong>Objekte abfragen</strong> Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Klick</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/identify_feature_tool1.jpg" src="../../_images/identify_feature_tool1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Das <strong>vw_qgep_wastewater_structure</strong> Formular öffnet sich.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Auf dem ersten Reiter (Allgemein) können Sie die am häufigsten benutzten Attribute erfassen</p></li>
 <li><p>Um die Attribute von in Verbindung stehenden Tabellen (z.B Deckel) zu ändern, müssen Sie den entsprechenden Reiter auswählen. Abhängig von der Art des Abwasserbauwerks können Sie zusätzliche Attribute im zugehörigen Reiter bearbeiten (<strong>Spezialbauwerk</strong>, <strong>Normschacht</strong>).</p></li>
 <li><p>Unter dem Reiter <strong>Bauwerkteile/structure parts</strong> können Sie weitere Bauwerksteile wie zum Beispiel <strong>Einstiegshilfen/access aids</strong>, <strong>Rückstausicherung/backflow prevention</strong>, <strong>Trockenwetterrinne/dryweather flume</strong> etc. hinzufügen</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" src="../../_images/form_vw_qgep_wastewater_structure_structure_parts.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Die Reiter <strong>Deckel</strong> und <strong>Abwasserknoten</strong> zeigen alle Knoten und Deckel eines Abwasserbauwerks und erlauben, weitere Datensätze hinzuzufügen. Siehe dazu das Kapitel <span class="xref std std-ref">Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure</span> .</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="changing-attributes-of-linear-elements-channels">
+</section>
+<section id="changing-attributes-of-linear-elements-channels">
 <h2><span class="section-number">2.3.1.4. </span>Attribute der Linienelemente ändern (Kanäle)<a class="headerlink" href="#changing-attributes-of-linear-elements-channels" title="Link zu dieser Überschrift">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
@@ -239,22 +240,22 @@
 <li><p>Das <strong>vw_qgep_reach</strong> Formular öffnet sich.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/form_vw_qgep_reach.jpg" src="../../_images/form_vw_qgep_reach.jpg" />
-</div>
+</figure>
 </div></blockquote>
 <ul class="simple">
 <li><p>Auf dem ersten Reiter (<strong>Allgemein</strong>) können die am häufigsten benutzten Attribute geändert werden.</p></li>
 <li><p>Um die Attribute von in Verbindung stehenden Tabellen (z.B <strong>Haltungspunkte/reach points</strong>) zu ändern, wählen Sie den entsprechenden Reiter.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/form_vw_qgep_reach_reachpoints.jpg" src="../../_images/form_vw_qgep_reach_reachpoints.jpg" />
-</div>
+</figure>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="change-reach-direction">
+</section>
+<section id="change-reach-direction">
 <h2><span class="section-number">2.3.1.5. </span>Wechseln der Haltungs-Richtung<a class="headerlink" href="#change-reach-direction" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -265,38 +266,38 @@
 <li><p>Zuerst sind alle Haltungen zu selektieren, die geändert werden sollen. Es ist nicht notwendig den vw_qgep_reach Layer auszuwählen oder für diesen Layer  den Bearbeitungsstatus einzuschalten.</p></li>
 <li><p>Öffnen sie die <strong>Werkzeugkiste</strong></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Doppelklick auf das Tool <strong>Change reach direction</strong></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Im Toolfenster muss der <strong>vw_qgep_reach</strong> - Layer gewählt werden, dann auf  <strong>Starte</strong> klicken</p></li>
 <li><p>Mit Ein- oder Auszoomen sieht man, dass die Fliessrichtungspfeile und das Gefälle der Haltungsbeschriftung geändert hat. Die Haltungspunkt-Koten haben nicht geändert.</p></li>
 <li><p>Netzwerk Topologie aktualisieren.</p></li>
 <li><p>Die Änderung jetzt sichern.</p></li>
 </ul>
-</div>
-<div class="section" id="snap-reach-geometry">
+</section>
+<section id="snap-reach-geometry">
 <h2><span class="section-number">2.3.1.6. </span>Schnappe auf Haltungsgeometrie<a class="headerlink" href="#snap-reach-geometry" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Dieses Tool schnappt die Haltungen auch grafisch auf die Abwassernetzelemente mit denen sie verknüpft sind. Sie sind dann nicht nur logisch, sondern auch grafisch verbunden.</p>
 <ul class="simple">
 <li><p>Zuerst sind alle Haltungen zu selektieren, die geschnappt werden sollen. Es ist nicht notwendig den vw_qgep_reach Layer auszuwählen oder für diesen Layer  den Bearbeitungsstatus einzuschalten.</p></li>
 <li><p>Öffnen sie die <strong>Werkzeugkiste</strong></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/toolbox.jpg" src="../../_images/toolbox.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Doppelklick auf das <strong>Snap reach geometry</strong> Tool</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/qgep_toolbox.jpg" src="../../_images/qgep_toolbox.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Im Toolfenster muss der <strong>vw_qgep_reach</strong> - Layer und der <strong>vw_wastewater_node</strong> - Layer gewählt werden, dann auf  <strong>Starte</strong> klicken</p></li>
 <li><p>Mit Ein- oder Auszoomen sieht man die Änderungen.</p></li>
@@ -307,8 +308,8 @@
 <p class="admonition-title">Achtung</p>
 <p>Wenn zwei Haltungen miteinander verknüpft sind (Blindanschluss ohne Abwasserknoten) wird das Resultat unter Umständen nicht den Erwartungen entsprechen. Wenn  Haltung 1 auf Haltung 2 schnappt, und danach Haltung 2 auch noch auf einen Knoten oder eine weitere Haltung schnappt, ist die graphische Verknüpfung zwischen Haltung 1 und 2 nicht mehr garantiert. Der Befehl muss noch einmal gestartet werden.</p>
 </div>
-</div>
-<div class="section" id="working-with-codes-of-value-list">
+</section>
+<section id="working-with-codes-of-value-list">
 <h2><span class="section-number">2.3.1.7. </span>Arbeiten mit den Codes der Wertelisten<a class="headerlink" href="#working-with-codes-of-value-list" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>In der Datenbank werden die Werte der Felder mit Wertelisten mit Zahlencodes gespeichert.</p></li>
@@ -328,17 +329,17 @@
 <li><p>Suche alle primären Abwasserbauwerke / Haltungen (Funktion_Hierarchisch beginnt mit pwwf oder paa - je nach Sprache)</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/represent_value1.jpg" src="../../_images/represent_value1.jpg" />
-</div>
+</figure>
 </div></blockquote>
 <ul class="simple">
 <li><p>Suche alle Haltungen, bei denen Nutzungsart_Ist nicht gleich der Nutzungsart_geplant ist</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/represent_value2.jpg" src="../../_images/represent_value2.jpg" />
-</div>
+</figure>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -348,23 +349,23 @@
 <p class="admonition-title">Bemerkung</p>
 <p>Im Demo-Projekt wird der Ausdruck repesent_value für regelbasierte Symbole nicht verwendet, weil die Regeln sonst nur für eine spezifische Sprache funktionieren.</p>
 </div>
-</div>
-<div class="section" id="an-other-way-to-choose-an-object">
+</section>
+<section id="an-other-way-to-choose-an-object">
 <h2><span class="section-number">2.3.1.8. </span>Ein andere Möglichkeit ein Objekt auszuwählen<a class="headerlink" href="#an-other-way-to-choose-an-object" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Mit aktiviertem <strong>Objekte abfragen</strong> Werkzeug wird durch Rechtsklicken eine Auswahl aller existierender Objekte an dieser Stelle ausgegeben.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/qgep_info_button_rightclick.jpg" src="../../_images/qgep_info_button_rightclick.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Sie können dann das gewünschte Objekt auswählen. Es erscheint das zugehörige Formular um die Details einzusehen</p></li>
 </ul>
 </div></blockquote>
 <p>– _Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure:</p>
-</div>
-<div class="section" id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
+</section>
+<section id="adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">
 <h2><span class="section-number">2.3.1.9. </span>Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken<a class="headerlink" href="#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
@@ -374,26 +375,26 @@
 <li><p>Voraussetzung: Unter Projekt/Projekteigenschaften/Beziehungen muss die Beziehung zwischen vw_cover (Feld fk_wastewater_structure) und vw_qgep_wastewater_structure (Feld obj_id) vorhanden sein.</p></li>
 <li><p>Im Layer vw_cover / Eigenschaften / <strong>Attribute Forms</strong> muss das Feld <strong>fk_wastewater_structure</strong> als Beziehungsreferenz definiert sein</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/vw_cover_properties_fields.jpg" src="../../_images/vw_cover_properties_fields.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Mit QGIS 3.16 gibt es folgende neue Möglichkeit: Wähle den Layer vw_qgep_Abwasserbauwerk, setzte den Layer editierbar, klicke den Schacht, bei dem ein Deckel hinzugefügt werden soll mit dem  <strong>Objekte abfragen</strong> Werkzeug. Wechsle zum Reiter <strong>Deckel</strong> und klicke den Neues Punkt-Kind Knopf. Jetzt kann ein ein neuer Deckel für das Abwasserbauwerk digitalisiert werden.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/new_cover_childpoint.jpg" src="../../_images/new_cover_childpoint.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Der alte Weg (vor QGIS 3.16)</p></li>
 <li><p>Die Bearbeitung des Layer vw_cover starten und einen neuen Deckel definieren.</p></li>
 <li><p>In der Form hat es hinter dem Feld fk_wastewater_structure einen  Knopf, mit dem der neue Deckel mit einem bestehenden Abwasserbauwerk verknüpft werden kann.</p></li>
 <li><p>Nach dem Klick auf den Knopf erscheint ein blauer Hinweis im QGIS-Fenster. Das vw_cover-Formularfenster falls notwendig verschieben und mit einem Klick auf das Abwasserbauwerk die Verknüpfung des Deckels mit dem Bauwerk definieren.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/new_cover_connect_to_wws.jpg" src="../../_images/new_cover_connect_to_wws.jpg" />
-</div>
-</div>
-<div class="section" id="adding-a-wastewater-node-to-an-existing-reach">
+</figure>
+</section>
+<section id="adding-a-wastewater-node-to-an-existing-reach">
 <h2><span class="section-number">2.3.1.10. </span>Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen<a class="headerlink" href="#adding-a-wastewater-node-to-an-existing-reach" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In gewissen Fällen muss ein Abwasserknoten zwischen zwei oder mehrere Haltungen gesetzt werden, obwohl dort kein Schachtbauwerk vorhanden ist.</p>
 <div class="admonition note">
@@ -406,32 +407,32 @@
 <p class="admonition-title">Bemerkung</p>
 <p>Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden.</p>
 </div>
-</div>
-<div class="section" id="multiedit">
+</section>
+<section id="multiedit">
 <h2><span class="section-number">2.3.1.11. </span>Mehrfachänderung<a class="headerlink" href="#multiedit" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn sie Attribute von mehreren Datensätzen der gleichen Klasse bearbeiten wollen, können sie das <a class="reference external" href="https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields">multiedit Tool von QGIS  benutzen</a>.</p>
-</div>
-<div class="section" id="saving-changes">
+</section>
+<section id="saving-changes">
 <h2><span class="section-number">2.3.1.12. </span>Änderungen Speichern<a class="headerlink" href="#saving-changes" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Drücken Sie <strong>Save</strong> und dann deaktivieren Sie den Bearbeitungsmodus oder klicken Sie auf <strong>Stop data entry</strong> wenn Sie mit dem <strong>QGEP Data Entry</strong> Arbeitsassistenten gearbeitet haben.</p></li>
 </ul>
-</div>
-<div class="section" id="changing-wastewater-structure-type">
+</section>
+<section id="changing-wastewater-structure-type">
 <h2><span class="section-number">2.3.1.13. </span>Abwasserbauwerk Typ ändern<a class="headerlink" href="#changing-wastewater-structure-type" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Im vw_qgep_wastewater_structure Formular kann die Subklasse das Abwasserbauwerks geändert werden (z.B. von Normschacht zu Spezialbauwerk oder Versickerungsanlage). Der alte Subklassen-Datensatz wird dabei gelöscht und die Subklassen-spezifischen Felder müssen neu eingegeben werden. Aber alle Verknüpfungen (die beziehen sich auf die Klasse Abwasserbauwerk und nicht auf die Subklasse) und auch die Obj_ID oder die Bezeichnung bleiben unverändert.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Ein Schacht-Abwasserbauwerk kann nicht in ein Kanal-Abwasserbauwerk geändert werden oder umgekehrt.</p>
 </div>
-</div>
-<div class="section" id="split-a-reach-channel-into-different-reaches">
+</section>
+<section id="split-a-reach-channel-into-different-reaches">
 <h2><span class="section-number">2.3.1.14. </span>Kanäle in verschiedene Haltungen unterteilen<a class="headerlink" href="#split-a-reach-channel-into-different-reaches" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Das ist eine ziemlich komplexe Funktion und zur Zeit nicht implementiert in QGEP. Es gibt ein QGIS-Werkzeug, um Objekte aufzuteilen, aber wenn dieses Werkzeug auf den Layer vw_qgep_reach angewendet wird, resultiert ein Datenbank-Fehler, weil die Obj_ID des aufgeteilten (= duplizierten) Kanales nicht mehr eindeutig sind.</p>
 <p>Temporäre Lösung: Die bestehende Haltung ändern und eine zweite Haltung manuell erstellen. Dann auch die Verknüpfungen kontrollieren.</p>
 <p>In QGEP ist ein Werkzeug geplant, mit dem Haltung aufgeteilt werden können. Der Benutzer kann wählen ob nur die Haltung aufgeteilt werden soll oder auch die Kanäle, ob ein neuer Abwasserknoten zwischen den Haltung eingefügt und verbunden werden soll. Mit dem Werkzeug sollen die neuen Haltungspunktkoten berechnet werden können die bestehenden Abwassernetzelement-Verknüpfungen sind anzupassen falls notwendig.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

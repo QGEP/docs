@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.1.3. Naming conventions &mdash; QGEP 0.8 documentazione</title>
@@ -153,9 +154,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="naming-conventions">
+  <section id="naming-conventions">
 <h1><span class="section-number">2.1.3. </span>Naming conventions<a class="headerlink" href="#naming-conventions" title="Link a questa intestazione">¶</a></h1>
-<div class="section" id="schemas-in-the-qgep-database">
+<section id="schemas-in-the-qgep-database">
 <h2><span class="section-number">2.1.3.1. </span>Schemas in the QGEP-Database<a class="headerlink" href="#schemas-in-the-qgep-database" title="Link a questa intestazione">¶</a></h2>
 <p>The QGEP-Database has six qgep-schemas:</p>
 <ul class="simple">
@@ -165,8 +166,8 @@
 <li><p>qgep_sys: special tables for administration of the database. As a QGEP-User you can not edit these tables.</p></li>
 <li><p>qgep_import and qgep_swmm: schema for additional plugins/functions (Qfield and working with SWMM)</p></li>
 </ul>
-</div>
-<div class="section" id="layer-names">
+</section>
+<section id="layer-names">
 <h2><span class="section-number">2.1.3.2. </span>Layer names<a class="headerlink" href="#layer-names" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>Layer names have often a prefix like <a href="#id1"><span class="problematic" id="id2">od_</span></a> or <a href="#id3"><span class="problematic" id="id4">vl_</span></a>.</p></li>
@@ -181,8 +182,8 @@ It is important to know the main-table to be sure, that you use the correct attr
 <li><p>Layer <a href="#id7"><span class="problematic" id="id8">vw_network_</span></a></p></li>
 </ul>
 <p>These are views in the schema qgep_network</p>
-</div>
-<div class="section" id="attibute-names">
+</section>
+<section id="attibute-names">
 <h2><span class="section-number">2.1.3.3. </span>Attibute names<a class="headerlink" href="#attibute-names" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>Prefixes in attribute names</p></li>
@@ -200,8 +201,8 @@ Example in layer vw_qgep_reach: identifier is the attribute of the table wastewa
 </ul>
 <p>Attributes that start with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _slope_per_mill in vw_qgep_reach.
 _channel_useage_current in vw_qgwp_wastewater_structure is calculated from the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

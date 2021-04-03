@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.8. How To &mdash; QGEP 0.8 Dokumentation</title>
@@ -145,10 +146,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to">
+  <section id="how-to">
 <h1><span class="section-number">2.8. </span>How To<a class="headerlink" href="#how-to" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Eine Anleitung zu verschiedenen Themen um die Konfiguration von QGEP.</p>
-<div class="section" id="manual-label-positioning-for-different-scales">
+<section id="manual-label-positioning-for-different-scales">
 <h2><span class="section-number">2.8.1. </span>Manuelle Beschriftungspositionen für unterschiedliche Massstäbe<a class="headerlink" href="#manual-label-positioning-for-different-scales" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In QGIS können verschiedene Beschriftungsdefinitionen für verschiedene Massstäbe definiert werden. Bei der Arbeit am Bildschirm funktioniert das gut. Aber soll ein Plan mit Beschriftung gedruckt oder ein Datenexport der Beschriftungen (z.B. für ins Regio-GIS) gemacht werden, ist es oft nötig, die Beschriftungspositionen manuell zu definieren. Wenn eine Beschriftung manuell platziert wird in QGIS, dann gilt diese fixe Position aber für jeden Massstab. Und das führt nicht immer zu guten Resultaten.</p>
 <p>Lösung</p>
@@ -157,44 +158,44 @@
 <li><p>Regelbasierte Beschriftungen verwenden, dann kann für jede Regel eine unterschiedliche Beschriftungsposition definiert werden</p></li>
 </ul>
 <p>Im untenstehenden Beispiel soll für die Abwasserbauwerke je eine Beschriftung für den Werkplan (1:500) und für den Übersichtsplan (1:2000) erstellt werden. In den Hilfsspeichertabellen benutzen wir die Standardfelder PositionX und PositionY für die Werkplan-Beschriftung. Für die Übersichtsplan-Beschriftung braucht es zwei neue Felder. Wir benennen sie posx2000 und posy2000.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_newfields.jpg" src="../../_images/man_labeling_newfields.jpg" />
-</div>
+</figure>
 <p>Jetzt definieren wir zwei regelbasierte Beschriftungen. Im Beispiel heisst die erste Regel WP-Labels (WP=Werkplan). Bei der Platzierung muss nichts geändert werden, weil für die Regel die Standard Positionsfelder verwendet werden.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_rules.jpg" src="../../_images/man_labeling_rules.jpg" />
-</div>
+</figure>
 <p>Die zweite Regel nennen wir UP-Labels (UP=Uebersichtsplan). In dieser Regel müssen die Koordinaten-Felder im Reiter Platzierung geändert werden.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_edit_rules.jpg" src="../../_images/man_labeling_edit_rules.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/man_labeling_coordinatefield.jpg" src="../../_images/man_labeling_coordinatefield.jpg" />
-</div>
+</figure>
 <p>Klicke auf das Koordinate X - Menütool und wähle im Feldtype-Menü das Feld auxiliary_storage_user_custom_posx2000. Dann analog das gleiche für die Y Koordinate.</p>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
 <p>Für die Definition des Koordinaten-Feldes darf nicht das <strong>Bearbeiten…</strong> Menü verwendet werden. Wenn der Formel-Editor verwendet wird oder das Feld mit dem Bearbeiten…-Menü bestimmt wird, wird QGIS die Auswahl jedesmal überschreiben, wenn eine manuelle Positionierung verwendet wird.</p>
 </div>
 <p>Jetzt können mit dem QGIS Tool <strong>Verschiebt Beschriftung oder Diagramm</strong> die Beschriftungen für jede Regel unterschiedlich positioniert werden.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_labeltools.jpg" src="../../_images/man_labeling_labeltools.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
 <p>Die Änderungen werden nur gespeichert, wenn das QGIS-Projekt gespeichert wird!</p>
 </div>
-</div>
-<div class="section" id="how-to-import-existing-label-positions">
+</section>
+<section id="how-to-import-existing-label-positions">
 <h2><span class="section-number">2.8.2. </span>Importieren von bestehenden Beschriftungspositionen<a class="headerlink" href="#how-to-import-existing-label-positions" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In guten Beschriftungspositionen kann viel Arbeit stecken. Diese Arbeit soll nicht verloren gehen.</p>
 <ul class="simple">
 <li><p>Exportieren der Beschriftungsposition im alten GIS in der Form Obj_ID, KoordinateX(Ost), KoordinateY(Nord).</p></li>
 <li><p>Füge das**.qgd**-File vom aktuellen Projekt mit <strong>Vektorlayer hinzufügen…</strong> im Projekt ein und öffne die Attributtabelle.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_auxtable.jpg" src="../../_images/man_labeling_auxtable.jpg" />
-</div>
+</figure>
 <p>Wenn noch kein .qgd-File vorhanden ist, dann wurde vermutlich noch nie in diesem Projekt eine Beschriftung manuell verschoben oder gedreht.</p>
 <ul class="simple">
 <li><p>Ändere die Feldnamen in der Exportdatei in die Feldnamen aus der .qgd-Datei. Im Beispiel muss dass Obj_ID-Feld den Namen <strong>ASPK</strong> haben, die Koordinaten-Felder müssen <strong>labeling_positionx</strong> und <strong>labeling_positiony</strong> heissen.</p></li>
@@ -202,8 +203,8 @@
 <li><p>Speichere das qgd-File und lösche es aus dem Projekt, bevor Beschriftungen verschoben werden, weil QGIS nicht manuelle Beschriftungs-Positionen sichern kann, solange das qgd-File als Layer im Projekt geöffnet ist.</p></li>
 <li><p>Falls notwendig definiere die Ausrichtung horizontal und vertikal der Beschriftungen im Platzierungs-Reiter der Beschriftungsdefinition.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.6. Objekte löschen &mdash; QGEP 0.8 Dokumentation</title>
@@ -160,44 +161,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="deleting-objects">
+  <section id="deleting-objects">
 <h1><span class="section-number">2.2.6. </span>Objekte löschen<a class="headerlink" href="#deleting-objects" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Sie können Punkt- oder Linienobjekte (mit allen zugehörigen Objekten) mit den <strong>vw_ggep_(Abwasserbauwerk/Haltung)</strong> Layern löschen. Sie können auch nur ein spezifisches Objekt auswählen und löschen (z.B. einen Deckel).</p>
-<div class="section" id="delete-reaches">
+<section id="delete-reaches">
 <h2><span class="section-number">2.2.6.1. </span>Haltungen löschen<a class="headerlink" href="#delete-reaches" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Wählen Sie <strong>vw_qgep_Haltung</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
 <li><p>Wählen Sie die Haltung(en), die Sie löschen möchten, z.B. mit Einzelklick oder mit einem Auswahlwerkzeug.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Benutzen Sie das Menü <strong>Bearbeiten</strong> –&gt; <strong>Ausgewähltes löschen</strong>  zum löschen.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Am einfachsten ist es, die <strong>Delete</strong> Taste auf Ihrer Tastatur zu drücken. Oder Sie können den <strong>Ausgewähltes löschen</strong> Knopf anklicken, welcher sich in der <strong>Digitalisierungswerkzeugleiste</strong> befindet.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_button.jpg" src="../../_images/delete_button.jpg" />
-</div>
+</figure>
 <p>Abhängig von ihren QGIS– Einstellungen kann die <strong>Digitalisierungswerkzeugleiste</strong> versteckt sein oder sich an einem anderen Ort befinden.</p>
 </div>
 <ul class="simple">
 <li><p>Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Das Löschen von Haltung entfernt ebenfalls verbundene Bauwerke. Der verknüpfte Kanal wird nur gelöscht, falls kein weiteres Abwassernetzelement verbunden ist. Wenn zwei Haltungen mit einen Kanal verknüpft sind, wird der Kanal nur gelöscht, wenn beide Haltungen entfernt wurden.</p>
 </div>
-</div>
-<div class="section" id="delete-manholes-and-other-wastewater-structures">
+</section>
+<section id="delete-manholes-and-other-wastewater-structures">
 <h2><span class="section-number">2.2.6.2. </span>Normschächte und andere Abwasserbauwerke löschen<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Wählen Sie <strong>vw_qgep_Abwasserbauwerk</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
@@ -209,8 +210,8 @@
 <p class="admonition-title">Bemerkung</p>
 <p>Wenn ein Abwasserbauwerk gelöscht wird, werden auch alle verknüpften Bauwerksteile und Abwasserknoten gelöscht.</p>
 </div>
-</div>
-<div class="section" id="delete-covers">
+</section>
+<section id="delete-covers">
 <h2><span class="section-number">2.2.6.3. </span>Deckel löschen<a class="headerlink" href="#delete-covers" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Wählen Sie <strong>vw_qgep_Abwasserbauwerk</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
@@ -220,16 +221,16 @@
 <li><p>Wählen Sie den(die) Deckel, welche Sie löschen möchten</p></li>
 <li><p>Klicken Sie auf den roten X Knopf, um die Deckel zu löschen</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_covers.jpg" src="../../_images/delete_covers.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Klicken Sie im Formular auf Speichern</p></li>
 <li><p>Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 <li><p>Ein 2. Möglichkeit einen Deckel zu löschen: Den Layer <strong>vw_qgep_cover</strong> auswählen und den Bearbeitungsmodus starten, den Deckel auswählen, im Menü <strong>Bearbeiten</strong> –&gt; <strong>Ausgewähltes löschen</strong> wählen, den Bearbeitungsmodus beenden</p></li>
 </ul>
-</div>
-<div class="section" id="delete-structure-parts">
+</section>
+<section id="delete-structure-parts">
 <h2><span class="section-number">2.2.6.4. </span>Bauwerksteile löschen<a class="headerlink" href="#delete-structure-parts" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Wählen Sie <strong>vw_qgep_Abwasserbauwerk</strong> und wechseln Sie zum Bearbeitungsmodus.</p></li>
@@ -241,8 +242,8 @@
 <li><p>Klicken Sie im Formular auf Speichern</p></li>
 <li><p>Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
-</div>
-<div class="section" id="delete-detailed-geometries">
+</section>
+<section id="delete-detailed-geometries">
 <h2><span class="section-number">2.2.6.5. </span>Detailgeometrie löschen<a class="headerlink" href="#delete-detailed-geometries" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
@@ -254,8 +255,8 @@
 <li><p>Klicke auf die Detailgeometrieflächen, die gelöscht werden sollen</p></li>
 <li><p>Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.8. How To &mdash; QGEP 0.8 documentazione</title>
@@ -145,10 +146,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to">
+  <section id="how-to">
 <h1><span class="section-number">2.8. </span>How To<a class="headerlink" href="#how-to" title="Link a questa intestazione">¶</a></h1>
 <p>This represents a guide on different themes about configuring in QGEP.</p>
-<div class="section" id="manual-label-positioning-for-different-scales">
+<section id="manual-label-positioning-for-different-scales">
 <h2><span class="section-number">2.8.1. </span>Manual Label-positioning for different scales<a class="headerlink" href="#manual-label-positioning-for-different-scales" title="Link a questa intestazione">¶</a></h2>
 <p>QGIS label definition can handle different labels for different scales. This works very well if you work on the screen.
 If you have to print plans with labels or if you have to export labels for data exchange (e.g. exchange with RegioGIS-platform), it will often be necessary to determine the label positions manually.
@@ -161,45 +162,45 @@ If a label is positioned manually in QGIS, this fixed position applies to every 
 <p>In the example below, we want to label the wastewater-structures with a detailed label for network_plan (1:500) and for overviewmap (1:2000).
 In the Auxiliary Storage we use the standard fields PositionX and PositionY for the  network_plan labels. For the overviewmap labels we add two new fields.
 We name this fields posx2000 and posy2000.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_newfields.jpg" src="../../_images/man_labeling_newfields.jpg" />
-</div>
+</figure>
 <p>Define now rule-based labeling with two rules. In the example the first rule is called WP-Labels (WP = Werkplan = network_plan).
 You have not the change something in the placement, because this rule uses the standard positioning-fields.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_rules.jpg" src="../../_images/man_labeling_rules.jpg" />
-</div>
+</figure>
 <p>The second rule is called UP-Labels (UP = Uebersichtsplan = overviewmap). In this rule, you have to change the coordinate fields in the placement-tab.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_edit_rules.jpg" src="../../_images/man_labeling_edit_rules.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/man_labeling_coordinatefield.jpg" src="../../_images/man_labeling_coordinatefield.jpg" />
-</div>
+</figure>
 <p>Click on Coordinate X menutool and choose in the field type-menu the auxiliary_storage_user_custom_posx2000 field. Then the similar for Y.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attenzione</p>
 <p>Do not use the <strong>Edit…</strong> menu for defining the coordinate-field. If you use a formula or choose the field via the Edit… menu, QGIS will overwrite the definition everytime you do a manual positioning.</p>
 </div>
 <p>Now you can move or fix your labels for every rule with different positions with the QGIS <strong>Moves a Label or Diagram</strong>-Tool.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_labeltools.jpg" src="../../_images/man_labeling_labeltools.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Attenzione</p>
 <p>Your changes are only saved if you save the QGIS-project!</p>
 </div>
-</div>
-<div class="section" id="how-to-import-existing-label-positions">
+</section>
+<section id="how-to-import-existing-label-positions">
 <h2><span class="section-number">2.8.2. </span>How to import existing label-positions<a class="headerlink" href="#how-to-import-existing-label-positions" title="Link a questa intestazione">¶</a></h2>
 <p>Good label-positions can be hard work. So you don’t want to loose it.</p>
 <ul class="simple">
 <li><p>Export your label-positions from your old system in the form obj_id, coordinateX (east), coordinateY (north).</p></li>
 <li><p>Add the <strong>.qgd</strong>-file of your project with <strong>Add Vector Layer…</strong> to your project and open the attribute table.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/man_labeling_auxtable.jpg" src="../../_images/man_labeling_auxtable.jpg" />
-</div>
+</figure>
 <p>If you can not find a .qgd-file, then you have probably not moved or rotated a label before.</p>
 <ul class="simple">
 <li><p>Change the field-names in your export-data to the field-names in the qgd-file. In the example the obj_id-field must have the name <strong>ASPK</strong>, the coordinate-fields must have the names <strong>labeling_positionx</strong> and <strong>labeling_positiony</strong>.</p></li>
@@ -207,8 +208,8 @@ You have not the change something in the placement, because this rule uses the s
 <li><p>Save the qgd-file and remove it from your project, before you remove labels, because QGIS can not save manual label-positions, if the qgd-file is a layer in the project.</p></li>
 <li><p>If necessary define the horizontal/vertical alignment of your label-coordinates in the placement of the label definition.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.7. Digitizing Catchment Areas &mdash; QGEP 0.8 documentation</title>
@@ -161,30 +162,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="digitizing-catchment-areas">
+  <section id="digitizing-catchment-areas">
 <h1><span class="section-number">2.2.7. </span>Digitizing Catchment Areas<a class="headerlink" href="#digitizing-catchment-areas" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.2.7.1. </span>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p>Catchments can be digitized with QGIS standard tools.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/qgis_standard_tools.jpg" src="../../_images/qgis_standard_tools.jpg" />
-</div>
+</figure>
 <p>Catchment areas should not overlap and can have 4 connections to wastewater nodes.</p>
-</div>
-<div class="section" id="digitizing">
+</section>
+<section id="digitizing">
 <h2><span class="section-number">2.2.7.2. </span>Digitizing<a class="headerlink" href="#digitizing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Select the <strong>Enable Snapping</strong> button</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/enable_snapping_button.jpg" src="../../_images/enable_snapping_button.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Open the <strong>Project Snapping Option Settings</strong>, check the <strong>od_catchment_area</strong> layer and check the <strong>avoid intersection</strong> checkbox for the od_catchment_area layer</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_avoid_intersection2.jpg" src="../../_images/catchment_avoid_intersection2.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>New digitized catchement areas will not overlap with existing areas with this settings.</p>
@@ -193,15 +194,15 @@
 <li><p>Set the layer <code class="docutils literal notranslate"><span class="pre">od_catchment_area</span></code> into the edit mode.</p></li>
 <li><p>Use the <strong>Add Feature</strong> tool to digitize a new area.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/add_feature_tool.jpg" src="../../_images/add_feature_tool.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Start digitizing with left click and continue with left click for every vertex of the polygon</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_digitizing1.jpg" src="../../_images/catchment_area_digitizing1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Stop digitizing with right click</p></li>
 </ul>
@@ -212,9 +213,9 @@
 <ul class="simple">
 <li><p>The <strong>od_catchment_area</strong> form appears</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_digitizing2.jpg" src="../../_images/catchment_area_digitizing2.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>When finished editing attributes, click the <strong>OK</strong> button</p></li>
 </ul>
@@ -222,9 +223,9 @@
 <p class="admonition-title">Note</p>
 <p>The new area does not overlap the old areas.</p>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_digitizing3.jpg" src="../../_images/catchment_area_digitizing3.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To control the exact area of a selected polygon, see in the <strong>Identify Results</strong> window under <strong>(Derived)</strong>.</p>
@@ -233,46 +234,46 @@
 <p class="admonition-title">Note</p>
 <p>To connect the area with wastewater nodes, see chapter <a class="reference internal" href="../editing/connect_wastewater_network_elements.html#connect-wastewater-network-elements"><span class="std std-ref">Connect Wastewater Network Elements</span></a>.</p>
 </div>
-</div>
-<div class="section" id="editing">
+</section>
+<section id="editing">
 <h2><span class="section-number">2.2.7.3. </span>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You can edit existing areas with the <strong>Identify features</strong> tool.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/identify_feature_tool.jpg" src="../../_images/identify_feature_tool.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There are ideas to have a menu in the feature attribute window, that allows you to copy all current-values to the planned-fields. Not realized yet.</p>
 </div>
-</div>
-<div class="section" id="split-areas">
+</section>
+<section id="split-areas">
 <h2><span class="section-number">2.2.7.4. </span>Split Areas<a class="headerlink" href="#split-areas" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>You can split existing areas with the <strong>Split</strong> tool.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/split_tool.jpg" src="../../_images/split_tool.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>There is no need to select the area first. Left clicks to define the spliting line. Right click after having defined the last point of the spliting line.</p></li>
 </ul>
-</div>
-<div class="section" id="merge-areas">
+</section>
+<section id="merge-areas">
 <h2><span class="section-number">2.2.7.5. </span>Merge Areas<a class="headerlink" href="#merge-areas" title="Permalink to this headline">¶</a></h2>
 <p>You can merge existing areas with the <strong>Merge selected Feature</strong> tool.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/merge_selected_feature_tool.jpg" src="../../_images/merge_selected_feature_tool.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Selected the <strong>od_catchment_area</strong> layer an set it into the edit mode</p></li>
 <li><p>Select at least two areas you want to merge</p></li>
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">Feature</span></code> tool. -&gt; The <strong>Merge Feature Attributes</strong> windows appears.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/merge_feature_attributes.jpg" src="../../_images/merge_feature_attributes.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Choose which values will be taken from which old record and click <strong>OK</strong>.</p></li>
 </ul>
@@ -280,13 +281,13 @@
 <p class="admonition-title">Attention</p>
 <p>If you select one of the records and click on the <strong>Take attributes from the selected feature</strong> button, then the <strong>obj_id</strong> field will be skipped by default and the database will not accept the changes. After using this button, you have to choose one of the values in the <strong>obj_id</strong> field manually.</p>
 </div>
-</div>
-<div class="section" id="connect-catchment-area-to-wastewater-network-nodes">
+</section>
+<section id="connect-catchment-area-to-wastewater-network-nodes">
 <h2><span class="section-number">2.2.7.6. </span>Connect Catchment area to Wastewater Network Nodes<a class="headerlink" href="#connect-catchment-area-to-wastewater-network-nodes" title="Permalink to this headline">¶</a></h2>
 <p>You connect catchment areas with the tool <strong>Connect wastewater networkelements</strong> (it’s the same tool to connect reaches and nodes described in the chapter Editing in QGEP).</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connect_wastewater_network_elements_button.jpg" src="../../_images/connect_wastewater_network_elements_button.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>It does not matter, which layer is selected</p></li>
 <li><p>The <strong>catchment_area</strong> layer has to be in edit mode</p></li>
@@ -294,21 +295,21 @@
 <li><p>If you move the mouse over an catchment area near the border of the catchment area, it is marked: you can click to choose this record</p></li>
 <li><p>Move the mouse to the networkelement, to which the catchment area will by connected (again: selectable objects get marked) and click again</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_connect1.jpg" src="../../_images/catchment_area_connect1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>A window appears, where you can choose, which connection(s) will be defined.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_connect2.jpg" src="../../_images/catchment_area_connect2.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>If everything is ok, you will see a message in a blue bar on top of the map-window</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/catchment_area_connect3.jpg" src="../../_images/catchment_area_connect3.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to wastewater nodes or to reaches. Because a lot of hydraulic calculation do not support connections to reaches, this tool in qgep connects only to wastewater nodes and not to reaches.</p>
@@ -319,8 +320,8 @@
 </div>
 <p>You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes</p>
 <p>Do delete a connection to a wastewater node, you can edit the area with the <strong>Identify features</strong> tool.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

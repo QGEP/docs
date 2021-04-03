@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.3. Ajout et édition d’événements de maintenance &mdash; Documentation QGEP 0.8</title>
@@ -157,16 +158,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="adding-or-editing-of-maintenance-events">
+  <section id="adding-or-editing-of-maintenance-events">
 <span id="maintenance-events"></span><h1><span class="section-number">2.3.3. </span>Ajout et édition d’événements de maintenance<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ceci est un guide pour l’ajout ou l’édition de données relatives aux événements de maintenance dans QGEP.</p>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.3.3.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Les événements de maintenance peuvent être connectés à une ou plusieurs structures. Pour cela, QGEP utilise une table intermédiaire RE_table afin de générer la relation n:m (<strong>re_maintenance_event_wastewater_structure</strong>)</p></li>
 </ul>
-</div>
-<div class="section" id="adding-a-new-maintenance-event">
+</section>
+<section id="adding-a-new-maintenance-event">
 <h2><span class="section-number">2.3.3.2. </span>Ajouter un nouvel incident de maintenance<a class="headerlink" href="#adding-a-new-maintenance-event" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Activez le mode d’édition.</p></li>
@@ -175,21 +176,21 @@
 <li><p>Créér un nouvel incident de maintenance avec le bouton <strong>Ajout entité-enfant</strong>.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_add_child.jpg" src="../../_images/maintenance_add_child.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Editez la nouvelle entrée dans le formulaire vw_qgep_maintenance, puis cliquez sur <strong>OK</strong></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/maintenance_new_record.jpg" src="../../_images/maintenance_new_record.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/maintenance_new_record_saved.jpg" src="../../_images/maintenance_new_record_saved.jpg" />
-</div>
+</figure>
 </div></blockquote>
-</div>
-<div class="section" id="link-an-existing-maintenance-event">
+</section>
+<section id="link-an-existing-maintenance-event">
 <h2><span class="section-number">2.3.3.3. </span>Créer un lien avec un incident de maintenance existant<a class="headerlink" href="#link-an-existing-maintenance-event" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Activez le mode d’édition.</p></li>
@@ -198,16 +199,16 @@
 <li><p>Cliquez sur le bouton <strong>Lier entités-enfant existantes</strong>.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_link_child.jpg" src="../../_images/maintenance_link_child.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Sélectionner  un évènement de maintenance de la fenètre  <strong>Dialog</strong> en cliquant sur dans case d’un enregistrement. La case deviendra jaune. Cliquez ensuite sur <strong>OK</strong></p></li>
 <li><p>Fermez la fenêtre en cliquant sur <strong>OK</strong> et désélectionnez le mode d’édition pour enregistrer les modifications.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="unlink-maintenance-events">
+</section>
+<section id="unlink-maintenance-events">
 <h2><span class="section-number">2.3.3.4. </span>Supprimer le lien avec incidents de maintenance<a class="headerlink" href="#unlink-maintenance-events" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Activez le mode d’édition.</p></li>
@@ -216,28 +217,28 @@
 <li><p>Sélectionner un incident de maintenance en cliquant dans le case (la case devient jaune), puis cliquez sur le bouton <strong>Delete child feature</strong></p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_delete_link.jpg" src="../../_images/maintenance_delete_link.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Seul la liaison stockée dans la RE-table est supprimé. Les événements de maintenance ne sont pas supprimés et peuvent toujours être reliés à d’autres ouvrages.</p>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="editing">
+</section>
+<section id="editing">
 <h2><span class="section-number">2.3.3.5. </span>Édition<a class="headerlink" href="#editing" title="Lien permanent vers ce titre">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Faire comme décris dans le chapitre « Ajout » - mais en éditant des incidents de maintenance existant. Ou éditer la table <strong>vw_qgep_maintenance</strong> (groupe de couche <strong>inspection</strong>)</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="multi-edit">
+</section>
+<section id="multi-edit">
 <h2><span class="section-number">2.3.3.6. </span>Multi Edit<a class="headerlink" href="#multi-edit" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour le moment, il n’existe pas d’outil permettant de lier un événement de maintenance avec une sélection de tronçons ou de structures assainissement. Si vous ouvrez le formulaire en mode multi-édition, l’onglet <strong>Maintenance</strong> sera vide. La multi-édition avec des tables liées n’est pas implémentée dans QGIS.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

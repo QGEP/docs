@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.3. Adding or Editing of Maintenance Events &mdash; QGEP 0.8 documentație</title>
@@ -157,17 +158,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="adding-or-editing-of-maintenance-events">
+  <section id="adding-or-editing-of-maintenance-events">
 <span id="maintenance-events"></span><h1><span class="section-number">2.3.3. </span>Adding or Editing of Maintenance Events<a class="headerlink" href="#adding-or-editing-of-maintenance-events" title="Link permanent la acest titlu">¶</a></h1>
 <p>This represents a guide on how to add or edit maintenance event data in QGEP.</p>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.3.3.1. </span>General<a class="headerlink" href="#general" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
 <li><p>Maintenance events can be connected to one structure or to many.
 Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<strong>re_maintenance_event_wastewater_structure</strong>)</p></li>
 </ul>
-</div>
-<div class="section" id="adding-a-new-maintenance-event">
+</section>
+<section id="adding-a-new-maintenance-event">
 <h2><span class="section-number">2.3.3.2. </span>Adding a new Maintenance Event<a class="headerlink" href="#adding-a-new-maintenance-event" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
 <li><p>Enable the edit mode.</p></li>
@@ -176,21 +177,21 @@ Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<str
 <li><p>Create a new maintenance event with the <strong>Add child feature</strong> button.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_add_child.jpg" src="../../_images/maintenance_add_child.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Edit the new record in the vw_qgep_maintenance form, then click <strong>OK</strong></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/maintenance_new_record.jpg" src="../../_images/maintenance_new_record.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/maintenance_new_record_saved.jpg" src="../../_images/maintenance_new_record_saved.jpg" />
-</div>
+</figure>
 </div></blockquote>
-</div>
-<div class="section" id="link-an-existing-maintenance-event">
+</section>
+<section id="link-an-existing-maintenance-event">
 <h2><span class="section-number">2.3.3.3. </span>Link an existing Maintenance Event<a class="headerlink" href="#link-an-existing-maintenance-event" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
 <li><p>Enable the edit mode.</p></li>
@@ -199,16 +200,16 @@ Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<str
 <li><p>Click the <strong>Link existing child features</strong> button.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_link_child.jpg" src="../../_images/maintenance_link_child.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Choose a maintenenace event from the <strong>Dialog</strong> window by clicking in the box of the record. The box must by yellow. Then click <strong>OK</strong></p></li>
 <li><p>Close the windows with <strong>OK</strong> and turn of the edit mode to save changes</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="unlink-maintenance-events">
+</section>
+<section id="unlink-maintenance-events">
 <h2><span class="section-number">2.3.3.4. </span>Unlink Maintenance Events<a class="headerlink" href="#unlink-maintenance-events" title="Link permanent la acest titlu">¶</a></h2>
 <ul class="simple">
 <li><p>Enable the edit mode.</p></li>
@@ -217,29 +218,29 @@ Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (<str
 <li><p>Select a maintenance event by clicking in the box (box gets yellow), then click the <strong>Delete child feature</strong> button.</p></li>
 </ul>
 <blockquote>
-<div><div class="figure align-default">
+<div><figure class="align-default">
 <img alt="../../_images/maintenance_delete_link.jpg" src="../../_images/maintenance_delete_link.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Atenție</p>
 <p>There is only the record in the RE-table deleted. The maintenance event record himself is not deleted and can by linked with other wastewater structures.</p>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="editing">
+</section>
+<section id="editing">
 <h2><span class="section-number">2.3.3.5. </span>Editing<a class="headerlink" href="#editing" title="Link permanent la acest titlu">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Do as described in adding - but just edit existing maintenance events. Or edit the <strong>vw_qgep_maintenance</strong> table (layer group <strong>inspection</strong>)</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="multi-edit">
+</section>
+<section id="multi-edit">
 <h2><span class="section-number">2.3.3.6. </span>Multi Edit<a class="headerlink" href="#multi-edit" title="Link permanent la acest titlu">¶</a></h2>
 <p>There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the <strong>Maintenance</strong> tab is empty.
 Multi edit with linked tables is not implemented in QGIS.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
