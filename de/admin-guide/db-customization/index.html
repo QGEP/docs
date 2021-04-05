@@ -170,10 +170,7 @@ The views required to edit the data are automatically generated using <a class="
 </section>
 <section id="joining-additional-tables">
 <h2><span class="section-number">3.5.3. </span>Joining additional tables<a class="headerlink" href="#joining-additional-tables" title="Link zu dieser Überschrift">¶</a></h2>
-<p>It is possible to join additional tables to the two main views (<code class="docutils literal notranslate"><span class="pre">vw_qgep_wastewater_structure</span></code> and <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>).
-This is done by using a YAML definition file for each view and defining a list of joined tables.
-Fields of these tables will be joined as read-only fields as they are discarded in edit triggers.
-For joining a table to <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, here is an example:</p>
+<p>Es ist möglich, zusätzliche Tabellen mit den beiden Hauptansichten (<code class="docutils literal notranslate"><span class="pre">vw_qgep_Abwasserbauwerk</span></code> und <code class="docutils literal notranslate"><span class="pre">vw_qgep_Haltung</span></code>) zu verbinden. Dazu wird für jeden View eine YAML-Definitionsdatei verwendet, in der eine Liste von verbundenen Tabellen definiert wird. Felder dieser Tabellen werden als schreibgeschützte Felder verknüpft, da sie in Edit-Triggern verworfen werden. Für das Verknüpfen einer Tabelle zu <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, hier ein Beispiel:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">joins</span><span class="p">:</span>
   <span class="nt">my_extra_join</span><span class="p">:</span>
     <span class="nt">table</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">qgep_od.my_table</span>
