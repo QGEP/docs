@@ -10,6 +10,10 @@ General
 
 It's not unusual, that manholes are digitized the first time with low precision. Later the manholes are measured, and there is the need, to move the whole wastewater structure (means cover, node and reachpoints of all reaches) to the measuered point.
 
+.. note:: You need to turn on the advanced digitizing toolbar in your project to be able to select the **Move Feature** tool.
+
+.. figure:: images/advanced_digitizing_tools.jpg
+
 How to
 ------------
 
