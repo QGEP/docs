@@ -14,6 +14,7 @@ It's not unusual, that manholes are digitized the first time with low precision.
 
 .. figure:: images/advanced_digitizing_tools.jpg
 
+
 How to
 ------------
 
