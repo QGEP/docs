@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>1.2. Configuration du serveur de base de données &mdash; Documentation QGEP 0.8</title>
@@ -144,12 +143,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="setup-database-server">
+  <div class="section" id="setup-database-server">
 <h1><span class="section-number">1.2. </span>Configuration du serveur de base de données<a class="headerlink" href="#setup-database-server" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Si vous souhaitez accéder aux données depuis plusieurs postes de travail, vous pouvez installer la base de données sur un serveur de votre réseau. Pour un accès local uniquement, elle peut être installée sur le même poste.</p>
-<section id="required-software">
+<div class="section" id="required-software">
 <h2><span class="section-number">1.2.1. </span>Logiciels requis<a class="headerlink" href="#required-software" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="server-installation">
+<div class="section" id="server-installation">
 <h3><span class="section-number">1.2.1.1. </span>Installation du serveur<a class="headerlink" href="#server-installation" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Installer PostgreSQL (&gt;=9.6)</p>
@@ -166,9 +165,9 @@
 <p>Cela peut être fait en éditant le fichier de configuration d’accès à la base de données <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>. Pour cela changer l’option auth- de <code class="docutils literal notranslate"><span class="pre">md5</span></code> à <code class="docutils literal notranslate"><span class="pre">trust</span></code>. Il faut ensuite recharger le service de base de données pour activer les changements.</p>
 </div>
 <p>Pour optimiser l’espace RAM utilisé etc. sur votre machine postgreSQL, il faut utiliser <a class="reference external" href="http://www.pgtune.leopard.in.ua/#/">pgtune</a>. Il est possible d’adapter votre fichier postgresql.conf file.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

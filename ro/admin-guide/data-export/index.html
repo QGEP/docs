@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>3.3. Export INTERLIS Data &mdash; QGEP 0.8 documentație</title>
@@ -155,10 +154,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="export-interlis-data">
+  <div class="section" id="export-interlis-data">
 <h1><span class="section-number">3.3. </span>Export INTERLIS Data<a class="headerlink" href="#export-interlis-data" title="Link permanent la acest titlu">¶</a></h1>
 <p>This represents a guide on how to export data from QGEP to INTERLIS 2 Transfer Format (xtf).</p>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">3.3.1. </span>General<a class="headerlink" href="#general" title="Link permanent la acest titlu">¶</a></h2>
 <p>INTERLIS Export can be done using the ili2pg tool from Eisenhut Informatik and a series of prepared SQL scripts. They will do the following:</p>
 <ul class="simple">
@@ -168,23 +167,23 @@
 <li><p>Conversion of OID (16 characters) to foreign keys TID (integer)</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/interlisexport.jpg" src="../../_images/interlisexport.jpg" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="step-by-step">
+</div>
+<div class="section" id="step-by-step">
 <h2><span class="section-number">3.3.2. </span>Step by step<a class="headerlink" href="#step-by-step" title="Link permanent la acest titlu">¶</a></h2>
-<section id="tool">
+<div class="section" id="tool">
 <h3><span class="section-number">3.3.2.1. </span>Tool<a class="headerlink" href="#tool" title="Link permanent la acest titlu">¶</a></h3>
 <p>Download the latest version of <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/eisenhut.jpg" src="../../_images/eisenhut.jpg" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="generate-postgres-ili2pg-schema-with-data-model">
+</div>
+<div class="section" id="generate-postgres-ili2pg-schema-with-data-model">
 <h3><span class="section-number">3.3.2.2. </span>Generate postgres ili2pg schema with data model<a class="headerlink" href="#generate-postgres-ili2pg-schema-with-data-model" title="Link permanent la acest titlu">¶</a></h3>
 <p>a) Generate schema with data model
 You need the wanted INTERLIS model with all related models:</p>
@@ -236,32 +235,32 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><p><em>043_vsa_dss_2015_2_d_304_t_ili2db_attrname_add_column_owner_for_ili2pg301.sql</em> : Only needed if column does not exist yet (old ili2pg versions)</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/43.png" src="../../_images/43.png" />
-</figure>
+</div>
 </div></blockquote>
 <ul class="simple">
 <li><p><em>044_vsa_dss_2015_2_d_304_t_ili2db_classname_VSA_DSS_2015_2.sql</em> : insert VSA-DSS Model 2015 model classes</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/44.png" src="../../_images/44.png" />
-</figure>
+</div>
 </div></blockquote>
 <ul class="simple">
 <li><p><em>045_vsa_dss_2015_2_d_304_t_ili2db_model_VSA_DSS_2015_2.ili_metadata.sql</em> : insert VSA-DSS Model 2015 in metatable</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/45.png" src="../../_images/45.png" />
-</figure>
+</div>
 </div></blockquote>
 <ul class="simple">
 <li><p><em>047_vsa_dss_2015_2_d_340_t_ili2db_inheritance_create.sql</em></p></li>
 <li><p><em>048_vsa_dss_2015_2_d_340_t_ili2db_trafo_metadata.sql</em></p></li>
 </ul>
-</section>
-<section id="ili2pg-schema-explanation">
+</div>
+<div class="section" id="ili2pg-schema-explanation">
 <h3><span class="section-number">3.3.2.3. </span>ili2pg schema explanation<a class="headerlink" href="#ili2pg-schema-explanation" title="Link permanent la acest titlu">¶</a></h3>
 <p>All three ways create the vsa_dss tables and all related model tables:</p>
 <ul class="simple">
@@ -285,8 +284,8 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><p><strong>t_ili2_db_seq</strong>: new from ili2pg 3xx -&gt; fehlt in 03 – neu 021_erzeugen und Daten abfüllen TO DO</p></li>
 <li><p><strong>t_key_object</strong>: missing in script 03 -&gt; create with 046 and add data</p></li>
 </ul>
-</section>
-<section id="add-additional-functions">
+</div>
+<div class="section" id="add-additional-functions">
 <h3><span class="section-number">3.3.2.4. </span>Add additional functions<a class="headerlink" href="#add-additional-functions" title="Link permanent la acest titlu">¶</a></h3>
 <p>We then need a series of function for the schema transformation from the created ili2pg schema to the qgep schema</p>
 <ul class="simple">
@@ -296,20 +295,20 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><p><em>022_vsa_dss_2015_2_d_304_basket_update</em> : only for old versions of ili2pg if not created with step above</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/functions.png" src="../../_images/functions.png" />
-</figure>
+</div>
 </div></blockquote>
 <ul class="simple">
 <li><p><em>046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql</em> to create t_key_object if table does not exist and add data.</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/46.png" src="../../_images/46.png" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="run-the-export-queries-for-your-datamodel">
+</div>
+<div class="section" id="run-the-export-queries-for-your-datamodel">
 <h3><span class="section-number">3.3.2.5. </span>Run the export queries for your datamodel<a class="headerlink" href="#run-the-export-queries-for-your-datamodel" title="Link permanent la acest titlu">¶</a></h3>
 <p>For VSA-DSS export</p>
 <ul class="simple">
@@ -325,8 +324,8 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 <li><p>etc.</p></li>
 </ul>
 <p>But then the ili2pg schema needs to be created with SIA405 Abwasser model structure.</p>
-</section>
-<section id="export-data-from-ili2pg-schema-to-interlis">
+</div>
+<div class="section" id="export-data-from-ili2pg-schema-to-interlis">
 <h3><span class="section-number">3.3.2.6. </span>Export data from ili2pg schema to INTERLIS<a class="headerlink" href="#export-data-from-ili2pg-schema-to-interlis" title="Link permanent la acest titlu">¶</a></h3>
 <p>The following call exports the data into INTERLIS2 sia405abwasser (Version 2015)</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">ili2pg</span><span class="o">.</span><span class="n">jar</span> <span class="o">--</span><span class="n">trace</span> <span class="o">--</span><span class="n">export</span> <span class="o">--</span><span class="n">log</span> <span class="n">export_sia405abwasser_2015_2_d</span><span class="o">.</span><span class="n">log</span> <span class="o">--</span><span class="n">models</span> <span class="n">SIA405_Abwasser_2015</span> <span class="o">--</span><span class="n">dbhost</span> <span class="n">localhost</span> <span class="o">--</span><span class="n">dbport</span> <span class="mi">5432</span> <span class="o">--</span><span class="n">dbdatabase</span> <span class="n">qgep</span> <span class="o">--</span><span class="n">dbschema</span> <span class="n">sia405abwasser</span> <span class="o">--</span><span class="n">dbusr</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbpwd</span> <span class="n">yourpassword</span> <span class="n">export</span><span class="o">.</span><span class="n">xtf</span>
@@ -349,28 +348,28 @@ This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VS
 </pre></div>
 </div>
 <p>Needed models: <em>units.ili, base.ili, sia405_base.ili, SIA405_Abwasser_2014_2_d.ili</em></p>
-</section>
-<section id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
+</div>
+<div class="section" id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
 <h3><span class="section-number">3.3.2.7. </span>Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Link permanent la acest titlu">¶</a></h3>
 <p>see <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/">https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/</a>
 -&gt; Link to login at infogrips.</p>
-</section>
-<section id="open-issues">
+</div>
+<div class="section" id="open-issues">
 <h3><span class="section-number">3.3.2.8. </span>Open issues<a class="headerlink" href="#open-issues" title="Link permanent la acest titlu">¶</a></h3>
 <ul class="simple">
 <li><p>_text classe are not exported properly - no data in qgep</p></li>
 <li><p>check if status is exported correctly</p></li>
 </ul>
-</section>
-<section id="possible-problems">
+</div>
+<div class="section" id="possible-problems">
 <h3><span class="section-number">3.3.2.9. </span>Possible problems<a class="headerlink" href="#possible-problems" title="Link permanent la acest titlu">¶</a></h3>
 <ul class="simple">
 <li><p>compoundcurve to linestring needed</p></li>
 <li><p>2D -&gt; 3D coordinates (use ST_Force2D from postgis extension)</p></li>
 </ul>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

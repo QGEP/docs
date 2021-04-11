@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>3.5. Personnalisation du modèle de données &mdash; Documentation QGEP 0.8</title>
@@ -146,18 +145,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="customization-of-the-data-model">
+  <div class="section" id="customization-of-the-data-model">
 <h1><span class="section-number">3.5. </span>Personnalisation du modèle de données<a class="headerlink" href="#customization-of-the-data-model" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Ce chapître décrit les personnalisations possibles du modèle de données.</p>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2><span class="section-number">3.5.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le modèle de données est versionné et mis à jour à l’aide du Postgres Updates Manager (abr. <a class="reference external" href="https://github.com/opengisch/pum">PUM</a>). Les vues requises pour l’édition des données sont générées automatiquement en utilisant la <a class="reference external" href="https://github.com/opengisch/pirogue">librairie Pirogue</a>.</p>
 <p>La combinaison des deux rend possible l’introduction de petites personnalisations du modèle de données comme l’ajout de champs aux tables existantes ou l’extension de vues par jointure de tables additionnelles.</p>
 <p>Avant d’aller plus loin, nous recommandons fortement de soumettre la question à la communauté si des doutes apparaissent sur la manière de sauvegarder n’importe quelle information dans la base de données. QGEP est compatible avec la <a class="reference external" href="http://www.sia.ch/405">SIA 405</a> Eaux usées ainsi qu’avec le modèle de données <a class="reference external" href="http://dss.vsa.ch">VSA-DSS</a>.</p>
 <p>Dans le cas ou QGEP n’est actuellement pas en mesure de stocker certaines de vos données, merci de nous le faire savoir et de nous faire connaître l’utilisation qui y est associée. Le modèle de données QGEP est un modèle standard adaptatif qui devrait pouvoir suivre vos besoins.</p>
 <p>Dans le cas où une personnalisation est inévitable, les explications et règles suivantes expliquent comment adapter le modèle de données QGEP à vos besoins spécifiques.</p>
-</section>
-<section id="adding-fields">
+</div>
+<div class="section" id="adding-fields">
 <h2><span class="section-number">3.5.2. </span>Ajouter des champs<a class="headerlink" href="#adding-fields" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est autorisé d’ajouter des champs additionnels aux tables en les nommant avec le préfixe <code class="docutils literal notranslate"><span class="pre">usr_…</span></code>.</p>
 <p>If added in base tables, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:</p>
@@ -166,8 +165,8 @@
 <p class="admonition-title">Note</p>
 <p>When running data model upgrades using PUM, it will be required to use the additional option <code class="docutils literal notranslate"><span class="pre">--exclude-field-pattern</span> <span class="pre">'usr_%'</span></code></p>
 </div>
-</section>
-<section id="joining-additional-tables">
+</div>
+<div class="section" id="joining-additional-tables">
 <h2><span class="section-number">3.5.3. </span>Joindre des tables additionnelles<a class="headerlink" href="#joining-additional-tables" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est possible de joindre des tables supplémentaires aux deux vues principales (<code class="docutils literal notranslate"><span class="pre">vw_qgep_wastewater_structure</span></code> et <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>). Ceci est possible à l’aide du fichier de définition YAML pour chaque vue en définissant une liste des tables jointes. Les champs de ces tables sont joints en lecture seule étant donné que ces derniers ne sont pas pris en compte par les triggers d’édition. Dans le but de joindre une table à <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, voici un exemple :</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">joins</span><span class="p">:</span>
@@ -187,14 +186,14 @@
 <p>Ce fichier YAML doit recevoir le chemin du fichier au lancement du script :</p>
 <p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span> <span class="pre">--qgep_wastewater_structure_extra</span> <span class="pre">/path_to/extra_ws.yaml</span></code></p>
 <p>De la même manière pour la vue <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>, en spécifiant la variable <code class="docutils literal notranslate"><span class="pre">qgep_reach_extra</span></code> correspondant au chemin du fichier YAML.</p>
-</section>
-<section id="creating-custom-views">
+</div>
+<div class="section" id="creating-custom-views">
 <h2><span class="section-number">3.5.4. </span>Créer des vues personnalisées<a class="headerlink" href="#creating-custom-views" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est possible de créer des vues personnalisées et de les ajouter au modèle de données.</p>
 <p>Afin de permettre les mises à niveau du modèle de données, un script de création et un script de suppression de la vue doivent être fournis. Ces scripts (SQL ou Python) doivent être placés dans un endroit spécifique et être nommés pre-all.{py,sql} et post-all.{py,sql}. Le chemin sera donné comme paramètre à PUM lors de la mise à niveau  (voir PUM <a class="reference external" href="https://github.com/opengisch/pum">documentation</a>).</p>
 <p>Si quelqu’un souhaite avoir ces vues mises à jour automatiquement lors d’une mise à jour du modèle, Pirogue peut être utilisé dynamiquement pour générer les vues. L’exemple de création des vues dans le modèle peut être utilisé.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

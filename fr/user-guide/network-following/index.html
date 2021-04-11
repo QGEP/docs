@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.5. Outils de poursuite de réseau &mdash; Documentation QGEP 0.8</title>
@@ -149,9 +148,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="network-following-tools">
+  <div class="section" id="network-following-tools">
 <h1><span class="section-number">2.5. </span>Outils de poursuite de réseau<a class="headerlink" href="#network-following-tools" title="Lien permanent vers ce titre">¶</a></h1>
-<section id="refresh-network-topology">
+<div class="section" id="refresh-network-topology">
 <h2><span class="section-number">2.5.1. </span>Rafraîchir la topologie du réseau<a class="headerlink" href="#refresh-network-topology" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Avant d’utiliser l’outil de suivis de réseau, assurez-vous que la topologie du réseau a été rafraîchie</p></li>
@@ -159,16 +158,16 @@
 <li><p>Cliquer sur l’outil <strong>refresh network topology</strong> dans le plugin QGEP</p></li>
 <li><p>Le message <strong>Success: Network successfully updated</strong> s’affiche si cela a fonctionné</p></li>
 </ul>
-</section>
-<section id="upstream">
+</div>
+<div class="section" id="upstream">
 <h2><span class="section-number">2.5.2. </span>Flux amont<a class="headerlink" href="#upstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Peu importe la couche sélectionnée</p></li>
 <li><p>Pour débuter la poursuite de réseau amont, sélectionnez le bouton <strong>Amont</strong> dans  QGEP et cliquez ensuite sur un noeud:</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/network_upstream_button.jpg" src="../../_images/network_upstream_button.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Une fenêtre de profil s’ouvre alors dans le bas de la carte. Cliquez sur le nœud de départ</p></li>
 <li><p>S’il y a plus d’un noeud dans la zone, sélectionner le bon dans la liste</p></li>
@@ -177,16 +176,16 @@
 <p class="admonition-title">Attention</p>
 <p>With qgepplugin 1.1.8 / QGIS 3.4.2, it’s a good idea to zoom in so far, that you can choose your start node without having any other node nearby. If you choose the node from the mouse-list, you may get unexpected results.</p>
 </div>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/network_select_start_node.jpg" src="../../_images/network_select_start_node.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Au bout de quelques secondes, tous les tronçons du flux amont seront surlignés et vous pourrez visualiser la provenance des eaux.</p></li>
 <li><p>If you want to select the highlighted reaches, then click on the <strong>Select current path</strong> button in the profile window</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/network_select_currentpath.jpg" src="../../_images/network_select_currentpath.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>You can now work with your reach selection in the attribute table or zoom to the selected reaches (if the vw_qgep_reach layer is selected)</p></li>
 <li><p>Use this tool to check if the topology of your network is correct.</p></li>
@@ -195,22 +194,22 @@
 <p class="admonition-title">Note</p>
 <p>In the button select current path, you have a menu <strong>Configure Select</strong>. This is prepared to select later not only the path, put also the catchment areas that are connected to the path. This feature is not working with qgepplugin 1.1.8.</p>
 </div>
-</section>
-<section id="downstream">
+</div>
+<div class="section" id="downstream">
 <h2><span class="section-number">2.5.3. </span>Flux aval<a class="headerlink" href="#downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>La poursuite de réseau flux aval fonctionne de la même façon que la poursuite de réseau flux amont décrite ci-dessus.</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/network_downstream_button.jpg" src="../../_images/network_downstream_button.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Vous pouvez voir l’écoulement de l’eau.</p></li>
 <li><p>Control, if QGEP finds also the overflows</p></li>
 <li><p>Utilisez ceci pour contrôler si la topologie de votre réseau est correcte ou pour découvrir à quel endroit vous pourriez intervenir en cas d’accident.</p></li>
 </ul>
-</section>
-<section id="sum-up-upstream">
+</div>
+<div class="section" id="sum-up-upstream">
 <span id="sumupupstream"></span><h2><span class="section-number">2.5.4. </span>Sum up upstream<a class="headerlink" href="#sum-up-upstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>C’est un outil dans la boîte à outils QGEP.</p></li>
@@ -218,25 +217,25 @@
 <li><p>For this tool you need a field in the layer vw_qgep_reach with the values to sum up. Because interesting values are normally not part of this layer, you have first to join the value-field (e.g flowtime or flow rate) to the layer vw_qgep_reach.</p></li>
 <li><p>As example look at this small network, labeled with reach-identifier, length and flow direction arrow</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/sumupupstream-example.jpg" src="../../_images/sumupupstream-example.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>We need a table (in the example called sum up tool) with at least two fields: field identifier for the join and field flow rate (in the example in [m/s]) to sum up.</p></li>
 <li><p>Open the properties of layer vw_qgep_reach, choose <strong>Joins</strong> and <strong>Add new join</strong> (green + Button) and define the join with the join field (identifier) and the joined fields (field to sum up).</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/sumupupstream-join1.jpg" src="../../_images/sumupupstream-join1.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Start the tool with double-click one <strong>Sum up upstream</strong></p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
-</figure>
-<figure class="align-default">
+</div>
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>In the window you have to enter/to choose</p>
 <ul>
@@ -247,16 +246,16 @@
 </ul>
 </li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/sumupupstream-tool.jpg" src="../../_images/sumupupstream-tool.jpg" />
-</figure>
+</div>
 <p>The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field <strong>value</strong> with the sum for each wastewater node.
 * In the figure below you see the result of the example with all three branch behaviours: minimum = normal style, maximum = bold, average = underscored</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/sumupupstream-resultat.jpg" src="../../_images/sumupupstream-resultat.jpg" />
-</figure>
-</section>
-<section id="flow-times-downstream">
+</div>
+</div>
+<div class="section" id="flow-times-downstream">
 <h2><span class="section-number">2.5.5. </span>Temps d’écoulement en amont du réseau.<a class="headerlink" href="#flow-times-downstream" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>C’est un outil dans la boîte à outils QGEP.</p></li>
@@ -265,12 +264,12 @@
 <li><p>Vous devez sélectionner la conduite de départ (p.e. à l’endroit ou à eu lieu l’accident) dans la couche vw_qgep_reach.</p></li>
 <li><p>Démarré l’outil en double-cliquant sur <strong>Flow times downstream</strong></p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
-</figure>
-<figure class="align-default">
+</div>
+<div class="figure align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Dans la fenêtre qui s’ouvre, choisissez</p>
 <ul>
@@ -282,15 +281,15 @@
 </ul>
 </li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_window.jpg" src="../../_images/flow_time_downstream_window.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>L’outil effectue une recherche de l’écoulement aval à partir de la conduite sélectionnée comme point de départ.  Un champ par conduite est enregistré avec la somme des temps d’écoulement.</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/flow_time_downstream_result.jpg" src="../../_images/flow_time_downstream_result.jpg" />
-</figure>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>S’il y a plus d’un chemin possible pour l’écoulement aval, les résultats seront faux après l’embranchement.</p>
@@ -304,8 +303,8 @@
 </ul>
 </li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

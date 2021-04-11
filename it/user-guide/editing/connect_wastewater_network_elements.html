@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.4. Connect Wastewater Network Elements &mdash; QGEP 0.8 documentazione</title>
@@ -156,19 +155,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="connect-wastewater-network-elements">
+  <div class="section" id="connect-wastewater-network-elements">
 <span id="id1"></span><h1><span class="section-number">2.3.4. </span>Connect Wastewater Network Elements<a class="headerlink" href="#connect-wastewater-network-elements" title="Link a questa intestazione">¶</a></h1>
 <p>This represents a guide on how to connect wastewater network elements in QGEP.</p>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">2.3.4.1. </span>General<a class="headerlink" href="#general" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>QGEP has a tool to connect wastewater network elements</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connect_wastewater_network_elements_button1.jpg" src="../../_images/connect_wastewater_network_elements_button1.jpg" />
-</figure>
-</section>
-<section id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
+</div>
+</div>
+<div class="section" id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
 <h2><span class="section-number">2.3.4.2. </span>How to connect reaches to nodes or reaches to reaches<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>It does not matter, which layer is selected</p></li>
@@ -177,29 +176,29 @@
 <li><p>If you move the mouse over an reach, that can be connected, it is marked: you can click</p></li>
 <li><p>Move the mouse to the network element, to which the first object will be connected (again: selectable objects get marked) and click again</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_1.jpg" src="../../_images/connecting_1.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>A window appears, where you can choose, which connection will be defined. If you connect a reach, the window looks like this:</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_2.jpg" src="../../_images/connecting_2.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>If everything is ok, you will see a message in a blue bar on top of the map-window</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_3.jpg" src="../../_images/connecting_3.jpg" />
-</figure>
-</section>
-<section id="video-tutorial">
+</div>
+</div>
+<div class="section" id="video-tutorial">
 <h2><span class="section-number">2.3.4.3. </span>Video Tutorial<a class="headerlink" href="#video-tutorial" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>See <a class="reference external" href="https://vimeo.com/171536774">this video tutorial (QGIS version 2):</a></p></li>
 </ul>
-</section>
-<section id="how-to-delete-a-connection">
+</div>
+<div class="section" id="how-to-delete-a-connection">
 <h2><span class="section-number">2.3.4.4. </span>How to delete a connection<a class="headerlink" href="#how-to-delete-a-connection" title="Link a questa intestazione">¶</a></h2>
 <p>There is no special tool in the moment to delete a connection between network elements.</p>
 <ul class="simple">
@@ -207,17 +206,17 @@
 <li><p>Click on the <strong>Identify Features</strong> button and select the reach to modify by double clicking</p></li>
 <li><p>Delete the value in the <strong>rp_…_fk_wastewater_networkelement</strong> field to delete the connection</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_delete_connection.jpg" src="../../_images/connecting_delete_connection.jpg" />
-</figure>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Be aware of the “VSA Erfassungsgrundsätze”: A reach point from (rp_from_fk_wastewater_networkelement) should never be connected to another reach.</p>
 </div>
 <p>For example, when you have a reach discharging directly into another one without a structure between the two, the upstream reach should be connected to the downstream reach (rp_from_fk_wastewater_networkelement = downstream reach).
 But inversely, the downstream reach shouldn’t be connected to the upstream one. This rule is for swwf-channels (secondary network). In pwwf-network, there must be always a node between to reaches.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

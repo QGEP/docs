@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>1.2. Datenbankserver aufsetzen &mdash; QGEP 0.8 Dokumentation</title>
@@ -144,12 +143,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="setup-database-server">
+  <div class="section" id="setup-database-server">
 <h1><span class="section-number">1.2. </span>Datenbankserver aufsetzen<a class="headerlink" href="#setup-database-server" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden. Dies im Gegensatz zu einer lokalen Einplatz-Installation</p>
-<section id="required-software">
+<div class="section" id="required-software">
 <h2><span class="section-number">1.2.1. </span>Benötigte Software<a class="headerlink" href="#required-software" title="Link zu dieser Überschrift">¶</a></h2>
-<section id="server-installation">
+<div class="section" id="server-installation">
 <h3><span class="section-number">1.2.1.1. </span>Server installation<a class="headerlink" href="#server-installation" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li><p>PostgreSQL (&gt;=9.6) installieren</p>
@@ -166,9 +165,9 @@
 <p>Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a> und setzen Sie die auth-options von``md5`` auf <code class="docutils literal notranslate"><span class="pre">trust</span></code>. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden.</p>
 </div>
 <p>To optimise RAM size etc. of your machine postgreSQL is running on you can use <a class="reference external" href="http://www.pgtune.leopard.in.ua/#/">pgtune</a>. Adapt your postgresql.conf file.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

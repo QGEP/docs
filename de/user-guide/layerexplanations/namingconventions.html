@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.1.3. Namenskonventionen &mdash; QGEP 0.8 Dokumentation</title>
@@ -154,9 +153,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="naming-conventions">
+  <div class="section" id="naming-conventions">
 <h1><span class="section-number">2.1.3. </span>Namenskonventionen<a class="headerlink" href="#naming-conventions" title="Link zu dieser Überschrift">¶</a></h1>
-<section id="schemas-in-the-qgep-database">
+<div class="section" id="schemas-in-the-qgep-database">
 <h2><span class="section-number">2.1.3.1. </span>Schemas in der QGEP-Datenbank<a class="headerlink" href="#schemas-in-the-qgep-database" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die QGEP-Datenbank hat sechs qgep-Schemas:</p>
 <ul class="simple">
@@ -166,8 +165,8 @@
 <li><p>qgep_sys: Spezielle Tabellen für die Administration der Datenbank. Als QGEP-User kann man diese Tabellen nicht bearbeiten.</p></li>
 <li><p>qgep_iimport und qgep_swmm: Schema für zusätzliche Plugins/Funktionen (QField und Arbeiten mit SWMM)</p></li>
 </ul>
-</section>
-<section id="layer-names">
+</div>
+<div class="section" id="layer-names">
 <h2><span class="section-number">2.1.3.2. </span>Layer Bezeichnungen<a class="headerlink" href="#layer-names" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Layer Namen haben oft Präfixe wie <a href="#id1"><span class="problematic" id="id2">od_</span></a> oder <a href="#id3"><span class="problematic" id="id4">vl_</span></a>.</p></li>
@@ -181,8 +180,8 @@
 <li><p>Layer <a href="#id7"><span class="problematic" id="id8">vw_network_</span></a></p></li>
 </ul>
 <p>Das sind Views im Schema qgep_network</p>
-</section>
-<section id="attibute-names">
+</div>
+<div class="section" id="attibute-names">
 <h2><span class="section-number">2.1.3.3. </span>Feldnamen<a class="headerlink" href="#attibute-names" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Präfixe in Feldnamen</p></li>
@@ -196,8 +195,8 @@
 <li><p>_ Felder</p></li>
 </ul>
 <p>Felder die mit _ (Unterstrich) beginnen sind berechnete Felder. Man findet sie in den Schemas nicht. Beispiele: _slope_per_mill (_GefaellePromille) in vw_qgep_Haltung. _Kanal_Nutzungsart_ist in vw_qgep_Abwasserbauwerk ist berechnet aus dem Feld Nutzungsart_Ist des Kanales, der über die Fremdschlüsselfelder der Abwassernetzelemente als Auslauf mit dem Schacht verknüpft ist.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

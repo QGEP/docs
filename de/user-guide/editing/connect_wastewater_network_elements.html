@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.4. Abwassernetzwerkselemente verbinden &mdash; QGEP 0.8 Dokumentation</title>
@@ -156,19 +155,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="connect-wastewater-network-elements">
+  <div class="section" id="connect-wastewater-network-elements">
 <span id="id1"></span><h1><span class="section-number">2.3.4. </span>Abwassernetzwerkselemente verbinden<a class="headerlink" href="#connect-wastewater-network-elements" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Eine Anleitung zur Verbindung von Abwassernetzelementen in QGEP</p>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">2.3.4.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>QGEP verfügt über ein Werkzeug um Abwassernetzelemente zu verbinden</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connect_wastewater_network_elements_button1.jpg" src="../../_images/connect_wastewater_network_elements_button1.jpg" />
-</figure>
-</section>
-<section id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
+</div>
+</div>
+<div class="section" id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
 <h2><span class="section-number">2.3.4.2. </span>Ein Haltung mit einem Knoten oder einer anderen Haltung verbinden<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Es spielt keine Rolle, welcher Layer ausgewählt ist</p></li>
@@ -177,29 +176,29 @@
 <li><p>Wenn der Mausezeiger über ein Haltung fährt, die verknüpft werden kann, dann wird die Haltung markiert: jetzt kann man klicken</p></li>
 <li><p>Den Mausezeiger zu einem Abwassernetzelement führen, mit dem das erste Objekt verknüpft werden soll (wieder werden wählbare Objekte markiert) und dort wieder klicken</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_1.jpg" src="../../_images/connecting_1.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Ein Fenster erscheint, in dem gewählt werden kann, welche Verknüpfung definiert wird. Wenn eine Haltung verknüpft wird, sieht das Fenster so aus:</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_2.jpg" src="../../_images/connecting_2.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Wenn die Verknüpfung gespeichert wurde, erscheint ein blauer Mitteilungsbalken oben im Kartenfenster</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_3.jpg" src="../../_images/connecting_3.jpg" />
-</figure>
-</section>
-<section id="video-tutorial">
+</div>
+</div>
+<div class="section" id="video-tutorial">
 <h2><span class="section-number">2.3.4.3. </span>Video Tutorial<a class="headerlink" href="#video-tutorial" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Vgl <a class="reference external" href="https://vimeo.com/171536774">das Video Tutorial (QGIS version 2):</a></p></li>
 </ul>
-</section>
-<section id="how-to-delete-a-connection">
+</div>
+<div class="section" id="how-to-delete-a-connection">
 <h2><span class="section-number">2.3.4.4. </span>Eine Verknüpfung löschen<a class="headerlink" href="#how-to-delete-a-connection" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Zur Zeit gibt es kein spezielles Werkzeug, um eine Verknüpfung zwischen Abwassernetzwerkelementen zu löschen.</p>
 <ul class="simple">
@@ -207,16 +206,16 @@
 <li><p>Wähle das <strong>Info</strong> Werkzeug und doppelklicke die Haltung, welche geändert werden soll</p></li>
 <li><p>Lösche den Wert in Feld <strong>rp_…_fk_wastewater_networkelement</strong>, um die Verknüpfung zu löschen</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/connecting_delete_connection.jpg" src="../../_images/connecting_delete_connection.jpg" />
-</figure>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Beachte die ‚VSA Erfassungsgrundsätze‘: Ein von-Haltungspunkt (rp_from_fk_wastewater_networkelement) soll nie mit einer anderen Haltung verknüpft werden.</p>
 </div>
 <p>Beispiel: Wenn eine Haltung direkt mit einer anderen Haltung verknüpft ist ohne ein Schachtbauwerk, dann soll die obere Haltung mit der unteren Haltung verknüpft werden (rp_from_fk_wastewater_networkelement = downstream reach). Aber die untere Haltung darf in diesem Fall nicht mit der oberen Haltung verknüpft werden. Diese Regel gilt für SAA-Kanäle (sekundäres Netzwerk). In einem PAA-Netzwerk sind immer Knoten zwischen den Haltungen verknüpft.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

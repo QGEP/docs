@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>3.4. Import de données INTERLIS &mdash; Documentation QGEP 0.8</title>
@@ -156,10 +155,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="import-interlis-data">
+  <div class="section" id="import-interlis-data">
 <h1><span class="section-number">3.4. </span>Import de données INTERLIS<a class="headerlink" href="#import-interlis-data" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Guide pour l’import de données dans QGEP à partir du format de transfert d” INTERLIS 2 (xtf).</p>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">3.4.1. </span>Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’import INTERLIS peut être réalisé en utilisant l’outil illi2pg d’Eisnhut Informatik et une série de scripts SQL préconfigurés. Ceux-ci vont réaliser:</p>
 <ul class="simple">
@@ -169,23 +168,23 @@
 <li><p>Conversion of foreign keys TID (integer) to OID (16 characters) again</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/interlisimport.jpg" src="../../_images/interlisimport.jpg" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="step-by-step">
+</div>
+<div class="section" id="step-by-step">
 <h2><span class="section-number">3.4.2. </span>Pas à pas<a class="headerlink" href="#step-by-step" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="tool">
+<div class="section" id="tool">
 <h3><span class="section-number">3.4.2.1. </span>Outil<a class="headerlink" href="#tool" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Télécharger la dernière version de <a class="reference external" href="http://eisenhutinformatik.ch/interlis/ili2pg">ili2pg</a></p>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/eisenhut1.jpg" src="../../_images/eisenhut1.jpg" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="generate-ili2pg-schema-with-data-model">
+</div>
+<div class="section" id="generate-ili2pg-schema-with-data-model">
 <h3><span class="section-number">3.4.2.2. </span>Generate ili2pg schema with data model<a class="headerlink" href="#generate-ili2pg-schema-with-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>You need a valid INTERLIS 2 Transferdataset, the corresponding INTERLIS model</p>
 <p>This example uses the Transferdataset transferdatensatz2015_d_mod.xtf and the VSA-DSS 2015 Modell file with all it’s corresponding models.</p>
@@ -216,8 +215,8 @@
 <p class="admonition-title">Note</p>
 <p>If the INTERLIS model is German, then the ili2pg schema will have German table names. If the model is French, then it will be in French.</p>
 </div>
-</section>
-<section id="add-additional-functions">
+</div>
+<div class="section" id="add-additional-functions">
 <h3><span class="section-number">3.4.2.3. </span>Ajoute des fonctions additionnelles<a class="headerlink" href="#add-additional-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>We then need a series of function for the schema transformation from the created ili2pg schema to the <code class="docutils literal notranslate"><span class="pre">qgep</span></code> schema</p>
 <ul class="simple">
@@ -227,35 +226,35 @@
 <li><p><em>046_vsa_dss_2015_2_d_304_t_key_object_insert_metadata.sql</em>  to create t_key_object if table does not exist.</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/functions1.png" src="../../_images/functions1.png" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-<section id="add-additional-view">
+</div>
+<div class="section" id="add-additional-view">
 <h3><span class="section-number">3.4.2.4. </span>Ajout d’une vue additionnelle<a class="headerlink" href="#add-additional-view" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Cette vue est nécessaire pour importer des requêtes et doit être ajoutée auparavant au schéma illi2pg</p>
 <ul class="simple">
 <li><p><em>050_vsa_dss_2015_2_d_304_import_vw_sia405_baseclass_metattribute.sql</em></p></li>
 </ul>
-</section>
-<section id="add-two-other-functions">
+</div>
+<div class="section" id="add-two-other-functions">
 <h3><span class="section-number">3.4.2.5. </span>Ajouter deux autres fonctions<a class="headerlink" href="#add-two-other-functions" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p><em>053_create_key_object_seq.sql</em> : key_objects_seq function copies the latest seq value into table t_key_object</p></li>
 <li><p><em>054_create_function_meta_organisation.sql</em> : This creates the function meta_organisation. This function allows to generate a new dataset in table organisation and all related needed metatables (baseclass, sia405_baseclass etc.) with an obj_id you specify</p></li>
 </ul>
-</section>
-<section id="modify-metadata-and-organisation-data">
+</div>
+<div class="section" id="modify-metadata-and-organisation-data">
 <h3><span class="section-number">3.4.2.6. </span>Modification des métadonnées et organisation des données<a class="headerlink" href="#modify-metadata-and-organisation-data" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p><em>055_select meta_organisation_bezeichnung_obj_id.sql</em></p></li>
 </ul>
 <p>Lancer cette fonction avant d’importer les données depuis illi2pg vers le schéma QGEP, sinon vous rencontrerez des problèmes pour importer les champs fk_dataowner / fk_provider s’ils ne comportent pas un obj_id valide mais une autre forme d’identifiant (p.  ex. avec le jeu de données pour transfert_VSA_DSS.xtf)</p>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/set_key_object_seq.png" src="../../_images/set_key_object_seq.png" />
-</figure>
+</div>
 </div></blockquote>
 <p>Set t_key_object to latest sequence of project so that tid (integer) is correct:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">key_object_seq</span><span class="p">;</span>
@@ -277,16 +276,16 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SELECT</span> <span class="n">vsa_dss_2015_2_d_304</span><span class="o">.</span><span class="n">meta_organisation</span><span class="p">(</span><span class="s1">&#39;SBU&#39;</span><span class="p">,</span> <span class="s1">&#39;ch080qwzOG000099&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="run-the-import-queries-for-your-datamodel">
+</div>
+<div class="section" id="run-the-import-queries-for-your-datamodel">
 <h3><span class="section-number">3.4.2.7. </span>Lancez les requêtes d’import  pour votre modèle de données<a class="headerlink" href="#run-the-import-queries-for-your-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p><em>060_sia405_interlisimport.sql</em> pour l’import SIA405 2015</p></li>
 <li><p><em>060_dss_interlisimport.sql</em> pour l’import VSA-DSS 2015</p></li>
 <li><p><em>060_dss_2008_xxx.sql</em> pour la version 2008</p></li>
 </ul>
-</section>
-<section id="create-a-batch-job">
+</div>
+<div class="section" id="create-a-batch-job">
 <h3><span class="section-number">3.4.2.8. </span>Crée un traitement par lots (batch job)<a class="headerlink" href="#create-a-batch-job" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous pouvez également lancer toutes les requêtes SQL en un traitement par lots (batch job), en voici un exemple:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rem</span> <span class="n">bat</span> <span class="ow">and</span> <span class="n">sql</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">directory</span>
@@ -301,22 +300,22 @@ select meta_organisation_bezeichnung_obj_id.sql as template:</p>
 <code class="docutils literal notranslate"><span class="pre">-d</span></code> sets the dbname
 <code class="docutils literal notranslate"><span class="pre">-f</span></code> sets the filenam</p>
 <p>Pour plus d’informations, voir <a class="reference external" href="https://www.postgresql.org/docs/9.2/static/app-psql.html">https://www.postgresql.org/docs/9.2/static/app-psql.html</a></p>
-</section>
-<section id="open-issues">
+</div>
+<div class="section" id="open-issues">
 <h3><span class="section-number">3.4.2.9. </span>Questions en suspens<a class="headerlink" href="#open-issues" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Une seule classe texte par élément est actuellement supportée - nécessite CASE WHEN pour <code class="docutils literal notranslate"><span class="pre">vali</span> <span class="pre">/</span> <span class="pre">hali</span></code> ( à faire si nécessité)</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/textref.jpg" src="../../_images/textref.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>If data is exported from DABASE or other systems it may be that the <strong>reach</strong>.trace has double point or that is going from <strong>wastewater_node</strong> to <strong>wastewater_node</strong> instead of <strong>reach_point</strong> to <strong>reach_point</strong>. Looking for a solution to automatically check after import and « clean » linestring.</p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="possible-problems">
+</div>
+<div class="section" id="possible-problems">
 <h3><span class="section-number">3.4.2.10. </span>Problèmes éventuels<a class="headerlink" href="#possible-problems" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Certaines clés étrangères sont manquantes dans le schéma « Données démo » de QGEP:
@@ -336,13 +335,13 @@ Detail: Schlüssel „(identifier, fk_dataowner)=(V1.100, ch080qwzOG000098)“ e
 <li><p>Change identifier V1.100 to V1.100.2 in class <strong>abwasserbauwerk</strong> for Transferdatensatz VSA 2015 to avoid conflict in qgep schema having the same combination identifier / fk_dataowner.</p></li>
 </ul>
 <blockquote>
-<div><figure class="align-default">
+<div><div class="figure align-default">
 <img alt="../../_images/unique_identifier_dataowner.jpg" src="../../_images/unique_identifier_dataowner.jpg" />
-</figure>
+</div>
 </div></blockquote>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.1. Datenerfassung &mdash; QGEP 0.8 Dokumentation</title>
@@ -158,7 +157,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="data-entry">
+  <div class="section" id="data-entry">
 <h1><span class="section-number">2.2.1. </span>Datenerfassung<a class="headerlink" href="#data-entry" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Es gibt grundsätzlich zwei Arten der Datenerfassung:</p>
 <ul>
@@ -175,17 +174,17 @@
 </li>
 </ul>
 <p>Die Datenerfassung in QGEP benötigt etwas Verständnis des zugrundeliegenden Datenmodells <cite>VSA-DSS &lt;http://dss.vsa.ch&gt;</cite>, wird aber erleichtert durch einen Datenerfassungsassistenten und Formulare, welche die verschiedenen Tabellen korrekt miteinander verbinden. Vor allem die Verknüpfung von Schächten und Haltungen zu einem kompletten Kanalisationsnetzwerk ist automatisiert und kann mit dem Netz-Verfolgungswerkzeug kontrolliert werden.</p>
-<section id="the-qgep-wizard">
+<div class="section" id="the-qgep-wizard">
 <h2><span class="section-number">2.2.1.1. </span>Der QGEP Wizard (Zauberer)<a class="headerlink" href="#the-qgep-wizard" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit dem QGEP Wizard können Schächte und Kanäle mit wenigen Mausklicks digitalisiert werden.</p>
 <p>Um mit der Datenerfassung zu starten wählen Sie den QGEP Knopf <strong>Wizard</strong></p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/button_data_entry_wizard_selected.jpg" src="../../_images/button_data_entry_wizard_selected.jpg" />
-</figure>
+</div>
 <p>Auf der linken unteren Seite erscheint das <strong>QGEP Digitizing</strong> Fenster.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
-</figure>
+</div>
 <p>Klicken Sie auf <strong>Start Data entry</strong> um den Bearbeitungsmodus zu starten.</p>
 <p>Wähle <strong>Wastewater Structure</strong> oder <strong>Reach</strong>. Starte mit dem Erfassen neuer Datensätze in vw_qgep_wastewater_structure oder vw_qgep_reach.</p>
 <p>Es ist nicht notwendig, den entsprechenden Layer im Layer-Fenster auszuwählen, der Bearbeitungsstatus muss nicht umgeschaltet werden und es muss kein Objekt hinzufügen-Werkzeug gewählt werden.</p>
@@ -204,8 +203,8 @@
 <p>Beim Digitalisieren ist es empfehlenswert, zuerst die Schächte zu erfassen. Danach kann mit den Haltungen einfach auf die Schächte geschnappt werden.</p>
 </div>
 <p>Die <strong>Advanced Digitizing</strong> Werkzeuge können zusammen mit dem Wizard eingesetzt werden.</p>
-</section>
-<section id="qgis-standard-tools">
+</div>
+<div class="section" id="qgis-standard-tools">
 <h2><span class="section-number">2.2.1.2. </span>QGIS Standard Werkzeuge<a class="headerlink" href="#qgis-standard-tools" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn in anderen Layern als  vw_qgep_wastewater_structure oder vw_qgep_reach digitalisiert wird, werden die QGIS Standard Werkzeuge verwendet:</p>
 <ul class="simple">
@@ -215,8 +214,8 @@
 <li><p>Wähle das <strong>Objekt hinzufügen</strong> Werkzeug</p></li>
 </ul>
 <p>Es ist auch möglich, in den beiden QGEP Hauptlayern mit den QGIS Standardwerkzeugen zu arbeiten. Aber dann gibt es keine automatische Verknüpfung von Abwassenetzelementen in den fk-Feldern der Haltungspunkte und kein bevorzugtes Schnappen auf Abwasserknoten.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

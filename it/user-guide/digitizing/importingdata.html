@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.8. Importing data &mdash; QGEP 0.8 documentazione</title>
@@ -159,11 +158,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="importing-data">
+  <div class="section" id="importing-data">
 <h1><span class="section-number">2.2.8. </span>Importing data<a class="headerlink" href="#importing-data" title="Link a questa intestazione">¶</a></h1>
 <p>It is quite easy to import data (geometry and attributes) from an external software.
 Here is a general discription and a specific example.</p>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">2.2.8.1. </span>General<a class="headerlink" href="#general" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>You have to add the data you want to import as (vector) layer into the QGEP project.</p></li>
@@ -173,59 +172,59 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
 <li><p>If there is a field with valuelist, you have to use the code, not the plain text.</p></li>
 <li><p>If your fields are prepared as described above, then just copy and paste in the QGEP-layer.</p></li>
 </ul>
-</section>
-<section id="example-importing-manholes-from-a-txt-file">
+</div>
+<div class="section" id="example-importing-manholes-from-a-txt-file">
 <h2><span class="section-number">2.2.8.2. </span>Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>Change the fieldnames to identifier, x, y, co_level</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/importdata_txtfile.jpg" src="../../_images/importdata_txtfile.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Open the txt-file with <span class="menuselection">Layer ‣ Add Layer ‣ Add Delimited Text Layer…</span>.</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/importdata_opentxtfile.jpg" src="../../_images/importdata_opentxtfile.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>You have now a vector-layer with your points in the QGEP-project</p></li>
 <li><p>Select the points of the new layer</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/importdata_selectpoints.jpg" src="../../_images/importdata_selectpoints.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Choose <span class="menuselection">Edit ‣ Copy Features</span>.</p></li>
 <li><p>Select the vw_qgep_wastewater_structure layer and set it editable</p></li>
 <li><p>Choose <span class="menuselection">Edit ‣ Paste Features</span>.</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/importdata_5newpoints.jpg" src="../../_images/importdata_5newpoints.jpg" />
-</figure>
-<figure class="align-default">
+</div>
+<div class="figure align-default">
 <img alt="../../_images/importdata_5newpointstable.jpg" src="../../_images/importdata_5newpointstable.jpg" />
-</figure>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>The ws_type is set as default to manhole. The identifier is used not only for the wastewater_structure, but also as cover_identifier and as wastewaternode_identifier.</p>
 </div>
-</section>
-<section id="example-importing-manholes-with-attributes">
+</div>
+<div class="section" id="example-importing-manholes-with-attributes">
 <h2><span class="section-number">2.2.8.3. </span>Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>Example to add additional attributes</p></li>
 </ul>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/importdata_txtfile2.jpg" src="../../_images/importdata_txtfile2.jpg" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>The field ws_type is an exception. Possible values are manhole, special_structure, infiltration_installation, discharge_point.</p></li>
 <li><p>For other fields with valuelists you have to use the code.</p></li>
 <li><p>In the example above, the values for ma_function in the row discharge_point or special_structure has no effect.</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

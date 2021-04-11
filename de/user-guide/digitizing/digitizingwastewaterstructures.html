@@ -5,8 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.2. Abwasserbauwerke digitalisieren &mdash; QGEP 0.8 Dokumentation</title>
@@ -160,23 +159,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="digitizing-wastewater-structures">
+  <div class="section" id="digitizing-wastewater-structures">
 <span id="id1"></span><h1><span class="section-number">2.2.2. </span>Abwasserbauwerke digitalisieren<a class="headerlink" href="#digitizing-wastewater-structures" title="Link zu dieser Überschrift">¶</a></h1>
-<section id="general">
+<div class="section" id="general">
 <h2><span class="section-number">2.2.2.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QGEP verfügt über einen Assistenten, um Schächte und Sonderbauwerke einfach zu erfassen. Siehe dazu Kapitel <span class="xref std std-ref">wizard</span>.</p>
 <p>Wähle den <strong>Wizard</strong> Knopf, klicke dann auf <strong>Start Data Entry</strong> und wähle dann <strong>Wastewater Structure</strong> im Dropdown-Menu</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
-</figure>
-</section>
-<section id="digitizing">
+</div>
+</div>
+<div class="section" id="digitizing">
 <h2><span class="section-number">2.2.2.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der Cursor ändert  zum Digitalisierungssymbol und es kann der Standort des neuen Punktelementes festgelegt werden.</p>
 <p>Es öffnet das <strong>vw_gep_wastewater_structure</strong> Formular und die Daten können im Reiter <strong>Allgemein</strong> eingetragen werden:</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" />
-</figure>
+</div>
 <p>Wähle den Abwasserbauwerk-Typ (vorgewählt ist ‚Normschacht‘):</p>
 <ul class="simple">
 <li><p>Normschacht</p></li>
@@ -200,20 +199,20 @@
 <p>In den Reitern Deckel, Bauwerkteile, Abwasserknoten und Erhaltungsereignisse können keine neuen Datensätze hinzugefügt werden, weil zuerst der Abwasserbauwerk-Datensatz in der Datenbank gesichert werden muss. Die <strong>Aktionen</strong> können aus dem gleichen Grund auch noch nicht benutzen werden. Zuerst muss der Datensatz gesichert werden.</p>
 </div>
 <p><strong>OK</strong> klicken um das Formular zu schliessen.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
-</figure>
+</div>
 <p>Speichern Sie die Informationen des Layers, indem Sie auf <a href="#id1"><span class="problematic" id="id2">**</span></a>Stop Data Entry ** klicken.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
-</figure>
+</div>
 <p>Sie können Ihr Punktobjekt bearbeiten, indem Sie den Bearbeitungsmodus auswählen und Sie dann mit dem Info Tool auf das Objekt klicken, welches Sie bearbeiten möchten. Wenn Sie den  Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
-</figure>
+</div>
 <p>Detaillierte Informationen zum Bearbeiten siehe das Kapitel <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Bearbeiten von bestehenden Daten</span></a>.</p>
-</section>
-<section id="further-attributes-and-classes">
+</div>
+<div class="section" id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.2.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Wenn ein Abwasserbauwerk-Punktobjekt digitalisiert wird, findet eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:</p>
 <ol class="loweralpha simple">
@@ -227,16 +226,16 @@
 <p class="admonition-title">Bemerkung</p>
 <p>Am einen zweiten/weiteren Deckel oder Abwasserknoten zum Abwasserbauwerk hinzuzufügen, vgl. Kapitel  <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Bearbeiten von bestehenden Daten</span></a>.</p>
 </div>
-</section>
-<section id="geometry-synchronization">
+</div>
+<div class="section" id="geometry-synchronization">
 <h2><span class="section-number">2.2.2.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Die Werte des Objektes definieren die Punkt-Geometrie der Tabellen <cite>Deckel</cite> und <cite>Abwasserknoten</cite>. Der Z-Wert der Geometrie wird über die Koten gesetzt. Das heisst, wenn die Deckel-Kote eingetragen wird, kommt dieser Wert in den Z Wert der Geometrie des Deckels (vw_Deckel). Wird die Sohlenkote beim Abwasserknoten gesetzt, definiert man damit den Z Wert der Geometrie des Abwasserknoten (vw_Abwasserknoten). Die Geometrie von vw_qgep_Abwasserbauwerk hat keine Kote (ist nicht 3D).</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Wenn die Kote eines Deckels ändert, ändert sich auch der Z Wert seiner Geometrie. Wenn der Z Wert der Geometrie des Deckels ändert, ändert auch die Kote des Deckel. Wenn beide Werte gleichzeitig ändern, hat die Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie des Deckels gemäss der Kote des Deckels gesetzt und falls diese NULL ist, wird der Z Werte der Geometrie auf NaN gesetzt. Das gleiche gilt für Abwasserknoten.</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
