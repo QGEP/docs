@@ -13,5 +13,6 @@ QGEP SWMM plugin
    Check-Input
    Execute
    Extract-Results
+   Import-Results
    Mapping
    Change-simulation-parameters
