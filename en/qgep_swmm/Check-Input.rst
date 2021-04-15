@@ -18,6 +18,8 @@ To fix an error you can search in the corresponding QGEP layers in the QGIS proj
 Common import errors
 --------------------
 
+`See related Github issue <https://github.com/QGEP/QGEP/issues/613>`_
+
 Catchment area connected to secondary wastewater structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ``
@@ -54,3 +56,11 @@ select obj_id, fk_wastewater_networkelement_ww_planned, discharge_coefficient_ww
 from qgep_od.catchment_area
 where fk_wastewater_networkelement_ww_planned is not null and discharge_coefficient_ww_planned is null;
 ``
+
+Missing population densities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``
+  ERROR 211: invalid number dailyPatternDWF at line 4288 of [DWF] section:
+  00000000WN006032 FLOW             dailyPatternDWF
+``
+`qgep_od.catchment_area.population_density_current` or `qgep_od.catchment_area.population_density_planned` are not filled.
