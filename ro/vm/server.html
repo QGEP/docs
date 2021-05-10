@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>4.3. QGIS Server &mdash; QGEP 0.8 documentație</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
   
@@ -139,27 +144,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="qgis-server">
+  <section id="qgis-server">
 <h1><span class="section-number">4.3. </span>QGIS Server<a class="headerlink" href="#qgis-server" title="Link permanent la acest titlu">¶</a></h1>
 <p>You can download a VM with an older QGEP setup that also
 has QGIS Server installed from <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a> .</p>
 <p>Acest VM conține instalări funcționale de <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">QGIS Server</a> și <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
-<div class="section" id="access-the-web-services">
+<section id="access-the-web-services">
 <h2><span class="section-number">4.3.1. </span>Accesare Servicii Web<a class="headerlink" href="#access-the-web-services" title="Link permanent la acest titlu">¶</a></h2>
 <p>The Apache server is setup to respond to requests pointing to the <cite>http://qgisplatform.demo</cite>.
 Accessing the above link with the Internet Browser of the VM will take you to the starting
 page of QWC depicted in the below image.</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="../_images/001_qwc.png" src="../_images/001_qwc.png" />
-<p class="caption"><span class="caption-text"><strong>Pagina de start a Clientului Web de QGIS</strong></span><a class="headerlink" href="#id2" title="Link permanent la această imagine">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><strong>Pagina de start a Clientului Web de QGIS</strong></span><a class="headerlink" href="#id2" title="Link permanent la această imagine">¶</a></p>
+</figcaption>
+</figure>
 <p>Dacă se dorește accesarea serviciilor Web din afara VM-ului, este necesară editarea fișierului <code class="docutils literal notranslate"><span class="pre">hosts</span></code> de pe stația de lucru de unde se vor accesa. În acest fișier va trebui făcută legătura dintre IP-ul VM-ului și numele acestuia, <code class="docutils literal notranslate"><span class="pre">qgisplatform.demo</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Notă</p>
 <p>Dacă adaptorul de rețea al VM-ului este setat sa funcționeze în mod NAT serviciile vor putea fi accesate numai de către gazdă/hipervizor. Pentru a putea accesa cu orice dispozitiv sau stație de lucru din rețeaua internă - LAN va trebui să setați adaptorul în mod bridge.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -208,6 +215,7 @@ page of QWC depicted in the below image.</p>
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>

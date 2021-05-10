@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.2. Numériser les structures assainissement &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -159,23 +164,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="digitizing-wastewater-structures">
+  <section id="digitizing-wastewater-structures">
 <span id="id1"></span><h1><span class="section-number">2.2.2. </span>Numériser les structures assainissement<a class="headerlink" href="#digitizing-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.2.2.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>QGEP has a wizard to correctly collect manholes and special structures. see the <span class="xref std std-ref">wizard</span> chapter.</p>
 <p>Sélectionnez le bouton <strong>Assistant</strong> puis cliquez sur le bouton <strong>Commencer la saisie de données</strong> et choisir <strong>Ouvrage assainissement</strong> dans le menu déroulant.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
-</div>
-</div>
-<div class="section" id="digitizing">
+</figure>
+</section>
+<section id="digitizing">
 <h2><span class="section-number">2.2.2.2. </span>Numérisation<a class="headerlink" href="#digitizing" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le curseur passe alors en mode numérisation et il est possible de sélectionner l’emplacement du nouvel élément.</p>
 <p>Le formulaire <strong>vw_qgep_structure_assainissement</strong> s’ouvre ensuite et vous pouvez commencer la saisie de données dans l’onglet <strong>Général</strong>:</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_ws_type3.jpg" />
-</div>
+</figure>
 <p>Sélectionnez le <strong>ws_type</strong> désiré (“regard” est sélectionné par défaut):</p>
 <ul class="simple">
 <li><p>Regard</p></li>
@@ -199,20 +204,20 @@
 <p>Vous ne pouvez pas ajouter de nouveaux entrées dans les onglets <strong>Couvercles</strong>, <strong>Noeuds assainissement</strong> et <strong>Maintenance</strong>, car vous devez sauvegarder au préalable l’enregistrement de la structure assainissement dans la base de données avant de pouvoir ajouter de nouvelles entrées. Pour la même raison, vous ne pouvez pas utiliser <strong>Actions</strong>. Sauvegardez d’abord l’entrée.</p>
 </div>
 <p>Cliquez <strong>OK</strong> pour fermer le formulaire</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" src="../../_images/wizard_wastewater_structure_manhole_form_data_ok3.jpg" />
-</div>
+</figure>
 <p>Sauvegardez les informations de la couche en cliquant sur « Stop Data Entry » dans l’assistant (« wizard »)</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
-</div>
+</figure>
 <p>Pour rééditer l’objet, passez en mode d’édition et cliquez sur l’objet à éditer avec le curseur en mode « Identifier les entités ». Si le mode d’édition n’est pas activé, vous pourrez seulement consulter les informations relatives à l’objet.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
-</div>
+</figure>
 <p>Pour plus d’informations au sujet de l’édition de données, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Modification de données existantes</span></a>.</p>
-</div>
-<div class="section" id="further-attributes-and-classes">
+</section>
+<section id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.2.3. </span>Autres classes et attributs<a class="headerlink" href="#further-attributes-and-classes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Lorsqu’une structure_assainissement est numérisée, une série d’opérations se déroulent en arrière-plan dans la base de données QGIS:</p>
 <ol class="loweralpha simple">
@@ -226,16 +231,16 @@
 <p class="admonition-title">Note</p>
 <p>Pour ajouter un second couvercle ou un second noeud assainissement à un ouvrage assainissement, voir le chapitre <a class="reference internal" href="../editing/editing.html#editing-data"><span class="std std-ref">Modification de données existantes</span></a>.</p>
 </div>
-</div>
-<div class="section" id="geometry-synchronization">
+</section>
+<section id="geometry-synchronization">
 <h2><span class="section-number">2.2.2.4. </span>Synchronisation de la géométrie<a class="headerlink" href="#geometry-synchronization" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La géométrie de la nouvelle entité définit la géométrie des tables connectées comme “couvercle” et “noeud assainissement”. La valeur Z de la géométrie peut être fixée en définissant les valeurs de cotes. Cela signifie que lorsque la cote du couvercle <cite>co_level</cite> est entrée, cette valeur est adaptée à la valeur Z de la géométrie du couvercle. La cote du radier du noeud assainissement <cite>wn_bottom_level</cite> définit la valeur Z de la géométrie du noeud assainissement. La géométrie de l’entité noeud assainissement correspond à celle du couvercle. Cela signifie que la géométrie Z de l’entité numérisée est en fait la valeur entrée dans <cite>co_level</cite>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If a cover level changes, the Z value of the cover’s geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it’s like when both value change. Means the cover’s geometry is set according to the cover level and if it’s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -284,6 +289,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

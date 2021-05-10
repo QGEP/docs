@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.2. Déplacer des structures assainissement avec tronçons, couvercles et noeuds &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -154,37 +159,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="moving-wastewater-structures-with-reaches-covers-and-nodes">
+  <section id="moving-wastewater-structures-with-reaches-covers-and-nodes">
 <span id="moving-covers-with-reaches-and-wastewater-nodes"></span><h1><span class="section-number">2.3.2. </span>Déplacer des structures assainissement avec tronçons, couvercles et noeuds<a class="headerlink" href="#moving-wastewater-structures-with-reaches-covers-and-nodes" title="Lien permanent vers ce titre">¶</a></h1>
 <p>This represents a guide on how to move wastewater structures with reaches and wastewater nodes compared to just moving the cover in QGEP.</p>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.3.2.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <p>It’s not unusual, that manholes are digitized the first time with low precision. Later the manholes are measured, and there is the need, to move the whole wastewater structure (means cover, node and reachpoints of all reaches) to the measuered point.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to turn on the advanced digitizing toolbar in your project to be able to select the <strong>Move Feature</strong> tool.</p>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/advanced_digitizing_tools.jpg" src="../../_images/advanced_digitizing_tools.jpg" />
-</div>
-</div>
-<div class="section" id="how-to">
+</figure>
+</section>
+<section id="how-to">
 <h2><span class="section-number">2.3.2.2. </span>How to<a class="headerlink" href="#how-to" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Sélectionnez la couche <strong>vw_qgep_wastewater_structure</strong></p></li>
 <li><p>Set the layer to edit mode</p></li>
 <li><p>Select the <strong>Move Feature</strong> tool (standard QGIS tool in the advanced digitizing toolbar)</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/moving_wws_before.jpg" src="../../_images/moving_wws_before.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Left Click one the wastewater_structure you want to move and left click again at the new place</p></li>
 </ul>
 <p>In the figure below, there is the “ZB1” manhole moved. Cover, node and all tree reachpoints are moved to the new place</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/moving_wws_manhole1.jpg" src="../../_images/moving_wws_manhole1.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Reaches, that are connected to one of the moved reaches, are still connected with the foreign key, but did not move. You have to corrected manually if necessary.</p>
@@ -192,9 +197,9 @@
 <ul class="simple">
 <li><p>In the next figure, the special structure “ZRAE” is also moved by clicking on the cover and clicking at the new place.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/moving_wws_manhole2.jpg" src="../../_images/moving_wws_manhole2.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to correct manually if necessary.</p>
@@ -203,21 +208,21 @@
 <li><p>If you want to move just the cover or a node of a wastewater structure, then select the <strong>vw_cover</strong> or <strong>vw_wastewater_node</strong> layer, set the layer to edit mode and move the cover / the node with the <strong>Move Feature</strong> tool.</p></li>
 </ul>
 <p>See the figure below: just the cover of manhole “ZRAM” is moved.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/moving_wws_manhole3.jpg" src="../../_images/moving_wws_manhole3.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>You can also move the wastewater structure with the <strong>Vertex Tool</strong>. The vertex tool moves all layers, that have objects at the same place, where you click. You can move the manhole “ZB1” with this tool as shown in the first example. But you can not move the nodes and reachpoints, because they are not at the same place. And you can not move only covers in vw_cover. If there are nodes or reachpoints at the same place, they will move to.</p>
 </div>
-</div>
-<div class="section" id="video-tutorial">
+</section>
+<section id="video-tutorial">
 <h2><span class="section-number">2.3.2.3. </span>Tutoriel vidéo<a class="headerlink" href="#video-tutorial" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>See <a class="reference external" href="https://vimeo.com/162978741">this video tutorial (version QGIS 2)</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -266,6 +271,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

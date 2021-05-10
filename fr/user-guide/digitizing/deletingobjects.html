@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.6. Suppression d’objets &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -160,44 +165,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="deleting-objects">
+  <section id="deleting-objects">
 <h1><span class="section-number">2.2.6. </span>Suppression d’objets<a class="headerlink" href="#deleting-objects" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Vous pouvez supprimer des objets ponctuels ou linéaires (avec tous les objets associés) dans les couches <strong>vw_qgep_(ouvrage_assainissement/troncon)</strong>. Vous pouvez aussi sélectionner et supprimer uniquement un objet spécifique (p.ex. un couvercle).</p>
-<div class="section" id="delete-reaches">
+<section id="delete-reaches">
 <h2><span class="section-number">2.2.6.1. </span>Suppression de tronçons<a class="headerlink" href="#delete-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Sélectionnez la couche <strong>vw_qgep_troncon</strong> et basculez en mode édition.</p></li>
 <li><p>Sélectionnez le/les tronçon(s) que vous voulez supprimer. Vous pouvez cliquer sur un objet ou dessiner une zone de sélection.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/select_tool.jpg" src="../../_images/select_tool.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Utiliser le menu <strong>Editer</strong> –&gt; <strong>Supprimer les entités sélectionnées</strong> pour supprimer.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_reach.jpg" src="../../_images/delete_reach.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La façon la plus simple est de presser la touche <strong>Delete</strong> du clavier. Une autre possibilité est de presser sur le bouton <strong>Supprimer</strong> qui se trouve dans la barre d’outils <strong>Numérisation</strong>.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_button.jpg" src="../../_images/delete_button.jpg" />
-</div>
+</figure>
 <p>Selon la façon dont vous avez configuré QGIS, la barre d’outils <strong>Numérisation</strong> peut être cachée ou située à un autre endroit.</p>
 </div>
 <ul class="simple">
 <li><p>Stoppez le mode édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_reach_confirm.jpg" src="../../_images/delete_reach_confirm.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Delete reaches deletes also all connected structure parts. The connected channel is only deleted if there is no other wastewater networkelement is connected. If there are two reaches connected to one channel, the channel is only deleted if both reaches are deleted.</p>
 </div>
-</div>
-<div class="section" id="delete-manholes-and-other-wastewater-structures">
+</section>
+<section id="delete-manholes-and-other-wastewater-structures">
 <h2><span class="section-number">2.2.6.2. </span>Supprimer des regards et d’autres structures assainissement<a class="headerlink" href="#delete-manholes-and-other-wastewater-structures" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Sélectionnez <strong>vw_qgep_ouvrage_assainissement</strong> et passez en mode d’édition</p></li>
@@ -209,8 +214,8 @@
 <p class="admonition-title">Note</p>
 <p>La suppression des structures assainissement supprime également tous les éléments de structure connectés et tous les noeuds assainissement connectés.</p>
 </div>
-</div>
-<div class="section" id="delete-covers">
+</section>
+<section id="delete-covers">
 <h2><span class="section-number">2.2.6.3. </span>Suppression de couvercles<a class="headerlink" href="#delete-covers" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Sélectionnez <strong>vw_qgep_ouvrage_assainissement</strong> et passez en mode d’édition</p></li>
@@ -220,16 +225,16 @@
 <li><p>Sélectionnez le(s) couvercle(s) que vous voulez supprimer</p></li>
 <li><p>Cliquez sur le bouton <strong>X</strong> rouge pour supprimer</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/delete_covers.jpg" src="../../_images/delete_covers.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Cliquez sur le bouton <strong>Sauvegarder</strong> du formulaire</p></li>
 <li><p>Stoppez le mode édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p></li>
 <li><p>Méthode alternative pour effacer un couvercle: sélectionnez la couche <strong>vw_couvercle</strong> et passez en mode d’édition, sélectionnez le couvercle, cliquez sur <strong>Edition</strong> –&gt; <strong>Supprimer sélection</strong>, quittez le mode d’édition.</p></li>
 </ul>
-</div>
-<div class="section" id="delete-structure-parts">
+</section>
+<section id="delete-structure-parts">
 <h2><span class="section-number">2.2.6.4. </span>Suppression d’éléments de structures<a class="headerlink" href="#delete-structure-parts" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Sélectionnez <strong>vw_qgep_ouvrage_assainissement</strong> et passez en mode d’édition</p></li>
@@ -241,8 +246,8 @@
 <li><p>Cliquez sur le bouton <strong>Sauvegarder</strong> du formulaire</p></li>
 <li><p>Stoppez le mode d’édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p></li>
 </ul>
-</div>
-<div class="section" id="delete-detailed-geometries">
+</section>
+<section id="delete-detailed-geometries">
 <h2><span class="section-number">2.2.6.5. </span>Delete detailed geometries<a class="headerlink" href="#delete-detailed-geometries" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -254,8 +259,8 @@
 <li><p>Click on the parts you want to delete</p></li>
 <li><p>Stoppez le mode d’édition et confirmez les modifications apportées à la couche. Toutes les modifications vont alors être sauvegardées dans la base de données.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -304,6 +309,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

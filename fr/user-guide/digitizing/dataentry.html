@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.2.1. Saisie de données &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -157,7 +162,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="data-entry">
+  <section id="data-entry">
 <h1><span class="section-number">2.2.1. </span>Saisie de données<a class="headerlink" href="#data-entry" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Elle peut se faire de deux façons:</p>
 <ul>
@@ -174,17 +179,17 @@
 </li>
 </ul>
 <p>Bien qu’elle demande une certaine compréhension du modèle de données <a class="reference external" href="http://dss.vsa.ch">VSA-SDEE</a>, la saisie de données dans QGEP est prise en charge par des outils d’assistance et des formulaires qui permettent de relier correctement les différentes tables. La relation entre les conduites et les structures est ainsi automatisée et peut être contrôlée à travers l’outil de poursuite du réseau.</p>
-<div class="section" id="the-qgep-wizard">
+<section id="the-qgep-wizard">
 <h2><span class="section-number">2.2.1.1. </span>L’assistant QGEP<a class="headerlink" href="#the-qgep-wizard" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’assistant QGEP aide à digitaliser les regards et les conduites en quelques clics.</p>
 <p>Pour commencer la saisie de données, sélectionnez le bouton <strong>Wizard</strong> (assistant) de la barre d’outils QGEP.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/button_data_entry_wizard_selected.jpg" src="../../_images/button_data_entry_wizard_selected.jpg" />
-</div>
+</figure>
 <p>Dans le coin inférieur gauche, la fenêtre <strong>Saisie de données QGEP</strong> apparaît:</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/wizard_data_entry.jpg" src="../../_images/wizard_data_entry.jpg" />
-</div>
+</figure>
 <p>Cliquez sur <strong>Commencer la saisie de données</strong> pour basculer en mode d’édition.</p>
 <p>Choose <strong>Wastewater Structure</strong> or <strong>Reach</strong>. Start adding new feature in vw_qgep_wastewater_structure or vw_qgep_reach.</p>
 <p>There is no need to select the correct layer in the layers-window, you do not need to toggle editing or to choose the add feature tool.</p>
@@ -203,8 +208,8 @@
 <p>Lors de la numérisation, il est préférable de commencer avec les éléments points (structures d’assainissement telles que regards, structures spéciales). Il sera ensuite aisé de connecter ces éléments points avec des éléments linéaires (conduites avec tronçons).</p>
 </div>
 <p>Il est possible d’utiliser les outils de <strong>Numérisation avancée</strong> avec l’assistant de saisie.</p>
-</div>
-<div class="section" id="qgis-standard-tools">
+</section>
+<section id="qgis-standard-tools">
 <h2><span class="section-number">2.2.1.2. </span>Outils standards de QGIS<a class="headerlink" href="#qgis-standard-tools" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour numériser dans des couches autres que vw_qep_wastewater_structure ou vw_qgep_troncon, il faut utiliser les outils standards de QGIS:</p>
 <ul class="simple">
@@ -214,8 +219,8 @@
 <li><p>Choisir l’outil ajout d’entité</p></li>
 </ul>
 <p>Il est également possible d’utiliser les outils standards QGIS avec les deux principales couches vw_qgep.  Mais il n’y aura pas de valeurs automatiques dans les clés étrangères des points de tronçons et pas d’accrochage préférentiel sur les noeuds du réseau d’assainissement.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -264,6 +269,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

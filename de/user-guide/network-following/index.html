@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.5. Werkzeuge zur Netzwerkverfolgung &mdash; QGEP 0.8 Dokumentation</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -148,9 +153,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="network-following-tools">
+  <section id="network-following-tools">
 <h1><span class="section-number">2.5. </span>Werkzeuge zur Netzwerkverfolgung<a class="headerlink" href="#network-following-tools" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="refresh-network-topology">
+<section id="refresh-network-topology">
 <h2><span class="section-number">2.5.1. </span>Netzwerk Topologie aktualisieren<a class="headerlink" href="#refresh-network-topology" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Bevor die Netzwerk-Verfolgungs-Werkzeuge verwendet werden können, muss die Netzwerk Topologie aktualisiert sein</p></li>
@@ -158,16 +163,16 @@
 <li><p>Klicke das  <strong>refresh network topology</strong> Werkzeug (Knopf mit SQL und dem Wassertropf)</p></li>
 <li><p>Wenn die Aktualisierung erfolgreich ist, erscheint eine Meldung: <strong>Success: Network successfully updated</strong></p></li>
 </ul>
-</div>
-<div class="section" id="upstream">
+</section>
+<section id="upstream">
 <h2><span class="section-number">2.5.2. </span>Gegen die Fließrichtung<a class="headerlink" href="#upstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Es spielt keine Rolle, welcher Layer ausgewählt ist</p></li>
 <li><p>Um einen Netzwerk Verfolgung gegen die Fließrichtung zu starten wählen Sie den <strong>Upstream</strong> Knopf</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/network_upstream_button.jpg" src="../../_images/network_upstream_button.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>QGEP öffnet das Profil Fenster im unteren Teil des Kartenfensters. Klick auf deinen Start-Abwasserknoten.</p></li>
 <li><p>Wenn mehr als einen Abwasserknoten in der Nähe vorhanden ist, kann der gewünschte Knoten aus einer Liste ausgewählt werden</p></li>
@@ -176,16 +181,16 @@
 <p class="admonition-title">Achtung</p>
 <p>Mit dem QGEPPlugin 1.1.8 / QGIS 3.4.2 ist es empfehlenswert, soweit hinein zu zoomen, dass der Start-Knoten direkt angeklickt werden kann. Wenn ein Knoten aus der Liste ausgewählt werden muss, können unerwartete Resultate eintreten.</p>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/network_select_start_node.jpg" src="../../_images/network_select_start_node.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Nach ein paar Sekunden werden alle Elemente gegen die Fließrichtung hervorgehoben und Sie können sehen, woher das Wasser kommt</p></li>
 <li><p>Wenn die graphisch markierten Haltungen als Auswahl selektiert werden soll, dann klicke auf den Knopf <strong>Select current path</strong> im Profil Fenster</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/network_select_currentpath.jpg" src="../../_images/network_select_currentpath.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Du kannst dann mit der Auswahl in der Haltungs-Attributtabelle weiterarbeiten oder auf die selektierten Haltungen zoomen (wenn der Layer  vw_qgep_reach selektiert ist)</p></li>
 <li><p>Benutzen Sie dieses Werkzeug um zu überprüfen, ob Ihr Topologie-Netzwerk korrekt ist</p></li>
@@ -194,22 +199,22 @@
 <p class="admonition-title">Bemerkung</p>
 <p>Im Knopf <strong>Select current path</strong> gibt es das Menu <strong>Configure Select</strong>. Das ist vorbereitet, damit später nicht nur die Haltungen, sondern auch die Einzugsgebiete, welche mit den Haltungen resp. den Abwasserknoten verknüpft sind, ausgewählt werden können. Diese Funktion ist im QGEPPlugin 1.1.8 noch nicht implementiert.</p>
 </div>
-</div>
-<div class="section" id="downstream">
+</section>
+<section id="downstream">
 <h2><span class="section-number">2.5.3. </span>In Fließrichtung<a class="headerlink" href="#downstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Netzverfolgung in Fliessrichtung funktioniert gleich wie die oben beschriebene Netzverfolgung gegen die Fliessrichtung.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/network_downstream_button.jpg" src="../../_images/network_downstream_button.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Du siehst, wohin das Wasser fliessen wird.</p></li>
 <li><p>Kontrolliere ob QGEP auch die Überlauf findet</p></li>
 <li><p>Benutzen Sie diese Funktion, um zu überprüfen ob Ihr Topologie- Netzwerk korrekt ist oder herauszufinden wo Sie Fehler beheben können.</p></li>
 </ul>
-</div>
-<div class="section" id="sum-up-upstream">
+</section>
+<section id="sum-up-upstream">
 <span id="sumupupstream"></span><h2><span class="section-number">2.5.4. </span>Summieren gegen die Fließrichtung<a class="headerlink" href="#sum-up-upstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
@@ -217,25 +222,25 @@
 <li><p>Für dieses Tool ist ein Feld im Layer vw_qgep_reach notwendig, welches die zu summierenden Werte enthält. Weil interessierende Werte normalerweise nicht im Layer vorhanden sind, muss das Feld (z. Bsp. die Fliesszeit oder die Fliessgeschwindigkeit) an den Layer vw_qgep_reach verknüpft (join) werden.</p></li>
 <li><p>Als Beispiel hier ein kleines Netzwerk, beschriftet mit Haltungs-Bezeichnung, Länge und Fliessrichtungspfeil.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/sumupupstream-example.jpg" src="../../_images/sumupupstream-example.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Es braucht eine Tabelle (im Beispiel heisst sie sum up tool) mit mindestens zwei Feldern: Feld identifier als Verknüpfungsfeld und das Feld flow rate (im Beispiel die Fliessgeschwindigkeit in [m/s]) als verknüpftes Feld, dass summiert wird.</p></li>
 <li><p>Im Layer vw_qgep_reach die Einstellungen öffnen, dort <strong>Verknüpfungen</strong> und <strong>Neue Verknüpfung hinzufügen</strong> (grüner + Knopf) wählen. Die Verknüpfung mit dem Verknüpfungsfeld (identifier) und dem verknüpften Feld (Feld das summiert werden soll) definieren.</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/sumupupstream-join1.jpg" src="../../_images/sumupupstream-join1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Starten sie mit Doppelklick auf das <strong>Sum up upstream</strong> Tool</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Im Fenster muss folgendes eingegeben/gewählt werden</p>
 <ul>
@@ -246,15 +251,15 @@
 </ul>
 </li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/sumupupstream-tool.jpg" src="../../_images/sumupupstream-tool.jpg" />
-</div>
+</figure>
 <p>Der resultierende Punkt-Layer hat die Felder des vw_wastewater_node Layer und ein ein zusätzliches Feld <strong>value</strong> mit der Summe für jeden Abwasserknoten. In der Abbildung ist das Resultat des Beispiels mit allen drei Verzweigungsverhalten dargestellt: Minimum = normaler Text, Maximum = fett, Durchschnitt = unterstrichen.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/sumupupstream-resultat.jpg" src="../../_images/sumupupstream-resultat.jpg" />
-</div>
-</div>
-<div class="section" id="flow-times-downstream">
+</figure>
+</section>
+<section id="flow-times-downstream">
 <h2><span class="section-number">2.5.5. </span>Fliesszeiten abwärts<a class="headerlink" href="#flow-times-downstream" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
 <li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
@@ -263,12 +268,12 @@
 <li><p>Die Starthaltung (wo der Unfall passiert ist) muss im vw_qgep_reach - Layer selektiert werden</p></li>
 <li><p>Starten sie mit Doppelklick auf das <strong>Flow times downstream</strong> Tool</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/toolbox1.jpg" src="../../_images/toolbox1.jpg" />
-</div>
-<div class="figure align-default">
+</figure>
+<figure class="align-default">
 <img alt="../../_images/qgep_toolbox1.jpg" src="../../_images/qgep_toolbox1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Im Toolfenster muss gewählt werden</p>
 <ul>
@@ -280,15 +285,15 @@
 </ul>
 </li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/flow_time_downstream_window.jpg" src="../../_images/flow_time_downstream_window.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Das Tool macht eine Netzverfolgung in Fliessrichtung ab der selektierten Haltung und erzeugt für jede Haltung einen Datensatz im (temporären) Vektor-Layer mit nur einem Feld (der Summe der Werte im flow times field).</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/flow_time_downstream_result.jpg" src="../../_images/flow_time_downstream_result.jpg" />
-</div>
+</figure>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
 <p>Wenn es mehr als einen Abwärts - Fliessweg gibt, sind die Resultate nach der Verzweigung falsch.</p>
@@ -302,8 +307,8 @@
 </ul>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -352,6 +357,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

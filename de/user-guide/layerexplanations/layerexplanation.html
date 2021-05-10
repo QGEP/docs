@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.1.2. Layer Erläuterungen &mdash; QGEP 0.8 Dokumentation</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -157,82 +162,82 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="layer-explanation">
+  <section id="layer-explanation">
 <span id="id1"></span><h1><span class="section-number">2.1.2. </span>Layer Erläuterungen<a class="headerlink" href="#layer-explanation" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="main-layers">
+<section id="main-layers">
 <h2><span class="section-number">2.1.2.1. </span>Hauptlayer<a class="headerlink" href="#main-layers" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="vw-qgep-wastewater-structure">
+<section id="vw-qgep-wastewater-structure">
 <h3><span class="section-number">2.1.2.1.1. </span>vw_qgep_wastewater_structure (Abwasserbauwerk)<a class="headerlink" href="#vw-qgep-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Haupt-Layer für Normschächte, Spezialbauwerke, Versickerungsanlagen, Einleitstellen (und ARA-Bauwerke). Wenn ein neuer Datensatz erstellt wird, wird immer ein neues Abwasserbauwerk, ein neuer Deckel und ein neuer Abwasserknoten erzeugt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse). In Datenbank-Schema qgep_od.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_wastewater_structure.jpg" src="../../_images/schema_vw_qgep_wastewater_structure.jpg" />
-</div>
+</figure>
 <p>Auch wenn mehrere Deckel oder Abwasserknoten vorhanden sind, gibt es nur einen Punkt für ein Abwasserbauwerk in diesem Layer.  Als Vorgabewert wird die Lage des ersten erzeugten Abwasserknotens verwendet.</p>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
 <p>Diese Punkte können nicht als Deckel-Koordinaten exportiert werden. Benutze als Deckel den Layer vw_Deckel.</p>
 </div>
-</div>
-<div class="section" id="vw-qgep-reach">
+</section>
+<section id="vw-qgep-reach">
 <h3><span class="section-number">2.1.2.1.2. </span>vw_qgep_reach (Haltung)<a class="headerlink" href="#vw-qgep-reach" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Haupt-Layer für Linien-Abwasserbauwerke (Kanäle).
 Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein neuer Kanal erstellt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse). In Datenbank-Schema qgep_od.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_reach.jpg" src="../../_images/schema_vw_qgep_reach.jpg" />
-</div>
-</div>
-</div>
-<div class="section" id="wastewater-structures">
+</figure>
+</section>
+</section>
+<section id="wastewater-structures">
 <h2><span class="section-number">2.1.2.2. </span>Abwasserbauwerke<a class="headerlink" href="#wastewater-structures" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="od-wastewater-structure">
+<section id="od-wastewater-structure">
 <h3><span class="section-number">2.1.2.2.1. </span>od_wastewater_structure (Abwasserbauwerk):<a class="headerlink" href="#od-wastewater-structure" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Dieser Layer zeigt die Detail-Geometrie der Abwasserbauwerke. Eine neue Geometrie wird über den Datensatz im Layer vw_qgep_wastewater_structure digitalisiert. Wenn eine bestehende Geometrie geändert werden soll, dann muss der Layer od_wastewater_structure bearbeitet werden. In Datenbank-Schema qgep_od.</p>
-</div>
-<div class="section" id="structure-parts">
+</section>
+<section id="structure-parts">
 <h3><span class="section-number">2.1.2.2.2. </span>Bauwerkteile<a class="headerlink" href="#structure-parts" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Deckel ist der einzige Bauwerksteil mit einer eigenen Lageinformation. Alle anderen Bauwerksteile sind nur mit ihrem Abwasserbauwerk verknüpft und sollen nur über die Hauptlayer  (vw_qgep_wastewater_structure und vw_qgep_reach) geändert werden.</p>
-</div>
-<div class="section" id="vw-cover">
+</section>
+<section id="vw-cover">
 <h3><span class="section-number">2.1.2.2.3. </span>vw_cover (Deckel)<a class="headerlink" href="#vw-cover" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Den Deckellayer nur benutzen, um die Lageinfo von einem ausgewählten Deckel zu verändern (und nicht das ganze Abwasserbauwerk  zu verschieben). Oder um einen neuen Deckel zu einem Abwasserbauwerk hinzu zufügen. (Ein Deckel kann auch im Reiter Deckel von vw_qgep_wastewater-structure hinzugefügt werden ab QGIS 3.16). Und der Layer wird verwendet, um die Position der Deckel darzustellen (z.B. im Werkplan) oder um die Deckellage zu exportieren. In Datenbank-Schema qgep_od.</p>
-</div>
-<div class="section" id="vw-channel">
+</section>
+<section id="vw-channel">
 <h3><span class="section-number">2.1.2.2.4. </span>vw_channel (Kanal)<a class="headerlink" href="#vw-channel" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die Klasse Kanal hat keine Geometrie und wird deshalb meistens über den Layer vw_qgep_Haltung bearbeitet. In Datenbank-Schema qgep_od.</p>
-</div>
-<div class="section" id="od-organisation">
+</section>
+<section id="od-organisation">
 <h3><span class="section-number">2.1.2.2.5. </span>od_organisation<a class="headerlink" href="#od-organisation" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Todo: Diese Tabelle ist nicht nur mit Abwasserbauwerken verknüpft und deshalb in dieser Layer-Gruppe nicht ganz richtig. In Datenbank-Schema qgep_od</p>
-</div>
-</div>
-<div class="section" id="inspection">
+</section>
+</section>
+<section id="inspection">
 <h2><span class="section-number">2.1.2.3. </span>Inspektion<a class="headerlink" href="#inspection" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese Tabellen werden im Reiter Erhaltungsereignis der Hauptlayer benutzt. Sie sollen nicht direkt bearbeiten werden. In Datenbank-Schema qgep_od.</p>
-</div>
-<div class="section" id="value-lists">
+</section>
+<section id="value-lists">
 <h2><span class="section-number">2.1.2.4. </span>Wertelisten<a class="headerlink" href="#value-lists" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese Wertelisten sind im Datenmodell VSA-DSS definiert. Nicht ändern. In Datenbank-Schema qgep_vl.</p>
-</div>
-<div class="section" id="hydraulic">
+</section>
+<section id="hydraulic">
 <h2><span class="section-number">2.1.2.5. </span>Hydraulik Layer<a class="headerlink" href="#hydraulic" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="vw-wastewater-node">
+<section id="vw-wastewater-node">
 <h3><span class="section-number">2.1.2.5.1. </span>vw_wastewater_node (Abwasserknoten)<a class="headerlink" href="#vw-wastewater-node" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Dieser Layer kann nur benutzt werden, wenn nur ein ausgewählter Abwasserknoten in der Lage geändert werden soll (und nicht das ganze Abwasserbauwerk) oder wenn ein neuer Abwasserknoten zu einem bestehenden Abwasserbauwerk hinzugefügt werden soll. (Ein Abwasserknoten kann auch im Reiter Abwasserknoten der vw-qgep_wastewater_structure-Eingabemaske hinzugefügt werden ab QGIS 3.16). In Datenbank-Schema qgep_od.</p>
-</div>
-<div class="section" id="overflow-tables">
+</section>
+<section id="overflow-tables">
 <h3><span class="section-number">2.1.2.5.2. </span>Überlauf Tabellen<a class="headerlink" href="#overflow-tables" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Diese Tabellen sind mit den Abwasserknoten verknüpft. Im Demo-Projekt (Version 8.0, 4.6.2020) sind keine Verknüpfungen definiert für diese Tabellen. In Datenbank-Schema qgep_od.</p>
-</div>
-</div>
-<div class="section" id="topology">
+</section>
+</section>
+<section id="topology">
 <h2><span class="section-number">2.1.2.6. </span>Topologie<a class="headerlink" href="#topology" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Diese beiden Layer werden von QGEP für das Längenprofil und die Netzverfolgung verwendet. Nicht verändern. Im Datenbank-Schema qgep_network. Der Layer vw_network_segment kann benutzt werden, um die Fliessrichtung darzustellen. Dazu kann als Symbol eine Marker-Linie (filled_arrowhead) verwendet werden.</p>
-</div>
-<div class="section" id="catchment">
+</section>
+<section id="catchment">
 <h2><span class="section-number">2.1.2.7. </span>Einzugsgebiet<a class="headerlink" href="#catchment" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Hauptlayer um Einzugsgebiete zu erfassen oder zu verändern. In Datenbank-Schema qgep_od.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -281,6 +286,7 @@ Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

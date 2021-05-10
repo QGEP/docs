@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>5.3. Haltungen abgleichen &mdash; QGEP 0.8 Dokumentation</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
   
@@ -144,39 +149,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="match-channels">
+  <section id="match-channels">
 <h1><span class="section-number">5.3. </span>Haltungen abgleichen<a class="headerlink" href="#match-channels" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Um die Untersuchungsdaten zu importieren, müssen die Untersuchungsberichte den QGEP-Haltungen zugeordnet werden. Das kann halb-automatisch oder manuell geschehen. Noch nicht zugeordnete Untersuchungsberichte werden in der Haupttabelle rot dargestellt.</p>
-<div class="section" id="automatic-matching">
+<section id="automatic-matching">
 <h2><span class="section-number">5.3.1. </span>Automatischer Abgleich<a class="headerlink" href="#automatic-matching" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Ein automatischer Abgleich kann durchgeführt werden, indem nach einem Muster in den Schachtbezeichnungen gesucht wird. Geben Sie eine Kanal-ID in das entsprechende Feld ein und das Plugin sucht nach den Kanälen, die mit  Schacht verbinden, wie folgt: `` {channel_id} - {manhole_id} `` (die Schacht-Bezeichnungwird aus den Inspektionsdaten entnommen).</p>
-</div>
-<div class="section" id="manual-matching">
+</section>
+<section id="manual-matching">
 <h2><span class="section-number">5.3.2. </span>Manueller Abgleich<a class="headerlink" href="#manual-matching" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der manuelle Abgleich geht wie folgt:</p>
 <ol class="arabic simple">
 <li><p>Den gewünschten Untersuchungsbericht in der Tabelle auswählen</p></li>
 <li><p>In der ersten Haltungszeile auf den <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">on</span> <span class="pre">map</span></code> Knopf klicken</p></li>
 </ol>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/match-channel-1.png" src="../_images/match-channel-1.png" />
-</div>
+</figure>
 <ol class="arabic simple" start="3">
 <li><p>Den zugehörigen Kanal in der Karte suchen und anklicken.</p></li>
 <li><p>Die Haltungs ID erscheint jetzt in der Liste und der Untersuchungsbericht ist nicht mehr rot hinterlegt.</p></li>
 </ol>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/match-channel-2.png" src="../_images/match-channel-2.png" />
-</div>
-</div>
-<div class="section" id="skipping-channels-or-observations">
+</figure>
+</section>
+<section id="skipping-channels-or-observations">
 <h2><span class="section-number">5.3.3. </span>Untersuchungsbericht oder Beobachtungen weglassen<a class="headerlink" href="#skipping-channels-or-observations" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Mit der Checkbox ganz links können ganze Untersuchungsbericht oder einzelne Beobachtungen einer Untersuchung weggelassen werden.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/skip-data.png" src="../_images/skip-data.png" />
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
 
 
            </div>
@@ -225,6 +230,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>2.3.4. Connexion des éléments du réseau assainissement &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   
 
   
@@ -155,19 +160,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="connect-wastewater-network-elements">
+  <section id="connect-wastewater-network-elements">
 <span id="id1"></span><h1><span class="section-number">2.3.4. </span>Connexion des éléments du réseau assainissement<a class="headerlink" href="#connect-wastewater-network-elements" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Procédure pour connecter les éléments du réseau assainissement dans QGEP.</p>
-<div class="section" id="general">
+<section id="general">
 <h2><span class="section-number">2.3.4.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>QGEP dispose d’un outil permettant de connecter des éléments du réseau assainissement</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connect_wastewater_network_elements_button1.jpg" src="../../_images/connect_wastewater_network_elements_button1.jpg" />
-</div>
-</div>
-<div class="section" id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
+</figure>
+</section>
+<section id="how-to-connect-reaches-to-nodes-or-reaches-to-reaches">
 <h2><span class="section-number">2.3.4.2. </span>Comment connecter les tronçons aux noeuds ou les noeuds à d’autres noeuds<a class="headerlink" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Peu importe la couche sélectionnée</p></li>
@@ -176,29 +181,29 @@
 <li><p>Si vous passez avec la souris au-dessus d’un tronçon qui peut être connecté, le message “vous pouvez cliquer” s’affiche.</p></li>
 <li><p>Déplacez la souris sur l’élément du réseau auquel le premier objet doit être connecté (rappel: les objets sélectionnables sont surlignés) et cliquez à nouveau</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connecting_1.jpg" src="../../_images/connecting_1.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Une fenêtre apparaît, dans laquelle cous pouvez choisir quelle connexion sera définie. Si vous connectez un tronçon, la fenêtre aura cet aspect:</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connecting_2.jpg" src="../../_images/connecting_2.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Si tout est OK, vous verrez apparaître un message dans une barre bleue, au-dessus de la vue de la carte</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connecting_3.jpg" src="../../_images/connecting_3.jpg" />
-</div>
-</div>
-<div class="section" id="video-tutorial">
+</figure>
+</section>
+<section id="video-tutorial">
 <h2><span class="section-number">2.3.4.3. </span>Tutoriel vidéo<a class="headerlink" href="#video-tutorial" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Regardez <a class="reference external" href="https://vimeo.com/171536774">ce tutoriel vidéo (QGIS version 2):</a></p></li>
 </ul>
-</div>
-<div class="section" id="how-to-delete-a-connection">
+</section>
+<section id="how-to-delete-a-connection">
 <h2><span class="section-number">2.3.4.4. </span>Comment supprimer une connection<a class="headerlink" href="#how-to-delete-a-connection" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour l’instant, il n’y a pas d’outil spécial permettant de supprimer une connexion entre éléments du réseau.</p>
 <ul class="simple">
@@ -206,16 +211,16 @@
 <li><p>Cliquez sur le bouton <strong>Identifier objets</strong> et sélectionnez le tronçon à modifier par double-clic</p></li>
 <li><p>Supprimez la valeur dans le champ <strong>rp_…_fk_wastewater_networkelement</strong> pour supprimer la connexion</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../../_images/connecting_delete_connection.jpg" src="../../_images/connecting_delete_connection.jpg" />
-</div>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Soyez conscient des principes de saisie selon le VSA : Un point de tronçon « depuis » (rp_from_fk_wastewater_networkelement) ne devrait jamais être connecté à un autre tronçon.</p>
 </div>
 <p>Par exemple, lorsque un tronçon se déverse directement dans un autre sans structure entre les deux, le tronçon amont devrait être connecté au tronçon aval (rp_from_fk_wastewater_networkelement = downstream reach). Inversement, le tronçon aval ne devrait pas être connecté avec celui en amont. Cette règle s’applique pour les tronçons swwf (réseau secondaire). Pour le réseau pwwf (réseau principal) par contre, il doit toujours y avoir un noeud entre deux tronçons.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -264,6 +269,7 @@
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>

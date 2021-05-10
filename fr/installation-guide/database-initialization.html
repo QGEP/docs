@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>1.3. Initialisation de la base de données &mdash; Documentation QGEP 0.8</title>
@@ -27,6 +28,10 @@
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
   
@@ -146,21 +151,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="database-initialization">
+  <section id="database-initialization">
 <span id="id1"></span><h1><span class="section-number">1.3. </span>Initialisation de la base de données<a class="headerlink" href="#database-initialization" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Vous pouvez utiliser <a class="reference internal" href="../admin-guide/pgadmin/index.html#pgadmin"><span class="std std-ref">pgAdmin</span></a> afin d’accéder et gérer le serveur de base de données.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>En cliquant sur ce lien vous apprendrez à <span class="xref std std-ref">install pgAdmin</span></p>
 </div>
-<div class="section" id="process">
+<section id="process">
 <h2><span class="section-number">1.3.1. </span>Procédure<a class="headerlink" href="#process" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans pgAdmin 4</p>
 <ul class="simple">
 <li><p>Se connecter au serveur de la base de données</p></li>
 <li><p>Create a new database with UTF8 encoding (e.g. <cite>qgep_prod</cite>).</p></li>
 </ul>
-<div class="section" id="restore-demo-datamodel">
+<section id="restore-demo-datamodel">
 <span id="restore-demomodel"></span><h3><span class="section-number">1.3.1.1. </span>Restaurer le modèle de données démo<a class="headerlink" href="#restore-demo-datamodel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Restaurer le dernier modèle de données qui inclut également les données de démonstration:</p>
 <ul class="simple">
@@ -173,15 +178,15 @@
 <li><p>Cliquer sur <cite>Restore</cite></p></li>
 <li><p>Charger votre téléchargement de qgep_vx.y.z_structure_and_demo_data.backup</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/demodata-restore.jpg" src="../_images/demodata-restore.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Cliquer dans l’onglet “Restore Options” et cocher ces options</p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/demodata-restore_options.jpg" src="../_images/demodata-restore_options.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Cliquer sur <cite>Restore</cite></p></li>
 <li><p>Check whether in Message window <cite>Restoring backup on the server</cite> is successfully completed.</p></li>
@@ -200,22 +205,22 @@
 <ul class="simple">
 <li><p>Clic-droit sur la base de données et cliquer sur <cite>Rafraîchir</cite></p></li>
 </ul>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/demodata-refresh.jpg" src="../_images/demodata-refresh.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Propably you want to rename the database: Right click the database, click <cite>Properties…</cite> and rename the database.</p></li>
 </ul>
 <p>There are now 4 schemas in the database (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
-</div>
-<div class="section" id="create-minimal-roles-and-access">
+</section>
+<section id="create-minimal-roles-and-access">
 <h3><span class="section-number">1.3.1.2. </span>Create  minimal roles and access<a class="headerlink" href="#create-minimal-roles-and-access" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The QGEP roles are defined in the <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_roles.sql</a> file. It is recommended to use these when using QGEP in a production environment.</p>
 </div>
-</div>
-<div class="section" id="empty-data-model">
+</section>
+<section id="empty-data-model">
 <h3><span class="section-number">1.3.1.3. </span>Modèle de données vide<a class="headerlink" href="#empty-data-model" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous avez également l’option de restaurer le dernier modèle de données vide (sans données de démonstration)</p>
 <ul class="simple">
@@ -278,8 +283,8 @@
 <ul class="simple">
 <li><p>Mettre à jour les privilèges pour les schémas qgep_od, qgep_sys et qgep_vl comme décrit dans le chapître <cite>Restaurer les données démo</cite>.</p></li>
 </ul>
-</div>
-<div class="section" id="generate-the-data-model-under-linux">
+</section>
+<section id="generate-the-data-model-under-linux">
 <h3><span class="section-number">1.3.1.4. </span>Générer le modèle de données sous Linux<a class="headerlink" href="#generate-the-data-model-under-linux" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous pouvez également générer le modèle de données sous Linux.</p>
 <ul>
@@ -311,9 +316,9 @@ as in the <a class="reference internal" href="workstation.html#pg-service-linux"
 <li><p>Gestionnaire: Peut éditer les données et les listes de valeurs.</p></li>
 <li><p>Admin: Administrateur base de données</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -362,6 +367,7 @@ as in the <a class="reference internal" href="workstation.html#pg-service-linux"
             HAS_SOURCE:  true
         };
     </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
