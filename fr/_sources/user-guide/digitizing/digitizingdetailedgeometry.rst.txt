@@ -15,7 +15,6 @@ This is recommended for:
 .. attention:: Detailed geometry is usually not used for manholes or channels!
 
 
-
 Digitizing tool
 ---------------
 
@@ -38,3 +37,5 @@ Digitizing tool
 .. figure:: images/digitizing_detailedgeometry4.jpg
 
 An other way is to open the **vw_qgep_wastewater_structure** form with the info tool and then choose **Digitize** in the **Actions** menu of the form.
+
+.. note:: If the geometry disappears after digitizing or if you get an message (like 'Add part'), you have probably tried to digitize over a catchment area (or an other polygon theme) and the layer has set the avoid overlap option in the snapping settings. Do change the avoid overlap settings.
