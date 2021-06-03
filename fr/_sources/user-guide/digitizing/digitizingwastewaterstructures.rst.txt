@@ -51,7 +51,7 @@ Save the information of this layer by stopping the data entry wizard
 .. figure:: images/stop_data_entry.jpg
 
 You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
-If you do not select the edit mode, you can just look add the existing data.
+If you do not select the edit mode, you can just look at the existing data.
 
 .. figure:: images/wastewater_structure_info_manhole3.jpg
 
@@ -60,7 +60,7 @@ For detailed information about editing see the :ref:`editing-data` chapter.
 Further attributes and classes
 ------------------------------
 
-When a wastewater_structure object is digitized a series of steps take place in the background in the QGIS database:
+When a wastewater_structure object is digitized, a series of steps take place in the background in the QGIS database:
 
 a) an new object in the class wastewater structure is added
 
@@ -78,7 +78,8 @@ To add additional objects such as structure parts (besides covers there are acce
 Geometry synchronization
 ------------------------
 
-The added feature's geometry defines the geometry of the connected tables like cover and wastewater node. The Z value of the geometry can be set by defining the level-values. This means when the level of the cover `co_level` is entered, this value is adapted to the Z value of the cover's geometry. The bottom level of the wastewater node `wn_bottom_level` defines the Z value of the wastewater node's geometry.
-The geometry of the wastewater structure feature corresponds to the one of the cover. This means, the Z geometry of the digitized feature is actually the entered value on `co_level`.
+The added feature's geometry defines the geometry of the connected tables like cover and wastewater node. The vw_qgep_wastewater_structure-point itself has no Z value. 
+When the level of the cover `co_level` is entered, this value is adapted to the Z value of the cover's geometry. The bottom level of the wastewater node `wn_bottom_level` defines the Z value of the wastewater node's geometry.
 
-.. note:: If a cover level changes, the Z value of the cover's geometry will be ajusted. When the geometry changes, the level is adjusted as well. If both values change, the level takes precedence. On an insert it's like when both value change. Means the cover's geometry is set according to the cover level and if it's NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly. On this main layer wastewater structure, the only way to set the Z value of the geometry is to set co_level for cover and wn_bottom_level for wastewater node.
+.. note:: If a cover level changes, the Z value of the cover's geometry will be ajusted. When the geometry changes, the co_level attribut is adjusted as well. If both values change, the level takes precedence. On an insert it's like when both value change. Means the cover's geometry is set according to the cover level and if it's NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly.
+

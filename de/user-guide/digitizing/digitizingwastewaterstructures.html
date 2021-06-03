@@ -211,7 +211,8 @@
 <figure class="align-default">
 <img alt="../../_images/stop_data_entry.jpg" src="../../_images/stop_data_entry.jpg" />
 </figure>
-<p>Sie können Ihr Punktobjekt bearbeiten, indem Sie den Bearbeitungsmodus auswählen und Sie dann mit dem Info Tool auf das Objekt klicken, welches Sie bearbeiten möchten. Wenn Sie den  Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen.</p>
+<p>You can re-edit your point object selecting the edit mode and then click with the info cursor on the object you want to edit.
+If you do not select the edit mode, you can just look at the existing data.</p>
 <figure class="align-default">
 <img alt="../../_images/wastewater_structure_info_manhole3.jpg" src="../../_images/wastewater_structure_info_manhole3.jpg" />
 </figure>
@@ -219,7 +220,7 @@
 </section>
 <section id="further-attributes-and-classes">
 <h2><span class="section-number">2.2.2.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Wenn ein Abwasserbauwerk-Punktobjekt digitalisiert wird, findet eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:</p>
+<p>When a wastewater_structure object is digitized, a series of steps take place in the background in the QGIS database:</p>
 <ol class="loweralpha simple">
 <li><p>ein neues Objekt Abwasserbauwerk wird hinzugefügt</p></li>
 <li><p>ein neues Objekt der entsprechenden Unterklasse [Normschacht, Spezialbauwerk, Versickerungsanlage, Einleitstelle] wird hinzugefügt und verknüpft</p></li>
@@ -234,10 +235,11 @@
 </section>
 <section id="geometry-synchronization">
 <h2><span class="section-number">2.2.2.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Die Werte des Objektes definieren die Punkt-Geometrie der Tabellen <cite>Deckel</cite> und <cite>Abwasserknoten</cite>. Der Z-Wert der Geometrie wird über die Koten gesetzt. Das heisst, wenn die Deckel-Kote eingetragen wird, kommt dieser Wert in den Z Wert der Geometrie des Deckels (vw_Deckel). Wird die Sohlenkote beim Abwasserknoten gesetzt, definiert man damit den Z Wert der Geometrie des Abwasserknoten (vw_Abwasserknoten). Die Geometrie von vw_qgep_Abwasserbauwerk hat keine Kote (ist nicht 3D).</p>
+<p>The added feature’s geometry defines the geometry of the connected tables like cover and wastewater node. The vw_qgep_wastewater_structure-point itself has no Z value.
+When the level of the cover <cite>co_level</cite> is entered, this value is adapted to the Z value of the cover’s geometry. The bottom level of the wastewater node <cite>wn_bottom_level</cite> defines the Z value of the wastewater node’s geometry.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Wenn die Kote eines Deckels ändert, ändert sich auch der Z Wert seiner Geometrie. Wenn der Z Wert der Geometrie des Deckels ändert, ändert auch die Kote des Deckel. Wenn beide Werte gleichzeitig ändern, hat die Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie des Deckels gemäss der Kote des Deckels gesetzt und falls diese NULL ist, wird der Z Werte der Geometrie auf NaN gesetzt. Das gleiche gilt für Abwasserknoten.</p>
+<p>If a cover level changes, the Z value of the cover’s geometry will be ajusted. When the geometry changes, the co_level attribut is adjusted as well. If both values change, the level takes precedence. On an insert it’s like when both value change. Means the cover’s geometry is set according to the cover level and if it’s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly.</p>
 </div>
 </section>
 </section>
