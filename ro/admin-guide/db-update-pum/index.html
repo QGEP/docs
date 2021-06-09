@@ -221,10 +221,7 @@ You can either:</p>
 <section id="download-and-install-current-database-release">
 <h3><span class="section-number">3.6.2.3. </span>Download and install current database release<a class="headerlink" href="#download-and-install-current-database-release" title="Link permanent la acest titlu">¶</a></h3>
 <ul class="simple">
-<li><p>Download current database.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/QGEP/datamodel.git</span></code></p>
-<ul class="simple">
+<li><p>Download current datamodel release from <code class="docutils literal notranslate"><span class="pre">https://github.com/QGEP/datamodel/archive/refs/tags/&lt;release_number&gt;.zip</span></code> (replacing <code class="docutils literal notranslate"><span class="pre">&lt;release_number&gt;</span></code> with the desired version, such as <code class="docutils literal notranslate"><span class="pre">1.5.4</span></code>). Run the following commands from the unzipped directory.</p></li>
 <li><p>Create current database. It is used for comparison (target).</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">-h</span> <span class="pre">host</span> <span class="pre">-p</span> <span class="pre">port</span> <span class="pre">-U</span> <span class="pre">postgres</span> <span class="pre">-c</span> <span class="pre">'CREATE</span> <span class="pre">DATABASE</span> <span class="pre">qgep_comp;'</span></code></p>
