@@ -71,13 +71,7 @@ It is recommended to backup the database before the update. In command line:
 Download and install current database release
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Download current database.
-
-``git clone https://github.com/QGEP/datamodel.git``
-
-* Switch to current release
-
-``git checkout tags/<release_number>``
+* Download current datamodel release from ``https://github.com/QGEP/datamodel/archive/refs/tags/<release_number>.zip`` (replacing ``<release_number>`` with the desired version, such as ``1.5.4``). Run the following commands from the unzipped directory.
 
 * Create current database. It is used for comparison (target).
 
