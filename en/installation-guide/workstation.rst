@@ -137,9 +137,12 @@ Install the demo project
 
 * Extract the file
 
-* If you leave the qgep_[language].qm - file in the same directory as the qgep.qgs - file and start QGIS with language, your qgep-project will be translated if you start the project.
+* If you leave the qgep_[language].qm - file in the same directory as the qgep.qgs - file and start QGIS with on of these languages, your qgep-project will be translated to that langue when you start the project. E.g. you start qgep.qgs with a QGIS Installation that is set to German, then the qgep.qgs project will appear in German. 
+
+.. figure:: images/qgep_project_qm_language_files.jpg
 
 * Open `project/qgep.qgs` with QGIS
+* When you save that project it will keep it's language and it cannot be changed in the same way.
 
 
 Add your own OID in the project
