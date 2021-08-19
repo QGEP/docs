@@ -27,7 +27,7 @@ Python libraries
 You need `sqlalchemy` and `geoalchemy2`.
 
 To install : before launching QGIS, open OSGeo4W Shell, and type
->>> pip3 install sqlalchemy>=1.3.22 geoalchemy2>=0.9.0
+>>> pip3 install "sqlalchemy>=1.3.22" "geoalchemy2>=0.9.0"
 
 If the command fails, try 
 >>> pip install --upgrade pip
