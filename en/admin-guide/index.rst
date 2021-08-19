@@ -8,8 +8,7 @@ This represents a guide on how to administrate the database, install a Virtual m
 
    pgadmin/index
    security/index
-   data-export/index
-   data-import/index
+   interlis-io/index
    db-customization/index
    db-update-pum/index
 
