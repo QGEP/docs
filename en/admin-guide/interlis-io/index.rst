@@ -46,7 +46,11 @@ Usage (GUI)
 Enable admin mode
 -------------------------------------------------
 
-In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. You should now see new `import` and `export` buttons in the QGEP toolbar.
+In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. 
+
+- .. figure:: images/settings_dialog.png
+
+You should now see new `import` and `export` buttons in the QGEP toolbar.
 
 - .. figure:: images/toolbar.png
 
