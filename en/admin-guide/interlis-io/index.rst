@@ -27,7 +27,7 @@ Python libraries
 You need `sqlalchemy` and `geoalchemy2`.
 
 To install : before launching QGIS, open OSGeo4W Shell, and type
->>> pip3 install sqlalchemy>=1.3.22 geoalchemy2>=0.8.4
+>>> pip3 install sqlalchemy>=1.3.22 geoalchemy2>=0.9.0
 
 If the command fails, try 
 >>> pip install --upgrade pip
@@ -43,10 +43,10 @@ The QGEP plugin will propose to install the Modelbaker plugin automatically. If 
 Usage (GUI)
 ^^^^^^^^^^^^^
 
-Enable developer mode
+Enable admin mode
 -------------------------------------------------
 
-In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Developer mode` is enabled. Restart QGIS. You should now see new `import` and `export` buttons in the QGEP toolbar.
+In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. You should now see new `import` and `export` buttons in the QGEP toolbar.
 
 - .. figure:: images/toolbar.png
 
