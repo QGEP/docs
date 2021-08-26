@@ -18,7 +18,7 @@ The path to the SWMM executable must be set in the Processsing tools options.
 Launch ``SWMM Execute``:
 
 - ``INP file``: the ``.inp`` file generated during the previous step
-- ``OUT file``: the output file containing the results
+- ``RPT file``: the output report file ``.rpt`` containing the results (summary and full time serie)
 
 
 Common running errors

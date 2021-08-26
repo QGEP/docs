@@ -1,79 +1,79 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="it" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>6.7. Mapping &mdash; QGEP 0.8 documentazione</title>
+  <title>6.8. Mapping &mdash; QGEP 0.8 documentazione</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
 
   
+  
 
   
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Indice"
-              href="../genindex.html"/>
-        <link rel="search" title="Cerca" href="../search.html"/>
-    <link rel="top" title="QGEP 0.8 documentazione" href="../index.html"/>
-        <link rel="up" title="6. QGEP SWMM plugin" href="index.html"/>
-        <link rel="next" title="6.8. Change simulation parameters" href="Change-simulation-parameters.html"/>
-        <link rel="prev" title="6.6. SWMM Extract Results" href="Extract-Results.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+    
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="6.9. Change simulation parameters" href="Change-simulation-parameters.html" />
+    <link rel="prev" title="6.7. SWMM Import Results" href="Import-Results.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-
-        
-          <a href="../index.html" class="icon icon-home"> QGEP
-        
-
-        
-        </a>
-
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
-          
-            <div class="version">
-              0.7
-            </div>
-          
-        
 
-        
+          
+            <a href="../index.html" class="icon icon-home"> QGEP
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -82,13 +82,17 @@
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
@@ -102,37 +106,71 @@
 <li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.8. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.7. SWMM Import Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.8. Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#results-are-not-imported-in-qgep">6.8.1. Results are not imported in QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results-are-imported-in-qgep">6.8.2. Results are imported in QGEP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#show-the-indicators-evolving-along-time">6.8.2.1. Show the indicators evolving along time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.9. Change simulation parameters</a></li>
 </ul>
 </li>
 </ul>
 
+            
           
+        </div>
         
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">QGEP</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGEP</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-      
-    <li><span class="section-number">6.7. </span>Mapping</li>
+        
+      <li><span class="section-number">6.8. </span>Mapping</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
@@ -140,15 +178,20 @@
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <section id="mapping">
-<span id="id1"></span><h1><span class="section-number">6.7. </span>Mapping<a class="headerlink" href="#mapping" title="Link a questa intestazione">¶</a></h1>
-<p>Use processing tool <code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">attributes</span></code> to add the results stored in <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">summary</span></code> and <code class="docutils literal notranslate"><span class="pre">Link</span> <span class="pre">summary</span></code> to the tables <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_wastewater_node</span></code> and <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_reach</span></code>.
+<span id="id1"></span><h1><span class="section-number">6.8. </span>Mapping<a class="headerlink" href="#mapping" title="Link a questa intestazione">¶</a></h1>
+<section id="results-are-not-imported-in-qgep">
+<h2><span class="section-number">6.8.1. </span>Results are not imported in QGEP<a class="headerlink" href="#results-are-not-imported-in-qgep" title="Link a questa intestazione">¶</a></h2>
+<p>Use processing tool <code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">attributes</span></code> to add the results stored in the tables <code class="docutils literal notranslate"><span class="pre">Node</span> <span class="pre">summary</span></code> and <code class="docutils literal notranslate"><span class="pre">Link</span> <span class="pre">summary</span></code> to the tables <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_wastewater_node</span></code> and <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_reach</span></code>.
 The mapping should be done on the attribute <code class="docutils literal notranslate"><span class="pre">obj_id</span></code> of the <code class="docutils literal notranslate"><span class="pre">qgep_od</span></code> tables and the attribute <code class="docutils literal notranslate"><span class="pre">id</span></code> of the summary tables.</p>
 <figure class="align-default">
 <img alt="qgep_swmm/images/map_link_summary.jpg" src="qgep_swmm/images/map_link_summary.jpg" />
@@ -157,34 +200,85 @@ The mapping should be done on the attribute <code class="docutils literal notran
 <img alt="qgep_swmm/images/map_node_summary.jpg" src="qgep_swmm/images/map_node_summary.jpg" />
 </figure>
 </section>
+<section id="results-are-imported-in-qgep">
+<h2><span class="section-number">6.8.2. </span>Results are imported in QGEP<a class="headerlink" href="#results-are-imported-in-qgep" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li><p>Add the layers qgep_swmm.node_results and / or qgep_swmm.link_results to your QGIS project</p></li>
+<li><p>Filter by the name of the simulation and the name of the parameter to show: Right click on the layer &gt; filter &gt; Expression: <code class="docutils literal notranslate"><span class="pre">&quot;swmm_simulation_name&quot;</span> <span class="pre">=</span> <span class="pre">'name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">simulation</span> <span class="pre">AND</span> <span class="pre">&quot;swmm_parameter&quot;</span> <span class="pre">=</span> <span class="pre">'inflow'</span></code></p></li>
+</ul>
+<p>Two template QGIS files are provided in the plugin folder <code class="docutils literal notranslate"><span class="pre">src\swmm\*.qgs</span></code></p>
+<p>The project <code class="docutils literal notranslate"><span class="pre">swmm_summary.qgs</span></code> show how the summary indicators can be loaded in QGIS. The project <code class="docutils literal notranslate"><span class="pre">swmm_full_report.qgs</span></code> show how the full time series can be loaded in QGIS. You will need to adapt the services and the filters.</p>
+<section id="show-the-indicators-evolving-along-time">
+<h3><span class="section-number">6.8.2.1. </span>Show the indicators evolving along time<a class="headerlink" href="#show-the-indicators-evolving-along-time" title="Link a questa intestazione">¶</a></h3>
+<p>This manipulation only works with complete times series. Namely, you need to import the full results and not only the summary.</p>
+<p>** Play the simulation with <em>Time Manager</em> **</p>
+<ul class="simple">
+<li><p>Install / activate the plugin <em>Time Manager</em></p></li>
+<li><dl class="simple">
+<dt>Parameters: Add a layer</dt><dd><ul>
+<li><p>Start time: time</p></li>
+<li><p>End time: Same as start</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Time frame size: Same as the swmm export time step</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/time_manager_add_layer.JPG" src="../_images/time_manager_add_layer.JPG" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/time_manager_inflow_example.gif" src="../_images/time_manager_inflow_example.gif" />
+</figure>
+<p>** Plot values along the time with <em>DataPlotly</em> **</p>
+<ul class="simple">
+<li><p>Install / activate the plugin <em>DataPlotly</em></p></li>
+<li><p>Graph type: <em>Scatter Plot</em></p></li>
+<li><p>Activate: <em>Use only selected features</em></p></li>
+<li><p>Choose the layer</p></li>
+<li><p>Field X: <em>time</em></p></li>
+<li><p>Field Y: <em>value</em></p></li>
+<li><p>Marker type: <em>Line</em></p></li>
+<li><p>Select the object that you want to plot: every nodes or links with the same id (you can select them from the map or from the table).</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/DataPlotly_parameters.JPG" src="../_images/DataPlotly_parameters.JPG" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/DataPlotly_plot.png" src="../_images/DataPlotly_plot.png" />
+</figure>
+</section>
+</section>
+</section>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Change-simulation-parameters.html" class="btn btn-neutral float-right" title="6.8. Change simulation parameters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Extract-Results.html" class="btn btn-neutral" title="6.6. SWMM Extract Results" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Change-simulation-parameters.html" class="btn btn-neutral float-right" title="6.9. Change simulation parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Import-Results.html" class="btn btn-neutral float-left" title="6.7. SWMM Import Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
+        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -193,38 +287,15 @@ The mapping should be done on the attribute <code class="docutils literal notran
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.8',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/documentation_options.js"></script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="../_static/translations.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

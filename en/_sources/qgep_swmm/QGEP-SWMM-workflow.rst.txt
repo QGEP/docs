@@ -10,12 +10,12 @@ Workflow
 
 2. Check ``.inp`` file. Its likely that the ``.inp`` file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the ``.inp`` file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
 
-3. Run ``SWMM Execute`` launches SWMM. Run it on a tested ``.inp`` file.
+3. Run ``SWMM Execute``, it launches SWMM. Run it on a tested ``.inp`` file. It generates a report file ``.rpt`` which contains the summary and the full time series. Errors can also occur during the running time.
 
-4. Run ``SWMM Extract Results``. It parses the result file and generates three QGIS table layers.
+4. Stores and map the results
 
-5. Mapping: The user has to join the computed values with the geometries and map them. This step is currently not automatised.
-
+ - **If you dont want to store the result in QGEP database**: Run ``SWMM Extract Results``. It parses the report file and generates three QGIS table layers from the summary. The user has to join the computed values with the geometries and map them.
+ - **If you want to store the results in QGEP and use the dedicated view for the mapping**: .Run ``SWMM Import Results``. It parses the report file. The results are imported in the measurements table, they populate a view dedicated for the mapping.
 
 Each step is explained in more details in the next chapters.
 
