@@ -82,7 +82,7 @@ Action:
 
 4. Enter a description in the hydr_geometry - Feature Attributes window. This name is also the name of the table in MikeUrban.
 
-5. Before you can create a hydr: geom_relation, the new record hydro_geometry must be saved: -> click OK
+5. Before you can create a hydr: geom_relation, the new record hydr_geometry must be saved: -> click OK
 
 6. Go back to the hydr_geometry you just created with the button **switch to form view** in the field fk_hydr_geometry .
 
@@ -94,7 +94,7 @@ Action:
 
 Note:
 
-* The water depth is the value above the bottom level or the outlet. A hydr_geometry can thus be used for several wastewater structure if they are similar built.
+* The water depth is the value above the bottom level or the outlet. A hydr_geometry can thus be used for several wastewater structure if they are built similar.
 
 * In the table view, the overview of the values is easier.
 
@@ -129,7 +129,7 @@ We define now a prank weir:
 
 6. Choose prank weir in the overflow tabs
 
-7. Create a weir with the * Add child object * button
+7. Create a weir with the **Add child object** button
 
 The prank weir Feature Attributes window opens. The attributes in the upper hydraulic section must be filled in, they will be transferred to MikeUrban.
 The field fk_overflow_to must be filled manually. The Obj_ID of the previously created second wastewater node can be seen in the rear window.
@@ -155,7 +155,7 @@ Close all open Feature Attributes window.
 Overflow characteristic
 -----------------------
 
-In the case of a leaping weir, a pumpt or under special conditions, an overflow characteristic can be defined for the overflow:
+In the case of a leaping weir, a pump or under special conditions, an overflow characteristic can be defined for the overflow:
 
 You can select an existing characteristic in the field fk_overflow_char or you creat a new one characteristic with the green + button.
 
@@ -163,8 +163,8 @@ The Feature Attributes window for the overflow characteristic appears:
 
 .. figure:: images/overflow_char1.jpg
 
-1. Here, too, the identifer is later adopted in MikeUrban as a table name for a QH relationship, which is used, for example, in a local controller.
+1. Here too, the identifer is later adopted in MikeUrban as a table name for a QH relationship, which is used, for example, in a local controller.
 
 2. Because the new record overflow characteristic has not yet been saved, it must first be saved with OK before the records of the HQ relation can be created.
 
-3. Go with the button **switch to form view** in the field fk_ overflow characteristic back to the just created overflow characteristic and define the necessary HQ or QQ values with the **add child object** button.
+3. Go back in the field fk_overflow characteristic of the just created overflow characteristic with the button **switch to form view** and define the necessary HQ or QQ values with the **add child object** button.
