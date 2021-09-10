@@ -96,4 +96,75 @@ Note:
 
 * The water depth is the value above the bottom level or the outlet. A hydr_geometry can thus be used for several wastewater structure if they are similar built.
 
-* In the table display, the overview of the values is easier.
+* In the table view, the overview of the values is easier.
+
+
+Hydraulic modeling of an overflow (prank weir / leapingweir / pump)
+----------------------------------
+
+Action:
+
+In the case of weirs, a second sewage junction has to be created in the wastewater structure. 
+A second outlet has already been created (green = discharged combined wastewater) and has not yet been linked to any wastewater node in the overflow structure.
+
+1. Select the wastewater structure with the i-button
+
+2. Select the wastewater nodes tab in the Feature Attributes window
+
+3. Create a second wastewater node with the **Add point child object** button. The light blue note at the top of the map tells you what to do!
+
+.. figure:: images/overflow1.jpg
+
+4. Click next to outlet 2 to place the second wastewater node.
+
+5. The Feature Attributes window for this wastewater node appears. Enter a meaningful identifier (e.g. BSP001-WN2 for wastewater node 2 of the BSP001 special structure). This designation also appears in MikeUrban. The new wastewater node is saved with OK.
+
+.. figure:: images/overflow2.jpg
+
+In the next picture, the 2nd node is marked in yellow on the map and in the Feature Attributes window.
+
+.. figure:: images/overflow3.jpg
+
+We define now a prank weir:
+
+6. Choose prank weir in the overflow tabs
+
+7. Create a weir with the * Add child object * button
+
+The prank weir Feature Attributes window opens. The attributes in the upper hydraulic section must be filled in, they will be transferred to MikeUrban.
+The field fk_overflow_to must be filled manually. The Obj_ID of the previously created second wastewater node can be seen in the rear window.
+
+.. figure:: images/overflow4.jpg
+
+This information is sufficient for the calculation in MikeUrban with the weir formula.
+
+Now only the 2nd outlet has to be linked to the 2nd wastewater node:
+
+Close all open Feature Attributes window.
+
+1. Select the QGEP tool **Connect wastewater networkelements**.
+
+2. Click on the reach near to the outlet
+
+3. Click on the wastewater node
+
+4. Confirm that the connection is created for the **from reach point**.
+
+.. figure:: images/connect_2_node.jpg
+
+Overflow characteristic
+-----------------------
+
+In the case of a leaping weir, a pumpt or under special conditions, an overflow characteristic can be defined for the overflow:
+
+You can select an existing characteristic in the field fk_overflow_char or you creat a new one characteristic with the green + button.
+
+The Feature Attributes window for the overflow characteristic appears:
+
+.. figure:: images/overflow_char1.jpg
+
+1. Here, too, the identifer is later adopted in MikeUrban as a table name for a QH relationship, which is used, for example, in a local controller.
+
+2. Because the new record overflow characteristic has not yet been saved, it must first be saved with OK before the records of the HQ relation can be created.
+
+3. Go with the button **switch to form view** in the field fk_ overflow characteristic back to the just created overflow characteristic and define the necessary HQ or QQ values with the **add child object** button.
