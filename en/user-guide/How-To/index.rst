@@ -62,3 +62,38 @@ If you can not find a .qgd-file, then you have probably not moved or rotated a l
 
 * If necessary define the horizontal/vertical alignment of your label-coordinates in the placement of the label definition.
 
+Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
+--------------------------
+Note:
+
+* Wastewater structures with a hydr_geometry have to be defined as special structures (and not as standard manholes).
+
+* The detail geometry can be graphically drawn with the **Digitize action**.
+
+Action:
+
+1. Select the wastewater structure with the i-button
+
+2. Select the wastewater nodes tab in the Feature Attributes window
+
+3. Select a hydr_geometry in the fk_hydr_geometry field or use the + button to create a new hydr_geometry.
+
+.. figure:: images/hydr_geometry1.jpg
+
+4. Enter a description in the hydr_geometry - Feature Attributes window. This name is also the name of the table in MikeUrban.
+
+5. Before you can create a hydr: geom_relation, the new record hydro_geometry must be saved: -> click OK
+
+6. Go back to the hydr_geometry you just created with the button **switch to form view** in the field fk_hydr_geometry .
+
+.. figure:: images/hydr_geometry2.jpg
+
+7. With the **Add child object** button, you can now generate the records with which the hydr_geometry is defined analogously to the basin geometry of MikeUrban (H, As surface, Ac cross-sectional area).
+
+.. figure:: images/hydr_geometry3.jpg
+
+Note:
+
+* The water depth is the value above the bottom level or the outlet. A hydr_geometry can thus be used for several wastewater structure if they are similar built.
+
+* In the table display, the overview of the values is easier.
