@@ -1,79 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ro" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>6.5. SWMM Execute &mdash; QGEP 0.8 documentație</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Căutare" href="../search.html" />
     <link rel="next" title="6.6. SWMM Extract Results" href="Extract-Results.html" />
     <link rel="prev" title="6.4. Check input file" href="Check-Input.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> QGEP
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0.7
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -81,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
@@ -118,81 +66,39 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">QGEP</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-        
       <li><span class="section-number">6.5. </span>SWMM Execute</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/qgep_swmm/Execute.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="swmm-execute">
-<span id="execute"></span><h1><span class="section-number">6.5. </span>SWMM Execute<a class="headerlink" href="#swmm-execute" title="Link permanent la acest titlu">¶</a></h1>
+<span id="execute"></span><h1><span class="section-number">6.5. </span>SWMM Execute<a class="headerlink" href="#swmm-execute" title="Link permanent la acest titlu"></a></h1>
 <section id="change-simulation-parameters">
-<h2><span class="section-number">6.5.1. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link permanent la acest titlu">¶</a></h2>
+<h2><span class="section-number">6.5.1. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link permanent la acest titlu"></a></h2>
 <p>From SWMM GUI you can set the simulation parameters (see <a class="reference external" href="./Change-simulation-parameters.html#change-simulation-parameters">Change Simulation Parameters</a>).</p>
 </section>
 <section id="qgep-plugin">
-<h2><span class="section-number">6.5.2. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link permanent la acest titlu">¶</a></h2>
+<h2><span class="section-number">6.5.2. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link permanent la acest titlu"></a></h2>
 <p>The path to the SWMM executable must be set in the Processsing tools options.</p>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code>:</p>
 <ul class="simple">
@@ -201,7 +107,7 @@
 </ul>
 </section>
 <section id="common-running-errors">
-<h2><span class="section-number">6.5.3. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Link permanent la acest titlu">¶</a></h2>
+<h2><span class="section-number">6.5.3. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Link permanent la acest titlu"></a></h2>
 <p>The list of errors can be found <a class="reference external" href="https://swmm5.org/2016/09/05/swmm-5-1-and-infoswmm-error-and-warning-messages/">here</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ERROR</span> <span class="pre">211:</span> <span class="pre">invalid</span> <span class="pre">number</span> <span class="pre">-XXX</span> <span class="pre">at</span> <span class="pre">line</span> <span class="pre">XXX</span> <span class="pre">of</span> <span class="pre">[JUNC]</span> <span class="pre">section:</span></code>: A negative number is provided for the depth. Change the value in QGEP or in the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p></li>
@@ -211,50 +117,33 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Extract-Results.html" class="btn btn-neutral float-right" title="6.6. SWMM Extract Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Check-Input.html" class="btn btn-neutral float-left" title="6.4. Check input file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Extract-Results.html" class="btn btn-neutral float-right" title="6.6. SWMM Extract Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
-
-    </p>
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

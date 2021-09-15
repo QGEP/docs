@@ -1,79 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>3.4. Personnalisation du modèle de données &mdash; Documentation QGEP 0.8</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="3.5. Update of the datamodel" href="../db-update-pum/index.html" />
     <link rel="prev" title="3.3. INTERLIS Data exchange" href="../interlis-io/index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> QGEP
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0.7
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" />
@@ -81,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
@@ -115,78 +63,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">QGEP</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html"><span class="section-number">3. </span>Guide d’administration</a> &raquo;</li>
-        
       <li><span class="section-number">3.4. </span>Personnalisation du modèle de données</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/admin-guide/db-customization/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="customization-of-the-data-model">
-<h1><span class="section-number">3.4. </span>Personnalisation du modèle de données<a class="headerlink" href="#customization-of-the-data-model" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">3.4. </span>Personnalisation du modèle de données<a class="headerlink" href="#customization-of-the-data-model" title="Lien permanent vers ce titre"></a></h1>
 <p>Ce chapître décrit les personnalisations possibles du modèle de données.</p>
 <section id="introduction">
-<h2><span class="section-number">3.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.4.1. </span>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre"></a></h2>
 <p>Le modèle de données est versionné et mis à jour à l’aide du Postgres Updates Manager (abr. <a class="reference external" href="https://github.com/opengisch/pum">PUM</a>). Les vues requises pour l’édition des données sont générées automatiquement en utilisant la <a class="reference external" href="https://github.com/opengisch/pirogue">librairie Pirogue</a>.</p>
 <p>La combinaison des deux rend possible l’introduction de petites personnalisations du modèle de données comme l’ajout de champs aux tables existantes ou l’extension de vues par jointure de tables additionnelles.</p>
 <p>Avant d’aller plus loin, nous recommandons fortement de soumettre la question à la communauté si des doutes apparaissent sur la manière de sauvegarder n’importe quelle information dans la base de données. QGEP est compatible avec la <a class="reference external" href="http://www.sia.ch/405">SIA 405</a> Eaux usées ainsi qu’avec le modèle de données <a class="reference external" href="http://dss.vsa.ch">VSA-DSS</a>.</p>
@@ -194,7 +100,7 @@
 <p>Dans le cas où une personnalisation est inévitable, les explications et règles suivantes expliquent comment adapter le modèle de données QGEP à vos besoins spécifiques.</p>
 </section>
 <section id="adding-fields">
-<h2><span class="section-number">3.4.2. </span>Ajouter des champs<a class="headerlink" href="#adding-fields" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.4.2. </span>Ajouter des champs<a class="headerlink" href="#adding-fields" title="Lien permanent vers ce titre"></a></h2>
 <p>Il est autorisé d’ajouter des champs additionnels aux tables en les nommant avec le préfixe <code class="docutils literal notranslate"><span class="pre">usr_…</span></code>.</p>
 <p>If added in base tables, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span></code></p>
@@ -204,7 +110,7 @@
 </div>
 </section>
 <section id="joining-additional-tables">
-<h2><span class="section-number">3.4.3. </span>Joindre des tables additionnelles<a class="headerlink" href="#joining-additional-tables" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.4.3. </span>Joindre des tables additionnelles<a class="headerlink" href="#joining-additional-tables" title="Lien permanent vers ce titre"></a></h2>
 <p>Il est possible de joindre des tables supplémentaires aux deux vues principales (<code class="docutils literal notranslate"><span class="pre">vw_qgep_wastewater_structure</span></code> et <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>). Ceci est possible à l’aide du fichier de définition YAML pour chaque vue en définissant une liste des tables jointes. Les champs de ces tables sont joints en lecture seule étant donné que ces derniers ne sont pas pris en compte par les triggers d’édition. Dans le but de joindre une table à <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, voici un exemple :</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">joins</span><span class="p">:</span>
   <span class="nt">my_extra_join</span><span class="p">:</span>
@@ -225,7 +131,7 @@
 <p>De la même manière pour la vue <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>, en spécifiant la variable <code class="docutils literal notranslate"><span class="pre">qgep_reach_extra</span></code> correspondant au chemin du fichier YAML.</p>
 </section>
 <section id="creating-custom-views">
-<h2><span class="section-number">3.4.4. </span>Créer des vues personnalisées<a class="headerlink" href="#creating-custom-views" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">3.4.4. </span>Créer des vues personnalisées<a class="headerlink" href="#creating-custom-views" title="Lien permanent vers ce titre"></a></h2>
 <p>Il est possible de créer des vues personnalisées et de les ajouter au modèle de données.</p>
 <p>Afin de permettre les mises à niveau du modèle de données, un script de création et un script de suppression de la vue doivent être fournis. Ces scripts (SQL ou Python) doivent être placés dans un endroit spécifique et être nommés pre-all.{py,sql} et post-all.{py,sql}. Le chemin sera donné comme paramètre à PUM lors de la mise à niveau  (voir PUM <a class="reference external" href="https://github.com/opengisch/pum">documentation</a>).</p>
 <p>Si quelqu’un souhaite avoir ces vues mises à jour automatiquement lors d’une mise à jour du modèle, Pirogue peut être utilisé dynamiquement pour générer les vues. L’exemple de création des vues dans le modèle peut être utilisé.</p>
@@ -234,50 +140,33 @@
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../db-update-pum/index.html" class="btn btn-neutral float-right" title="3.5. Update of the datamodel" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
         <a href="../interlis-io/index.html" class="btn btn-neutral float-left" title="3.3. INTERLIS Data exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../db-update-pum/index.html" class="btn btn-neutral float-right" title="3.5. Update of the datamodel" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
-
-    </p>
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
   </div>
-    
-    
-    
-    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

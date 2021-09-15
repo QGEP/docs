@@ -1,79 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>2.2.3. Digitalisieren detaillierter Geometrie &mdash; QGEP 0.8 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
     <link rel="search" title="Suche" href="../../search.html" />
     <link rel="next" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" href="digitizingdrainagechannel.html" />
     <link rel="prev" title="2.2.2. Abwasserbauwerke digitalisieren" href="digitizingwastewaterstructures.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> QGEP
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0.7
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
@@ -81,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP Benutzerhandbuch</a><ul class="current">
@@ -126,79 +74,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">QGEP</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html"><span class="section-number">2. </span>QGEP Benutzerhandbuch</a> &raquo;</li>
-        
           <li><a href="index.html"><span class="section-number">2.2. </span>Digitalisieren in QGEP</a> &raquo;</li>
-        
       <li><span class="section-number">2.2.3. </span>Digitalisieren detaillierter Geometrie</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/user-guide/digitizing/digitizingdetailedgeometry.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="digitizing-detailed-geometry">
-<h1><span class="section-number">2.2.3. </span>Digitalisieren detaillierter Geometrie<a class="headerlink" href="#digitizing-detailed-geometry" title="Link zu dieser Überschrift">¶</a></h1>
+<h1><span class="section-number">2.2.3. </span>Digitalisieren detaillierter Geometrie<a class="headerlink" href="#digitizing-detailed-geometry" title="Link zu dieser Überschrift"></a></h1>
 <section id="general">
-<h2><span class="section-number">2.2.3.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.3.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift"></a></h2>
 <p>Sie können für Abwasserbauwerke eine detaillierte Geometrie ( Polygon) hinzufügen</p>
 <p>Das ist empfohlen für:</p>
 <ul class="simple">
@@ -211,7 +116,7 @@
 </div>
 </section>
 <section id="digitizing-tool">
-<h2><span class="section-number">2.2.3.2. </span>Digitalisierungswerkzeug<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">2.2.3.2. </span>Digitalisierungswerkzeug<a class="headerlink" href="#digitizing-tool" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Wählen Sie den <strong>vw_qgep_wastewater_structure</strong> Layer</p></li>
 <li><p>Wählen Sie das Objekt, bei welchem Sie detaillierte Geometrie hinzufügen wollen mit dem Info Werkzeug</p></li>
@@ -240,57 +145,40 @@
 <p>Eine andere Möglichkeit besteht darin, die <strong>vw_qgep_wastewater_structure</strong> Eingabemaske mit dem Info-Tool zu öffnen und dann im <strong>Aktionen</strong>-Menu der Eingabemaske <strong>Digitize</strong> wählen.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>If the geometry disappears after digitizing or if you get an message (like ‚Add part‘), you have probably tried to digitize over a catchment area (or an other polygon theme) and the layer has set the avoid overlap option in the snapping settings. Do change the avoid overlap settings.</p>
+<p>Wenn die Geometrie nach dem Digitalisieren verschwindet oder ein Meldung (z.B. ‚Teil hinzufügen‘) erscheint, dann war vermutlich eine Einzugsgebietsfläche (oder ein anderes Flächenthema) bereits mit einem Datensatz an dieser Stelle vorhanden und für den Layer ist die Option Überlappung vermeiden in den Schnappen-Einstellungen  der Einrastwerkzeugleiste gewählt. Die Überlappung-Einstellungen in der Einrastwerkzeugleiste ändern hilft.</p>
 </div>
 </section>
 </section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="digitizingwastewaterstructures.html" class="btn btn-neutral float-left" title="2.2.2. Abwasserbauwerke digitalisieren" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
-
-    </p>
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

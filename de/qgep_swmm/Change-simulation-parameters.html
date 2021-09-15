@@ -1,78 +1,37 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>6.9. Change simulation parameters &mdash; QGEP 0.8 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="prev" title="6.8. Mapping" href="Mapping.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> QGEP
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 0.7
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
@@ -80,18 +39,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
@@ -124,101 +72,59 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">QGEP</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-        
       <li><span class="section-number">6.9. </span>Change simulation parameters</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/qgep_swmm/Change-simulation-parameters.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="change-simulation-parameters">
-<span id="id1"></span><h1><span class="section-number">6.9. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">6.9. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link zu dieser Überschrift"></a></h1>
 <p>The easiest way to edit the simulation parameters is to open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.
 Then, you will find the parameters list hereunder.
 These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p>
 <section id="title-notes">
-<h2><span class="section-number">6.9.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Set by the user as a QGEP_SWMM option</p></li>
 <li><p>update title if necessary.</p></li>
 </ul>
 </section>
 <section id="options">
-<h2><span class="section-number">6.9.2. </span>Options:<a class="headerlink" href="#options" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.2. </span>Options:<a class="headerlink" href="#options" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 <li><p>set / update simulation parameters.</p></li>
 </ul>
 </section>
 <section id="climatology">
-<h2><span class="section-number">6.9.3. </span>Climatology:<a class="headerlink" href="#climatology" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.3. </span>Climatology:<a class="headerlink" href="#climatology" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 <li><p>set / update climatology parameters</p></li>
 </ul>
 </section>
 <section id="hydrology">
-<h2><span class="section-number">6.9.4. </span>Hydrology:<a class="headerlink" href="#hydrology" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.4. </span>Hydrology:<a class="headerlink" href="#hydrology" title="Link zu dieser Überschrift"></a></h2>
 <p><strong>Rain Gages:</strong></p>
 <p>QGEP_SWMM creates one raingage for each subcatchment.</p>
 <p>By default:</p>
@@ -258,7 +164,7 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 </ul>
 </section>
 <section id="hydraulics">
-<h2><span class="section-number">6.9.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Link zu dieser Überschrift"></a></h2>
 <p><strong>Junctions</strong></p>
 <ul class="simple">
 <li><p>QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.</p></li>
@@ -316,7 +222,7 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 </ul>
 </section>
 <section id="quality">
-<h2><span class="section-number">6.9.6. </span>Quality<a class="headerlink" href="#quality" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.6. </span>Quality<a class="headerlink" href="#quality" title="Link zu dieser Überschrift"></a></h2>
 <p><strong>Land uses</strong></p>
 <ul class="simple">
 <li><p>QGEP_SWMM creates a land use for each QGEP planning zone kind.</p></li>
@@ -328,28 +234,28 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 </ul>
 </section>
 <section id="curves">
-<h2><span class="section-number">6.9.7. </span>Curves<a class="headerlink" href="#curves" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.7. </span>Curves<a class="headerlink" href="#curves" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Are not created from QGEP objects.</p></li>
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="time-series">
-<h2><span class="section-number">6.9.8. </span>Time series<a class="headerlink" href="#time-series" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.8. </span>Time series<a class="headerlink" href="#time-series" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Are not created from QGEP objects.</p></li>
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="time-patterns">
-<h2><span class="section-number">6.9.9. </span>Time patterns<a class="headerlink" href="#time-patterns" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.9. </span>Time patterns<a class="headerlink" href="#time-patterns" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Are not created from QGEP objects.</p></li>
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="labels">
-<h2><span class="section-number">6.9.10. </span>Labels<a class="headerlink" href="#labels" title="Link zu dieser Überschrift">¶</a></h2>
+<h2><span class="section-number">6.9.10. </span>Labels<a class="headerlink" href="#labels" title="Link zu dieser Überschrift"></a></h2>
 <ul class="simple">
 <li><p>Are not created from QGEP objects.</p></li>
 <li><p>Copied from the template input file if exists.</p></li>
@@ -359,49 +265,32 @@ These parameters are extracted from the QGEP database if they exists (i.e. secti
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Mapping.html" class="btn btn-neutral float-left" title="6.8. Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
-
-    </p>
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

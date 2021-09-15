@@ -40,6 +40,11 @@ Modelbaker
 The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager (version 6.4 or newer).
 
 
+QGEP Version
+--------
+The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
+
+
 Usage (GUI)
 ^^^^^^^^^^^^^
 
