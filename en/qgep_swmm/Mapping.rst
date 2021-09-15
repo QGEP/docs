@@ -32,7 +32,7 @@ This manipulation only works with complete times series. Namely, you need to imp
 	* End time: Same as start
 * Time frame size: Same as the swmm export time step
 
-.. figure:: images/time_manager_add_layer.JPG
+.. figure:: images/time_manager_add_layer.jpg
 .. figure:: images/time_manager_inflow_example.gif
 
 ** Plot values along the time with *DataPlotly* **
@@ -46,5 +46,5 @@ This manipulation only works with complete times series. Namely, you need to imp
 * Marker type: *Line*
 * Select the object that you want to plot: every nodes or links with the same id (you can select them from the map or from the table).
 
-.. figure:: images/DataPlotly_parameters.JPG
+.. figure:: images/DataPlotly_parameters.jpg
 .. figure:: images/DataPlotly_plot.png
