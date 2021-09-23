@@ -6,3 +6,4 @@ init
 i18n
 .DS_Store
 .idea
+.venv
