@@ -54,6 +54,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.8. How To</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#manual-label-positioning-for-different-scales">2.8.1. Manual Label-positioning for different scales</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-import-existing-label-positions">2.8.2. How to import existing label-positions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">2.8.3. Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">2.8.4. Hydraulic modeling of an overflow (prank weir / leapingweir / pump)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overflow-characteristic">2.8.5. Overflow characteristic</a></li>
 </ul>
 </li>
 </ul>
@@ -151,6 +154,103 @@ You have not the change something in the placement, because this rule uses the s
 <li><p>Save the qgd-file and remove it from your project, before you remove labels, because QGIS can not save manual label-positions, if the qgd-file is a layer in the project.</p></li>
 <li><p>If necessary define the horizontal/vertical alignment of your label-coordinates in the placement of the label definition.</p></li>
 </ul>
+</section>
+<section id="collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">
+<h2><span class="section-number">2.8.3. </span>Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)<a class="headerlink" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban" title="Lien permanent vers ce titre"></a></h2>
+<p>Note:</p>
+<ul class="simple">
+<li><p>Wastewater structures with a hydr_geometry have to be defined as special structures (and not as standard manholes).</p></li>
+<li><p>The detail geometry can be graphically drawn with the <strong>Digitize action</strong>.</p></li>
+</ul>
+<p>Action:</p>
+<ol class="arabic simple">
+<li><p>Select the wastewater structure with the i-button</p></li>
+<li><p>Select the wastewater nodes tab in the Feature Attributes window</p></li>
+<li><p>Select a hydr_geometry in the fk_hydr_geometry field or use the + button to create a new hydr_geometry.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/hydr_geometry1.jpg" src="../../_images/hydr_geometry1.jpg" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Enter a description in the hydr_geometry - Feature Attributes window. This name is also the name of the table in MikeUrban.</p></li>
+<li><p>Before you can create a hydr: geom_relation, the new record hydr_geometry must be saved: -&gt; click OK</p></li>
+<li><p>Go back to the hydr_geometry you just created with the button <strong>switch to form view</strong> in the field fk_hydr_geometry .</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/hydr_geometry2.jpg" src="../../_images/hydr_geometry2.jpg" />
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>With the <strong>Add child object</strong> button, you can now generate the records with which the hydr_geometry is defined analogously to the basin geometry of MikeUrban (H, As surface, Ac cross-sectional area).</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/hydr_geometry3.jpg" src="../../_images/hydr_geometry3.jpg" />
+</figure>
+<p>Note:</p>
+<ul class="simple">
+<li><p>The water depth is the value above the bottom level or the outlet. A hydr_geometry can thus be used for several wastewater structure if they are built similar.</p></li>
+<li><p>In the table view, the overview of the values is easier.</p></li>
+</ul>
+</section>
+<section id="hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">
+<h2><span class="section-number">2.8.4. </span>Hydraulic modeling of an overflow (prank weir / leapingweir / pump)<a class="headerlink" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump" title="Lien permanent vers ce titre"></a></h2>
+<p>Action:</p>
+<p>In the case of weirs, a second sewage junction has to be created in the wastewater structure.
+A second outlet has already been created (green = discharged combined wastewater) and has not yet been linked to any wastewater node in the overflow structure.</p>
+<ol class="arabic simple">
+<li><p>Select the wastewater structure with the i-button</p></li>
+<li><p>Select the wastewater nodes tab in the Feature Attributes window</p></li>
+<li><p>Create a second wastewater node with the <strong>Add point child object</strong> button. The light blue note at the top of the map tells you what to do!</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/overflow1.jpg" src="../../_images/overflow1.jpg" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click next to outlet 2 to place the second wastewater node.</p></li>
+<li><p>The Feature Attributes window for this wastewater node appears. Enter a meaningful identifier (e.g. BSP001-WN2 for wastewater node 2 of the BSP001 special structure). This designation also appears in MikeUrban. The new wastewater node is saved with OK.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/overflow2.jpg" src="../../_images/overflow2.jpg" />
+</figure>
+<p>In the next picture, the 2nd node is marked in yellow on the map and in the Feature Attributes window.</p>
+<figure class="align-default">
+<img alt="../../_images/overflow3.jpg" src="../../_images/overflow3.jpg" />
+</figure>
+<p>We define now a prank weir:</p>
+<ol class="arabic simple" start="6">
+<li><p>Choose prank weir in the overflow tabs</p></li>
+<li><p>Create a weir with the <strong>Add child object</strong> button</p></li>
+</ol>
+<p>The prank weir Feature Attributes window opens. The attributes in the upper hydraulic section must be filled in, they will be transferred to MikeUrban.
+The field fk_overflow_to must be filled manually. The Obj_ID of the previously created second wastewater node can be seen in the rear window.</p>
+<figure class="align-default">
+<img alt="../../_images/overflow4.jpg" src="../../_images/overflow4.jpg" />
+</figure>
+<p>This information is sufficient for the calculation in MikeUrban with the weir formula.</p>
+<p>Now only the 2nd outlet has to be linked to the 2nd wastewater node:</p>
+<p>Close all open Feature Attributes window.</p>
+<ol class="arabic simple">
+<li><p>Select the QGEP tool <strong>Connect wastewater networkelements</strong>.</p></li>
+<li><p>Click on the reach near to the outlet</p></li>
+<li><p>Click on the wastewater node</p></li>
+<li><p>Confirm that the connection is created for the <strong>from reach point</strong>.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../../_images/connect_2_node.jpg" src="../../_images/connect_2_node.jpg" />
+</figure>
+</section>
+<section id="overflow-characteristic">
+<h2><span class="section-number">2.8.5. </span>Overflow characteristic<a class="headerlink" href="#overflow-characteristic" title="Lien permanent vers ce titre"></a></h2>
+<p>In the case of a leaping weir, a pump or under special conditions, an overflow characteristic can be defined for the overflow:</p>
+<p>You can select an existing characteristic in the field fk_overflow_char or you creat a new one characteristic with the green + button.</p>
+<p>The Feature Attributes window for the overflow characteristic appears:</p>
+<figure class="align-default">
+<img alt="../../_images/overflow_char1.jpg" src="../../_images/overflow_char1.jpg" />
+</figure>
+<ol class="arabic simple">
+<li><p>Here too, the identifer is later adopted in MikeUrban as a table name for a QH relationship, which is used, for example, in a local controller.</p></li>
+<li><p>Because the new record overflow characteristic has not yet been saved, it must first be saved with OK before the records of the HQ relation can be created.</p></li>
+<li><p>Go back in the field fk_overflow characteristic of the just created overflow characteristic with the button <strong>switch to form view</strong> and define the necessary HQ or QQ values with the <strong>add child object</strong> button.</p></li>
+</ol>
 </section>
 </section>
 
