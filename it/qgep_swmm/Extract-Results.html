@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.6. SWMM Extract Results &mdash; QGEP 0.8 documentazione</title>
+  <title>6.7. SWMM Extract Results &mdash; QGEP 0.8 documentazione</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="6.7. SWMM Import Results" href="Import-Results.html" />
-    <link rel="prev" title="6.5. SWMM Execute" href="Execute.html" /> 
+    <link rel="next" title="6.8. SWMM Import Results" href="Import-Results.html" />
+    <link rel="prev" title="6.6. SWMM Execute" href="Execute.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,15 +48,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.6. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.7. SWMM Import Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.8. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.9. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWMM.html">6.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.5. Check input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.6. SWMM Execute</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.8. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.9. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.10. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 </ul>
@@ -76,7 +78,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-      <li><span class="section-number">6.6. </span>SWMM Extract Results</li>
+      <li><span class="section-number">6.7. </span>SWMM Extract Results</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/Extract-Results.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -87,7 +89,9 @@
            <div itemprop="articleBody">
              
   <section id="swmm-extract-results">
-<span id="extract-results"></span><h1><span class="section-number">6.6. </span>SWMM Extract Results<a class="headerlink" href="#swmm-extract-results" title="Link a questa intestazione"></a></h1>
+<span id="extract-results"></span><h1><span class="section-number">6.7. </span>SWMM Extract Results<a class="headerlink" href="#swmm-extract-results" title="Link a questa intestazione"></a></h1>
+<p>If you don’t want to store the results in QGEP, this function generates two QGIS tables from a report file.
+You can map the values with the geometries (see: <a class="reference internal" href="Mapping.html#mapping-not-imported"><span class="std std-ref">Results are not imported in QGEP</span></a>).</p>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">results</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">RPT</span> <span class="pre">file</span></code>: the <code class="docutils literal notranslate"><span class="pre">.rpt</span></code> file generated during the previous step</p></li>
@@ -101,8 +105,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="Execute.html" class="btn btn-neutral float-left" title="6.5. SWMM Execute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="Import-Results.html" class="btn btn-neutral float-right" title="6.7. SWMM Import Results" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Execute.html" class="btn btn-neutral float-left" title="6.6. SWMM Execute" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="Import-Results.html" class="btn btn-neutral float-right" title="6.8. SWMM Import Results" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.4. Check input file &mdash; Documentation QGEP 0.8</title>
+  <title>6.5. Check input file &mdash; Documentation QGEP 0.8</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="6.5. SWMM Execute" href="Execute.html" />
-    <link rel="prev" title="6.3. SWMM Create Input" href="Create-Input.html" /> 
+    <link rel="next" title="6.6. SWMM Execute" href="Execute.html" />
+    <link rel="prev" title="6.4. SWMM Create Input" href="Create-Input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,23 +48,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. Check input file</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#common-import-errors">6.4.1. Common import errors</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#catchment-area-connected-to-secondary-wastewater-structure">6.4.1.1. Catchment area connected to secondary wastewater structure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#missing-discharge-coefficients">6.4.1.2. Missing discharge coefficients</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#missing-population-densities">6.4.1.3. Missing population densities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWMM.html">6.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.5. Check input file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-import-errors">6.5.1. Common import errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#catchment-area-connected-to-secondary-wastewater-structure">6.5.1.1. Catchment area connected to secondary wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-discharge-coefficients">6.5.1.2. Missing discharge coefficients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing-population-densities">6.5.1.3. Missing population densities</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.7. SWMM Import Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.8. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.9. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.6. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.7. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.8. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.9. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.10. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 </ul>
@@ -84,7 +86,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-      <li><span class="section-number">6.4. </span>Check input file</li>
+      <li><span class="section-number">6.5. </span>Check input file</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/Check-Input.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -95,7 +97,7 @@
            <div itemprop="articleBody">
              
   <section id="check-input-file">
-<span id="check-input"></span><h1><span class="section-number">6.4. </span>Check input file<a class="headerlink" href="#check-input-file" title="Lien permanent vers ce titre"></a></h1>
+<span id="check-input"></span><h1><span class="section-number">6.5. </span>Check input file<a class="headerlink" href="#check-input-file" title="Lien permanent vers ce titre"></a></h1>
 <p>The generated <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file can be imported in SWMM GUI. It is likely that some errors will be raised. You will have to solve them (see hereunder a list of common errors)</p>
 <p>You have to solve the errors in the order in which they appear in the report. Some errors are interrelated (i.e. a node in a conduit is not defined =&gt; the conduit is not imported =&gt; Undefined link error)</p>
 <p>To fix an error you can search in the corresponding QGEP layers in the QGIS project:</p>
@@ -105,50 +107,51 @@
 <li><p>etc.</p></li>
 </ul>
 <section id="common-import-errors">
-<span id="id1"></span><h2><span class="section-number">6.4.1. </span>Common import errors<a class="headerlink" href="#common-import-errors" title="Lien permanent vers ce titre"></a></h2>
+<span id="id1"></span><h2><span class="section-number">6.5.1. </span>Common import errors<a class="headerlink" href="#common-import-errors" title="Lien permanent vers ce titre"></a></h2>
 <p><a class="reference external" href="https://github.com/QGEP/QGEP/issues/613">See related Github issue</a></p>
 <section id="catchment-area-connected-to-secondary-wastewater-structure">
-<h3><span class="section-number">6.4.1.1. </span>Catchment area connected to secondary wastewater structure<a class="headerlink" href="#catchment-area-connected-to-secondary-wastewater-structure" title="Lien permanent vers ce titre"></a></h3>
-<p>``
-<cite>Undefined Node (CHamtKnv00002706) referenced at line 20997:
-[DWF]
-CHamtKnv00002706        FLOW    0.0204074074074074      dailyPatternDWF
-`</cite></p>
+<h3><span class="section-number">6.5.1.1. </span>Catchment area connected to secondary wastewater structure<a class="headerlink" href="#catchment-area-connected-to-secondary-wastewater-structure" title="Lien permanent vers ce titre"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Undefined</span> <span class="n">Node</span> <span class="p">(</span><span class="n">CHamtKnv00002706</span><span class="p">)</span> <span class="n">referenced</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">20997</span><span class="p">:</span>
+<span class="p">[</span><span class="n">DWF</span><span class="p">]</span>
+<span class="n">CHamtKnv00002706</span>      <span class="n">FLOW</span>    <span class="mf">0.0204074074074074</span>      <span class="n">dailyPatternDWF</span>
+</pre></div>
+</div>
 <p>The catchment area is linked to a secondary wastewater structure</p>
 </section>
 <section id="missing-discharge-coefficients">
-<h3><span class="section-number">6.4.1.2. </span>Missing discharge coefficients<a class="headerlink" href="#missing-discharge-coefficients" title="Lien permanent vers ce titre"></a></h3>
-<p>``
-Too few items at line 104:
-[SUBCATCHMENT]
-ch19ar68CA008855_ww_current     <a class="reference external" href="mailto:raingage&#37;&#52;&#48;ch19ar68CA008855">raingage<span>&#64;</span>ch19ar68CA008855</a>       CHamtKnv00001992        0.0276          19.4322613668305
-``
-The subcatchement discharge coefficients are not filled in.
-You can find them using sql:
-``
-select obj_id, fk_wastewater_networkelement_rw_current, discharge_coefficient_rw_current
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_rw_current is not null and discharge_coefficient_rw_current is null;</p>
-<p>select obj_id, fk_wastewater_networkelement_rw_planned, discharge_coefficient_rw_planned
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_rw_planned is not null and discharge_coefficient_rw_planned is null;</p>
-<p>select obj_id, fk_wastewater_networkelement_ww_current, discharge_coefficient_ww_current
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_ww_current is not null and discharge_coefficient_ww_current is null</p>
-<p>select obj_id, fk_wastewater_networkelement_ww_planned, discharge_coefficient_ww_planned
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_ww_planned is not null and discharge_coefficient_ww_planned is null;
-``</p>
+<h3><span class="section-number">6.5.1.2. </span>Missing discharge coefficients<a class="headerlink" href="#missing-discharge-coefficients" title="Lien permanent vers ce titre"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Too</span> <span class="n">few</span> <span class="n">items</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">104</span><span class="p">:</span>
+<span class="p">[</span><span class="n">SUBCATCHMENT</span><span class="p">]</span>
+<span class="n">ch19ar68CA008855_ww_current</span>   <span class="n">raingage</span><span class="nd">@ch19ar68CA008855</span>       <span class="n">CHamtKnv00001992</span>        <span class="mf">0.0276</span>          <span class="mf">19.4322613668305</span>
+</pre></div>
+</div>
+<p>The subcatchement discharge coefficients are not filled in.
+You can find them using sql:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">select</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">fk_wastewater_networkelement_rw_current</span><span class="p">,</span> <span class="n">discharge_coefficient_rw_current</span>
+<span class="kn">from</span> <span class="nn">qgep_od.catchment_area</span>
+<span class="n">where</span> <span class="n">fk_wastewater_networkelement_rw_current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">null</span> <span class="ow">and</span> <span class="n">discharge_coefficient_rw_current</span> <span class="ow">is</span> <span class="n">null</span><span class="p">;</span>
+
+<span class="n">select</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">fk_wastewater_networkelement_rw_planned</span><span class="p">,</span> <span class="n">discharge_coefficient_rw_planned</span>
+<span class="kn">from</span> <span class="nn">qgep_od.catchment_area</span>
+<span class="n">where</span> <span class="n">fk_wastewater_networkelement_rw_planned</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">null</span> <span class="ow">and</span> <span class="n">discharge_coefficient_rw_planned</span> <span class="ow">is</span> <span class="n">null</span><span class="p">;</span>
+
+<span class="n">select</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">fk_wastewater_networkelement_ww_current</span><span class="p">,</span> <span class="n">discharge_coefficient_ww_current</span>
+<span class="kn">from</span> <span class="nn">qgep_od.catchment_area</span>
+<span class="n">where</span> <span class="n">fk_wastewater_networkelement_ww_current</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">null</span> <span class="ow">and</span> <span class="n">discharge_coefficient_ww_current</span> <span class="ow">is</span> <span class="n">null</span>
+
+<span class="n">select</span> <span class="n">obj_id</span><span class="p">,</span> <span class="n">fk_wastewater_networkelement_ww_planned</span><span class="p">,</span> <span class="n">discharge_coefficient_ww_planned</span>
+<span class="kn">from</span> <span class="nn">qgep_od.catchment_area</span>
+<span class="n">where</span> <span class="n">fk_wastewater_networkelement_ww_planned</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">null</span> <span class="ow">and</span> <span class="n">discharge_coefficient_ww_planned</span> <span class="ow">is</span> <span class="n">null</span><span class="p">;</span>
+</pre></div>
+</div>
 </section>
 <section id="missing-population-densities">
-<h3><span class="section-number">6.4.1.3. </span>Missing population densities<a class="headerlink" href="#missing-population-densities" title="Lien permanent vers ce titre"></a></h3>
-<dl class="simple">
-<dt><a href="#id2"><span class="problematic" id="id3">``</span></a></dt><dd><p>ERROR 211: invalid number dailyPatternDWF at line 4288 of [DWF] section:
-00000000WN006032 FLOW             dailyPatternDWF</p>
-</dd>
-</dl>
-<p>``
-<cite>qgep_od.catchment_area.population_density_current</cite> or <cite>qgep_od.catchment_area.population_density_planned</cite> are not filled.</p>
+<h3><span class="section-number">6.5.1.3. </span>Missing population densities<a class="headerlink" href="#missing-population-densities" title="Lien permanent vers ce titre"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ERROR</span> <span class="mi">211</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">number</span> <span class="n">dailyPatternDWF</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">4288</span> <span class="n">of</span> <span class="p">[</span><span class="n">DWF</span><span class="p">]</span> <span class="n">section</span><span class="p">:</span>
+<span class="mi">00000000</span><span class="n">WN006032</span> <span class="n">FLOW</span>             <span class="n">dailyPatternDWF</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area.population_density_current</span></code> or <code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area.population_density_planned</span></code> are not filled.</p>
 </section>
 </section>
 </section>
@@ -157,8 +160,8 @@ where fk_wastewater_networkelement_ww_planned is not null and discharge_coeffici
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="Create-Input.html" class="btn btn-neutral float-left" title="6.3. SWMM Create Input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="Execute.html" class="btn btn-neutral float-right" title="6.5. SWMM Execute" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Create-Input.html" class="btn btn-neutral float-left" title="6.4. SWMM Create Input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Execute.html" class="btn btn-neutral float-right" title="6.6. SWMM Execute" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

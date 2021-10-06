@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="it" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.1. Storm Water Management Model (SWMM) &mdash; QGEP 0.8 documentazione</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="6.2. QGEP-SWMM installation" href="QGEP-SWMM-installation.html" />
+    <link rel="prev" title="6. QGEP SWMM plugin" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> QGEP
+          </a>
+              <div class="version">
+                0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Cerca documenti" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.5. Check input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.6. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.7. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.8. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.9. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.10. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.11. For developpers and advanced users</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu navigazione dispositivi mobili" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGEP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Naviga tra le pagine">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
+      <li><span class="section-number">6.1. </span>Storm Water Management Model (SWMM)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/qgep_swmm/SWMM.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="storm-water-management-model-swmm">
+<span id="swmm"></span><h1><span class="section-number">6.1. </span>Storm Water Management Model (SWMM)<a class="headerlink" href="#storm-water-management-model-swmm" title="Link a questa intestazione"></a></h1>
+<p><strong>Helps predict runoff quantity and quality from drainage systems</strong></p>
+<p><a class="reference external" href="https://www.epa.gov/water-research/storm-water-management-model-swmm">EPA’s Storm Water Management Model (SWMM)</a>  is used throughout the world for planning, analysis, and design related to stormwater runoff, combined and sanitary sewers, and other drainage systems.
+It can be used to evaluate gray infrastructure stormwater control strategies, such as pipes and storm drains, and is a useful tool for creating cost-effective green/gray hybrid stormwater control solutions.
+SWMM was developed to help support local, state, and national stormwater management objectives to reduce runoff through infiltration and retention, and help to reduce discharges that cause impairment of waterbodies.</p>
+<p>The QGEP SWMM plugin allows to:</p>
+<ul class="simple">
+<li><p>Wasily export network data in the SWMM Input format (*.inp)</p></li>
+<li><p>Run SWMM directly from QGEP and</p></li>
+<li><p>Extract and take back the wanted SWMM results into QGEP</p></li>
+<li><p>And visualize them in different ways.</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
+        <a href="index.html" class="btn btn-neutral float-left" title="6. QGEP SWMM plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="QGEP-SWMM-installation.html" class="btn btn-neutral float-right" title="6.2. QGEP-SWMM installation" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
+  </div>
+
+  Realizzato con <a href="https://www.sphinx-doc.org/">Sphinx</a> e il tema
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornito da <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

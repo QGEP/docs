@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.7. SWMM Import Results &mdash; QGEP 0.8 Dokumentation</title>
+  <title>6.8. SWMM Import Results &mdash; QGEP 0.8 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="6.8. Mapping" href="Mapping.html" />
-    <link rel="prev" title="6.6. SWMM Extract Results" href="Extract-Results.html" /> 
+    <link rel="next" title="6.9. Mapping" href="Mapping.html" />
+    <link rel="prev" title="6.7. SWMM Extract Results" href="Extract-Results.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,15 +48,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.1. QGEP-SWMM installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.2. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.3. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.4. Check input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.5. SWMM Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.6. SWMM Extract Results</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. SWMM Import Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.8. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.9. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWMM.html">6.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.5. Check input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.6. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.7. SWMM Extract Results</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.8. SWMM Import Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#measurement-tables">6.8.1. Measurement tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-import">6.8.2. Launch import</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.9. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.10. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 </ul>
@@ -76,7 +82,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-      <li><span class="section-number">6.7. </span>SWMM Import Results</li>
+      <li><span class="section-number">6.8. </span>SWMM Import Results</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/Import-Results.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -87,23 +93,72 @@
            <div itemprop="articleBody">
              
   <section id="swmm-import-results">
-<span id="import-results"></span><h1><span class="section-number">6.7. </span>SWMM Import Results<a class="headerlink" href="#swmm-import-results" title="Link zu dieser Überschrift"></a></h1>
+<span id="import-results"></span><h1><span class="section-number">6.8. </span>SWMM Import Results<a class="headerlink" href="#swmm-import-results" title="Link zu dieser Überschrift"></a></h1>
+<section id="measurement-tables">
+<h2><span class="section-number">6.8.1. </span>Measurement tables<a class="headerlink" href="#measurement-tables" title="Link zu dieser Überschrift"></a></h2>
+<p>If you want to store the results in QGEP and use the dedicated view for the mapping then use SWMM Import Results.
+It parses the report file of SWMM.
+The results are imported in the measurements tables in the <code class="docutils literal notranslate"><span class="pre">qgep_od</span></code> schema:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">measuring_point</span></code>: there is one <em>measuring point</em> for each <em>wastewater structure</em> and simulation,</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="../_images/qgep_od_measuring_point.jpg" src="../_images/qgep_od_measuring_point.jpg" />
+<figcaption>
+<p><span class="caption-text">Measuring point: the name of the simulation appears in the remark</span><a class="headerlink" href="#id1" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">measuring_device</span></code> : there is one <em>measuring device</em> for each <em>measuring point</em>,</p></li>
+</ul>
+<figure class="align-default" id="id2">
+<img alt="../_images/qgep_od_measuring_device.jpg" src="../_images/qgep_od_measuring_device.jpg" />
+<figcaption>
+<p><span class="caption-text">Measuring device</span><a class="headerlink" href="#id2" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">measurement_series</span></code>: there is several <em>measurement series</em> for each <em>measuring point</em>, one for each measured parameter (i.e average depth, maximum depth, maximum hgl …),</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="../_images/qgep_od_measurement_series.jpg" src="../_images/qgep_od_measurement_series.jpg" />
+<figcaption>
+<p><span class="caption-text">Measurement series</span><a class="headerlink" href="#id3" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">measurement_result</span></code>: there is one or several <em>measurement result</em> for each <em>measurement series</em>. There is one value if the summary only is imported and many values if the full time series are imported.</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<img alt="../_images/qgep_od_measurement_result.jpg" src="../_images/qgep_od_measurement_result.jpg" />
+<figcaption>
+<p><span class="caption-text">Measurement result</span><a class="headerlink" href="#id4" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>and they populate a view dedicated for the mapping (see <a class="reference internal" href="Mapping.html#mapping-imported"><span class="std std-ref">Results are imported in QGEP</span></a>).</p>
+</section>
+<section id="launch-import">
+<h2><span class="section-number">6.8.2. </span>Launch import<a class="headerlink" href="#launch-import" title="Link zu dieser Überschrift"></a></h2>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Import</span> <span class="pre">results</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">report</span> <span class="pre">file</span></code>: the <code class="docutils literal notranslate"><span class="pre">.rpt</span></code> file generated during the previous step</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Database</span></code>: The name of the PostgreSQL service hosting the QGEP database.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Simulation</span> <span class="pre">name</span></code>: The name that you want to give to this simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Simulation</span> <span class="pre">name</span></code>: The name that you want to give to this simulation (it will appear in <code class="docutils literal notranslate"><span class="pre">qgep_od.measuring_point.remark</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">full</span> <span class="pre">results</span> <span class="pre">in</span> <span class="pre">addition</span> <span class="pre">to</span> <span class="pre">summary</span></code>: The full time series will be imported. Attention, if the report step is small, the import can take a long time.</p></li>
 </ul>
-<p>Attention, a report file created from the SWMM GUI dont contain the full time series but only the summary.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warnung</p>
+<p>Attention, a report file created from the SWMM GUI don’t contain the full time series but only the summary.</p>
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Extract-Results.html" class="btn btn-neutral float-left" title="6.6. SWMM Extract Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="Mapping.html" class="btn btn-neutral float-right" title="6.8. Mapping" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Extract-Results.html" class="btn btn-neutral float-left" title="6.7. SWMM Extract Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="Mapping.html" class="btn btn-neutral float-right" title="6.9. Mapping" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
