@@ -9,9 +9,9 @@ You have to solve the errors in the order in which they appear in the report. So
 
 To fix an error you can search in the corresponding QGEP layers in the QGIS project:
 
-- vw_wastewater_node for undefined nodes
-- catchment_area for subcatchment errors
-- etc.
+* vw_wastewater_node for undefined nodes
+* catchment_area for subcatchment errors
+* etc.
 
 .. _Common-Import-Errors:
 
@@ -22,45 +22,55 @@ Common import errors
 
 Catchment area connected to secondary wastewater structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-``
-`Undefined Node (CHamtKnv00002706) referenced at line 20997:
-[DWF]
-CHamtKnv00002706	FLOW	0.0204074074074074	dailyPatternDWF
-``
+
+.. code::
+
+  Undefined Node (CHamtKnv00002706) referenced at line 20997:
+  [DWF]
+  CHamtKnv00002706	FLOW	0.0204074074074074	dailyPatternDWF
+
 
 The catchment area is linked to a secondary wastewater structure
 
 Missing discharge coefficients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-``
-Too few items at line 104:
-[SUBCATCHMENT]
-ch19ar68CA008855_ww_current	raingage@ch19ar68CA008855	CHamtKnv00001992	0.0276		19.4322613668305
-``
+
+.. code::
+
+  Too few items at line 104:
+  [SUBCATCHMENT]
+  ch19ar68CA008855_ww_current	raingage@ch19ar68CA008855	CHamtKnv00001992	0.0276		19.4322613668305
+
+
 The subcatchement discharge coefficients are not filled in. 
 You can find them using sql:
-`` 
-select obj_id, fk_wastewater_networkelement_rw_current, discharge_coefficient_rw_current
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_rw_current is not null and discharge_coefficient_rw_current is null;
 
-select obj_id, fk_wastewater_networkelement_rw_planned, discharge_coefficient_rw_planned
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_rw_planned is not null and discharge_coefficient_rw_planned is null;
+.. code::
 
-select obj_id, fk_wastewater_networkelement_ww_current, discharge_coefficient_ww_current
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_ww_current is not null and discharge_coefficient_ww_current is null
+  select obj_id, fk_wastewater_networkelement_rw_current, discharge_coefficient_rw_current
+  from qgep_od.catchment_area
+  where fk_wastewater_networkelement_rw_current is not null and discharge_coefficient_rw_current is null;
 
-select obj_id, fk_wastewater_networkelement_ww_planned, discharge_coefficient_ww_planned
-from qgep_od.catchment_area
-where fk_wastewater_networkelement_ww_planned is not null and discharge_coefficient_ww_planned is null;
-``
+  select obj_id, fk_wastewater_networkelement_rw_planned, discharge_coefficient_rw_planned
+  from qgep_od.catchment_area
+  where fk_wastewater_networkelement_rw_planned is not null and discharge_coefficient_rw_planned is null;
+
+  select obj_id, fk_wastewater_networkelement_ww_current, discharge_coefficient_ww_current
+  from qgep_od.catchment_area
+  where fk_wastewater_networkelement_ww_current is not null and discharge_coefficient_ww_current is null
+
+  select obj_id, fk_wastewater_networkelement_ww_planned, discharge_coefficient_ww_planned
+  from qgep_od.catchment_area
+  where fk_wastewater_networkelement_ww_planned is not null and discharge_coefficient_ww_planned is null;
+
 
 Missing population densities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code::
+  
   ERROR 211: invalid number dailyPatternDWF at line 4288 of [DWF] section:
   00000000WN006032 FLOW             dailyPatternDWF
-``
-`qgep_od.catchment_area.population_density_current` or `qgep_od.catchment_area.population_density_planned` are not filled.
+
+
+``qgep_od.catchment_area.population_density_current`` or ``qgep_od.catchment_area.population_density_planned`` are not filled.
