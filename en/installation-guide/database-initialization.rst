@@ -66,7 +66,7 @@ There are now 4 schemas in the database (qgep_od, qgep_sys, qgep_vl, qgep_import
 Create  minimal roles and access
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_roles.sql file. It is recommended to use these when using QGEP in a production environment.
+.. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_roles_0.sql (per cluster) and https://github.com/QGEP/datamodel/blob/master/12_roles_1.sql (per DB) files. It is recommended to use these when using QGEP in a production environment.
 
 Empty data model
 ^^^^^^^^^^^^^^^^
