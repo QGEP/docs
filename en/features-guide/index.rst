@@ -67,4 +67,4 @@ Network topology management:
 More to come
 ------------
 
-* Automatic integration of pipe inspection according to Wincan VX and VSA-DSS KEK format.
+* Automatic integration of pipe inspection according to Wincan VX and VSA-DSS KEK format
