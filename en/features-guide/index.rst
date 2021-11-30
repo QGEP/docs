@@ -38,7 +38,7 @@ Documents, pictures and videos can be linked to the network elements.
 
 Network topology management:
 
-* Topology creation between pipes, structures and watersheds
+* Topology creation between pipes, structures and catchments
 * Upstream and downstream network tracking tools (water drop)
 * Length profiles display
 
