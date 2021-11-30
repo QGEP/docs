@@ -22,7 +22,7 @@ Creation, information and management of network elements according to the VSA-DS
 * Watersheds
 * GEP mesures
 * Maintenances
-* Network inspection (VSA-DSS KEK model)
+* Network inspection (VSA-DSS model extension VSA-KEK)
 
 **Viewing and editing**
 
