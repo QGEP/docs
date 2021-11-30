@@ -19,7 +19,7 @@ Creation, information and management of network elements according to the VSA-DS
 * Special structures
 * Primary collectors
 * Secondary collectors (ex : private connection)
-* Watersheds
+* Catchments
 * GEP mesures
 * Maintenances
 * Network inspection (VSA-DSS model extension VSA-KEK)
