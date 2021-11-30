@@ -52,7 +52,7 @@ Network topology management:
 
 * Field survey import tools [specific development in progress]
 * Data survey with a mobile device and semi-automatic insertion of the informations
-* Data import in interlis format
+* Data import in INTERLIS format
 
 **Data export**
 
