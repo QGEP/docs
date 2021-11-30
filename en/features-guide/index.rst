@@ -13,7 +13,7 @@ Main features
 
 **Network objects**
 
-Creation, information and management of network elements according tot he VSA-DSS model:
+Creation, information and management of network elements according to the VSA-DSS model:
 
 * Wastewater structures
 * Special structures
