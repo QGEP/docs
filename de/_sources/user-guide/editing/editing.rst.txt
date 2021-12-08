@@ -193,7 +193,7 @@ In QGEP, there is in the moment no tool, that helps you to connect a wastewater 
 
 Multiedit
 ---------
-If you want to edit attributes for multiple objects of the same class you can use the `multiedit Tool of QGIS <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
+If you want to edit attributes for multiple objects of the same class you can use the `multiedit Tool of QGIS <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_.
 
  
 Saving changes
