@@ -16,13 +16,13 @@ in the plugin settings :
 
 * Go to ``Plugin > QGEP > Settings``
 
-* Switch to the ``Developer options``
+* Switch to the ``Developer options`` tab
 
 * Check ``Admin mode``
 
 * Restart QGIS
 
-The data-model tool should now appear under ``Plugin > QGEP > Datamodel``
+The data-model tool should now appear under ``Plugin > QGEP > Datamodel tool``
 
 Usage
 -----
@@ -36,21 +36,21 @@ The main dialog looks like this.
 
 * **Release**:
 
-    * **Version**: the version to retrieve the files from. Unless ``developper mode`` is enabled in the QGEP settings, only the latest stable version is available. Selecting anything different from the latest stable version should only ever be used on a testing database, as it could upgrade the database to an inconsistent state.
+    * **Version**: the version to retrieve the files from. Unless ``developer mode`` is enabled in the QGEP settings, only the latest stable version is available. Selecting anything different from the latest stable version should only ever be used on a testing database, as it could upgrade the database to an inconsistent state.
 
-* **Python dependencies**:
+* **Dependencies**:
     
-    * **Install**: If there are missing requirements, click this to try to install them automatically. Note that this will not work on all systems. If it fails, you can try to start QGIS with administrator privileges, or `install the dependencies manually <../db-update-pum/index.html#requirements>`_.
+    * **Python requirements**: If there are missing python requirements, click on the **install button** to try to install them automatically. Note that this will not work on all systems. If it fails, you can try to start QGIS with administrator privileges, or `install the dependencies manually <../db-update-pum/index.html#requirements>`_.
 
 * **Postgres service configurations**:
 
     * **File location**: shows the location of the ``pg_service.conf`` file being used
 
-    * **PG Config**: allows to select the postgres service configuration of the database on which you want to operate.
+    * **PG Config**: allows to select the postgres service configuration of the database on which you want to operate. **WARNING**: by default, the first entry is selected, which may not match the database used by your currently open QGEP project.
     
-    * **``Add`` button**: opens an utility to add or edit entries from your ``pg_service.conf`` file directly.
+    * **``+`` button**: opens an utility to add or edit entries from your ``pg_service.conf`` file directly.
     
-    Refer to the `installation guide <../../installation-guide/workstation.rst>`_ to know more about the ``pgservice.conf`` file.
+    Refer to the `installation guide <../../installation-guide/workstation.rst>`_ to know more about the ``pg_service.conf`` file.
 
 * **Datamodel**
 
@@ -62,7 +62,7 @@ The main dialog looks like this.
 
 * **QGIS project**
 
-    * **Load**: opens the template QGIS project, aleady configured to work on the database selected above
+    * **Load**: opens the template QGIS project, already configured to work on the database selected above
 
 
 Troubleshooting
