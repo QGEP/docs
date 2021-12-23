@@ -1,5 +1,9 @@
-Update of the datamodel
-=======================
+Manual update of the datamodel
+==============================
+
+This page explains how to update your datamodel manually. Alternatively, the `data-model tool
+<../datamodel-tool/index.html>`_ offers a graphical interface that automates these steps and is
+usually easier to use.
 
 The releases of the datamodel are available `here <https://github.com/QGEP/datamodel/releases/>`_. 
 When a new datamodel is released, a QGEP database can be updated with `PUM <https://github.com/opengisch/pum>`_.

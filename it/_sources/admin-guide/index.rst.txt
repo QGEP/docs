@@ -10,6 +10,7 @@ This represents a guide on how to administrate the database, install a Virtual m
    security/index
    interlis-io/index
    db-customization/index
+   datamodel-tool/index
    db-update-pum/index
 
 In discussion:
