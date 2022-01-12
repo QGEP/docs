@@ -6,7 +6,7 @@ Database configuration
 
 To tell a workstation, where the database is (on the local system or on a
 network server) you will have to create some files initially on every device on
-which you will have QGIS/QGEP running. It is not required to do that on the
+which you will have QGIS/QGEP running (client). It is not required to do that on the
 server itself.
 
 These instructions depend on your operating system.
@@ -92,6 +92,8 @@ You can install them on debian based systems with::
 
  sudo pip install networkx
  sudo apt-get install libqt4-sql-psql
+
+How to install networkx on non debian based systems (Windows, macOS?)?
 
 * Open QGIS
 
