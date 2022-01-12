@@ -13,10 +13,12 @@ Server installation
 
 * Install PostgreSQL (>=9.6)
 
-  * `Windows download page <http://www.postgresql.org/download/windows>`_
+  * `Download page <http://www.postgresql.org/download>`_
 
 * Install PostGIS (>=2.4)
 
+  * E. g. by using the (Application) Stack Builder shipped with the EnterpriseDB version of posgreSQL on Windows and macOS
+  
 .. note::
 
  In a single desktop environment (no network database server) you can setup
