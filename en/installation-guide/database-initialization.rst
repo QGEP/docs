@@ -61,7 +61,7 @@ Back in pgAdmin :
 
 * Propably you want to rename the database: Right click the database, click `Properties...` and rename the database.
 
-There are now 4 schemas in the database (qgep_od, qgep_sys, qgep_vl, qgep_import)
+There are now 7 schemas in the database (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)
 
 Create  minimal roles and access
 ^^^^^^^^^^^^^^^^^^^^^^
