@@ -86,7 +86,7 @@ Install QGEP plugin
 
 Plugin requirements:
 
-- `networkx<https://pypi.org/project/networkx/>` >= 2.1
+- `networkx <https://pypi.org/project/networkx/>` >= 2.1
 
 You can install them on debian based systems with::
 
