@@ -41,11 +41,21 @@ Inside this folder, there will be two files
 
 .. _pg_service-linux:
 
-Linux pg_service
+Linux/macOS pg_service
 ^^^^^^^^^^^^^^^^
 
 On *nix systems (linux/macOS etc.) you may put the files ``.pg_service.conf``
-and ``.pgpass`` into your home folder (normally ``/home/[username]``).
+and ``.pgpass`` into your home folder (normally ``/home/[username]``). Pay attention to the starting . (<> Windows)!
+
+If your QGIS doesn't find the ``.pg_service.conf`` file, set the environment variable PGSYSCONFDIR:
+
+.. note::
+In QGIS go to ``Settings`` > ``Options`` > ``System`` tab. Near the bottom you'll find ``Environment``. Tick ``Use custom variables`` and click on the plus on the right. Add the PGSYSCONFDIR variable using Append (to make sure you don't delete anything - doesn't matter probably) and its value (probably ``/home/[username]`` see above). Then click ``OK`` at  the bottom right.
+
+.. figure:: images/macEnvVarSet.png
+
+After closing and reopening QGIS, you should be able to see the added PGSYSCONFDIR at the bottom of the same window under ``Current environment variables``.
+.. figure:: images/macEnvVarCheck.png
 
 All systems
 ^^^^^^^^^^^
@@ -70,6 +80,17 @@ To save the password as well on the system you may use the file `pgpass <http://
 .. note:: If you don't have the database on your local machine replace any
    occurence of ``localhost`` with the network address of your database
    server.
+
+Alternative: put your password directly into the ``pg_service.conf`` (on Windows) / ``.pg_service.conf`` (on *nix) file:
+
+.. code:: ini
+
+    [pg_qgep]
+    host=localhost
+    port=5432
+    dbname=qgep
+    user=qgepuser
+    password=***
 
 Install QGIS
 ------------
@@ -123,12 +144,7 @@ QGEP uses a data historization process. The ``pg history viewer`` `plugin <http:
 Install the demo data
 ---------------------
 
-* Download from https://github.com/QGEP/datamodel/releases/latest
-  New Restore file: qgep_vx.x.x_structure_and_demo_data.backup (with data), other versions with schema only available
-
-* Extract the file
-
-* Restore the file `qgep_vx.x.x_structure_and_demo_data.backup` with pgAdmin
+as described `here<https://qgep.github.io/docs/installation-guide/database-initialization.html#restore-demo-datamodel>`
 
 Install the demo project
 ------------------------
@@ -147,10 +163,10 @@ Install the demo project
 * When you save that project it will keep it's language and it cannot be changed in the same way.
 
 
-Add your own OID in the project
+If you are a data owner: Add your own OID to the project
 -----------------------------------
 
-* You have to add your OID data in the table qgep_sys.oid_prefixes:
+* If you are a data owner (Datenherr), you should add your OID data in the table qgep_sys.oid_prefixes:
 
 .. figure:: images/oid_prefix.jpg
 
