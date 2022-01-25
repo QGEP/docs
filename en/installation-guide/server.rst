@@ -21,6 +21,8 @@ Server installation
   
 .. note::
 
+ The following instructions are **optional**:
+ 
  In a single desktop environment (no network database server) you can setup
  your database to trust local connections.
 
