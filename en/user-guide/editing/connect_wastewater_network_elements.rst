@@ -32,9 +32,10 @@ How to connect reaches to nodes or reaches to reaches
 .. figure:: images/connecting_3.jpg
 
 Video Tutorial
------------
+--------------
 
 * See `this video tutorial (QGIS version 2): <https://vimeo.com/171536774>`_
+
 
 How to delete a connection
 --------------------------
