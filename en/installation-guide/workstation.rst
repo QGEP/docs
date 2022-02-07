@@ -44,7 +44,7 @@ Inside this folder, there will be two files
 Linux/macOS pg_service
 ^^^^^^^^^^^^^^^^
 
-On *nix systems (linux/macOS etc.) you may put the files ``.pg_service.conf``
+On Unix systems (linux/macOS etc.) you may put the files ``.pg_service.conf``
 and ``.pgpass`` into your home folder (normally ``/home/[username]``). Pay attention to the starting . (<> Windows)!
 
 If your QGIS doesn't find the ``.pg_service.conf`` file, set the environment variable PGSYSCONFDIR:

@@ -7,3 +7,4 @@ i18n
 .DS_Store
 .idea
 .venv
+.vscode
