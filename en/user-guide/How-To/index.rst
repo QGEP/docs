@@ -63,7 +63,7 @@ If you can not find a .qgd-file, then you have probably not moved or rotated a l
 * If necessary define the horizontal/vertical alignment of your label-coordinates in the placement of the label definition.
 
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
---------------------------
+-------------------------------------------------------------------------
 Note:
 
 * Wastewater structures with a hydr_geometry have to be defined as special structures (and not as standard manholes).
@@ -100,7 +100,7 @@ Note:
 
 
 Hydraulic modeling of an overflow (prank weir / leapingweir / pump)
-----------------------------------
+--------------------------------------------------------------------
 
 Action:
 

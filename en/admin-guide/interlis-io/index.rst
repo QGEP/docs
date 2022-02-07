@@ -1,5 +1,5 @@
 INTERLIS Data exchange
-====================
+======================
 
 This represents a guide on how to import/export data between QGEP and INTERLIS 2 Transfer Format (xtf).
 
@@ -11,7 +11,7 @@ The QGEP plugin includes an experimental interlis import/export feature.
 It is currently capable of importing and exporting to the SIA405 model `SIA405_ABWASSER_2015` (version `17.04.2018`). Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
  
 Prerequisites
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Java
 --------
@@ -23,7 +23,7 @@ Linux : use you package manager
 
  
 Python libraries
---------
+-----------------
 You need `sqlalchemy` and `geoalchemy2`.
 
 To install : before launching QGIS, open OSGeo4W Shell, and type
@@ -36,12 +36,12 @@ If pip cannot be found, make sure you’ve installed the python3-pip package usi
  
 
 Modelbaker
---------
+-----------
 The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager (version 6.4 or newer).
 
 
 QGEP Version
---------
+-------------
 The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
 
 
@@ -90,13 +90,13 @@ Once you're happy with the import options, confirm the dialog to persist the cha
 
 
 Usage (command line)
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 For advanced usage, the import/export tool can also be used as a command line tool. Please refer to https://github.com/QGEP/qgepqwat2ili/ for documentation about this.
 
 
 Quality control
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
