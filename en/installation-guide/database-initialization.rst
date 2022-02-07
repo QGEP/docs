@@ -133,7 +133,7 @@ You also have the option to restore the latest empty data model (no demo data).
 
 
 Generate the data model under Linux (including macOS?)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also generate the data model under Linux.
 
