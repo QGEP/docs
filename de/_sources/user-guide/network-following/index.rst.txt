@@ -131,9 +131,11 @@ Flow times downstream
   * as Flow times field: the field in your table, that you want to sum-up
   
   * as Flow times: if you let this field empty, there will be a temporary file with the results in your projects. Otherwise you can save the results to a vector layer.
+
 .. figure:: images/flow_time_downstream_window.jpg
 
 * The tool makes a downstream network search starting with the selected reach and creates for every reach a record in the (temporary) vector layer with just one field (the sum of the Flow times).
+
 .. figure:: images/flow_time_downstream_result.jpg
 
 .. attention:: If there is more than one downstream-way, the results are wrong after the branch.

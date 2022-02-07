@@ -108,4 +108,3 @@ The following command must be launched form the ``datamodel`` folder.
 * ``-x`` Ignore restore errors (materialized views can generate ``pg_restore`` errors
 * ``--exclude-field-pattern 'usr_%'`` if custom attributes were added
 
-****

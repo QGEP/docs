@@ -10,7 +10,7 @@ If the length of the channel is longer in the data than in the map, a warning wi
 This should be fixed in the data or can be forced in the observation table by checking the corresponding column.
 
 One channel in the inspection data corresponds to several channels in the QGEP data
----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 It may happen that one channel in the inspection data corresponds to several channels in the QGEP data.
 To fix this, you can select up to 3 channels in the widgets.

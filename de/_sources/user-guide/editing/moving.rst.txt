@@ -24,8 +24,9 @@ How to
 
 .. figure:: images/moving_wws_before.jpg
 
-* Left Click one the wastewater_structure you want to move and left click again at the new place
-In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree reachpoints are moved to the new place
+* Left Click one the wastewater_structure you want to move and left click again at the new place.
+
+In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree reachpoints are moved to the new place.
 
 .. figure:: images/moving_wws_manhole1.jpg
 
@@ -38,6 +39,7 @@ In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree 
 .. note:: The 2 nodes of the special structure and the 3 connected reachpoints (reaches) are also move with the same distance and in the same direction as the cover is moved. The wastewater structure area (polygon) is not moved. You have to correct manually if necessary.
 
 * If you want to move just the cover or a node of a wastewater structure, then select the **vw_cover** or **vw_wastewater_node** layer, set the layer to edit mode and move the cover / the node with the **Move Feature** tool.
+
 See the figure below: just the cover of manhole 'ZRAM' is moved.
 
 .. figure:: images/moving_wws_manhole3.jpg
@@ -46,6 +48,7 @@ See the figure below: just the cover of manhole 'ZRAM' is moved.
 
 
 Video Tutorial
------------
+--------------
 
 * See `this video tutorial (version QGIS 2) <https://vimeo.com/162978741>`_
+

@@ -1,7 +1,7 @@
 .. _security:
 
 User Roles
-=======
+==========
 
 QGEP comes with a set of predefined roles for a multi user configuration.
 

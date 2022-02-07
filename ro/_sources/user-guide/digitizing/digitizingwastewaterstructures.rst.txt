@@ -46,7 +46,7 @@ Click **OK** to close the form.
 
 .. figure:: images/wizard_wastewater_structure_manhole_form_data_ok3.jpg
 
-Save the information of this layer by stopping the data entry wizard
+Save the information of this layer by stopping the data entry wizard.
 
 .. figure:: images/stop_data_entry.jpg
 

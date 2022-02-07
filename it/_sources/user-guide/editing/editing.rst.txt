@@ -122,7 +122,7 @@ If there are connections from reach to reach, the reach point moves at right ang
 .. attention:: If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You habe to rerun the command.
 
 Working with codes of value list
--------------------------------
+--------------------------------
 
 * The values of fields with value list are stored in the database with codes. 
 
@@ -135,9 +135,11 @@ Working with codes of value list
 Examples for using **represent_value**
 
 * Search all primary wastewater facility reaches (function_hierarchic starts with pwwf)
+
  .. figure:: images/represent_value1.jpg
  
 * Search all reaches, that have not the same usage_planned as usage_current
+
  .. figure:: images/represent_value2.jpg
 
 .. note:: The expression `"ch_usage_current" <> "ch_usage planned"` does not work because of the unique codes!
