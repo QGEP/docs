@@ -42,7 +42,7 @@ Inside this folder, there will be two files
 .. _pg_service-linux:
 
 Linux/macOS pg_service
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 On Unix systems (linux/macOS etc.) you may put the files ``.pg_service.conf``
 and ``.pgpass`` into your home folder (normally ``/home/[username]``). Pay attention to the starting . (<> Windows)!
