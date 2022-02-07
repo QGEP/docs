@@ -164,7 +164,7 @@ Install the demo project
 
 
 If you are a data owner: Add your own OID to the project
------------------------------------
+--------------------------------------------------------
 
 * If you are a data owner (Datenherr), you should add your OID data in the table qgep_sys.oid_prefixes:
 
