@@ -132,8 +132,8 @@ You also have the option to restore the latest empty data model (no demo data).
 * Update privileges for the qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm schema as described in the chapter `Create  minimal roles and access`.
 
 
-Generate the data model under Linux (including macOS?)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Generate the data model under Linux
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also generate the data model under Linux.
 
