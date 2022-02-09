@@ -61,12 +61,13 @@ Back in pgAdmin :
 
 * Propably you want to rename the database: Right click the database, click `Properties...` and rename the database.
 
-There are now 4 schemas in the database (qgep_od, qgep_sys, qgep_vl, qgep_import)
+There are now 7 schemas in the database (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)
 
 Create  minimal roles and access
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql (per cluster) and https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql (per DB) files. It is recommended to use these when using QGEP in a production environment.
+.. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql (per cluster) and https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql (per database) files. It is recommended to use these when using QGEP in a production environment.
+Copy paste and run the two .sql one after the other in the query editor of pgAdmin4 (Tools > Query Tool). 
 
 Empty data model
 ^^^^^^^^^^^^^^^^
@@ -84,7 +85,7 @@ You also have the option to restore the latest empty data model (no demo data).
 
     @echo off
 
-    set filename="qgep_v1.5.0_structure_with_value_lists.sql"
+    set filename="qgep_vx.y.z_structure_with_value_lists.sql"
 
     if not exist %filename% (
        echo "File %filename% does not exist. Please download the latest datamodel from https://github.com/QGEP/datamodel/releases (structure_with_value_lists.sql) and adjust filename in this batch file."
@@ -128,7 +129,7 @@ You also have the option to restore the latest empty data model (no demo data).
 
  You are free to choose any database name.
  
-* Update privileges for the qgep_od, qgep_sys and qgep_vl schema as described in the chapter `Restore demo data`.
+* Update privileges for the qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm schema as described in the chapter `Create  minimal roles and access`.
 
 
 Generate the data model under Linux

@@ -150,14 +150,15 @@
 <ul class="simple">
 <li><p>Vermutlich wollen sie die Datenbank jetzt umbenennen: Rechtsklick auf die Datenbank, klick auf <cite>Eigenschaften…</cite> und geben sie einen neuen Namen ein.</p></li>
 </ul>
-<p>Es sind jetzt 4 Schemata in der Datenbank vorhanden (qgep_od, qgep_sys, qgep_vl, qgep_import)</p>
+<p>There are now 7 schemas in the database (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)</p>
 </section>
 <section id="create-minimal-roles-and-access">
 <h3><span class="section-number">1.3.1.2. </span>Rollen und Zugriffsrechte erstellen<a class="headerlink" href="#create-minimal-roles-and-access" title="Link zu dieser Überschrift"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Die QGEP-Rollen werden in den Dateien <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql</a> (pro Cluster) und <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql</a> (pro DB) definiert. Es wird empfohlen, diese zu verwenden, wenn Sie QGEP in einer Produktionsumgebung einsetzen.</p>
+<p>The QGEP roles are defined in the <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql</a> (per cluster) and <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql</a> (per database) files. It is recommended to use these when using QGEP in a production environment.</p>
 </div>
+<p>Copy paste and run the two .sql one after the other in the query editor of pgAdmin4 (Tools &gt; Query Tool).</p>
 </section>
 <section id="empty-data-model">
 <h3><span class="section-number">1.3.1.3. </span>Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Link zu dieser Überschrift"></a></h3>
@@ -173,7 +174,7 @@
 <li><p>Benutze eine BAT-Datei wie folgt, um die Datenbank, die Erweiterungen und die Schemata mit Wertelisten zu erzeugen  (ersetzen sie x.y.z mit ihrer Versionnummer):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@echo</span> <span class="n">off</span>
 
-<span class="nb">set</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;qgep_v1.5.0_structure_with_value_lists.sql&quot;</span>
+<span class="nb">set</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;qgep_vx.y.z_structure_with_value_lists.sql&quot;</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">exist</span> <span class="o">%</span><span class="n">filename</span><span class="o">%</span> <span class="p">(</span>
    <span class="n">echo</span> <span class="s2">&quot;File </span><span class="si">%f</span><span class="s2">ilename</span><span class="si">% d</span><span class="s2">oes not exist. Please download the latest datamodel from https://github.com/QGEP/datamodel/releases (structure_with_value_lists.sql) and adjust filename in this batch file.&quot;</span>
@@ -220,7 +221,7 @@
 <p>Es kann irgendein Datenbankname verwendet werden.</p>
 </div>
 <ul class="simple">
-<li><p>Die Berechtigungen für die Schemata qgep_od, qgep_sys und qgep_vl wie im Kapitel <cite>Restore demo data</cite> beschrieben definieren.</p></li>
+<li><p>Update privileges for the qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm schema as described in the chapter <cite>Create  minimal roles and access</cite>.</p></li>
 </ul>
 </section>
 <section id="generate-the-data-model-under-linux">

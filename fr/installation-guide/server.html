@@ -97,13 +97,24 @@
 <ul class="simple">
 <li><p>Installer PostgreSQL (&gt;=9.6)</p>
 <ul>
-<li><p><a class="reference external" href="http://www.postgresql.org/download/windows">Lien pour l’installation sous WIndows</a></p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/download">Download page</a></p></li>
 </ul>
 </li>
-<li><p>Installer PostGIS (&gt;=2.4)</p></li>
+<li><p>Installer PostGIS (&gt;=2.4)</p>
+<ul>
+<li><ol class="upperalpha simple" start="5">
+<li><ol class="loweralpha simple" start="7">
+<li><p>by using the (Application) Stack Builder shipped with the EnterpriseDB version of posgreSQL on Windows and macOS</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>The following instructions are <strong>optional</strong>:</p>
 <p>Pour un environnement de travail unique (pas de serveur en réseau), vous pouvez configurer votre base de données afin qu’elle accepte les connexions locales.</p>
 <p>Ainsi votre base de données ne vous redemandera par le mot de passe si vous êtes connecté depuis votre poste de travail. Il est aussi possible de n’utiliser aucun mot de passe.</p>
 <p>Cela peut être fait en éditant le fichier de configuration d’accès à la base de données <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>. Pour cela changer l’option auth- de <code class="docutils literal notranslate"><span class="pre">md5</span></code> à <code class="docutils literal notranslate"><span class="pre">trust</span></code>. Il faut ensuite recharger le service de base de données pour activer les changements.</p>

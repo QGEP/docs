@@ -97,13 +97,24 @@
 <ul class="simple">
 <li><p>PostgreSQL (&gt;=9.6) installieren</p>
 <ul>
-<li><p><a class="reference external" href="http://www.postgresql.org/download/windows">Für Windows herunterladen</a></p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/download">Download page</a></p></li>
 </ul>
 </li>
-<li><p>PostGIS (&gt;=2.4) installieren</p></li>
+<li><p>PostGIS (&gt;=2.4) installieren</p>
+<ul>
+<li><ol class="upperalpha simple" start="5">
+<li><ol class="loweralpha simple" start="7">
+<li><p>by using the (Application) Stack Builder shipped with the EnterpriseDB version of posgreSQL on Windows and macOS</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
+<p>The following instructions are <strong>optional</strong>:</p>
 <p>Bei einer Einzelplatzinstallation (ohne Datenbank im Netzwerk) kann man die Datenbank so aufsetzen, dass sie lokalen Verbindungen vertraut.</p>
 <p>In diesem Fall wird überhaupt kein Passwort benötigt.</p>
 <p>Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a> und setzen Sie die auth-options von``md5`` auf <code class="docutils literal notranslate"><span class="pre">trust</span></code>. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden.</p>
