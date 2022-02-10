@@ -12,6 +12,7 @@ To fix an error you can search in the corresponding QGEP layers in the QGIS proj
 * vw_wastewater_node for undefined nodes
 * catchment_area for subcatchment errors
 * compare if the number of exported nodes (in vw_junctions) are what you expect it to be. 
+* Check if the function (manhole / special_structure) of wastewater_structure are all filled in
 * etc.
 
 
