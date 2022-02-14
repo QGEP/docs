@@ -57,7 +57,7 @@ Network topology management:
 **Data export**
 
 * Direct connection with the network simulating software SWMM (Storm Water Management Model)
-* Data export in CAD (dwg/dxf) and GIS format (all open data formats)
+* Data export in CAD (dxf) and GIS format (all open data formats)
 * Data export in interlis format
 
 **Historisation**
