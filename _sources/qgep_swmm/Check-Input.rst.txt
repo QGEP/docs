@@ -11,14 +11,31 @@ To fix an error you can search in the corresponding QGEP layers in the QGIS proj
 
 * vw_wastewater_node for undefined nodes
 * catchment_area for subcatchment errors
+* compare if the number of exported nodes (in vw_junctions) are what you expect it to be. 
+* Check if the function (manhole / special_structure) of wastewater_structure are all filled in
 * etc.
+
+
 
 .. _Common-Import-Errors:
 
 Common import errors
---------------------
+-----------------------------------------
 
-`See related Github issue <https://github.com/QGEP/QGEP/issues/613>`_
+Missing status or _function_hierarchic (wn_function_hierarchic)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The catchment area is linked to node which is not exported or a reach cannot be drawn because of a missing node:
+
+*  because of its status (abandonned etc.) or status is not defined (is Null)
+*  the node is not connected (correctly) to a conduit
+*  the node is secondary (the linked reach are secondary)
+
+and therefore not export in the vw_junctions.
+
+Check your data manually before the export if wastwater_structure.status is not empty. Check whether wastwater_structure._function_hierachic is filled in on Primary network nodes (PAA nodes).
+	
+`For more details see related Github issue <https://github.com/QGEP/QGEP/issues/613>`_
 
 Catchment area connected to secondary wastewater structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,3 +91,5 @@ Missing population densities
 
 
 ``qgep_od.catchment_area.population_density_current`` or ``qgep_od.catchment_area.population_density_planned`` are not filled.
+
+
