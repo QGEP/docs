@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.6. SWMM Execute &mdash; QGEP 0.8 documentație</title>
+  <title>6.7. SWMM Execute &mdash; QGEP 0.8 documentație</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Căutare" href="../search.html" />
-    <link rel="next" title="6.7. SWMM Extract Results" href="Extract-Results.html" />
-    <link rel="prev" title="6.5. Check input file" href="Check-Input.html" /> 
+    <link rel="next" title="6.8. SWMM Extract Results" href="Extract-Results.html" />
+    <link rel="prev" title="6.6. Check input file" href="Check-Input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,18 +52,19 @@
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.5. Check input file</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.6. SWMM Execute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#change-simulation-parameters">6.6.1. Change simulation parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.6.2. QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#common-running-errors">6.6.3. Common running errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-data-requirements.html">6.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.6. Check input file</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. SWMM Execute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#change-simulation-parameters">6.7.1. Change simulation parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qgep-plugin">6.7.2. QGEP plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#common-running-errors">6.7.3. Common running errors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.7. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.8. SWMM Import Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.9. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.10. Change simulation parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.11. For developpers and advanced users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.8. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.9. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.10. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.11. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.12. For developpers and advanced users</a></li>
 </ul>
 </li>
 </ul>
@@ -83,7 +84,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
-      <li><span class="section-number">6.6. </span>SWMM Execute</li>
+      <li><span class="section-number">6.7. </span>SWMM Execute</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/Execute.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -94,13 +95,13 @@
            <div itemprop="articleBody">
              
   <section id="swmm-execute">
-<span id="execute"></span><h1><span class="section-number">6.6. </span>SWMM Execute<a class="headerlink" href="#swmm-execute" title="Link permanent la acest titlu"></a></h1>
+<span id="execute"></span><h1><span class="section-number">6.7. </span>SWMM Execute<a class="headerlink" href="#swmm-execute" title="Link permanent la acest titlu"></a></h1>
 <section id="change-simulation-parameters">
-<h2><span class="section-number">6.6.1. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link permanent la acest titlu"></a></h2>
+<h2><span class="section-number">6.7.1. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Link permanent la acest titlu"></a></h2>
 <p>From SWMM GUI you can set the simulation parameters (see <a class="reference external" href="./Change-simulation-parameters.html#change-simulation-parameters">Change Simulation Parameters</a>).</p>
 </section>
 <section id="qgep-plugin">
-<h2><span class="section-number">6.6.2. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link permanent la acest titlu"></a></h2>
+<h2><span class="section-number">6.7.2. </span>QGEP plugin<a class="headerlink" href="#qgep-plugin" title="Link permanent la acest titlu"></a></h2>
 <p>The path to the SWMM executable must be set in the Processsing tools options.</p>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code>:</p>
 <ul class="simple">
@@ -109,7 +110,7 @@
 </ul>
 </section>
 <section id="common-running-errors">
-<h2><span class="section-number">6.6.3. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Link permanent la acest titlu"></a></h2>
+<h2><span class="section-number">6.7.3. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Link permanent la acest titlu"></a></h2>
 <p>The list of errors can be found <a class="reference external" href="https://swmm5.org/2016/09/05/swmm-5-1-and-infoswmm-error-and-warning-messages/">here</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ERROR</span> <span class="pre">211:</span> <span class="pre">invalid</span> <span class="pre">number</span> <span class="pre">-XXX</span> <span class="pre">at</span> <span class="pre">line</span> <span class="pre">XXX</span> <span class="pre">of</span> <span class="pre">[JUNC]</span> <span class="pre">section:</span></code>: A negative number is provided for the depth. Change the value in QGEP or in the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p></li>
@@ -121,8 +122,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Check-Input.html" class="btn btn-neutral float-left" title="6.5. Check input file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Extract-Results.html" class="btn btn-neutral float-right" title="6.7. SWMM Extract Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Check-Input.html" class="btn btn-neutral float-left" title="6.6. Check input file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Extract-Results.html" class="btn btn-neutral float-right" title="6.8. SWMM Extract Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

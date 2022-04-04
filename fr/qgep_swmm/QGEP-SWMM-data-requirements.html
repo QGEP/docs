@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="fr" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QGEP-SWMM data requirements &mdash; QGEP 0.8 documentation</title>
+  <title>6.5. QGEP-SWMM data requirements &mdash; Documentation QGEP 0.8</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,9 +15,12 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="6.6. Check input file" href="Check-Input.html" />
+    <link rel="prev" title="6.4. SWMM Create Input" href="Create-Input.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,19 +35,33 @@
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d’administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SWMM.html">6.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">6.4. SWMM Create Input</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">6.6. Check input file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Execute.html">6.7. SWMM Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">6.8. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">6.9. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">6.10. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">6.11. Change simulation parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">6.12. For developpers and advanced users</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -61,9 +78,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>QGEP-SWMM data requirements</li>
+          <li><a href="index.html"><span class="section-number">6. </span>QGEP SWMM plugin</a> &raquo;</li>
+      <li><span class="section-number">6.5. </span>QGEP-SWMM data requirements</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/qgep_swmm/QGEP-SWMM-data_requirements.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/qgep_swmm/QGEP-SWMM-data-requirements.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
   </ul>
   <hr/>
@@ -72,10 +90,10 @@
            <div itemprop="articleBody">
              
   <section id="qgep-swmm-data-requirements">
-<span id="id1"></span><h1>QGEP-SWMM data requirements<a class="headerlink" href="#qgep-swmm-data-requirements" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1><span class="section-number">6.5. </span>QGEP-SWMM data requirements<a class="headerlink" href="#qgep-swmm-data-requirements" title="Lien permanent vers ce titre"></a></h1>
 <p>To run a sucessful simulation in SWMM the following minimal data has to be filled in to be matched to the swmm objects</p>
 <table class="colwidths-given docutils align-default" id="id2">
-<caption><span class="caption-text">JUNCTIONS and COORDINATES</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">JUNCTIONS and COORDINATES</span><a class="headerlink" href="#id2" title="Lien permanent vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 45%" />
@@ -115,7 +133,7 @@
 </tbody>
 </table>
 <table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">CONDUITS</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">CONDUITS</span><a class="headerlink" href="#id3" title="Lien permanent vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 45%" />
@@ -171,7 +189,7 @@
 </tbody>
 </table>
 <table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">XSECTIONS</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">XSECTIONS</span><a class="headerlink" href="#id4" title="Lien permanent vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 45%" />
@@ -199,7 +217,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Create-Input.html" class="btn btn-neutral float-left" title="6.4. SWMM Create Input" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Check-Input.html" class="btn btn-neutral float-right" title="6.6. Check input file" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
@@ -207,9 +228,9 @@
     <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>
