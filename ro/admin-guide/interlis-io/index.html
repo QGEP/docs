@@ -110,7 +110,8 @@
 <section id="general">
 <h2><span class="section-number">3.3.1. </span>General<a class="headerlink" href="#general" title="Link permanent la acest titlu"></a></h2>
 <p>The QGEP plugin includes an experimental interlis import/export feature.
-It is currently capable of importing and exporting to the SIA405 model <cite>SIA405_ABWASSER_2015</cite> (version <cite>17.04.2018</cite>). Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
+It is currently capable of importing and exporting to the VSA-KEK «VSA_KEK_2019_LV95», which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p>
+<p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
 </section>
 <section id="prerequisites">
 <h2><span class="section-number">3.3.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link permanent la acest titlu"></a></h2>
@@ -129,6 +130,10 @@ Linux : use you package manager</p>
 <p>If the command fails, try
 &gt;&gt;&gt; pip install –upgrade pip</p>
 <p>If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included)</p>
+<p>If this command still fails, try
+&gt;&gt;&gt; pip install –target=c:somewhereotherthanthedefault –upgrade pip
+where c:somewhereotherthanthedefault is the path to your current pip package</p>
+<p>The same <cite>–target</cite> flag can be added to install <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite> in another location.</p>
 </section>
 <section id="modelbaker">
 <h3><span class="section-number">3.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Link permanent la acest titlu"></a></h3>
@@ -167,14 +172,23 @@ Linux : use you package manager</p>
 </figure>
 </li>
 </ul>
-<p>If you have an active slection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
+<p>If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
 <p>Then, confirm the dialog and choose where to save the <cite>.xtf</cite> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Notă</p>
+<p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
+</div>
 <p>Note that for large/full exports, the command can take a long time.</p>
 <p>Exports include a validation step using <cite>ilivalidator</cite>, which will inform you whether the export contains validation error.</p>
 </section>
 <section id="import">
 <h3><span class="section-number">3.3.3.3. </span>Import<a class="headerlink" href="#import" title="Link permanent la acest titlu"></a></h3>
-<p>To import <cite>xtf`files, click on the `import</cite> button and navigate to the <cite>.xtf</cite> file. The following dialog will appear.</p>
+<p>To import <cite>xtf`files, click on the `import</cite> button and navigate to the <cite>.xtf</cite> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Notă</p>
+<p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
+</div>
+<p>The following dialog will appear.</p>
 <ul>
 <li><figure class="align-default">
 <img alt="../../_images/import_dialog.png" src="../../_images/import_dialog.png" />

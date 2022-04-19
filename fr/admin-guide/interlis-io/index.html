@@ -109,7 +109,9 @@
 <p>Il s’agit d’un guide sur la façon d’importer/exporter des données entre QGEP et INTERLIS 2 Transfer Format (xtf).</p>
 <section id="general">
 <h2><span class="section-number">3.3.1. </span>Général<a class="headerlink" href="#general" title="Lien permanent vers ce titre"></a></h2>
-<p>Le plugin QGEP comprend une fonction expérimentale d’importation/exportation interlis. Il est actuellement capable d’importer et d’exporter vers le modèle SIA405 <cite>SIA405_ABWASSER_2015</cite> (version <cite>17.04.2018</cite>). Notez qu’actuellement, les exportations ne sont possibles qu’en allemand. La possibilité d’exporter dans d’autres langues est sur la feuille de route, faites-nous savoir si vous êtes intéressé par cette fonctionnalité.</p>
+<p>The QGEP plugin includes an experimental interlis import/export feature.
+It is currently capable of importing and exporting to the VSA-KEK “VSA_KEK_2019_LV95”, which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p>
+<p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
 </section>
 <section id="prerequisites">
 <h2><span class="section-number">3.3.2. </span>Prérequis<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
@@ -126,6 +128,10 @@ Linux : use you package manager</p>
 <p>Pour installer : avant de lancer QGIS, ouvrez le Shell OSGeo4W, et tapez &gt;&gt;&gt; pip3 install « sqlalchemy&gt;=1.3.22 » « geoalchemy2&gt;=0.9.0 ».</p>
 <p>Si la commande échoue, essayez &gt;&gt;&gt; pip install –upgrade pip</p>
 <p>Si pip est introuvable, vérifiez que vous avez installé le paquet python3-pip en utilisant l’installateur réseau OSGeo4W (si vous avez installé la version autonome de QGIS, il devrait être inclus).</p>
+<p>If this command still fails, try
+&gt;&gt;&gt; pip install –target=c:somewhereotherthanthedefault –upgrade pip
+where c:somewhereotherthanthedefault is the path to your current pip package</p>
+<p>The same <cite>–target</cite> flag can be added to install <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite> in another location.</p>
 </section>
 <section id="modelbaker">
 <h3><span class="section-number">3.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Lien permanent vers ce titre"></a></h3>
@@ -164,14 +170,23 @@ Linux : use you package manager</p>
 </figure>
 </li>
 </ul>
-<p>Si vous avez une sélection active dans la couche des ouvrages et/ou des tronçons, vous pouvez choisir de limiter l’exportation à cette sélection. Ceci est particulièrement utile en combinaison avec les outils de sélection amont/aval.</p>
+<p>If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
 <p>Ensuite, confirmez le dialogue et choisissez où enregistrer le fichier <cite>.xtf</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
+</div>
 <p>Notez que pour des exportations importantes/complets, l’exécution peut prendre beaucoup de temps.</p>
 <p>La phase d’exportation comprend une étape de validation utilisant <cite>ilivalidator</cite>, qui vous informera si l’exportation contient une erreur de validation.</p>
 </section>
 <section id="import">
 <h3><span class="section-number">3.3.3.3. </span>Import<a class="headerlink" href="#import" title="Lien permanent vers ce titre"></a></h3>
-<p>Pour importer des fichiers <cite>xtf</cite>, cliquez sur le bouton <cite>import</cite> et naviguez jusqu’au fichier <cite>.xtf</cite>. La boîte de dialogue suivante apparaît.</p>
+<p>To import <cite>xtf`files, click on the `import</cite> button and navigate to the <cite>.xtf</cite> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
+</div>
+<p>The following dialog will appear.</p>
 <ul>
 <li><figure class="align-default">
 <img alt="../../_images/import_dialog.png" src="../../_images/import_dialog.png" />
