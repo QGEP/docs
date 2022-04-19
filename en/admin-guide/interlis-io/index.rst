@@ -8,7 +8,9 @@ General
 ^^^^^^^^^^^^^
 
 The QGEP plugin includes an experimental interlis import/export feature.
-It is currently capable of importing and exporting to the SIA405 model `SIA405_ABWASSER_2015` (version `17.04.2018`). Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
+It is currently capable of importing and exporting to the VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
+
+Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
  
 Prerequisites
 ^^^^^^^^^^^^^^
@@ -33,7 +35,13 @@ If the command fails, try
 >>> pip install --upgrade pip
 
 If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included)
- 
+
+If this command still fails, try 
+>>> pip install --target=c:\somewhere\other\than\the\default --upgrade pip
+where c:\somewhere\other\than\the\default is the path to your current pip package
+
+The same `--target` flag can be added to install `sqlalchemy` and `geoalchemy2` in another location.
+
 
 Modelbaker
 -----------
@@ -66,9 +74,12 @@ To export your QGEP data, click on the `export` button. The following dialog wil
 
 - .. figure:: images/export_dialog.png
 
-If you have an active slection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
+If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
+
+.. note::
+  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
 Note that for large/full exports, the command can take a long time.
 
@@ -78,7 +89,12 @@ Exports include a validation step using `ilivalidator`, which will inform you wh
 Import
 -------------------------------------------------
 
-To import `xtf`files, click on the `import` button and navigate to the `.xtf` file. The following dialog will appear.
+To import `xtf`files, click on the `import` button and navigate to the `.xtf` file. 
+
+.. note::
+  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
+
+The following dialog will appear.
 
 - .. figure:: images/import_dialog.png
 
