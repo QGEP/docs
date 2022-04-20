@@ -82,11 +82,9 @@ If you have an active selection in the nodes and/or reaches layer, you can choos
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
-.. note::
+.. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
-
-  Note that for large/full exports, the command can take a long time.
+.. note:: Note that for large/full exports, the command can take a long time.
 
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
@@ -96,8 +94,7 @@ Import
 
 To import `xtf`files, click on the `import` button and navigate to the `.xtf` file. 
 
-.. note::
-  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
+.. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
 The following dialog will appear.
 
@@ -121,5 +118,11 @@ Quality control
 
 Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
-see https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ 
--> Link to login at infogrips. 
+
+.. figure:: https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg
+
+`For details see explanation on the VSA Homepage <https://vsa.ch/fachbereiche-cc/siedlungsentwaesserung/generelle-entwaesserungsplanung/datenmanagement/#GEP-Datachecker>`_
+
+
+`Information about access and licensing you can get here <https://vsa.ch/Mediathek/gep-datachecker-jahresgebuehr/?media_filter_two=lizenzen-software>`_
+
