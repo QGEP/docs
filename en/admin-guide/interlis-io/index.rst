@@ -65,27 +65,28 @@ Enable admin mode
 
 In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. 
 
-- .. figure:: images/settings_dialog.png
+.. figure:: images/settings_dialog.png
 
 You should now see new `import` and `export` buttons in the QGEP toolbar.
 
-- .. figure:: images/toolbar.png
+.. figure:: images/toolbar.png
 
 Export
 -------------------------------------------------
 
 To export your QGEP data, click on the `export` button. The following dialog will appear.
 
-- .. figure:: images/export_dialog.png
+.. figure:: images/export_dialog.png
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note::
+
   Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-Note that for large/full exports, the command can take a long time.
+  Note that for large/full exports, the command can take a long time.
 
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
@@ -100,7 +101,7 @@ To import `xtf`files, click on the `import` button and navigate to the `.xtf` fi
 
 The following dialog will appear.
 
-- .. figure:: images/import_dialog.png
+.. figure:: images/import_dialog.png
 
 The left part of this dialog lists all elements that are going to be imported from the `.xtf` file, allowing to review what is going to be imported and to deselect elements you may want to skip. It also shows the validation status of each object, showing whether further action is needed (INVALID) or recommended (WARNING) prior to importing.
 
