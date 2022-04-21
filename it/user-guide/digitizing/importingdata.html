@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.2.8. Importing data &mdash; QGEP 0.8 documentazione</title>
+  <title>3.2.8. Importing data &mdash; QGEP 0.8 documentazione</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../../genindex.html" />
     <link rel="search" title="Cerca" href="../../search.html" />
-    <link rel="next" title="2.3. Editing in QGEP" href="../editing/index.html" />
-    <link rel="prev" title="2.2.7. Digitizing Catchment Areas" href="digitizingcatchments.html" /> 
+    <link rel="next" title="3.3. Editing in QGEP" href="../editing/index.html" />
+    <link rel="prev" title="3.2.7. Digitizing Catchment Areas" href="digitizingcatchments.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,37 +42,38 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">1. QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. QGEP User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">2.1. Overview of QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Digitizing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dataentry.html">2.2.1. Data entry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">2.2.2. Digitizing Wastewater Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">2.2.3. Digitizing detailed geometry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">2.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">2.2.5. Digitizing Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">2.2.6. Deleting objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">2.2.7. Digitizing Catchment Areas</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.2.8. Importing data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">2.2.8.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">2.2.8.2. Example Importing manholes from a TXT-File:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">2.2.8.3. Example Importing manholes with attributes:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.2. Digitizing in QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Data entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">3.2.2. Digitizing Wastewater Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">3.2.3. Digitizing detailed geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">3.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Digitizing Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">3.2.6. Deleting objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">3.2.7. Digitizing Catchment Areas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.8. Importing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">3.2.8.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">3.2.8.2. Example Importing manholes from a TXT-File:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">3.2.8.3. Example Importing manholes with attributes:</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">2.3. Editing in QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">2.4. Length profiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">2.5. Network following tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">2.6. Plan plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../history/index.html">2.7. History in QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">2.8. How To</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Editing in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">3.4. Length profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">3.5. Network following tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">3.6. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/index.html">3.7. History in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">4. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
 </ul>
 
         </div>
@@ -89,9 +90,9 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html"><span class="section-number">2. </span>QGEP User Guide</a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">2.2. </span>Digitizing in QGEP</a> &raquo;</li>
-      <li><span class="section-number">2.2.8. </span>Importing data</li>
+          <li><a href="../index.html"><span class="section-number">3. </span>QGEP User Guide</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3.2. </span>Digitizing in QGEP</a> &raquo;</li>
+      <li><span class="section-number">3.2.8. </span>Importing data</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user-guide/digitizing/importingdata.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -102,11 +103,11 @@
            <div itemprop="articleBody">
              
   <section id="importing-data">
-<h1><span class="section-number">2.2.8. </span>Importing data<a class="headerlink" href="#importing-data" title="Link a questa intestazione"></a></h1>
+<h1><span class="section-number">3.2.8. </span>Importing data<a class="headerlink" href="#importing-data" title="Link a questa intestazione"></a></h1>
 <p>It is quite easy to import data (geometry and attributes) from an external software.
 Here is a general discription and a specific example.</p>
 <section id="general">
-<h2><span class="section-number">2.2.8.1. </span>General<a class="headerlink" href="#general" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">3.2.8.1. </span>General<a class="headerlink" href="#general" title="Link a questa intestazione"></a></h2>
 <ul class="simple">
 <li><p>You have to add the data you want to import as (vector) layer into the QGEP project.</p></li>
 <li><p>The field names of the attributes have to be the same as the field names of the QGEP Layer.
@@ -117,7 +118,7 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
 </ul>
 </section>
 <section id="example-importing-manholes-from-a-txt-file">
-<h2><span class="section-number">2.2.8.2. </span>Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">3.2.8.2. </span>Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Link a questa intestazione"></a></h2>
 <ul class="simple">
 <li><p>Change the fieldnames to identifier, x, y, co_level</p></li>
 </ul>
@@ -154,7 +155,7 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
 </div>
 </section>
 <section id="example-importing-manholes-with-attributes">
-<h2><span class="section-number">2.2.8.3. </span>Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">3.2.8.3. </span>Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Link a questa intestazione"></a></h2>
 <ul class="simple">
 <li><p>Example to add additional attributes</p></li>
 </ul>
@@ -173,8 +174,8 @@ Therefore it is normaly not a good idea the use shp-files, because of the 10 let
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="digitizingcatchments.html" class="btn btn-neutral float-left" title="2.2.7. Digitizing Catchment Areas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="../editing/index.html" class="btn btn-neutral float-right" title="2.3. Editing in QGEP" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="digitizingcatchments.html" class="btn btn-neutral float-left" title="3.2.7. Digitizing Catchment Areas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="../editing/index.html" class="btn btn-neutral float-right" title="3.3. Editing in QGEP" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

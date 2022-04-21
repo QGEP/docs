@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.3. serveur QGIS &mdash; Documentation QGEP 0.8</title>
+  <title>5.3. serveur QGIS &mdash; Documentation QGEP 0.8</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="5. Plugin Wincan 2 QGEP" href="../wincan2qgep/index.html" />
-    <link rel="prev" title="4.2. installer" href="install.html" /> 
+    <link rel="next" title="6. Plugin Wincan 2 QGEP" href="../wincan2qgep/index.html" />
+    <link rel="prev" title="5.2. installer" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,20 +42,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. Guide d’installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. Guide d’utilisateur de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Guide d’administration</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Machine virtuelle de démonstration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="about.html">4.1. À propos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html">4.2. installer</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. serveur QGIS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">4.3.1. Accès aux services Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide d’administration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Machine virtuelle de démonstration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about.html">5.1. À propos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">5.2. installer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. serveur QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">5.3.1. Accès aux services Web</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">5. Plugin Wincan 2 QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Plugin Wincan 2 QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
 </ul>
 
         </div>
@@ -72,8 +73,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">4. </span>Machine virtuelle de démonstration</a> &raquo;</li>
-      <li><span class="section-number">4.3. </span>serveur QGIS</li>
+          <li><a href="index.html"><span class="section-number">5. </span>Machine virtuelle de démonstration</a> &raquo;</li>
+      <li><span class="section-number">5.3. </span>serveur QGIS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/vm/server.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -84,13 +85,13 @@
            <div itemprop="articleBody">
              
   <section id="qgis-server">
-<h1><span class="section-number">4.3. </span>serveur QGIS<a class="headerlink" href="#qgis-server" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">5.3. </span>serveur QGIS<a class="headerlink" href="#qgis-server" title="Lien permanent vers ce titre"></a></h1>
 <p>Vous pouvez télécharger une machine virtuelle comprenant une ancienne configuration de QGEP ainsi qu’une installation de QGIS Serveur depuis <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a></p>
 <p>The VM has working installations of
 <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">QGIS Server</a>
 and <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
 <section id="access-the-web-services">
-<h2><span class="section-number">4.3.1. </span>Accès aux services Web<a class="headerlink" href="#access-the-web-services" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">5.3.1. </span>Accès aux services Web<a class="headerlink" href="#access-the-web-services" title="Lien permanent vers ce titre"></a></h2>
 <p>The Apache server is setup to respond to requests pointing to the <cite>http://qgisplatform.demo</cite>.
 Accessing the above link with the Internet Browser of the VM will take you to the starting
 page of QWC depicted in the below image.</p>
@@ -112,8 +113,8 @@ page of QWC depicted in the below image.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="install.html" class="btn btn-neutral float-left" title="4.2. installer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="../wincan2qgep/index.html" class="btn btn-neutral float-right" title="5. Plugin Wincan 2 QGEP" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="install.html" class="btn btn-neutral float-left" title="5.2. installer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../wincan2qgep/index.html" class="btn btn-neutral float-right" title="6. Plugin Wincan 2 QGEP" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -20,6 +20,7 @@ Contents
    :maxdepth: 4
    :numbered:
 
+   features-guide/index
    installation-guide/index
    user-guide/index
    admin-guide/index

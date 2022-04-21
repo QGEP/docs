@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5.4. Fixing issues &mdash; QGEP 0.8 documentazione</title>
+  <title>6.4. Fixing issues &mdash; QGEP 0.8 documentazione</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="5.5. Import data" href="import-data.html" />
-    <link rel="prev" title="5.3. Match channels" href="match-channels.html" /> 
+    <link rel="next" title="6.5. Import data" href="import-data.html" />
+    <link rel="prev" title="6.3. Match channels" href="match-channels.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,25 +42,26 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu di navigazione">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">1. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">2. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">3. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">4. Demo Virtual Machine</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Wincan 2 QGEP plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="introduction.html">5.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">5.2. Open inspection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="match-channels.html">5.3. Match channels</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">5.4. Fixing issues</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#length-issues">5.4.1. Length issues</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. One channel in the inspection data corresponds to several channels in the QGEP data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Several channels in the inspection data correspond to a single channel in the QGEP data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Wincan 2 QGEP plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">6.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">6.2. Open inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html">6.3. Match channels</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. Fixing issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#length-issues">6.4.1. Length issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">6.4.2. One channel in the inspection data corresponds to several channels in the QGEP data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">6.4.3. Several channels in the inspection data correspond to a single channel in the QGEP data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="import-data.html">5.5. Import data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">5.6. Viewing data in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">6.5. Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">6.6. Viewing data in QGEP</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
 </ul>
 
         </div>
@@ -77,8 +78,8 @@
           <div role="navigation" aria-label="Naviga tra le pagine">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">5. </span>Wincan 2 QGEP plugin</a> &raquo;</li>
-      <li><span class="section-number">5.4. </span>Fixing issues</li>
+          <li><a href="index.html"><span class="section-number">6. </span>Wincan 2 QGEP plugin</a> &raquo;</li>
+      <li><span class="section-number">6.4. </span>Fixing issues</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wincan2qgep/fixing-issues.rst.txt" rel="nofollow"> Visualizza sorgente pagina</a>
       </li>
@@ -89,20 +90,20 @@
            <div itemprop="articleBody">
              
   <section id="fixing-issues">
-<span id="wincan2qgep-fixing-issues"></span><h1><span class="section-number">5.4. </span>Fixing issues<a class="headerlink" href="#fixing-issues" title="Link a questa intestazione"></a></h1>
+<span id="wincan2qgep-fixing-issues"></span><h1><span class="section-number">6.4. </span>Fixing issues<a class="headerlink" href="#fixing-issues" title="Link a questa intestazione"></a></h1>
 <section id="length-issues">
-<h2><span class="section-number">5.4.1. </span>Length issues<a class="headerlink" href="#length-issues" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">6.4.1. </span>Length issues<a class="headerlink" href="#length-issues" title="Link a questa intestazione"></a></h2>
 <p>If the length of the channel is longer in the data than in the map, a warning will occur.
 This should be fixed in the data or can be forced in the observation table by checking the corresponding column.</p>
 </section>
 <section id="one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">
-<h2><span class="section-number">5.4.2. </span>One channel in the inspection data corresponds to several channels in the QGEP data<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">6.4.2. </span>One channel in the inspection data corresponds to several channels in the QGEP data<a class="headerlink" href="#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data" title="Link a questa intestazione"></a></h2>
 <p>It may happen that one channel in the inspection data corresponds to several channels in the QGEP data.
 To fix this, you can select up to 3 channels in the widgets.
 Observation lengths will be accordingly shifted.</p>
 </section>
 <section id="several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">
-<h2><span class="section-number">5.4.3. </span>Several channels in the inspection data correspond to a single channel in the QGEP data<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">6.4.3. </span>Several channels in the inspection data correspond to a single channel in the QGEP data<a class="headerlink" href="#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data" title="Link a questa intestazione"></a></h2>
 <p>It may happen that several channels in the inspection data correspond to a single channel in the QGEP data.
 To fix this, you can select «Reuse previous channel» checkbox.
 Observation lengths will be accordingly shifted.</p>
@@ -113,8 +114,8 @@ Observation lengths will be accordingly shifted.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Piè di pagina">
-        <a href="match-channels.html" class="btn btn-neutral float-left" title="5.3. Match channels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
-        <a href="import-data.html" class="btn btn-neutral float-right" title="5.5. Import data" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="match-channels.html" class="btn btn-neutral float-left" title="6.3. Match channels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Precedente</a>
+        <a href="import-data.html" class="btn btn-neutral float-right" title="6.5. Import data" accesskey="n" rel="next">Prossimo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

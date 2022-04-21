@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="1. Leitfaden QGEP Installation" href="installation-guide/index.html" /> 
+    <link rel="next" title="1. QGEP / TEKSI wastewater module" href="features-guide/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,12 +41,13 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation-guide/index.html">1. Leitfaden QGEP Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">2. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">3. Administratorhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vm/index.html">4. Demo virtuelle Maschine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qgep_swmm/index.html">6. QGEP SWMM plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation-guide/index.html">2. Leitfaden QGEP Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">3. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">4. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vm/index.html">5. Demo virtuelle Maschine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
 </ul>
 
         </div>
@@ -81,363 +82,368 @@
 <h1>Inhalt:<a class="headerlink" href="#contents" title="Link zu dieser Überschrift"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation-guide/index.html">1. Leitfaden QGEP Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation-guide/requirements.html">1.1. Voraussetzungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation-guide/server.html">1.2. Datenbankserver aufsetzen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/server.html#required-software">1.2.1. Benötigte Software</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/server.html#server-installation">1.2.1.1. Server installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features-guide/index.html">1. QGEP / TEKSI wastewater module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features-guide/index.html#main-features">1.1. Main features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features-guide/index.html#more-to-come">1.2. More to come</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation-guide/index.html">2. Leitfaden QGEP Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation-guide/requirements.html">2.1. Voraussetzungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-guide/server.html">2.2. Datenbankserver aufsetzen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/server.html#required-software">2.2.1. Benötigte Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/server.html#server-installation">2.2.1.1. Server installation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="installation-guide/database-initialization.html">1.3. Initialisierung der Datenbank</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/database-initialization.html#process">1.3.1. Vorgehen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#restore-demo-datamodel">1.3.1.1. Demodaten einrichten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#create-minimal-roles-and-access">1.3.1.2. Rollen und Zugriffsrechte erstellen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#empty-data-model">1.3.1.3. Leeres Datenbank-Schema</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#generate-the-data-model-under-linux">1.3.1.4. Erzeugen des Datenmodells unter Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-guide/database-initialization.html">2.3. Initialisierung der Datenbank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/database-initialization.html#process">2.3.1. Vorgehen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#restore-demo-datamodel">2.3.1.1. Demodaten einrichten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#create-minimal-roles-and-access">2.3.1.2. Rollen und Zugriffsrechte erstellen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#empty-data-model">2.3.1.3. Leeres Datenbank-Schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/database-initialization.html#generate-the-data-model-under-linux">2.3.1.4. Erzeugen des Datenmodells unter Linux</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="installation-guide/workstation.html">1.4. Arbeitsplatzrechner Einrichten</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#database-configuration">1.4.1. Konfiguration der Datenbank</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#windows-pg-service">1.4.1.1. Windows pg_service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#linux-macos-pg-service">1.4.1.2. Linux/macOS pg_service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#all-systems">1.4.1.3. Auf allen Systemen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation-guide/workstation.html">2.4. Arbeitsplatzrechner Einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#database-configuration">2.4.1. Konfiguration der Datenbank</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#windows-pg-service">2.4.1.1. Windows pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#linux-macos-pg-service">2.4.1.2. Linux/macOS pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation-guide/workstation.html#all-systems">2.4.1.3. Auf allen Systemen</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-qgis">1.4.2. QGIS installieren</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-qgep-plugin">1.4.3. Installation des QGEP Plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-the-demo-data">1.4.4. Demodaten installieren</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-the-demo-project">1.4.5. Das Demo Projekt installieren</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#if-you-are-a-data-owner-add-your-own-oid-to-the-project">1.4.6. If you are a data owner: Add your own OID to the project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#working-with-more-than-one-database">1.4.7. Mit mehreren Datenbank-Operaten arbeiten</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">2. QGEP Benutzerhandbuch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/layerexplanations/index.html">2.1. Übersicht über QGEP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/overview.html">2.1.1. Einleitung und Übersicht</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html">2.1.2. Layer Erläuterungen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#main-layers">2.1.2.1. Hauptlayer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#wastewater-structures">2.1.2.2. Abwasserbauwerke</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#inspection">2.1.2.3. Inspektion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#value-lists">2.1.2.4. Wertelisten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#hydraulic">2.1.2.5. Hydraulik Layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#topology">2.1.2.6. Topologie</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#catchment">2.1.2.7. Einzugsgebiet</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html">2.1.3. Namenskonventionen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#schemas-in-the-qgep-database">2.1.3.1. Schemas in der QGEP-Datenbank</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#layer-names">2.1.3.2. Layer Bezeichnungen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#attibute-names">2.1.3.3. Feldnamen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-qgis">2.4.2. QGIS installieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-qgep-plugin">2.4.3. Installation des QGEP Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-the-demo-data">2.4.4. Demodaten installieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#install-the-demo-project">2.4.5. Das Demo Projekt installieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#if-you-are-a-data-owner-add-your-own-oid-to-the-project">2.4.6. If you are a data owner: Add your own OID to the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation-guide/workstation.html#working-with-more-than-one-database">2.4.7. Mit mehreren Datenbank-Operaten arbeiten</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/digitizing/index.html">2.2. Digitalisieren in QGEP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/dataentry.html">2.2.1. Datenerfassung</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/dataentry.html#the-qgep-wizard">2.2.1.1. Der QGEP Wizard (Zauberer)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/dataentry.html#qgis-standard-tools">2.2.1.2. QGIS Standard Werkzeuge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">3. QGEP Benutzerhandbuch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/layerexplanations/index.html">3.1. Übersicht über QGEP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/overview.html">3.1.1. Einleitung und Übersicht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html">3.1.2. Layer Erläuterungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#main-layers">3.1.2.1. Hauptlayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#wastewater-structures">3.1.2.2. Abwasserbauwerke</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#inspection">3.1.2.3. Inspektion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#value-lists">3.1.2.4. Wertelisten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#hydraulic">3.1.2.5. Hydraulik Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#topology">3.1.2.6. Topologie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/layerexplanation.html#catchment">3.1.2.7. Einzugsgebiet</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html">2.2.2. Abwasserbauwerke digitalisieren</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#general">2.2.2.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#digitizing">2.2.2.2. Digitalisieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#further-attributes-and-classes">2.2.2.3. Weitere Attribute und Klassen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#geometry-synchronization">2.2.2.4. Geometrieabgleichung</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html">2.2.3. Digitalisieren detaillierter Geometrie</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html#general">2.2.3.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html#digitizing-tool">2.2.3.2. Digitalisierungswerkzeug</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html">2.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html#general">2.2.4.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html#digitizing-tool">2.2.4.2. Digitalisierungswerkzeug</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html">2.2.5. Kanäle Digitalisieren</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#general">2.2.5.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#digitizing">2.2.5.2. Digitalisieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#further-attributes-and-classes">2.2.5.3. Weitere Attribute und Klassen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#geometry-synchronization">2.2.5.4. Geometrieabgleichung</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html">2.2.6. Objekte löschen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-reaches">2.2.6.1. Haltungen löschen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-manholes-and-other-wastewater-structures">2.2.6.2. Normschächte und andere Abwasserbauwerke löschen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-covers">2.2.6.3. Deckel löschen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-structure-parts">2.2.6.4. Bauwerksteile löschen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-detailed-geometries">2.2.6.5. Detailgeometrie löschen</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html">2.2.7. Digitalisierung der Einzugsgebiete</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#general">2.2.7.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#digitizing">2.2.7.2. Digitalisieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#editing">2.2.7.3. Bearbeitung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#split-areas">2.2.7.4. Einzugsgebiete teilen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#merge-areas">2.2.7.5. Einzugsgebiet zusammenführen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#connect-catchment-area-to-wastewater-network-nodes">2.2.7.6. Einzugsgebiete mit Abwasserknoten verbinden</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/importingdata.html">2.2.8. Datenimport</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#general">2.2.8.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#example-importing-manholes-from-a-txt-file">2.2.8.2. Beispiel Import Schächte mit einer TXT-Datei:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#example-importing-manholes-with-attributes">2.2.8.3. Beispiel Import Schächte mit Attributen:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html">3.1.3. Namenskonventionen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#schemas-in-the-qgep-database">3.1.3.1. Schemas in der QGEP-Datenbank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#layer-names">3.1.3.2. Layer Bezeichnungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/layerexplanations/namingconventions.html#attibute-names">3.1.3.3. Feldnamen</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/editing/index.html">2.3. Bearbeiten in QGEP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/editing.html">2.3.1. Bearbeiten von bestehenden Daten</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#demo-project">2.3.1.1. Demoprojekt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#layers">2.3.1.2. Layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-attributes-of-point-elements-manholes-special-structures">2.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-attributes-of-linear-elements-channels">2.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#change-reach-direction">2.3.1.5. Wechseln der Haltungs-Richtung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#snap-reach-geometry">2.3.1.6. Schnappe auf Haltungsgeometrie</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#working-with-codes-of-value-list">2.3.1.7. Arbeiten mit den Codes der Wertelisten</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#an-other-way-to-choose-an-object">2.3.1.8. Ein andere Möglichkeit ein Objekt auszuwählen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">2.3.1.9. Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#adding-a-wastewater-node-to-an-existing-reach">2.3.1.10. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#multiedit">2.3.1.11. Mehrfachänderung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#saving-changes">2.3.1.12. Änderungen Speichern</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-wastewater-structure-type">2.3.1.13. Abwasserbauwerk Typ ändern</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#split-a-reach-channel-into-different-reaches">2.3.1.14. Kanäle in verschiedene Haltungen unterteilen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/digitizing/index.html">3.2. Digitalisieren in QGEP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/dataentry.html">3.2.1. Datenerfassung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/dataentry.html#the-qgep-wizard">3.2.1.1. Der QGEP Wizard (Zauberer)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/dataentry.html#qgis-standard-tools">3.2.1.2. QGIS Standard Werkzeuge</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/moving.html">2.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#general">2.3.2.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#how-to">2.3.2.2. Anleitung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#video-tutorial">2.3.2.3. Video Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html">3.2.2. Abwasserbauwerke digitalisieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#general">3.2.2.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#digitizing">3.2.2.2. Digitalisieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#further-attributes-and-classes">3.2.2.3. Weitere Attribute und Klassen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingwastewaterstructures.html#geometry-synchronization">3.2.2.4. Geometrieabgleichung</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/maintenance_events.html">2.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#general">2.3.3.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#adding-a-new-maintenance-event">2.3.3.2. Ein neues Erhaltungsereignis hinzufügen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#link-an-existing-maintenance-event">2.3.3.3. Verknüpfen mit einem bestehenden Erhaltungsereignis.</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#unlink-maintenance-events">2.3.3.4. Verknüpfung zu Erhaltungsereignissen auflösen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#editing">2.3.3.5. Bearbeitung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#multi-edit">2.3.3.6. Mehrfachbearbeitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html">3.2.3. Digitalisieren detaillierter Geometrie</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html#general">3.2.3.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdetailedgeometry.html#digitizing-tool">3.2.3.2. Digitalisierungswerkzeug</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html">2.3.4. Abwassernetzwerkselemente verbinden</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#general">2.3.4.1. Allgemeines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">2.3.4.2. Ein Haltung mit einem Knoten oder einer anderen Haltung verbinden</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#video-tutorial">2.3.4.3. Video Tutorial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#how-to-delete-a-connection">2.3.4.4. Eine Verknüpfung löschen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html">3.2.4. Digitalisieren detaillierter Geometrie für Entwässerungsrinnen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html#general">3.2.4.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingdrainagechannel.html#digitizing-tool">3.2.4.2. Digitalisierungswerkzeug</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html">3.2.5. Kanäle Digitalisieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#general">3.2.5.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#digitizing">3.2.5.2. Digitalisieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#further-attributes-and-classes">3.2.5.3. Weitere Attribute und Klassen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingchannels.html#geometry-synchronization">3.2.5.4. Geometrieabgleichung</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/length-profile/index.html">2.4. Längsschnitte</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/length-profile/index.html#general">2.4.1. Allgemeines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/length-profile/index.html#printing">2.4.2. Drucken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html">3.2.6. Objekte löschen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-reaches">3.2.6.1. Haltungen löschen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-manholes-and-other-wastewater-structures">3.2.6.2. Normschächte und andere Abwasserbauwerke löschen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-covers">3.2.6.3. Deckel löschen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-structure-parts">3.2.6.4. Bauwerksteile löschen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/deletingobjects.html#delete-detailed-geometries">3.2.6.5. Detailgeometrie löschen</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/network-following/index.html">2.5. Werkzeuge zur Netzwerkverfolgung</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#refresh-network-topology">2.5.1. Netzwerk Topologie aktualisieren</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#upstream">2.5.2. Gegen die Fließrichtung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#downstream">2.5.3. In Fließrichtung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#sum-up-upstream">2.5.4. Summieren gegen die Fließrichtung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#flow-times-downstream">2.5.5. Fliesszeiten abwärts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html">3.2.7. Digitalisierung der Einzugsgebiete</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#general">3.2.7.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#digitizing">3.2.7.2. Digitalisieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#editing">3.2.7.3. Bearbeitung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#split-areas">3.2.7.4. Einzugsgebiete teilen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#merge-areas">3.2.7.5. Einzugsgebiet zusammenführen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/digitizingcatchments.html#connect-catchment-area-to-wastewater-network-nodes">3.2.7.6. Einzugsgebiete mit Abwasserknoten verbinden</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/plan-plotting/index.html">2.6. Plandruck</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/plan-plotting/index.html#general">2.6.1. Allgemeines</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/history/index.html">2.7. History in QGEP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/history/history.html">2.7.1. Verlaufsanzeige (History viewer)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#plugin-configuration">2.7.1.1. Plugin Konfiguration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#usage">2.7.1.2. Verwendung</a></li>
-<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#replay-function">2.7.1.3. Wiedergabefunktion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/digitizing/importingdata.html">3.2.8. Datenimport</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#general">3.2.8.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#example-importing-manholes-from-a-txt-file">3.2.8.2. Beispiel Import Schächte mit einer TXT-Datei:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/digitizing/importingdata.html#example-importing-manholes-with-attributes">3.2.8.3. Beispiel Import Schächte mit Attributen:</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/How-To/index.html">2.8. How To</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#manual-label-positioning-for-different-scales">2.8.1. Manuelle Beschriftungspositionen für unterschiedliche Massstäbe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#how-to-import-existing-label-positions">2.8.2. Importieren von bestehenden Beschriftungspositionen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">2.8.3. Erfassen einer Hydr_Geometrie (entspricht einer Beckengeometrie in MikeUrban)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">2.8.4. Hydraulische Modellierung eines Überlaufes (Streichwehr/Leapingwehr/Förderanlage)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#overflow-characteristic">2.8.5. Überlaufcharakteristik</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/editing/index.html">3.3. Bearbeiten in QGEP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/editing.html">3.3.1. Bearbeiten von bestehenden Daten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#demo-project">3.3.1.1. Demoprojekt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#layers">3.3.1.2. Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-attributes-of-point-elements-manholes-special-structures">3.3.1.3. Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-attributes-of-linear-elements-channels">3.3.1.4. Attribute der Linienelemente ändern (Kanäle)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#change-reach-direction">3.3.1.5. Wechseln der Haltungs-Richtung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#snap-reach-geometry">3.3.1.6. Schnappe auf Haltungsgeometrie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#working-with-codes-of-value-list">3.3.1.7. Arbeiten mit den Codes der Wertelisten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#an-other-way-to-choose-an-object">3.3.1.8. Ein andere Möglichkeit ein Objekt auszuwählen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#adding-additional-covers-and-nodes-to-an-existing-wastewater-structure">3.3.1.9. Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#adding-a-wastewater-node-to-an-existing-reach">3.3.1.10. Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#multiedit">3.3.1.11. Mehrfachänderung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#saving-changes">3.3.1.12. Änderungen Speichern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#changing-wastewater-structure-type">3.3.1.13. Abwasserbauwerk Typ ändern</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/editing.html#split-a-reach-channel-into-different-reaches">3.3.1.14. Kanäle in verschiedene Haltungen unterteilen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/moving.html">3.3.2. Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#general">3.3.2.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#how-to">3.3.2.2. Anleitung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/moving.html#video-tutorial">3.3.2.3. Video Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/maintenance_events.html">3.3.3. Hinzufügen oder bearbeiten von Erhaltungsereignissen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#general">3.3.3.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#adding-a-new-maintenance-event">3.3.3.2. Ein neues Erhaltungsereignis hinzufügen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#link-an-existing-maintenance-event">3.3.3.3. Verknüpfen mit einem bestehenden Erhaltungsereignis.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#unlink-maintenance-events">3.3.3.4. Verknüpfung zu Erhaltungsereignissen auflösen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#editing">3.3.3.5. Bearbeitung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/maintenance_events.html#multi-edit">3.3.3.6. Mehrfachbearbeitung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html">3.3.4. Abwassernetzwerkselemente verbinden</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#general">3.3.4.1. Allgemeines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">3.3.4.2. Ein Haltung mit einem Knoten oder einer anderen Haltung verbinden</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#video-tutorial">3.3.4.3. Video Tutorial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/editing/connect_wastewater_network_elements.html#how-to-delete-a-connection">3.3.4.4. Eine Verknüpfung löschen</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">3. Administratorhandbuch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/pgadmin/index.html">3.1. pgAdmin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/pgadmin/install.html">3.1.1. Installation von pgAdmin</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/install.html#windows">3.1.1.1. Windows</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/install.html#linux">3.1.1.2. Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/length-profile/index.html">3.4. Längsschnitte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/length-profile/index.html#general">3.4.1. Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/length-profile/index.html#printing">3.4.2. Drucken</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/pgadmin/usage.html">3.1.2. pgAdmin verwenden</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/usage.html#sql-query">3.1.2.1. SQL Abfrage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/usage.html#database-dump">3.1.2.2. Datenbank Speicherauszug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/network-following/index.html">3.5. Werkzeuge zur Netzwerkverfolgung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#refresh-network-topology">3.5.1. Netzwerk Topologie aktualisieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#upstream">3.5.2. Gegen die Fließrichtung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#downstream">3.5.3. In Fließrichtung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#sum-up-upstream">3.5.4. Summieren gegen die Fließrichtung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/network-following/index.html#flow-times-downstream">3.5.5. Fliesszeiten abwärts</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/plan-plotting/index.html">3.6. Plandruck</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/plan-plotting/index.html#general">3.6.1. Allgemeines</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/security/index.html">3.2. User Roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/interlis-io/index.html">3.3. INTERLIS Datenaustausch</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#general">3.3.1. Allgemeines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#prerequisites">3.3.2. Voraussetzungen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#java">3.3.2.1. Java</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#python-libraries">3.3.2.2. Python Bibliotheken</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#modelbaker">3.3.2.3. Modelbaker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#qgep-version">3.3.2.4. QGEP Version</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#usage-gui">3.3.3. Benutzung (GUI)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#enable-admin-mode">3.3.3.1. Aktivieren Sie den Admin-Modus</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#export">3.3.3.2. Export</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#import">3.3.3.3. Import</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#usage-command-line">3.3.4. Benutzung (Befehlszeile)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#quality-control">3.3.5. Qualitätskontrolle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">3.3.5.1. Qualitätskontrolle mit VSA Checker (Fachprüfung) (online)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/history/index.html">3.7. History in QGEP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/history/history.html">3.7.1. Verlaufsanzeige (History viewer)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#plugin-configuration">3.7.1.1. Plugin Konfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#usage">3.7.1.2. Verwendung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-guide/history/history.html#replay-function">3.7.1.3. Wiedergabefunktion</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/db-customization/index.html">3.4. Anpassung des Datenmodells</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#introduction">3.4.1. Einleitung</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#adding-fields">3.4.2. Zusätzliche Felder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#joining-additional-tables">3.4.3. Verknüpfung zusätzlicher Tabellen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#creating-custom-views">3.4.4. Creating custom views</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/datamodel-tool/index.html">3.5. Data-model tool</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#setup">3.5.1. Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#usage">3.5.2. Usage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#main-dialog">3.5.2.1. Main dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#troubleshooting">3.5.2.2. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/How-To/index.html">3.8. How To</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#manual-label-positioning-for-different-scales">3.8.1. Manuelle Beschriftungspositionen für unterschiedliche Massstäbe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#how-to-import-existing-label-positions">3.8.2. Importieren von bestehenden Beschriftungspositionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">3.8.3. Erfassen einer Hydr_Geometrie (entspricht einer Beckengeometrie in MikeUrban)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">3.8.4. Hydraulische Modellierung eines Überlaufes (Streichwehr/Leapingwehr/Förderanlage)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/How-To/index.html#overflow-characteristic">3.8.5. Überlaufcharakteristik</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/db-update-pum/index.html">3.6. Manual update of the datamodel</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-update-pum/index.html#requirements">3.6.1. Voraussetzungen</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#client">3.6.1.1. Client</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#postgresql">3.6.1.2. PostgreSQL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#python">3.6.1.3. Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#pum-installation">3.6.1.4. Installation von PUM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#pirogue-installation">3.6.1.5. Installation von Pirogue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin-guide/index.html">4. Administratorhandbuch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/pgadmin/index.html">4.1. pgAdmin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/pgadmin/install.html">4.1.1. Installation von pgAdmin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/install.html#windows">4.1.1.1. Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/install.html#linux">4.1.1.2. Linux</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-update-pum/index.html#database-update">3.6.2. Datenbank Update</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#postgresql-service">3.6.2.1. PostgreSQL service</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#database-backup">3.6.2.2. Datenbank Sicherung (backup)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#download-and-install-current-database-release">3.6.2.3. Download and install current database release</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#create-empty-database">3.6.2.4. Create empty database</a></li>
-<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#launch-update">3.6.2.5. Launch update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/pgadmin/usage.html">4.1.2. pgAdmin verwenden</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/usage.html#sql-query">4.1.2.1. SQL Abfrage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/pgadmin/usage.html#database-dump">4.1.2.2. Datenbank Speicherauszug</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/security/index.html">4.2. User Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/interlis-io/index.html">4.3. INTERLIS Datenaustausch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#general">4.3.1. Allgemeines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#prerequisites">4.3.2. Voraussetzungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#java">4.3.2.1. Java</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#python-libraries">4.3.2.2. Python Bibliotheken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#modelbaker">4.3.2.3. Modelbaker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#qgep-version">4.3.2.4. QGEP Version</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="vm/index.html">4. Demo virtuelle Maschine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vm/about.html">4.1. Um</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vm/install.html">4.2. Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="vm/install.html#download">4.2.1. Herunterladen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vm/install.html#extract">4.2.2. Entpacken</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vm/install.html#run-qgep">4.2.3. QGEP ausführen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#usage-gui">4.3.3. Benutzung (GUI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#enable-admin-mode">4.3.3.1. Aktivieren Sie den Admin-Modus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#export">4.3.3.2. Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#import">4.3.3.3. Import</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="vm/server.html">4.3. QGIS Server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="vm/server.html#access-the-web-services">4.3.1. Betreten des Webservices</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="wincan2qgep/index.html">5. Wincan 2 QGEP plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/introduction.html">5.1. Einleitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/open-inspection.html">5.2. Untersuchungsdatei öffnen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/match-channels.html">5.3. Haltungen abgleichen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#automatic-matching">5.3.1. Automatischer Abgleich</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#manual-matching">5.3.2. Manueller Abgleich</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#skipping-channels-or-observations">5.3.3. Untersuchungsbericht oder Beobachtungen weglassen</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/fixing-issues.html">5.4. Problemlösungen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#length-issues">5.4.1. Probleme mit Längenangabe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">5.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">5.4.3. Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen Haltung in QGEP</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/import-data.html">5.5. Datenimport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/viewing-data-qgep.html">5.6. Daten in QGEP anschauen</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="qgep_swmm/index.html">6. QGEP SWMM plugin</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/SWMM.html">6.1. Storm Water Management Model (SWMM)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-installation.html">6.2. QGEP-SWMM installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-installation.html#swmm-installation">6.2.1. SWMM Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html">6.3. QGEP-SWMM workflow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html#workflow">6.3.1. Workflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html#gep-project">6.3.2. GEP project</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Create-Input.html">6.4. SWMM Create Input</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Create-Input.html#qgep-plugin">6.4.1. QGEP plugin</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-data-requirements.html">6.5. QGEP-SWMM data requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Check-Input.html">6.6. Check input file</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Check-Input.html#common-import-errors">6.6.1. Common import errors</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-status-or-function-hierarchic-wn-function-hierarchic">6.6.1.1. Missing status or _function_hierarchic (wn_function_hierarchic)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#catchment-area-connected-to-secondary-wastewater-structure">6.6.1.2. Catchment area connected to secondary wastewater structure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-discharge-coefficients">6.6.1.3. Missing discharge coefficients</a></li>
-<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-population-densities">6.6.1.4. Missing population densities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#usage-command-line">4.3.4. Benutzung (Befehlszeile)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/interlis-io/index.html#quality-control">4.3.5. Qualitätskontrolle</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/interlis-io/index.html#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">4.3.5.1. Qualitätskontrolle mit VSA Checker (Fachprüfung) (online)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Execute.html">6.7. SWMM Execute</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#change-simulation-parameters">6.7.1. Change simulation parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#qgep-plugin">6.7.2. QGEP plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#common-running-errors">6.7.3. Common running errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/db-customization/index.html">4.4. Anpassung des Datenmodells</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#introduction">4.4.1. Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#adding-fields">4.4.2. Zusätzliche Felder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#joining-additional-tables">4.4.3. Verknüpfung zusätzlicher Tabellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-customization/index.html#creating-custom-views">4.4.4. Creating custom views</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Extract-Results.html">6.8. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Import-Results.html">6.9. SWMM Import Results</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Import-Results.html#measurement-tables">6.9.1. Measurement tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Import-Results.html#launch-import">6.9.2. Launch import</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Mapping.html">6.10. Mapping</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Mapping.html#results-are-not-imported-in-qgep">6.10.1. Results are not imported in QGEP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Mapping.html#results-are-imported-in-qgep">6.10.2. Results are imported in QGEP</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Mapping.html#show-the-indicators-evolving-along-time">6.10.2.1. Show the indicators evolving along time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/datamodel-tool/index.html">4.5. Data-model tool</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#setup">4.5.1. Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#usage">4.5.2. Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#main-dialog">4.5.2.1. Main dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/datamodel-tool/index.html#troubleshooting">4.5.2.2. Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html">6.11. Change simulation parameters</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#title-notes">6.11.1. Title/Notes:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#options">6.11.2. Options:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#climatology">6.11.3. Climatology:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#hydrology">6.11.4. Hydrology:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#hydraulics">6.11.5. Hydraulics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#quality">6.11.6. Quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#curves">6.11.7. Curves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#time-series">6.11.8. Time series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#time-patterns">6.11.9. Time patterns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#labels">6.11.10. Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide/db-update-pum/index.html">4.6. Manual update of the datamodel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-update-pum/index.html#requirements">4.6.1. Voraussetzungen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#client">4.6.1.1. Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#postgresql">4.6.1.2. PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#python">4.6.1.3. Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#pum-installation">4.6.1.4. Installation von PUM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#pirogue-installation">4.6.1.5. Installation von Pirogue</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Developpers-Advanced-Users.html">6.12. For developpers and advanced users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="admin-guide/db-update-pum/index.html#database-update">4.6.2. Datenbank Update</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#postgresql-service">4.6.2.1. PostgreSQL service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#database-backup">4.6.2.2. Datenbank Sicherung (backup)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#download-and-install-current-database-release">4.6.2.3. Download and install current database release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#create-empty-database">4.6.2.4. Create empty database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="admin-guide/db-update-pum/index.html#launch-update">4.6.2.5. Launch update</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vm/index.html">5. Demo virtuelle Maschine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vm/about.html">5.1. Um</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vm/install.html">5.2. Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vm/install.html#download">5.2.1. Herunterladen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/install.html#extract">5.2.2. Entpacken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vm/install.html#run-qgep">5.2.3. QGEP ausführen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vm/server.html">5.3. QGIS Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vm/server.html#access-the-web-services">5.3.1. Betreten des Webservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/introduction.html">6.1. Einleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/open-inspection.html">6.2. Untersuchungsdatei öffnen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/match-channels.html">6.3. Haltungen abgleichen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#automatic-matching">6.3.1. Automatischer Abgleich</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#manual-matching">6.3.2. Manueller Abgleich</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/match-channels.html#skipping-channels-or-observations">6.3.3. Untersuchungsbericht oder Beobachtungen weglassen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/fixing-issues.html">6.4. Problemlösungen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#length-issues">6.4.1. Probleme mit Längenangabe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#one-channel-in-the-inspection-data-corresponds-to-several-channels-in-the-qgep-data">6.4.2. Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den QGEP-Daten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wincan2qgep/fixing-issues.html#several-channels-in-the-inspection-data-correspond-to-a-single-channel-in-the-qgep-data">6.4.3. Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen Haltung in QGEP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/import-data.html">6.5. Datenimport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wincan2qgep/viewing-data-qgep.html">6.6. Daten in QGEP anschauen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="qgep_swmm/index.html">7. QGEP SWMM plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/SWMM.html">7.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-installation.html">7.2. QGEP-SWMM installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-installation.html#swmm-installation">7.2.1. SWMM Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html">7.3. QGEP-SWMM workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html#workflow">7.3.1. Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-workflow.html#gep-project">7.3.2. GEP project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Create-Input.html">7.4. SWMM Create Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Create-Input.html#qgep-plugin">7.4.1. QGEP plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/QGEP-SWMM-data-requirements.html">7.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Check-Input.html">7.6. Check input file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Check-Input.html#common-import-errors">7.6.1. Common import errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-status-or-function-hierarchic-wn-function-hierarchic">7.6.1.1. Missing status or _function_hierarchic (wn_function_hierarchic)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#catchment-area-connected-to-secondary-wastewater-structure">7.6.1.2. Catchment area connected to secondary wastewater structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-discharge-coefficients">7.6.1.3. Missing discharge coefficients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Check-Input.html#missing-population-densities">7.6.1.4. Missing population densities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Execute.html">7.7. SWMM Execute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#change-simulation-parameters">7.7.1. Change simulation parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#qgep-plugin">7.7.2. QGEP plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Execute.html#common-running-errors">7.7.3. Common running errors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Extract-Results.html">7.8. SWMM Extract Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Import-Results.html">7.9. SWMM Import Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Import-Results.html#measurement-tables">7.9.1. Measurement tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Import-Results.html#launch-import">7.9.2. Launch import</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Mapping.html">7.10. Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Mapping.html#results-are-not-imported-in-qgep">7.10.1. Results are not imported in QGEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Mapping.html#results-are-imported-in-qgep">7.10.2. Results are imported in QGEP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qgep_swmm/Mapping.html#show-the-indicators-evolving-along-time">7.10.2.1. Show the indicators evolving along time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html">7.11. Change simulation parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#title-notes">7.11.1. Title/Notes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#options">7.11.2. Options:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#climatology">7.11.3. Climatology:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#hydrology">7.11.4. Hydrology:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#hydraulics">7.11.5. Hydraulics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#quality">7.11.6. Quality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#curves">7.11.7. Curves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#time-series">7.11.8. Time series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#time-patterns">7.11.9. Time patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qgep_swmm/Change-simulation-parameters.html#labels">7.11.10. Labels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qgep_swmm/Developpers-Advanced-Users.html">7.12. For developpers and advanced users</a></li>
 </ul>
 </li>
 </ul>
@@ -455,7 +461,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation-guide/index.html" class="btn btn-neutral float-right" title="1. Leitfaden QGEP Installation" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="features-guide/index.html" class="btn btn-neutral float-right" title="1. QGEP / TEKSI wastewater module" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
