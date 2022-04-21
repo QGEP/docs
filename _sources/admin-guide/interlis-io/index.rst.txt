@@ -28,17 +28,21 @@ Python libraries
 -----------------
 You need `sqlalchemy` and `geoalchemy2`.
 
-To install : before launching QGIS, open OSGeo4W Shell, and type
->>> pip3 install "sqlalchemy>=1.3.22" "geoalchemy2>=0.9.0"
+To install : before launching QGIS, open OSGeo4W Shell, and type::
 
-If the command fails, try 
->>> pip install --upgrade pip
+   >>> pip3 install "sqlalchemy>=1.3.22" "geoalchemy2>=0.9.0"
 
-If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included)
+If the command fails, try::
+ 
+   >>> pip install --upgrade pip
 
-If this command still fails, try 
->>> pip install --target=c:\somewhere\other\than\the\default --upgrade pip
-where c:\somewhere\other\than\the\default is the path to your current pip package
+.. note:: If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included).
+
+If this command still fails, try:: 
+
+  >>> pip install --target=c:\somewhere\other\than\the\default --upgrade pip
+  
+where ``c:\somewhere\other\than\the\default`` is the path to your current pip package
 
 The same `--target` flag can be added to install `sqlalchemy` and `geoalchemy2` in another location.
 
@@ -61,27 +65,26 @@ Enable admin mode
 
 In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. 
 
-- .. figure:: images/settings_dialog.png
+.. figure:: images/settings_dialog.png
 
 You should now see new `import` and `export` buttons in the QGEP toolbar.
 
-- .. figure:: images/toolbar.png
+.. figure:: images/toolbar.png
 
 Export
 -------------------------------------------------
 
 To export your QGEP data, click on the `export` button. The following dialog will appear.
 
-- .. figure:: images/export_dialog.png
+.. figure:: images/export_dialog.png
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
-.. note::
-  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
+.. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-Note that for large/full exports, the command can take a long time.
+.. note:: Note that for large/full exports, the command can take a long time.
 
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
@@ -91,12 +94,11 @@ Import
 
 To import `xtf`files, click on the `import` button and navigate to the `.xtf` file. 
 
-.. note::
-  Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
+.. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
 The following dialog will appear.
 
-- .. figure:: images/import_dialog.png
+.. figure:: images/import_dialog.png
 
 The left part of this dialog lists all elements that are going to be imported from the `.xtf` file, allowing to review what is going to be imported and to deselect elements you may want to skip. It also shows the validation status of each object, showing whether further action is needed (INVALID) or recommended (WARNING) prior to importing.
 
@@ -116,5 +118,11 @@ Quality control
 
 Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
-see https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/ 
--> Link to login at infogrips. 
+
+.. figure:: https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg
+
+`For details see explanation on the VSA Homepage <https://vsa.ch/fachbereiche-cc/siedlungsentwaesserung/generelle-entwaesserungsplanung/datenmanagement/#GEP-Datachecker>`_
+
+
+`Information about access and licensing you can get here <https://vsa.ch/Mediathek/gep-datachecker-jahresgebuehr/?media_filter_two=lizenzen-software>`_
+

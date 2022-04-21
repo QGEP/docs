@@ -125,12 +125,23 @@ Linux : use you package manager</p>
 <section id="python-libraries">
 <h3><span class="section-number">3.3.2.2. </span>Python Bibliotheken<a class="headerlink" href="#python-libraries" title="Link zu dieser Überschrift"></a></h3>
 <p>Sie benötigen <cite>sqlalchemy</cite> und <cite>geoalchemy2</cite>.</p>
-<p>Installationsanleitung : Vor dem Starten von QGIS, öffnen Sie OSGeo4W Shell, und tippen &gt;&gt;&gt; pip3 install „sqlalchemy&gt;=1.3.22“ „geoalchemy2&gt;=0.9.0“</p>
-<p>Falls der Befehl nicht funktioniert, aktualisieren Sie zuerst pip &gt;&gt;&gt; pip install –upgrade pip</p>
-<p>Wenn pip nicht gefunden wird, stellen Sie sicher, dass Sie das Paket python3-pip mit dem OSGeo4W-Netzwerkinstallationsprogramm installiert haben (wenn Sie die Standalone-Version von QGIS installiert haben, sollte es enthalten sein)</p>
-<p>If this command still fails, try
-&gt;&gt;&gt; pip install –target=c:somewhereotherthanthedefault –upgrade pip
-where c:somewhereotherthanthedefault is the path to your current pip package</p>
+<p>To install : before launching QGIS, open OSGeo4W Shell, and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="s2">&quot;sqlalchemy&gt;=1.3.22&quot;</span> <span class="s2">&quot;geoalchemy2&gt;=0.9.0&quot;</span>
+</pre></div>
+</div>
+<p>If the command fails, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included).</p>
+</div>
+<p>If this command still fails, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">target</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">somewhere</span>\<span class="n">other</span>\<span class="n">than</span>\<span class="n">the</span>\<span class="n">default</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">c:\somewhere\other\than\the\default</span></code> is the path to your current pip package</p>
 <p>The same <cite>–target</cite> flag can be added to install <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite> in another location.</p>
 </section>
 <section id="modelbaker">
@@ -147,36 +158,30 @@ where c:somewhereotherthanthedefault is the path to your current pip package</p>
 <section id="enable-admin-mode">
 <h3><span class="section-number">3.3.3.1. </span>Aktivieren Sie den Admin-Modus<a class="headerlink" href="#enable-admin-mode" title="Link zu dieser Überschrift"></a></h3>
 <p>Stellen Sie im Dialog „Plugin&gt;QGEP&gt;Einstellungen“ unter dem Reiter „Entwickleroptionen“ sicher, dass der „Admin-Modus“ aktiviert ist. Starten Sie QGIS neu.</p>
-<ul>
-<li><figure class="align-default">
+<figure class="align-default">
 <img alt="../../_images/settings_dialog.png" src="../../_images/settings_dialog.png" />
 </figure>
-</li>
-</ul>
 <p>In der QGEP-Symbolleiste sollten nun die neuen Schaltflächen „Import“ und „Export“ erscheinen.</p>
-<ul>
-<li><figure class="align-default">
+<figure class="align-default">
 <img alt="../../_images/toolbar.png" src="../../_images/toolbar.png" />
 </figure>
-</li>
-</ul>
 </section>
 <section id="export">
 <h3><span class="section-number">3.3.3.2. </span>Export<a class="headerlink" href="#export" title="Link zu dieser Überschrift"></a></h3>
 <p>Um Ihre QGEP-Daten zu exportieren, klicken Sie auf die Schaltfläche „Exportieren“. Der folgende Dialog wird angezeigt.</p>
-<ul>
-<li><figure class="align-default">
+<figure class="align-default">
 <img alt="../../_images/export_dialog.png" src="../../_images/export_dialog.png" />
 </figure>
-</li>
-</ul>
 <p>If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
 <p>Bestätigen Sie das Dialogfeld und wählen Sie einen Speicherort für die <cite>.xtf</cite>-Datei.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
 <p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
 <p>Beachten Sie, dass der Befehl bei grossen/vollständigen Exporten sehr lange dauern kann.</p>
+</div>
 <p>Die Exporte enthalten einen Validierungsschritt unter Verwendung von <cite>ilivalidator</cite>, der Sie darüber informiert, ob der Export einen Validierungsfehler enthält.</p>
 </section>
 <section id="import">
@@ -187,12 +192,9 @@ where c:somewhereotherthanthedefault is the path to your current pip package</p>
 <p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
 </div>
 <p>The following dialog will appear.</p>
-<ul>
-<li><figure class="align-default">
+<figure class="align-default">
 <img alt="../../_images/import_dialog.png" src="../../_images/import_dialog.png" />
 </figure>
-</li>
-</ul>
 <p>Im linken Teil dieses Dialogfelds werden alle Elemente aufgelistet, die aus der <cite>.xtf</cite>-Datei importiert werden sollen, so dass Sie überprüfen können, was importiert werden soll, und Elemente abwählen können, die Sie eventuell überspringen möchten. Ausserdem wird der Validierungsstatus jedes Objekts angezeigt, der angibt, ob vor dem Import weitere Massnahmen erforderlich (UNGÜLTIG) oder empfohlen (WARNUNG) sind.</p>
 <p>Im rechten Teil dieses Dialogs wird ein Formular angezeigt, das sich auf den in der Liste ausgewählten Elementtyp bezieht und die Anpassung des Imports ermöglicht. So können z. B. „Untersuchungen“ an ihre Kanäle angehängt werden.</p>
 <p>Wenn Sie mit den Importoptionen zufrieden sind, bestätigen Sie den Dialog, um die Änderungen in Ihrer Datenbank zu übernehmen.</p>
@@ -206,7 +208,11 @@ where c:somewhereotherthanthedefault is the path to your current pip package</p>
 <h2><span class="section-number">3.3.5. </span>Qualitätskontrolle<a class="headerlink" href="#quality-control" title="Link zu dieser Überschrift"></a></h2>
 <section id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
 <h3><span class="section-number">3.3.5.1. </span>Qualitätskontrolle mit VSA Checker (Fachprüfung) (online)<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Link zu dieser Überschrift"></a></h3>
-<p>siehe <a class="reference external" href="https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/">https://www.vsa.ch/fachbereiche-cc/siedlungsentwaesserung/wegleitung-gep-daten/gep-datachecker/</a> -&gt; Link für Login auf Datachecker</p>
+<figure class="align-default">
+<img alt="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" src="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" />
+</figure>
+<p><a class="reference external" href="https://vsa.ch/fachbereiche-cc/siedlungsentwaesserung/generelle-entwaesserungsplanung/datenmanagement/#GEP-Datachecker">For details see explanation on the VSA Homepage</a></p>
+<p><a class="reference external" href="https://vsa.ch/Mediathek/gep-datachecker-jahresgebuehr/?media_filter_two=lizenzen-software">Information about access and licensing you can get here</a></p>
 </section>
 </section>
 </section>
