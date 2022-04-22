@@ -12,6 +12,7 @@ The final product can be found here:
  * [Deutsch](https://qgep.github.io/docs/de)
  * [Français](https://qgep.github.io/docs/fr)
  * [Română](https://qgep.github.io/docs/ro)
+ * [español](https://qgep.github.io/docs/es)
 
 ## Process
 
