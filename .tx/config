@@ -10,6 +10,15 @@ trans.it = i18n/it/index.po
 trans.ro = i18n/ro/index.po
 type = PO
 
+[qgep-documentation.features-guide]
+source_file = i18n/pot/features-guide.pot
+source_lang = en
+trans.de = i18n/de/features-guide.po
+trans.fr = i18n/fr/features-guide.po
+trans.it = i18n/it/features-guide.po
+trans.ro = i18n/ro/features-guide.po
+type = PO
+
 [qgep-documentation.installation-guide]
 source_file = i18n/pot/installation-guide.pot
 source_lang = en
@@ -35,6 +44,15 @@ trans.de = i18n/de/user-guide.po
 trans.fr = i18n/fr/user-guide.po
 trans.it = i18n/it/user-guide.po
 trans.ro = i18n/ro/user-guide.po
+type = PO
+
+[qgep-documentation.qgep_swmm]
+source_file = i18n/pot/qgep_swmm.pot
+source_lang = en
+trans.de = i18n/de/qgep_swmm.po
+trans.fr = i18n/fr/qgep_swmm.po
+trans.it = i18n/it/qgep_swmm.po
+trans.ro = i18n/ro/qgep_swmm.po
 type = PO
 
 [qgep-documentation.wincan2qgep]
