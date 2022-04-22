@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2.8. Importing data &mdash; documentación de QGEP - 0.8</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="3.3. Modificando en QGEP" href="../editing/index.html" />
+    <link rel="prev" title="3.2.7. Digitizing Catchment Areas" href="digitizingcatchments.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> QGEP
+          </a>
+              <div class="version">
+                0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guía de Usuario QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.2. Digitizing in QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Ingreso de datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">3.2.2. Digitizing Wastewater Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">3.2.3. Digitalizando geometría detallada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">3.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Digitalizando Canales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">3.2.6. Eliminando objetos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">3.2.7. Digitizing Catchment Areas</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.8. Importing data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">3.2.8.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-from-a-txt-file">3.2.8.2. Example Importing manholes from a TXT-File:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-importing-manholes-with-attributes">3.2.8.3. Example Importing manholes with attributes:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Modificando en QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">3.4. Length profiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">3.5. Network following tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">3.6. Plan plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/index.html">3.7. History in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Guía del administrador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">QGEP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">3. </span>Guía de Usuario QGEP</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3.2. </span>Digitizing in QGEP</a> &raquo;</li>
+      <li><span class="section-number">3.2.8. </span>Importing data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user-guide/digitizing/importingdata.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="importing-data">
+<h1><span class="section-number">3.2.8. </span>Importing data<a class="headerlink" href="#importing-data" title="Enlazar permanentemente con este título"></a></h1>
+<p>It is quite easy to import data (geometry and attributes) from an external software.
+Here is a general discription and a specific example.</p>
+<section id="general">
+<h2><span class="section-number">3.2.8.1. </span>General<a class="headerlink" href="#general" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p>You have to add the data you want to import as (vector) layer into the QGEP project.</p></li>
+<li><p>The field names of the attributes have to be the same as the field names of the QGEP Layer.
+Therefore it is normaly not a good idea the use shp-files, because of the 10 letters limitation of the dbf-format (Alias field names do not work).</p></li>
+<li><p>If you have a translated project, be sure to take the English field names (not the translated name that you find as Alias of the field).</p></li>
+<li><p>If there is a field with valuelist, you have to use the code, not the plain text.</p></li>
+<li><p>If your fields are prepared as described above, then just copy and paste in the QGEP-layer.</p></li>
+</ul>
+</section>
+<section id="example-importing-manholes-from-a-txt-file">
+<h2><span class="section-number">3.2.8.2. </span>Example Importing manholes from a TXT-File:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p>Change the fieldnames to identifier, x, y, co_level</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/importdata_txtfile.jpg" src="../../_images/importdata_txtfile.jpg" />
+</figure>
+<ul class="simple">
+<li><p>Open the txt-file with <span class="menuselection">Layer ‣ Add Layer ‣ Add Delimited Text Layer…</span>.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/importdata_opentxtfile.jpg" src="../../_images/importdata_opentxtfile.jpg" />
+</figure>
+<ul class="simple">
+<li><p>You have now a vector-layer with your points in the QGEP-project</p></li>
+<li><p>Select the points of the new layer</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/importdata_selectpoints.jpg" src="../../_images/importdata_selectpoints.jpg" />
+</figure>
+<ul class="simple">
+<li><p>Choose <span class="menuselection">Edit ‣ Copy Features</span>.</p></li>
+<li><p>Select the vw_qgep_wastewater_structure layer and set it editable</p></li>
+<li><p>Choose <span class="menuselection">Edit ‣ Paste Features</span>.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/importdata_5newpoints.jpg" src="../../_images/importdata_5newpoints.jpg" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/importdata_5newpointstable.jpg" src="../../_images/importdata_5newpointstable.jpg" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>The ws_type is set as default to manhole. The identifier is used not only for the wastewater_structure, but also as cover_identifier and as wastewaternode_identifier.</p>
+</div>
+</section>
+<section id="example-importing-manholes-with-attributes">
+<h2><span class="section-number">3.2.8.3. </span>Example Importing manholes with attributes:<a class="headerlink" href="#example-importing-manholes-with-attributes" title="Enlazar permanentemente con este título"></a></h2>
+<ul class="simple">
+<li><p>Example to add additional attributes</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/importdata_txtfile2.jpg" src="../../_images/importdata_txtfile2.jpg" />
+</figure>
+<ul class="simple">
+<li><p>The field ws_type is an exception. Possible values are manhole, special_structure, infiltration_installation, discharge_point.</p></li>
+<li><p>For other fields with valuelists you have to use the code.</p></li>
+<li><p>In the example above, the values for ma_function in the row discharge_point or special_structure has no effect.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="digitizingcatchments.html" class="btn btn-neutral float-left" title="3.2.7. Digitizing Catchment Areas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../editing/index.html" class="btn btn-neutral float-right" title="3.3. Modificando en QGEP" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
