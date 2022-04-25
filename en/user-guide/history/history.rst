@@ -4,7 +4,7 @@ History viewer
 `PostgresSQL history viewer` plugin allows you to retrieve modification on the QGEP database.
 
 Install the plugin from the QGIS Plugin repository.
-.. image:: img/history_viewer_pluginjpg.jpg
+.. image:: img/history_viewer_plugin.jpg
 
 
 Plugin configuration
