@@ -1,10 +1,12 @@
 History viewer
 ==============
 
-`PG history viewer` plugin allows you to retrieve modification on the QGEP database.
+`PostgresSQL history viewer` plugin allows you to retrieve modification on the QGEP database.
 
 Plugin configuration
 --------------------
+
+.. image:: img/history_viewer_menu.jpg
 
 First, you have to configure the plugin for the session like this:
 
