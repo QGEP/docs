@@ -8,11 +8,11 @@ Main layers
 
 QGEP is constructed around two main layers : 
 
- * Wastewater structures (qgep_od.vw_qgep_wastewater_structure)
+ * Wastewater structures (`qgep_od.vw_qgep_wastewater_structure`)
  * Reaches (qgep_od.vw_qgep_reach)
 
-Wastewater structures (qgep_od.vw_qgep_wastewater_structure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wastewater structures (`qgep_od.vw_qgep_wastewater_structure`)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Main layer for manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new wastewater structure, a new cover and a new wastewater node. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).
 
@@ -45,7 +45,7 @@ Cover is the only structure part with a point-geometry itself. All other structu
 Covers (qgep_od.vw_cover)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the vw_qgep_wastewater_structure too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions.
+Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the vw_qgep_wastewater_structure too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions ´situation_geometry´.
 
 Channels (qgep_od.vw_channel)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
