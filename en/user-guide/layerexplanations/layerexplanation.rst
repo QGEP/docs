@@ -8,13 +8,13 @@ Main layers
 
 QGEP is constructed around two main layers : 
 
- * Wastewater structures (vw_qgep_wastewater_structure)
- * Reaches (vw_qgep_reach)
+ * Wastewater structures (qgep_od.vw_qgep_wastewater_structure)
+ * Reaches (qgep_od.vw_qgep_reach)
 
-Wastewater structures (vw_qgep_wastewater_structure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wastewater structures (qgep_od.vw_qgep_wastewater_structure)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Main layer for manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new wastewater structure, a new cover and a new wastewater node. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events). In database-schema qgep_od.
+Main layer for manholes, special structures, infiltration installations, discharge points (and wastewater treatment plant (wwtp) structure). Creating a new record in this layer always creates a new wastewater structure, a new cover and a new wastewater node. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).
 
 .. figure:: images/schema_vw_qgep_wastewater_structure.jpg
 
@@ -22,8 +22,8 @@ Even if there are several covers or wastewater nodes, there is just one point fo
 
 .. attention:: Do not export this point coordinates as covers. Use the layer vw_cover for this.
 
-Reaches (vw_qgep_reach)
-^^^^^^^^^^^^^^^^^^^^^^^
+Reaches (qgep_od.vw_qgep_reach)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Main layer for line-wastewater structures (channels). Creating a new record in this layer always creates a new reach and a new channel. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events). In database-schema qgep_od.
 
@@ -32,35 +32,46 @@ Main layer for line-wastewater structures (channels). Creating a new record in t
 Wastewater Structures
 ---------------------
 
-Wastewater Structures (od_wastewater_structure)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Wastewater Structures Details (qgep_od.wastewater_structure)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This layer shows the detailed geometries of wastewater structures. You digitize a new detailed geometry by the records of the layer vw_qgep_wastewater_structure. If you want to change an existing geometry, then you have to edit in the layer od_wastewater_structure. In database-schema qgep_od.
+This layer shows and enables you to edit the detailed geometries of wastewater structures. You can add a new detailed geometry using the layer vw_qgep_wastewater_structure action called digitize detailed geometry.
 
-Structure Parts (od_structure_part)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Structure Parts (qgep_od.structure_part)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Cover is the only structure part with a point-geometry himself. All other structure parts are just linked to there wastewater structures and should by only edited by the main layers (vw_qgep_wastewater_structure and vw_qgep_reach).
+Cover is the only structure part with a point-geometry itself. All other structure parts are just linked to their wastewater structures and should by only edited by the main layers (vw_qgep_wastewater_structure and vw_qgep_reach).
 
-Covers (vw_cover)
-^^^^^^^^^^^^^^^^^
+Covers (qgep_od.vw_cover)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You use this layer, if you want to change the situation of just one selected cover (and not the hole wastewater structure) or if you want to add a new cover to an existing wastewater structure. (you can add an additional cover also in the covers-tab of the vw_qgep_wastewater_structure, but this cover has no situation...). And you use this layer if you want to show the detail position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions. In database-schema qgep_od.
+Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the vw_qgep_wastewater_structure too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions.
 
-Channels (vw_channel)
-^^^^^^^^^^^^^^^^^^^^^
+Channels (qgep_od.vw_channel)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The channel-class has no geometry and is therefore mostly changed in the vw_qgep_reach layer. In database-schema qgep_od.
+The channel-class has no geometry and is therefore mostly changed in the vw_qgep_reach layer.
 
-Organisations (od_organisation)
-^^^^^^^^^^^^^^^
+Organisations (qgep_od.organisation)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-todo: This table is today at a strange place (it is not only related to wastewater structures) and has to be revised. In database-schema qgep_od.
+todo: This table is today at a strange place (it is not only related to wastewater structures) and has to be revised.
 
-Inspections
------------
+Maintenance events (qgep_od.vw_qgep_maintenance)
+------------------------------------------------
 
-These tables are used in the maintenance tabs in the main tables. Do not edit directly. In database-schema qgep_od.
+Maintenance events can be created through the view qgep_od.vw_qgep_maintenance. They can be of several kinds :
+
+* cleaning
+* replacement
+* renovation
+* restoration
+* repair
+* examination
+* other
+* unknown
+
+These maintenance events are used in the maintenance tabs in the main tables. They can be linked to one or several wastewater structures.
 
 Value Lists
 -----------
@@ -70,23 +81,26 @@ These value lists are defined in the VSA-datamodel. Do not change. In database-s
 Hydraulic
 ---------
 
-vw_wastewater_node
-^^^^^^^^^^^^^^^^^^
+Wastewater nodes (qgep_od.vw_wastewater_node)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You use this layer only, if you want to change the situation of just one selected ww_node (and not the hole wastewater structure) or if you want to add a new ww_node to an existing wastewater structure. (you can add an additional ww_node also in the wastewater nodes-tab of the vw_qgep_wastewater_structure, but this node has no situation...). In database-schema qgep_od.
+Use this layer to change the situation of one selected wastewater node (and not the whole wastewater structure) or if you want to add a new wastewater node to an existing wastewater structure. You can add additional wastewater nodes in the wastewater nodes-tab of the vw_qgep_wastewater_structure too.
 
-Overflow tables
-^^^^^^^^^^^^^^^^
+Overflow tables (qgep_od.vw_qgep_overflow)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These tables are connected to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for these tables. In database-schema qgep_od.
+These tables are connected to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for these tables.
 
 Topology
 --------
 
-These two layers are used by the qgep-extension for the profile and the network-following. Do not change. In database-schema qgep_network.
-You can use the vw_network_segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
+Nodes (qgep_network.node) and segments (qgep_network.segment)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Catchment
----------
+These two layers are used by the qgep-extension for the profile and the network-following functionnalities.
+Use the qgep_network.segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
 
-Main layer to digitize and edit the catchment_areas.  In database-schema qgep_od.
+Catchment (qgep_od.catchment_area)
+----------------------------------
+
+Main layer to digitize and edit the catchment_areas.
