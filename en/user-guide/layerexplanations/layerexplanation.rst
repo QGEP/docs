@@ -35,17 +35,17 @@ Wastewater Structures
 Wastewater Structures Details ``qgep_od.wastewater_structure``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This layer shows and enables you to edit the detailed geometries of wastewater structures. You can add a new detailed geometry using the layer vw_qgep_wastewater_structure action called digitize detailed geometry.
+This layer shows and enables you to edit the detailed geometries of wastewater structures. You can add a new detailed geometry using the layer `vw_qgep_wastewater_structure` action called digitize detailed geometry.
 
 Structure Parts ``qgep_od.structure_part``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Cover is the only structure part with a point-geometry itself. All other structure parts are just linked to their wastewater structures and should by only edited by the main layers (vw_qgep_wastewater_structure and vw_qgep_reach).
+Cover is the only structure part with a point-geometry itself. All other structure parts are just linked to their wastewater structures and should by only edited by the main layers (`vw_qgep_wastewater_structure` and `vw_qgep_reach`).
 
 Covers ``qgep_od.vw_cover``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the vw_qgep_wastewater_structure too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions `situation_geometry`.
+Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the `vw_qgep_wastewater_structure` too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions `situation_geometry`.
 
 Channels ``qgep_od.vw_channel``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ Hydraulic
 Wastewater nodes ``qgep_od.vw_wastewater_node``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use this layer to change the situation of one selected wastewater node (and not the whole wastewater structure) or if you want to add a new wastewater node to an existing wastewater structure. You can add additional wastewater nodes in the wastewater nodes-tab of the vw_qgep_wastewater_structure too.
+Use this layer to change the situation of one selected wastewater node (and not the whole wastewater structure) or if you want to add a new wastewater node to an existing wastewater structure. You can add additional wastewater nodes in the wastewater nodes-tab of the `vw_qgep_wastewater_structure` too.
 
 Overflow tables ``qgep_od.vw_qgep_overflow``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
