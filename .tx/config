@@ -81,3 +81,13 @@ trans.ro = i18n/ro/admin-guide.po
 trans.es = i18n/es/admin-guide.po
 type = PO
 
+[qgep-documentation.translation]
+source_file = i18n/pot/translation.pot
+source_lang = en
+trans.de = i18n/de/translation.po
+trans.fr = i18n/fr/translation.po
+trans.it = i18n/it/translation.po
+trans.ro = i18n/ro/translation.po
+trans.es = i18n/es/translation.po
+type = PO
+
