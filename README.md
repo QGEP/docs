@@ -8,6 +8,7 @@ The final product can be found here:
  * [English](https://qgep.github.io/docs)
  * [Deutsch](https://qgep.github.io/docs/de)
  * [Français](https://qgep.github.io/docs/fr)
+ * [Italiano](https://qgep.github.io/docs/it)
  * [Română](https://qgep.github.io/docs/ro)
  * [Español](https://qgep.github.io/docs/es)
 
