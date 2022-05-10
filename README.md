@@ -1,8 +1,5 @@
-# QGEP-Documentation
-This is the documentation for the QGEP project
-
-[![Build
-Status](https://travis-ci.org/QGEP/docs.svg)](https://travis-ci.org/QGEP/docs)
+# TEKSI wastewater module (project QGEP)-Documentation
+This is the documentation for the TEKSI wastewater module (QGEP project)
 
 ## Resources
 
