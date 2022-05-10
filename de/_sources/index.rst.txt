@@ -27,6 +27,7 @@ Contents
    vm/index
    wincan2qgep/index
    qgep_swmm/index
+   translation/index
 
 Indices and tables
 ==================
