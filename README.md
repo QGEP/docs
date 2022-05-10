@@ -14,14 +14,13 @@ The final product can be found here:
 ## Process
 
 The documentation is written in English and managed in this git repository.
-The latest version of the documentation is automatically built (on [Travis
-CI](https://travis-ci.org/QGEP/docs)) and published on the links above.
+The latest version of the documentation is automatically built using GitHub actions and published on the links above at every merge of a pull request.
 
 Translation is done via transifex.
 
 ## Contributing
 
-QGEP is a community driven open source project. As such we are very happy to
+TEKSI wastewater module is a community driven open source project. As such we are very happy to
 get your help and feedback.
 
 Therefore we will be very happy if you can help us by
