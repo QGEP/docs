@@ -25,7 +25,7 @@ Even if there are several covers or wastewater nodes, there is just one point fo
 Reaches ``qgep_od.vw_qgep_reach``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Main layer for line-wastewater structures (channels). Creating a new record in this layer always creates a new reach and a new channel. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events). In database-schema qgep_od.
+Main layer for line-wastewater structures (channels). Creating a new record in this layer always creates a new reach and a new channel. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).
 
 .. figure:: images/schema_vw_qgep_reach.jpg
 
@@ -73,10 +73,10 @@ Maintenance events can be created through the view qgep_od.vw_qgep_maintenance. 
 
 These maintenance events are used in the maintenance tabs in the main tables. They can be linked to one or several wastewater structures.
 
-Value Lists
------------
+Value Lists ``qgep_vl.*``
+-------------------------
 
-These value lists are defined in the VSA-datamodel. Do not change. In database-schema qgep_vl.
+These value lists are defined in the VSA-datamodel. Do not change.
 
 Hydraulic
 ---------
