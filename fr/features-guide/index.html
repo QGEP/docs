@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. TEKSI Module assainissement / QGEP &mdash; Documentation QGEP 0.8</title>
+  <title>1. QGEP / Module TEKSI assainissement &mdash; Documentation QGEP 0.8</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -42,9 +42,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. TEKSI Module assainissement / QGEP</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. QGEP / Module TEKSI assainissement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#main-features">1.1. Fonctionnalités principales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#more-to-come">1.2. More to come</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-to-come">1.2. Plus à venir</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation de QGEP</a></li>
@@ -69,7 +69,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">1. </span>TEKSI Module assainissement / QGEP</li>
+      <li><span class="section-number">1. </span>QGEP / Module TEKSI assainissement</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/features-guide/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -80,7 +80,7 @@
            <div itemprop="articleBody">
              
   <section id="qgep-teksi-wastewater-module">
-<h1><span class="section-number">1. </span>TEKSI Module assainissement / QGEP<a class="headerlink" href="#qgep-teksi-wastewater-module" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">1. </span>QGEP / Module TEKSI assainissement<a class="headerlink" href="#qgep-teksi-wastewater-module" title="Lien permanent vers ce titre"></a></h1>
 <p>Le module TEKSI assainissement (nom de projet : QGEP) est une sélection d’outils et une implémentation de base de donnée qui vous permet de :</p>
 <ul class="simple">
 <li><p>gérer et cartographier les données de votre réseau d’assainissement avec tous ses composants comme par exemple les collecteurs, les chambres, les déversoirs d’orage, les bassins de rétention des eaux pluviales, les exutoires, etc.</p></li>
@@ -91,57 +91,57 @@
 <section id="main-features">
 <h2><span class="section-number">1.1. </span>Fonctionnalités principales<a class="headerlink" href="#main-features" title="Lien permanent vers ce titre"></a></h2>
 <p><strong>Objets réseaux</strong></p>
-<p>Creation, information and management of network elements according to the VSA-DSS model:</p>
+<p>Création, renseignement et gestion des éléments du réseau conformément au modèle VSA-DSS.</p>
 <ul class="simple">
-<li><p>Wastewater structures</p></li>
-<li><p>Special structures</p></li>
-<li><p>Primary collectors</p></li>
-<li><p>Secondary collectors (ex : private connection)</p></li>
-<li><p>Catchments</p></li>
-<li><p>GEP mesures</p></li>
+<li><p>Structures du réseau d’assainissement</p></li>
+<li><p>Structures spéciales</p></li>
+<li><p>Collecteurs primaires</p></li>
+<li><p>Collecteurs secondaires (ex: connections privées)</p></li>
+<li><p>Bassins versants</p></li>
+<li><p>Mesures PGEE</p></li>
 <li><p>Maintenances</p></li>
-<li><p>Network inspection (VSA-DSS model extension VSA-KEK)</p></li>
+<li><p>Inspection du réseau (VSA-KEK, extension du modèle VSA-DSS)</p></li>
 </ul>
-<p><strong>Viewing and editing</strong></p>
-<p>A preconfigured QGIS project including the symbology, the forms and the relation between the objets is provided.</p>
-<p>The editing can be done directly using the QGIS natives tools and the QGEP complementary toolbox (ex : inversion of the direction of the pipes and its related altitudes).</p>
-<p><strong>Files</strong></p>
-<p>Documents, pictures and videos can be linked to the network elements.</p>
-<p><strong>Networks following tools</strong></p>
-<p>Network topology management:</p>
+<p><strong>Visualisation et édition</strong></p>
+<p>Un projet QGIS préconfiguré incluant la symbologie, les formulaires et les relations entre les tables est mis à disposition.</p>
+<p>L’édition des données est effectuée avec les outils natifs de QGIS et la boîte à outil QGEP complémentaire (par exemple: inversion de la direction des conduites et des altitudes relatives).</p>
+<p><strong>Fichiers</strong></p>
+<p>Documents, photos et vidéos peuvent être liés aux éléments du réseau.</p>
+<p>Outils de poursuite de réseau</p>
+<p>Gestion de la topologie du réseau</p>
 <ul class="simple">
-<li><p>Topology creation between pipes, structures and catchments</p></li>
-<li><p>Upstream and downstream network tracking tools (water drop)</p></li>
-<li><p>Length profiles display</p></li>
+<li><p>Création de la topologie entre les éléments du réseau (conduites, structures et bassins versants).</p></li>
+<li><p>Outil de poursuite du réseau amont et aval (goutte d’eau)</p></li>
+<li><p>Affichage des profils en long</p></li>
 </ul>
-<p><strong>Mapping and statistics production</strong></p>
+<p><strong>Cartographie et production de statistiques</strong></p>
 <ul class="simple">
-<li><p>Map production with pre-configured layout</p></li>
-<li><p>Serial plotting of structures protocole</p></li>
-<li><p>Statistics production on all or part of the network</p></li>
+<li><p>Création de carte avec des mises en page préconfigurées</p></li>
+<li><p>Création de protocoles automatique pour les éléments du réseau</p></li>
+<li><p>Production de statistiques sur tout ou partie du réseau</p></li>
 </ul>
-<p><strong>Data import</strong></p>
+<p><strong>Import de données</strong></p>
 <ul class="simple">
-<li><p>Field survey import tools [specific development in progress]</p></li>
-<li><p>Data survey with a mobile device and semi-automatic insertion of the informations</p></li>
-<li><p>Data import in INTERLIS format</p></li>
+<li><p>Outil pour l’import des relevés terrain [développement en cours]</p></li>
+<li><p>Relevé de données avec un appareil mobile et insertion semi-automatique des informations</p></li>
+<li><p>Import de données au format Interlis</p></li>
 </ul>
-<p><strong>Data export</strong></p>
+<p><strong>Export des données</strong></p>
 <ul class="simple">
-<li><p>Direct connection with the network simulating software SWMM (Storm Water Management Model)</p></li>
-<li><p>Data export in CAD (dxf) and GIS format (all open data formats)</p></li>
-<li><p>Data export in interlis format</p></li>
+<li><p>Interopérabilité avec le logiciel de simulation de réseau SWMM (Storm Water Management Model)</p></li>
+<li><p>Export des données au format CAD (dxf) et SIG (tous les formats open source)</p></li>
+<li><p>Export de données au format Interlis</p></li>
 </ul>
 <p><strong>Historisation</strong></p>
 <ul class="simple">
-<li><p>Modifications history viewer and possibility to roll back</p></li>
+<li><p>Historique des modifications et possibilité de revenir en arrière</p></li>
 </ul>
 </section>
 <section id="more-to-come">
-<h2><span class="section-number">1.2. </span>More to come<a class="headerlink" href="#more-to-come" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">1.2. </span>Plus à venir<a class="headerlink" href="#more-to-come" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
-<li><p>Automatic integration of pipe inspection according to Wincan VX and VSA-DSS KEK format</p></li>
-<li><p>GEP mesures</p></li>
+<li><p>Intégration automatique des inspections des conduites au format Wincan VX and VSA-DSS KEK</p></li>
+<li><p>Mesures PGEE</p></li>
 <li><p>Log Cards (log_card, bio_ecol_assessment and catchment_area_totals)</p></li>
 </ul>
 </section>
