@@ -37,7 +37,7 @@ Wastewater Structures Details ``qgep_od.wastewater_structure``
 
 This layer shows and enables you to edit the detailed geometries of wastewater structures. You can add a new detailed geometry using the layer `vw_qgep_wastewater_structure` action called digitize detailed geometry.
 
-See `digitizing detailed geometries <../digitizing/digitizingdetailedgeometry>`_ for more information.
+See `digitizing detailed geometries <../digitizing/digitizingdetailedgeometry.html>`_ for more information.
 
 Structure Parts ``qgep_od.structure_part``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,7 +66,7 @@ Maintenance events can be created through the view qgep_od.vw_qgep_maintenance.
 
 These maintenance events are used in the maintenance tabs in the main tables. They can be linked to one or several wastewater structures.
 
-See `editing maintenance events <../editing/maintenance_events>`_ for more information.
+See `editing maintenance events <../editing/maintenance_events.html>`_ for more information.
 
 Value Lists ``qgep_vl.*``
 -------------------------
@@ -95,7 +95,7 @@ Nodes ``qgep_network.node`` and segments ``qgep_network.segment``
 These two layers are used by the qgep-extension for the profile and the network-following functionnalities.
 Use the qgep_network.segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
 
-See `connect wastewater network elements <../editing/connect_wastewater_network_elements>`_ for more information on how to create and maintain a good Topology.
+See `connect wastewater network elements <../editing/connect_wastewater_network_elements.html>`_ for more information on how to create and maintain a good Topology.
 
 Catchment ``qgep_od.catchment_area``
 ------------------------------------
