@@ -50,7 +50,7 @@ The main dialog looks like this.
     
     * **``+`` button**: opens an utility to add or edit entries from your ``pg_service.conf`` file directly.
     
-    Refer to the `installation guide <../../installation-guide/workstation.rst>`_ to know more about the ``pg_service.conf`` file.
+    Refer to the `installation guide <../../installation-guide/workstation>`_ to know more about the ``pg_service.conf`` file.
 
 * **Datamodel**
 
