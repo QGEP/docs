@@ -9,4 +9,4 @@ The documentation is available in:
 - `Français <https://qgep.github.io/docs/fr/>`_
 - `Italiano <https://qgep.github.io/docs/it/>`_
 - `Română <https://qgep.github.io/docs/ro/>`_
-- `Español <https://qgep.github.io/docs/cs/>`_
+- `Español <https://qgep.github.io/docs/es/>`_
