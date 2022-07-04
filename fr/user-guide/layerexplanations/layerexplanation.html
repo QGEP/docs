@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.1.2. Explication des couches &mdash; Documentation QGEP 0.8</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -103,9 +104,9 @@
            <div itemprop="articleBody">
              
   <section id="layers-explanation">
-<span id="layer-explanation"></span><h1><span class="section-number">3.1.2. </span>Explication des couches<a class="headerlink" href="#layers-explanation" title="Lien permanent vers ce titre"></a></h1>
+<span id="layer-explanation"></span><h1><span class="section-number">3.1.2. </span>Explication des couches<a class="headerlink" href="#layers-explanation" title="Lien permanent vers cette rubrique"></a></h1>
 <section id="main-layers">
-<h2><span class="section-number">3.1.2.1. </span>Couches principales<a class="headerlink" href="#main-layers" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.1. </span>Couches principales<a class="headerlink" href="#main-layers" title="Lien permanent vers cette rubrique"></a></h2>
 <p>QGEP est construit autour de deux couches principales :</p>
 <blockquote>
 <div><ul class="simple">
@@ -114,7 +115,7 @@
 </ul>
 </div></blockquote>
 <section id="wastewater-structures-qgep-od-vw-qgep-wastewater-structure">
-<h3><span class="section-number">3.1.2.1.1. </span>Les ouvrages d’assainissement <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_wastewater_structure</span></code><a class="headerlink" href="#wastewater-structures-qgep-od-vw-qgep-wastewater-structure" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.1.1. </span>Les ouvrages d’assainissement <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_wastewater_structure</span></code><a class="headerlink" href="#wastewater-structures-qgep-od-vw-qgep-wastewater-structure" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Couche principale pour les ouvrages standards, installations spéciales, installations d’infiltration, exutoires (et stations d’épurations des eaux (STEP)). Créer une nouvelle entité dans cette couche crée toujours une nouvelle structure d’assainissement, un nouveau couvercle et un nouveau noeud réseau. Dans le formulaire d’édition, vous avez accès aux tables liées (ex. parties de structures, évènements de maintenance)</p>
 <figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_wastewater_structure.jpg" src="../../_images/schema_vw_qgep_wastewater_structure.jpg" />
@@ -126,7 +127,7 @@
 </div>
 </section>
 <section id="reaches-qgep-od-vw-qgep-reach">
-<h3><span class="section-number">3.1.2.1.2. </span>Les tronçons <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_reach</span></code><a class="headerlink" href="#reaches-qgep-od-vw-qgep-reach" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.1.2. </span>Les tronçons <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_reach</span></code><a class="headerlink" href="#reaches-qgep-od-vw-qgep-reach" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Main layer for line-wastewater structures (channels). Creating a new record in this layer always creates a new reach and a new channel. In the edit form, you have access to a lot of the related tables (e.g. structure parts, maintenance events).</p>
 <figure class="align-default">
 <img alt="../../_images/schema_vw_qgep_reach.jpg" src="../../_images/schema_vw_qgep_reach.jpg" />
@@ -134,61 +135,61 @@
 </section>
 </section>
 <section id="wastewater-structures">
-<h2><span class="section-number">3.1.2.2. </span>Ouvrages d’assainissement<a class="headerlink" href="#wastewater-structures" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.2. </span>Ouvrages d’assainissement<a class="headerlink" href="#wastewater-structures" title="Lien permanent vers cette rubrique"></a></h2>
 <section id="wastewater-structures-details-qgep-od-wastewater-structure">
-<h3><span class="section-number">3.1.2.2.1. </span>Détails des ouvrages d’assainissement <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code><a class="headerlink" href="#wastewater-structures-details-qgep-od-wastewater-structure" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.2.1. </span>Détails des ouvrages d’assainissement <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code><a class="headerlink" href="#wastewater-structures-details-qgep-od-wastewater-structure" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Cette couche permet de visualiser et d’éditer les détails de géométrie des ouvrages d’assainissement. Il est possible de digitaliser une nouvelle géométrie de détail en utilisation l’action digitize detailed geometry de la couche <cite>vw_qgep_wastewater_structure</cite>.</p>
 <p>Voir <a class="reference external" href="../digitizing/digitizingdetailedgeometry.html">digitalisation des géométries de détail</a> pour plus d’informations.</p>
 </section>
 <section id="structure-parts-qgep-od-structure-part">
-<h3><span class="section-number">3.1.2.2.2. </span>Parties d’ouvrages <code class="docutils literal notranslate"><span class="pre">qgep_od.structure_part</span></code><a class="headerlink" href="#structure-parts-qgep-od-structure-part" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.2.2. </span>Parties d’ouvrages <code class="docutils literal notranslate"><span class="pre">qgep_od.structure_part</span></code><a class="headerlink" href="#structure-parts-qgep-od-structure-part" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Le couvercle est la seule partie d’ouvrage comprenant une géométrie de type point. Toutes les autres parties d’ouvrages sont liées à leur ouvrage d’assainissement et ne devraient être éditées qu’à travers les couches principales (<cite>vw_qgep_wastewater_structure</cite> and <cite>vw_qgep_reach</cite>).</p>
 </section>
 <section id="covers-qgep-od-vw-cover">
-<h3><span class="section-number">3.1.2.2.3. </span>Couvercles <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_cover</span></code><a class="headerlink" href="#covers-qgep-od-vw-cover" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.2.3. </span>Couvercles <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_cover</span></code><a class="headerlink" href="#covers-qgep-od-vw-cover" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Utiliser cette couche pour changer la position d’un couvercle particulier (et non l’ouvrage d’assainissement complet) ou pour ajouter un nouveau couvercle à un ouvrage existant. Il est également possible d’ajouter des couvercles additionnels à travers l’onglet couvercles de la couche <cite>vw_qgep_wastewater_structure</cite>. En complément, utiliser cette couche pour afficher les emplacements détaillés des couvercles (ex. dans un plan réseau ou un registre des conduites) ou pour exporter les positions des couvercles <cite>situation_geometry</cite>.</p>
 </section>
 <section id="channels-qgep-od-vw-channel">
-<h3><span class="section-number">3.1.2.2.4. </span>Canalisations <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_channel</span></code><a class="headerlink" href="#channels-qgep-od-vw-channel" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.2.4. </span>Canalisations <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_channel</span></code><a class="headerlink" href="#channels-qgep-od-vw-channel" title="Lien permanent vers cette rubrique"></a></h3>
 <p>La classe des canalisations n’a pas de géométries et est pour cela le plus souvent édité dans la couche tronçons <cite>vw_qgep_reach</cite>.</p>
 </section>
 <section id="organisations-qgep-od-organisation">
-<h3><span class="section-number">3.1.2.2.5. </span>Organisations <code class="docutils literal notranslate"><span class="pre">qgep_od.organisation</span></code><a class="headerlink" href="#organisations-qgep-od-organisation" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.2.5. </span>Organisations <code class="docutils literal notranslate"><span class="pre">qgep_od.organisation</span></code><a class="headerlink" href="#organisations-qgep-od-organisation" title="Lien permanent vers cette rubrique"></a></h3>
 <p>todo: This table is today at a strange place (it is not only related to wastewater structures) and has to be revised.</p>
 </section>
 </section>
 <section id="maintenance-events-qgep-od-vw-qgep-maintenance">
-<h2><span class="section-number">3.1.2.3. </span>Evénements de maintenance``qgep_od.vw_qgep_maintenance``<a class="headerlink" href="#maintenance-events-qgep-od-vw-qgep-maintenance" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.3. </span>Evénements de maintenance``qgep_od.vw_qgep_maintenance``<a class="headerlink" href="#maintenance-events-qgep-od-vw-qgep-maintenance" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Les événements de maintenance peuvent être créés à travers la couche qgep_od.vw_qgep_maintenance.</p>
 <p>Ces événements de maintenance sont utilisé dans l’onglet maintenance des tables principales. Ils peuvent être liés à un ou plusieurs ouvrages.</p>
 <p>Voir <a class="reference external" href="../editing/maintenance_events.html">Edition des événements de maintenance</a> pour plus d’information.</p>
 </section>
 <section id="value-lists-qgep-vl">
-<h2><span class="section-number">3.1.2.4. </span>Listes de valeurs <code class="docutils literal notranslate"><span class="pre">qgep_vl.*</span></code><a class="headerlink" href="#value-lists-qgep-vl" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.4. </span>Listes de valeurs <code class="docutils literal notranslate"><span class="pre">qgep_vl.*</span></code><a class="headerlink" href="#value-lists-qgep-vl" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Ces listes de valeurs sont définies dans le modèle de données VSA. Ne pas changer.</p>
 </section>
 <section id="hydraulic">
-<h2><span class="section-number">3.1.2.5. </span>Hydraulique<a class="headerlink" href="#hydraulic" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.5. </span>Hydraulique<a class="headerlink" href="#hydraulic" title="Lien permanent vers cette rubrique"></a></h2>
 <section id="wastewater-nodes-qgep-od-vw-wastewater-node">
-<h3><span class="section-number">3.1.2.5.1. </span>Wastewater nodes <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_wastewater_node</span></code><a class="headerlink" href="#wastewater-nodes-qgep-od-vw-wastewater-node" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.5.1. </span>Wastewater nodes <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_wastewater_node</span></code><a class="headerlink" href="#wastewater-nodes-qgep-od-vw-wastewater-node" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Use this layer to change the situation of one selected wastewater node (and not the whole wastewater structure) or if you want to add a new wastewater node to an existing wastewater structure. You can add additional wastewater nodes in the wastewater nodes-tab of the <cite>vw_qgep_wastewater_structure</cite> too.</p>
 </section>
 <section id="overflow-tables-qgep-od-vw-qgep-overflow">
-<h3><span class="section-number">3.1.2.5.2. </span>Overflow tables <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_overflow</span></code><a class="headerlink" href="#overflow-tables-qgep-od-vw-qgep-overflow" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.5.2. </span>Overflow tables <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_overflow</span></code><a class="headerlink" href="#overflow-tables-qgep-od-vw-qgep-overflow" title="Lien permanent vers cette rubrique"></a></h3>
 <p>These tables are connected to wastewater nodes. In the project-file template (Version 8.0, 4.6.2020) are no relations defined for these tables.</p>
 </section>
 </section>
 <section id="topology">
-<h2><span class="section-number">3.1.2.6. </span>Topologie<a class="headerlink" href="#topology" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.6. </span>Topologie<a class="headerlink" href="#topology" title="Lien permanent vers cette rubrique"></a></h2>
 <section id="nodes-qgep-network-node-and-segments-qgep-network-segment">
-<h3><span class="section-number">3.1.2.6.1. </span>Nodes <code class="docutils literal notranslate"><span class="pre">qgep_network.node</span></code> and segments <code class="docutils literal notranslate"><span class="pre">qgep_network.segment</span></code><a class="headerlink" href="#nodes-qgep-network-node-and-segments-qgep-network-segment" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">3.1.2.6.1. </span>Nodes <code class="docutils literal notranslate"><span class="pre">qgep_network.node</span></code> and segments <code class="docutils literal notranslate"><span class="pre">qgep_network.segment</span></code><a class="headerlink" href="#nodes-qgep-network-node-and-segments-qgep-network-segment" title="Lien permanent vers cette rubrique"></a></h3>
 <p>These two layers are used by the qgep-extension for the profile and the network-following functionnalities.
 Use the qgep_network.segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.</p>
 <p>See <a class="reference external" href="../editing/connect_wastewater_network_elements.html">connect wastewater network elements</a> for more information on how to create and maintain a good Topology.</p>
 </section>
 </section>
 <section id="catchment-qgep-od-catchment-area">
-<h2><span class="section-number">3.1.2.7. </span>Catchment <code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area</span></code><a class="headerlink" href="#catchment-qgep-od-catchment-area" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.1.2.7. </span>Catchment <code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area</span></code><a class="headerlink" href="#catchment-qgep-od-catchment-area" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Main layer to digitize and edit the catchment_areas.</p>
 </section>
 </section>

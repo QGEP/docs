@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="it" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7.3. QGEP-SWMM workflow &mdash; QGEP 0.8 documentazione</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -96,9 +97,9 @@
            <div itemprop="articleBody">
              
   <section id="qgep-swmm-workflow">
-<span id="id1"></span><h1><span class="section-number">7.3. </span>QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Link a questa intestazione"></a></h1>
+<span id="id1"></span><h1><span class="section-number">7.3. </span>QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Permalink to this heading"></a></h1>
 <section id="workflow">
-<h2><span class="section-number">7.3.1. </span>Workflow<a class="headerlink" href="#workflow" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">7.3.1. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>. It reads data from the QGEP views (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</p></li>
 <li><p>Check <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file. Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.</p></li>
@@ -114,7 +115,7 @@
 <p>Each step is explained in more details in the next chapters.</p>
 </section>
 <section id="gep-project">
-<h2><span class="section-number">7.3.2. </span>GEP project<a class="headerlink" href="#gep-project" title="Link a questa intestazione"></a></h2>
+<h2><span class="section-number">7.3.2. </span>GEP project<a class="headerlink" href="#gep-project" title="Permalink to this heading"></a></h2>
 <p><strong>WORK IN PROGRESS: This section must be completed with end users</strong></p>
 <p>Usually, a GEP analysis has at least three steps:</p>
 <ol class="arabic simple">

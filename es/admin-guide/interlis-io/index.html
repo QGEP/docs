@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.3. INTERLIS Data exchange &mdash; documentación de QGEP - 0.8</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -107,25 +108,25 @@
            <div itemprop="articleBody">
              
   <section id="interlis-data-exchange">
-<h1><span class="section-number">4.3. </span>INTERLIS Data exchange<a class="headerlink" href="#interlis-data-exchange" title="Enlazar permanentemente con este título"></a></h1>
+<h1><span class="section-number">4.3. </span>INTERLIS Data exchange<a class="headerlink" href="#interlis-data-exchange" title="Permalink to this heading"></a></h1>
 <p>This represents a guide on how to import/export data between QGEP and INTERLIS 2 Transfer Format (xtf).</p>
 <section id="general">
-<h2><span class="section-number">4.3.1. </span>General<a class="headerlink" href="#general" title="Enlazar permanentemente con este título"></a></h2>
+<h2><span class="section-number">4.3.1. </span>General<a class="headerlink" href="#general" title="Permalink to this heading"></a></h2>
 <p>The QGEP plugin includes an experimental interlis import/export feature.
 It is currently capable of importing and exporting to the VSA-KEK “VSA_KEK_2019_LV95”, which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p>
 <p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
 </section>
 <section id="prerequisites">
-<h2><span class="section-number">4.3.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Enlazar permanentemente con este título"></a></h2>
+<h2><span class="section-number">4.3.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
 <section id="java">
-<h3><span class="section-number">4.3.2.1. </span>Java<a class="headerlink" href="#java" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.2.1. </span>Java<a class="headerlink" href="#java" title="Permalink to this heading"></a></h3>
 <p>You need java on your system.</p>
 <p>Windows : <a class="reference external" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245058_d3c52aa6bfa54d3ca74e617f18309292">download</a>
 Max : <a class="reference external" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245051_d3c52aa6bfa54d3ca74e617f18309292">download</a>
 Linux : use you package manager</p>
 </section>
 <section id="python-libraries">
-<h3><span class="section-number">4.3.2.2. </span>Python libraries<a class="headerlink" href="#python-libraries" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.2.2. </span>Python libraries<a class="headerlink" href="#python-libraries" title="Permalink to this heading"></a></h3>
 <p>You need <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite>.</p>
 <p>To install : before launching QGIS, open OSGeo4W Shell, and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="s2">&quot;sqlalchemy&gt;=1.3.22&quot;</span> <span class="s2">&quot;geoalchemy2&gt;=0.9.0&quot;</span>
@@ -147,18 +148,18 @@ Linux : use you package manager</p>
 <p>The same <cite>–target</cite> flag can be added to install <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite> in another location.</p>
 </section>
 <section id="modelbaker">
-<h3><span class="section-number">4.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Permalink to this heading"></a></h3>
 <p>The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin <cite>Modelbaker</cite> manually from the QGIS plugin manager (version 6.4 or newer).</p>
 </section>
 <section id="qgep-version">
-<h3><span class="section-number">4.3.2.4. </span>QGEP Version<a class="headerlink" href="#qgep-version" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.2.4. </span>QGEP Version<a class="headerlink" href="#qgep-version" title="Permalink to this heading"></a></h3>
 <p>The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.</p>
 </section>
 </section>
 <section id="usage-gui">
-<h2><span class="section-number">4.3.3. </span>Usage (GUI)<a class="headerlink" href="#usage-gui" title="Enlazar permanentemente con este título"></a></h2>
+<h2><span class="section-number">4.3.3. </span>Usage (GUI)<a class="headerlink" href="#usage-gui" title="Permalink to this heading"></a></h2>
 <section id="enable-admin-mode">
-<h3><span class="section-number">4.3.3.1. </span>Enable admin mode<a class="headerlink" href="#enable-admin-mode" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.3.1. </span>Enable admin mode<a class="headerlink" href="#enable-admin-mode" title="Permalink to this heading"></a></h3>
 <p>In the <cite>plugin&gt;QGEP&gt;settings</cite> dialog, under the <cite>Developer options</cite> tab, ensure <cite>Admin mode</cite> is enabled. Restart QGIS.</p>
 <figure class="align-default">
 <img alt="../../_images/settings_dialog.png" src="../../_images/settings_dialog.png" />
@@ -169,7 +170,7 @@ Linux : use you package manager</p>
 </figure>
 </section>
 <section id="export">
-<h3><span class="section-number">4.3.3.2. </span>Export<a class="headerlink" href="#export" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.3.2. </span>Export<a class="headerlink" href="#export" title="Permalink to this heading"></a></h3>
 <p>To export your QGEP data, click on the <cite>export</cite> button. The following dialog will appear.</p>
 <figure class="align-default">
 <img alt="../../_images/export_dialog.png" src="../../_images/export_dialog.png" />
@@ -187,7 +188,7 @@ Linux : use you package manager</p>
 <p>Exports include a validation step using <cite>ilivalidator</cite>, which will inform you whether the export contains validation error.</p>
 </section>
 <section id="import">
-<h3><span class="section-number">4.3.3.3. </span>Import<a class="headerlink" href="#import" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.3.3. </span>Import<a class="headerlink" href="#import" title="Permalink to this heading"></a></h3>
 <p>To import <cite>xtf`files, click on the `import</cite> button and navigate to the <cite>.xtf</cite> file.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
@@ -203,13 +204,13 @@ Linux : use you package manager</p>
 </section>
 </section>
 <section id="usage-command-line">
-<h2><span class="section-number">4.3.4. </span>Usage (command line)<a class="headerlink" href="#usage-command-line" title="Enlazar permanentemente con este título"></a></h2>
+<h2><span class="section-number">4.3.4. </span>Usage (command line)<a class="headerlink" href="#usage-command-line" title="Permalink to this heading"></a></h2>
 <p>For advanced usage, the import/export tool can also be used as a command line tool. Please refer to <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/">https://github.com/QGEP/qgepqwat2ili/</a> for documentation about this.</p>
 </section>
 <section id="quality-control">
-<h2><span class="section-number">4.3.5. </span>Quality control<a class="headerlink" href="#quality-control" title="Enlazar permanentemente con este título"></a></h2>
+<h2><span class="section-number">4.3.5. </span>Quality control<a class="headerlink" href="#quality-control" title="Permalink to this heading"></a></h2>
 <section id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
-<h3><span class="section-number">4.3.5.1. </span>Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Enlazar permanentemente con este título"></a></h3>
+<h3><span class="section-number">4.3.5.1. </span>Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Permalink to this heading"></a></h3>
 <figure class="align-default">
 <img alt="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" src="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" />
 </figure>

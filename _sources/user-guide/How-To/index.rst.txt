@@ -62,6 +62,17 @@ If you can not find a .qgd-file, then you have probably not moved or rotated a l
 
 * If necessary define the horizontal/vertical alignment of your label-coordinates in the placement of the label definition.
 
+How to translate a label prefix
+-------------------------------
+
+QGEP automatically creates labels for wastewater-structures and reaches:
+
+.. figure:: images/qgep_labels.png
+
+To easily translate label prefixes a series of QGIS project variables have been added. If you want to change the prefixes for cover level, bottom level and entry and exit levels, change the following project settings:
+
+.. figure:: images/qgep_label_prefix_settings.png
+
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
 -------------------------------------------------------------------------
 Note:
@@ -168,3 +179,9 @@ The Feature Attributes window for the overflow characteristic appears:
 2. Because the new record overflow characteristic has not yet been saved, it must first be saved with OK before the records of the HQ relation can be created.
 
 3. Go back in the field fk_overflow characteristic of the just created overflow characteristic with the button **switch to form view** and define the necessary HQ or QQ values with the **add child object** button.
+
+Further informations
+--------------------
+
+Further Q & A's you can find in the 
+`QGEP Discussion section <https://github.com/QGEP/QGEP/discussions/categories/q-a>`_

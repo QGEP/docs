@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2.5. Kanäle Digitalisieren &mdash; QGEP 0.8 Dokumentation</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -105,9 +106,9 @@
            <div itemprop="articleBody">
              
   <section id="digitizing-channels">
-<h1><span class="section-number">3.2.5. </span>Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Link zu dieser Überschrift"></a></h1>
+<h1><span class="section-number">3.2.5. </span>Kanäle Digitalisieren<a class="headerlink" href="#digitizing-channels" title="Permalink to this heading"></a></h1>
 <section id="general">
-<h2><span class="section-number">3.2.5.1. </span>Allgemeines<a class="headerlink" href="#general" title="Link zu dieser Überschrift"></a></h2>
+<h2><span class="section-number">3.2.5.1. </span>Allgemeines<a class="headerlink" href="#general" title="Permalink to this heading"></a></h2>
 <p>QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen). Siehe Kapitel <a class="reference internal" href="dataentry.html#wizard"><span class="std std-ref">Der QGEP Wizard (Zauberer)</span></a>.</p>
 <p>Wählen Sie die <strong>Wizard</strong> Schaltfläche, drücken <strong>Start Data Entry</strong> und wählen <strong>Reach</strong> im Pulldown-Menü.</p>
 <figure class="align-default">
@@ -122,7 +123,7 @@
 </div>
 </section>
 <section id="digitizing">
-<h2><span class="section-number">3.2.5.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Link zu dieser Überschrift"></a></h2>
+<h2><span class="section-number">3.2.5.2. </span>Digitalisieren<a class="headerlink" href="#digitizing" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Im Digitalisierungsmodus schnappt der Cursor automatisch auf das nächstgelegene Abwasserbauwerk oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet.</p></li>
 </ul>
@@ -186,7 +187,7 @@
 </ul>
 </section>
 <section id="further-attributes-and-classes">
-<h2><span class="section-number">3.2.5.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Link zu dieser Überschrift"></a></h2>
+<h2><span class="section-number">3.2.5.3. </span>Weitere Attribute und Klassen<a class="headerlink" href="#further-attributes-and-classes" title="Permalink to this heading"></a></h2>
 <p>Wenn eine Haltung digitalisiert wird, finden im Hintergrund eine Reihe von Schritten in der QGEP Datenbank statt:</p>
 <ul class="simple">
 <li><p>Ein neues Objekt wird in der Klasse <strong>Abwasserbauwerk</strong>  („od_wastewater_structure“) hinzugefügt</p></li>
@@ -199,7 +200,7 @@
 </figure>
 </section>
 <section id="geometry-synchronization">
-<span id="reach-geometrysync"></span><h2><span class="section-number">3.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Link zu dieser Überschrift"></a></h2>
+<span id="reach-geometrysync"></span><h2><span class="section-number">3.2.5.4. </span>Geometrieabgleichung<a class="headerlink" href="#geometry-synchronization" title="Permalink to this heading"></a></h2>
 <p>Start- und Endpunkt der Linien-Geometrie bestimmen die Geometrie der Haltungspunkte. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes der hinzugefügten Linie wird über die Koten <cite>HP_von_Kote</cite> und <cite>HP_nach_Kote</cite> definiert. Das heisst, der Z Wert der Geometrie des Haltungspunktes wird ebenso über den Kote-Wert gesetzt. Diese Werte können über das „geschnappte“ Objekt gesetzt werden:</p>
 <figure class="align-default">
 <img alt="../../_images/reach_geometry_snapping_01.jpg" src="../../_images/reach_geometry_snapping_01.jpg" />
