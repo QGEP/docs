@@ -80,6 +80,8 @@ To export your QGEP data, click on the `export` button. The following dialog wil
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
+The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
