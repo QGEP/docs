@@ -20,7 +20,7 @@ Digitizing
 
 .. figure:: images/catchment_avoid_intersection2.jpg
 
-.. note:: New digitized catchement areas will not overlap with existing areas with this settings.
+.. note:: New digitized catchment areas will not overlap with existing areas with this settings.
 
 * Set the layer ``od_catchment_area`` into the edit mode.
 * Use the **Add Feature** tool to digitize a new area.
@@ -61,11 +61,11 @@ Editing
 Split Areas
 -----------
 
-* You can split existing areas with the **Split** tool. 
+* You can split existing areas with the **Split** tool.
 
 .. figure:: images/split_tool.jpg
 
-* There is no need to select the area first. Left clicks to define the spliting line. Right click after having defined the last point of the spliting line.
+* There is no need to select the area first. Left clicks to define the splitting line. Right click after having defined the last point of the splitting line.
 
 Merge Areas
 -----------
@@ -99,7 +99,7 @@ You connect catchment areas with the tool **Connect wastewater networkelements**
 
 .. figure:: images/catchment_area_connect1.jpg
 
-* A window appears, where you can choose, which connection(s) will be defined. 
+* A window appears, where you can choose, which connection(s) will be defined.
 
 .. figure:: images/catchment_area_connect2.jpg
 
@@ -111,6 +111,6 @@ You connect catchment areas with the tool **Connect wastewater networkelements**
 
 .. note:: The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It's only the user who decides, if a node is ok or not. If you are not sure, please check the **VSA Wegleitung GEP-Daten**, part **Erfassungsgrundsätze**
 
-You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes 
+You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes
 
 Do delete a connection to a wastewater node, you can edit the area with the **Identify features** tool.

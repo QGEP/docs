@@ -1,6 +1,6 @@
 .. _digitizing-wastewater-structures:
 
-Digitizing Wastewater Structures 
+Digitizing Wastewater Structures
 =================================
 
 General
@@ -35,7 +35,7 @@ Then add the identifier (this is the attribute that will be displayed on the map
 
 .. note:: If you do not enter an identifier, QGEP will enter the obj_id also as identifier (you can change later). As default, the identifier of the wastewater structure is also the identifier of the cover and of the wastewater node.
 
-Add other attributes in the **General** tab. 
+Add other attributes in the **General** tab.
 You can also add attributes in the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node).
 
 .. note:: The idea of the **General** tab is, that in the normal digitizing process (95% of the manholes) the user has not to change the tabs to enter the attributes that are necessary.
@@ -78,8 +78,7 @@ To add additional objects such as structure parts (besides covers there are acce
 Geometry synchronization
 ------------------------
 
-The added feature's geometry defines the geometry of the connected tables like cover and wastewater node. The vw_qgep_wastewater_structure-point itself has no Z value. 
+The added feature's geometry defines the geometry of the connected tables like cover and wastewater node. The vw_qgep_wastewater_structure-point itself has no Z value.
 When the level of the cover `co_level` is entered, this value is adapted to the Z value of the cover's geometry. The bottom level of the wastewater node `wn_bottom_level` defines the Z value of the wastewater node's geometry.
 
-.. note:: If a cover level changes, the Z value of the cover's geometry will be ajusted. When the geometry changes, the co_level attribut is adjusted as well. If both values change, the level takes precedence. On an insert it's like when both value change. Means the cover's geometry is set according to the cover level and if it's NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly.
-
+.. note:: If a cover level changes, the Z value of the cover's geometry will be adjusted. When the geometry changes, the co_level attribut is adjusted as well. If both values change, the level takes precedence. On an insert it's like when both value change. Means the cover's geometry is set according to the cover level and if it's NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly.
