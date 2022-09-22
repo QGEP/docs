@@ -8,7 +8,7 @@ This represents a guide on how to move wastewater structures with reaches and wa
 General
 ------------
 
-It's not unusual, that manholes are digitized the first time with low precision. Later the manholes are measured, and there is the need, to move the whole wastewater structure (means cover, node and reachpoints of all reaches) to the measuered point.
+It's not unusual, that manholes are digitized the first time with low precision. Later the manholes are measured, and there is the need, to move the whole wastewater structure (means cover, node and reachpoints of all reaches) to the measured point.
 
 .. note:: You need to turn on the advanced digitizing toolbar in your project to be able to select the **Move Feature** tool.
 
@@ -32,7 +32,7 @@ In the figure below, there is the 'ZB1' manhole moved. Cover, node and all tree 
 
 .. note:: Reaches, that are connected to one of the moved reaches, are still connected with the foreign key, but did not move. You have to corrected manually if necessary.
 
-* In the next figure, the special structure 'ZRAE' is also moved by clicking on the cover and clicking at the new place. 
+* In the next figure, the special structure 'ZRAE' is also moved by clicking on the cover and clicking at the new place.
 
 .. figure:: images/moving_wws_manhole2.jpg
 
@@ -51,4 +51,3 @@ Video Tutorial
 --------------
 
 * See `this video tutorial (version QGIS 2) <https://vimeo.com/162978741>`_
-

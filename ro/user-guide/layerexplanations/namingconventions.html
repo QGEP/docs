@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="ro" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.1.3. Naming conventions &mdash; QGEP 0.8 documentație</title>
@@ -52,7 +52,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.1.3. Naming conventions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#schemas-in-the-qgep-database">3.1.3.1. Schemas in the QGEP-Database</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layer-names">3.1.3.2. Layer names</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#attibute-names">3.1.3.3. Attibute names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-names">3.1.3.3. Attribute names</a></li>
 </ul>
 </li>
 </ul>
@@ -105,11 +105,11 @@
 <h2><span class="section-number">3.1.3.1. </span>Schemas in the QGEP-Database<a class="headerlink" href="#schemas-in-the-qgep-database" title="Permalink to this heading"></a></h2>
 <p>The QGEP-Database has six qgep-schemas:</p>
 <ul class="simple">
-<li><p>qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel etc.) These are the tables you normally work with.</p></li>
+<li><p>qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel, etc.) These are the tables you normally work with.</p></li>
 <li><p>qgep_vl: is the schema for value lists. There is a table for every value list of the VSA-DSS. As a QGEP-user you can not edit these tables.</p></li>
 <li><p>qgep_network: schema for the tables that are necessary to use the network-topology with the qgep-tools. You can rebuild these tables from the QGEP-tools.</p></li>
 <li><p>qgep_sys: special tables for administration of the database. As a QGEP-User you can not edit these tables.</p></li>
-<li><p>qgep_import and qgep_swmm: schema for additional plugins/functions (Qfield and working with SWMM)</p></li>
+<li><p>qgep_import and qgep_swmm: schema for additional plugins/functions (QField and working with SWMM)</p></li>
 </ul>
 </section>
 <section id="layer-names">
@@ -128,8 +128,8 @@ It is important to know the main-table to be sure, that you use the correct attr
 </ul>
 <p>These are views in the schema qgep_network</p>
 </section>
-<section id="attibute-names">
-<h2><span class="section-number">3.1.3.3. </span>Attibute names<a class="headerlink" href="#attibute-names" title="Permalink to this heading"></a></h2>
+<section id="attribute-names">
+<h2><span class="section-number">3.1.3.3. </span>Attribute names<a class="headerlink" href="#attribute-names" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Prefixes in attribute names</p></li>
 </ul>
@@ -145,7 +145,7 @@ Example in layer vw_qgep_reach: identifier is the attribute of the table wastewa
 <li><p>_ fields</p></li>
 </ul>
 <p>Attributes that start with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _slope_per_mill in vw_qgep_reach.
-_channel_useage_current in vw_qgwp_wastewater_structure is calculated from the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.</p>
+_channel_usage_current in vw_qgwp_wastewater_structure is calculated from the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.</p>
 </section>
 </section>
 

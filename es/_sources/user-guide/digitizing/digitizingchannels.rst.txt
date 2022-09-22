@@ -1,4 +1,4 @@
-Digitizing Channels 
+Digitizing Channels
 ===============================
 
 General
@@ -13,7 +13,7 @@ Select the **Wizard** button, then click **Start Data Entry** and choose **Reach
 .. figure:: images/wizard_data_entry_reach.jpg
 
 .. attention:: Start digitizing in the direction of the flow by starting with the
-  **from manhole node** and finishing with the **to manhole node**. 
+  **from manhole node** and finishing with the **to manhole node**.
 
 Digitizing
 ----------
@@ -25,7 +25,7 @@ Digitizing
 
 * With further left clicks anywhere you can define intermediary points of the reach progression.
   You can also directly select another manhole to draw a straight channel.
-  
+
 * It is possible to use the **Advanced Digitizing** tools together with the wizard.
 
 .. figure:: images/wizard_data_entry_reach_with_new_cursor2-3.jpg
@@ -36,7 +36,7 @@ Digitizing
 
 .. note:: Keep in mind that the finishing point of the line is the last point where you **left** clicked.
   Thus, for digitizing a simple line with 2 points you need two **left clicks** to digitize the line and one
-  **right click** to finish the line digitizing. 
+  **right click** to finish the line digitizing.
 
 * Control the snapping to wastewater nodes or other reaches in the fields **rp_from/to_fk_wastewater_networkelement**
 
@@ -50,13 +50,13 @@ Digitizing
 .. figure:: images/wizard_wastewater_structure_reach_form_profiles3.jpg
 
 
-* When finished, then click the **OK** button. 
+* When finished, then click the **OK** button.
 
 * Save the information of this layer by stopping the data entry wizard.
 
 .. figure:: images/stop_data_entry.jpg
 
-.. note:: The standard-fields on the **General** tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The **Reuse the last entered attribute values** - option of QGIS has no influence. 
+.. note:: The standard-fields on the **General** tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The **Reuse the last entered attribute values** - option of QGIS has no influence.
 
 * You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.
 * If you do not select the edit mode, you can just look at the existing data.
@@ -89,9 +89,8 @@ The start- and the end-point of the added feature's geometry defines the reach p
 
 .. figure:: images/reach_geometry_snapping_01.jpg
 
-The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes `rp_from_level` and `rp_to_level` and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well. 
+The snapped features 9405 and 9390 have the altitude from the wastewater node bottom_level. These values are copied into the attributes `rp_from_level` and `rp_to_level` and can be edited there by the user. When the user changes these values, the Z value of the geometry of the digitized feature and its reach points will be changed as well.
 
 .. figure:: images/reach_geometry_snapping_02.jpg
 
 .. note:: If a reach point's level changes, the Z value of its geometry changes, and so does the start- or the end-point of the reach. When the Z value of the reach's geometry changes, the reach point's geometry and its level is ajusted as well. If both values change, the level takes precendence. On an insert it's like when both value change. Means the reach's geometry is set according to the reach point's levels and if they are NULL, the Z value of the reach's start- and end-point are set to NaN.
-

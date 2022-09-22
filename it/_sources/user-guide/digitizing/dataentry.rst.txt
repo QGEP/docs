@@ -11,7 +11,7 @@ There are basically two ways:
    * using data from the surveyor (e.g. property boundaries) as a basis for defining catchment borders
    * other
 
-Data entry in QGEP needs some understanding of the underlaying data model `VSA-DSS <http://dss.vsa.ch>`_, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.
+Data entry in QGEP needs some understanding of the underlying data model `VSA-DSS <http://dss.vsa.ch>`_, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.
 
 .. _wizard:
 
@@ -28,7 +28,7 @@ On the left side bottom, **QGEP Data Entry** window appears:
 
 .. figure:: images/wizard_data_entry.jpg
 
-Click **Start Data entry** to enter the edit mode. 
+Click **Start Data entry** to enter the edit mode.
 
 Choose **Wastewater Structure** or **Reach**. Start adding new feature in vw_qgep_wastewater_structure or vw_qgep_reach.
 
@@ -43,7 +43,7 @@ When adding **new reaches**, the wizard has some additional functionality:
 * When the new reach snaps, then the obj_id_links are automatically entered in the fk_fields of the reach points.
 * The **Reuse the last entered attribute values** - option of QGIS does not work. But the standard-fields on the general-tab (and only those fields) do reuse the last entered attribute value.
 
-If you use another tool (e.g. the **Identify Features** tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to klick **Stop Data Entry** and then **Start Data Entry** and you can continue.
+If you use another tool (e.g. the **Identify Features** tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to click **Stop Data Entry** and then **Start Data Entry** and you can continue.
 
 If you change from digitizing wastewater structures to digitizing reaches, it is recommended to  stop and start data entry also. This saves the new manholes and enables the reaches to snap also on new digitized manholes.
 
@@ -62,8 +62,4 @@ To digitize in other layers than vw_qep_wastewater_structure or vw_qgep_reach, y
 * Enable snapping if necessary
 * Choose the add feature tool
 
-It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes. 
-
-
-
-
+It is also possible to use the standard QGIS tools with the two vw_qgep main layers. But there will be no automatic value in the fk-fields of the reach-points and no preferred snapping to wastewater nodes.

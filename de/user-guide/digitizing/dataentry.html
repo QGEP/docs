@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2.1. Datenerfassung &mdash; QGEP 0.8 Dokumentation</title>
@@ -119,7 +119,7 @@
 </div></blockquote>
 </li>
 </ul>
-<p>Die Datenerfassung in QGEP benötigt etwas Verständnis des zugrundeliegenden Datenmodells <cite>VSA-DSS &lt;http://dss.vsa.ch&gt;</cite>, wird aber erleichtert durch einen Datenerfassungsassistenten und Formulare, welche die verschiedenen Tabellen korrekt miteinander verbinden. Vor allem die Verknüpfung von Schächten und Haltungen zu einem kompletten Kanalisationsnetzwerk ist automatisiert und kann mit dem Netz-Verfolgungswerkzeug kontrolliert werden.</p>
+<p>Data entry in QGEP needs some understanding of the underlying data model <a class="reference external" href="http://dss.vsa.ch">VSA-DSS</a>, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.</p>
 <section id="the-qgep-wizard">
 <span id="wizard"></span><h2><span class="section-number">3.2.1.1. </span>Der QGEP Wizard (Zauberer)<a class="headerlink" href="#the-qgep-wizard" title="Permalink to this heading"></a></h2>
 <p>Mit dem QGEP Wizard können Schächte und Kanäle mit wenigen Mausklicks digitalisiert werden.</p>
@@ -142,7 +142,7 @@
 <li><p>Wenn die neue Haltung schnappt, dann wird die Verknüpfungs-Obj_id automatisch in die Fremdschlüsselfelder fk* der Haltungspunkt eingetragen.</p></li>
 <li><p>Die QGIS-Option <strong>Letzte Attributeingaben wiederverwenden</strong> funktioniert grundsätzlich nicht. Aber für die Standard-Felder im Allgemein Tab (und nur für diese Felder) werden die letzten Eingabewerte vom Wizard eingetragen.</p></li>
 </ul>
-<p>Wenn während dem Digitalisieren ein anderes Tool benutzt wird (z.B. das <strong>Objekte abfragen</strong> Tool), dann genügt es nicht, den Wizard anzuklicken um mit dem Wizard weiter zu digitalisieren. Es muss <strong>Stop Data Entry</strong> und danach <strong>Start Data Entry</strong> angeklickt werden bevor weiter digitalisiert werden kann.</p>
+<p>If you use another tool (e.g. the <strong>Identify Features</strong> tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to click <strong>Stop Data Entry</strong> and then <strong>Start Data Entry</strong> and you can continue.</p>
 <p>Wenn vom Digitalisieren der Schächte vw_qgep_Abwasserbauwerk zum Digitalisieren der Haltungen vw_qgep_Haltung gewechselt wird, ist es empfehlenswert, Stop und Start Data Entry anzuklicken. Damit werden die neuen Schächte gespeichert und beim Digitalisieren der Haltungen kann auf diese neuen Schächte resp. deren Abwasserknoten geschnappt werden.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>

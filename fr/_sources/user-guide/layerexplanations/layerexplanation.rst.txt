@@ -6,7 +6,7 @@ Layers explanation
 Main layers
 -----------
 
-QGEP is constructed around two main layers : 
+QGEP is constructed around two main layers :
 
  * Wastewater structures ``qgep_od.vw_qgep_wastewater_structure``
  * Reaches ``qgep_od.vw_qgep_reach``
@@ -47,7 +47,7 @@ Cover is the only structure part with a point-geometry itself. All other structu
 Covers ``qgep_od.vw_cover``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the `vw_qgep_wastewater_structure` too. Additionnaly, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions `situation_geometry`.
+Use this layer to change the situation of some specific cover (and not the whole wastewater structure) or to add a new cover to an existing wastewater structure. You can add an additional covers in the covers-tab of the `vw_qgep_wastewater_structure` too. Additionally, use this layer to show the detailed position of the covers (e.g. in network_plan or pipeline_registry) or to export the cover positions `situation_geometry`.
 
 Channels ``qgep_od.vw_channel``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,7 +62,7 @@ todo: This table is today at a strange place (it is not only related to wastewat
 Maintenance events ``qgep_od.vw_qgep_maintenance``
 --------------------------------------------------
 
-Maintenance events can be created through the view qgep_od.vw_qgep_maintenance. 
+Maintenance events can be created through the view qgep_od.vw_qgep_maintenance.
 
 These maintenance events are used in the maintenance tabs in the main tables. They can be linked to one or several wastewater structures.
 
@@ -92,7 +92,7 @@ Topology
 Nodes ``qgep_network.node`` and segments ``qgep_network.segment``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These two layers are used by the qgep-extension for the profile and the network-following functionnalities.
+These two layers are used by the qgep-extension for the profile and the network-following functionalities.
 Use the qgep_network.segment layer to show the flow direction, if you use a markerline (filled_arrowhead) as symbol.
 
 See `connect wastewater network elements <../editing/connect_wastewater_network_elements.html>`_ for more information on how to create and maintain a good Topology.

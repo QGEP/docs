@@ -18,12 +18,12 @@ Upstream
 
 * It does not matter, which layer is selected
 
-* To start upstream network following select the **Upstream** QGEP button 
+* To start upstream network following select the **Upstream** QGEP button
 
 .. figure:: images/network_upstream_button.jpg
 
 
-* QGEP opens then profile window at the bottom of the map. Click on your start node. 
+* QGEP opens then profile window at the bottom of the map. Click on your start node.
 
 * If there is more than one node in this area, you choose the one you want form the mouse-list
 
@@ -54,7 +54,7 @@ Downstream
 .. figure:: images/network_downstream_button.jpg
 
 
-* You can see where the water is going to. 
+* You can see where the water is going to.
 
 * Control, if QGEP finds also the overflows
 
@@ -68,7 +68,7 @@ Sum up upstream
 
 * This is a tool in the QGEP-toolbox.
 
-* The idea for this tool is to sum up a value over the whole network of chanels, e.g. the flowtime for each point to the outlet of the network.
+* The idea for this tool is to sum up a value over the whole network of channels, e.g. the flowtime for each point to the outlet of the network.
 
 * For this tool you need a field in the layer vw_qgep_reach with the values to sum up. Because interesting values are normally not part of this layer, you have first to join the value-field (e.g flowtime or flow rate) to the layer vw_qgep_reach.
 
@@ -86,20 +86,20 @@ Sum up upstream
 .. figure:: images/toolbox.jpg
 .. figure:: images/qgep_toolbox.jpg
 
-* In the window you have to enter/to choose 
+* In the window you have to enter/to choose
 
-  * an expression as shown in the titel of the field (COALESCE("field_name",0). If you do not use the **coalesce** command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s]. 
+  * an expression as shown in the title of the field (COALESCE("field_name",0). If you do not use the **coalesce** command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s].
 
   * the branch behavior (Minimum, Maximum, Average): which value will be used after when two branches join to continue the summing.
-  
-  * the advanced paramaters are preconfigured for QGEP and should not need to be changed.
-  
+
+  * the advanced parameters are preconfigured for QGEP and should not need to be changed.
+
   * Summed up: if you let this field empty, there will be a temporary point layer with the results in your project. Otherwise you can save the results to a new point vector layer.
-  
+
 .. figure:: images/sumupupstream-tool.jpg
 
 The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field **value** with the sum for each wastewater node.
-* In the figure below you see the result of the example with all three branch behaviours: minimum = normal style, maximum = bold, average = underscored
+* In the figure below you see the result of the example with all three branch behaviors: minimum = normal style, maximum = bold, average = underscored
 
 .. figure:: images/sumupupstream-resultat.jpg
 
@@ -120,16 +120,16 @@ Flow times downstream
 .. figure:: images/toolbox.jpg
 .. figure:: images/qgep_toolbox.jpg
 
-* In the window you have to choose 
+* In the window you have to choose
 
   * as reach layer: vw_qgep_reach
 
   * as flow time layer: your table with the reach obj_id and the flowtimes (or the values you want to sum-up downstream)
-  
+
   * as reach id field: the field in your table that is the obj_id of the reach
-  
+
   * as Flow times field: the field in your table, that you want to sum-up
-  
+
   * as Flow times: if you let this field empty, there will be a temporary file with the results in your projects. Otherwise you can save the results to a vector layer.
 
 .. figure:: images/flow_time_downstream_window.jpg
@@ -141,9 +141,9 @@ Flow times downstream
 .. attention:: If there is more than one downstream-way, the results are wrong after the branch.
 
 * There are some cases, where you get an empty flow time-Layer and red (error) text in the Log-window:
- 
+
   * Do not select more than one reach to start
- 
+
   * Do not select vw_qgep_reach as flow time layer (to sum-up the length, use the vw_network_segment layer)
-  
+
   * If the reach id field has no values that match the reach obj_id, you will also get an error

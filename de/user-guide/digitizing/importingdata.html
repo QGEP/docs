@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2.8. Datenimport &mdash; QGEP 0.8 Dokumentation</title>
@@ -106,21 +106,23 @@
              
   <section id="importing-data">
 <h1><span class="section-number">3.2.8. </span>Datenimport<a class="headerlink" href="#importing-data" title="Permalink to this heading"></a></h1>
-<p>Es ist recht einfach, Daten (Lage und Attribute) aus externen Quellen zu importieren. Hier eine allgemeine Beschreibung und ein Beispiel.</p>
+<p>It is quite easy to import data (geometry and attributes) from an external software.
+Here is a general description and a specific example.</p>
 <section id="general">
 <h2><span class="section-number">3.2.8.1. </span>Allgemeines<a class="headerlink" href="#general" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Die zu importierenden Daten sind als (Vektor-)Layer im QGEP Projekt hinzuzufügen.</p></li>
-<li><p>Die Feldnamen der Attribute müssen gleich sein wie die Feldnamen im QGEP Layer. Deshalb sind Shp-Dateien meist nicht geeignet wegen der Beschränkung der Feldnamen im dbf-Format auf 10 Stellen (und Alias-Feldnamen funktionieren leider nicht).</p></li>
+<li><p>The field names of the attributes have to be the same as the field names of the QGEP Layer.
+Therefore it is normally not a good idea the use shp-files, because of the 10 letters limitation of the dbf-format (Alias field names do not work).</p></li>
 <li><p>Wenn das QGEP Projekt ein übersetztes Projekt ist, müssen trotzdem die englischen Feldnamen verwendet werden (und nicht die übersetzten Feldnamen aus dem Alias).</p></li>
-<li><p>Wenn ein Attribut eine Werteliste hat, muss der Code-Wert verwendet werden und nicht der Volltext.</p></li>
+<li><p>If there is a field with value list, you have to use the code, not the plain text.</p></li>
 <li><p>Wenn die Felder entsprechend vorbereitet sind, dann können die Daten einfach kopiert und im QGEP-Layer eingefügt werden.</p></li>
 </ul>
 </section>
 <section id="example-importing-manholes-from-a-txt-file">
 <h2><span class="section-number">3.2.8.2. </span>Beispiel Import Schächte mit einer TXT-Datei:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Ändern der Feldnamen auf identifier, x, y, co_level  (englische Feldnamen für Bezeichnung, X, Y, Deckelkote)</p></li>
+<li><p>Change the field names to identifier, x, y, co_level</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/importdata_txtfile.jpg" src="../../_images/importdata_txtfile.jpg" />
@@ -164,7 +166,7 @@
 </figure>
 <ul class="simple">
 <li><p>Das Feld ws_type ist eine Ausnahme. Mögliche Werte sind manhole, special_structure, infiltration_installation, discharge_point.</p></li>
-<li><p>Für andere Felder mit einer Werteliste muss der Code-Wert verwendet werden.</p></li>
+<li><p>For other fields with value lists you have to use the code.</p></li>
 <li><p>Im obigen Beispiel hat der Wert im Feld ma_function (Normschacht-Funktion) in den Zeilen mit discharge_point oder special_structure (also nicht Normschacht) keinen Effekt.</p></li>
 </ul>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.3.1. Modification de données existantes &mdash; Documentation QGEP 0.8</title>
@@ -118,7 +118,8 @@
 <h2><span class="section-number">3.3.1.1. </span>Projet Demo<a class="headerlink" href="#demo-project" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Assurez-vous d’avoir bien importé le projet demo dans pgAdminIII (voir le chapitre <span class="xref std std-ref">initialisation-base de données</span>)</p></li>
-<li><p>Ouvrez le projet démo en vous rendant dans le menu général QGIS et en pressant <strong>Projet</strong> –&gt; <strong>Ouvrir</strong> ou en pressant sur les touches <code class="docutils literal notranslate"><span class="pre">CTRL``+``O</span></code> simultanément.</p></li>
+<li><p>Open the demo project by going to the main menu and press <strong>Project</strong> –&gt; <strong>Open</strong>  or by pressing <code class="docutils literal notranslate"><span class="pre">CTRL</span></code>
++ <code class="docutils literal notranslate"><span class="pre">O</span></code> at the same time.</p></li>
 </ul>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" style="width: 800.0px; height: 450.0px;" /></a>
@@ -130,7 +131,7 @@
 <img alt="../../_images/qgep_demoproject_login.jpg" src="../../_images/qgep_demoproject_login.jpg" />
 </figure>
 <ul class="simple">
-<li><p>Vous devriez maintenant avoir le projet démo chargé</p></li>
+<li><p>You should now have the demo project loaded</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/qgep_demoproject_overview.jpg" src="../../_images/qgep_demoproject_overview.jpg" />
@@ -181,7 +182,7 @@
 <div><ul class="simple">
 <li><p>Pour changer un attribut, il est nécessaire de sélectionner la couche <strong>vw_qgep_reach</strong></p></li>
 <li><p>Basculez en mode d’édition.</p></li>
-<li><p>Then click on the <strong>Idendify features</strong> button and click the reach you want to edit.</p></li>
+<li><p>Then click on the <strong>Identify features</strong> button and click the reach you want to edit.</p></li>
 <li><p>Le formulaire de la couche <strong>vw_qgep_troncon</strong> s’ouvre.</p></li>
 </ul>
 <blockquote>
@@ -207,7 +208,7 @@
 <p>The definition in VSA-DSS is, that reaches have to be defined in the flow direction (the start node is where the water comes from, the end node is where the water flows).</p>
 </div>
 <p>QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
-Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and there connection to wastewater network elements.</p>
+Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and their connection to wastewater network elements.</p>
 <ul class="simple">
 <li><p>Pour commencer, vous devez sélectionner tous les tronçons que vous souhaitez modifier. Il n’est pas nécessaire de sélectionner la couche vw_qgep_troncon ou de passer cette couche en mode d’édition.</p></li>
 <li><p>Open the <strong>Processing Toolbox</strong></p></li>
@@ -252,7 +253,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p>If there are connections from reach to reach, the reach point moves at right angles to the other reach. If there is no way to do a right angle, it moves to the next end point of the reach.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You habe to rerun the command.</p>
+<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You have to rerun the command.</p>
 </div>
 </section>
 <section id="working-with-codes-of-value-list">
@@ -351,7 +352,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p>In QGEP, there is in the moment no tool, that helps you to connect a wastewater node to a channel. So you just connect the reach points to the node.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you really want to connect the node to a channel, then type the obj_id of the channel manualy in the fk_wasterwater_structure field of the node.</p>
+<p>If you really want to connect the node to a channel, then type the obj_id of the channel manually in the fk_wasterwater_structure field of the node.</p>
 </div>
 </section>
 <section id="multiedit">

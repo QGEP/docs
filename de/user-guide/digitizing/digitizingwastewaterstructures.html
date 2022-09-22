@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2.2. Abwasserbauwerke digitalisieren &mdash; QGEP 0.8 Dokumentation</title>
@@ -178,7 +178,7 @@
 <p>Der digitalisierte Punkt wird auch für die verknüpften Klassen Deckel und Abwasserknoten übernommen. Der vw_qgep_Abwasserbauwerk-Punkt selber hat aber keinen Z-Wert. Wenn die Deckelkote ‚DE_Kote‘ erfasst wird, wird diese Kote als Z Wert bei der Deckelgeometrie verwendet. Der Wert aus dem Feld ‚AK_Sohlenkote‘ wird als Z Wert der Abwasserknotengeometrie übernommen.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Wenn die Kote eines Deckels ändert, ändert sich auch der Z Wert seiner Geometrie. Wenn der Z Wert der Geometrie des Deckels ändert, ändert auch die Kote des Deckel. Wenn beide Werte gleichzeitig ändern, hat die Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie des Deckels gemäss der Kote des Deckels gesetzt und falls diese NULL ist, wird der Z Werte der Geometrie auf NaN gesetzt. Das gleiche gilt für Abwasserknoten.</p>
+<p>If a cover level changes, the Z value of the cover’s geometry will be adjusted. When the geometry changes, the co_level attribut is adjusted as well. If both values change, the level takes precedence. On an insert it’s like when both value change. Means the cover’s geometry is set according to the cover level and if it’s NULL, the Z value is set to NaN. The same situation is on editing the wastewater node directly.</p>
 </div>
 </section>
 </section>

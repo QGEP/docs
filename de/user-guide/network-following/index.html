@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.5. Werkzeuge zur Netzwerkverfolgung &mdash; QGEP 0.8 Dokumentation</title>
@@ -160,7 +160,7 @@
 <span id="sumupupstream"></span><h2><span class="section-number">3.5.4. </span>Summieren gegen die Fließrichtung<a class="headerlink" href="#sum-up-upstream" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Ein Tool in der QGEP-Werkzeugkiste.</p></li>
-<li><p>Mit diesem Tool kann ein Wert über ein ganzes Kanalnetz summiert werden, z. Bsp. die Fliesszeit von jedem Punkt bis zum Auslass aus dem Kanalnetz.</p></li>
+<li><p>The idea for this tool is to sum up a value over the whole network of channels, e.g. the flowtime for each point to the outlet of the network.</p></li>
 <li><p>Für dieses Tool ist ein Feld im Layer vw_qgep_reach notwendig, welches die zu summierenden Werte enthält. Weil interessierende Werte normalerweise nicht im Layer vorhanden sind, muss das Feld (z. Bsp. die Fliesszeit oder die Fliessgeschwindigkeit) an den Layer vw_qgep_reach verknüpft (join) werden.</p></li>
 <li><p>Als Beispiel hier ein kleines Netzwerk, beschriftet mit Haltungs-Bezeichnung, Länge und Fliessrichtungspfeil.</p></li>
 </ul>
@@ -186,9 +186,9 @@
 <ul class="simple">
 <li><p>Im Fenster muss folgendes eingegeben/gewählt werden</p>
 <ul>
-<li><p>einen Ausdruck gemäss dem Titel des Feldes (COALESCE(„field_name“,0). Wenn der <strong>coalesce</strong> Befehl nicht verwendet wird, gibt es bei der Ausführung des Tools einen Fehler, wenn sich im zu summierenden Feld ein NULL-Wert befindet. In der Abbildung ist als Beispiel die Berechnung der Fliesszeit in [Minuten], berechnet aus der Länge effektiv und der Fliessgeschindigkeit in [m/s].</p></li>
+<li><p>an expression as shown in the title of the field (COALESCE(„field_name“,0). If you do not use the <strong>coalesce</strong> command, you will get an error when running the tool and there are NULL-values in the field to sum up. In the figure is as example the calculation for the flow time in [minutes], calculated with length effective and the flow rate in [m/s].</p></li>
 <li><p>das Verhalten bei Verzweigungen (Minimum, Maximum, Durchschnitt): welcher Wert wird für die weiter Summierung verwendet, wenn zwei Äste des Kanalnetzes zusammenkommen.</p></li>
-<li><p>die erweiterten Parameter sind für QGEP bereits vorkonfiguriert und sollten nicht geändert werden.</p></li>
+<li><p>the advanced parameters are preconfigured for QGEP and should not need to be changed.</p></li>
 <li><p>Summed up: Bleibt das Feld leer wird im Projekt ein temporärer Punkt-Layer mit den Resultaten erstellt. Oder sie können in diesem Feld das Resultat in einen Punkt-Vektorlayer speichern.</p></li>
 </ul>
 </li>
@@ -196,7 +196,8 @@
 <figure class="align-default">
 <img alt="../../_images/sumupupstream-tool.jpg" src="../../_images/sumupupstream-tool.jpg" />
 </figure>
-<p>Der resultierende Punkt-Layer hat die Felder des vw_wastewater_node Layer und ein ein zusätzliches Feld <strong>value</strong> mit der Summe für jeden Abwasserknoten. In der Abbildung ist das Resultat des Beispiels mit allen drei Verzweigungsverhalten dargestellt: Minimum = normaler Text, Maximum = fett, Durchschnitt = unterstrichen.</p>
+<p>The resulting point-vector layer has the fields of the vw_wastewater_node layer and an additional field <strong>value</strong> with the sum for each wastewater node.
+* In the figure below you see the result of the example with all three branch behaviors: minimum = normal style, maximum = bold, average = underscored</p>
 <figure class="align-default">
 <img alt="../../_images/sumupupstream-resultat.jpg" src="../../_images/sumupupstream-resultat.jpg" />
 </figure>

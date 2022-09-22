@@ -9,8 +9,8 @@ This represents a guide on how to add or edit maintenance event data in QGEP.
 General
 -------
 
-* Maintenance events can be connected to one structure or to many. 
-  Therefore QGEP uses a intermediatry RE_table to model the n:m relationship (**re_maintenance_event_wastewater_structure**)
+* Maintenance events can be connected to one structure or to many.
+  Therefore QGEP uses a intermediary RE_table to model the n:m relationship (**re_maintenance_event_wastewater_structure**)
 
 
 Adding a new Maintenance Event
@@ -23,11 +23,11 @@ Adding a new Maintenance Event
 * Create a new maintenance event with the **Add child feature** button.
 
  .. figure:: images/maintenance_add_child.jpg
- 
+
  * Edit the new record in the vw_qgep_maintenance form, then click **OK**
- 
+
  .. figure:: images/maintenance_new_record.jpg
- 
+
  .. figure:: images/maintenance_new_record_saved.jpg
 
 Link an existing Maintenance Event
@@ -36,13 +36,13 @@ Link an existing Maintenance Event
 * Enable the edit mode.
 * With the **Identify Features** tool you can select **wastewater_structures** or **reaches** by selecting their corresponding layer (**vw_qgep_wastewater_structure** or **vw_qgep_reach**).
 * The respective form will open. Change to the **Maintenance** tab.
- 
-* Click the **Link existing child features** button. 
+
+* Click the **Link existing child features** button.
 
  .. figure:: images/maintenance_link_child.jpg
- 
- * Choose a maintenenace event from the **Dialog** window by clicking in the box of the record. The box must by yellow. Then click **OK**
- 
+
+ * Choose a maintenance event from the **Dialog** window by clicking in the box of the record. The box must by yellow. Then click **OK**
+
  * Close the windows with **OK** and turn of the edit mode to save changes
 
 
@@ -52,11 +52,11 @@ Unlink Maintenance Events
 * Enable the edit mode.
 * With the **Identify Features** tool you can select **wastewater_structures** or **reaches** by selecting their corresponding layer (**vw_qgep_wastewater_structure** or **vw_qgep_reach**).
 * The respective form will open. Change to the **Maintenance** tab.
- 
-* Select a maintenance event by clicking in the box (box gets yellow), then click the **Delete child feature** button. 
+
+* Select a maintenance event by clicking in the box (box gets yellow), then click the **Delete child feature** button.
 
  .. figure:: images/maintenance_delete_link.jpg
- 
+
  .. attention:: There is only the record in the RE-table deleted. The maintenance event record himself is not deleted and can by linked with other wastewater structures.
 
 
@@ -69,5 +69,5 @@ Editing
 Multi Edit
 -----------------------------------------------------------
 
-There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the **Maintenance** tab is empty. 
-Multi edit with linked tables is not implemented in QGIS. 
+There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the **Maintenance** tab is empty.
+Multi edit with linked tables is not implemented in QGIS.

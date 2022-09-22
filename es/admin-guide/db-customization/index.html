@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.4. Personalización del modelo de datos &mdash; documentación de QGEP - 0.8</title>
@@ -93,10 +93,10 @@
            <div itemprop="articleBody">
              
   <section id="customization-of-the-data-model">
-<h1><span class="section-number">4.4. </span>Personalización del modelo de datos<a class="headerlink" href="#customization-of-the-data-model" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">4.4. </span>Personalización del modelo de datos<a class="headerlink" href="#customization-of-the-data-model" title="Enlace permanente a este encabezado"></a></h1>
 <p>Este capítulo describe la posible personalización del modelo de datos.</p>
 <section id="introduction">
-<h2><span class="section-number">4.4.1. </span>Introducción<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.1. </span>Introducción<a class="headerlink" href="#introduction" title="Enlace permanente a este encabezado"></a></h2>
 <p>The data model is versioned and updates are achieved using Postgres Updates Manager (aka <a class="reference external" href="https://github.com/opengisch/pum">PUM</a>).
 The views required to edit the data are automatically generated using <a class="reference external" href="https://github.com/opengisch/pirogue">Pirogue</a> library.</p>
 <p>La combinación de ambos permite introducir pequeñas personalizaciones del modelo de datos, como agregar campos a las bases de las tablas existentes o ampliar las vistas uniendo tablas adicionales.</p>
@@ -105,7 +105,7 @@ The views required to edit the data are automatically generated using <a class="
 <p>Si aún se requiere una personalización, las siguientes explicaciones y reglas explican cómo adaptar el modelo de datos QGEP a sus necesidades específicas.</p>
 </section>
 <section id="adding-fields">
-<h2><span class="section-number">4.4.2. </span>Agregando campos<a class="headerlink" href="#adding-fields" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.2. </span>Agregando campos<a class="headerlink" href="#adding-fields" title="Enlace permanente a este encabezado"></a></h2>
 <p>Está permitido agregar campos adicionales a las tablas simplemente nombrándolas como <code class="docutils literal notranslate"><span class="pre">usr_…</span></code>.</p>
 <p>If added in base tables, these additional fields will be automatically added to the views, being an editable field. The views can be re-generated any time using the following command:</p>
 <p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span></code></p>
@@ -115,7 +115,7 @@ The views required to edit the data are automatically generated using <a class="
 </div>
 </section>
 <section id="joining-additional-tables">
-<h2><span class="section-number">4.4.3. </span>Uniendo tablas adicionales<a class="headerlink" href="#joining-additional-tables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.3. </span>Uniendo tablas adicionales<a class="headerlink" href="#joining-additional-tables" title="Enlace permanente a este encabezado"></a></h2>
 <p>It is possible to join additional tables to the two main views (<code class="docutils literal notranslate"><span class="pre">vw_qgep_wastewater_structure</span></code> and <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>).
 This is done by using a YAML definition file for each view and defining a list of joined tables.
 Fields of these tables will be joined as read-only fields as they are discarded in edit triggers.
@@ -139,7 +139,7 @@ For joining a table to <code class="docutils literal notranslate"><span class="p
 <p>And similarly for <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code> view, by specifying <code class="docutils literal notranslate"><span class="pre">qgep_reach_extra</span></code> variable to the corresponding YAML file path.</p>
 </section>
 <section id="creating-custom-views">
-<h2><span class="section-number">4.4.4. </span>Creando vistas personalizadas<a class="headerlink" href="#creating-custom-views" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.4. </span>Creando vistas personalizadas<a class="headerlink" href="#creating-custom-views" title="Enlace permanente a este encabezado"></a></h2>
 <p>Es posible crear vistas personalizadas y agregarlas al modelo de datos.</p>
 <p>In order to allow upgrades of the data model, one should provide a script to create them and one to delete them.
 These scripts (SQL or Python) should be placed in a specific path and name them as pre-all.{py,sql} and post-all.{py,sql}.
