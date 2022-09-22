@@ -21,7 +21,7 @@ Delete Reaches
   Another way is to press the **Delete** button located in the **Digitizing toolbar**.
 
   .. figure:: images/delete_button.jpg
-  
+
   Depending on how you customized QGIS the **Digitizing toolbar** may be hidden or located
   elsewhere.
 
@@ -36,7 +36,7 @@ Delete Manholes and other Wastewater Structures
 
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the objects (**manholes**, **special structures** etc.) you want to delete
-* Use **Edit** --> **Delete Selected** to delete. 
+* Use **Edit** --> **Delete Selected** to delete.
 * Stop the editing mode and confirm changes to layer. All changes will be saved to database.
 
 .. note:: Delete wastewater structures deletes also all connected structure parts and all connected wastewater nodes.
@@ -47,7 +47,7 @@ Delete Covers
 * Select **vw_qgep_wastewater_structure** and change to edit mode
 * Select the object (**manholes**, **special structures** etc.) from which you want the cover deleted
 * Use the **Identify Features** tool to open the form
-* Switch to the covers tab 
+* Switch to the covers tab
 * Select the cover(s) you want to delete
 * Click the red x button to delete the covers
 

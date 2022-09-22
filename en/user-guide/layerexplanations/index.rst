@@ -9,4 +9,3 @@ An overview of QGEP including the layer explanation
    overview
    layerexplanation
    namingconventions
-   
