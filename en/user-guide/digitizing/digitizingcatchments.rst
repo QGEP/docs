@@ -111,6 +111,6 @@ You connect catchment areas with the tool **Connect wastewater networkelements**
 
 .. note:: The tool does not check, if your choosen wastewater node is a part of the pwwf-network (primary network). It's only the user who decides, if a node is ok or not. If you are not sure, please check the **VSA Wegleitung GEP-Daten**, part **Erfassungsgrundsätze**
 
-You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes
+You can not connect multiple areas with the tool to a wastewater node at once. If you want to do so, you have to select the catchment areas, open the attribute table and then start the multi edit mode. There you can choose the wastewater node from the list of all nodes.
 
 Do delete a connection to a wastewater node, you can edit the area with the **Identify features** tool.
