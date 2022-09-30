@@ -4,6 +4,8 @@ Network following tools
 Refresh network topology
 ------------------------
 
+.. attention:: This feature is not available if the rights configuration has been done correctly (the user does not have the rights to refresh the network).
+
 * Before using the network following tools, be sure, that your network topology is updated
 
 * To refresh the network topology, you select the layer **vw_qgep_reach** and set the layer to the edit mode
