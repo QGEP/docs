@@ -16,6 +16,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
@@ -82,7 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -118,8 +119,7 @@
 <h2><span class="section-number">3.3.1.1. </span>Demoprojekt<a class="headerlink" href="#demo-project" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Gehen Sie sicher, dass sie das Demoprojekt mit pgAdminIII (siehe <a class="reference internal" href="../../installation-guide/database-initialization.html#database-initialization"><span class="std std-ref">Initialisierung der Datenbank</span></a> Kapitel) importiert haben</p></li>
-<li><p>Open the demo project by going to the main menu and press <strong>Project</strong> –&gt; <strong>Open</strong>  or by pressing <code class="docutils literal notranslate"><span class="pre">CTRL</span></code>
-+ <code class="docutils literal notranslate"><span class="pre">O</span></code> at the same time.</p></li>
+<li><p>Öffnen sie das Demoprojekt indem Sie ins Hauptmenu gehen und dann <strong>Project</strong> –&gt; <strong>Open</strong> drücken oder indem sie „STRG“ + „O“ gemeinsam drücken.</p></li>
 </ul>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg"><img alt="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" src="../../_images/qgep_demoproject_selection_qgep_en_qgs.jpg" style="width: 800.0px; height: 450.0px;" /></a>
@@ -131,7 +131,7 @@
 <img alt="../../_images/qgep_demoproject_login.jpg" src="../../_images/qgep_demoproject_login.jpg" />
 </figure>
 <ul class="simple">
-<li><p>You should now have the demo project loaded</p></li>
+<li><p>Sie sollten nun das Demoprojekt geladen haben</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/qgep_demoproject_overview.jpg" src="../../_images/qgep_demoproject_overview.jpg" />
@@ -143,7 +143,7 @@
 <section id="layers">
 <h2><span class="section-number">3.3.1.2. </span>Layer<a class="headerlink" href="#layers" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span class="std std-ref">Layers explanation</span></a>.</p></li>
+<li><p>QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel <a class="reference internal" href="../layerexplanations/layerexplanation.html#layer-explanation"><span class="std std-ref">Layer Erläuterungen</span></a>.</p></li>
 </ul>
 </section>
 <section id="changing-attributes-of-point-elements-manholes-special-structures">
@@ -182,7 +182,7 @@
 <div><ul class="simple">
 <li><p>Um einen Attribut zu ändern müssen Sie zuerst den <strong>vw_qgep_reach</strong> Layer auswählen.</p></li>
 <li><p>Aktivieren Sie den Bearbeitungsmodus.</p></li>
-<li><p>Then click on the <strong>Identify features</strong> button and click the reach you want to edit.</p></li>
+<li><p>Dann klicken Sie auf den <strong>Objekte abfragen</strong> Knopf und wählen die Haltung, welches Sie bearbeiten wollen, mit einem Klick</p></li>
 <li><p>Das <strong>vw_qgep_reach</strong> Formular öffnet sich.</p></li>
 </ul>
 <blockquote>
@@ -207,8 +207,7 @@
 <p class="admonition-title">Bemerkung</p>
 <p>In der VSA-DSS ist definiert, dass Haltungen in Fliessrichtung gezeichnet werden müssen (der Start-Haltungspunkt ist dort wo das Abwasser zufliesst, der End-Haltungspunkt ist dort wo das Abwasser weiterfliesst).</p>
 </div>
-<p>QGEP has a tool to change the reach direction. With this tool you can change all selected reaches at once.
-Do not use the <strong>Reverse line</strong> button of QGIS, because this button do not change the reach points and their connection to wastewater network elements.</p>
+<p>QGEP hat ein Tool um die Haltungs-Richtung zu wechseln. Mit diesem Tool können alle selektierten Haltungen zusammen geändert werden. Benutzen sie nicht den QGIS-Knopf <strong>Linie umkehren</strong>, weil dieser Befehl die Haltungspunkte und die Verknüpfungen zu den Abwassernetzelementen nicht richtig anpasst.</p>
 <ul class="simple">
 <li><p>Zuerst sind alle Haltungen zu selektieren, die geändert werden sollen. Es ist nicht notwendig den vw_qgep_reach Layer auszuwählen oder für diesen Layer  den Bearbeitungsstatus einzuschalten.</p></li>
 <li><p>Öffnen sie die <strong>Werkzeugkiste</strong></p></li>
@@ -253,7 +252,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p>Bei Verknüpfungen von Haltung zu Haltung wird der Haltungspunkt rechtwinklig auf die andere Haltung verschoben. Wenn es keine Möglichkeit für ein Verschieben mit rechtem Winkel gibt, wird zum nächsten Endpunkt der Haltung verschoben.</p>
 <div class="admonition attention">
 <p class="admonition-title">Achtung</p>
-<p>If there is snapping from reach to reach, you will get not the expected result, if the first reach snaps to a second reach, and afterwards this second reach snaps to a node or a third reach, there will be no more graphical connection between reach 1 and reach 2. You have to rerun the command.</p>
+<p>Wenn zwei Haltungen miteinander verknüpft sind (Blindanschluss ohne Abwasserknoten) wird das Resultat unter Umständen nicht den Erwartungen entsprechen. Wenn  Haltung 1 auf Haltung 2 schnappt, und danach Haltung 2 auch noch auf einen Knoten oder eine weitere Haltung schnappt, ist die graphische Verknüpfung zwischen Haltung 1 und 2 nicht mehr garantiert. Der Befehl muss noch einmal gestartet werden.</p>
 </div>
 </section>
 <section id="working-with-codes-of-value-list">
@@ -352,7 +351,7 @@ Do not use the <strong>Reverse line</strong> button of QGIS, because this button
 <p>In QGEP existiert im Moment kein Werkzeug, um einen Abwasserknoten mit einem Kanal zu verknüpfen.  Es werden also vorläufig nur die Haltungspunkte mit dem Abwasserknoten verknüpft.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>If you really want to connect the node to a channel, then type the obj_id of the channel manually in the fk_wasterwater_structure field of the node.</p>
+<p>Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden.</p>
 </div>
 </section>
 <section id="multiedit">

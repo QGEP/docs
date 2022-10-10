@@ -16,6 +16,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -128,7 +129,7 @@ Linux : use you package manager</p>
 <h3><span class="section-number">4.3.2.2. </span>Python libraries<a class="headerlink" href="#python-libraries" title="Permalink to this heading"></a></h3>
 <p>You need <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite>.</p>
 <p>To install : before launching QGIS, open OSGeo4W Shell, and type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="s2">&quot;sqlalchemy&gt;=1.3.22&quot;</span> <span class="s2">&quot;geoalchemy2&gt;=0.9.0&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="s2">&quot;sqlalchemy~=1.3.22&quot;</span> <span class="s2">&quot;geoalchemy2&gt;=0.9.0&quot;</span>
 </pre></div>
 </div>
 <p>If the command fails, try:</p>
@@ -148,7 +149,7 @@ Linux : use you package manager</p>
 </section>
 <section id="modelbaker">
 <h3><span class="section-number">4.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Permalink to this heading"></a></h3>
-<p>The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin <cite>Modelbaker</cite> manually from the QGIS plugin manager (version 6.4 or newer).</p>
+<p>The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin <cite>Modelbaker</cite> manually from the QGIS plugin manager (version 6.4 or newer but older than 7.1).</p>
 </section>
 <section id="qgep-version">
 <h3><span class="section-number">4.3.2.4. </span>QGEP Version<a class="headerlink" href="#qgep-version" title="Permalink to this heading"></a></h3>

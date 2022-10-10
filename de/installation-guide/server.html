@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -62,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -100,14 +101,14 @@
 <ul class="simple">
 <li><p>PostgreSQL (&gt;=9.6) installieren</p>
 <ul>
-<li><p><a class="reference external" href="http://www.postgresql.org/download">Download page</a></p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/download">Download von</a></p></li>
 </ul>
 </li>
 <li><p>PostGIS (&gt;=2.4) installieren</p>
 <ul>
 <li><ol class="upperalpha simple" start="5">
 <li><ol class="loweralpha simple" start="7">
-<li><p>by using the (Application) Stack Builder shipped with the EnterpriseDB version of posgreSQL on Windows and macOS</p></li>
+<li><p>mit der (Application) Stack Builder, die zusammen mit der EnterpriseDB Version von PostgreSQL für Windows und MacOS vertrieben wird.</p></li>
 </ol>
 </li>
 </ol>
@@ -117,7 +118,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>The following instructions are <strong>optional</strong>:</p>
+<p>Die folgenden Anleitungen sind <strong>optional</strong>:</p>
 <p>Bei einer Einzelplatzinstallation (ohne Datenbank im Netzwerk) kann man die Datenbank so aufsetzen, dass sie lokalen Verbindungen vertraut.</p>
 <p>In diesem Fall wird überhaupt kein Passwort benötigt.</p>
 <p>Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a> und setzen Sie die auth-options von``md5`` auf <code class="docutils literal notranslate"><span class="pre">trust</span></code>. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden.</p>

@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -65,7 +66,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -153,15 +154,15 @@
 <ul class="simple">
 <li><p>Vermutlich wollen sie die Datenbank jetzt umbenennen: Rechtsklick auf die Datenbank, klick auf <cite>Eigenschaften…</cite> und geben sie einen neuen Namen ein.</p></li>
 </ul>
-<p>There are now 7 schemas in the database (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)</p>
+<p>Es sind jetzt 7 Schemata in der Datenbank vorhanden (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)</p>
 </section>
 <section id="create-minimal-roles-and-access">
 <h3><span class="section-number">2.3.1.2. </span>Rollen und Zugriffsrechte erstellen<a class="headerlink" href="#create-minimal-roles-and-access" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>The QGEP roles are defined in the <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql</a> (per cluster) and <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql</a> (per database) files. It is recommended to use these when using QGEP in a production environment.</p>
+<p>Die QGEP-Rollen werden in den Dateien <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql</a> (pro Cluster) und <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql</a> (pro Datenbank) definiert. Es wird empfohlen, diese zu verwenden, wenn Sie QGEP in einer Produktionsumgebung einsetzen.</p>
 </div>
-<p>Copy paste and run the two .sql one after the other in the query editor of pgAdmin4 (Tools &gt; Query Tool).</p>
+<p>Kopieren Einsetzen und Starten der beiden .sql nacheinander im Query Editor von pgAdmin4 (Tools &gt; Query Tool).</p>
 </section>
 <section id="empty-data-model">
 <h3><span class="section-number">2.3.1.3. </span>Leeres Datenbank-Schema<a class="headerlink" href="#empty-data-model" title="Permalink to this heading"></a></h3>
@@ -182,7 +183,7 @@
 <span class="k">if</span> <span class="ow">not</span> <span class="n">exist</span> <span class="o">%</span><span class="n">filename</span><span class="o">%</span> <span class="p">(</span>
    <span class="n">echo</span> <span class="s2">&quot;File </span><span class="si">%f</span><span class="s2">ilename</span><span class="si">% d</span><span class="s2">oes not exist. Please download the latest datamodel from https://github.com/QGEP/datamodel/releases (structure_with_value_lists.sql) and adjust filename in this batch file.&quot;</span>
    <span class="n">PAUSE</span>
-   <span class="n">exit</span> <span class="o">-</span><span class="mi">1</span>
+   <span class="nb">exit</span> <span class="o">-</span><span class="mi">1</span>
 <span class="p">)</span>
 
 <span class="nb">set</span> <span class="o">/</span><span class="n">p</span> <span class="n">db</span><span class="o">=</span><span class="s2">&quot;Please enter the database name? (e.g. qgep_community) &quot;</span>
@@ -224,7 +225,7 @@
 <p>Es kann irgendein Datenbankname verwendet werden.</p>
 </div>
 <ul class="simple">
-<li><p>Update privileges for the qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm schema as described in the chapter <cite>Create  minimal roles and access</cite>.</p></li>
+<li><p>Die Berechtigungen definieren für die Schemata qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm wie im Kapitel <cite>Rollen und Zugriffsrechte erzeugen</cite> beschrieben .</p></li>
 </ul>
 </section>
 <section id="generate-the-data-model-under-linux">

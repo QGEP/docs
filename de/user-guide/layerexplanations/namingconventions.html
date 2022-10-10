@@ -16,12 +16,13 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
     <link rel="search" title="Suche" href="../../search.html" />
     <link rel="next" title="3.2. Digitalisieren in QGEP" href="../digitizing/index.html" />
-    <link rel="prev" title="3.1.2. Layers explanation" href="layerexplanation.html" /> 
+    <link rel="prev" title="3.1.2. Layer Erläuterungen" href="layerexplanation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,11 +49,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP Benutzerhandbuch</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3.1. Übersicht über QGEP</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="overview.html">3.1.1. Einleitung und Übersicht</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layerexplanation.html">3.1.2. Layers explanation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layerexplanation.html">3.1.2. Layer Erläuterungen</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.1.3. Namenskonventionen</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#schemas-in-the-qgep-database">3.1.3.1. Schemas in der QGEP-Datenbank</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#layer-names">3.1.3.2. Layer Bezeichnungen</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#attribute-names">3.1.3.3. Attribute names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-names">3.1.3.3. Feldnamen</a></li>
 </ul>
 </li>
 </ul>
@@ -70,7 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -105,11 +106,11 @@
 <h2><span class="section-number">3.1.3.1. </span>Schemas in der QGEP-Datenbank<a class="headerlink" href="#schemas-in-the-qgep-database" title="Permalink to this heading"></a></h2>
 <p>Die QGEP-Datenbank hat sechs qgep-Schemas:</p>
 <ul class="simple">
-<li><p>qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-datamodel (cover, wastewaternode, channel, etc.) These are the tables you normally work with.</p></li>
+<li><p>qgep_od: in diesem Schema sind die Tabellen, die mit dem Datenmodell VSA-DSS übereinstimmen (Deckel, Abwasserknoten, Kanal etc.). Mit diesen Tabellen wird normalerweise gearbeitet.</p></li>
 <li><p>qgep_vl: ist das Schema für die Wertelisten (value lists). Es gibt ein Tabelle für jede Werteliste der VSA-DSS. Als QGEP-User kann man diese Tabellen nicht bearbeiten.</p></li>
 <li><p>qgep_network: Schema für die Tabellen, die QGEP für die Netzwerk-Werkzeuge benötigt. Diese Tabellen können mit den QGEP-Werkzeugen aktualisiert werden.</p></li>
 <li><p>qgep_sys: Spezielle Tabellen für die Administration der Datenbank. Als QGEP-User kann man diese Tabellen nicht bearbeiten.</p></li>
-<li><p>qgep_import and qgep_swmm: schema for additional plugins/functions (QField and working with SWMM)</p></li>
+<li><p>qgep_import und qgep_swmm: Schema für zusätzliche Plugins/Funktionen (QField und Arbeiten mit SWMM)</p></li>
 </ul>
 </section>
 <section id="layer-names">
@@ -128,7 +129,7 @@
 <p>Das sind Views im Schema qgep_network</p>
 </section>
 <section id="attribute-names">
-<h2><span class="section-number">3.1.3.3. </span>Attribute names<a class="headerlink" href="#attribute-names" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1.3.3. </span>Feldnamen<a class="headerlink" href="#attribute-names" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Präfixe in Feldnamen</p></li>
 </ul>
@@ -140,8 +141,7 @@
 <ul class="simple">
 <li><p>_ Felder</p></li>
 </ul>
-<p>Attributes that start with _ (underscore) are calculated fields. You can not find them in the schemas. Examples: _slope_per_mill in vw_qgep_reach.
-_channel_usage_current in vw_qgwp_wastewater_structure is calculated from the field usage_current of the channel, that is connected with the foreign keys of the wastewater_networkelement as outlet to a manhole or special structure.</p>
+<p>Felder die mit _ (Unterstrich) beginnen sind berechnete Felder. Man findet sie in den Schemas nicht. Beispiele: _slope_per_mill (_GefaellePromille) in vw_qgep_Haltung. _Kanal_Nutzungsart_ist in vw_qgep_Abwasserbauwerk ist berechnet aus dem Feld Nutzungsart_Ist des Kanales, der über die Fremdschlüsselfelder der Abwassernetzelemente als Auslauf mit dem Schacht verknüpft ist.</p>
 </section>
 </section>
 
@@ -149,7 +149,7 @@ _channel_usage_current in vw_qgwp_wastewater_structure is calculated from the fi
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="layerexplanation.html" class="btn btn-neutral float-left" title="3.1.2. Layers explanation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="layerexplanation.html" class="btn btn-neutral float-left" title="3.1.2. Layer Erläuterungen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
         <a href="../digitizing/index.html" class="btn btn-neutral float-right" title="3.2. Digitalisieren in QGEP" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

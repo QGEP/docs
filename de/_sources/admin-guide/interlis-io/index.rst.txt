@@ -30,7 +30,7 @@ You need `sqlalchemy` and `geoalchemy2`.
 
 To install : before launching QGIS, open OSGeo4W Shell, and type::
 
-   >>> pip3 install "sqlalchemy>=1.3.22" "geoalchemy2>=0.9.0"
+   >>> pip3 install "sqlalchemy~=1.3.22" "geoalchemy2>=0.9.0"
 
 If the command fails, try::
  
@@ -49,7 +49,7 @@ The same `--target` flag can be added to install `sqlalchemy` and `geoalchemy2` 
 
 Modelbaker
 -----------
-The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager (version 6.4 or newer).
+The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager (version 6.4 or newer but older than 7.1).
 
 
 QGEP Version

@@ -16,6 +16,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
@@ -56,11 +57,11 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.8. How To</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#manual-label-positioning-for-different-scales">3.8.1. Manuelle Beschriftungspositionen für unterschiedliche Massstäbe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-import-existing-label-positions">3.8.2. Importieren von bestehenden Beschriftungspositionen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-translate-a-label-prefix">3.8.3. How to translate a label prefix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-translate-a-label-prefix">3.8.3. Übersetzen von Beschriftungs-Prefix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">3.8.4. Erfassen einer Hydr_Geometrie (entspricht einer Beckengeometrie in MikeUrban)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">3.8.5. Hydraulische Modellierung eines Überlaufes (Streichwehr/Leapingwehr/Förderanlage)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#overflow-characteristic">3.8.6. Überlaufcharakteristik</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#further-informations">3.8.7. Further informations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-informations">3.8.7. Weitere Infos</a></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -156,12 +157,12 @@
 </ul>
 </section>
 <section id="how-to-translate-a-label-prefix">
-<h2><span class="section-number">3.8.3. </span>How to translate a label prefix<a class="headerlink" href="#how-to-translate-a-label-prefix" title="Permalink to this heading"></a></h2>
-<p>QGEP automatically creates labels for wastewater-structures and reaches:</p>
+<h2><span class="section-number">3.8.3. </span>Übersetzen von Beschriftungs-Prefix<a class="headerlink" href="#how-to-translate-a-label-prefix" title="Permalink to this heading"></a></h2>
+<p>QGEP erstellt automatisch Beschriftungen für Abwasserbauwerke und Haltungen:</p>
 <figure class="align-default">
 <img alt="../../_images/qgep_labels.png" src="../../_images/qgep_labels.png" />
 </figure>
-<p>To easily translate label prefixes a series of QGIS project variables have been added. If you want to change the prefixes for cover level, bottom level and entry and exit levels, change the following project settings:</p>
+<p>Um die Kurzeichen in den Beschriftungen zu übersetzen sind im QGIS-Projekt entsprechende Variablen definiert. Um die Buchstaben für Deckel-Koten, Sohlenkoten und Ein- und Auslaufkoten zu ändern, müssen diese Projekt-Einstellungen geändert werden:</p>
 <figure class="align-default">
 <img alt="../../_images/qgep_label_prefix_settings.png" src="../../_images/qgep_label_prefix_settings.png" />
 </figure>
@@ -263,9 +264,8 @@ Das Feld fs_UeberlaufNach muss manuell ausgefüllt werden. Die Obj_ID des zuvor 
 </ol>
 </section>
 <section id="further-informations">
-<h2><span class="section-number">3.8.7. </span>Further informations<a class="headerlink" href="#further-informations" title="Permalink to this heading"></a></h2>
-<p>Further Q &amp; A’s you can find in the
-<a class="reference external" href="https://github.com/QGEP/QGEP/discussions/categories/q-a">QGEP Discussion section</a></p>
+<h2><span class="section-number">3.8.7. </span>Weitere Infos<a class="headerlink" href="#further-informations" title="Permalink to this heading"></a></h2>
+<p>Weiter Q &amp; A’s gibt es hier: <a class="reference external" href="https://github.com/QGEP/QGEP/discussions/categories/q-a">QGEP Discussion section</a></p>
 </section>
 </section>
 

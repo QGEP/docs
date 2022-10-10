@@ -16,6 +16,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
@@ -74,7 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -119,7 +120,7 @@
 </div></blockquote>
 </li>
 </ul>
-<p>Data entry in QGEP needs some understanding of the underlying data model <a class="reference external" href="http://dss.vsa.ch">VSA-DSS</a>, but is supported with some great data collecting wizards and forms that link the different tables correctly together. Especially the linking of manholes and reaches to a complete sewer network is highly automated and can be controlled with the network following tool.</p>
+<p>Die Datenerfassung in QGEP benötigt etwas Verständnis des zugrundeliegenden Datenmodells <cite>VSA-DSS &lt;http://dss.vsa.ch&gt;</cite>, wird aber erleichtert durch einen Datenerfassungsassistenten und Formulare, welche die verschiedenen Tabellen korrekt miteinander verbinden. Vor allem die Verknüpfung von Schächten und Haltungen zu einem kompletten Kanalisationsnetzwerk ist automatisiert und kann mit dem Netz-Verfolgungswerkzeug kontrolliert werden.</p>
 <section id="the-qgep-wizard">
 <span id="wizard"></span><h2><span class="section-number">3.2.1.1. </span>Der QGEP Wizard (Zauberer)<a class="headerlink" href="#the-qgep-wizard" title="Permalink to this heading"></a></h2>
 <p>Mit dem QGEP Wizard können Schächte und Kanäle mit wenigen Mausklicks digitalisiert werden.</p>
@@ -142,7 +143,7 @@
 <li><p>Wenn die neue Haltung schnappt, dann wird die Verknüpfungs-Obj_id automatisch in die Fremdschlüsselfelder fk* der Haltungspunkt eingetragen.</p></li>
 <li><p>Die QGIS-Option <strong>Letzte Attributeingaben wiederverwenden</strong> funktioniert grundsätzlich nicht. Aber für die Standard-Felder im Allgemein Tab (und nur für diese Felder) werden die letzten Eingabewerte vom Wizard eingetragen.</p></li>
 </ul>
-<p>If you use another tool (e.g. the <strong>Identify Features</strong> tool) and then want to continue digitizing with the wizard, you can not select the wizard again. You have to click <strong>Stop Data Entry</strong> and then <strong>Start Data Entry</strong> and you can continue.</p>
+<p>Wenn während dem Digitalisieren ein anderes Tool benutzt wird (z.B. das <strong>Objekte abfragen</strong> Tool), dann genügt es nicht, den Wizard anzuklicken um mit dem Wizard weiter zu digitalisieren. Es muss <strong>Stop Data Entry</strong> und danach <strong>Start Data Entry</strong> angeklickt werden bevor weiter digitalisiert werden kann.</p>
 <p>Wenn vom Digitalisieren der Schächte vw_qgep_Abwasserbauwerk zum Digitalisieren der Haltungen vw_qgep_Haltung gewechselt wird, ist es empfehlenswert, Stop und Start Data Entry anzuklicken. Damit werden die neuen Schächte gespeichert und beim Digitalisieren der Haltungen kann auf diese neuen Schächte resp. deren Abwasserknoten geschnappt werden.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>

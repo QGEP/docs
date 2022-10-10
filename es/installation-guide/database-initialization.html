@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
@@ -185,7 +186,7 @@ and by downloading the latest <cite>qgep_vx.y.z_structure_with_value_lists.sql</
 <span class="k">if</span> <span class="ow">not</span> <span class="n">exist</span> <span class="o">%</span><span class="n">filename</span><span class="o">%</span> <span class="p">(</span>
    <span class="n">echo</span> <span class="s2">&quot;File </span><span class="si">%f</span><span class="s2">ilename</span><span class="si">% d</span><span class="s2">oes not exist. Please download the latest datamodel from https://github.com/QGEP/datamodel/releases (structure_with_value_lists.sql) and adjust filename in this batch file.&quot;</span>
    <span class="n">PAUSE</span>
-   <span class="n">exit</span> <span class="o">-</span><span class="mi">1</span>
+   <span class="nb">exit</span> <span class="o">-</span><span class="mi">1</span>
 <span class="p">)</span>
 
 <span class="nb">set</span> <span class="o">/</span><span class="n">p</span> <span class="n">db</span><span class="o">=</span><span class="s2">&quot;Please enter the database name? (e.g. qgep_community) &quot;</span>

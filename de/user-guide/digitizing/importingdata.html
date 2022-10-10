@@ -16,6 +16,7 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
@@ -75,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -106,23 +107,21 @@
              
   <section id="importing-data">
 <h1><span class="section-number">3.2.8. </span>Datenimport<a class="headerlink" href="#importing-data" title="Permalink to this heading"></a></h1>
-<p>It is quite easy to import data (geometry and attributes) from an external software.
-Here is a general description and a specific example.</p>
+<p>Es ist recht einfach, Daten (Lage und Attribute) aus externen Quellen zu importieren. Hier eine allgemeine Beschreibung und ein Beispiel.</p>
 <section id="general">
 <h2><span class="section-number">3.2.8.1. </span>Allgemeines<a class="headerlink" href="#general" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Die zu importierenden Daten sind als (Vektor-)Layer im QGEP Projekt hinzuzufügen.</p></li>
-<li><p>The field names of the attributes have to be the same as the field names of the QGEP Layer.
-Therefore it is normally not a good idea the use shp-files, because of the 10 letters limitation of the dbf-format (Alias field names do not work).</p></li>
+<li><p>Die Feldnamen der Attribute müssen gleich sein wie die Feldnamen im QGEP Layer. Deshalb sind Shp-Dateien meist nicht geeignet wegen der Beschränkung der Feldnamen im dbf-Format auf 10 Stellen (und Alias-Feldnamen funktionieren leider nicht).</p></li>
 <li><p>Wenn das QGEP Projekt ein übersetztes Projekt ist, müssen trotzdem die englischen Feldnamen verwendet werden (und nicht die übersetzten Feldnamen aus dem Alias).</p></li>
-<li><p>If there is a field with value list, you have to use the code, not the plain text.</p></li>
+<li><p>Wenn ein Attribut eine Werteliste hat, muss der Code-Wert verwendet werden und nicht der Volltext.</p></li>
 <li><p>Wenn die Felder entsprechend vorbereitet sind, dann können die Daten einfach kopiert und im QGEP-Layer eingefügt werden.</p></li>
 </ul>
 </section>
 <section id="example-importing-manholes-from-a-txt-file">
 <h2><span class="section-number">3.2.8.2. </span>Beispiel Import Schächte mit einer TXT-Datei:<a class="headerlink" href="#example-importing-manholes-from-a-txt-file" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Change the field names to identifier, x, y, co_level</p></li>
+<li><p>Ändern der Feldnamen auf identifier, x, y, co_level  (englische Feldnamen für Bezeichnung, X, Y, Deckelkote)</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/importdata_txtfile.jpg" src="../../_images/importdata_txtfile.jpg" />
@@ -166,7 +165,7 @@ Therefore it is normally not a good idea the use shp-files, because of the 10 le
 </figure>
 <ul class="simple">
 <li><p>Das Feld ws_type ist eine Ausnahme. Mögliche Werte sind manhole, special_structure, infiltration_installation, discharge_point.</p></li>
-<li><p>For other fields with value lists you have to use the code.</p></li>
+<li><p>Für andere Felder mit einer Werteliste muss der Code-Wert verwendet werden.</p></li>
 <li><p>Im obigen Beispiel hat der Wert im Feld ma_function (Normschacht-Funktion) in den Zeilen mit discharge_point oder special_structure (also nicht Normschacht) keinen Effekt.</p></li>
 </ul>
 </section>

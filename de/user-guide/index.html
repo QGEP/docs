@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
@@ -60,7 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -94,20 +95,20 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="layerexplanations/index.html">3.1. Übersicht über QGEP</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="layerexplanations/overview.html">3.1.1. Einleitung und Übersicht</a></li>
-<li class="toctree-l2"><a class="reference internal" href="layerexplanations/layerexplanation.html">3.1.2. Layers explanation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="layerexplanations/layerexplanation.html">3.1.2. Layer Erläuterungen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#main-layers">3.1.2.1. Hauptlayer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#wastewater-structures">3.1.2.2. Abwasserbauwerke</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#maintenance-events-qgep-od-vw-qgep-maintenance">3.1.2.3. Maintenance events <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_maintenance</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#value-lists-qgep-vl">3.1.2.4. Value Lists <code class="docutils literal notranslate"><span class="pre">qgep_vl.*</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#maintenance-events-qgep-od-vw-qgep-maintenance">3.1.2.3. Erhaltungsereignis <code class="docutils literal notranslate"><span class="pre">qgep_od.vw_qgep_maintenance</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#value-lists-qgep-vl">3.1.2.4. Wertelisten <code class="docutils literal notranslate"><span class="pre">qgep_vl.*</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#hydraulic">3.1.2.5. Hydraulik Layer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#topology">3.1.2.6. Topologie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#catchment-qgep-od-catchment-area">3.1.2.7. Catchment <code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="layerexplanations/layerexplanation.html#catchment-qgep-od-catchment-area">3.1.2.7. Einzugsgebiete <code class="docutils literal notranslate"><span class="pre">qgep_od.catchment_area</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="layerexplanations/namingconventions.html">3.1.3. Namenskonventionen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/namingconventions.html#schemas-in-the-qgep-database">3.1.3.1. Schemas in der QGEP-Datenbank</a></li>
 <li class="toctree-l3"><a class="reference internal" href="layerexplanations/namingconventions.html#layer-names">3.1.3.2. Layer Bezeichnungen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="layerexplanations/namingconventions.html#attribute-names">3.1.3.3. Attribute names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layerexplanations/namingconventions.html#attribute-names">3.1.3.3. Feldnamen</a></li>
 </ul>
 </li>
 </ul>
@@ -238,11 +239,11 @@
 <li class="toctree-l1"><a class="reference internal" href="How-To/index.html">3.8. How To</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="How-To/index.html#manual-label-positioning-for-different-scales">3.8.1. Manuelle Beschriftungspositionen für unterschiedliche Massstäbe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="How-To/index.html#how-to-import-existing-label-positions">3.8.2. Importieren von bestehenden Beschriftungspositionen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="How-To/index.html#how-to-translate-a-label-prefix">3.8.3. How to translate a label prefix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To/index.html#how-to-translate-a-label-prefix">3.8.3. Übersetzen von Beschriftungs-Prefix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="How-To/index.html#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">3.8.4. Erfassen einer Hydr_Geometrie (entspricht einer Beckengeometrie in MikeUrban)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="How-To/index.html#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">3.8.5. Hydraulische Modellierung eines Überlaufes (Streichwehr/Leapingwehr/Förderanlage)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="How-To/index.html#overflow-characteristic">3.8.6. Überlaufcharakteristik</a></li>
-<li class="toctree-l2"><a class="reference internal" href="How-To/index.html#further-informations">3.8.7. Further informations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="How-To/index.html#further-informations">3.8.7. Weitere Infos</a></li>
 </ul>
 </li>
 </ul>
