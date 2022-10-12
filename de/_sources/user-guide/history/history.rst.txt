@@ -1,7 +1,7 @@
 History viewer
 ==============
 
-`PostgresSQL history viewer` plugin allows you to retrieve modification on the QGEP database.
+`PostgresSQL history viewer <https://github.com/qwat/pg-history-viewer>`_ plugin allows you to retrieve modification on the QGEP database.
 
 Install the plugin from the QGIS Plugin repository.
 
@@ -16,6 +16,27 @@ Plugin configuration
 First, you have to configure the plugin for the session like this:
 
 .. image:: img/pg_hv_configuration.png
+
+
+Database configuration
+----------------------
+
+Then you need to enable logging on desired tables or views.
+
+* For views::
+
+   SELECT qgep_sys.audit_view('qgep_od.vw_qgep_wastewater_structure', 'true'::boolean, '{}'::text[], '{obj_id}'::text[]);
+
+* For tables::
+
+   SELECT qgep_sys.audit_table('qgep_od.reach_point');
+
+.. note::
+
+ You can disable logging with::
+
+   SELECT qgep_sys.unaudit_view('qgep_od.vw_qgep_wastewater_structure');
+   SELECT qgep_sys.unaudit_table('qgep_od.reach_point');
 
 Usage
 -----

@@ -4,11 +4,9 @@ Network following tools
 Refresh network topology
 ------------------------
 
-* Before using the network following tools, be sure, that your network topology is updated
+* Before using the network following tools, be sure that your network topology is updated
 
-* To refresh the network topology, you select the layer **vw_qgep_reach** and set the layer to the edit mode
-
-* Click the **refresh network topology** tool (Button with SQL and drip)
+* To refresh the network topology, click the **Refresh network topology** tool (Button with SQL and drip)
 
 * If ok, there is a message: **Success: Network successfully updated**
 

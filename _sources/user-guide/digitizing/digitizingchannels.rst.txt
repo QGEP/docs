@@ -56,7 +56,7 @@ Digitizing
 
 .. figure:: images/stop_data_entry.jpg
 
-.. note:: The standard-fields on the **General** tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The **Reuse the last entered attribute values** - option of QGIS has no influence.
+.. note:: The standard-fields on the **General** tab (and only those fields) do reuse the last entered attribute value when you add new reaches with the wizard. The QGIS option **Reuse the last entered attribute values** and the default values have no influence on these fields.
 
 * You can re-edit your object selecting the edit mode and then click with the info cursor on the object you want to edit.
 * If you do not select the edit mode, you can just look at the existing data.

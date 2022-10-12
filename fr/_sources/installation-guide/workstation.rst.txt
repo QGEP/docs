@@ -107,12 +107,16 @@ Install QGEP plugin
 
 Plugin requirements:
 
-- `networkx <https://pypi.org/project/networkx/>` >= 2.1
+- `networkx <https://pypi.org/project/networkx/>`_ >= 2.1
 
-You can install them on debian based systems with::
+You can install them on Debian based systems with::
 
  sudo pip install networkx
  sudo apt-get install libqt4-sql-psql
+
+Or for Windows users, directly in QGIS via the Python Console with::
+
+ import pip; pip.main(["install", "networkx"])
 
 * Open QGIS
 
