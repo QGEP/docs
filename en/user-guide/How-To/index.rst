@@ -73,6 +73,29 @@ To easily translate label prefixes a series of QGIS project variables have been 
 
 .. figure:: images/qgep_label_prefix_settings.png
 
+
+How to run symbology functions manually
+-------------------------------
+
+Sometimes the labels such as bottom, cover or entry/exit levels are not correctly displayed, even if the corresponding attribut is filled in. This happens for example when you import data by INTERLIS Import or another way. May be you also decativated the triggers to speed up the import process.
+
+
+* Activate / Deactivate symbology triggers::
+ 
+   SELECT qgep_sys.create_symbology_triggers()
+   SELECT qgep_sys.drop_symbology_triggers()
+
+* Run symbology function for all entites::
+
+   SELECT qgep_od.update_wastewater_structure_symbology(NULL,true)
+
+* Run label function for all entities::
+   SELECT qgep_od.update_wastewater_structure_label(NULL, true)
+
+* Run depth calculation for all entities::
+   SELECT qgep_od.update_depth(NULL, true);
+
+
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
 -------------------------------------------------------------------------
 Note:
