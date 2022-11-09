@@ -95,6 +95,10 @@ Sometimes the labels such as bottom, cover or entry/exit levels are not correctl
 * Run depth calculation for all entities::
    SELECT qgep_od.update_depth(NULL, true);
 
+* Run update wastewater node symbology for all entities::
+
+   SELECT qgep_od.update_wastewater_node_symbology(NULL, true);
+
 
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
 -------------------------------------------------------------------------
