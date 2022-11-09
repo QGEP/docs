@@ -85,17 +85,23 @@ Sometimes the labels such as bottom, cover or entry/exit levels are not correctl
    SELECT qgep_sys.create_symbology_triggers()
    SELECT qgep_sys.drop_symbology_triggers()
 
-* Run symbology function for all entites::
+* Run **label function** for all entities (_label, _cover_label, _bottom_label, _input_label and _output_label)::
+   SELECT qgep_od.update_wastewater_structure_label(NULL, true)
+
+.. figure:: images/qgep_label_attributes.png
+
+* Run depth calculation for all entities (wastewater_structure._depth)::
+   SELECT qgep_od.update_depth(NULL, true);
+
+.. figure:: images/qgep_system_attributes_depth.png
+
+For symbolizing point elements (manholes, special structures etc. and  wastewater_nodes)  with _function_hierarchic and _usage_current the following two functions calculate the two qgep attributes from the connected reach(es).
+
+* Run **symbology function** for all entites (calculates function_hierarchic and usage_current from connected reach(es) and adds result to  wastewater_structure._function_hierarchic and _usage_current)::
 
    SELECT qgep_od.update_wastewater_structure_symbology(NULL,true)
 
-* Run label function for all entities::
-   SELECT qgep_od.update_wastewater_structure_label(NULL, true)
-
-* Run depth calculation for all entities::
-   SELECT qgep_od.update_depth(NULL, true);
-
-* Run update wastewater node symbology for all entities::
+* Run **wastewater node symbology** for all entities (calculates function_hierarchic and usage_current from connected reaches and adds result to  wastewater_node._function_hierarchic and   _usage_current)::
 
    SELECT qgep_od.update_wastewater_node_symbology(NULL, true);
 
