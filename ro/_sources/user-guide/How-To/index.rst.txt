@@ -73,6 +73,39 @@ To easily translate label prefixes a series of QGIS project variables have been 
 
 .. figure:: images/qgep_label_prefix_settings.png
 
+
+How to run symbology functions manually
+-------------------------------
+
+Sometimes the labels such as bottom, cover or entry/exit levels are not correctly displayed, even if the corresponding attribut is filled in. This happens for example when you import data by INTERLIS Import or another way. May be you also decativated the triggers to speed up the import process.
+
+
+* Activate / Deactivate symbology triggers::
+ 
+   SELECT qgep_sys.create_symbology_triggers()
+   SELECT qgep_sys.drop_symbology_triggers()
+
+* Run **label function** for all entities (_label, _cover_label, _bottom_label, _input_label and _output_label)::
+   SELECT qgep_od.update_wastewater_structure_label(NULL, true)
+
+.. figure:: images/qgep_label_attributes.png
+
+* Run depth calculation for all entities (wastewater_structure._depth)::
+   SELECT qgep_od.update_depth(NULL, true);
+
+.. figure:: images/qgep_system_attributes_depth.png
+
+For symbolizing point elements (manholes, special structures etc. and  wastewater_nodes)  with _function_hierarchic and _usage_current the following two functions calculate the two qgep attributes from the connected reach(es).
+
+* Run **symbology function** for all entites (calculates function_hierarchic and usage_current from connected reach(es) and adds result to  wastewater_structure._function_hierarchic and _usage_current)::
+
+   SELECT qgep_od.update_wastewater_structure_symbology(NULL,true)
+
+* Run **wastewater node symbology** for all entities (calculates function_hierarchic and usage_current from connected reaches and adds result to  wastewater_node._function_hierarchic and   _usage_current)::
+
+   SELECT qgep_od.update_wastewater_node_symbology(NULL, true);
+
+
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
 -------------------------------------------------------------------------
 Note:

@@ -156,7 +156,7 @@ An other way to choose an object
 
  * You can select then the object you want. This will get you to the correspondent form to see the details.
 
--- _Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure:
+.. _Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure:
 
 Adding additional covers and nodes to an existing wastewater structure
 ----------------------------------------------------------------------

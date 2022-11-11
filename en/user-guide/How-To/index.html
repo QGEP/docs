@@ -57,10 +57,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#manual-label-positioning-for-different-scales">3.8.1. Manual Label-positioning for different scales</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-import-existing-label-positions">3.8.2. How to import existing label-positions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-translate-a-label-prefix">3.8.3. How to translate a label prefix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">3.8.4. Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">3.8.5. Hydraulic modeling of an overflow (prank weir / leapingweir / pump)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overflow-characteristic">3.8.6. Overflow characteristic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#further-informations">3.8.7. Further informations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-run-symbology-functions-manually">3.8.4. How to run symbology functions manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">3.8.5. Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">3.8.6. Hydraulic modeling of an overflow (prank weir / leapingweir / pump)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overflow-characteristic">3.8.7. Overflow characteristic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-informations">3.8.8. Further informations</a></li>
 </ul>
 </li>
 </ul>
@@ -171,8 +172,51 @@ You have not the change something in the placement, because this rule uses the s
 <img alt="../../_images/qgep_label_prefix_settings.png" src="../../_images/qgep_label_prefix_settings.png" />
 </figure>
 </section>
+<section id="how-to-run-symbology-functions-manually">
+<h2><span class="section-number">3.8.4. </span>How to run symbology functions manually<a class="headerlink" href="#how-to-run-symbology-functions-manually" title="Permalink to this heading"></a></h2>
+<p>Sometimes the labels such as bottom, cover or entry/exit levels are not correctly displayed, even if the corresponding attribut is filled in. This happens for example when you import data by INTERLIS Import or another way. May be you also decativated the triggers to speed up the import process.</p>
+<ul>
+<li><p>Activate / Deactivate symbology triggers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">qgep_sys</span><span class="o">.</span><span class="n">create_symbology_triggers</span><span class="p">()</span>
+<span class="n">SELECT</span> <span class="n">qgep_sys</span><span class="o">.</span><span class="n">drop_symbology_triggers</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><dl class="simple">
+<dt>Run <strong>label function</strong> for all entities (_label, _cover_label, _bottom_label, _input_label and _output_label)::</dt><dd><p>SELECT qgep_od.update_wastewater_structure_label(NULL, true)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/qgep_label_attributes.png" src="../../_images/qgep_label_attributes.png" />
+</figure>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Run depth calculation for all entities (wastewater_structure._depth)::</dt><dd><p>SELECT qgep_od.update_depth(NULL, true);</p>
+</dd>
+</dl>
+</li>
+</ul>
+<figure class="align-default">
+<img alt="../../_images/qgep_system_attributes_depth.png" src="../../_images/qgep_system_attributes_depth.png" />
+</figure>
+<p>For symbolizing point elements (manholes, special structures etc. and  wastewater_nodes)  with _function_hierarchic and _usage_current the following two functions calculate the two qgep attributes from the connected reach(es).</p>
+<ul>
+<li><p>Run <strong>symbology function</strong> for all entites (calculates function_hierarchic and usage_current from connected reach(es) and adds result to  wastewater_structure._function_hierarchic and _usage_current):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">qgep_od</span><span class="o">.</span><span class="n">update_wastewater_structure_symbology</span><span class="p">(</span><span class="n">NULL</span><span class="p">,</span><span class="n">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run <strong>wastewater node symbology</strong> for all entities (calculates function_hierarchic and usage_current from connected reaches and adds result to  wastewater_node._function_hierarchic and   _usage_current):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">qgep_od</span><span class="o">.</span><span class="n">update_wastewater_node_symbology</span><span class="p">(</span><span class="n">NULL</span><span class="p">,</span> <span class="n">true</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
 <section id="collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban">
-<h2><span class="section-number">3.8.4. </span>Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)<a class="headerlink" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.8.5. </span>Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)<a class="headerlink" href="#collecting-a-hydr-geometry-corresponds-to-a-basin-geometry-in-mikeurban" title="Permalink to this heading"></a></h2>
 <p>Note:</p>
 <ul class="simple">
 <li><p>Wastewater structures with a hydr_geometry have to be defined as special structures (and not as standard manholes).</p></li>
@@ -208,7 +252,7 @@ You have not the change something in the placement, because this rule uses the s
 </ul>
 </section>
 <section id="hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump">
-<h2><span class="section-number">3.8.5. </span>Hydraulic modeling of an overflow (prank weir / leapingweir / pump)<a class="headerlink" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.8.6. </span>Hydraulic modeling of an overflow (prank weir / leapingweir / pump)<a class="headerlink" href="#hydraulic-modeling-of-an-overflow-prank-weir-leapingweir-pump" title="Permalink to this heading"></a></h2>
 <p>Action:</p>
 <p>In the case of weirs, a second sewage junction has to be created in the wastewater structure.
 A second outlet has already been created (green = discharged combined wastewater) and has not yet been linked to any wastewater node in the overflow structure.</p>
@@ -255,7 +299,7 @@ The field fk_overflow_to must be filled manually. The Obj_ID of the previously c
 </figure>
 </section>
 <section id="overflow-characteristic">
-<h2><span class="section-number">3.8.6. </span>Overflow characteristic<a class="headerlink" href="#overflow-characteristic" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.8.7. </span>Overflow characteristic<a class="headerlink" href="#overflow-characteristic" title="Permalink to this heading"></a></h2>
 <p>In the case of a leaping weir, a pump or under special conditions, an overflow characteristic can be defined for the overflow:</p>
 <p>You can select an existing characteristic in the field fk_overflow_char or you creat a new one characteristic with the green + button.</p>
 <p>The Feature Attributes window for the overflow characteristic appears:</p>
@@ -269,7 +313,7 @@ The field fk_overflow_to must be filled manually. The Obj_ID of the previously c
 </ol>
 </section>
 <section id="further-informations">
-<h2><span class="section-number">3.8.7. </span>Further informations<a class="headerlink" href="#further-informations" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.8.8. </span>Further informations<a class="headerlink" href="#further-informations" title="Permalink to this heading"></a></h2>
 <p>Further Q &amp; A’s you can find in the
 <a class="reference external" href="https://github.com/QGEP/QGEP/discussions/categories/q-a">QGEP Discussion section</a></p>
 </section>
