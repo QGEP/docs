@@ -1,4 +1,4 @@
-.. _Populate-Coefficient-Of-Friction:
+.. _Coefficient-Of-Friction:
 
 Coefficient of friction
 -----------------------

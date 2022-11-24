@@ -2,7 +2,7 @@
 .. _Process-Results:
 
 Process results
-==============
+===============
 
 .. include:: Import-Results.rst
 

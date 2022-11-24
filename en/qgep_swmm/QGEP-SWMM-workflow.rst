@@ -23,7 +23,7 @@ Run ``SWMM Create Input``. It:
 - generates an input file for SWMM (``.inp``). 
 
 Check the Export
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 Check generated ``.inp`` file. 
 
 Its likely that the ``.inp`` file generated in the previous step contains errors or needs some parameters to be tuned. 
