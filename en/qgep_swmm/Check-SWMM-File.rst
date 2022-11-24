@@ -1,6 +1,6 @@
-.. _Check-Input:
+.. _Check-SWMM-File:
 
-Check input file
+Check SWMM File
 ================
 
 The generated ``.inp`` file can be imported in SWMM GUI. It is likely that some errors will be raised. You will have to solve them (see hereunder a list of common errors)
@@ -9,11 +9,11 @@ You have to solve the errors in the order in which they appear in the report. So
 
 To fix an error you can search in the corresponding QGEP layers in the QGIS project:
 
-* vw_wastewater_node for undefined nodes
-* catchment_area for subcatchment errors
-* compare if the number of exported nodes (in vw_junctions) are what you expect it to be. 
-* Check if the function (manhole / special_structure) of wastewater_structure are all filled in
-* etc.
+- vw_wastewater_node for undefined nodes
+- catchment_area for subcatchment errors
+- compare if the number of exported nodes (in vw_junctions) are what you expect it to be. 
+- Check if the function (manhole / special_structure) of wastewater_structure are all filled in
+- etc.
 
 
 
@@ -27,9 +27,9 @@ Missing status or _function_hierarchic (wn_function_hierarchic)
 
 The catchment area is linked to node which is not exported or a reach cannot be drawn because of a missing node:
 
-*  because of its status (abandonned etc.) or status is not defined (is Null)
-*  the node is not connected (correctly) to a conduit
-*  the node is secondary (the linked reach are secondary)
+-  because of its status (abandonned etc.) or status is not defined (is Null)
+-  the node is not connected (correctly) to a conduit
+-  the node is secondary (the linked reach are secondary)
 
 and therefore not export in the vw_junctions.
 
@@ -93,3 +93,22 @@ Missing population densities
 ``qgep_od.catchment_area.population_density_current`` or ``qgep_od.catchment_area.population_density_planned`` are not filled.
 
 
+Subcatchment and rain Gages
+---------------------------
+If you want to attach every subcatchments to a single rain gage, edit the file with SWMM interface:
+
+- Edit > Select All
+- Edit > Group Deletion > All Rain Gages
+- Create a new raingage
+- Edit > Select All
+- Edit > Group Edit
+
+  - For objects of type: Subcatchment
+	- Edit the property: Rain Gage
+  - By replacing it with: Name of the new rain gage
+
+To edit the rain serie:
+
+- Click on Time Series
+- Double click default_qgep_raingage_timeserie
+- Edit the serie

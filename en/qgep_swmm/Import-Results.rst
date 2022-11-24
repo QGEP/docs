@@ -1,10 +1,10 @@
 .. _Import-Results:
 
 SWMM Import Results
-===================
+-------------------
 
 Measurement tables
-------------------
+^^^^^^^^^^^^^^^^^^
 
 If you want to store the results in QGEP and use the dedicated view for the mapping then use SWMM Import Results.
 It parses the report file of SWMM. 
@@ -39,14 +39,17 @@ and they populate a view dedicated for the mapping (see :ref:`mapping-imported`)
 
 
 Launch import
--------------
+^^^^^^^^^^^^^
 
 Launch ``SWMM Import results``:
 
 - ``SWMM report file``: the ``.rpt`` file generated during the previous step
 - ``Database``: The name of the PostgreSQL service hosting the QGEP database.
 - ``Simulation name``: The name that you want to give to this simulation (it will appear in ``qgep_od.measuring_point.remark``).
-- ``Import full results in addition to summary``: The full time series will be imported. Attention, if the report step is small, the import can take a long time.
+- ``Import summary``: Only the summary is imported.
+- ``Import full results``: The full time series will be imported. Attention, if the report step is small, the import can take a long time.
+- ``Import Max HGL in qgep_od.wastewater_node.backflow_level``
+- ``Import Max/Full Flow in qgep_od.reach.hydraulic_load``
 
 .. warning::
     Attention, a report file created from the SWMM GUI don't contain the full time series but only the summary.

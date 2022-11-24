@@ -1,0 +1,199 @@
+.. _QGEP-SWMM-Correspondances:
+
+QGEP - SWMM correspondances
+---------------------------
+
+
+Title/Notes:
+^^^^^^^^^^^^
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+
+Options: 
+^^^^^^^^
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+
+Climatology:
+^^^^^^^^^^^^
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Hydrology:
+^^^^^^^^^^
+**Rain Gages:**
+
+QGEP_SWMM creates one raingage for each subcatchment. 
+
+By default:
+
+- Time serie: Each raingage is related to a default rain time serie called ``default_qgep_raingage_timeserie``. The time serie must be created and the value Series Name updated accordingly.
+- Other parameters have default SWMM values
+
+See ``vw_swmm_raingages.sql`` for details.
+  
+**Aquifers:**
+
+QGEP_SWMM creates an aquifer for each QGEP ``aquifiers``.
+
+By default:
+
+- An aquifer is created for each QGEP ``aquifiers``
+- The bottom elevation is set to the ``minimal_groundwater_level``
+- The water table elevation is set to the ``average_groundwater_level``
+- Other parameters have default SWMM values
+
+See ``vw_swmm_aquifers.sql`` for details.
+
+**Subcatchment:**
+
+QGEP_SWMM creates a subcatchment for each QGEP catchment area.
+
+By default:
+- A subcatchment is created for each QGEP ``wastewater_networkelement`` linked to the ``catchment area`` (max. 4: ``fk_wastewater_networkelement_rw_current``, ``fk_wastewater_networkelement_rw_planned``, ``fk_wastewater_networkelement_ww_current``, ``fk_wastewater_networkelement_ww_planned``)
+- it is linked to a rain gage. 
+- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
+- The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone (see ``vw_swmm_coverages.sql``)
+- SWMM Dry Weather Flow:
+
+    -  are set to 0 for rain water subcatchments
+    -  are set to ``waste_water_production[_current,_planned]`` if set
+    -  else it computed from the subcatchement area and ``population_density[_current,_planned]``
+  
+- Other parameters have default SWMM values
+
+The subcatchment can be linked to an aquifer via the groundwater attribute.
+
+See ``vw_swmm_subcatchments.sql``, ``vw_swmm_subarea.sql`` and ``vw_swmm_dwf.sql`` for details
+
+**Snow Packs**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+**Unit hydrographs**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+**LID Controls**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Hydraulics
+^^^^^^^^^^
+
+**Junctions**
+
+- QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.
+
+See ``vw_swmm_junctions.sql`` for details.
+
+**Outfalls**
+
+- QGEP_SWMM creates an outfall for each QGEP discharge_point.
+
+See ``vw_swmm_outfalls.sql`` for details.
+
+**Dividers**
+
+- QGEP_SWMM creates a divider for the manholes and special structures having the function ``separating_structure``
+
+- See ``vw_swmm_dividers.sql`` for details.
+
+**Storage Units**
+
+- QGEP_SWMM creates a storage for some kind of QGEP infiltration installations and some kind of QGEP special structures.
+
+- See ``vw_swmm_storages.sql`` for details.
+
+**Conduits**
+
+- QGEP_SWMM creates a conduit for each QGEP reach.
+
+- See ``vw_swmm_conduits.sql`` for details.
+
+**Pumps**
+
+- QGEP_SWMM creates a pump for each QGEP pump. When a curve ``qgep_od.hq_relation`` is liked to the pump it is exported as a SWMM curve.
+
+- See ``vw_swmm_pumps.sql`` and ``vs_swmm_curves.sql`` for details.
+
+**Orifices**
+
+No correspondance in QGEP. Orifices are not created from QGEP objects. An empty table is created 
+
+- See ``vw_swmm_orifices.sql`` for details.
+
+**Weirs**
+
+- Are created from QGEP prank weir and leaping weir.
+
+- See ``vw_swmm_weirs.sql`` for details.
+
+**Outlets**
+
+No correspondance in QGEP. Outlets are not created from QGEP objects.
+
+- Copied from the template input file if exists.
+
+**Transects**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+**Controls**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Quality
+^^^^^^^
+
+**Land uses**
+
+- QGEP_SWMM creates a SWMM land use kind for each QGEP planning zone kind.
+
+- See ``vw_swmm_landuses.sql`` 
+
+**Pollutants**
+
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Curves
+^^^^^^
+- Are created for pumps linked to a ``qgep_od.hq_relation`` and for wastewater structures linked to a ``qgep_od.hydr_geom_relation``
+
+- See ``vw_swmm_curves.sql`` for details.
+
+Time series
+^^^^^^^^^^^
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Time patterns
+^^^^^^^^^^^^^
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.
+
+Labels
+^^^^^^
+No correspondance in QGEP. This parameter must be set by the user in the template ``.inp`` file or before running the simulation.
+
+- Copied from the template input file if exists.

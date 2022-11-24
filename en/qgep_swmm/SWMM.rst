@@ -12,6 +12,6 @@ SWMM was developed to help support local, state, and national stormwater managem
 The QGEP SWMM plugin allows to:
 
 * Wasily export network data in the SWMM Input format (\*.inp)
-* Run SWMM directly from QGEP and 
+* Run SWMM directly from QGEP
 * Extract and take back the wanted SWMM results into QGEP
-* And visualize them in different ways.
+* Visualize them in different ways.

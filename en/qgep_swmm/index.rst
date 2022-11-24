@@ -5,17 +5,14 @@ QGEP SWMM plugin
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    SWMM
    QGEP-SWMM-installation
    QGEP-SWMM-workflow
-   Create-Input
-   QGEP-SWMM-data-requirements
-   Check-Input
-   Execute
-   Extract-Results
-   Import-Results
-   Mapping
-   Change-simulation-parameters
+   Prepare-Data
+   Generate-SWMM-File
+   Check-SWMM-File
+   Run-SWMM-Simulation
+   Process-Results
    Developpers-Advanced-Users
