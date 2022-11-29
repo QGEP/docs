@@ -93,9 +93,9 @@ Missing population densities
 ``qgep_od.catchment_area.population_density_current`` or ``qgep_od.catchment_area.population_density_planned`` are not filled.
 
 
-Subcatchment and rain Gages
----------------------------
-If you want to attach every subcatchments to a single rain gage, edit the file with SWMM interface:
+Subcatchments and rain Gauges
+-----------------------------
+If you want to attach every subcatchments to a single rain gauge, edit the file with SWMM interface:
 
 - Edit > Select All
 - Edit > Group Deletion > All Rain Gages

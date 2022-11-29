@@ -6,6 +6,8 @@ QGEP-SWMM workflow
 Workflow
 --------
 
+.. figure:: images/workflow.png
+
 Each step of the workflow is explained in details in next chapters.
 
 Prepare and check the data

@@ -1,7 +1,8 @@
 .. _qgep_swmm:
 
-QGEP SWMM plugin
-================
+SWMM Data Exchange
+==================
+QGEP plugin is able to export a SWMM file (``.inp``) and import SWMM results.
 
 
 .. toctree::
@@ -15,4 +16,5 @@ QGEP SWMM plugin
    Check-SWMM-File
    Run-SWMM-Simulation
    Process-Results
+   Mapping
    Developpers-Advanced-Users

@@ -1,12 +1,12 @@
 .. _Mapping:
 
 Mapping
--------
+=======
 
 .. _mapping-not-imported:
 
 Results are not imported in QGEP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 Use processing tool ``join attributes`` to add the results stored in the tables ``Node summary`` and ``Link summary`` to the tables ``qgep_od.vw_wastewater_node`` and ``qgep_od.vw_qgep_reach``.
 The mapping should be done on the attribute ``obj_id`` of the ``qgep_od`` tables and the attribute ``id`` of the summary tables.
 
@@ -17,7 +17,7 @@ The mapping should be done on the attribute ``obj_id`` of the ``qgep_od`` tables
 .. _mapping-imported:
 
 Results are imported in QGEP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 * Add the layers qgep_swmm.node_results and / or qgep_swmm.link_results to your QGIS project
 * Filter by the name of the simulation and the name of the parameter to show: Right click on the layer > filter > Expression: ``"swmm_simulation_name" = 'name of the simulation AND "swmm_parameter" = 'inflow'``
 
@@ -26,7 +26,9 @@ Two template QGIS files are provided in the plugin folder ``src\swmm_templates\*
 The project ``swmm_summary.qgs`` show how the summary indicators can be loaded in QGIS. The project ``swmm_full_report.qgs`` show how the full time series can be loaded in QGIS. You will need to adapt the services and the filters.
 
 Show the indicators evolving along time
-“““““““““““““““““““““““““““““““““““““““
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 This manipulation only works with complete times series. Namely, you need to import the full results and not only the summary.
 
 **Play the simulation with Time Manager**

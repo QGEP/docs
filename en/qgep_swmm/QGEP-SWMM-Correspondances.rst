@@ -27,7 +27,7 @@ No correspondance in QGEP. This parameter must be set by the user in the templat
 
 Hydrology:
 ^^^^^^^^^^
-**Rain Gages:**
+**Rain Gauges [Gages in SWMM]:**
 
 QGEP_SWMM creates one raingage for each subcatchment. 
 
@@ -70,7 +70,7 @@ By default:
 
 The subcatchment can be linked to an aquifer via the groundwater attribute.
 
-See ``vw_swmm_subcatchments.sql``, ``vw_swmm_subarea.sql`` and ``vw_swmm_dwf.sql`` for details
+See ``vw_swmm_subcatchments.sql``, ``vw_swmm_subareas.sql``, ``vw_swmm_dwf.sql`` and ``vw_swmm_coverages.sql`` for details.
 
 **Snow Packs**
 
@@ -120,8 +120,11 @@ See ``vw_swmm_outfalls.sql`` for details.
 **Conduits**
 
 - QGEP_SWMM creates a conduit for each QGEP reach.
-
-- See ``vw_swmm_conduits.sql`` for details.
+- Roughness is created from ``coefficient_of_friction``, ``wall_roughness`` or ``swmm_default_coefficient_of_friction`` (see: :ref:`Coefficient-Of-Friction`)
+- QGEP profile type are matched to SWMM profile type, dimensions are computed from ``reach.clear_height`` and ``pipe_profile.height_width_ratio``
+- Custom pipe profile described by a curve are currently not exported
+  
+- See ``vw_swmm_conduits.sql`` and ``vw_swmm_xsections.sql`` for details.
 
 **Pumps**
 
@@ -137,15 +140,15 @@ No correspondance in QGEP. Orifices are not created from QGEP objects. An empty 
 
 **Weirs**
 
-- Are created from QGEP prank weir and leaping weir.
+- Are created from QGEP prank weir (without H/Q relation) and leaping weir.
 
 - See ``vw_swmm_weirs.sql`` for details.
 
 **Outlets**
 
-No correspondance in QGEP. Outlets are not created from QGEP objects.
+No correspondance in QGEP. However, outlets are created to export QGEP prank weir having a H/Q relation.
 
-- Copied from the template input file if exists.
+- See ``vw_swmm_outlets.sql`` for details.
 
 **Transects**
 
