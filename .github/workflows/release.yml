@@ -26,9 +26,7 @@ jobs:
           curl -OL https://github.com/transifex/cli/releases/download/v1.3.1/tx-linux-amd64.tar.gz
           tar -xvzf tx-linux-amd64.tar.gz
           make gettext
-          ./tx push
-          ./tx pull
-          ./tx status
+          make transifex_pull
 
       - name: build
         run: |
