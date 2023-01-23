@@ -1,40 +1,78 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.3. Échange de données INTERLIS &mdash; Documentation QGEP 0.8</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+  <title>4.3. INTERLIS Data exchange &mdash; Documentation QGEP 0.8</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="4.4. Personnalisation du modèle de données" href="../db-customization/index.html" />
+    <link rel="next" title="4.4. Customization of the data model" href="../db-customization/index.html" />
     <link rel="prev" title="4.2. User Roles" href="../security/index.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../../index.html" class="icon icon-home"> QGEP
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 0.7
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" />
@@ -42,93 +80,146 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. QGEP / Module TEKSI assainissement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guide d’installation de QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. Guide d’utilisateur de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Guide d’administration</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. QGEP User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Admin Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">4.1. pgAdmin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../security/index.html">4.2. User Roles</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. Échange de données INTERLIS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#general">4.3.1. Général</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#prerequisites">4.3.2. Prérequis</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. INTERLIS Data exchange</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">4.3.1. General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">4.3.2. Prerequisites</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#java">4.3.2.1. Java</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#python-libraries">4.3.2.2. Bibliothèques Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-libraries">4.3.2.2. Python libraries</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#modelbaker">4.3.2.3. Modelbaker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#qgep-version">4.3.2.4. Version QGEP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgep-version">4.3.2.4. QGEP Version</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#usage-gui">4.3.3. Utilisation (GUI)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#enable-admin-mode">4.3.3.1. Activer le mode admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage-gui">4.3.3. Usage (GUI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enable-admin-mode">4.3.3.1. Enable admin mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#export">4.3.3.2. Export</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#import">4.3.3.3. Import</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#usage-command-line">4.3.4. Utilisation (ligne de commande)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#quality-control">4.3.5. Contrôle de la qualité</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">4.3.5.1. Contrôle de qualité avec le vérificateur VSA en ligne (Fachprüfung mit VSA Checker (online))</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage-command-line">4.3.4. Usage (command line)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quality-control">4.3.5. Quality control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">4.3.5.1. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Personnalisation du modèle de données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Customization of the data model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../datamodel-tool/index.html">4.5. Data-model tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../db-update-pum/index.html">4.6. Manual update of the datamodel</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Machine virtuelle de démonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Plugin Wincan 2 QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">QGEP</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">4. </span>Guide d’administration</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">4.3. </span>Échange de données INTERLIS</li>
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">4. </span>Admin Guide</a> &raquo;</li>
+        
+      <li><span class="section-number">4.3. </span>INTERLIS Data exchange</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../../_sources/admin-guide/interlis-io/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="interlis-data-exchange">
-<h1><span class="section-number">4.3. </span>Échange de données INTERLIS<a class="headerlink" href="#interlis-data-exchange" title="Lien permanent vers cette rubrique"></a></h1>
-<p>Il s’agit d’un guide sur la façon d’importer/exporter des données entre QGEP et INTERLIS 2 Transfer Format (xtf).</p>
+<h1><span class="section-number">4.3. </span>INTERLIS Data exchange<a class="headerlink" href="#interlis-data-exchange" title="Lien permanent vers cette rubrique">¶</a></h1>
+<p>This represents a guide on how to import/export data between QGEP and INTERLIS 2 Transfer Format (xtf).</p>
 <section id="general">
-<h2><span class="section-number">4.3.1. </span>Général<a class="headerlink" href="#general" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">4.3.1. </span>General<a class="headerlink" href="#general" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>The QGEP plugin includes an experimental interlis import/export feature.
 It is currently capable of importing and exporting to the VSA-KEK “VSA_KEK_2019_LV95”, which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p>
 <p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
 </section>
 <section id="prerequisites">
-<h2><span class="section-number">4.3.2. </span>Prérequis<a class="headerlink" href="#prerequisites" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">4.3.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Lien permanent vers cette rubrique">¶</a></h2>
 <section id="java">
-<h3><span class="section-number">4.3.2.1. </span>Java<a class="headerlink" href="#java" title="Lien permanent vers cette rubrique"></a></h3>
-<p>Vous avez besoin de Java sur votre système.</p>
+<h3><span class="section-number">4.3.2.1. </span>Java<a class="headerlink" href="#java" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>You need java on your system.</p>
 <p>Windows : <a class="reference external" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245058_d3c52aa6bfa54d3ca74e617f18309292">download</a>
 Max : <a class="reference external" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245051_d3c52aa6bfa54d3ca74e617f18309292">download</a>
 Linux : use you package manager</p>
 </section>
 <section id="python-libraries">
-<h3><span class="section-number">4.3.2.2. </span>Bibliothèques Python<a class="headerlink" href="#python-libraries" title="Lien permanent vers cette rubrique"></a></h3>
-<p>Vous avez besoin de <cite>sqlalchemy</cite> et <cite>geoalchemy2</cite>.</p>
+<h3><span class="section-number">4.3.2.2. </span>Python libraries<a class="headerlink" href="#python-libraries" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>You need <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite>.</p>
 <p>To install : before launching QGIS, open OSGeo4W Shell, and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="s2">&quot;sqlalchemy~=1.3.22&quot;</span> <span class="s2">&quot;geoalchemy2&gt;=0.9.0&quot;</span>
 </pre></div>
@@ -149,48 +240,48 @@ Linux : use you package manager</p>
 <p>The same <cite>–target</cite> flag can be added to install <cite>sqlalchemy</cite> and <cite>geoalchemy2</cite> in another location.</p>
 </section>
 <section id="modelbaker">
-<h3><span class="section-number">4.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">4.3.2.3. </span>Modelbaker<a class="headerlink" href="#modelbaker" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin <cite>Modelbaker</cite> manually from the QGIS plugin manager (version 6.4 or newer but older than 7.1).</p>
 </section>
 <section id="qgep-version">
-<h3><span class="section-number">4.3.2.4. </span>Version QGEP<a class="headerlink" href="#qgep-version" title="Lien permanent vers cette rubrique"></a></h3>
-<p>L’exportation ne prend en charge que le modèle de données QGEP le plus récent (1.5.6 au moment de la rédaction). Assurez-vous que votre modèle de données est entièrement mis à jour avant d’essayer d’importer/exporter.</p>
+<h3><span class="section-number">4.3.2.4. </span>QGEP Version<a class="headerlink" href="#qgep-version" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.</p>
 </section>
 </section>
 <section id="usage-gui">
-<h2><span class="section-number">4.3.3. </span>Utilisation (GUI)<a class="headerlink" href="#usage-gui" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">4.3.3. </span>Usage (GUI)<a class="headerlink" href="#usage-gui" title="Lien permanent vers cette rubrique">¶</a></h2>
 <section id="enable-admin-mode">
-<h3><span class="section-number">4.3.3.1. </span>Activer le mode admin<a class="headerlink" href="#enable-admin-mode" title="Lien permanent vers cette rubrique"></a></h3>
-<p>Dans la boîte de dialogue <cite>plugin&gt;QGEP&gt;settings</cite>, sous l’onglet <cite>Developer options</cite>, assurez-vous que le <cite>Admin mode</cite> est activé. Redémarrez QGIS.</p>
+<h3><span class="section-number">4.3.3.1. </span>Enable admin mode<a class="headerlink" href="#enable-admin-mode" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>In the <cite>plugin&gt;QGEP&gt;settings</cite> dialog, under the <cite>Developer options</cite> tab, ensure <cite>Admin mode</cite> is enabled. Restart QGIS.</p>
 <figure class="align-default">
 <img alt="../../_images/settings_dialog.png" src="../../_images/settings_dialog.png" />
 </figure>
-<p>Vous devriez maintenant voir les nouveaux boutons <cite>import</cite> et <cite>export</cite> dans la barre d’outils QGEP.</p>
+<p>You should now see new <cite>import</cite> and <cite>export</cite> buttons in the QGEP toolbar.</p>
 <figure class="align-default">
 <img alt="../../_images/toolbar.png" src="../../_images/toolbar.png" />
 </figure>
 </section>
 <section id="export">
-<h3><span class="section-number">4.3.3.2. </span>Export<a class="headerlink" href="#export" title="Lien permanent vers cette rubrique"></a></h3>
-<p>Pour exporter vos données QGEP, cliquez sur le bouton <cite>export</cite>. Le dialogue suivant apparaîtra.</p>
+<h3><span class="section-number">4.3.3.2. </span>Export<a class="headerlink" href="#export" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>To export your QGEP data, click on the <cite>export</cite> button. The following dialog will appear.</p>
 <figure class="align-default">
 <img alt="../../_images/export_dialog.png" src="../../_images/export_dialog.png" />
 </figure>
 <p>If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
 <p>The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.</p>
-<p>Ensuite, confirmez le dialogue et choisissez où enregistrer le fichier <cite>.xtf</cite>.</p>
+<p>Then, confirm the dialog and choose where to save the <cite>.xtf</cite> file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Notez que pour des exportations importantes/complets, l’exécution peut prendre beaucoup de temps.</p>
+<p>Note that for large/full exports, the command can take a long time.</p>
 </div>
-<p>La phase d’exportation comprend une étape de validation utilisant <cite>ilivalidator</cite>, qui vous informera si l’exportation contient une erreur de validation.</p>
+<p>Exports include a validation step using <cite>ilivalidator</cite>, which will inform you whether the export contains validation error.</p>
 </section>
 <section id="import">
-<h3><span class="section-number">4.3.3.3. </span>Import<a class="headerlink" href="#import" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">4.3.3.3. </span>Import<a class="headerlink" href="#import" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>To import <cite>xtf`files, click on the `import</cite> button and navigate to the <cite>.xtf</cite> file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -200,19 +291,19 @@ Linux : use you package manager</p>
 <figure class="align-default">
 <img alt="../../_images/import_dialog.png" src="../../_images/import_dialog.png" />
 </figure>
-<p>La partie gauche de ce dialogue liste tous les éléments qui vont être importés du fichier <cite>.xtf</cite>, permettant de revoir ce qui va être importé et de désélectionner les éléments que vous souhaitez ignorer. Elle montre également le statut de validation de chaque objet, indiquant si une action supplémentaire est nécessaire (INVALID) ou recommandée (WARNING) avant l’importation.</p>
-<p>La partie droite de ce dialogue présente un formulaire spécifique au type d’élément sélectionné dans la liste, permettant d’adapter l’importation. Par exemple, il permet d’attacher des « examens » à leurs canalisations.</p>
-<p>Une fois que vous êtes satisfait des options d’importation, confirmez la boîte de dialogue afin de conserver les changements dans votre base de données.</p>
+<p>The left part of this dialog lists all elements that are going to be imported from the <cite>.xtf</cite> file, allowing to review what is going to be imported and to deselect elements you may want to skip. It also shows the validation status of each object, showing whether further action is needed (INVALID) or recommended (WARNING) prior to importing.</p>
+<p>The right part of this dialog shows a form specific to the type of element selected in the list, allowing to adapt the import. For instance, it allows to attach « examinations » to their pipes.</p>
+<p>Once you’re happy with the import options, confirm the dialog to persist the changes to your database.</p>
 </section>
 </section>
 <section id="usage-command-line">
-<h2><span class="section-number">4.3.4. </span>Utilisation (ligne de commande)<a class="headerlink" href="#usage-command-line" title="Lien permanent vers cette rubrique"></a></h2>
-<p>Pour une utilisation avancée, l’outil d’importation/exportation peut également être utilisé comme un outil de ligne de commande. Veuillez consulter le site <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/">https://github.com/QGEP/qgepqwat2ili/</a> pour obtenir de la documentation à ce sujet.</p>
+<h2><span class="section-number">4.3.4. </span>Usage (command line)<a class="headerlink" href="#usage-command-line" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>For advanced usage, the import/export tool can also be used as a command line tool. Please refer to <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/">https://github.com/QGEP/qgepqwat2ili/</a> for documentation about this.</p>
 </section>
 <section id="quality-control">
-<h2><span class="section-number">4.3.5. </span>Contrôle de la qualité<a class="headerlink" href="#quality-control" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">4.3.5. </span>Quality control<a class="headerlink" href="#quality-control" title="Lien permanent vers cette rubrique">¶</a></h2>
 <section id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
-<h3><span class="section-number">4.3.5.1. </span>Contrôle de qualité avec le vérificateur VSA en ligne (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">4.3.5.1. </span>Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Lien permanent vers cette rubrique">¶</a></h3>
 <figure class="align-default">
 <img alt="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" src="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" />
 </figure>
@@ -224,33 +315,50 @@ Linux : use you package manager</p>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="4.4. Customization of the data model" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="../security/index.html" class="btn btn-neutral float-left" title="4.2. User Roles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="4.4. Personnalisation du modèle de données" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
-  </div>
+    <p>
+        &#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.
 
-  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    </p>
+  </div>
+    
+    
+    
+    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
