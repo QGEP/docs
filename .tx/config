@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[qgep-documentation.index]
+[o:qgep:p:qgep-documentation:r:index]
 source_file = i18n/pot/index.pot
 source_lang = en
 trans.de = i18n/de/index.po
@@ -11,7 +11,7 @@ trans.ro = i18n/ro/index.po
 trans.es = i18n/es/index.es
 type = PO
 
-[qgep-documentation.features-guide]
+[o:qgep:p:qgep-documentation:r:features-guide]
 source_file = i18n/pot/features-guide.pot
 source_lang = en
 trans.de = i18n/de/features-guide.po
@@ -21,7 +21,7 @@ trans.ro = i18n/ro/features-guide.po
 trans.es = i18n/es/features-guide.po
 type = PO
 
-[qgep-documentation.installation-guide]
+[o:qgep:p:qgep-documentation:r:installation-guide]
 source_file = i18n/pot/installation-guide.pot
 source_lang = en
 trans.de = i18n/de/installation-guide.po
@@ -31,7 +31,7 @@ trans.ro = i18n/ro/installation-guide.po
 trans.es = i18n/es/installation-guide.po
 type = PO
 
-[qgep-documentation.vm]
+[o:qgep:p:qgep-documentation:r:vm]
 source_file = i18n/pot/vm.pot
 source_lang = en
 trans.de = i18n/de/vm.po
@@ -41,7 +41,7 @@ trans.ro = i18n/ro/vm.po
 trans.es = i18n/es/vm.po
 type = PO
 
-[qgep-documentation.user-guide]
+[o:qgep:p:qgep-documentation:r:user-guide]
 source_file = i18n/pot/user-guide.pot
 source_lang = en
 trans.de = i18n/de/user-guide.po
@@ -51,7 +51,7 @@ trans.ro = i18n/ro/user-guide.po
 trans.es = i18n/es/user-guide.po
 type = PO
 
-[qgep-documentation.qgep_swmm]
+[o:qgep:p:qgep-documentation:r:qgep_swmm]
 source_file = i18n/pot/qgep_swmm.pot
 source_lang = en
 trans.de = i18n/de/qgep_swmm.po
@@ -61,7 +61,7 @@ trans.ro = i18n/ro/qgep_swmm.po
 trans.es = i18n/es/qgep_swmm.po
 type = PO
 
-[qgep-documentation.wincan2qgep]
+[o:qgep:p:qgep-documentation:r:wincan2qgep]
 source_file = i18n/pot/wincan2qgep.pot
 source_lang = en
 trans.de = i18n/de/wincan2qgep.po
@@ -71,7 +71,7 @@ trans.ro = i18n/ro/wincan2qgep.po
 trans.es = i18n/es/wincan2qgep.po
 type = PO
 
-[qgep-documentation.admin-guide]
+[o:qgep:p:qgep-documentation:r:admin-guide]
 source_file = i18n/pot/admin-guide.pot
 source_lang = en
 trans.de = i18n/de/admin-guide.po
@@ -81,7 +81,7 @@ trans.ro = i18n/ro/admin-guide.po
 trans.es = i18n/es/admin-guide.po
 type = PO
 
-[qgep-documentation.translation]
+[o:qgep:p:qgep-documentation:r:translation]
 source_file = i18n/pot/translation.pot
 source_lang = en
 trans.de = i18n/de/translation.po
