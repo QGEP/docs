@@ -1,5 +1,5 @@
-QGEP / TEKSI wastewater module
-===========
+TEKSI wastewater module (QGEP)
+============================================
 
 TEKSI wastewater module (project name: QGEP) is a selection of tools and a database implementation that allows you to:
 
@@ -9,7 +9,7 @@ TEKSI wastewater module (project name: QGEP) is a selection of tools and a datab
 * export geodata in compliance with Swiss standards
 
 Main features
-------------
+-------------
 
 **Network objects**
 

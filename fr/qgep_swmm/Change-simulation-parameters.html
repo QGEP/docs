@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>7.11. Change simulation parameters &mdash; Documentation QGEP 0.8</title>
+  <title>7.11. Changer les paramètre de simulation &mdash; Documentation QGEP 0.8</title>
   
 
   
@@ -93,12 +93,12 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Guide d’utilisateur de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide d’administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">7. QGEP SWMM plugin</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="SWMM.html">7.1. Storm Water Management Model (SWMM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">7.2. QGEP-SWMM installation</a></li>
@@ -110,7 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">7.8. SWMM Extract Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Import-Results.html">7.9. SWMM Import Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">7.10. Mapping</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">7.11. Change simulation parameters</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.11. Changer les paramètre de simulation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#title-notes">7.11.1. Title/Notes:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#options">7.11.2. Options:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#climatology">7.11.3. Climatology:</a></li>
@@ -126,7 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.12. For developpers and advanced users</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Traduction</a></li>
 </ul>
 
             
@@ -177,7 +177,7 @@
         
           <li><a href="index.html"><span class="section-number">7. </span>QGEP SWMM plugin</a> &raquo;</li>
         
-      <li><span class="section-number">7.11. </span>Change simulation parameters</li>
+      <li><span class="section-number">7.11. </span>Changer les paramètre de simulation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,10 +197,8 @@
            <div itemprop="articleBody">
             
   <section id="change-simulation-parameters">
-<span id="id1"></span><h1><span class="section-number">7.11. </span>Change simulation parameters<a class="headerlink" href="#change-simulation-parameters" title="Lien permanent vers cette rubrique">¶</a></h1>
-<p>The easiest way to edit the simulation parameters is to open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.
-Then, you will find the parameters list hereunder.
-These parameters are extracted from the QGEP database if they exists (i.e. sections hydrology, hydraulics in SWMM) or copied from the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p>
+<span id="id1"></span><h1><span class="section-number">7.11. </span>Changer les paramètre de simulation<a class="headerlink" href="#change-simulation-parameters" title="Lien permanent vers cette rubrique">¶</a></h1>
+<p>La manière la plus facile pour éditer les paramètres de simulation et d’ouvrir le fichier « .inp » avec l’application SWMM. Les paramètres peuvent être changer dans SWMM, la valeur initiale est reprise, si disponible, de la base de données TEKSI assainissement (p.ex. sections, hydrauliques) ou copié du fichier template « .inp ».</p>
 <section id="title-notes">
 <h2><span class="section-number">7.11.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Lien permanent vers cette rubrique">¶</a></h2>
 <ul class="simple">

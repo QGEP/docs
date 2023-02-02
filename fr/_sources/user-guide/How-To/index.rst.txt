@@ -1,9 +1,11 @@
 How To
 ======
+
 This represents a guide on different themes about configuring in QGEP.
 
 Manual Label-positioning for different scales
 ---------------------------------------------
+
 QGIS label definition can handle different labels for different scales. This works very well if you work on the screen. 
 If you have to print plans with labels or if you have to export labels for data exchange (e.g. exchange with RegioGIS-platform), it will often be necessary to determine the label positions manually.
 If a label is positioned manually in QGIS, this fixed position applies to every scale. And that's not always a good result.
@@ -44,6 +46,7 @@ Now you can move or fix your labels for every rule with different positions with
 
 How to import existing label-positions
 --------------------------------------
+
 Good label-positions can be hard work. So you don't want to loose it.
 
 * Export your label-positions from your old system in the form obj_id, coordinateX (east), coordinateY (north).
@@ -75,10 +78,9 @@ To easily translate label prefixes a series of QGIS project variables have been 
 
 
 How to run symbology functions manually
--------------------------------
+---------------------------------------
 
 Sometimes the labels such as bottom, cover or entry/exit levels are not correctly displayed, even if the corresponding attribut is filled in. This happens for example when you import data by INTERLIS Import or another way. May be you also decativated the triggers to speed up the import process.
-
 
 * Activate / Deactivate symbology triggers::
  
@@ -108,6 +110,7 @@ For symbolizing point elements (manholes, special structures etc. and  wastewate
 
 Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)
 -------------------------------------------------------------------------
+
 Note:
 
 * Wastewater structures with a hydr_geometry have to be defined as special structures (and not as standard manholes).

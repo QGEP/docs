@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>4.1.2. Using pgAdmin &mdash; documentación de QGEP - 0.8</title>
+  <title>4.1.2. Usando pgAdmin &mdash; documentación de QGEP - 0.8</title>
   
 
   
@@ -43,7 +43,7 @@
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="4.2. User Roles" href="../security/index.html" />
-    <link rel="prev" title="4.1.1. Install pgAdmin" href="install.html" /> 
+    <link rel="prev" title="4.1.1. Instalar pgAdmin" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,14 +93,14 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. QGEP / TEKSI wastewater module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. QGEP User Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Admin Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. Guía de Usuario QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Guía del administrador</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">4.1. pgAdmin</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install.html">4.1.1. Install pgAdmin</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.2. Using pgAdmin</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sql-query">4.1.2.1. SQL query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html">4.1.1. Instalar pgAdmin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1.2. Usando pgAdmin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sql-query">4.1.2.1. Consulta SQL</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#database-dump">4.1.2.2. Database dump</a></li>
 </ul>
 </li>
@@ -108,15 +108,15 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../security/index.html">4.2. User Roles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interlis-io/index.html">4.3. INTERLIS Data exchange</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Customization of the data model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Personalización del modelo de datos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../datamodel-tool/index.html">4.5. Data-model tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../db-update-pum/index.html">4.6. Manual update of the datamodel</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Complemento Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traducción</a></li>
 </ul>
 
             
@@ -165,11 +165,11 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="../index.html"><span class="section-number">4. </span>Admin Guide</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">4. </span>Guía del administrador</a> &raquo;</li>
         
           <li><a href="index.html"><span class="section-number">4.1. </span>pgAdmin</a> &raquo;</li>
         
-      <li><span class="section-number">4.1.2. </span>Using pgAdmin</li>
+      <li><span class="section-number">4.1.2. </span>Usando pgAdmin</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,9 +189,9 @@
            <div itemprop="articleBody">
             
   <section id="using-pgadmin">
-<h1><span class="section-number">4.1.2. </span>Using pgAdmin<a class="headerlink" href="#using-pgadmin" title="Enlace permanente a este encabezado">¶</a></h1>
+<h1><span class="section-number">4.1.2. </span>Usando pgAdmin<a class="headerlink" href="#using-pgadmin" title="Enlace permanente a este encabezado">¶</a></h1>
 <section id="sql-query">
-<span id="id1"></span><h2><span class="section-number">4.1.2.1. </span>SQL query<a class="headerlink" href="#sql-query" title="Enlace permanente a este encabezado">¶</a></h2>
+<span id="id1"></span><h2><span class="section-number">4.1.2.1. </span>Consulta SQL<a class="headerlink" href="#sql-query" title="Enlace permanente a este encabezado">¶</a></h2>
 <figure class="align-default" id="id3">
 <img alt="../../_images/sql-query4.jpg" src="../../_images/sql-query4.jpg" />
 <figcaption>
@@ -203,7 +203,7 @@
 <ul class="simple">
 <li><p>Clicking the highlighted icon at location <em>1</em> opens the SQL Window.
 The SQL icon is active only when you’re connected to a database.</p></li>
-<li><p>Clicking the icon at <em>2</em> runs the written SQL commands.</p></li>
+<li><p>Haciendo clic en el ícono <em>2</em> ejecuta los comandos SQL escritos.</p></li>
 </ul>
 </div>
 </section>
@@ -212,7 +212,7 @@ The SQL icon is active only when you’re connected to a database.</p></li>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <ul class="simple">
-<li><p>Open pgAdmin4 and connect to the database</p></li>
+<li><p>Abrir pgAdmin4 y conectar a la base de datos</p></li>
 <li><p>Right click the Schema that you want to backup (in the tree structure below «Schemas»)</p></li>
 <li><p>Enter the filename where the dump should be stored</p></li>
 </ul>
@@ -222,7 +222,7 @@ The SQL icon is active only when you’re connected to a database.</p></li>
 </figure>
 </div></blockquote>
 <ul class="simple">
-<li><p>Click the option-tab and check the following options</p></li>
+<li><p>Clic en la pestaña de opciones y verifique las siguientes opciones</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/database-dump-options4.jpg" src="../../_images/database-dump-options4.jpg" />
@@ -231,7 +231,7 @@ The SQL icon is active only when you’re connected to a database.</p></li>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <ul class="simple">
-<li><p>After running the process, the window in the right bottom shows that everything went ok</p></li>
+<li><p>Después de ejecutar el proceso, la ventana de la parte inferior derecha muestra que todo salió bien.</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/database-dump-complete4.jpg" src="../../_images/database-dump-complete4.jpg" />
@@ -247,7 +247,7 @@ The SQL icon is active only when you’re connected to a database.</p></li>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../security/index.html" class="btn btn-neutral float-right" title="4.2. User Roles" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="install.html" class="btn btn-neutral float-left" title="4.1.1. Install pgAdmin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="4.1.1. Instalar pgAdmin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

@@ -67,6 +67,7 @@ Create  minimal roles and access
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: The QGEP roles are defined in the https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql (per cluster) and https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql (per database) files. It is recommended to use these when using QGEP in a production environment.
+
 Copy paste and run the two .sql one after the other in the query editor of pgAdmin4 (Tools > Query Tool). 
 
 Empty data model

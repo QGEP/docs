@@ -1,5 +1,3 @@
-.. _installation-guide:
-
 Wincan 2 QGEP plugin
 ====================
 
