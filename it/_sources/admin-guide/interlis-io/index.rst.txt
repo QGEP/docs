@@ -87,6 +87,10 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note:: Note that for large/full exports, the command can take a long time.
 
+.. note:: Note that QGIS standard behaviour for too long labels is to turn them horizontally (orientation = 0). You can adjust the properties of the vw_qgep_reach layer - Symbology - Placement - Label overrun from "no overrun" to e.g. 7 mm (Millimeter)
+
+.. figure:: images/layer_vw_qgep_reach_label_overrun.png
+
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
 
