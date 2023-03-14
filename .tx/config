@@ -1,93 +1,57 @@
 [main]
 host = https://www.transifex.com
 
-[qgep-documentation.index]
+[o:qgep:p:qgep-documentation:r:index]
 source_file = i18n/pot/index.pot
 source_lang = en
-trans.de = i18n/de/index.po
-trans.fr = i18n/fr/index.po
-trans.it = i18n/it/index.po
-trans.ro = i18n/ro/index.po
-trans.es = i18n/es/index.es
+file_filter = i18n/<lang>/index.po
 type = PO
 
-[qgep-documentation.features-guide]
+[o:qgep:p:qgep-documentation:r:features-guide]
 source_file = i18n/pot/features-guide.pot
 source_lang = en
-trans.de = i18n/de/features-guide.po
-trans.fr = i18n/fr/features-guide.po
-trans.it = i18n/it/features-guide.po
-trans.ro = i18n/ro/features-guide.po
-trans.es = i18n/es/features-guide.po
+file_filter = i18n/<lang>/features-guide.po
 type = PO
 
-[qgep-documentation.installation-guide]
+[o:qgep:p:qgep-documentation:r:installation-guide]
 source_file = i18n/pot/installation-guide.pot
 source_lang = en
-trans.de = i18n/de/installation-guide.po
-trans.fr = i18n/fr/installation-guide.po
-trans.it = i18n/it/installation-guide.po
-trans.ro = i18n/ro/installation-guide.po
-trans.es = i18n/es/installation-guide.po
+file_filter = i18n/<lang>/installation-guide.po
 type = PO
 
-[qgep-documentation.vm]
+[o:qgep:p:qgep-documentation:r:vm]
 source_file = i18n/pot/vm.pot
 source_lang = en
-trans.de = i18n/de/vm.po
-trans.fr = i18n/fr/vm.po
-trans.it = i18n/it/vm.po
-trans.ro = i18n/ro/vm.po
-trans.es = i18n/es/vm.po
+file_filter = i18n/<lang>/vm.po
 type = PO
 
-[qgep-documentation.user-guide]
+[o:qgep:p:qgep-documentation:r:user-guide]
 source_file = i18n/pot/user-guide.pot
 source_lang = en
-trans.de = i18n/de/user-guide.po
-trans.fr = i18n/fr/user-guide.po
-trans.it = i18n/it/user-guide.po
-trans.ro = i18n/ro/user-guide.po
-trans.es = i18n/es/user-guide.po
+file_filter = i18n/<lang>/user-guide.po
 type = PO
 
-[qgep-documentation.qgep_swmm]
+[o:qgep:p:qgep-documentation:r:qgep_swmm]
 source_file = i18n/pot/qgep_swmm.pot
 source_lang = en
-trans.de = i18n/de/qgep_swmm.po
-trans.fr = i18n/fr/qgep_swmm.po
-trans.it = i18n/it/qgep_swmm.po
-trans.ro = i18n/ro/qgep_swmm.po
-trans.es = i18n/es/qgep_swmm.po
+file_filter = i18n/<lang>/qgep_swmm.po
 type = PO
 
-[qgep-documentation.wincan2qgep]
+[o:qgep:p:qgep-documentation:r:wincan2qgep]
 source_file = i18n/pot/wincan2qgep.pot
 source_lang = en
-trans.de = i18n/de/wincan2qgep.po
-trans.fr = i18n/fr/wincan2qgep.po
-trans.it = i18n/it/wincan2qgep.po
-trans.ro = i18n/ro/wincan2qgep.po
-trans.es = i18n/es/wincan2qgep.po
+file_filter = i18n/<lang>/wincan2qgep.po
 type = PO
 
-[qgep-documentation.admin-guide]
+[o:qgep:p:qgep-documentation:r:admin-guide]
 source_file = i18n/pot/admin-guide.pot
 source_lang = en
-trans.de = i18n/de/admin-guide.po
-trans.fr = i18n/fr/admin-guide.po
-trans.it = i18n/it/admin-guide.po
-trans.ro = i18n/ro/admin-guide.po
-trans.es = i18n/es/admin-guide.po
+file_filter = i18n/<lang>/admin-guide.po
 type = PO
 
-[qgep-documentation.translation]
+[o:qgep:p:qgep-documentation:r:translation]
 source_file = i18n/pot/translation.pot
 source_lang = en
-trans.de = i18n/de/translation.po
-trans.fr = i18n/fr/translation.po
-trans.it = i18n/it/translation.po
-trans.ro = i18n/ro/translation.po
-trans.es = i18n/es/translation.po
+file_filter = i18n/<lang>/translation.po
 type = PO
 

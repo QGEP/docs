@@ -19,10 +19,9 @@ Java
 --------
 You need java on your system.
 
-Windows : `download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245058_d3c52aa6bfa54d3ca74e617f18309292>`_
-Max : `download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245051_d3c52aa6bfa54d3ca74e617f18309292>`_
-Linux : use you package manager
-
+Windows : `Java for windows download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245058_d3c52aa6bfa54d3ca74e617f18309292>`_
+MacOS : `Java for MacOS download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245051_d3c52aa6bfa54d3ca74e617f18309292>`_
+Linux : use the package manager
  
 Python libraries
 -----------------
@@ -87,6 +86,10 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
 .. note:: Note that for large/full exports, the command can take a long time.
+
+.. note:: Note that QGIS standard behaviour for too long labels is to turn them horizontally (orientation = 0). You can adjust the properties of the vw_qgep_reach layer - Symbology - Placement - Label overrun from "no overrun" to e.g. 7 mm (Millimeter)
+
+.. figure:: images/layer_vw_qgep_reach_label_overrun.png
 
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
