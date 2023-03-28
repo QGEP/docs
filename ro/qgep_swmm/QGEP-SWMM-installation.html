@@ -11,7 +11,6 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -50,24 +49,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Mașină Virtuală de Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. SWMM Data Exchange</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="SWMM.html">7.1. Storm Water Management Model (SWMM)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7.2. QGEP-SWMM installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#swmm-installation">7.2.1. SWMM Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qgis-configuration">7.2.2. QGIS configuration</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">7.3. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">7.4. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-data-requirements.html">7.5. QGEP-SWMM data requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">7.6. Check input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">7.7. SWMM Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">7.8. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">7.9. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html">7.4. Prepare Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html#qgep-swmm-data-requirements">7.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generate-SWMM-File.html">7.6. Generate SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-SWMM-File.html">7.7. Check SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-SWMM-Simulation.html">7.8. Run SWMM Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Process-Results.html">7.9. Import results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">7.10. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">7.11. Change simulation parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.12. For developpers and advanced users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
@@ -87,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>QGEP SWMM plugin</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>SWMM Data Exchange</a></li>
       <li class="breadcrumb-item active"><span class="section-number">7.2. </span>QGEP-SWMM installation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/QGEP-SWMM-installation.rst.txt" rel="nofollow"> View page source</a>
@@ -104,6 +103,11 @@
 <h2><span class="section-number">7.2.1. </span>SWMM Installation<a class="headerlink" href="#swmm-installation" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Download and install <a class="reference external" href="https://www.epa.gov/water-research/storm-water-management-model-swmm">SWMM</a></p></li>
+</ul>
+</section>
+<section id="qgis-configuration">
+<h2><span class="section-number">7.2.2. </span>QGIS configuration<a class="headerlink" href="#qgis-configuration" title="Permalink to this heading"></a></h2>
+<ul class="simple">
 <li><p>In QGIS, check that the path recorded in <code class="docutils literal notranslate"><span class="pre">Preferences</span> <span class="pre">&gt;</span> <span class="pre">Processing</span> <span class="pre">&gt;</span> <span class="pre">Processing</span> <span class="pre">providers</span> <span class="pre">&gt;</span> <span class="pre">QGEP</span> <span class="pre">&gt;</span> <span class="pre">SWMM</span> <span class="pre">executable</span></code> matches the path of the swmm executable (by default: <code class="docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files</span> <span class="pre">(x86)/EPA</span> <span class="pre">SWMM</span> <span class="pre">5.1.013/swmm5.exe</span></code>)</p></li>
 </ul>
 </section>

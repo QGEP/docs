@@ -11,14 +11,13 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7.4. SWMM Create Input" href="Create-Input.html" />
+    <link rel="next" title="7.4. Prepare Data" href="Prepare-Data.html" />
     <link rel="prev" title="7.2. QGEP-SWMM installation" href="QGEP-SWMM-installation.html" /> 
 </head>
 
@@ -51,23 +50,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. SWMM Data Exchange</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="SWMM.html">7.1. Storm Water Management Model (SWMM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">7.2. QGEP-SWMM installation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7.3. QGEP-SWMM workflow</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#workflow">7.3.1. Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">7.3.1. Workflow</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#prepare-and-check-the-data">7.3.1.1. Prepare and check the data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-a-swmm-export">7.3.1.2. Generate a SWMM Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-the-export">7.3.1.3. Check the Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-simulation">7.3.1.4. Run the simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stores-and-map-the-results">7.3.1.5. Stores and map the Results</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#gep-project">7.3.2. GEP project</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">7.4. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-data-requirements.html">7.5. QGEP-SWMM data requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">7.6. Check input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">7.7. SWMM Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">7.8. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">7.9. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html">7.4. Prepare Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html#qgep-swmm-data-requirements">7.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generate-SWMM-File.html">7.6. Generate SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-SWMM-File.html">7.7. Check SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-SWMM-Simulation.html">7.8. Run SWMM Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Process-Results.html">7.9. Import results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">7.10. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">7.11. Change simulation parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.12. For developpers and advanced users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
@@ -87,7 +92,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>QGEP SWMM plugin</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>SWMM Data Exchange</a></li>
       <li class="breadcrumb-item active"><span class="section-number">7.3. </span>QGEP-SWMM workflow</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/QGEP-SWMM-workflow.rst.txt" rel="nofollow"> View page source</a>
@@ -102,19 +107,49 @@
 <span id="id1"></span><h1><span class="section-number">7.3. </span>QGEP-SWMM workflow<a class="headerlink" href="#qgep-swmm-workflow" title="Permalink to this heading"></a></h1>
 <section id="workflow">
 <h2><span class="section-number">7.3.1. </span>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>. It reads data from the QGEP views (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>) and generate an input file for SWMM.</p></li>
-<li><p>Check <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file. Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code>, it launches SWMM. Run it on a tested <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file. It generates a report file <code class="docutils literal notranslate"><span class="pre">.rpt</span></code> which contains the summary and the full time series. Errors can also occur during the running time.</p></li>
-<li><p>Stores and map the results</p></li>
-</ol>
+<figure class="align-default">
+<img alt="../_images/workflow.png" src="../_images/workflow.png" />
+</figure>
+<p>Each step of the workflow is explained in details in next chapters.</p>
+<section id="prepare-and-check-the-data">
+<h3><span class="section-number">7.3.1.1. </span>Prepare and check the data<a class="headerlink" href="#prepare-and-check-the-data" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The function <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Set</span> <span class="pre">default</span> <span class="pre">coefficient</span> <span class="pre">of</span> <span class="pre">friction</span></code> can be used to fill automatically default reach friction.</p></li>
+</ul>
+</section>
+<section id="generate-a-swmm-export">
+<h3><span class="section-number">7.3.1.2. </span>Generate a SWMM Export<a class="headerlink" href="#generate-a-swmm-export" title="Permalink to this heading"></a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Create</span> <span class="pre">Input</span></code>. It:</p>
+<ul class="simple">
+<li><p>reads simulation parameters from a template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file,</p></li>
+<li><p>reads data from the QGEP views (schema <code class="docutils literal notranslate"><span class="pre">qgep_swmm</span></code>),</p></li>
+<li><p>generates an input file for SWMM (<code class="docutils literal notranslate"><span class="pre">.inp</span></code>).</p></li>
+</ul>
+</section>
+<section id="check-the-export">
+<h3><span class="section-number">7.3.1.3. </span>Check the Export<a class="headerlink" href="#check-the-export" title="Permalink to this heading"></a></h3>
+<p>Check generated <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p>
+<p>Its likely that the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file generated in the previous step contains errors or needs some parameters to be tuned.
+We recommend to first open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with the SWMM Graphical User Interface (GUI).
+Error summarized at the SWMM startup might highlight error in QGEP. Other errors can be solved directly in SWMM.</p>
+<p>If you need to tune the simulation parameters, you have to edit the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM GUI.</p>
+</section>
+<section id="run-the-simulation">
+<h3><span class="section-number">7.3.1.4. </span>Run the simulation<a class="headerlink" href="#run-the-simulation" title="Permalink to this heading"></a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code>, it launches SWMM. Run it on a tested <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.
+It generates a report file <code class="docutils literal notranslate"><span class="pre">.rpt</span></code> which contains the summary and the full time series.
+Errors can also occur during the running time.</p>
+<p>Alternatively, you can run the simulation from the SWMM interface or with command line.</p>
+</section>
+<section id="stores-and-map-the-results">
+<h3><span class="section-number">7.3.1.5. </span>Stores and map the Results<a class="headerlink" href="#stores-and-map-the-results" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>If you dont want to store the result in QGEP database</strong>: Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Extract</span> <span class="pre">Results</span></code>. It parses the report file and generates three QGIS table layers from the summary. The user has to join the computed values with the geometries and map them.</p></li>
 <li><p><strong>If you want to store the results in QGEP and use the dedicated view for the mapping</strong>: .Run <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Import</span> <span class="pre">Results</span></code>. It parses the report file. The results are imported in the measurements table, they populate a view dedicated for the mapping.</p></li>
 </ul>
 </div></blockquote>
-<p>Each step is explained in more details in the next chapters.</p>
+</section>
 </section>
 <section id="gep-project">
 <h2><span class="section-number">7.3.2. </span>GEP project<a class="headerlink" href="#gep-project" title="Permalink to this heading"></a></h2>
@@ -144,7 +179,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="QGEP-SWMM-installation.html" class="btn btn-neutral float-left" title="7.2. QGEP-SWMM installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Create-Input.html" class="btn btn-neutral float-right" title="7.4. SWMM Create Input" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Prepare-Data.html" class="btn btn-neutral float-right" title="7.4. Prepare Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

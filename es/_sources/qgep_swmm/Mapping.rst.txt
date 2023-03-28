@@ -27,6 +27,8 @@ The project ``swmm_summary.qgs`` show how the summary indicators can be loaded i
 
 Show the indicators evolving along time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 This manipulation only works with complete times series. Namely, you need to import the full results and not only the summary.
 
 **Play the simulation with Time Manager**

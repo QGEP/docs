@@ -11,7 +11,6 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -20,7 +19,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="6. Wincan 2 QGEP plugin" href="../wincan2qgep/index.html" />
-    <link rel="prev" title="5.2. Installation" href="install.html" /> 
+    <link rel="prev" title="5.2. Install" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,21 +46,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Leitfaden QGEP Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Administratorhandbuch</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Demo virtuelle Maschine</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="about.html">5.1. Über</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html">5.2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Demo Virtual Machine</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about.html">5.1. About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">5.2. Install</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.3. QGIS Server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">5.3.1. Betreten des Webservices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-web-services">5.3.1. Access the Web Services</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
 </ul>
 
         </div>
@@ -78,7 +77,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">5. </span>Demo virtuelle Maschine</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">5. </span>Demo Virtual Machine</a></li>
       <li class="breadcrumb-item active"><span class="section-number">5.3. </span>QGIS Server</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/vm/server.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
@@ -91,21 +90,29 @@
              
   <section id="qgis-server">
 <h1><span class="section-number">5.3. </span>QGIS Server<a class="headerlink" href="#qgis-server" title="Permalink to this heading"></a></h1>
-<p>Sie können auch eine virtuelle Maschine mit einem älteren QGEP , welches auch einen QGIS Server installiert hat herunter laden, von: <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a> .</p>
-<p>Die virtuelle Maschine hat funktionierende Installationen von dem QGIS Server &lt;<a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html</a>&gt;` und dem <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
+<p>You can download a VM with an older QGEP setup that also
+has QGIS Server installed from <a class="reference external" href="http://docs.qtibia.ro/qgisplatform.vdi.xz">http://docs.qtibia.ro/qgisplatform.vdi.xz</a> .</p>
+<p>The VM has working installations of
+<a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html">QGIS Server</a>
+and <a class="reference external" href="https://github.com/qgis/QGIS-Web-Client">QGIS Web Client (QWC).</a></p>
 <section id="access-the-web-services">
-<h2><span class="section-number">5.3.1. </span>Betreten des Webservices<a class="headerlink" href="#access-the-web-services" title="Permalink to this heading"></a></h2>
-<p>Der Apache-Server ist eingerichtet, um auf Anfragen an <cite>http://qgisplatform.demo</cite> zu reagieren. Bei Zugriff über vorstehende Verlinkung per Webbrowser, wird man durch die VM auf die Startseite von QWC geleitet wie untenstehend ersichtlich.</p>
+<h2><span class="section-number">5.3.1. </span>Access the Web Services<a class="headerlink" href="#access-the-web-services" title="Permalink to this heading"></a></h2>
+<p>The Apache server is setup to respond to requests pointing to the <cite>http://qgisplatform.demo</cite>.
+Accessing the above link with the Internet Browser of the VM will take you to the starting
+page of QWC depicted in the below image.</p>
 <figure class="align-default" id="id2">
 <img alt="../_images/001_qwc.png" src="../_images/001_qwc.png" />
 <figcaption>
 <p><span class="caption-text"><strong>QGIS Web client starting page</strong></span><a class="headerlink" href="#id2" title="Link zu diesem Bild"></a></p>
 </figcaption>
 </figure>
-<p>Wenn Sie den Webservice ausserhalb der VM betreten wollen, müssen Sie die <code class="docutils literal notranslate"><span class="pre">hosts</span></code> Datei auf Ihrer Maschine bearbeiten und <code class="docutils literal notranslate"><span class="pre">qgisplatform.demo</span></code> zur IP der VM richten.</p>
+<p>If you want to access the web services outside the VM, you need to edit the <code class="docutils literal notranslate"><span class="pre">hosts</span></code> file on
+your machine and point <code class="docutils literal notranslate"><span class="pre">qgisplatform.demo</span></code> to the IP of the VM.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Wenn Sie die VM mit dem Netzwerk Adapter innerhalb des NAT Modus aufgesetzt haben, dann ist nur der VM host in der Lage auf die Services zuzugreifen. Wenn Sie wollen, dass alle Geräte in der LAge sind dies zu tun dann müssen Sie den Netzwerk Adapter im Bridge Modus aufsetzten.</p>
+<p>If you’ve setup the VM with the network adapter in NAT mode only the VM host will
+be able to access the services. If you want all the devices on your LAN to do it,
+you need to setup the network adapter in bridge mode.</p>
 </div>
 </section>
 </section>
@@ -114,7 +121,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="install.html" class="btn btn-neutral float-left" title="5.2. Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="5.2. Install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
         <a href="../wincan2qgep/index.html" class="btn btn-neutral float-right" title="6. Wincan 2 QGEP plugin" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

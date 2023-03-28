@@ -6,19 +6,47 @@ QGEP-SWMM workflow
 Workflow
 --------
 
-1. Run ``SWMM Create Input``. It reads data from the QGEP views (schema ``qgep_swmm``) and generate an input file for SWMM. 
+.. figure:: images/workflow.png
 
-2. Check ``.inp`` file. Its likely that the ``.inp`` file generated in the previous step contains errors or needs some parameters to be tuned. We recommand to first open the ``.inp`` file with the SWMM Graphical User Interface (GUI) to solve the errors. Similarly, if you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
+Each step of the workflow is explained in details in next chapters.
 
-3. Run ``SWMM Execute``, it launches SWMM. Run it on a tested ``.inp`` file. It generates a report file ``.rpt`` which contains the summary and the full time series. Errors can also occur during the running time.
+Prepare and check the data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   
+- The function ``SWMM Set default coefficient of friction`` can be used to fill automatically default reach friction.
 
-4. Stores and map the results
+Generate a SWMM Export
+^^^^^^^^^^^^^^^^^^^^^^
+
+Run ``SWMM Create Input``. It:
+
+- reads simulation parameters from a template ``.inp`` file,
+- reads data from the QGEP views (schema ``qgep_swmm``),
+- generates an input file for SWMM (``.inp``). 
+
+Check the Export
+^^^^^^^^^^^^^^^^
+Check generated ``.inp`` file. 
+
+Its likely that the ``.inp`` file generated in the previous step contains errors or needs some parameters to be tuned. 
+We recommend to first open the ``.inp`` file with the SWMM Graphical User Interface (GUI). 
+Error summarized at the SWMM startup might highlight error in QGEP. Other errors can be solved directly in SWMM. 
+
+If you need to tune the simulation parameters, you have to edit the ``.inp`` file with SWMM GUI.
+
+Run the simulation
+^^^^^^^^^^^^^^^^^^
+Run ``SWMM Execute``, it launches SWMM. Run it on a tested ``.inp`` file. 
+It generates a report file ``.rpt`` which contains the summary and the full time series.
+Errors can also occur during the running time.
+
+Alternatively, you can run the simulation from the SWMM interface or with command line.
+
+Stores and map the Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  - **If you dont want to store the result in QGEP database**: Run ``SWMM Extract Results``. It parses the report file and generates three QGIS table layers from the summary. The user has to join the computed values with the geometries and map them.
  - **If you want to store the results in QGEP and use the dedicated view for the mapping**: .Run ``SWMM Import Results``. It parses the report file. The results are imported in the measurements table, they populate a view dedicated for the mapping.
-
-Each step is explained in more details in the next chapters.
-
 
 
 GEP project

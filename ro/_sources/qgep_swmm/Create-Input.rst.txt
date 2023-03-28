@@ -1,9 +1,9 @@
 .. _Create-Input:
 
 SWMM Create Input
-=================
+-----------------
 
-- The plugin extracts only the primary wastewater structures
+- By default, the plugin extracts the entire primary wastewater structures. If you check *Export only selected network*, then both the selected primary and secondary network will be exported. 
 
 - The ``.inp`` file is the input file format for SWMM. It contains the wastewater network AND simulation parameters. The network can be extracted from the QGEP data, but the simulation parameters must be set according to your study.
 
@@ -12,11 +12,26 @@ SWMM Create Input
 - By default, the export supposes that you use an *Horton Infiltration method*. If another method is set in the template ``.inp``, you might need to adapt the generated ``.inp``. See the linked `issue <https://github.com/QGEP/QGEP/issues/644/>`_
 
 QGEP plugin
------------
-
+^^^^^^^^^^^^
 Launch ``SWMM Create Input``:
 
 - ``Database``: the name of the service used to connect to the database
 - ``State``: Current or Planned: extract the wastewater structure according to the status
 - ``Template INP file``: a ``.inp`` from which simulation parameters will be copied
 - ``Destination INP file``: the ``.inp`` generated from QGEP data
+- ``Export only selected network``: Export primary and secondary selected network
+  
+
+Selection
+---------
+Usually you will select a subnetwork to be exported with the QGEP button ``Upstream`` and then ``Select current path``. 
+If you want to remove from this selection secondary structures:
+
+- Open ``Selection by expression``  on the layer ``vw_qgep_reach``
+- Expression:  ``"ch_function_hierarchic"  in (5066, 5068, 5069, 5070, 5064, 5071, 5062, 5072, 5074)``
+- Choose: ``filter current selection``
+  
+- Open ``Selection by expression``  on the layer ``vw_qgep_wastewater_structure``
+- Expression:  ``"_channel_function_hierarchic" in (5066, 5068, 5069, 5070, 5064, 5071, 5062, 5072, 5074)``
+- Choose: ``filter current selection``
+  

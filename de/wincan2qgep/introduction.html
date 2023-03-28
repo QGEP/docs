@@ -4,14 +4,13 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.1. Einleitung &mdash; QGEP 0.8 Dokumentation</title>
+  <title>6.1. Introduction &mdash; QGEP 0.8 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -19,7 +18,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="6.2. Untersuchungsdatei öffnen" href="open-inspection.html" />
+    <link rel="next" title="6.2. Open inspection" href="open-inspection.html" />
     <link rel="prev" title="6. Wincan 2 QGEP plugin" href="index.html" /> 
 </head>
 
@@ -47,21 +46,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Leitfaden QGEP Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP Benutzerhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Administratorhandbuch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Wincan 2 QGEP plugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Einleitung</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">6.2. Untersuchungsdatei öffnen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="match-channels.html">6.3. Haltungen abgleichen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">6.4. Problemlösungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="import-data.html">6.5. Datenimport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">6.6. Daten in QGEP anschauen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">6.2. Open inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html">6.3. Match channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">6.4. Fixing issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">6.5. Import data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewing-data-qgep.html">6.6. Viewing data in QGEP</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
 </ul>
 
         </div>
@@ -79,7 +78,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html"><span class="section-number">6. </span>Wincan 2 QGEP plugin</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">6.1. </span>Einleitung</li>
+      <li class="breadcrumb-item active"><span class="section-number">6.1. </span>Introduction</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wincan2qgep/introduction.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -90,10 +89,12 @@
            <div itemprop="articleBody">
              
   <section id="introduction">
-<h1><span class="section-number">6.1. </span>Einleitung<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="https://github.com/QGEP/qgis_wincan2qgep">Wincan 2 QGEP</a> ist ein QGIS plugin für den Import von Kanalfernsehdaten aus Wincan in QGEP. Im Moment funktioniert das nur mit Wincan 8 Daten, aber es ist geplant, auch Wincan VX und/oder direkt das <a class="reference external" href="https://www.vsa.ch/en/fachbereiche-cc/siedlungsentwaesserung/vsa-dss/datenmodell/">VSA-DSS</a> KEK Format zu unterstützen.</p>
-<p>Das Plugin erlaubt das einfache Zuordnen der Kanalfernsehdaten zu den Kanalnetzdaten (Haltungen).</p>
-<p>Das Plugin liest die XML-Datei mit den Kanalfernsehdaten (nicht die mdb-Datei) und stellt ein Interface bereit, um in der GIS-Karte die zugehörigen Haltungen zu suchen und zu selektieren. Wenn diese Zuordnung erfolgt ist, können die Kanalfernsehdaten in QGEP importiert werden.</p>
+<h1><span class="section-number">6.1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/QGEP/qgis_wincan2qgep">Wincan 2 QGEP</a> is a QGIS plugin to import inspection data from Wincan to QGEP.
+It currently works with Wincan 8 format only, but it is planned to upgrade it to support Wincan VX and/or pure <a class="reference external" href="https://www.vsa.ch/en/fachbereiche-cc/siedlungsentwaesserung/vsa-dss/datenmodell/">VSA-DSS</a> KEK format.</p>
+<p>It can be seen a matching procedure between the inspection TV data and the network data.</p>
+<p>The plugin will read the XML file from the data and offer an interface to search and select on map the corresponding channels from the inspection data.
+Once this matching achieved, data can be imported within QGEP.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
     <iframe src="https://www.youtube.com/embed/72s6_YnSZas" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div></section>
@@ -103,7 +104,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="6. Wincan 2 QGEP plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="open-inspection.html" class="btn btn-neutral float-right" title="6.2. Untersuchungsdatei öffnen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="open-inspection.html" class="btn btn-neutral float-right" title="6.2. Open inspection" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

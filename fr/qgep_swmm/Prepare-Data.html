@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.4. Prepare Data &mdash; Documentation QGEP 0.8</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="7.6. Generate SWMM File" href="Generate-SWMM-File.html" />
+    <link rel="prev" title="7.3. QGEP-SWMM workflow" href="QGEP-SWMM-workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            QGEP
+          </a>
+              <div class="version">
+                0.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. SWMM Data Exchange</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SWMM.html">7.1. Storm Water Management Model (SWMM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">7.2. QGEP-SWMM installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">7.3. QGEP-SWMM workflow</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.4. Prepare Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#qgep-swmm-correspondances">7.4.1. QGEP - SWMM correspondances</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#title-notes">7.4.1.1. Title/Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">7.4.1.2. Options:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#climatology">7.4.1.3. Climatology:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydrology">7.4.1.4. Hydrology:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydraulics">7.4.1.5. Hydraulics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality">7.4.1.6. Quality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curves">7.4.1.7. Curves</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time-series">7.4.1.8. Time series</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time-patterns">7.4.1.9. Time patterns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labels">7.4.1.10. Labels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#qgep-swmm-data-requirements">7.5. QGEP-SWMM data requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coefficient-of-friction">7.5.1. Coefficient of friction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#populate-default-coefficient-of-friction">7.5.1.1. Populate default coefficient of friction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Generate-SWMM-File.html">7.6. Generate SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-SWMM-File.html">7.7. Check SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-SWMM-Simulation.html">7.8. Run SWMM Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Process-Results.html">7.9. Import results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mapping.html">7.10. Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.11. For developpers and advanced users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QGEP</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>SWMM Data Exchange</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7.4. </span>Prepare Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/qgep_swmm/Prepare-Data.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="prepare-data">
+<span id="id1"></span><h1><span class="section-number">7.4. </span>Prepare Data<a class="headerlink" href="#prepare-data" title="Lien permanent vers cette rubrique"></a></h1>
+<section id="qgep-swmm-correspondances">
+<span id="id2"></span><h2><span class="section-number">7.4.1. </span>QGEP - SWMM correspondances<a class="headerlink" href="#qgep-swmm-correspondances" title="Lien permanent vers cette rubrique"></a></h2>
+<section id="title-notes">
+<h3><span class="section-number">7.4.1.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="options">
+<h3><span class="section-number">7.4.1.2. </span>Options:<a class="headerlink" href="#options" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="climatology">
+<h3><span class="section-number">7.4.1.3. </span>Climatology:<a class="headerlink" href="#climatology" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="hydrology">
+<h3><span class="section-number">7.4.1.4. </span>Hydrology:<a class="headerlink" href="#hydrology" title="Lien permanent vers cette rubrique"></a></h3>
+<p><strong>Rain Gauges [Gages in SWMM]:</strong></p>
+<p>QGEP_SWMM creates one raingage for each subcatchment.</p>
+<p>By default:</p>
+<ul class="simple">
+<li><p>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal notranslate"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name updated accordingly.</p></li>
+<li><p>Other parameters have default SWMM values</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_raingages.sql</span></code> for details.</p>
+<p><strong>Aquifers:</strong></p>
+<p>QGEP_SWMM creates an aquifer for each QGEP <code class="docutils literal notranslate"><span class="pre">aquifiers</span></code>.</p>
+<p>By default:</p>
+<ul class="simple">
+<li><p>An aquifer is created for each QGEP <code class="docutils literal notranslate"><span class="pre">aquifiers</span></code></p></li>
+<li><p>The bottom elevation is set to the <code class="docutils literal notranslate"><span class="pre">minimal_groundwater_level</span></code></p></li>
+<li><p>The water table elevation is set to the <code class="docutils literal notranslate"><span class="pre">average_groundwater_level</span></code></p></li>
+<li><p>Other parameters have default SWMM values</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_aquifers.sql</span></code> for details.</p>
+<p><strong>Subcatchment:</strong></p>
+<p>QGEP_SWMM creates a subcatchment for each QGEP catchment area.</p>
+<p>By default:
+- A subcatchment is created for each QGEP <code class="docutils literal notranslate"><span class="pre">wastewater_networkelement</span></code> linked to the <code class="docutils literal notranslate"><span class="pre">catchment</span> <span class="pre">area</span></code> (max. 4: <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_planned</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_planned</span></code>)
+- it is linked to a rain gage.
+- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
+- The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone (see <code class="docutils literal notranslate"><span class="pre">vw_swmm_coverages.sql</span></code>)
+- SWMM Dry Weather Flow:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>are set to 0 for rain water subcatchments</p></li>
+<li><p>are set to <code class="docutils literal notranslate"><span class="pre">waste_water_production[_current,_planned]</span></code> if set</p></li>
+<li><p>else it computed from the subcatchement area and <code class="docutils literal notranslate"><span class="pre">population_density[_current,_planned]</span></code></p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>Other parameters have default SWMM values</p></li>
+</ul>
+<p>The subcatchment can be linked to an aquifer via the groundwater attribute.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_subcatchments.sql</span></code>, <code class="docutils literal notranslate"><span class="pre">vw_swmm_subareas.sql</span></code>, <code class="docutils literal notranslate"><span class="pre">vw_swmm_dwf.sql</span></code> and <code class="docutils literal notranslate"><span class="pre">vw_swmm_coverages.sql</span></code> for details.</p>
+<p><strong>Snow Packs</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+<p><strong>Unit hydrographs</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+<p><strong>LID Controls</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="hydraulics">
+<h3><span class="section-number">7.4.1.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Lien permanent vers cette rubrique"></a></h3>
+<p><strong>Junctions</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_junctions.sql</span></code> for details.</p>
+<p><strong>Outfalls</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates an outfall for each QGEP discharge_point.</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_outfalls.sql</span></code> for details.</p>
+<p><strong>Dividers</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a divider for the manholes and special structures having the function <code class="docutils literal notranslate"><span class="pre">separating_structure</span></code></p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_dividers.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Storage Units</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a storage for some kind of QGEP infiltration installations and some kind of QGEP special structures.</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_storages.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Conduits</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a conduit for each QGEP reach.</p></li>
+<li><p>Roughness is created from <code class="docutils literal notranslate"><span class="pre">coefficient_of_friction</span></code>, <code class="docutils literal notranslate"><span class="pre">wall_roughness</span></code> or <code class="docutils literal notranslate"><span class="pre">swmm_default_coefficient_of_friction</span></code> (see: <a class="reference internal" href="#coefficient-of-friction"><span class="std std-ref">Coefficient of friction</span></a>)</p></li>
+<li><p>QGEP profile type are matched to SWMM profile type, dimensions are computed from <code class="docutils literal notranslate"><span class="pre">reach.clear_height</span></code> and <code class="docutils literal notranslate"><span class="pre">pipe_profile.height_width_ratio</span></code></p></li>
+<li><p>Custom pipe profile described by a curve are currently not exported</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_conduits.sql</span></code> and <code class="docutils literal notranslate"><span class="pre">vw_swmm_xsections.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Pumps</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a pump for each QGEP pump. When a curve <code class="docutils literal notranslate"><span class="pre">qgep_od.hq_relation</span></code> is liked to the pump it is exported as a SWMM curve.</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_pumps.sql</span></code> and <code class="docutils literal notranslate"><span class="pre">vs_swmm_curves.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Orifices</strong></p>
+<p>No correspondance in QGEP. Orifices are not created from QGEP objects. An empty table is created</p>
+<ul class="simple">
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_orifices.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Weirs</strong></p>
+<ul class="simple">
+<li><p>Are created from QGEP prank weir (without H/Q relation) and leaping weir.</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_weirs.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Outlets</strong></p>
+<p>No correspondance in QGEP. However, outlets are created to export QGEP prank weir having a H/Q relation.</p>
+<ul class="simple">
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_outlets.sql</span></code> for details.</p></li>
+</ul>
+<p><strong>Transects</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+<p><strong>Controls</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="quality">
+<h3><span class="section-number">7.4.1.6. </span>Quality<a class="headerlink" href="#quality" title="Lien permanent vers cette rubrique"></a></h3>
+<p><strong>Land uses</strong></p>
+<ul class="simple">
+<li><p>QGEP_SWMM creates a SWMM land use kind for each QGEP planning zone kind.</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_landuses.sql</span></code></p></li>
+</ul>
+<p><strong>Pollutants</strong></p>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="curves">
+<h3><span class="section-number">7.4.1.7. </span>Curves<a class="headerlink" href="#curves" title="Lien permanent vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Are created for pumps linked to a <code class="docutils literal notranslate"><span class="pre">qgep_od.hq_relation</span></code> and for wastewater structures linked to a <code class="docutils literal notranslate"><span class="pre">qgep_od.hydr_geom_relation</span></code></p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_curves.sql</span></code> for details.</p></li>
+</ul>
+</section>
+<section id="time-series">
+<h3><span class="section-number">7.4.1.8. </span>Time series<a class="headerlink" href="#time-series" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="time-patterns">
+<h3><span class="section-number">7.4.1.9. </span>Time patterns<a class="headerlink" href="#time-patterns" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+<section id="labels">
+<h3><span class="section-number">7.4.1.10. </span>Labels<a class="headerlink" href="#labels" title="Lien permanent vers cette rubrique"></a></h3>
+<p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
+<ul class="simple">
+<li><p>Copied from the template input file if exists.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="qgep-swmm-data-requirements">
+<span id="id3"></span><h1><span class="section-number">7.5. </span>QGEP-SWMM data requirements<a class="headerlink" href="#qgep-swmm-data-requirements" title="Lien permanent vers cette rubrique"></a></h1>
+<p>To run a sucessful simulation in SWMM the following minimal data has to be filled in to be matched to the swmm objects</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">JUNCTIONS and COORDINATES</span><a class="headerlink" href="#id5" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 45%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SWMM attribute</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>QGEP equivalent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>User-assigned junction name.</p></td>
+<td><p>wastewater_node.obj_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>X-Coordinate / Y-Coordinate</p></td>
+<td><p>Coordinate of node [COORDINATES]</p></td>
+<td><p>wastewater_node.situation_geometry</p></td>
+</tr>
+<tr class="row-even"><td><p>Description</p></td>
+<td><p>Description of node</p></td>
+<td><p>wastewater_structure.identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tag</p></td>
+<td><p>Optional label used to categorize or classify the junction.</p></td>
+<td><p>manhole.obj_id</p></td>
+</tr>
+<tr class="row-even"><td><p>Invert El.</p></td>
+<td><p>Invert elevation of the junction</p></td>
+<td><p>wastewater_node.bottom_level</p></td>
+</tr>
+<tr class="row-odd"><td><p>Max. Depth</p></td>
+<td><p>Maximum depth at the junction (i.e., the distance from the invert to the ground surface) (feet or meters). If zero, then the distance from the invert to the top of the highest connecting link will be used.</p></td>
+<td><p>Difference of cover.level minus wastewater_node.bottom_level</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">CONDUITS</span><a class="headerlink" href="#id6" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 45%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SWMM attribute</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>QGEP equivalent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p></td>
+<td><p>User-assigned conduit name.</p></td>
+<td><p>wastewater_node.obj_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>Inlet Node</p></td>
+<td><p>Name of node on the inlet end of the conduit (which is normally the end at higher elevation).</p></td>
+<td><p>from wastewater_node.obj_id</p></td>
+</tr>
+<tr class="row-even"><td><p>Outlet Node</p></td>
+<td><p>Name of node on the outlet end of the conduit (which is normally the end at lower elevation).</p></td>
+<td><p>from wastewater_node.obj_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>Description of conduit</p></td>
+<td><p>wastewater_networkelement.identifier</p></td>
+</tr>
+<tr class="row-even"><td><p>Tag</p></td>
+<td><p>Optional label used to categorize or classify the conduit.</p></td>
+<td><p>wastewater_networkelement.fk_wastewater_structure</p></td>
+</tr>
+<tr class="row-odd"><td><p>Max. Depth</p></td>
+<td><p>Maximum depth of the conduit’s cross section</p></td>
+<td><p>Difference of Cover.level minus Wastewater_node.bottom_level</p></td>
+</tr>
+<tr class="row-even"><td><p>Length</p></td>
+<td><p>Conduit length</p></td>
+<td><p>reach.length_effective or calculated from reach.progression_geometry if length_effective is empty</p></td>
+</tr>
+<tr class="row-odd"><td><p>Roughness</p></td>
+<td><p>Manning’s roughness coefficient.</p></td>
+<td><p>reach.wall_roughness</p></td>
+</tr>
+<tr class="row-even"><td><p>InletOffset</p></td>
+<td><p>Depth or elevation of the conduit invert above the node invert at the inlet end of the conduit</p></td>
+<td><p>reach_point_from.level minus from_wastewater_node.bottom_level</p></td>
+</tr>
+<tr class="row-odd"><td><p>OutletOffset</p></td>
+<td><p>Depth or elevation of the conduit invert above the node invert at the outlet end of the conduit</p></td>
+<td><p>reach_point_to.level minus to_wastewater_node.bottom_level</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">XSECTIONS</span><a class="headerlink" href="#id7" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 45%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SWMM attribute</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>QGEP equivalent</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Shape</p></td>
+<td><p>geometric properties of the conduit’s cross section e.g. CIRCULAR.</p></td>
+<td><p>pipe_profile.profile_type</p></td>
+</tr>
+<tr class="row-odd"><td><p>Geom1</p></td>
+<td><p>Maximum height of conduit</p></td>
+<td><p>reach.clear_height/1000 [m] to [mm]</p></td>
+</tr>
+</tbody>
+</table>
+<section id="coefficient-of-friction">
+<span id="id4"></span><h2><span class="section-number">7.5.1. </span>Coefficient of friction<a class="headerlink" href="#coefficient-of-friction" title="Lien permanent vers cette rubrique"></a></h2>
+<ul>
+<li><p>The plugin will export the roughness according to these priorities:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">reach.coefficient_of_friction</span></code> is set then it is converted (<code class="docutils literal notranslate"><span class="pre">1/coefficient_of_friction</span></code>) and exported to SWMM</p></li>
+<li><p>Else if <code class="docutils literal notranslate"><span class="pre">reach.wall_roughness</span></code> and <code class="docutils literal notranslate"><span class="pre">reach.clear_height</span></code> are set, it is converted (<code class="docutils literal notranslate"><span class="pre">(1/(4</span> <span class="pre">*</span> <span class="pre">SQRT(9.81)*POWER((32/re.clear_height/1000),(1/6))*LOG(((3.71*re.clear_height/1000)/(re.wall_roughness/1000)))))</span></code>) and exported.</p></li>
+<li><p>Else if <code class="docutils literal notranslate"><span class="pre">reach.swmm_default_coefficient_of_friction</span></code> is set then it is used</p></li>
+<li><p>Else a default value of <code class="docutils literal notranslate"><span class="pre">0.01</span></code> is set</p></li>
+<li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_conduites.sql</span></code> for details</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The formula to convert from Strickler to Coolebrook is documented in <em>ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001</em>
+<a class="reference external" href="https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html">Link</a></p>
+</div>
+<section id="populate-default-coefficient-of-friction">
+<h3><span class="section-number">7.5.1.1. </span>Populate default coefficient of friction<a class="headerlink" href="#populate-default-coefficient-of-friction" title="Lien permanent vers cette rubrique"></a></h3>
+<p>The table <code class="docutils literal notranslate"><span class="pre">qgep_swmm.reach_coefficient_of_friction</span></code> contains default coefficient of Strickler for the reach materials.
+The file <code class="docutils literal notranslate"><span class="pre">../project/qml/reach_coefficient_of_friction.qml</span></code> is the layer definition, that you can import in your QGIS project.
+If the default values don’t match your needs you can edit them.
+The function <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Set</span> <span class="pre">default</span> <span class="pre">coefficient</span> <span class="pre">of</span> <span class="pre">friction</span></code> will put in <code class="docutils literal notranslate"><span class="pre">qgep_od.reach.swmm_default_coefficient_of_friction</span></code> these default values.
+You can choose if you want to overwrite or not the values existing in this attribute.</p>
+<p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Set</span> <span class="pre">default</span> <span class="pre">coefficient</span> <span class="pre">of</span> <span class="pre">friction</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Overwrite</span> <span class="pre">existing</span> <span class="pre">default</span> <span class="pre">values</span></code>: If checked the values stored in <code class="docutils literal notranslate"><span class="pre">swmm_default_coefficient_of_friction</span></code> will be overwrited with new values.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="QGEP-SWMM-workflow.html" class="btn btn-neutral float-left" title="7.3. QGEP-SWMM workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Generate-SWMM-File.html" class="btn btn-neutral float-right" title="7.6. Generate SWMM File" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

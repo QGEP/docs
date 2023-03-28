@@ -11,7 +11,6 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -19,7 +18,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7.2. QGEP-SWMM installation" href="QGEP-SWMM-installation.html" />
-    <link rel="prev" title="7. QGEP SWMM plugin" href="index.html" /> 
+    <link rel="prev" title="7. SWMM Data Exchange" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,19 +50,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. QGEP SWMM plugin</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">7. SWMM Data Exchange</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. Storm Water Management Model (SWMM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-installation.html">7.2. QGEP-SWMM installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-workflow.html">7.3. QGEP-SWMM workflow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Create-Input.html">7.4. SWMM Create Input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QGEP-SWMM-data-requirements.html">7.5. QGEP-SWMM data requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Check-Input.html">7.6. Check input file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Execute.html">7.7. SWMM Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Extract-Results.html">7.8. SWMM Extract Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Import-Results.html">7.9. SWMM Import Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html">7.4. Prepare Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Prepare-Data.html#qgep-swmm-data-requirements">7.5. QGEP-SWMM data requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Generate-SWMM-File.html">7.6. Generate SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Check-SWMM-File.html">7.7. Check SWMM File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Run-SWMM-Simulation.html">7.8. Run SWMM Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Process-Results.html">7.9. Import results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Mapping.html">7.10. Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Change-simulation-parameters.html">7.11. Change simulation parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.12. For developpers and advanced users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Developpers-Advanced-Users.html">7.11. For developpers and advanced users</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
@@ -83,7 +81,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>QGEP SWMM plugin</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">7. </span>SWMM Data Exchange</a></li>
       <li class="breadcrumb-item active"><span class="section-number">7.1. </span>Storm Water Management Model (SWMM)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/qgep_swmm/SWMM.rst.txt" rel="nofollow"> View page source</a>
@@ -102,10 +100,10 @@ It can be used to evaluate gray infrastructure stormwater control strategies, su
 SWMM was developed to help support local, state, and national stormwater management objectives to reduce runoff through infiltration and retention, and help to reduce discharges that cause impairment of waterbodies.</p>
 <p>The QGEP SWMM plugin allows to:</p>
 <ul class="simple">
-<li><p>Easily export network data in the SWMM Input format (*.inp)</p></li>
-<li><p>Run SWMM directly from QGEP and</p></li>
-<li><p>Extract and take back the wanted SWMM results into QGEP</p></li>
-<li><p>And visualize them in different ways.</p></li>
+<li><p>Easily export network data in the SWMM Input format (*.inp),</p></li>
+<li><p>Run SWMM directly from QGEP,</p></li>
+<li><p>Extract and take back the wanted SWMM results into QGEP,</p></li>
+<li><p>Visualize them in different ways.</p></li>
 </ul>
 </section>
 
@@ -113,7 +111,7 @@ SWMM was developed to help support local, state, and national stormwater managem
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="7. QGEP SWMM plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="7. SWMM Data Exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="QGEP-SWMM-installation.html" class="btn btn-neutral float-right" title="7.2. QGEP-SWMM installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

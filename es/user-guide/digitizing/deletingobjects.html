@@ -4,14 +4,13 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2.6. Eliminando objetos &mdash; documentación de QGEP - 0.8</title>
+  <title>3.2.6. Deleting objects &mdash; documentación de QGEP - 0.8</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -20,7 +19,7 @@
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="3.2.7. Digitizing Catchment Areas" href="digitizingcatchments.html" />
-    <link rel="prev" title="3.2.5. Digitalizando Canales" href="digitizingchannels.html" /> 
+    <link rel="prev" title="3.2.5. Digitizing Channels" href="digitizingchannels.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,20 +46,20 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guía de Usuario QGEP</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3.2. Digitizing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Ingreso de datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Data entry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">3.2.2. Digitizing Wastewater Structures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">3.2.3. Digitalizando geometría detallada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdetailedgeometry.html">3.2.3. Digitizing detailed geometry</a></li>
 <li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">3.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Digitalizando Canales</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.6. Eliminando objetos</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#delete-reaches">3.2.6.1. Eliminando alcances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Digitizing Channels</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.6. Deleting objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#delete-reaches">3.2.6.1. Delete Reaches</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-manholes-and-other-wastewater-structures">3.2.6.2. Delete Manholes and other Wastewater Structures</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-covers">3.2.6.3. Delete Covers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#delete-structure-parts">3.2.6.4. Eliminar partes de la estructura</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete-structure-parts">3.2.6.4. Delete Structure parts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#delete-detailed-geometries">3.2.6.5. Delete detailed geometries</a></li>
 </ul>
 </li>
@@ -68,7 +67,7 @@
 <li class="toctree-l3"><a class="reference internal" href="importingdata.html">3.2.8. Importing data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Modificando en QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Editing in QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">3.4. Length profiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">3.5. Network following tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">3.6. Plan plotting</a></li>
@@ -76,11 +75,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Guía del administrador</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Complemento Wincan 2 QGEP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. QGEP SWMM plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
 </ul>
 
         </div>
@@ -97,9 +96,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>Guía de Usuario QGEP</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>QGEP User Guide</a></li>
           <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.2. </span>Digitizing in QGEP</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2.6. </span>Eliminando objetos</li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2.6. </span>Deleting objects</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user-guide/digitizing/deletingobjects.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -110,11 +109,11 @@
            <div itemprop="articleBody">
              
   <section id="deleting-objects">
-<h1><span class="section-number">3.2.6. </span>Eliminando objetos<a class="headerlink" href="#deleting-objects" title="Enlace permanente a este encabezado"></a></h1>
+<h1><span class="section-number">3.2.6. </span>Deleting objects<a class="headerlink" href="#deleting-objects" title="Enlace permanente a este encabezado"></a></h1>
 <p>You can delete point or line objects (with all associated objects) through the <strong>vw_qgep_(wastewater_structure/reach)</strong> layers.
 You can also pick and delete only a specific object (e.g. cover).</p>
 <section id="delete-reaches">
-<h2><span class="section-number">3.2.6.1. </span>Eliminando alcances<a class="headerlink" href="#delete-reaches" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.2.6.1. </span>Delete Reaches<a class="headerlink" href="#delete-reaches" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p>Select <strong>vw_qgep_reach</strong> and change to edit mode.</p></li>
 <li><p>Select the reach(es) you want to delete. You can click on an object or draw an area.</p></li>
@@ -170,27 +169,27 @@ elsewhere.</p>
 <li><p>Use the <strong>Identify Features</strong> tool to open the form</p></li>
 <li><p>Switch to the covers tab</p></li>
 <li><p>Select the cover(s) you want to delete</p></li>
-<li><p>Clic sobre el botón rojo x para eliminar las cubiertas</p></li>
+<li><p>Click the red x button to delete the covers</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/delete_covers.jpg" src="../../_images/delete_covers.jpg" />
 </figure>
 <ul class="simple">
-<li><p>Clic en guardar en el formulario</p></li>
+<li><p>Click save on the form</p></li>
 <li><p>Deselect the edit mode and confirm changes to layer. All changes will be saved to database.</p></li>
 <li><p>Second way to delete a cover: select the <strong>vw_cover</strong> layer and change to edit mode, select the cover, use <strong>Edit</strong> –&gt; <strong>Delete Selected</strong>, stop the editing mode</p></li>
 </ul>
 </section>
 <section id="delete-structure-parts">
-<h2><span class="section-number">3.2.6.4. </span>Eliminar partes de la estructura<a class="headerlink" href="#delete-structure-parts" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.2.6.4. </span>Delete Structure parts<a class="headerlink" href="#delete-structure-parts" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p>Select <strong>vw_qgep_wastewater_structure</strong> and change to edit mode</p></li>
 <li><p>Select the object (<strong>manholes</strong>, <strong>special structures</strong> etc.) from which you want to delete a structure part</p></li>
 <li><p>Use the <strong>Identify Features</strong> tool to open the form</p></li>
 <li><p>Switch to the structure parts tab</p></li>
 <li><p>Select the structure part you want to delete</p></li>
-<li><p>Clic sobre el botón rojo x para eliminar las partes de la estructura</p></li>
-<li><p>Clic en guardar en el formulario</p></li>
+<li><p>Click the red x button to delete the structure parts</p></li>
+<li><p>Click save on the form</p></li>
 <li><p>Stop the editing mode and confirm changes to layer. All changes will be saved to database.</p></li>
 </ul>
 </section>
@@ -213,7 +212,7 @@ elsewhere.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="digitizingchannels.html" class="btn btn-neutral float-left" title="3.2.5. Digitalizando Canales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="digitizingchannels.html" class="btn btn-neutral float-left" title="3.2.5. Digitizing Channels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="digitizingcatchments.html" class="btn btn-neutral float-right" title="3.2.7. Digitizing Catchment Areas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
