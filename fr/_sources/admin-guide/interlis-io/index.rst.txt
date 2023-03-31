@@ -91,6 +91,10 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. figure:: images/layer_vw_qgep_reach_label_overrun.png
 
+
+.. note:: Note that remark fields are truncated to 80 characters on INTERLIS Export, as the INTERLIS definition is like this. If you have remark fields with more text then consider to move this data to documentation with the classes "file" and "data_media" so it can be exported to INTERLIS completely where you can add any document, photo or video to a class.
+
+
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
 
 
