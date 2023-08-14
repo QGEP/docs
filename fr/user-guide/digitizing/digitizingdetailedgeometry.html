@@ -4,13 +4,15 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2.3. Digitizing detailed geometry &mdash; Documentation QGEP 0.8</title>
+  <title>3.2.3. Numérisation de géométries détaillées &mdash; Documentation QGEP 0.8</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -18,8 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="3.2.4. Digitizing Detailed Geometry as Drainage Channel" href="digitizingdrainagechannel.html" />
-    <link rel="prev" title="3.2.2. Digitizing Wastewater Structures" href="digitizingwastewaterstructures.html" /> 
+    <link rel="next" title="3.2.4. Numériser une géométrie détaillée en tant que conduite de drainage" href="digitizingdrainagechannel.html" />
+    <link rel="prev" title="3.2.2. Numériser les structures assainissement" href="digitizingwastewaterstructures.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,37 +48,37 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.2. Digitizing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Data entry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">3.2.2. Digitizing Wastewater Structures</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.3. Digitizing detailed geometry</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#general">3.2.3.1. General</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">3.2.3.2. Digitizing tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guide d’installation de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guide d’utilisateur de QGEP</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Aperçu de QGEP</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.2. Numérisation dans QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="dataentry.html">3.2.1. Saisie de données</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingwastewaterstructures.html">3.2.2. Numériser les structures assainissement</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.2.3. Numérisation de géométries détaillées</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">3.2.3.1. Généralités</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitizing-tool">3.2.3.2. Outil de numérisation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">3.2.4. Digitizing Detailed Geometry as Drainage Channel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Digitizing Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">3.2.6. Deleting objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">3.2.7. Digitizing Catchment Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingdrainagechannel.html">3.2.4. Numériser une géométrie détaillée en tant que conduite de drainage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingchannels.html">3.2.5. Numérisation de canalisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deletingobjects.html">3.2.6. Suppression d’objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="digitizingcatchments.html">3.2.7. Numérisation des bassins versants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="importingdata.html">3.2.8. Importing data</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Editing in QGEP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">3.4. Length profiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">3.5. Network following tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">3.6. Plan plotting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../history/index.html">3.7. History in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editing/index.html">3.3. Édition dans QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../length-profile/index.html">3.4. Profils en long</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../network-following/index.html">3.5. Outils de poursuite de réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plan-plotting/index.html">3.6. Impression de plans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../history/index.html">3.7. Historique dans QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Guide d’administration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Machine virtuelle de démonstration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Plugin Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traduction</a></li>
 </ul>
 
         </div>
@@ -93,9 +95,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>QGEP User Guide</a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.2. </span>Digitizing in QGEP</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2.3. </span>Digitizing detailed geometry</li>
+          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>Guide d’utilisateur de QGEP</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.2. </span>Numérisation dans QGEP</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2.3. </span>Numérisation de géométries détaillées</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user-guide/digitizing/digitizingdetailedgeometry.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -106,35 +108,34 @@
            <div itemprop="articleBody">
              
   <section id="digitizing-detailed-geometry">
-<h1><span class="section-number">3.2.3. </span>Digitizing detailed geometry<a class="headerlink" href="#digitizing-detailed-geometry" title="Lien permanent vers cette rubrique"></a></h1>
+<h1><span class="section-number">3.2.3. </span>Numérisation de géométries détaillées<a class="headerlink" href="#digitizing-detailed-geometry" title="Lien permanent vers cette rubrique"></a></h1>
 <section id="general">
-<h2><span class="section-number">3.2.3.1. </span>General<a class="headerlink" href="#general" title="Lien permanent vers cette rubrique"></a></h2>
-<p>You can add a detailed geometry to waste water structures.</p>
-<p>This is recommended for:</p>
+<h2><span class="section-number">3.2.3.1. </span>Généralités<a class="headerlink" href="#general" title="Lien permanent vers cette rubrique"></a></h2>
+<p>Il est possible d’ajouter une forme géométrique à une structure assainissement.</p>
+<p>Ceci est recommandé pour:</p>
 <ul class="simple">
-<li><p>Special structures and discharge points, because they are not normed structures like manholes,
-where you can define <strong>dimension1</strong> and <strong>dimension2</strong> to describe the extension.</p></li>
+<li><p>Les structures spéciales et les points de déversement, car ce ne sont pas des structures normées comme les regards, pour lesquels vous pouvez définir <em>dimension1</em> et <em>dimension2</em> pour en décrire l’emprise.</p></li>
 <li><p>Infiltration installations where <strong>dimension1</strong> and <strong>dimension2</strong> are not enough to describe the geometry</p></li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Detailed geometry is usually not used for manholes or channels!</p>
+<p>Ce type de géométrie n’est généralement pas utilisé pour les regards de visite ou les canalisations!</p>
 </div>
 </section>
 <section id="digitizing-tool">
-<h2><span class="section-number">3.2.3.2. </span>Digitizing tool<a class="headerlink" href="#digitizing-tool" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">3.2.3.2. </span>Outil de numérisation<a class="headerlink" href="#digitizing-tool" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
-<li><p>Select the <strong>vw_qgep_wastewater_structure</strong> layer</p></li>
-<li><p>Select the object where you want to add a detailed geometry with the info tool</p></li>
-<li><p>Right click the object</p></li>
-<li><p>if there are several objects: select the <strong>vw_qgep_wastewater_structure</strong> layer</p></li>
-<li><p>Choose <strong>Digitize</strong></p></li>
+<li><p>Sélectionnez la couche <strong>vw_qgep_wastewater_structure</strong></p></li>
+<li><p>Avec l’outil <strong>information</strong>, sélectionnez l’objet auquel vous voulez ajouter une géométrie détaillée</p></li>
+<li><p>Effectuez un clic droit sur l’objet</p></li>
+<li><p>S’il y a plusieurs objets: sélectionnez la couche <strong>vw_qgep_ouvrage_assainissement</strong></p></li>
+<li><p>Choisissez l’option <strong>Numériser</strong></p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/digitizing_detailedgeometry1.jpg" src="../../_images/digitizing_detailedgeometry1.jpg" />
 </figure>
 <ul class="simple">
-<li><p>You can now start digitizing the polygon.</p></li>
+<li><p>Vous pouvez maintenant dessiner le polygone.</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/digitizing_detailedgeometry2.jpg" src="../../_images/digitizing_detailedgeometry2.jpg" />
@@ -143,12 +144,12 @@ where you can define <strong>dimension1</strong> and <strong>dimension2</strong>
 <img alt="../../_images/digitizing_detailedgeometry3.jpg" src="../../_images/digitizing_detailedgeometry3.jpg" />
 </figure>
 <ul class="simple">
-<li><p>Right click to stop.</p></li>
+<li><p>Faites un clic droit pour arrêter la numérisation.</p></li>
 </ul>
 <figure class="align-default">
 <img alt="../../_images/digitizing_detailedgeometry4.jpg" src="../../_images/digitizing_detailedgeometry4.jpg" />
 </figure>
-<p>An other way is to open the <strong>vw_qgep_wastewater_structure</strong> form with the info tool and then choose <strong>Digitize</strong> in the <strong>Actions</strong> menu of the form.</p>
+<p>Une autre possibilité est d’ouvrir le formulaire <strong>vw_qgep_structure_assainissement</strong> avec l’outil info et de choisir <strong>Numériser</strong> dans le menu <strong>Actions</strong> du formulaire.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the geometry disappears after digitizing or if you get an message (like “Add part”), you have probably tried to digitize over a catchment area (or an other polygon theme) and the layer has set the avoid overlap option in the snapping settings. Do change the avoid overlap settings.</p>
@@ -160,8 +161,8 @@ where you can define <strong>dimension1</strong> and <strong>dimension2</strong>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="digitizingwastewaterstructures.html" class="btn btn-neutral float-left" title="3.2.2. Digitizing Wastewater Structures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="3.2.4. Digitizing Detailed Geometry as Drainage Channel" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="digitizingwastewaterstructures.html" class="btn btn-neutral float-left" title="3.2.2. Numériser les structures assainissement" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="digitizingdrainagechannel.html" class="btn btn-neutral float-right" title="3.2.4. Numériser une géométrie détaillée en tant que conduite de drainage" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

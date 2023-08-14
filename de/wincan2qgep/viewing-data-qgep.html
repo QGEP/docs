@@ -4,13 +4,15 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.6. Viewing data in QGEP &mdash; QGEP 0.8 Dokumentation</title>
+  <title>6.6. Daten in QGEP anschauen &mdash; QGEP 0.8 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -19,7 +21,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="7. SWMM Data Exchange" href="../qgep_swmm/index.html" />
-    <link rel="prev" title="6.5. Import data" href="import-data.html" /> 
+    <link rel="prev" title="6.5. Datenimport" href="import-data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,21 +48,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Leitfaden QGEP Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Wincan 2 QGEP plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="introduction.html">6.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">6.2. Open inspection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="match-channels.html">6.3. Match channels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">6.4. Fixing issues</a></li>
-<li class="toctree-l2"><a class="reference internal" href="import-data.html">6.5. Import data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.6. Viewing data in QGEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">6.1. Einleitung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-inspection.html">6.2. Untersuchungsdatei öffnen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match-channels.html">6.3. Haltungen abgleichen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fixing-issues.html">6.4. Problemlösungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import-data.html">6.5. Datenimport</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.6. Daten in QGEP anschauen</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -78,7 +80,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html"><span class="section-number">6. </span>Wincan 2 QGEP plugin</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">6.6. </span>Viewing data in QGEP</li>
+      <li class="breadcrumb-item active"><span class="section-number">6.6. </span>Daten in QGEP anschauen</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wincan2qgep/viewing-data-qgep.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -89,9 +91,8 @@
            <div itemprop="articleBody">
              
   <section id="viewing-data-in-qgep">
-<h1><span class="section-number">6.6. </span>Viewing data in QGEP<a class="headerlink" href="#viewing-data-in-qgep" title="Permalink to this heading"></a></h1>
-<p>Once imported, the inspection data can be seen in feature forms in QGIS.
-The maintenance events, inspections and observations can be seen in the channel layer.</p>
+<h1><span class="section-number">6.6. </span>Daten in QGEP anschauen<a class="headerlink" href="#viewing-data-in-qgep" title="Permalink to this heading"></a></h1>
+<p>Einmal importiert, erscheinen die Kanalfernsehdaten in den Feature Forms von QGEP. Die Erhaltungsereignisse, Untersuchungen und Beobachtungen erscheinen im Layer vw_qgep_reach.</p>
 <figure class="align-default">
 <img alt="../_images/viewing-observations.png" src="../_images/viewing-observations.png" />
 </figure>
@@ -104,7 +105,7 @@ The maintenance events, inspections and observations can be seen in the channel 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="import-data.html" class="btn btn-neutral float-left" title="6.5. Import data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="import-data.html" class="btn btn-neutral float-left" title="6.5. Datenimport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
         <a href="../qgep_swmm/index.html" class="btn btn-neutral float-right" title="7. SWMM Data Exchange" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -11,6 +11,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -46,20 +48,20 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP User Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guía de Usuario QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">3.2. Digitizing in QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.3. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="editing.html">3.3.1. Editing of existing data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.3. Modificando en QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing.html">3.3.1. Modificando los datos existentes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">3.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.3. Adding or Editing of Maintenance Events</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">3.3.3.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#adding-a-new-maintenance-event">3.3.3.2. Adding a new Maintenance Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#link-an-existing-maintenance-event">3.3.3.3. Link an existing Maintenance Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unlink-maintenance-events">3.3.3.4. Unlink Maintenance Events</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#editing">3.3.3.5. Editing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multi-edit">3.3.3.6. Multi Edit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editing">3.3.3.5. Modificando</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multi-edit">3.3.3.6. Multi Edición</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="connect_wastewater_network_elements.html">3.3.4. Connect Wastewater Network Elements</a></li>
@@ -72,11 +74,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Guía del administrador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Complemento Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traducción</a></li>
 </ul>
 
         </div>
@@ -93,8 +95,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>QGEP User Guide</a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.3. </span>Editing in QGEP</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>Guía de Usuario QGEP</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.3. </span>Modificando en QGEP</a></li>
       <li class="breadcrumb-item active"><span class="section-number">3.3.3. </span>Adding or Editing of Maintenance Events</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user-guide/editing/maintenance_events.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
@@ -118,7 +120,7 @@ Therefore QGEP uses a intermediary RE_table to model the n:m relationship (<stro
 <section id="adding-a-new-maintenance-event">
 <h2><span class="section-number">3.3.3.2. </span>Adding a new Maintenance Event<a class="headerlink" href="#adding-a-new-maintenance-event" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>Enable the edit mode.</p></li>
+<li><p>Habilitar el modo edición.</p></li>
 <li><p>With the <strong>Identify Features</strong> tool you can select <strong>wastewater_structures</strong> or <strong>reaches</strong> by selecting their corresponding layer (<strong>vw_qgep_wastewater_structure</strong> or <strong>vw_qgep_reach</strong>).</p></li>
 <li><p>The respective form will open. Change to the <strong>Maintenance</strong> tab.</p></li>
 <li><p>Create a new maintenance event with the <strong>Add child feature</strong> button.</p></li>
@@ -141,7 +143,7 @@ Therefore QGEP uses a intermediary RE_table to model the n:m relationship (<stro
 <section id="link-an-existing-maintenance-event">
 <h2><span class="section-number">3.3.3.3. </span>Link an existing Maintenance Event<a class="headerlink" href="#link-an-existing-maintenance-event" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>Enable the edit mode.</p></li>
+<li><p>Habilitar el modo edición.</p></li>
 <li><p>With the <strong>Identify Features</strong> tool you can select <strong>wastewater_structures</strong> or <strong>reaches</strong> by selecting their corresponding layer (<strong>vw_qgep_wastewater_structure</strong> or <strong>vw_qgep_reach</strong>).</p></li>
 <li><p>The respective form will open. Change to the <strong>Maintenance</strong> tab.</p></li>
 <li><p>Click the <strong>Link existing child features</strong> button.</p></li>
@@ -159,7 +161,7 @@ Therefore QGEP uses a intermediary RE_table to model the n:m relationship (<stro
 <section id="unlink-maintenance-events">
 <h2><span class="section-number">3.3.3.4. </span>Unlink Maintenance Events<a class="headerlink" href="#unlink-maintenance-events" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
-<li><p>Enable the edit mode.</p></li>
+<li><p>Habilitar el modo edición.</p></li>
 <li><p>With the <strong>Identify Features</strong> tool you can select <strong>wastewater_structures</strong> or <strong>reaches</strong> by selecting their corresponding layer (<strong>vw_qgep_wastewater_structure</strong> or <strong>vw_qgep_reach</strong>).</p></li>
 <li><p>The respective form will open. Change to the <strong>Maintenance</strong> tab.</p></li>
 <li><p>Select a maintenance event by clicking in the box (box gets yellow), then click the <strong>Delete child feature</strong> button.</p></li>
@@ -175,7 +177,7 @@ Therefore QGEP uses a intermediary RE_table to model the n:m relationship (<stro
 </div></blockquote>
 </section>
 <section id="editing">
-<h2><span class="section-number">3.3.3.5. </span>Editing<a class="headerlink" href="#editing" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.3.3.5. </span>Modificando<a class="headerlink" href="#editing" title="Enlace permanente a este encabezado"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Do as described in adding - but just edit existing maintenance events. Or edit the <strong>vw_qgep_maintenance</strong> table (layer group <strong>inspection</strong>)</p></li>
@@ -183,7 +185,7 @@ Therefore QGEP uses a intermediary RE_table to model the n:m relationship (<stro
 </div></blockquote>
 </section>
 <section id="multi-edit">
-<h2><span class="section-number">3.3.3.6. </span>Multi Edit<a class="headerlink" href="#multi-edit" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.3.3.6. </span>Multi Edición<a class="headerlink" href="#multi-edit" title="Enlace permanente a este encabezado"></a></h2>
 <p>There is in the moment no tool to create or to link a maintenance event to a selection of reaches or wastewater structures. If you open the form in multi edit mode, the <strong>Maintenance</strong> tab is empty.
 Multi edit with linked tables is not implemented in QGIS.</p>
 </section>

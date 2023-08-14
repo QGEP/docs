@@ -11,6 +11,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -46,19 +48,19 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. QGEP User Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">3. Guía de Usuario QGEP</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../layerexplanations/index.html">3.1. Overview of QGEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../digitizing/index.html">3.2. Digitizing in QGEP</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.3. Editing in QGEP</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="editing.html">3.3.1. Editing of existing data</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">3.3. Modificando en QGEP</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="editing.html">3.3.1. Modificando los datos existentes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moving.html">3.3.2. Moving Wastewater Structures with Reaches, Covers and Nodes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="maintenance_events.html">3.3.3. Adding or Editing of Maintenance Events</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.3.4. Connect Wastewater Network Elements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#general">3.3.4.1. General</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#how-to-connect-reaches-to-nodes-or-reaches-to-reaches">3.3.4.2. How to connect reaches to nodes or reaches to reaches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#video-tutorial">3.3.4.3. Video Tutorial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-delete-a-connection">3.3.4.4. How to delete a connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-tutorial">3.3.4.3. Tutorial en video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-delete-a-connection">3.3.4.4. Cómo eliminar una conexión</a></li>
 </ul>
 </li>
 </ul>
@@ -70,11 +72,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../How-To/index.html">3.8. How To</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../admin-guide/index.html">4. Guía del administrador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Complemento Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traducción</a></li>
 </ul>
 
         </div>
@@ -91,8 +93,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>QGEP User Guide</a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.3. </span>Editing in QGEP</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">3. </span>Guía de Usuario QGEP</a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3.3. </span>Modificando en QGEP</a></li>
       <li class="breadcrumb-item active"><span class="section-number">3.3.4. </span>Connect Wastewater Network Elements</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/user-guide/editing/connect_wastewater_network_elements.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
@@ -141,13 +143,13 @@
 </figure>
 </section>
 <section id="video-tutorial">
-<h2><span class="section-number">3.3.4.3. </span>Video Tutorial<a class="headerlink" href="#video-tutorial" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.3.4.3. </span>Tutorial en video<a class="headerlink" href="#video-tutorial" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p>See <a class="reference external" href="https://vimeo.com/171536774">this video tutorial (QGIS version 2):</a></p></li>
 </ul>
 </section>
 <section id="how-to-delete-a-connection">
-<h2><span class="section-number">3.3.4.4. </span>How to delete a connection<a class="headerlink" href="#how-to-delete-a-connection" title="Enlace permanente a este encabezado"></a></h2>
+<h2><span class="section-number">3.3.4.4. </span>Cómo eliminar una conexión<a class="headerlink" href="#how-to-delete-a-connection" title="Enlace permanente a este encabezado"></a></h2>
 <p>There is no special tool in the moment to delete a connection between network elements.</p>
 <ul class="simple">
 <li><p>Select the <strong>vw_qgep_reach</strong> layer and set it to edit mode</p></li>

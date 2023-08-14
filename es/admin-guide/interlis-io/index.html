@@ -11,6 +11,8 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/sphinx_highlight.js"></script>
@@ -18,7 +20,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="4.4. Customization of the data model" href="../db-customization/index.html" />
+    <link rel="next" title="4.4. Personalización del modelo de datos" href="../db-customization/index.html" />
     <link rel="prev" title="4.2. User Roles" href="../security/index.html" /> 
 </head>
 
@@ -46,9 +48,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. QGEP Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. QGEP User Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Admin Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation-guide/index.html">2. Guía de instalación de QGEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/index.html">3. Guía de Usuario QGEP</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">4. Guía del administrador</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../pgadmin/index.html">4.1. pgAdmin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../security/index.html">4.2. User Roles</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. INTERLIS Data exchange</a><ul>
@@ -73,15 +75,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Customization of the data model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../db-customization/index.html">4.4. Personalización del modelo de datos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../datamodel-tool/index.html">4.5. Data-model tool</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../db-update-pum/index.html">4.6. Manual update of the datamodel</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demo Virtual Machine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vm/index.html">5. Demostración de una Máquina Virtual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wincan2qgep/index.html">6. Complemento Wincan 2 QGEP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../translation/index.html">8. Traducción</a></li>
 </ul>
 
         </div>
@@ -98,7 +100,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">4. </span>Admin Guide</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"><span class="section-number">4. </span>Guía del administrador</a></li>
       <li class="breadcrumb-item active"><span class="section-number">4.3. </span>INTERLIS Data exchange</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/admin-guide/interlis-io/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
@@ -135,7 +137,7 @@ Linux : use the package manager</p>
 </pre></div>
 </div>
 <p>If the command fails, try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -143,7 +145,7 @@ Linux : use the package manager</p>
 <p>If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included).</p>
 </div>
 <p>If this command still fails, try:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">target</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">somewhere</span>\<span class="n">other</span>\<span class="n">than</span>\<span class="n">the</span>\<span class="n">default</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">target</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">somewhere</span>\<span class="n">other</span>\<span class="n">than</span>\<span class="n">the</span>\<span class="n">default</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">c:\somewhere\other\than\the\default</span></code> is the path to your current pip package</p>
@@ -239,7 +241,7 @@ Linux : use the package manager</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="../security/index.html" class="btn btn-neutral float-left" title="4.2. User Roles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="4.4. Customization of the data model" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../db-customization/index.html" class="btn btn-neutral float-right" title="4.4. Personalización del modelo de datos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

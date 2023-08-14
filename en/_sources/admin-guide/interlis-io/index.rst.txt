@@ -33,13 +33,13 @@ To install : before launching QGIS, open OSGeo4W Shell, and type::
 
 If the command fails, try::
  
-   >>> pip install --upgrade pip
+   >>> pip3 install --upgrade pip
 
 .. note:: If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included).
 
 If this command still fails, try:: 
 
-  >>> pip install --target=c:\somewhere\other\than\the\default --upgrade pip
+  >>> pip3 install --target=c:\somewhere\other\than\the\default --upgrade pip
   
 where ``c:\somewhere\other\than\the\default`` is the path to your current pip package
 

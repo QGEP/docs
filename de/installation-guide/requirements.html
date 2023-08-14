@@ -4,13 +4,15 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.1. Requirements &mdash; QGEP 0.8 Dokumentation</title>
+  <title>2.1. Voraussetzungen &mdash; QGEP 0.8 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
@@ -18,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="2.2. Setup database server" href="server.html" />
-    <link rel="prev" title="2. QGEP Installation Guide" href="index.html" /> 
+    <link rel="next" title="2.2. Datenbankserver aufsetzen" href="server.html" />
+    <link rel="prev" title="2. Leitfaden QGEP Installation" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,19 +48,19 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. TEKSI wastewater module (QGEP)</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. QGEP Installation Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server.html">2.2. Setup database server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.3. Database initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.4. Setup workstation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Leitfaden QGEP Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. Voraussetzungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">2.2. Datenbankserver aufsetzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.3. Initialisierung der Datenbank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.4. Arbeitsplatzrechner Einrichten</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QGEP Benutzerhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Administratorhandbuch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vm/index.html">5. Demo virtuelle Maschine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wincan2qgep/index.html">6. Wincan 2 QGEP plugin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../qgep_swmm/index.html">7. SWMM Data Exchange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">8. Übersetzungen</a></li>
 </ul>
 
         </div>
@@ -75,8 +77,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">2. </span>QGEP Installation Guide</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">2.1. </span>Requirements</li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">2. </span>Leitfaden QGEP Installation</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.1. </span>Voraussetzungen</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation-guide/requirements.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -87,12 +89,12 @@
            <div itemprop="articleBody">
              
   <section id="requirements">
-<span id="id1"></span><h1><span class="section-number">2.1. </span>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h1>
-<p>The following Python packages (installed using <a class="reference external" href="https://pypi.org/project/pip/">pip</a>) are required:</p>
+<span id="id1"></span><h1><span class="section-number">2.1. </span>Voraussetzungen<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h1>
+<p>Die nachfolgenden Python-Pakete (zu installieren über <a class="reference external" href="https://pypi.org/project/pip/">pip</a>) werden benötigt:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.psycopg.org/">Psycopg2</a> as database adapter</p></li>
-<li><p><a class="reference external" href="https://github.com/opengisch/pirogue">Pirogue</a> for model generation and upgrades</p></li>
-<li><p><a class="reference external" href="https://github.com/opengisch/pum">PUM</a> for model upgrades</p></li>
+<li><p><a class="reference external" href="https://www.psycopg.org/">Psycopg2</a> als Datenbank Adapter</p></li>
+<li><p><a class="reference external" href="https://github.com/opengisch/pirogue">Pirogue</a> für Modellerstellung und -aktualisierungen</p></li>
+<li><p><a class="reference external" href="https://github.com/opengisch/pum">PUM</a> für Modellaktualisierungen</p></li>
 </ul>
 </section>
 
@@ -100,8 +102,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="2. QGEP Installation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="server.html" class="btn btn-neutral float-right" title="2.2. Setup database server" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="2. Leitfaden QGEP Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="server.html" class="btn btn-neutral float-right" title="2.2. Datenbankserver aufsetzen" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
