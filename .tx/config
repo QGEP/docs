@@ -1,5 +1,5 @@
 [main]
-host = https://www.transifex.com
+host = https://app.transifex.com
 
 [o:qgep:p:qgep-documentation:r:index]
 source_file = i18n/pot/index.pot
