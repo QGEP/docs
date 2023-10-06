@@ -11,12 +11,12 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=dd9d91fd"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/translations.js?v=70a09b52"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
     <link rel="search" title="Suche" href="../../search.html" />
@@ -97,10 +97,10 @@
            <div itemprop="articleBody">
              
   <section id="customization-of-the-data-model">
-<h1><span class="section-number">4.4. </span>Anpassung des Datenmodells<a class="headerlink" href="#customization-of-the-data-model" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">4.4. </span>Anpassung des Datenmodells<a class="headerlink" href="#customization-of-the-data-model" title="Link to this heading"></a></h1>
 <p>Dieses Kapitel beschreibt die möglichen Anpassungen des Datenmodells.</p>
 <section id="introduction">
-<h2><span class="section-number">4.4.1. </span>Einleitung<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.1. </span>Einleitung<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>Das Datenmodell ist versioniert und Aktualisierungen werden mit dem Postgres Updates Manager (auch bekannt als <a class="reference external" href="https://github.com/opengisch/pum">PUM</a>) durchgeführt. Die zur Bearbeitung der Daten erforderlichen Ansichten werden automatisch mit der Bibliothek „Pirogue &lt;<a class="reference external" href="https://github.com/opengisch/pirogue">https://github.com/opengisch/pirogue</a>&gt;“ erzeugt.</p>
 <p>Die Kombination von beidem ermöglicht kleine Anpassungen des Datenmodells, wie das Hinzufügen von Feldern zu bestehenden Basistabellen oder die Erweiterung von Ansichten durch das Verbinden zusätzlicher Tabellen.</p>
 <p>Bevor Sie fortfahren, empfehlen wir Ihnen dringend, die Community zu fragen, wenn Sie irgendwelche Fragen haben, wie Sie Informationen in der Datenbank speichern können. QGEP erfüllt die Anforderungen der SIA 405 &lt;<a class="reference external" href="http://www.sia.ch/405">http://www.sia.ch/405</a>&gt;`_ Abwasser und des VSA-DSS &lt;<a class="reference external" href="http://dss.vsa.ch">http://dss.vsa.ch</a>&gt;`_ Datenmodells.</p>
@@ -108,7 +108,7 @@
 <p>Sollte dennoch eine Anpassung erforderlich sein, erklären die folgenden Erläuterungen und Regeln, wie Sie das QGEP-Datenmodell an Ihre spezifischen Bedürfnisse anpassen können.</p>
 </section>
 <section id="adding-fields">
-<h2><span class="section-number">4.4.2. </span>Zusätzliche Felder<a class="headerlink" href="#adding-fields" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.2. </span>Zusätzliche Felder<a class="headerlink" href="#adding-fields" title="Link to this heading"></a></h2>
 <p>Es ist erlaubt, zusätzliche Felder zu Tabellen hinzuzufügen, indem man sie als <code class="docutils literal notranslate"><span class="pre">usr_...</span></code> benennt.</p>
 <p>Wenn sie in Basistabellen hinzugefügt werden, werden diese zusätzlichen Felder automatisch zu den Ansichten hinzugefügt, da es sich um ein bearbeitbares Feld handelt. Die Ansichten können jederzeit mit dem folgenden Befehl neu generiert werden:</p>
 <p><code class="docutils literal notranslate"><span class="pre">./view/create_views.py</span> <span class="pre">--pg_service</span> <span class="pre">pg_qgep</span> <span class="pre">--srid</span> <span class="pre">2056</span></code></p>
@@ -118,7 +118,7 @@
 </div>
 </section>
 <section id="joining-additional-tables">
-<h2><span class="section-number">4.4.3. </span>Verknüpfung zusätzlicher Tabellen<a class="headerlink" href="#joining-additional-tables" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.3. </span>Verknüpfung zusätzlicher Tabellen<a class="headerlink" href="#joining-additional-tables" title="Link to this heading"></a></h2>
 <p>Es ist möglich, zusätzliche Tabellen mit den beiden Hauptansichten (<code class="docutils literal notranslate"><span class="pre">vw_qgep_Abwasserbauwerk</span></code> und <code class="docutils literal notranslate"><span class="pre">vw_qgep_Haltung</span></code>) zu verbinden. Dazu wird für jeden View eine YAML-Definitionsdatei verwendet, in der eine Liste von verbundenen Tabellen definiert wird. Felder dieser Tabellen werden als schreibgeschützte Felder verknüpft, da sie in Edit-Triggern verworfen werden. Für das Verknüpfen einer Tabelle zu <code class="docutils literal notranslate"><span class="pre">qgep_od.wastewater_structure</span></code>, hier ein Beispiel:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">joins</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">my_extra_join</span><span class="p">:</span>
@@ -139,7 +139,7 @@
 <p>Ähnliches gilt für die View <code class="docutils literal notranslate"><span class="pre">vw_qgep_reach</span></code>, indem Sie die Variable <code class="docutils literal notranslate"><span class="pre">qgep_reach_extra</span></code> auf den entsprechenden YAML-Dateipfad setzen.</p>
 </section>
 <section id="creating-custom-views">
-<h2><span class="section-number">4.4.4. </span>Eigene views erstellen<a class="headerlink" href="#creating-custom-views" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4.4. </span>Eigene views erstellen<a class="headerlink" href="#creating-custom-views" title="Link to this heading"></a></h2>
 <p>Es sit möglich, eigene views zu erstellen und sie zum Datenmodell zu hinzuzufügen.</p>
 <p>Um Upgrades des Datenmodells zu ermöglichen, sollte man ein Skript bereitstellen, um sie zu erstellen, und eines, um sie zu löschen. Diese Skripte (SQL oder Python) sollten in einem bestimmten Pfad abgelegt und als pre-all.{py,sql} und post-all.{py,sql} bezeichnet werden. Dieser Pfad muss als Variable an PUM übergeben werden, wenn das Datenmodell als Delta-Verzeichnis aktualisiert wird (siehe PUM-<a class="reference external" href="https://github.com/opengisch/pum">Dokumentation</a>).</p>
 <p>If one wants to have these views automatically updated when fields are added the data model, Pirogue can be used to dynamically generate the views. You can take example of the creation of the views in the data model.</p>

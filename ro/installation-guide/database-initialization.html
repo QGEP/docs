@@ -11,12 +11,12 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=58517320"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=f855708e"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Căutare" href="../search.html" />
@@ -98,21 +98,21 @@
            <div itemprop="articleBody">
              
   <section id="database-initialization">
-<span id="id1"></span><h1><span class="section-number">2.3. </span>Database initialization<a class="headerlink" href="#database-initialization" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><span class="section-number">2.3. </span>Database initialization<a class="headerlink" href="#database-initialization" title="Link to this heading"></a></h1>
 <p>You can use <a class="reference internal" href="../admin-guide/pgadmin/index.html#pgadmin"><span class="std std-ref">pgAdmin</span></a> to access and manage the database server.</p>
 <div class="admonition note">
 <p class="admonition-title">Notă</p>
 <p>By clicking the link you can learn how to <a class="reference internal" href="../admin-guide/pgadmin/install.html#install-pgadmin"><span class="std std-ref">Install pgAdmin</span></a></p>
 </div>
 <section id="process">
-<h2><span class="section-number">2.3.1. </span>Process<a class="headerlink" href="#process" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">2.3.1. </span>Process<a class="headerlink" href="#process" title="Link to this heading"></a></h2>
 <p>In pgAdmin4</p>
 <ul class="simple">
 <li><p>Connect to the database server</p></li>
 <li><p>Create a new database with UTF8 encoding (e.g. <cite>qgep_prod</cite>).</p></li>
 </ul>
 <section id="restore-demo-datamodel">
-<span id="restore-demomodel"></span><h3><span class="section-number">2.3.1.1. </span>Restore demo datamodel<a class="headerlink" href="#restore-demo-datamodel" title="Permalink to this heading"></a></h3>
+<span id="restore-demomodel"></span><h3><span class="section-number">2.3.1.1. </span>Restore demo datamodel<a class="headerlink" href="#restore-demo-datamodel" title="Link to this heading"></a></h3>
 <p>Restore the latest data model that also includes demo data:</p>
 <ul class="simple">
 <li><p>Download demo data
@@ -162,7 +162,7 @@
 <p>There are now 7 schemas in the database (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)</p>
 </section>
 <section id="create-minimal-roles-and-access">
-<h3><span class="section-number">2.3.1.2. </span>Create  minimal roles and access<a class="headerlink" href="#create-minimal-roles-and-access" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">2.3.1.2. </span>Create  minimal roles and access<a class="headerlink" href="#create-minimal-roles-and-access" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Notă</p>
 <p>The QGEP roles are defined in the <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql</a> (per cluster) and <a class="reference external" href="https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql">https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql</a> (per database) files. It is recommended to use these when using QGEP in a production environment.</p>
@@ -170,7 +170,7 @@
 <p>Copy paste and run the two .sql one after the other in the query editor of pgAdmin4 (Tools &gt; Query Tool).</p>
 </section>
 <section id="empty-data-model">
-<h3><span class="section-number">2.3.1.3. </span>Empty data model<a class="headerlink" href="#empty-data-model" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">2.3.1.3. </span>Empty data model<a class="headerlink" href="#empty-data-model" title="Link to this heading"></a></h3>
 <p>You also have the option to restore the latest empty data model (no demo data).</p>
 <ul class="simple">
 <li><p>Download the data model by going to <a class="reference external" href="https://github.com/QGEP/datamodel/releases/latest">https://github.com/QGEP/datamodel/releases/latest</a>
@@ -235,7 +235,7 @@ and by downloading the latest <cite>qgep_vx.y.z_structure_with_value_lists.sql</
 </ul>
 </section>
 <section id="generate-the-data-model-under-linux">
-<h3><span class="section-number">2.3.1.4. </span>Generate the data model under Linux<a class="headerlink" href="#generate-the-data-model-under-linux" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">2.3.1.4. </span>Generate the data model under Linux<a class="headerlink" href="#generate-the-data-model-under-linux" title="Link to this heading"></a></h3>
 <p>You can also generate the data model under Linux.</p>
 <ul>
 <li><p>Download the data model:</p>

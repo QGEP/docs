@@ -11,12 +11,12 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=dd9d91fd"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/translations.js?v=70a09b52"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../../genindex.html" />
     <link rel="search" title="Suche" href="../../search.html" />
@@ -102,21 +102,21 @@
 <img alt="../../_images/qgep_title.png" src="../../_images/qgep_title.png" />
 </figure>
 <section id="introduction-and-overview">
-<h1><span class="section-number">3.1.1. </span>Einleitung und Übersicht<a class="headerlink" href="#introduction-and-overview" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3.1.1. </span>Einleitung und Übersicht<a class="headerlink" href="#introduction-and-overview" title="Link to this heading"></a></h1>
 <p><strong>QGEP</strong> ist eine Sammlung von Werkzeugen und eine GIS-Datenbank Umsetzung, um  Abwasser- und GEP-Daten in der Datenstruktur VSA-DSS bearbeiten zu können.</p>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Die Datenstruktur Siedlungsentwässerung des Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), abgekürzt VSA-DSS wurde 1999 publiziert und ist seither der gültige Standard Generelle Entwässerungsplanung (GEP). Wenn die VSA-DSS angewendet wird, wird auch die SIA405 Abwasser gemäss der <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016) befolgt</a>. Weiter Infos auf der Homepage des <a class="reference external" href="http://dss.vsa.ch">VSA</a></p>
+<p>The Data Structure for urban drainage systems of the Swiss Waste Water Association (in German Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was published 1999 and is since then the valid standard for data covering General Water Drainage Planning (in German Generelle Entwässerungsplanung (GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset for sewer networks as described in <a class="reference external" href="http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/">Norm SIA405 (Merkblatt 2015 / 2016)</a>. More information about datamanagement in urban drainage you can find on the homepage of the <a href="#id1"><span class="problematic" id="id2">`VSA https://vsa.ch/fachbereiche-cc/siedlungsentwaesserung/generelle-entwaesserungsplanung/datenmanagement/`_</span></a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Die Datenbank Umsetzung in PostgreSQL entspricht der Version 2015 des VSA-DSS Datenmodels, inklusive der Erweiterung VSA-KEK für Kanalfernsehuntersuchungen.</p>
+<p>The current database implementation in PostgreSQL is for the Version 2015 of the VSA-DSS datamodel, including the extension for sewer TV inspections called VSA-KEK (2019).</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Bemerkung</p>
-<p>Es wird empfohlen, durch den Kauf der <strong>CD VSA-DSS</strong> im VSA Shop die Lizenz für das Datenmodell zu erwerben. Damit erhält man auch den INTERLIS Beschrieb, die Objektkataloge sowie zusätzlichen Beschreibungen und Dokumentation zu den Transfer-Datensätzen und der Modellabbildung. <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a></p>
+<p>We recommend you to get an access licence for the VSA-Wiki by purchasing it in the <a class="reference external" href="https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied">VSA Shop</a>. You will get answers and access to all model related questions, like the datamodel in INTERLIS, object catalogues and additional description and introduction and transfer datasets, the Wegleitung GEP-Daten and information about changes and updates as well as the right to test and convert unlimited INTERLIS dataset for one year with the <a class="reference external" href="https://vsa.ch/fachbereiche-cc/siedlungsentwaesserung/generelle-entwaesserungsplanung/datenmanagement/#GEP-Datachecker">VSA Checker</a>. Some cantons offer this access for free for engineering companies and communities - please check with your Environmental office.</p>
 </div>
-<p>Für die Arbeit mit QGEP ist es wichtig, die folgenden Richtlinien zu kennen: <a class="reference external" href="https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation">Wegleitung GEP-Daten</a> mit einer Anleitung aus der Praxis für das Modellieren der Realität im GIS und im hydraulischen Modell des VSA und dort speziell die Beilage „<strong>Erfassungsgrundsätze</strong>“ .</p>
+<p>To work with QGEP-tools, it is important to know also the following norm: <strong>Wegleitung GEP-Daten</strong> which is a practitioners guide to modelling reality into GIS and hydraulic datamodel of the VSA and there specially the annex „<strong>Erfassungsgrundsätze</strong>“ (data acquisition policy). The VSA offers it as a full package on the <a class="reference external" href="https://vsa.ch/Mediathek/gep-datachecker-jahresgebuehr/">VSA-Wiki</a> which also includes acces to the VSA-Checker (a tool to check INTERLIS files)</p>
 <p>Das ist wichtig, denn mit der VSA-DSS werden nicht nur Schächte und Kanäle (also der bauliche Teil der Abwasserbauwerke) erfasst, sondern mit den Abwasserknoten und Haltungen (Abwassernetzlemente) wird auch das hydraulische Modell des Abwassernetzes aufgebaut.</p>
 <p>Es ist wichtig, den Unterschied zwischen <strong>primären und sekundären Abwasseranlagen</strong> (PAA / SAA) zu kennen. In PAA- und SAA-Netzen gelten nicht die gleichen Regeln für das Platzieren von Abwasserknoten. Einzugsgebiete sollen nur auf PAA-Abwasserelemente verknüpft werden. Haltungen werden immer in Fliessrichtung (Fliessrichtung bei Normalabfluss), also von oben nach unten erzeugt.</p>
 <p>QGEP nutzt zwei Hauptlayer für das Erfassen und Bearbeiten der Daten der Abwasserbauwerke: <strong>vw_qgep_wastewater_structure</strong> für Schachtbauwerke und <strong>vw_qgep_reach</strong> für Haltungen/Kanäle. Um diese Hauptlayer zu bearbeiten ist ein spezieller Wizard („Zauberer“) und vorkonfigurierte Eingabefenster für diese Layer vorhanden.  Das Ziel ist es, mit dieser Konfiguration 95% der Schächte und Kanäle mit den Attributfeldern auf dem Generell Tab des Eingabefensters und damit mit möglichst wenigen Mausklicks erfassen zu können (trotz dem relativ komplexen Datenmodell mit verschiedenen involvierten Klassen).</p>

@@ -11,12 +11,12 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=c61c94a7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=0173e136"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
@@ -102,19 +102,19 @@
            <div itemprop="articleBody">
              
   <section id="run-swmm-simulation">
-<span id="id1"></span><h1><span class="section-number">7.8. </span>Run SWMM Simulation<a class="headerlink" href="#run-swmm-simulation" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><span class="section-number">7.8. </span>Run SWMM Simulation<a class="headerlink" href="#run-swmm-simulation" title="Link to this heading"></a></h1>
 <section id="run-a-simulation-from-swmm-interface">
-<h2><span class="section-number">7.8.1. </span>Run a simulation from SWMM interface<a class="headerlink" href="#run-a-simulation-from-swmm-interface" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.8.1. </span>Run a simulation from SWMM interface<a class="headerlink" href="#run-a-simulation-from-swmm-interface" title="Link to this heading"></a></h2>
 <p>You can open the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file with SWMM and run the simulation from the interface.</p>
 </section>
 <section id="run-a-simulation-with-command-line">
-<h2><span class="section-number">7.8.2. </span>Run a simulation with command line<a class="headerlink" href="#run-a-simulation-with-command-line" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.8.2. </span>Run a simulation with command line<a class="headerlink" href="#run-a-simulation-with-command-line" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">EXEPATH</span><span class="p">}</span>\<span class="n">swmm5</span><span class="o">.</span><span class="n">exe</span> <span class="p">{</span><span class="n">INPUTPATH</span><span class="p">}</span>\<span class="p">{</span><span class="n">INPUTFILENAME</span><span class="p">}</span><span class="o">.</span><span class="n">inp</span> <span class="p">{</span><span class="n">OUTPUTPATH</span><span class="p">}</span>\<span class="p">{</span><span class="n">REPORTFILENAME</span><span class="p">}</span><span class="o">.</span><span class="n">rpt</span> <span class="p">{</span><span class="n">OUTPUTPATH</span><span class="p">}</span>\<span class="p">{</span><span class="n">OUTPUTFILENAME</span><span class="p">}</span><span class="o">.</span><span class="n">out</span>
 </pre></div>
 </div>
 </section>
 <section id="run-a-simulation-with-qgep-swmm">
-<h2><span class="section-number">7.8.3. </span>Run a simulation with QGEP-SWMM<a class="headerlink" href="#run-a-simulation-with-qgep-swmm" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.8.3. </span>Run a simulation with QGEP-SWMM<a class="headerlink" href="#run-a-simulation-with-qgep-swmm" title="Link to this heading"></a></h2>
 <p>The path to the SWMM executable must be set in the Processsing tools options. The plugin will launch the command line in the background.</p>
 <p>Launch <code class="docutils literal notranslate"><span class="pre">SWMM</span> <span class="pre">Execute</span></code>:</p>
 <ul class="simple">
@@ -123,7 +123,7 @@
 </ul>
 </section>
 <section id="common-running-errors">
-<h2><span class="section-number">7.8.4. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">7.8.4. </span>Common running errors<a class="headerlink" href="#common-running-errors" title="Link to this heading"></a></h2>
 <p>The list of errors can be found <a class="reference external" href="https://swmm5.org/2016/09/05/swmm-5-1-and-infoswmm-error-and-warning-messages/">here</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ERROR</span> <span class="pre">211:</span> <span class="pre">invalid</span> <span class="pre">number</span> <span class="pre">-XXX</span> <span class="pre">at</span> <span class="pre">line</span> <span class="pre">XXX</span> <span class="pre">of</span> <span class="pre">[JUNC]</span> <span class="pre">section:</span></code>: A negative number is provided for the depth. Change the value in QGEP or in the <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file.</p></li>
