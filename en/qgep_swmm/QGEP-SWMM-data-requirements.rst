@@ -9,7 +9,7 @@ JUNCTIONS and COORDINATES
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table:: JUNCTIONS and COORDINATES
-   :header "SWMM attribute", "Description", "QGEP equivalent"
+   :header: "SWMM attribute", "Description", "QGEP equivalent"
    :widths: 30, 50, 30
 
    "Name", "User-assigned junction name.", "wastewater_node.obj_id"
