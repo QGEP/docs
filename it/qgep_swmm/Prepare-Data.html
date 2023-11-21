@@ -163,12 +163,13 @@
 <p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_aquifers.sql</span></code> for details.</p>
 <p><strong>Subcatchment:</strong></p>
 <p>QGEP_SWMM creates a subcatchment for each QGEP catchment area.</p>
-<p>By default:
-- A subcatchment is created for each QGEP <code class="docutils literal notranslate"><span class="pre">wastewater_networkelement</span></code> linked to the <code class="docutils literal notranslate"><span class="pre">catchment</span> <span class="pre">area</span></code> (max. 4: <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_planned</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_planned</span></code>)
-- it is linked to a rain gage.
-- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
-- The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone (see <code class="docutils literal notranslate"><span class="pre">vw_swmm_coverages.sql</span></code>)
-- SWMM Dry Weather Flow:</p>
+<p>By default:</p>
+<ul>
+<li><p>A subcatchment is created for each QGEP <code class="docutils literal notranslate"><span class="pre">wastewater_networkelement</span></code> linked to the <code class="docutils literal notranslate"><span class="pre">catchment</span> <span class="pre">area</span></code> (max. 4: <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_rw_planned</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_current</span></code>, <code class="docutils literal notranslate"><span class="pre">fk_wastewater_networkelement_ww_planned</span></code>)</p></li>
+<li><p>it is linked to a rain gage.</p></li>
+<li><p>The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather than the outlet.</p></li>
+<li><p>The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone (see <code class="docutils literal notranslate"><span class="pre">vw_swmm_coverages.sql</span></code>)</p></li>
+<li><p>SWMM Dry Weather Flow:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>are set to 0 for rain water subcatchments</p></li>
@@ -176,7 +177,7 @@
 <li><p>else it computed from the subcatchement area and <code class="docutils literal notranslate"><span class="pre">population_density[_current,_planned]</span></code></p></li>
 </ul>
 </div></blockquote>
-<ul class="simple">
+</li>
 <li><p>Other parameters have default SWMM values</p></li>
 </ul>
 <p>The subcatchment can be linked to an aquifer via the groundwater attribute.</p>
@@ -441,8 +442,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The formula to convert from Strickler to Coolebrook is documented in <em>ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001</em>
-<a class="reference external" href="https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html">Link</a></p>
+<p>The formula to convert from Strickler to Coolebrook is documented in <a class="reference external" href="https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html">*ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001*</a></p>
 </div>
 <section id="populate-default-coefficient-of-friction">
 <h3><span class="section-number">7.5.1.1. </span>Populate default coefficient of friction<a class="headerlink" href="#populate-default-coefficient-of-friction" title="Link to this heading"></a></h3>

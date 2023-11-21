@@ -14,8 +14,7 @@ Coefficient of friction
 
 
 ..  note::
-    The formula to convert from Strickler to Coolebrook is documented in *ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001*
-    `Link <https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html>`__ 
+    The formula to convert from Strickler to Coolebrook is documented in `*ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001* <https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html>`_ 
     
 
 Populate default coefficient of friction

@@ -148,7 +148,7 @@ QGEP uses a data historization process. The ``pg history viewer`` `plugin <http:
 Install the demo data
 ---------------------
 
-as described `here<https://qgep.github.io/docs/installation-guide/database-initialization.html#restore-demo-datamodel>`
+as described `here <https://qgep.github.io/docs/installation-guide/database-initialization.html#restore-demo-datamodel>`_
 
 Install the demo project
 ------------------------

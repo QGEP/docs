@@ -56,10 +56,12 @@ See ``vw_swmm_aquifers.sql`` for details.
 QGEP_SWMM creates a subcatchment for each QGEP catchment area.
 
 By default:
+
 - A subcatchment is created for each QGEP ``wastewater_networkelement`` linked to the ``catchment area`` (max. 4: ``fk_wastewater_networkelement_rw_current``, ``fk_wastewater_networkelement_rw_planned``, ``fk_wastewater_networkelement_ww_current``, ``fk_wastewater_networkelement_ww_planned``)
-- it is linked to a rain gage. 
-- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather thant the outlet.
+- it is linked to a rain gage.
+- The width is computed from the mean of the minimal / maximal distance between the outlet and the catchment area contour. If the outlet is unknown the centroid is used rather than the outlet.
 - The coverages (attribute land uses) are computed from the intersection between the catchment area and the planning zone (see ``vw_swmm_coverages.sql``)
+
 - SWMM Dry Weather Flow:
 
     -  are set to 0 for rain water subcatchments

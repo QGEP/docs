@@ -1,7 +1,7 @@
 QGEP / TEKSI wastewater module documentation
 ============================================
 
-TEKSI wastewater module (Project name : QGEP) is an open source wastewater management module for QGIS based on SIA 405 Waste water (Leitungskataster) and VSA-DSS (GEP) and developed closely to the QGIS application.
+TEKSI wastewater module (Project name : QGEP) is an open source wastewater management module for QGIS based on SIA 405 Waste water (Leitungskataster) and VSA-DSS 2015 (GEP) and developed closely to the QGIS application.
 
 ..
     Commented out pdf for the moment - needs new code
