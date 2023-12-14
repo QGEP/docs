@@ -69,6 +69,7 @@ If you want to export data to the VSA-DSS 2015 model, you have to manually add t
 
  .. figure:: subclass_entries_organisation_od_municipality_postgres.jpg
 
+ .. figure:: interlis_export_class_organisation_subclass_checkjpg.jpg
 
 Maintenance events ``qgep_od.vw_qgep_maintenance``
 --------------------------------------------------
