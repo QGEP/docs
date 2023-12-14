@@ -57,7 +57,22 @@ The channel-class has no geometry and is therefore mostly changed in the vw_qgep
 Organisations ``qgep_od.organisation``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-todo: This table is today at a strange place (it is not only related to wastewater structures) and has to be revised.
+od_organisation contains the organisation that you can select in attributes like fk_dataowner, fk_operator, fk_provider, fk_owner, etc.
+
+ .. figure:: images/od_organisation.jpg
+
+This table is today a little bit hidden in the wastewater_structures group (but it is not only related to wastewater structures).
+
+If you want to export data to the VSA-DSS 2015 model, you have to manually add the relation to the respecitve subclasses of organisation by adding the respective obj_id's in the subclass tables, e.g. municipality, else the export will give an error message. For export to SIA405_Abwasser and VSA-KEK this is not needed.
+
+ .. figure:: od_organisation_postgres.jpg
+
+ .. figure:: subclass_entries_organisation_od_municipality_postgres.jpg
+
+ .. figure:: interlis_export_class_organisation_subclass_checkjpg.jpg
+ 
+ Alternative: You can use vw_organisation instead of od_organisation. vw_organisation has the subclasses integrated and must be loaded manually to the project.
+ 
 
 Maintenance events ``qgep_od.vw_qgep_maintenance``
 --------------------------------------------------
