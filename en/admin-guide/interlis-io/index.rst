@@ -7,11 +7,16 @@ This represents a guide on how to import/export data between QGEP and INTERLIS 2
 General
 ^^^^^^^^^^^^^
 
-The QGEP plugin includes an experimental interlis import/export feature.
-It is currently capable of importing and exporting to the VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
+The QGEP plugin includes an INTERLIS import/export feature.
+It is currently capable of importing and exporting to the following models:
+  + VSA-DSS 'DSS_2015_LV95'
+  + SIA405 Abwasser 'SIA405_ABWASSER_2015_LV95`
+  + VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
 
 Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
- 
+In `this blog post <https://www.sjib.ch/wie-uebersetze-ich-eine-interlis-transferdatei-in-eine-andere-sprache/>`_ the manual translation with the tool ili2db is explained in detail.
+
+
 Prerequisites
 ^^^^^^^^^^^^^^
 
@@ -57,7 +62,7 @@ The QGEP plugin will propose to install the Modelbaker plugin automatically. If 
 
 QGEP Version
 -------------
-The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
+The export only supports up-to-date QGEP datamodel (1.6.1 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
 
 
 Usage (GUI)
@@ -79,11 +84,17 @@ Export
 
 To export your QGEP data, click on the `export` button. The following dialog will appear.
 
-.. figure:: images/export_dialog.png
+.. figure:: images/export_dialog_new.png
+
+Choose the model you want to export into.
+
+.. note:: If you select VSA_KEK_2019_LV95 then two xtf files are created - SIA405_ABWASSER_2015_LV95 (the network data) and VSA_KEK_2019_LV95 (network and sewer TV data).
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
 The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+
+You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
@@ -100,6 +111,7 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 
 Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
+
 
 
 Import
