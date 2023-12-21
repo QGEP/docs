@@ -92,6 +92,10 @@ Choose the model you want to export into.
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
+.. figure:: images/selection.png
+
+.. figure:: images/selection_export.png
+
 The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
 
 You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.
