@@ -152,8 +152,8 @@ Usage (command line)
 For advanced usage, the import/export tool can also be used as a command line tool. Please refer to https://github.com/QGEP/qgepqwat2ili/ for documentation about this.
 
 
-Quality control
-^^^^^^^^^^^^^^^^
+Further Quality Control
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Quality control of an export file with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
