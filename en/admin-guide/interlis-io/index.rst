@@ -96,11 +96,13 @@ If you have an active selection in the nodes and/or reaches layer, you can choos
 
 .. figure:: images/selection_export.png
 
-The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+The export tool is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
 
 You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.
 
-Then, confirm the dialog and choose where to save the `.xtf` file.
+Then, confirm the dialog and choose where to save the `.xtf` file. 
+
+.. note:: The export model name will be added to your filename that you choose. export.xtf will become export_DSS_2015_LV95.xtf
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
@@ -125,7 +127,12 @@ To import `xtf`files, click on the `import` button and navigate to the `.xtf` fi
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-The following dialog will appear.
+Click on `open` to select the import file.
+
+The file will then be checked whether it contains data in one of the supported models.
+Then a validation check with ilivalidator will take place in the background.
+
+If the file is valid, then the import process will continue and the following dialog will appear.
 
 .. figure:: images/import_dialog.png
 
@@ -134,6 +141,9 @@ The left part of this dialog lists all elements that are going to be imported fr
 The right part of this dialog shows a form specific to the type of element selected in the list, allowing to adapt the import. For instance, it allows to attach "examinations" to their pipes.
 
 Once you're happy with the import options, confirm the dialog to persist the changes to your database.
+
+Wait until you see the confirmation for a valid import.
+
 
 
 Usage (command line)
@@ -145,7 +155,7 @@ For advanced usage, the import/export tool can also be used as a command line to
 Quality control
 ^^^^^^^^^^^^^^^^
 
-Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
+Quality control of an export file with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
 
 .. figure:: https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg
