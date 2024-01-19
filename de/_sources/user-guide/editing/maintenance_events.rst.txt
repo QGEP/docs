@@ -12,6 +12,8 @@ General
 * Maintenance events can be connected to one structure or to many.
   Therefore QGEP uses a intermediary RE_table to model the n:m relationship (**re_maintenance_event_wastewater_structure**)
 
+* To avoid an error when adding a new Maintenance Event, you have to enable **Buffered Transaction Groups** in menu Project > Transaction mode
+
 
 Adding a new Maintenance Event
 -------------------------------------------------------------
