@@ -115,8 +115,27 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note:: Note that remark fields are truncated to 80 characters on INTERLIS Export, as the INTERLIS definition is like this. If you have remark fields with more text then consider to move this data to documentation with the classes "file" and "data_media" so it can be exported to INTERLIS completely where you can add any document, photo or video to a class.
 
+INTERLIS export starts with two integrity checks:
 
-Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
+1. Integrity check Organiation subclasses
+For VSA-DSS 2015 Export each organisation needs to be related to one of the seven subclasses of organisation.
+
+.. figure:: images/interlis_export_integrity_checks_organisations_subclasses.png
+
+If you get this error add a superclass reference by adding the value of the respective organisation in the corresponding organisation subclss.
+
+.. figure:: images/add_organisation_subclass_reference.png
+
+
+2. Integrity check identifiers
+All export models define the identifier attribute as MANDATORY. Therefore the export tool first checks if there are identfiers that are NULL
+
+.. figure:: images/interlis_export_integrity_checks_identifiers.png
+
+You will get a list of missing identifiers per class. Please add an identifier. If you do not have a separte identifier scheme for that class just copy the obj_id.
+
+
+Exports include a validation step using `ilivalidator`, which will inform you whether the export contains INTERLIS validation error.
 
 
 
