@@ -34,7 +34,9 @@ QGEP_SWMM creates one raingage for each subcatchment.
 By default:
 
 - Time serie: Each raingage is related to a default rain time serie called ``default_qgep_raingage_timeserie``. The time serie must be created and the value Series Name updated accordingly.
-- Other parameters have default SWMM values
+- Format is set to 'INTENSITY'. Format in which the rain data are supplied: INTENSITY: each rainfall value is an average rate in inches/hour (or mm/hour) over the recording interval. VOLUME: each rainfall value is the volume of rain that fell in the recording interval (in inches or millimeters). CUMULATIVE: each rainfall value represents the cumulative rainfall that has occurred since the start of the last series of non-zero values (in inches or millimeters).
+- Interval is set to '0:15' (15 seconds). Recording time interval between gage readings in decimal hours or hours:minutes format.
+- Other parameters have default SWMM values. If you want to use another Format or Interval, you have to adapt the view.
 
 See ``vw_swmm_raingages.sql`` for details.
   

@@ -16,7 +16,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=a0e24af7"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -70,8 +70,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#usage-command-line">4.3.4. Usage (command line)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#quality-control">4.3.5. Quality control</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">4.3.5.1. Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-quality-control">4.3.5. Further Quality Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quality-control-of-an-export-file-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">4.3.5.1. Quality control of an export file with VSA online checker (Fachprüfung mit VSA Checker (online))</a></li>
 </ul>
 </li>
 </ul>
@@ -117,9 +117,17 @@
 <p>This represents a guide on how to import/export data between QGEP and INTERLIS 2 Transfer Format (xtf).</p>
 <section id="general">
 <h2><span class="section-number">4.3.1. </span>General<a class="headerlink" href="#general" title="Link to this heading"></a></h2>
-<p>The QGEP plugin includes an experimental interlis import/export feature.
-It is currently capable of importing and exporting to the VSA-KEK ‘VSA_KEK_2019_LV95’, which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p>
-<p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.</p>
+<p>The QGEP plugin includes an INTERLIS import/export feature.
+It is currently capable of importing and exporting to the following models:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>VSA-DSS ‘DSS_2015_LV95’</p></li>
+<li><p>SIA405 Abwasser ‘SIA405_ABWASSER_2015_LV95`</p></li>
+<li><p>VSA-KEK ‘VSA_KEK_2019_LV95’, which is an extension to the SIA405 wastewater model <cite>SIA405_ABWASSER_2015_LV95</cite> (for more details see <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py">config</a>).</p></li>
+</ul>
+</div></blockquote>
+<p>Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
+In <a class="reference external" href="https://www.sjib.ch/wie-uebersetze-ich-eine-interlis-transferdatei-in-eine-andere-sprache/">this blog post</a> the manual translation with the tool ili2db is explained in detail.</p>
 </section>
 <section id="prerequisites">
 <h2><span class="section-number">4.3.2. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
@@ -162,7 +170,7 @@ Linux : use the package manager</p>
 </section>
 <section id="qgep-version">
 <h3><span class="section-number">4.3.2.4. </span>QGEP Version<a class="headerlink" href="#qgep-version" title="Link to this heading"></a></h3>
-<p>The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.</p>
+<p>The export only supports up-to-date QGEP datamodel (1.6.1 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.</p>
 </section>
 </section>
 <section id="usage-gui">
@@ -182,11 +190,27 @@ Linux : use the package manager</p>
 <h3><span class="section-number">4.3.3.2. </span>Export<a class="headerlink" href="#export" title="Link to this heading"></a></h3>
 <p>To export your QGEP data, click on the <cite>export</cite> button. The following dialog will appear.</p>
 <figure class="align-default">
-<img alt="../../_images/export_dialog.png" src="../../_images/export_dialog.png" />
+<img alt="../../_images/export_dialog_new.png" src="../../_images/export_dialog_new.png" />
 </figure>
+<p>Choose the model you want to export into.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you select VSA_KEK_2019_LV95 then two xtf files are created - SIA405_ABWASSER_2015_LV95 (the network data) and VSA_KEK_2019_LV95 (network and sewer TV data).</p>
+</div>
 <p>If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.</p>
-<p>The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.</p>
+<figure class="align-default">
+<img alt="../../_images/selection.png" src="../../_images/selection.png" />
+</figure>
+<figure class="align-default">
+<img alt="../../_images/selection_export.png" src="../../_images/selection_export.png" />
+</figure>
+<p>The export tool is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.</p>
+<p>You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.</p>
 <p>Then, confirm the dialog and choose where to save the <cite>.xtf</cite> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The export model name will be added to your filename that you choose. export.xtf will become export_DSS_2015_LV95.xtf</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
@@ -206,7 +230,23 @@ Linux : use the package manager</p>
 <p class="admonition-title">Note</p>
 <p>Note that remark fields are truncated to 80 characters on INTERLIS Export, as the INTERLIS definition is like this. If you have remark fields with more text then consider to move this data to documentation with the classes “file” and “data_media” so it can be exported to INTERLIS completely where you can add any document, photo or video to a class.</p>
 </div>
-<p>Exports include a validation step using <cite>ilivalidator</cite>, which will inform you whether the export contains validation error.</p>
+<p>INTERLIS export starts with two integrity checks:</p>
+<p>1. Integrity check Organiation subclasses
+For VSA-DSS 2015 Export each organisation needs to be related to one of the seven subclasses of organisation (administrative_office, canton, cooperative, municipality, privat, wastewater_association, wastewater_treatment_plant).</p>
+<figure class="align-default">
+<img alt="../../_images/interlis_export_integrity_checks_organisations_subclasses.png" src="../../_images/interlis_export_integrity_checks_organisations_subclasses.png" />
+</figure>
+<p>If you get this error add a superclass reference by adding the value of the respective organisation in the corresponding organisation subclass.</p>
+<figure class="align-default">
+<img alt="../../_images/add_organisation_subclass_reference.png" src="../../_images/add_organisation_subclass_reference.png" />
+</figure>
+<p>2. Integrity check identifiers
+All export models define the identifier attribute as MANDATORY. Therefore the export tool first checks if there are identfiers that are NULL</p>
+<figure class="align-default">
+<img alt="../../_images/interlis_export_integrity_checks_identifiers.png" src="../../_images/interlis_export_integrity_checks_identifiers.png" />
+</figure>
+<p>You will get a list of missing identifiers per class. Please add an identifier. If you do not have a separte identifier scheme for that class just copy the obj_id.</p>
+<p>Exports include a validation step using <cite>ilivalidator</cite>, which will inform you whether the export contains INTERLIS validation error.</p>
 </section>
 <section id="import">
 <h3><span class="section-number">4.3.3.3. </span>Import<a class="headerlink" href="#import" title="Link to this heading"></a></h3>
@@ -215,23 +255,27 @@ Linux : use the package manager</p>
 <p class="admonition-title">Note</p>
 <p>Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.</p>
 </div>
-<p>The following dialog will appear.</p>
+<p>Click on <cite>open</cite> to select the import file.</p>
+<p>The file will then be checked whether it contains data in one of the supported models.
+Then a validation check with ilivalidator will take place in the background.</p>
+<p>If the file is valid, then the import process will continue and the following dialog will appear.</p>
 <figure class="align-default">
 <img alt="../../_images/import_dialog.png" src="../../_images/import_dialog.png" />
 </figure>
 <p>The left part of this dialog lists all elements that are going to be imported from the <cite>.xtf</cite> file, allowing to review what is going to be imported and to deselect elements you may want to skip. It also shows the validation status of each object, showing whether further action is needed (INVALID) or recommended (WARNING) prior to importing.</p>
 <p>The right part of this dialog shows a form specific to the type of element selected in the list, allowing to adapt the import. For instance, it allows to attach “examinations” to their pipes.</p>
 <p>Once you’re happy with the import options, confirm the dialog to persist the changes to your database.</p>
+<p>Wait until you see the confirmation for a valid import.</p>
 </section>
 </section>
 <section id="usage-command-line">
 <h2><span class="section-number">4.3.4. </span>Usage (command line)<a class="headerlink" href="#usage-command-line" title="Link to this heading"></a></h2>
 <p>For advanced usage, the import/export tool can also be used as a command line tool. Please refer to <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/">https://github.com/QGEP/qgepqwat2ili/</a> for documentation about this.</p>
 </section>
-<section id="quality-control">
-<h2><span class="section-number">4.3.5. </span>Quality control<a class="headerlink" href="#quality-control" title="Link to this heading"></a></h2>
-<section id="quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
-<h3><span class="section-number">4.3.5.1. </span>Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Link to this heading"></a></h3>
+<section id="further-quality-control">
+<h2><span class="section-number">4.3.5. </span>Further Quality Control<a class="headerlink" href="#further-quality-control" title="Link to this heading"></a></h2>
+<section id="quality-control-of-an-export-file-with-vsa-online-checker-fachprufung-mit-vsa-checker-online">
+<h3><span class="section-number">4.3.5.1. </span>Quality control of an export file with VSA online checker (Fachprüfung mit VSA Checker (online))<a class="headerlink" href="#quality-control-of-an-export-file-with-vsa-online-checker-fachprufung-mit-vsa-checker-online" title="Link to this heading"></a></h3>
 <figure class="align-default">
 <img alt="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" src="https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg" />
 </figure>

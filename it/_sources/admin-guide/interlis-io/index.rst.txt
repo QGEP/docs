@@ -7,11 +7,16 @@ This represents a guide on how to import/export data between QGEP and INTERLIS 2
 General
 ^^^^^^^^^^^^^
 
-The QGEP plugin includes an experimental interlis import/export feature.
-It is currently capable of importing and exporting to the VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
+The QGEP plugin includes an INTERLIS import/export feature.
+It is currently capable of importing and exporting to the following models:
+  + VSA-DSS 'DSS_2015_LV95'
+  + SIA405 Abwasser 'SIA405_ABWASSER_2015_LV95`
+  + VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
 
 Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
- 
+In `this blog post <https://www.sjib.ch/wie-uebersetze-ich-eine-interlis-transferdatei-in-eine-andere-sprache/>`_ the manual translation with the tool ili2db is explained in detail.
+
+
 Prerequisites
 ^^^^^^^^^^^^^^
 
@@ -57,7 +62,7 @@ The QGEP plugin will propose to install the Modelbaker plugin automatically. If 
 
 QGEP Version
 -------------
-The export only supports up-to-date QGEP datamodel (1.5.6 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
+The export only supports up-to-date QGEP datamodel (1.6.1 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
 
 
 Usage (GUI)
@@ -79,13 +84,25 @@ Export
 
 To export your QGEP data, click on the `export` button. The following dialog will appear.
 
-.. figure:: images/export_dialog.png
+.. figure:: images/export_dialog_new.png
+
+Choose the model you want to export into.
+
+.. note:: If you select VSA_KEK_2019_LV95 then two xtf files are created - SIA405_ABWASSER_2015_LV95 (the network data) and VSA_KEK_2019_LV95 (network and sewer TV data).
 
 If you have an active selection in the nodes and/or reaches layer, you can choose to restrict the export to that selection. This is especially useful in combination with the upstream/downstream selection tools.
 
-The export tools is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+.. figure:: images/selection.png
 
-Then, confirm the dialog and choose where to save the `.xtf` file.
+.. figure:: images/selection_export.png
+
+The export tool is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
+
+You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.
+
+Then, confirm the dialog and choose where to save the `.xtf` file. 
+
+.. note:: The export model name will be added to your filename that you choose. export.xtf will become export_DSS_2015_LV95.xtf
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
@@ -98,8 +115,28 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note:: Note that remark fields are truncated to 80 characters on INTERLIS Export, as the INTERLIS definition is like this. If you have remark fields with more text then consider to move this data to documentation with the classes "file" and "data_media" so it can be exported to INTERLIS completely where you can add any document, photo or video to a class.
 
+INTERLIS export starts with two integrity checks:
 
-Exports include a validation step using `ilivalidator`, which will inform you whether the export contains validation error.
+1. Integrity check Organiation subclasses
+For VSA-DSS 2015 Export each organisation needs to be related to one of the seven subclasses of organisation (administrative_office, canton, cooperative, municipality, privat, wastewater_association, wastewater_treatment_plant).
+
+.. figure:: images/interlis_export_integrity_checks_organisations_subclasses.png
+
+If you get this error add a superclass reference by adding the value of the respective organisation in the corresponding organisation subclass.
+
+.. figure:: images/add_organisation_subclass_reference.png
+
+
+2. Integrity check identifiers
+All export models define the identifier attribute as MANDATORY. Therefore the export tool first checks if there are identfiers that are NULL
+
+.. figure:: images/interlis_export_integrity_checks_identifiers.png
+
+You will get a list of missing identifiers per class. Please add an identifier. If you do not have a separte identifier scheme for that class just copy the obj_id.
+
+
+Exports include a validation step using `ilivalidator`, which will inform you whether the export contains INTERLIS validation error.
+
 
 
 Import
@@ -109,7 +146,12 @@ To import `xtf`files, click on the `import` button and navigate to the `.xtf` fi
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-The following dialog will appear.
+Click on `open` to select the import file.
+
+The file will then be checked whether it contains data in one of the supported models.
+Then a validation check with ilivalidator will take place in the background.
+
+If the file is valid, then the import process will continue and the following dialog will appear.
 
 .. figure:: images/import_dialog.png
 
@@ -119,6 +161,9 @@ The right part of this dialog shows a form specific to the type of element selec
 
 Once you're happy with the import options, confirm the dialog to persist the changes to your database.
 
+Wait until you see the confirmation for a valid import.
+
+
 
 Usage (command line)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -126,10 +171,10 @@ Usage (command line)
 For advanced usage, the import/export tool can also be used as a command line tool. Please refer to https://github.com/QGEP/qgepqwat2ili/ for documentation about this.
 
 
-Quality control
-^^^^^^^^^^^^^^^^
+Further Quality Control
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Quality control with VSA online checker (Fachprüfung mit VSA Checker (online))
+Quality control of an export file with VSA online checker (Fachprüfung mit VSA Checker (online))
 -----------------------------------------------------------------------------------
 
 .. figure:: https://vsa.ch/wp-content/uploads/2020/04/Daten-checker-d-f-it.jpg

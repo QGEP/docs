@@ -16,9 +16,9 @@
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../_static/documentation_options.js?v=286ea6f5"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/translations.js?v=d99ca74e"></script>
+        <script src="../_static/translations.js?v=041d0952"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -119,38 +119,40 @@
            <div itemprop="articleBody">
              
   <section id="prepare-data">
-<span id="id1"></span><h1><span class="section-number">7.4. </span>Prepare Data<a class="headerlink" href="#prepare-data" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1><span class="section-number">7.4. </span>Prepare Data<a class="headerlink" href="#prepare-data" title="Lien vers cette rubrique"></a></h1>
 <section id="qgep-swmm-correspondances">
-<span id="id2"></span><h2><span class="section-number">7.4.1. </span>QGEP - SWMM correspondances<a class="headerlink" href="#qgep-swmm-correspondances" title="Link to this heading"></a></h2>
+<span id="id2"></span><h2><span class="section-number">7.4.1. </span>QGEP - SWMM correspondances<a class="headerlink" href="#qgep-swmm-correspondances" title="Lien vers cette rubrique"></a></h2>
 <section id="title-notes">
-<h3><span class="section-number">7.4.1.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.1. </span>Title/Notes:<a class="headerlink" href="#title-notes" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="options">
-<h3><span class="section-number">7.4.1.2. </span>Options:<a class="headerlink" href="#options" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.2. </span>Options:<a class="headerlink" href="#options" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="climatology">
-<h3><span class="section-number">7.4.1.3. </span>Climatology:<a class="headerlink" href="#climatology" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.3. </span>Climatology:<a class="headerlink" href="#climatology" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="hydrology">
-<h3><span class="section-number">7.4.1.4. </span>Hydrology:<a class="headerlink" href="#hydrology" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.4. </span>Hydrology:<a class="headerlink" href="#hydrology" title="Lien vers cette rubrique"></a></h3>
 <p><strong>Rain Gauges [Gages in SWMM]:</strong></p>
 <p>QGEP_SWMM creates one raingage for each subcatchment.</p>
 <p>By default:</p>
 <ul class="simple">
 <li><p>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal notranslate"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name updated accordingly.</p></li>
-<li><p>Other parameters have default SWMM values</p></li>
+<li><p>Format is set to “INTENSITY”. Format in which the rain data are supplied: INTENSITY: each rainfall value is an average rate in inches/hour (or mm/hour) over the recording interval. VOLUME: each rainfall value is the volume of rain that fell in the recording interval (in inches or millimeters). CUMULATIVE: each rainfall value represents the cumulative rainfall that has occurred since the start of the last series of non-zero values (in inches or millimeters).</p></li>
+<li><p>Interval is set to “0:15” (15 seconds). Recording time interval between gage readings in decimal hours or hours:minutes format.</p></li>
+<li><p>Other parameters have default SWMM values. If you want to use another Format or Interval, you have to adapt the view.</p></li>
 </ul>
 <p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_raingages.sql</span></code> for details.</p>
 <p><strong>Aquifers:</strong></p>
@@ -201,7 +203,7 @@
 </ul>
 </section>
 <section id="hydraulics">
-<h3><span class="section-number">7.4.1.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.5. </span>Hydraulics<a class="headerlink" href="#hydraulics" title="Lien vers cette rubrique"></a></h3>
 <p><strong>Junctions</strong></p>
 <ul class="simple">
 <li><p>QGEP_SWMM creates a junction for each QGEP manhole, some kind of special structures and the wastewater nodes linking primary pipes without a wastewater structure.</p></li>
@@ -262,7 +264,7 @@
 </ul>
 </section>
 <section id="quality">
-<h3><span class="section-number">7.4.1.6. </span>Quality<a class="headerlink" href="#quality" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.6. </span>Quality<a class="headerlink" href="#quality" title="Lien vers cette rubrique"></a></h3>
 <p><strong>Land uses</strong></p>
 <ul class="simple">
 <li><p>QGEP_SWMM creates a SWMM land use kind for each QGEP planning zone kind.</p></li>
@@ -275,28 +277,28 @@
 </ul>
 </section>
 <section id="curves">
-<h3><span class="section-number">7.4.1.7. </span>Curves<a class="headerlink" href="#curves" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.7. </span>Curves<a class="headerlink" href="#curves" title="Lien vers cette rubrique"></a></h3>
 <ul class="simple">
 <li><p>Are created for pumps linked to a <code class="docutils literal notranslate"><span class="pre">qgep_od.hq_relation</span></code> and for wastewater structures linked to a <code class="docutils literal notranslate"><span class="pre">qgep_od.hydr_geom_relation</span></code></p></li>
 <li><p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_curves.sql</span></code> for details.</p></li>
 </ul>
 </section>
 <section id="time-series">
-<h3><span class="section-number">7.4.1.8. </span>Time series<a class="headerlink" href="#time-series" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.8. </span>Time series<a class="headerlink" href="#time-series" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="time-patterns">
-<h3><span class="section-number">7.4.1.9. </span>Time patterns<a class="headerlink" href="#time-patterns" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.9. </span>Time patterns<a class="headerlink" href="#time-patterns" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
 </ul>
 </section>
 <section id="labels">
-<h3><span class="section-number">7.4.1.10. </span>Labels<a class="headerlink" href="#labels" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.4.1.10. </span>Labels<a class="headerlink" href="#labels" title="Lien vers cette rubrique"></a></h3>
 <p>No correspondance in QGEP. This parameter must be set by the user in the template <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file or before running the simulation.</p>
 <ul class="simple">
 <li><p>Copied from the template input file if exists.</p></li>
@@ -305,10 +307,10 @@
 </section>
 </section>
 <section id="qgep-swmm-data-requirements">
-<span id="id3"></span><h1><span class="section-number">7.5. </span>QGEP-SWMM data requirements<a class="headerlink" href="#qgep-swmm-data-requirements" title="Link to this heading"></a></h1>
+<span id="id3"></span><h1><span class="section-number">7.5. </span>QGEP-SWMM data requirements<a class="headerlink" href="#qgep-swmm-data-requirements" title="Lien vers cette rubrique"></a></h1>
 <p>To run a sucessful simulation in SWMM the following minimal data has to be filled in to be matched to the swmm objects</p>
 <table class="docutils align-default" id="id5">
-<caption><span class="caption-text">JUNCTIONS and COORDINATES</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<caption><span class="caption-text">JUNCTIONS and COORDINATES</span><a class="headerlink" href="#id5" title="Lien vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27.3%" />
 <col style="width: 45.5%" />
@@ -348,7 +350,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id6">
-<caption><span class="caption-text">CONDUITS</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<caption><span class="caption-text">CONDUITS</span><a class="headerlink" href="#id6" title="Lien vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27.3%" />
 <col style="width: 45.5%" />
@@ -404,7 +406,7 @@
 </tbody>
 </table>
 <table class="docutils align-default" id="id7">
-<caption><span class="caption-text">XSECTIONS</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
+<caption><span class="caption-text">XSECTIONS</span><a class="headerlink" href="#id7" title="Lien vers ce tableau"></a></caption>
 <colgroup>
 <col style="width: 27.3%" />
 <col style="width: 45.5%" />
@@ -428,7 +430,7 @@
 </tbody>
 </table>
 <section id="coefficient-of-friction">
-<span id="id4"></span><h2><span class="section-number">7.5.1. </span>Coefficient of friction<a class="headerlink" href="#coefficient-of-friction" title="Link to this heading"></a></h2>
+<span id="id4"></span><h2><span class="section-number">7.5.1. </span>Coefficient of friction<a class="headerlink" href="#coefficient-of-friction" title="Lien vers cette rubrique"></a></h2>
 <ul>
 <li><p>The plugin will export the roughness according to these priorities:</p>
 <blockquote>
@@ -447,7 +449,7 @@
 <p>The formula to convert from Strickler to Coolebrook is documented in <a class="reference external" href="https://pdfslide.net/documents/atv-dvwk-a-110-e-55846635d4eef.html">*ATV-DVWK STANDARD ATV-DVWK-A 110E, Hydraulic Dimensioning and Performance Verification of Sewers and Drains September 2001*</a></p>
 </div>
 <section id="populate-default-coefficient-of-friction">
-<h3><span class="section-number">7.5.1.1. </span>Populate default coefficient of friction<a class="headerlink" href="#populate-default-coefficient-of-friction" title="Link to this heading"></a></h3>
+<h3><span class="section-number">7.5.1.1. </span>Populate default coefficient of friction<a class="headerlink" href="#populate-default-coefficient-of-friction" title="Lien vers cette rubrique"></a></h3>
 <p>The table <code class="docutils literal notranslate"><span class="pre">qgep_swmm.reach_coefficient_of_friction</span></code> contains default coefficient of Strickler for the reach materials.
 The file <code class="docutils literal notranslate"><span class="pre">../project/qml/reach_coefficient_of_friction.qml</span></code> is the layer definition, that you can import in your QGIS project.
 If the default values don’t match your needs you can edit them.

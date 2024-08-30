@@ -16,9 +16,9 @@
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../_static/documentation_options.js?v=dd9d91fd"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script src="../_static/translations.js?v=79cc9f76"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" /> 
@@ -111,7 +111,9 @@
 <p>By default:</p>
 <ul class="simple">
 <li><p>Time serie: Each raingage is related to a default rain time serie called <code class="docutils literal notranslate"><span class="pre">default_qgep_raingage_timeserie</span></code>. The time serie must be created and the value Series Name updated accordingly.</p></li>
-<li><p>Other parameters have default SWMM values</p></li>
+<li><p>Format is set to ‚INTENSITY‘. Format in which the rain data are supplied: INTENSITY: each rainfall value is an average rate in inches/hour (or mm/hour) over the recording interval. VOLUME: each rainfall value is the volume of rain that fell in the recording interval (in inches or millimeters). CUMULATIVE: each rainfall value represents the cumulative rainfall that has occurred since the start of the last series of non-zero values (in inches or millimeters).</p></li>
+<li><p>Interval is set to ‚0:15‘ (15 seconds). Recording time interval between gage readings in decimal hours or hours:minutes format.</p></li>
+<li><p>Other parameters have default SWMM values. If you want to use another Format or Interval, you have to adapt the view.</p></li>
 </ul>
 <p>See <code class="docutils literal notranslate"><span class="pre">vw_swmm_raingages.sql</span></code> for details.</p>
 <p><strong>Aquifers:</strong></p>
