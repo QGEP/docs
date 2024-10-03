@@ -1,5 +1,5 @@
 # files: '^.*\.py|.*\.tpl|.*\.sql|.*\.yaml|.*\.txt|.*\.md$'
-exclude: '^.*\.xtf|.*\.xml|.*\.ili
+exclude: '^.*\.xtf|.*\.xml|.*\.ili'
 
 repos:
   # Fix end of files
