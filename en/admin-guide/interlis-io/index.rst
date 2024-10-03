@@ -11,7 +11,7 @@ The QGEP plugin includes an INTERLIS import/export feature.
 It is currently capable of importing and exporting to the following models:
   + VSA-DSS 'DSS_2015_LV95'
   + SIA405 Abwasser 'SIA405_ABWASSER_2015_LV95`
-  + VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_). 
+  + VSA-KEK 'VSA_KEK_2019_LV95', which is an extension to the SIA405 wastewater model `SIA405_ABWASSER_2015_LV95` (for more details see `config <https://github.com/QGEP/qgepqwat2ili/blob/master/qgepqwat2ili/config.py>`_).
 
 Note that currently, exports are possible in German only. Translated exports are on the roadmap, let us know if you are interested in this feature.
 In `this blog post <https://www.sjib.ch/wie-uebersetze-ich-eine-interlis-transferdatei-in-eine-andere-sprache/>`_ the manual translation with the tool ili2db is explained in detail.
@@ -27,7 +27,7 @@ You need java on your system.
 Windows : `Java for windows download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245058_d3c52aa6bfa54d3ca74e617f18309292>`_
 MacOS : `Java for MacOS download <https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245051_d3c52aa6bfa54d3ca74e617f18309292>`_
 Linux : use the package manager
- 
+
 Python libraries
 -----------------
 You need `sqlalchemy` and `geoalchemy2`.
@@ -41,15 +41,15 @@ and type::
    >>> pip3 install "sqlalchemy~=1.3.22" "geoalchemy2>=0.9.0"
 
 If the command fails, try::
- 
+
    >>> pip3 install --upgrade pip
 
 .. note:: If pip cannot be found, make sure you’ve installed the python3-pip package using the OSGeo4W network installer (if you’ve installed the standalone version of QGIS, it should be included).
 
-If this command still fails, try:: 
+If this command still fails, try::
 
   >>> pip3 install --target=c:\somewhere\other\than\the\default --upgrade pip
-  
+
 where ``c:\somewhere\other\than\the\default`` is the path to your current pip package
 
 The same `--target` flag can be added to install `sqlalchemy` and `geoalchemy2` in another location.
@@ -71,7 +71,7 @@ Usage (GUI)
 Enable admin mode
 -------------------------------------------------
 
-In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS. 
+In the `plugin>QGEP>settings` dialog, under the `Developer options` tab, ensure `Admin mode` is enabled. Restart QGIS.
 
 .. figure:: images/settings_dialog.png
 
@@ -100,7 +100,7 @@ The export tool is capable of exporting label positions for different scales. Yo
 
 You can also change the angle for horizontal text in INTERLIS if your target system has another convention than INTERLIS.
 
-Then, confirm the dialog and choose where to save the `.xtf` file. 
+Then, confirm the dialog and choose where to save the `.xtf` file.
 
 .. note:: The export model name will be added to your filename that you choose. export.xtf will become export_DSS_2015_LV95.xtf
 
@@ -142,7 +142,7 @@ Exports include a validation step using `ilivalidator`, which will inform you wh
 Import
 -------------------------------------------------
 
-To import `xtf`files, click on the `import` button and navigate to the `.xtf` file. 
+To import `xtf`files, click on the `import` button and navigate to the `.xtf` file.
 
 .. note:: Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
@@ -183,4 +183,3 @@ Quality control of an export file with VSA online checker (Fachprüfung mit VSA 
 
 
 `Information about access and licensing you can get here <https://vsa.ch/Mediathek/gep-datachecker-jahresgebuehr/?media_filter_two=lizenzen-software>`_
-
