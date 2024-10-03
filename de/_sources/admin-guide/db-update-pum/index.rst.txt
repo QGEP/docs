@@ -5,7 +5,7 @@ This page explains how to update your datamodel manually. Alternatively, the `da
 <../datamodel-tool/index.html>`_ offers a graphical interface that automates these steps and is
 usually easier to use.
 
-The releases of the datamodel are available `here <https://github.com/QGEP/datamodel/releases/>`_. 
+The releases of the datamodel are available `here <https://github.com/QGEP/datamodel/releases/>`_.
 When a new datamodel is released, a QGEP database can be updated with `PUM <https://github.com/opengisch/pum>`_.
 In this documentation, the main steps and requirements are reproduced.
 
@@ -81,11 +81,11 @@ Download and install current database release
 
 ``psql -h host -p port -U postgres -c 'CREATE DATABASE qgep_comp;'``
 
-* Install current datamodel release. 
+* Install current datamodel release.
 
 ``./scripts/db_setup.sh -f -r -p qgep_comp`` Launched from the ``datamodel`` folder.
 
-Create empty database 
+Create empty database
 ^^^^^^^^^^^^^^^^^^^^^^
 * Create test database. It is used to test the update processus.
 
@@ -95,7 +95,7 @@ Launch update
 ^^^^^^^^^^^^^^
 The following command must be launched form the ``datamodel`` folder.
 
-``pum test-and-upgrade -pp qgep_prod -pt qgep_test -pc qgep_comp -t qgep_sys.pum_info -f dump.dump -d delta/ -i constraints views indexes --exclude-schema public --exclude-schema qgep_migration -v int SRID 2056 -x``. 
+``pum test-and-upgrade -pp qgep_prod -pt qgep_test -pc qgep_comp -t qgep_sys.pum_info -f dump.dump -d delta/ -i constraints views indexes --exclude-schema public --exclude-schema qgep_migration -v int SRID 2056 -x``.
 
 * ``-pp`` Production database
 * ``-pt`` Test database
@@ -107,4 +107,3 @@ The following command must be launched form the ``datamodel`` folder.
 * ``-v`` Parameters of the delta scripts
 * ``-x`` Ignore restore errors (materialized views can generate ``pg_restore`` errors
 * ``--exclude-field-pattern 'usr_%'`` if custom attributes were added
-
