@@ -117,7 +117,7 @@ Then, confirm the dialog and choose where to save the `.xtf` file.
 
 INTERLIS export starts with two integrity checks:
 
-1. Integrity check Organiation subclasses
+1. Integrity check Organisation subclasses
 For VSA-DSS 2015 Export each organisation needs to be related to one of the seven subclasses of organisation (administrative_office, canton, cooperative, municipality, privat, wastewater_association, wastewater_treatment_plant).
 
 .. figure:: images/interlis_export_integrity_checks_organisations_subclasses.png
