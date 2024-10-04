@@ -102,13 +102,13 @@ You can also change the angle for horizontal text in INTERLIS if your target sys
 
 Then, confirm the dialog and choose where to save the `.xtf` file.
 
-.. note:: 
+.. note::
 The export model name will be added to your filename that you choose. export.xtf will become export_DSS_2015_LV95.xtf
 
-.. note:: 
+.. note::
 Note that windows file pathes with empty strings in the directory path or filename are not supported at the moment.
 
-.. note:: 
+.. note::
 Note that for large/full exports, the command can take a long time.
 
 .. note:: Note that QGIS standard behaviour for too long labels is to turn them horizontally (orientation = 0). You can adjust the properties of the vw_qgep_reach layer - Symbology - Placement - Label overrun from "no overrun" to e.g. 7 mm (Millimeter)
