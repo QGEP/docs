@@ -135,9 +135,9 @@ All export models define the identifier attribute as MANDATORY. Therefore the ex
 You will get a list of missing identifiers per class. Please add an identifier. If you do not have a separte identifier scheme for that class just copy the obj_id.
 
 3. Check of missing references to organisation
-Release 2015 has MANDATORY constraints for 
+Release 2015 has MANDATORY constraints for
 
-- wastewater_structure.fk_owner 
+- wastewater_structure.fk_owner
 - wastewater_structure.fk_operator
 
 .. figure:: images/export_check_fk_owner_null.png
