@@ -154,8 +154,8 @@ So you have to pass this check to be able to export your data. The detailed log 
 
 The following references will be needed with release 2020 of VSA-DSS and SIA405 Abwasser. But you only will get hints, that they are missing. But we strongly encourage you to fill in that data, as you will else face problems when doing the INTERLIS - INTERLIS transformation from Release 2015 to 2020.xx with CHECKVSA.
 
-- *.fk_dataowner
-- *.fk_provider
+- fk_dataowner
+- fk_provider
 
 .. figure:: images/export_check_fk_provider_null.png
 
