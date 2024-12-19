@@ -97,7 +97,7 @@ If you have an active selection in the nodes and/or reaches layer, you can choos
 .. figure:: images/selection_export.png
 
 When exporting a selection, there are not all records in all tables reduced to the selection. Wastewater structures, structure parts, wastewater networkelements, catchments, overflows are reduced, but other tables as pipe profiles or organisations are not reduced due to special cases, where it would be very difficult to select all necessary records. 
-If there are reaches with foregin keys to other reaches, that are not in the selection, then this foregin key is not exported / then the selection will be expanded with this connected reach.
+If there are reaches with foregin keys to other reaches, that are not in the selection, then the selection will be expanded with this connected reach.
 
 .. note:: Exporting to SIA405 and there are wwtp_structure in the database: because wwtp_structure is not part of the SIA405 datamodel, the wastewater_structure (and the corresponding structure_parts) will not be exported. But the wastewater_networkelement will be exported without entry in fk_wastewater_structure. Like this, the hydraulic network stays correct.
 
