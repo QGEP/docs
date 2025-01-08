@@ -38,7 +38,7 @@ To install : before launching QGIS, open OSGeo4W Shell
 
 and type::
 
-   >>> pip3 install "sqlalchemy~=1.3.22" "geoalchemy2>=0.9.0"
+   >>> pip3 install "sqlalchemy~=1.4" "geoalchemy2>=0.9.0"
 
 If the command fails, try::
 
@@ -57,12 +57,12 @@ The same `--target` flag can be added to install `sqlalchemy` and `geoalchemy2` 
 
 Modelbaker
 -----------
-The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager (version 6.4 or newer but older than 7.1).
+The QGEP plugin will propose to install the Modelbaker plugin automatically. If that did not work, install the QGIS plugin `Modelbaker` manually from the QGIS plugin manager.
 
 
 QGEP Version
 -------------
-The export only supports up-to-date QGEP datamodel (1.6.1 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
+The export only supports up-to-date QGEP datamodel (1.6.2 at the time of writing). Ensure your datamodel is fully updated before trying to import/export.
 
 
 Usage (GUI)
@@ -95,6 +95,11 @@ If you have an active selection in the nodes and/or reaches layer, you can choos
 .. figure:: images/selection.png
 
 .. figure:: images/selection_export.png
+
+When exporting a selection, there are not all records in all tables reduced to the selection. Wastewater structures, structure parts, wastewater networkelements, catchments, overflows are reduced, but other tables as pipe profiles or organisations are not reduced due to special cases, where it would be very difficult to select all necessary records.
+If there are reaches with foregin keys to other reaches, that are not in the selection, then the selection will be expanded with this connected reach.
+
+.. note:: Special case if there are wwtp_structure in the database or in the selection: Because wwtp_structure is not part of the SIA405 datamodel, the wastewater_structure (and the corresponding structure_parts) will not be exported. But the wastewater_networkelement will be exported without entry in fk_wastewater_structure. Like this, the hydraulic network stays correct.
 
 The export tool is capable of exporting label positions for different scales. You can choose which scales you are interested in exporting by selected/deselecting them.
 
