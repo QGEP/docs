@@ -4,7 +4,7 @@ exclude: '^.*\.xtf|.*\.xml|.*\.ili'
 repos:
   # Fix end of files
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -14,7 +14,7 @@ repos:
 
   # Remove unused imports/variables
   - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.1
+    rev: v2.3.3
     hooks:
       - id: autoflake
         args:
@@ -24,7 +24,7 @@ repos:
 
   # Sort imports
   - repo: https://github.com/pycqa/isort
-    rev: "5.13.2"
+    rev: "9.0.0a3"
     hooks:
       - id: isort
         args:
@@ -32,22 +32,22 @@ repos:
           - black
 
   # Black formatting
-  - repo: https://github.com/psf/black
-    rev: "24.10.0"
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: "26.5.1"
     hooks:
       - id: black
         args: ["--line-length=99"]
 
   # tool to automatically upgrade syntax for newer versions of the language
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.19.1
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py37-plus]
 
   # Lint files
   - repo: https://github.com/pycqa/flake8
-    rev: "7.1.1"
+    rev: "7.3.0"
     hooks:
       - id: flake8
         args: [
